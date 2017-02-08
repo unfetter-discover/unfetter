@@ -12,42 +12,31 @@ Unfetter Discover web application and container resources.  Visit <a href="http:
 The entire application, Unfetter Discover, is made up of multiple of docker containers.  Each builds upon the other.  We use  [Docker Compose](https://www.docker.com/products/docker-compose) to manage
 the startup and shutdown of all those Docker containers.  
 
-The GitHub organization [unfetter-discover](https://www.github.com/unfetter-discover) houses a GitHub project for every container.  Some of these projects only contain configuration files.  Others contain all the code.
+The GitHub organization [unfetter-discover](https://www.github.com/unfetter-discover) houses a GitHub project for every container.  There is two ways to run Unfetter Discover.  You can run all the containers from Docker Hub, without recompiling.  
+This is recommended for most cases.
 
-You will first need to clone all of the projects.  You can do this one at a time, or through a script
+If you are a developer, and would liked to build the Unfetter-Discover project from source, then you will need to clone all the repos in [unfetter-discover](https://www.github.com/unfetter-discover) 
+and use a different docker-compose config file.
+
+###Build from Docker Hub.  Normal Use Case
+You will only need to clone the unfetter project.  Then, run docker-compose with default arguments.  First, go into your working directory that you want to clone the main project.
+
 ```bash
- curl -s https://api.github.com/orgs/unfetter-discover/repos\?per_page\=200 | perl -ne 'print "$1\n" if (/"clone_url": "([^"]+)/)' | xargs -n 1 git clone
-```
-Next, go into the unfetter project
-```bash
+git clone https://github.com/unfetter-discover/unfetter.git
 cd unfetter
-```
-
-This is the main Unfetter project page.  The docker-compose.yml files are housed here.  This is also the location to make bug requests or ask questions.
-
-## Docker Compose
-
-
-You can run the Unfetter Discover application in two ways.  You can either run the containers in [Docker Hub](https://hub.docker.com/u/unfetter/dashboard/), or you can build the containers 
-from the software.  We recommend you only build the software if you are a developer or planning to change the code.
-
-### Run Docker Hub containers
-```bash
-docker-compose -f docker-cogitmpose.yml up
-```
-or just
-```bash
 docker-compose up
 ```
 
-### Build the containers from source
+###Build from local source files.  Developer Use Case
+You will first need to clone all the projects in [unfetter-discover](https://www.github.com/unfetter-discover). 
+
 ```bash
-docker-compose -f docker-compose.yml -f docker-compose.development.yml up
+ curl -s https://api.github.com/orgs/unfetter-discover/repos\?per_page\=200 | perl -ne 'print "$1\n" if (/"clone_url": "([^"]+)/)' | xargs -n 1 git clone
+ cd unfetter
+ docker-compose -f docker-compose.yml -f docker-compose.development.yml up
 ```
 
-The configuration starts MongoDB for storage of objects and also runs Nginx to provide a gateway to access REST services over HTTPS.
-
-### Services
+### The Web Application
 
 The User Interface can be viewed after starting Docker Compose at the follow location:
 
