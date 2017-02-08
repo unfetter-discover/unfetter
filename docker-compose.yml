@@ -14,7 +14,7 @@ services:
      - ../unfetter-discover-gateway/nginx/conf.d:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-ui:
-    build: ../unfetter-discover-ui
+    image: unfetter/unfetter-discover-ui
     container_name: unfetter-discover-ui
     ports:
      - "50000:50000"
@@ -54,7 +54,7 @@ services:
     volumes:
      - ./certs/:/tmp/certs
   unfetter-discover-processor:
-    build: ../unfetter-discover-processor
+    image: unfetter/unfetter-discover-processor
     container_name: unfetter-discover-processor
     entrypoint:
      - node

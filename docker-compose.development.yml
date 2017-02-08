@@ -1,5 +1,18 @@
 version: '2'
 services:
   unfetter-discover-ui:
+    build: ../unfetter-discover-ui
     volumes:
      - ../unfetter-discover-ui/app:/usr/share/unfetter-discover-ui/app
+  cti-stix-ui:
+    build: ../cti-stix-ui
+    volumes:
+    - ../cti-stix-ui/app:/usr/share/cti-stix-ui/app
+    - ../cti-stix-ui/tests:/usr/share/cti-stix-ui/tests
+
+  unfetter-discover-processor:
+    build: ../unfetter-discover-processor
+  cti-stix-store:
+    build: ../cti-stix-store
+
+
