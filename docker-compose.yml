@@ -1,0 +1,118 @@
+version: '2'
+services:
+  unfetter-discover-gateway:
+    image: nginx
+    container_name: unfetter-discover-gateway
+    ports:
+     - "443:443"
+    depends_on:
+     - unfetter-discover-openssl
+    links:
+     - unfetter-discover-ui
+     - cti-stix-store
+    volumes:
+     - ../unfetter-discover-gateway/nginx/conf.d:/etc/nginx/conf.d
+     - ./certs/:/etc/pki/tls/certs
+  unfetter-discover-ui:
+    build: ../unfetter-discover-ui
+    container_name: unfetter-discover-ui
+    ports:
+     - "50000:50000"
+    depends_on:
+     - unfetter-discover-openssl
+    volumes:
+     - ./certs/:/etc/pki/tls/certs
+    entrypoint:
+     - ember
+     - server
+     - -live-reload-port
+     - "50000"
+     - -ssl
+     - -ssl-key
+     - /etc/pki/tls/certs/server.key
+     - -ssl-cert
+     - /etc/pki/tls/certs/server.crt
+  unfetter-discover-openssl:
+    image: svagi/openssl
+    container_name: unfetter-discover-openssl
+    entrypoint:
+     - openssl
+     - req
+     - -subj
+     - /CN=localhost/DC=localhost/DC=localdomain
+     - -new
+     - -newkey
+     - rsa:2048
+     - -days
+     - "365"
+     - -nodes
+     - -x509
+     - -keyout
+     - /tmp/certs/server.key
+     - -out
+     - /tmp/certs/server.crt
+    volumes:
+     - ./certs/:/tmp/certs
+  unfetter-discover-processor:
+    build: ../unfetter-discover-processor
+    container_name: unfetter-discover-processor
+    entrypoint:
+     - node
+     - processor.js
+     - -p
+     - "3000"
+     - -h
+     - cti-stix-store
+     - -j
+     - examples/mitre-attack-cis/campaigns.json
+     - examples/mitre-attack-cis/attack-patterns.json
+     - examples/mitre-attack-cis/course-of-actions.json
+     - examples/mitre-attack-cis/indicators.json
+     - examples/mitre-attack-cis/malwares.json
+     - examples/mitre-attack-cis/marking-definition-rating.json
+     - examples/mitre-attack-cis/observable-path-relationships.json
+     - examples/mitre-attack-cis/observable-paths.json
+     - examples/mitre-attack-cis/relationships.json
+     - examples/mitre-attack-cis/reports.json
+     - examples/mitre-attack-cis/threat-actors.json
+     - examples/mitre-attack-cis/tools.json
+     - examples/mitre-attack-cis/intrusion-sets.json
+    depends_on:
+     - cti-stix-store
+  cti-stix-store:
+    image: unfetter/cti-stix-store
+    container_name: cti-stix-store
+    depends_on:
+     - cti-stix-store-repository
+    links:
+     - cti-stix-store-repository:repository
+    volumes:
+     - ../unfetter-discover-processor/examples/schemas:/tmp/schemas
+    environment:
+     - SCHEMA_LOCATION=/tmp/schemas
+  cti-stix-store-repository:
+    image: mongo
+    container_name: cti-stix-store-repository
+  cti-stix-ui:
+    image: unfetter/cti-stix-ui
+    container_name: cti-stix-ui
+    depends_on:
+    - cti-stix-store
+    links:
+    - cti-stix-store
+    ports:
+     - "40000:40000"
+    depends_on:
+    - unfetter-discover-openssl
+    volumes:
+     - ./certs/:/etc/pki/tls/certs
+    entrypoint:
+     - ember
+     - server
+     - -live-reload-port
+     - "40000"
+     - -ssl
+     - -ssl-key
+     - /etc/pki/tls/certs/server.key
+     - -ssl-cert
+     - /etc/pki/tls/certs/server.crt
