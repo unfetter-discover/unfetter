@@ -1,0 +1,5 @@
+version: '2'
+services:
+  unfetter-discover-ui:
+    volumes:
+     - ../unfetter-discover-ui/app:/usr/share/unfetter-discover-ui/app
