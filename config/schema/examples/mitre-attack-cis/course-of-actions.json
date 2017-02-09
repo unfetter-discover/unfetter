@@ -1,0 +1,575 @@
+{
+    "type": "bundle",
+    "id": "bundle--17e1c581-e933-4c13-b12d-dfa3e535af2e",
+    "spec_version": "2.0",
+    "courses_of_action": [
+        {
+            "modified": "2016-09-01T18:10:09.300Z",
+            "created": "2016-09-01T18:10:09.300Z",
+            "name": "Audit Logging",
+            "description": "Collect, manage, and analyze audit logs of events that could help detect, understand, or recover from an attack.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC6"
+                }
+            ],
+            "labels": [
+                "monitoring"
+            ],
+            "id": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.004Z",
+            "created": "2016-09-01T18:10:09.004Z",
+            "name": "Internet Application Protections",
+            "description": "Minimize the attack surface and the opportunities for attackers to manipulate human behavior though their interaction with web browsers and email systems.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC7"
+                }
+            ],
+            "labels": [
+                "hardening",
+                "patching"
+            ],
+            "id": "course-of-action--609f30ab-47bf-4bcf-8553-d5250418e4b4",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.276Z",
+            "created": "2016-09-01T18:10:09.276Z",
+            "name": "Hardware Inventory",
+            "description": "Actively manage (inventory, track, and correct) all hardware devices on the network so that only authorized devices are given access, and unauthorized and unmanaged devices are found and prevented from gaining access.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC1"
+                }
+            ],
+            "labels": [
+                "monitoring",
+                "policy-actions"
+            ],
+            "id": "course-of-action--9ed538bb-1e8b-401f-8ee9-81ebcf004f85",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.286Z",
+            "created": "2016-09-01T18:10:09.286Z",
+            "name": "Software Inventory",
+            "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC2"
+                }
+            ],
+            "labels": [
+                "monitoring",
+                "policy-actions"
+            ],
+            "id": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.122Z",
+            "created": "2016-09-01T18:10:09.122Z",
+            "name": "Vulnerability Remediation",
+            "description": "Continuously acquire, assess, and take action on new information in order to identify vulnerabilities, remediate, and minimize the window of opportunity for attackers.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC4"
+                }
+            ],
+            "labels": [
+                "monitoring",
+                "patching",
+                "policy-actions"
+            ],
+            "id": "course-of-action--055ff7c0-8a74-4044-8af1-040c4f150255",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.295Z",
+            "created": "2016-09-01T18:10:09.295Z",
+            "name": "Secure Endpoint Configurations",
+            "description": "Establish, implement, and actively manage (track, report on, correct) the security configuration of laptops, servers, and workstations using a rigorous configuration management and change control process in order to prevent attackers from exploiting vulnerable services and settings.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC3"
+                }
+            ],
+            "labels": [
+                "hardening",
+                "patching"
+            ],
+            "id": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.309Z",
+            "created": "2016-09-01T18:10:09.309Z",
+            "name": "Controlled Access Capabilities",
+            "description": "The processes and tools used to track/control/prevent/correct secure access to critical assets (e.g., information, resources, systems) according to the formal determination of which persons, computers, and applications have a need and right to access these critical assets based on an approved classification.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC14"
+                }
+            ],
+            "labels": [
+                "training",
+                "physical-access-restrictions",
+                "logical-access-restrictions",
+                "policy-actions"
+            ],
+            "id": "course-of-action--9429f105-3da0-46c2-8bdb-1c3433252ec6",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.301Z",
+            "created": "2016-09-01T18:10:09.301Z",
+            "name": "Secure Network Configurations",
+            "description": "Establish, implement, and actively manage (track, report on, correct) the security configuration of network infrastructure devices using a rigorous configuration management and change control process in order to prevent attackers from exploiting vulnerable services and settings.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC11"
+                }
+            ],
+            "labels": [
+                "hardening",
+                "patching",
+                "monitoring"
+            ],
+            "id": "course-of-action--f24960f4-753b-4ed3-8d6c-a37373dd2b91",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.301Z",
+            "created": "2016-09-01T18:10:09.301Z",
+            "name": "Data Recovery Capability",
+            "description": "The processes and tools used to properly back up critical information with a proven methodology for timely recovery of it.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC10"
+                }
+            ],
+            "labels": [
+                "hardening"
+            ],
+            "id": "course-of-action--1daa2a27-ebbd-4b2c-8d4d-5334513846e5",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.313Z",
+            "created": "2016-09-01T18:10:09.313Z",
+            "name": "Data Protection",
+            "description": "The processes and tools used to prevent data exfiltration, mitigate the effects of exfiltrated data, and ensure the privacy and integrity of sensitive information.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC13"
+                }
+            ],
+            "labels": [
+                "internal-blocking",
+                "policy-actions"
+            ],
+            "id": "course-of-action--f342e7b3-30c7-4f01-830c-6c6ec4a7839e",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.005Z",
+            "created": "2016-09-01T18:10:09.005Z",
+            "name": "Malware Defenses",
+            "description": "Control the installation, spread, and execution of malicious code at multiple points in the enterprise, while optimizing the use of automation to enable rapid updating of defense, data gathering, and corrective action.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC8"
+                }
+            ],
+            "labels": [
+                "hardening",
+                "perimeter-blocking",
+                "internal-blocking",
+                "redirection",
+                "patching",
+                "eradication",
+                "rebuilding"
+            ],
+            "id": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.301Z",
+            "created": "2016-09-01T18:10:09.301Z",
+            "name": "Network Traffic Security",
+            "description": "Manage (track/control/correct) the ongoing operational use of ports, protocols, and services on networked devices in order to minimize windows of vulnerability available to attackers.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC9"
+                }
+            ],
+            "labels": [
+                "perimeter-blocking",
+                "logical-access-restrictions"
+            ],
+            "id": "course-of-action--51759df5-7bee-4efc-8a13-e513a21a73dd",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.314Z",
+            "created": "2016-09-01T18:10:09.314Z",
+            "name": "Application Software Security",
+            "description": "Manage the security life cycle of all in-house developed and acquired software in order to prevent, detect, and correct security weaknesses.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC18"
+                }
+            ],
+            "labels": [
+                "hardening",
+                "patching"
+            ],
+            "id": "course-of-action--4ce65088-9543-47f8-8e2a-2962203c0fd9",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.314Z",
+            "created": "2016-09-01T18:10:09.314Z",
+            "name": "Wireless Access Control",
+            "description": "The processes and tools used to track/control/prevent/correct the security use of wireless local area networks (LANS), access points, and wireless client systems.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC15"
+                }
+            ],
+            "labels": [
+                "perimeter-blocking",
+                "physical-access-restrictions",
+                "logical-access-restrictions"
+            ],
+            "id": "course-of-action--c1f59b00-176d-4371-8cb6-c0e3f3974b7a",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.306Z",
+            "created": "2016-09-01T18:10:09.306Z",
+            "name": "Boundary Defenses",
+            "description": "Detect/prevent/correct the flow of information transferring networks of different trust levels with a focus on security-damaging data.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC12"
+                }
+            ],
+            "labels": [
+                "perimeter-blocking",
+                "physical-access-restrictions",
+                "logical-access-restrictions"
+            ],
+            "id": "course-of-action--d7d8ff89-45b7-42e6-85d0-6bcff7659170",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.318Z",
+            "created": "2016-09-01T18:10:09.318Z",
+            "name": "Penetration Testing",
+            "description": "Test the overall strength of an organization’s defenses (the technology, the processes, and the people) by simulating the objectives and actions of an attacker.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC20"
+                }
+            ],
+            "labels": [
+                "policy-actions"
+            ],
+            "id": "course-of-action--62ee0cd4-f97e-41de-86a1-c19639f90152",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.354Z",
+            "created": "2016-09-01T18:10:09.354Z",
+            "name": "Account Monitoring",
+            "description": "Actively manage the life cycle of system and application accounts – their creation, use, dormancy, deletion - in order to minimize opportunities for attackers to leverage them.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC16"
+                }
+            ],
+            "labels": [
+                "monitoring"
+            ],
+            "id": "course-of-action--ce1c3bb5-d7f0-40c8-8f0b-a951b1dd96f7",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.361Z",
+            "created": "2016-09-01T18:10:09.361Z",
+            "name": "Incident Response Processing",
+            "description": "Protect the organization’s information, as well as its reputation, by developing and implementing an incident response infrastructure (e.g., plans, defined roles, training, communications, management oversight) for quickly discovering an attack and then effectively containing the damage, eradicating the attacker’s presence, and restoring the integrity of the network and systems.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC19"
+                }
+            ],
+            "labels": [
+                "policy-actions",
+                "public-disclosure",
+                "monitoring"
+            ],
+            "id": "course-of-action--8e02168c-26f5-4bdc-83d8-ef6ac4c6380f",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.361Z",
+            "created": "2016-09-01T18:10:09.361Z",
+            "name": "Security Skills Training",
+            "description": "SFor all functional roles in the organization (prioritizing those mission-critical to the business and its security), identify the specific knowledge, skills, and abilities needed to support defense of the enterprise; develop and execute an integrated plan to assess, identify gaps, and remediate through policy, organizational planning, training, and awareness programs.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC17"
+                }
+            ],
+            "labels": [
+                "training",
+                "monitoring",
+                "policy-actions"
+            ],
+            "id": "course-of-action--141cf7b1-96b7-4f0c-8e30-f10a009ad1a9",
+            "type": "course-of-action"
+        },
+        {
+            "modified": "2016-09-01T18:10:09.287Z",
+            "created": "2016-09-01T18:10:09.287Z",
+            "name": "Controlled Administrative Privileges",
+            "description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications.",
+            "version": 0,
+            "x_unfetter_rating_labels": [
+                "Unknown",
+                "None",
+                "Low",
+                "Medium",
+                "High"
+            ],
+            "granular_markings": [],
+            "external_references": [
+                {
+                    "source_name": "CIS",
+                    "url": "https://www.cisecurity.org/critical-controls.cfm",
+                    "external_id": "CSC5"
+                }
+            ],
+            "labels": [
+                "policy-actions"
+            ],
+            "id": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
+            "type": "course-of-action"
+        }
+    ]
+}

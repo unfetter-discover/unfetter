@@ -12,6 +12,7 @@ services:
 
   unfetter-discover-processor:
     build: ../unfetter-discover-processor
+
   cti-stix-store:
     build: ../cti-stix-store
 
