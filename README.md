@@ -74,4 +74,3 @@ See [LICENSE](LICENSE.md).
 
 See [DISCLAIMER](DISCLAIMER.md).
 
-[1] https://www.github.com/unfetter-discover
