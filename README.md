@@ -44,7 +44,7 @@ Create a directory to hold all the projects,
 mkdir unfetter-discover
 cd unfetter-discover
 ```
-You will first need to clone all the projects in [unfetter-discover](https://www.github.com/unfetter-discover).  
+Next, you will need to clone all the projects in [unfetter-discover](https://www.github.com/unfetter-discover).  
 ```bash
  curl -s https://api.github.com/orgs/unfetter-discover/repos\?per_page\=200 | perl -ne 'print "$1\n" if (/"clone_url": "([^"]+)/)' | xargs -n 1 git clone
  ```
