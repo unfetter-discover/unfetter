@@ -22,7 +22,7 @@ every container. There are two ways to run Unfetter Discover:
 is recommended for most cases.
 
 2. If you are a developer and would like to build the Unfetter-Discover project
-from source, then you will need to clone all the repos in [unfetter-discover](1)
+from source, then you will need to clone all the repos in [unfetter-discover](https://www.github.com/unfetter-discover)
 and use the `docker-compose.development.yml` config file.
 
 ### Case 1: Build from Docker Hub.  Normal Use Case
@@ -39,10 +39,17 @@ docker-compose up
 
 ### Case 2: Build from local source files.  Developer Use Case
 
-You will first need to clone all the projects in [unfetter-discover](1).
-
+Create a directory to hold all the projects, 
+```bash
+mkdir unfetter-discover
+cd unfetter-discover
+```
+You will first need to clone all the projects in [unfetter-discover](https://www.github.com/unfetter-discover).  
 ```bash
  curl -s https://api.github.com/orgs/unfetter-discover/repos\?per_page\=200 | perl -ne 'print "$1\n" if (/"clone_url": "([^"]+)/)' | xargs -n 1 git clone
+ ```
+ Next, change directories into the unfetter directory, which houses the docker-compose.yml files, and run docker-compose
+ ```
  cd unfetter
  docker-compose -f docker-compose.yml -f docker-compose.development.yml up
 ```
