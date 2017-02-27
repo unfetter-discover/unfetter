@@ -57,7 +57,7 @@ services:
     image: unfetter/unfetter-discover-processor:latest
     container_name: unfetter-discover-processor
     volumes:
-     - ./config/schema/examples:/tmp/examples
+     - ./config/examples:/tmp/examples
     entrypoint:
      - node
      - processor.js
