@@ -1,7 +1,7 @@
 version: '2'
 services:
   unfetter-discover-gateway:
-    image: nginx
+    image: nginx:1.11
     container_name: unfetter-discover-gateway
     ports:
      - "443:443"
@@ -14,7 +14,7 @@ services:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-ui:
-    image: unfetter/unfetter-discover-ui
+    image: unfetter/unfetter-discover-ui:latest
     container_name: unfetter-discover-ui
     ports:
      - "50000:50000"
@@ -33,7 +33,7 @@ services:
      - -ssl-cert
      - /etc/pki/tls/certs/server.crt
   unfetter-discover-openssl:
-    image: svagi/openssl
+    image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
     entrypoint:
      - openssl
@@ -54,7 +54,7 @@ services:
     volumes:
      - ./certs/:/tmp/certs
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor
+    image: unfetter/unfetter-discover-processor:latest
     container_name: unfetter-discover-processor
     volumes:
      - ./config/schema/examples:/tmp/examples
@@ -82,7 +82,7 @@ services:
     depends_on:
      - cti-stix-store
   cti-stix-store:
-    image: unfetter/cti-stix-store
+    image: unfetter/cti-stix-store:latest
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
@@ -93,10 +93,10 @@ services:
     environment:
      - SCHEMA_LOCATION=/tmp/schemas
   cti-stix-store-repository:
-    image: mongo
+    image: mongo:3.0
     container_name: cti-stix-store-repository
   cti-stix-ui:
-    image: unfetter/cti-stix-ui
+    image: unfetter/cti-stix-ui:latest
     container_name: cti-stix-ui
     depends_on:
     - cti-stix-store
