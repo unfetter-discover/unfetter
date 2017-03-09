@@ -5,11 +5,10 @@
 	"courses_of_action": [{
 		"name": "CSC 5.9",
 		"description": "Administrators shall use a dedicated machine for all administrative tasks or tasks requiring elevated access. This machine shall be isolated from the organization's primary network and not be allowed Internet access. This machine shall not be used for reading e-mail, composing documents, or surfing the Internet.",
-		"labelNames": [{
-			"name": "CSC 5"
-		}, {
-			"name": "CSC 5.9"
-		}],
+		"labels": [
+			"CSC 5",
+			"CSC 5.9"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:06:24.749Z",
@@ -19,11 +18,10 @@
 	}, {
 		"name": "CSC 5.5",
 		"description": "Configure systems to issue a log entry and alert on any unsuccessful login to an administrative account.",
-		"labelNames": [{
-			"name": "CSC 5"
-		}, {
-			"name": "CSC 5.5"
-		}],
+		"labels": [
+			"CSC 5",
+			"CSC 5.5"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:02:10.177Z",
@@ -33,9 +31,9 @@
 	}, {
 		"name": "CSC 4 Vulnerability Remediation",
 		"description": "Continuously acquire, assess, and take action on new information in order to identify vulnerabilities, remediate, and minimize the window of opportunity for attackers.",
-		"labelNames": [{
-			"name": "CSC4"
-		}],
+		"labels": [
+			"CSC4"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC4",
@@ -51,11 +49,10 @@
 	}, {
 		"name": "CSC 5.7",
 		"description": "Where multi-factor authentication is not supported, user accounts shall be required to use long passwords on the system (longer than 14 characters). ",
-		"labelNames": [{
-			"name": "CSC 5"
-		}, {
-			"name": "CSC 5.7"
-		}],
+		"labels": [
+			"CSC 5",
+			"CSC 5.7"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:05:42.918Z",
@@ -65,11 +62,10 @@
 	}, {
 		"name": "CSC 1.1",
 		"description": "Deploy an automated asset inventory discovery tool and use it to build a preliminary inventory of systems connected to an organization’s public and private network(s). Both active tools that scan through IPv4 or IPv6 network address ranges and passive tools that identify hosts based on analyzing their traffic should be employed.",
-		"labelNames": [{
-			"name": "CSC.1"
-		}, {
-			"name": "CSC.1.1"
-		}],
+		"labels": [
+			"CSC.1",
+			"CSC.1.1"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:44:20.459Z",
@@ -79,9 +75,9 @@
 	}, {
 		"name": "CSC 17 Security Skills Training",
 		"description": "SFor all functional roles in the organization (prioritizing those mission-critical to the business and its security), identify the specific knowledge, skills, and abilities needed to support defense of the enterprise; develop and execute an integrated plan to assess, identify gaps, and remediate through policy, organizational planning, training, and awareness programs.",
-		"labelNames": [{
-			"name": "CSC 17"
-		}],
+		"labels": [
+			"CSC 17"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC17",
@@ -97,11 +93,10 @@
 	}, {
 		"name": "CSC 2.1",
 		"description": "Devise a list of authorized software and version that is required in the enterprise for each type of system, including servers, workstations, and laptops of various kinds and uses.  This list should be monitored by file integrity checking tools to validate that the authorized software has not been modified.\n",
-		"labelNames": [{
-			"name": "CSC 2"
-		}, {
-			"name": "CSC 2.1"
-		}],
+		"labels": [
+			"CSC 2",
+			"CSC 2.1"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:52:30.718Z",
@@ -111,9 +106,9 @@
 	}, {
 		"name": "CSC 10 Data Recovery Capability",
 		"description": "The processes and tools used to properly back up critical information with a proven methodology for timely recovery of it.",
-		"labelNames": [{
-			"name": "CSC 10"
-		}],
+		"labels": [
+			"CSC 10"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC10",
@@ -129,13 +124,11 @@
 	}, {
 		"name": "CSC 10.3",
 		"description": "Ensure that backups are properly protected via physical security or encryption when they are stored, as well as when they are moved across the network.  This includes remote backups and cloud services.",
-		"labelNames": [{
-			"name": "CSC 10.3"
-		}, {
-			"name": "CSC 10"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 10.3",
+			"CSC 10",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:20:04.508Z",
@@ -145,13 +138,11 @@
 	}, {
 		"name": "CSC 6.4",
 		"description": "Have security personnel and/or system administrators run biweekly reports that identify anomalies in logs. They should then actively review the anomalies, documenting their findings.",
-		"labelNames": [{
-			"name": "CSC 6"
-		}, {
-			"name": "CSC 6.4"
-		}, {
-			"name": "Detect"
-		}],
+		"labels": [
+			"CSC 6",
+			"CSC 6.4",
+			"Detect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:08:48.039Z",
@@ -161,11 +152,10 @@
 	}, {
 		"name": "CSC 5.4",
 		"description": "Configure systems to issue a log entry and alert when an account is added to or removed from a domain administrators’ group, or when a new local administrator account is added on a system.",
-		"labelNames": [{
-			"name": "CSC 5"
-		}, {
-			"name": "CSC 5.4"
-		}],
+		"labels": [
+			"CSC 5",
+			"CSC 5.4"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:01:51.330Z",
@@ -190,13 +180,11 @@
 	}, {
 		"name": "CSC 8.2",
 		"description": "Employ anti-malware software that offers a centralized infrastructure that compiles information on file reputations or have administrators manually push updates to all machines. After applying an update, automated systems should verify that each system has received its signature update.",
-		"labelNames": [{
-			"name": "CSC 8"
-		}, {
-			"name": "CSC 8.2"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 8",
+			"CSC 8.2",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:13:50.976Z",
@@ -206,11 +194,10 @@
 	}, {
 		"name": "CSC 3.5",
 		"description": "Use file integrity checking tools to ensure that critical system files (including sensitive system and application executables, libraries, and configurations) have not been altered. The reporting system should: have the ability to account for routine and expected changes; highlight and alert on unusual or unexpected alterations; show the history of configuration changes over time and identify who made the change (including the original logged-in account in the event of a user ID switch, such as with the su or sudo command). These integrity checks should identify suspicious system alterations such as: owner and permissions changes to files or directories; the use of alternate data streams which could be used to hide malicious activities; and the introduction of extra files into key system areas (which could indicate malicious payloads left by attackers or additional files inappropriately added during batch distribution processes).",
-		"labelNames": [{
-			"name": "CSC 3"
-		}, {
-			"name": "CSC 3.5"
-		}],
+		"labels": [
+			"CSC 3",
+			"CSC 3.5"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:56:05.821Z",
@@ -220,11 +207,10 @@
 	}, {
 		"name": "CSC 6.1",
 		"description": "Include at least two synchronized time sources from which all servers and network equipment retrieve time information on a regular basis so that timestamps in logs are consistent.",
-		"labelNames": [{
-			"name": "CSC 6"
-		}, {
-			"name": "CSC 6.1"
-		}],
+		"labels": [
+			"CSC 6",
+			"CSC 6.1"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:07:54.300Z",
@@ -234,11 +220,10 @@
 	}, {
 		"name": "CSC 5.1",
 		"description": "Minimize administrative privileges and only use administrative accounts when they are required.  Implement focused auditing on the use of administrative privileged functions and monitor for anomalous behavior.",
-		"labelNames": [{
-			"name": "CSC 5"
-		}, {
-			"name": "CSC 5.1"
-		}],
+		"labels": [
+			"CSC 5",
+			"CSC 5.1"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:00:42.939Z",
@@ -248,13 +233,11 @@
 	}, {
 		"name": "CSC 7.8",
 		"description": "Scan and block all e-mail attachments entering the organization's e-mail gateway if they contain malicious code or file types that are unnecessary for the organization's business. This scanning should be done before the e-mail is placed in the user's inbox. This includes e-mail content filtering and web content filtering.",
-		"labelNames": [{
-			"name": "CSC 7"
-		}, {
-			"name": "CSC 7.8"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 7",
+			"CSC 7.8",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:13:11.914Z",
@@ -264,11 +247,10 @@
 	}, {
 		"name": "CSC 5.3",
 		"description": "Before deploying any new devices in a networked environment, change all default passwords for applications, operating systems, routers, firewalls, wireless access points, and other systems to have values consistent with administration-level accounts.",
-		"labelNames": [{
-			"name": "CSC 5"
-		}, {
-			"name": "CSC 5.3"
-		}],
+		"labels": [
+			"CSC 5",
+			"CSC 5.3"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:01:33.718Z",
@@ -278,11 +260,10 @@
 	}, {
 		"name": "CSC 1.5",
 		"description": "Deploy network level authentication via 802.1x to limit and control which devices can be connected to the network.  The 802.1x must be tied into the inventory data to determine authorized versus unauthorized systems.",
-		"labelNames": [{
-			"name": "CSC.1"
-		}, {
-			"name": "CSC.1.5"
-		}],
+		"labels": [
+			"CSC.1",
+			"CSC.1.5"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:51:37.764Z",
@@ -292,13 +273,11 @@
 	}, {
 		"name": "CSC 7.6",
 		"description": "The organization shall maintain and enforce network based URL filters that limit a system's ability to connect to websites not approved by the organization. The organization shall subscribe to URL categorization services to ensure that they are up-to-date with the most recent website category definitions available. Uncategorized sites shall be blocked by default. This filtering shall be enforced for each of the organization's systems, whether they are physically at an organization's facilities or not.",
-		"labelNames": [{
-			"name": "CSC 7"
-		}, {
-			"name": "CSC 7.6"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 7",
+			"CSC 7.6",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:12:30.967Z",
@@ -308,11 +287,10 @@
 	}, {
 		"name": "CSC 4.6",
 		"description": "Monitor logs associated with any scanning activity and associated administrator accounts to ensure that this activity is limited to the timeframes of legitimate scans.  ",
-		"labelNames": [{
-			"name": "CSC 4"
-		}, {
-			"name": "CSC 4.6"
-		}],
+		"labels": [
+			"CSC 4",
+			"CSC 4.6"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:59:11.923Z",
@@ -322,11 +300,10 @@
 	}, {
 		"name": "CSC 5.8",
 		"description": "Administrators should be required to access a system using a fully logged and non-administrative account. Then, once logged on to the machine without administrative privileges, the administrator should transition to administrative privileges using tools such as Sudo on Linux/UNIX, RunAs on Windows, and other similar facilities for other types of systems.",
-		"labelNames": [{
-			"name": "CSC 5"
-		}, {
-			"name": "CSC 5.8"
-		}],
+		"labels": [
+			"CSC 5",
+			"CSC 5.8"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:06:02.269Z",
@@ -336,13 +313,11 @@
 	}, {
 		"name": "CSC 9.2",
 		"description": "Apply host-based firewalls or port filtering tools on end systems, with a default-deny rule that drops all traffic except those services and ports that are explicitly allowed.",
-		"labelNames": [{
-			"name": "CSC 9"
-		}, {
-			"name": "CSC 9.2"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 9",
+			"CSC 9.2",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:17:01.588Z",
@@ -352,13 +327,11 @@
 	}, {
 		"name": "CSC 10.2",
 		"description": "Test data on backup media on a regular basis by performing a data restoration process to ensure that the backup is properly working.",
-		"labelNames": [{
-			"name": "CSC 10"
-		}, {
-			"name": "CSC 10.2"
-		}, {
-			"name": "Detect"
-		}],
+		"labels": [
+			"CSC 10",
+			"CSC 10.2",
+			"Detect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:19:04.307Z",
@@ -368,11 +341,10 @@
 	}, {
 		"name": "CSC 1.4",
 		"description": "Maintain an asset inventory of all systems connected to the network and the network devices themselves, recording at least the network addresses, machine name(s), purpose of each system, an asset owner responsible for each device, and the department associated with each device. The inventory should include every system that has an Internet protocol (IP) address on the network, including but not limited to desktops, laptops, servers, network equipment (routers, switches, firewalls, etc.), printers, storage area networks, Voice Over-IP telephones, multi-homed addresses, virtual addresses, etc.  The asset inventory created must also include data on whether the device is a portable and/or personal device. Devices such as mobile phones, tablets, laptops, and other portable electronic devices that store or process data must be identified, regardless of whether they are attached to the organization’s network.",
-		"labelNames": [{
-			"name": "CSC.1"
-		}, {
-			"name": "CSC.1.4"
-		}],
+		"labels": [
+			"CSC.1",
+			"CSC.1.4"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:51:17.983Z",
@@ -382,9 +354,9 @@
 	}, {
 		"name": "CSC 18 Application Software Security",
 		"description": "Manage the security life cycle of all in-house developed and acquired software in order to prevent, detect, and correct security weaknesses.",
-		"labelNames": [{
-			"name": "CSC 18"
-		}],
+		"labels": [
+			"CSC 18"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC18",
@@ -400,9 +372,9 @@
 	}, {
 		"name": "CSC 9 Network Traffic Security",
 		"description": "Manage (track/control/correct) the ongoing operational use of ports, protocols, and services on networked devices in order to minimize windows of vulnerability available to attackers.",
-		"labelNames": [{
-			"name": "CSC 9"
-		}],
+		"labels": [
+			"CSC 9"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC9",
@@ -418,11 +390,10 @@
 	}, {
 		"name": "CSC 1.2",
 		"description": "If the organization is dynamically assigning addresses using DHCP, then deploy dynamic host configuration protocol (DHCP) server logging, and use this information to improve the asset inventory and help detect unknown systems.",
-		"labelNames": [{
-			"name": "CSC.1"
-		}, {
-			"name": "CSC.1.2"
-		}],
+		"labels": [
+			"CSC.1",
+			"CSC.1.2"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:50:29.702Z",
@@ -432,11 +403,10 @@
 	}, {
 		"name": "CSC 6.2",
 		"description": "Validate audit log settings for each hardware device and the software installed on it, ensuring that logs include a date, timestamp, source addresses, destination addresses, and various other useful elements of each packet and/or transaction. Systems should record logs in a standardized format such as syslog entries or those outlined by the Common Event Expression initiative. If systems cannot generate logs in a standardized format, log normalization tools can be deployed to convert logs into such a format.",
-		"labelNames": [{
-			"name": "CSC 6"
-		}, {
-			"name": "CSC 6.2"
-		}],
+		"labels": [
+			"CSC 6",
+			"CSC 6.2"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:08:16.020Z",
@@ -446,11 +416,10 @@
 	}, {
 		"name": "CSC 4.3",
 		"description": "Perform vulnerability scanning in authenticated mode either with agents running locally on each end system to analyze the security configuration or with remote scanners that are given administrative rights on the system being tested. Use a dedicated account for authenticated vulnerability scans, which should not be used for any other administrative activities and should be tied to specific machines at specific IP addresses.  Ensure that only authorized employees have access to the vulnerability management user interface and that roles are applied to each user.",
-		"labelNames": [{
-			"name": "CSC 4"
-		}, {
-			"name": "CSC 4.3"
-		}],
+		"labels": [
+			"CSC 4",
+			"CSC 4.3"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:58:15.282Z",
@@ -460,11 +429,10 @@
 	}, {
 		"name": "CSC 2.2",
 		"description": "Deploy application whitelisting technology that allows systems to run software only if it is included on the whitelist and Protects execution of all other software on the system. The whitelist may be very extensive (as is available from commercial whitelist vendors), so that users are not inconvenienced when using common software. Or, for some special-purpose systems (which require only a small number of programs to achieve their needed business functionality), the whitelist may be quite narrow.",
-		"labelNames": [{
-			"name": "CSC 2"
-		}, {
-			"name": "CSC 2.2"
-		}],
+		"labels": [
+			"CSC 2",
+			"CSC 2.2"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:53:02.611Z",
@@ -474,9 +442,9 @@
 	}, {
 		"name": "CSC 7 Internet Application Protections",
 		"description": "Minimize the attack surface and the opportunities for attackers to manipulate human behavior though their interaction with web browsers and email systems.",
-		"labelNames": [{
-			"name": "CSC 7"
-		}],
+		"labels": [
+			"CSC 7"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC7",
@@ -492,11 +460,10 @@
 	}, {
 		"name": "CSC 4.1",
 		"description": "Run automated vulnerability scanning tools against all systems on the network on a weekly or more frequent basis and deliver prioritized lists of the most critical vulnerabilities to each responsible system administrator along with risk scores that compare the effectiveness of system administrators and departments in reducing risk.  Use a SCAP-validated vulnerability scanner that looks for both code-based vulnerabilities (such as those described by Common Vulnerabilities and Exposures entries) and configuration-based vulnerabilities (as enumerated by the Common Configuration Enumeration Project).",
-		"labelNames": [{
-			"name": "CSC 4"
-		}, {
-			"name": "CSC 4.1"
-		}],
+		"labels": [
+			"CSC 4",
+			"CSC 4.1"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:57:29.502Z",
@@ -521,13 +488,11 @@
 	}, {
 		"name": "CSC 10.4",
 		"description": "Ensure that key systems have at least one backup destination that is not continuously addressable through operating system calls.  This will mitigate the risk of attacks like CryptoLocker which seek to encrypt or damage data on all addressable data shares, including backup destinations.",
-		"labelNames": [{
-			"name": "CSC 10"
-		}, {
-			"name": "CSC 10.4"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 10",
+			"CSC 10.4",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:21:01.063Z",
@@ -537,11 +502,10 @@
 	}, {
 		"name": "CSC 4.2",
 		"description": "Run automated vulnerability scanning tools against all systems on the network on a weekly or more frequent basis and deliver prioritized lists of the most critical vulnerabilities to each responsible system administrator along with risk scores that compare the effectiveness of system administrators and departments in reducing risk.  Use a SCAP-validated vulnerability scanner that looks for both code-based vulnerabilities (such as those described by Common Vulnerabilities and Exposures entries) and configuration-based vulnerabilities (as enumerated by the Common Configuration Enumeration Project).",
-		"labelNames": [{
-			"name": "CSC 4"
-		}, {
-			"name": "CSC 4.2"
-		}],
+		"labels": [
+			"CSC 4",
+			"CSC 4.2"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:57:53.137Z",
@@ -551,13 +515,11 @@
 	}, {
 		"name": "CSC 9.3",
 		"description": "Perform automated port scans on a regular basis against all key servers and compared to a known effective baseline.  If a change that is not listed on the organization’s approved baseline is discovered, an alert should be generated and reviewed.",
-		"labelNames": [{
-			"name": "CSC 9"
-		}, {
-			"name": "CSC 9.3"
-		}, {
-			"name": "Detect"
-		}],
+		"labels": [
+			"CSC 9",
+			"CSC 9.3",
+			"Detect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:17:24.730Z",
@@ -567,13 +529,11 @@
 	}, {
 		"name": "CSC 8.1",
 		"description": "Employ automated tools to continuously monitor workstations, servers, and mobile devices with anti-virus, anti-spyware, personal firewalls, and host-based IPS functionality. All malware detection events should be sent to enterprise anti-malware administration tools and event log servers.",
-		"labelNames": [{
-			"name": "CSC 8"
-		}, {
-			"name": "CSC 8.1"
-		}, {
-			"name": "Detect"
-		}],
+		"labels": [
+			"CSC 8",
+			"CSC 8.1",
+			"Detect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:13:32.762Z",
@@ -583,11 +543,10 @@
 	}, {
 		"name": "CSC 2.4",
 		"description": "Virtual machines and/or air-gapped systems should be used to isolate and run applications that are required for business operations but based on higher risk should not be installed within a networked environment. ",
-		"labelNames": [{
-			"name": "CSC 2"
-		}, {
-			"name": "CSC 2.4"
-		}],
+		"labels": [
+			"CSC 2",
+			"CSC 2.4"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:53:47.199Z",
@@ -597,11 +556,10 @@
 	}, {
 		"name": "CSC 4.7",
 		"description": "Compare the results from back-to-back vulnerability scans to verify that vulnerabilities were addressed either by patching, implementing a compensating control, or documenting and accepting a reasonable business risk. Such acceptance of business risks for existing vulnerabilities should be periodically reviewed to determine if newer compensating controls or subsequent patches can address vulnerabilities that were previously accepted, or if conditions have changed, increasing the risk.",
-		"labelNames": [{
-			"name": "CSC 4"
-		}, {
-			"name": "CSC 4.7"
-		}],
+		"labels": [
+			"CSC 4",
+			"CSC 4.7"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:59:32.953Z",
@@ -611,11 +569,10 @@
 	}, {
 		"name": "CSC 3.3",
 		"description": "Store the master images on securely configured servers, validated with integrity checking tools capable of continuous inspection, and change management to ensure that only authorized changes to the images are possible. Alternatively, these master images can be stored in offline machines, air-gapped from the production network, with images copied via secure media to move them between the image storage servers and the production network.",
-		"labelNames": [{
-			"name": "CSC 3"
-		}, {
-			"name": "CSC 3.3"
-		}],
+		"labels": [
+			"CSC 3",
+			"CSC 3.3"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:55:24.335Z",
@@ -625,11 +582,10 @@
 	}, {
 		"name": "CSC 3.7",
 		"description": "Deploy system configuration management tools, such as Active Directory Group Policy Objects for Microsoft Windows systems or Puppet for UNIX systems that will automatically enforce and redeploy configuration settings to systems at regularly scheduled intervals. They should be capable of triggering redeployment of configuration settings on a scheduled, manual, or event-driven basis.",
-		"labelNames": [{
-			"name": "CSC 3"
-		}, {
-			"name": "CSC 3.7"
-		}],
+		"labels": [
+			"CSC 3",
+			"CSC 3.7"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:57:00.125Z",
@@ -639,11 +595,10 @@
 	}, {
 		"name": "CSC 5.6",
 		"description": "Use multifactor authentication for all administrative access, including domain administrative access.  Multi-factor authentication can include a variety of techniques, to include the use of smart cards, certificates, One Time Password (OTP) tokens, biometrics, or other similar authentication methods.",
-		"labelNames": [{
-			"name": "CSC 5"
-		}, {
-			"name": "CSC 5.6"
-		}],
+		"labels": [
+			"CSC 5",
+			"CSC 5.6"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:05:25.545Z",
@@ -653,9 +608,9 @@
 	}, {
 		"name": "CSC 8 Malware Defenses",
 		"description": "Control the installation, spread, and execution of malicious code at multiple points in the enterprise, while optimizing the use of automation to enable rapid updating of defense, data gathering, and corrective action.",
-		"labelNames": [{
-			"name": "CSC 8"
-		}],
+		"labels": [
+			"CSC 8"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC8",
@@ -671,13 +626,11 @@
 	}, {
 		"name": "CSC 10.1",
 		"description": "Ensure that each system is automatically backed up on at least a weekly basis, and more often for systems storing sensitive information. To help ensure the ability to rapidly restore a system from backup, the operating system, application software, and data on a machine should each be included in the overall backup procedure. These three components of a system do not have to be included in the same backup file or use the same backup software. There should be multiple backups over time, so that in the event of malware infection, restoration can be from a version that is believed to predate the original infection. All backup policies should be compliant with any regulatory or official requirements.",
-		"labelNames": [{
-			"name": "CSC 10"
-		}, {
-			"name": "CSC 10.1"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 10",
+			"CSC 10.1",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:18:42.425Z",
@@ -687,13 +640,11 @@
 	}, {
 		"name": "CSC 8.4",
 		"description": "Enable anti-exploitation features such as Data Execution Protection (DEP), Address Space Layout Randomization (ASLR), virtualization / containerization, etc. For increased protection, deploy capabilities such as Enhanced Mitigation Experience Toolkit (EMET) that can be configured to apply these protections to a broader set of applications and executables.",
-		"labelNames": [{
-			"name": "CSC 8"
-		}, {
-			"name": "CSC 8.4"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 8",
+			"CSC 8.4",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:14:34.795Z",
@@ -703,9 +654,9 @@
 	}, {
 		"name": "CSC 6 Audit Logging",
 		"description": "Collect, manage, and analyze audit logs of events that could help detect, understand, or recover from an attack.",
-		"labelNames": [{
-			"name": "CSC 6"
-		}],
+		"labels": [
+			"CSC 6"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC6",
@@ -736,13 +687,11 @@
 	}, {
 		"name": "CSC 7.7",
 		"description": "To lower the chance of spoofed e-mail messages, implement the Sender Policy Framework (SPF) by deploying SPF records in DNS and enabling receiver-side verification in mail servers.",
-		"labelNames": [{
-			"name": "CSC 7"
-		}, {
-			"name": "CSC 7.7"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 7",
+			"CSC 7.7",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:12:50.888Z",
@@ -752,11 +701,10 @@
 	}, {
 		"name": "CSC 4.4",
 		"description": "Subscribe to vulnerability intelligence services in order to stay aware of emerging exposures, and use the information gained from this subscription to update the organization’s vulnerability scanning activities on at least a monthly basis.  Alternatively, ensure that the vulnerability scanning tools you use are regularly updated with all relevant important security vulnerabilities.",
-		"labelNames": [{
-			"name": "CSC 4"
-		}, {
-			"name": "CSC 4.4"
-		}],
+		"labels": [
+			"CSC 4",
+			"CSC 4.4"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:58:38.386Z",
@@ -766,11 +714,10 @@
 	}, {
 		"name": "CSC 1.6",
 		"description": "Use client certificates to validate and authenticate systems prior to connecting to the private network.",
-		"labelNames": [{
-			"name": "CSC.1"
-		}, {
-			"name": "CSC.1.6"
-		}],
+		"labels": [
+			"CSC.1",
+			"CSC.1.6"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:52:01.442Z",
@@ -780,11 +727,10 @@
 	}, {
 		"name": "CSC 1.3",
 		"description": "Ensure that all equipment acquisitions automatically update the inventory system as new, approved devices are connected to the network.",
-		"labelNames": [{
-			"name": "CSC.1"
-		}, {
-			"name": "CSC.1.3"
-		}],
+		"labels": [
+			"CSC.1",
+			"CSC.1.3"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:50:48.432Z",
@@ -794,13 +740,11 @@
 	}, {
 		"name": "CSC 9.4",
 		"description": "Verify any server that is visible from the Internet or an untrusted network, and if it is not required for business purposes, move it to an internal VLAN and give it a private address.",
-		"labelNames": [{
-			"name": "CSC 9"
-		}, {
-			"name": "CSC 9.4"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 9",
+			"CSC 9.4",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:17:39.456Z",
@@ -810,11 +754,10 @@
 	}, {
 		"name": "CSC 2.3",
 		"description": "Deploy software inventory tools throughout the organization covering each of the operating system types in use, including servers, workstations, and laptops. The software inventory system should track the version of the underlying operating system as well as the applications installed on it. The software inventory systems must be tied into the hardware asset inventory so all devices and associated software are tracked from a single location.\n",
-		"labelNames": [{
-			"name": "CSC 2"
-		}, {
-			"name": "CSC 2.3"
-		}],
+		"labels": [
+			"CSC 2",
+			"CSC 2.3"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:53:24.111Z",
@@ -824,9 +767,9 @@
 	}, {
 		"name": "CSC 19 Incident Response Processing",
 		"description": "Protect the organization’s information, as well as its reputation, by developing and implementing an incident response infrastructure (e.g., plans, defined roles, training, communications, management oversight) for quickly discovering an attack and then effectively containing the damage, eradicating the attacker’s presence, and restoring the integrity of the network and systems.",
-		"labelNames": [{
-			"name": "CSC 19"
-		}],
+		"labels": [
+			"CSC 19"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC19",
@@ -842,9 +785,9 @@
 	}, {
 		"name": "CSC 14 Controlled Access Capabilities",
 		"description": "The processes and tools used to track/control/prevent/correct secure access to critical assets (e.g., information, resources, systems) according to the formal determination of which persons, computers, and applications have a need and right to access these critical assets based on an approved classification.",
-		"labelNames": [{
-			"name": "CSC 14"
-		}],
+		"labels": [
+			"CSC 14"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC14",
@@ -875,11 +818,10 @@
 	}, {
 		"name": "CSC 5.2",
 		"description": "Use automated tools to inventory all administrative accounts and validate that each person with administrative privileges on desktops, laptops, and servers is authorized by a senior executive.",
-		"labelNames": [{
-			"name": "CSC 5"
-		}, {
-			"name": "CSC 5.2"
-		}],
+		"labels": [
+			"CSC 5",
+			"CSC 5.2"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:01:05.757Z",
@@ -889,13 +831,11 @@
 	}, {
 		"name": "CSC 9.1",
 		"description": "Ensure that only ports, protocols, and services with validated business needs are running on each system.",
-		"labelNames": [{
-			"name": "CSC 9"
-		}, {
-			"name": "CSC 9.1"
-		}, {
-			"name": "Identify"
-		}],
+		"labels": [
+			"CSC 9",
+			"CSC 9.1",
+			"Identify"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:16:44.671Z",
@@ -905,13 +845,11 @@
 	}, {
 		"name": "CSC 9.6",
 		"description": "Place application firewalls in front of any critical servers to verify and validate the traffic going to the server.  Any unauthorized services or traffic should be blocked and an alert generated.",
-		"labelNames": [{
-			"name": "CSC 9"
-		}, {
-			"name": "CSC 9.6"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 9",
+			"CSC 9.6",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:18:23.581Z",
@@ -921,13 +859,11 @@
 	}, {
 		"name": "CSC 8.5",
 		"description": "Use network-based anti-malware tools to identify executables in all network traffic and use techniques other than signature-based detection to identify and filter out malicious content before it arrives at the endpoint.",
-		"labelNames": [{
-			"name": "CSC 8"
-		}, {
-			"name": "CSC 8.5"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 8",
+			"CSC 8.5",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:15:51.165Z",
@@ -937,13 +873,11 @@
 	}, {
 		"name": "CSC 7.4",
 		"description": "Log all URL requests from each of the organization's systems, whether onsite or a mobile device, in order to identify potentially malicious activity and assist incident handlers with identifying potentially compromised systems.",
-		"labelNames": [{
-			"name": "CSC 7.4"
-		}, {
-			"name": "CSC 7"
-		}, {
-			"name": "Detect"
-		}],
+		"labels": [
+			"CSC 7.4",
+			"CSC 7",
+			"Detect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:11:08.419Z",
@@ -953,11 +887,10 @@
 	}, {
 		"name": "CSC 3.1",
 		"description": "Establish standard secure configurations of your operating systems and software applications. Standardized images should represent hardened versions of the underlying operating system and the applications installed on the system. These images should be validated and refreshed on a regular basis to update their security configuration in light of recent vulnerabilities and attack vectors.",
-		"labelNames": [{
-			"name": "CSC 3"
-		}, {
-			"name": "CSC 3.1"
-		}],
+		"labels": [
+			"CSC 3",
+			"CSC 3.1"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:54:10.845Z",
@@ -967,9 +900,9 @@
 	}, {
 		"name": "CSC 15 Wireless Access Control",
 		"description": "The processes and tools used to track/control/prevent/correct the security use of wireless local area networks (LANS), access points, and wireless client systems.",
-		"labelNames": [{
-			"name": "CSC 15"
-		}],
+		"labels": [
+			"CSC 15"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC15",
@@ -985,9 +918,9 @@
 	}, {
 		"name": "CSC 5 Controlled Administrative Privileges",
 		"description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications.",
-		"labelNames": [{
-			"name": "CSC 5"
-		}],
+		"labels": [
+			"CSC 5"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC5",
@@ -1003,13 +936,11 @@
 	}, {
 		"name": "CSC 7.1",
 		"description": "Ensure that only fully supported web browsers and email clients are allowed to execute in the organization, ideally only using the latest version of the browsers provided by the vendor in order to take advantage of the latest security functions and fixes.",
-		"labelNames": [{
-			"name": "CSC 7"
-		}, {
-			"name": "CSC 7.1"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 7",
+			"CSC 7.1",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:10:17.704Z",
@@ -1019,13 +950,11 @@
 	}, {
 		"name": "CSC 7.2",
 		"description": "Uninstall or disable any unnecessary or unauthorized browser or email client plugins or add-on applications. Each plugin shall utilize application / URL whitelisting and only allow the use of the application for pre-approved domains.",
-		"labelNames": [{
-			"name": "CSC 7"
-		}, {
-			"name": "CSC 7.2"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 7",
+			"CSC 7.2",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:10:33.332Z",
@@ -1035,9 +964,9 @@
 	}, {
 		"name": "CSC 16 Account Monitoring",
 		"description": "Actively manage the life cycle of system and application accounts – their creation, use, dormancy, deletion - in order to minimize opportunities for attackers to leverage them.",
-		"labelNames": [{
-			"name": "CSC 16"
-		}],
+		"labels": [
+			"CSC 16"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC16",
@@ -1053,13 +982,11 @@
 	}, {
 		"name": "CSC 6.6",
 		"description": "Deploy a SIEM (Security Information and Event Management) or log analytic tools for log aggregation and consolidation from multiple machines and for log correlation and analysis.  Using the SIEM tool, system administrators and security personnel should devise profiles of common events from given systems so that they can tune detection to focus on unusual activity, avoid false positives, more rapidly identify anomalies, and Protect overwhelming analysts with insignificant alerts. ",
-		"labelNames": [{
-			"name": "CSC 6"
-		}, {
-			"name": "CSC 6.6"
-		}, {
-			"name": "Detect"
-		}],
+		"labels": [
+			"CSC 6",
+			"CSC 6.6",
+			"Detect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:09:34.672Z",
@@ -1069,11 +996,10 @@
 	}, {
 		"name": "CSC 6.3",
 		"description": "Ensure that all systems that store logs have adequate storage space for the logs generated on a regular basis, so that log files will not fill up between log rotation intervals.  The logs must be archived and digitally signed on a periodic basis.",
-		"labelNames": [{
-			"name": "CSC 6"
-		}, {
-			"name": "CSC 6.3"
-		}],
+		"labels": [
+			"CSC 6",
+			"CSC 6.3"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:08:31.885Z",
@@ -1083,13 +1009,11 @@
 	}, {
 		"name": "CSC 7.5",
 		"description": "Deploy two separate browser configurations to each system. One configuration should disable the use of all plugins, unnecessary scripting languages, and generally be configured with limited functionality and be used for general web browsing. The other configuration shall allow for more browser functionality but should only be used to access specific websites that require the use of such functionality.",
-		"labelNames": [{
-			"name": "CSC 7"
-		}, {
-			"name": "CSC 7.5"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 7",
+			"CSC 7.5",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:11:39.628Z",
@@ -1099,13 +1023,11 @@
 	}, {
 		"name": "CSC 8.3",
 		"description": "Limit use of external devices to those with an approved, documented business need. Monitor for use and attempted use of external devices. Configure laptops, workstations, and servers so that they will not auto-run content from removable media, like USB tokens (i.e., “thumb drives”), USB hard drives, CDs/DVDs, FireWire devices, external serial advanced technology attachment devices, and mounted network shares. Configure systems so that they automatically conduct an anti-malware scan of removable media when inserted.",
-		"labelNames": [{
-			"name": "CSC 8"
-		}, {
-			"name": "CSC 8.3"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 8",
+			"CSC 8.3",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:14:10.327Z",
@@ -1115,9 +1037,9 @@
 	}, {
 		"name": "CSC 12 Boundary Defenses",
 		"description": "Detect/prevent/correct the flow of information transferring networks of different trust levels with a focus on security-damaging data.",
-		"labelNames": [{
-			"name": "CSC 12"
-		}],
+		"labels": [
+			"CSC 12"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC12",
@@ -1133,11 +1055,10 @@
 	}, {
 		"name": "CSC 3.2",
 		"description": "Follow strict configuration management, building a secure image that is used to build all new systems that are deployed in the enterprise.  Any existing system that becomes compromised should be re-imaged with the secure build. Regular updates or exceptions to this image should be integrated into the organization’s change management processes.  Images should be created for workstations, servers, and other system types used by the organization.",
-		"labelNames": [{
-			"name": "CSC 3"
-		}, {
-			"name": "CSC 3.2"
-		}],
+		"labels": [
+			"CSC 3",
+			"CSC 3.2"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:54:39.364Z",
@@ -1147,13 +1068,11 @@
 	}, {
 		"name": "CSC 8.6",
 		"description": "Enable domain name system (DNS) query logging to detect hostname lookup for known malicious C2 domains.",
-		"labelNames": [{
-			"name": "CSC 8.6"
-		}, {
-			"name": "CSC 8"
-		}, {
-			"name": "Detect"
-		}],
+		"labels": [
+			"CSC 8.6",
+			"CSC 8",
+			"Detect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:16:20.795Z",
@@ -1163,11 +1082,10 @@
 	}, {
 		"name": "CSC 3.6",
 		"description": "Implement and test an automated configuration monitoring system that verifies all remotely testable secure configuration elements, and alerts when unauthorized changes occur. This includes detecting new listening ports, new administrative users, changes to group and local policy objects (where applicable), and new services running on a system. Whenever possible use tools compliant with the Security Content Automation Protocol (SCAP) in order to streamline reporting and integration.",
-		"labelNames": [{
-			"name": "CSC 3"
-		}, {
-			"name": "CSC 3.6"
-		}],
+		"labels": [
+			"CSC 3",
+			"CSC 3.6"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:56:39.034Z",
@@ -1177,13 +1095,11 @@
 	}, {
 		"name": "CSC 9.5",
 		"description": "Operate critical services on separate physical or logical host machines, such as DNS, file, mail, web, and database servers.",
-		"labelNames": [{
-			"name": "CSC 9"
-		}, {
-			"name": "CSC 9.5"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 9",
+			"CSC 9.5",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:18:03.341Z",
@@ -1193,9 +1109,9 @@
 	}, {
 		"name": "CSC 11 Secure Network Configurations",
 		"description": "Establish, implement, and actively manage (track, report on, correct) the security configuration of network infrastructure devices using a rigorous configuration management and change control process in order to prevent attackers from exploiting vulnerable services and settings.",
-		"labelNames": [{
-			"name": "CSC 11"
-		}],
+		"labels": [
+			"CSC 11"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC11",
@@ -1211,9 +1127,9 @@
 	}, {
 		"name": "CSC 13 Data Protection",
 		"description": "The processes and tools used to prevent data exfiltration, mitigate the effects of exfiltrated data, and ensure the privacy and integrity of sensitive information.",
-		"labelNames": [{
-			"name": "CSC 13"
-		}],
+		"labels": [
+			"CSC 13"
+		],
 		"external_references": [{
 			"source_name": "CIS",
 			"external_id": "CSC13",
@@ -1229,13 +1145,11 @@
 	}, {
 		"name": "CSC 6.5",
 		"description": "Configure network boundary devices, including firewalls, network-based IPS, and inbound and outbound proxies, to verbosely log all traffic (both allowed and blocked) arriving at the device.",
-		"labelNames": [{
-			"name": "CSC 6"
-		}, {
-			"name": "CSC 6.5"
-		}, {
-			"name": "Detect"
-		}],
+		"labels": [
+			"CSC 6",
+			"CSC 6.5",
+			"Detect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:09:12.484Z",
@@ -1245,13 +1159,11 @@
 	}, {
 		"name": "CSC 7.3",
 		"description": "Limit the use of unnecessary scripting languages in all web browsers and email clients. This includes the use of languages such as ActiveX and JavaScript on systems where it is unnecessary to support such capabilities.",
-		"labelNames": [{
-			"name": "CSC 7"
-		}, {
-			"name": "CSC 7.3"
-		}, {
-			"name": "Protect"
-		}],
+		"labels": [
+			"CSC 7",
+			"CSC 7.3",
+			"Protect"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:10:51.825Z",
@@ -1261,11 +1173,10 @@
 	}, {
 		"name": "CSC 3.4",
 		"description": "Perform all remote administration of servers, workstation, network devices, and similar equipment over secure channels. Protocols such as telnet, VNC, RDP, or others that do not actively support strong encryption should only be used if they are performed over a secondary encryption channel, such as SSL, TLS or IPSEC.",
-		"labelNames": [{
-			"name": "CSC 3"
-		}, {
-			"name": "CSC 3.4"
-		}],
+		"labels": [
+			"CSC 3",
+			"CSC 3.4"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:55:46.135Z",
@@ -1275,11 +1186,10 @@
 	}, {
 		"name": "CSC 4.8",
 		"description": "Establish a process to risk-rate vulnerabilities based on the exploitability and potential impact of the vulnerability, and segmented by appropriate groups of assets (example, DMZ servers, internal network servers, desktops, laptops).  Apply patches for the riskiest vulnerabilities first.  A phased rollout can be used to minimize the impact to the organization. Establish expected patching timelines based on the risk rating level. ",
-		"labelNames": [{
-			"name": "CSC 4"
-		}, {
-			"name": "CSC 4.8"
-		}],
+		"labels": [
+			"CSC 4",
+			"CSC 4.8"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T15:00:10.402Z",
@@ -1289,11 +1199,10 @@
 	}, {
 		"name": "CSC 4.5",
 		"description": "Deploy automated patch management tools and software update tools for operating system and software/applications on all systems for which such tools are available and safe.  Patches should be applied to all systems, even systems that are properly air gapped.",
-		"labelNames": [{
-			"name": "CSC 4"
-		}, {
-			"name": "CSC 4.5"
-		}],
+		"labels": [
+			"CSC 4",
+			"CSC 4.5"
+		],
 		"external_references": [],
 		"version": "1",
 		"created": "2017-03-02T14:58:55.899Z",
