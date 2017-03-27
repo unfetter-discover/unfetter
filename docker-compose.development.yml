@@ -15,5 +15,7 @@ services:
 
   cti-stix-store:
     build: ../cti-stix-store
+    volumes:
+    - ../cti-stix-store/server:/usr/share/cti-stix-store/server
 
 
