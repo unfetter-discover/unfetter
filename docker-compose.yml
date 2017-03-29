@@ -92,16 +92,13 @@ services:
      - ./config/schema/examples/schemas:/tmp/schemas
     environment:
      - SCHEMA_LOCATION=/tmp/schemas
+    command: /bin/ash wait-for-repository.sh
   cti-stix-store-repository:
     image: mongo:3.0
     container_name: cti-stix-store-repository
   cti-stix-ui:
     image: unfetter/cti-stix-ui:latest
     container_name: cti-stix-ui
-    depends_on:
-    - cti-stix-store
-    links:
-    - cti-stix-store
     ports:
      - "40000:40000"
     depends_on:
