@@ -156,7 +156,7 @@
             ],
             "external_references": [],
             "labels": [
-                "posture"
+                "assessment"
             ],
             "id": "report--14d91229-161b-4c86-95cf-e6765c02bcd5",
             "type": "report"
@@ -314,7 +314,7 @@
             ],
             "external_references": [],
             "labels": [
-                "posture"
+                "assessment"
             ],
             "id": "report--01166c2d-ff7e-4181-a263-8a13b95d12c5",
             "type": "report"
