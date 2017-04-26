@@ -115,3 +115,14 @@ services:
      - /etc/pki/tls/certs/server.key
      - -ssl-cert
      - /etc/pki/tls/certs/server.crt
+  unfetter-ui:
+    image: unfetter/unfetter-ui:latest
+    container_name: unfetter-ui
+    depends_on:
+    - unfetter-discover-openssl
+    volumes:
+    - ./certs/:/etc/pki/tls/certs
+    entrypoint:
+    - npm
+    - run
+    - server:prod
