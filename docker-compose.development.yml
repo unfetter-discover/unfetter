@@ -18,9 +18,4 @@ services:
     volumes:
     - ../cti-stix-store/server:/usr/share/cti-stix-store/server
 
-  unfetter-ui:
-      build: ../unfetter-ui
-      volumes:
-      - ../unfetter-ui/src:/usr/share/unfetter-ui/src
-      - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
-      - ../unfetter-ui/config:/usr/share/unfetter-ui/config
+      
