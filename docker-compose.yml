@@ -72,6 +72,7 @@ services:
      - /tmp/examples/mitre-attack-cis/malwares.json
      - /tmp/examples/mitre-attack-cis/marking-definition-rating.json
      - /tmp/examples/mitre-attack-cis/relationships.json
+     - /tmp/examples/mitre-attack-cis/reports.json
      - /tmp/examples/mitre-attack-cis/tools.json
      - /tmp/examples/mitre-attack-cis/intrusion-sets.json
     depends_on:
