@@ -14,7 +14,7 @@ services:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-ui:
-    image: unfetter/unfetter-discover-ui:latest
+    image: unfetter/unfetter-discover-ui:0.2.9
     container_name: unfetter-discover-ui
     ports:
      - "50000:50000"
@@ -54,7 +54,7 @@ services:
     volumes:
      - ./certs/:/tmp/certs
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:latest
+    image: unfetter/unfetter-discover-processor:0.2.8
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -66,23 +66,19 @@ services:
      - -h
      - cti-stix-store
      - -j
-     - /tmp/examples/mitre-attack-cis/campaigns.json
      - /tmp/examples/mitre-attack-cis/attack-patterns.json
      - /tmp/examples/mitre-attack-cis/course-of-actions.json
      - /tmp/examples/mitre-attack-cis/indicators.json
      - /tmp/examples/mitre-attack-cis/malwares.json
      - /tmp/examples/mitre-attack-cis/marking-definition-rating.json
-     - /tmp/examples/mitre-attack-cis/observable-path-relationships.json
-     - /tmp/examples/mitre-attack-cis/observable-paths.json
      - /tmp/examples/mitre-attack-cis/relationships.json
      - /tmp/examples/mitre-attack-cis/reports.json
-     - /tmp/examples/mitre-attack-cis/threat-actors.json
      - /tmp/examples/mitre-attack-cis/tools.json
      - /tmp/examples/mitre-attack-cis/intrusion-sets.json
     depends_on:
      - cti-stix-store
   cti-stix-store:
-    image: unfetter/cti-stix-store:latest
+    image: unfetter/cti-stix-store:0.2.9
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
@@ -97,7 +93,7 @@ services:
     image: mongo:3.0
     container_name: cti-stix-store-repository
   cti-stix-ui:
-    image: unfetter/cti-stix-ui:latest
+    image: unfetter/cti-stix-ui:0.2.9
     container_name: cti-stix-ui
     ports:
      - "40000:40000"

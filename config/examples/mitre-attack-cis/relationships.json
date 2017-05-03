@@ -189,15 +189,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--055ff7c0-8a74-4044-8af1-040c4f150255",
-		"target_ref": "attack-pattern--301d0279-3961-4be7-8745-8b7486a4b99f",
-		"version": "1",
-		"created": "2017-03-03T19:02:56.444Z",
-		"modified": "2017-03-03T19:02:56.455Z",
-		"id": "relationship--043a7ed2-1b9d-45a4-b1ea-3da37efe4da4",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--73c3b80c-5ff4-4e9a-bc64-26a252ae287a",
 		"target_ref": "attack-pattern--8354e94a-6042-41f5-85e2-d6fe7515b5aa",
 		"version": "1",
@@ -424,16 +415,6 @@
 		"id": "relationship--082adf25-2f16-489f-ada1-6fa3a827c4b8",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--d7d8ff89-45b7-42e6-85d0-6bcff7659170",
-		"target_ref": "attack-pattern--b5913dcd-dd96-4330-8ffa-96f0db49cb0b",
-		"version": "0",
-		"created": "2016-08-31T19:12:55.312Z",
-		"modified": "2016-08-31T19:12:55.312Z",
-		"external_references": [],
-		"id": "relationship--087f42ca-4dd5-4023-8426-e3e1209a1b98",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--cc45ac58-81e3-4e3c-8fc0-28157951699e",
 		"target_ref": "malware--12de12b2-7dd5-4b5a-8192-2368ac3c0931",
@@ -461,25 +442,6 @@
 		"created": "2016-11-10T17:11:06.220Z",
 		"modified": "2016-11-10T17:11:06.220Z",
 		"id": "relationship--088f33f5-2356-4fa6-b238-823a15a1b7ff",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--d688f0b4-71d7-4cae-846d-4e45e8cdf0cb",
-		"version": "0",
-		"created": "2016-08-31T19:10:16.505Z",
-		"modified": "2016-08-31T19:10:16.505Z",
-		"external_references": [],
-		"id": "relationship--0901e66b-a9ee-481b-8adc-4bf69953be61",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--f5b0b948-3232-44e1-8fab-8628e0d3a9be",
-		"version": "1",
-		"created": "2017-03-03T19:31:06.373Z",
-		"modified": "2017-03-03T19:31:06.373Z",
-		"id": "relationship--0912217f-5d7e-4d51-9641-20c8cdded823",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -557,17 +519,7 @@
 		"external_references": [],
 		"id": "relationship--09864422-c023-47d3-9788-4aa083efa3ea",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--d7d8ff89-45b7-42e6-85d0-6bcff7659170",
-		"target_ref": "attack-pattern--493d7fa2-d142-40e1-86b6-d54c16e0db55",
-		"version": "0",
-		"created": "2016-08-31T19:12:56.763Z",
-		"modified": "2016-08-31T19:12:56.763Z",
-		"external_references": [],
-		"id": "relationship--09a8c8a1-1a49-4e58-829a-3d6f68e25196",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--395acb74-e5d5-4b9d-9bb9-1da10a0e18a0",
 		"target_ref": "attack-pattern--e0004835-95f0-4dae-8084-4fe760d910b7",
@@ -700,16 +652,6 @@
 		"id": "relationship--0b877b31-a710-4b54-8ca7-f8f839633393",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--9429f105-3da0-46c2-8bdb-1c3433252ec6",
-		"target_ref": "attack-pattern--352c465b-9071-4933-87dd-af3309e6602a",
-		"version": "0",
-		"created": "2016-08-31T19:19:29.736Z",
-		"modified": "2016-08-31T19:19:29.736Z",
-		"external_references": [],
-		"id": "relationship--0bb09b42-3d57-4397-82e8-77f173008807",
-		"type": "relationship"
-	}, {
 		"relationship_type": "provides",
 		"source_ref": "tool--c9884b23-584d-4f33-88c1-b4aecaf63cd3",
 		"target_ref": "observable-path--0ef6e66a-ed3f-4fc8-8a00-2946ee56658a",
@@ -784,16 +726,6 @@
 		"created": "2017-03-03T18:46:52.107Z",
 		"modified": "2017-03-03T18:46:52.107Z",
 		"id": "relationship--0cb209fc-fa0e-483e-8357-044ca52a54f6",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--9ed538bb-1e8b-401f-8ee9-81ebcf004f85",
-		"target_ref": "attack-pattern--f61d9afe-3461-45b2-8792-4aa2f2c1d958",
-		"version": "0",
-		"created": "2016-08-31T18:45:19.377Z",
-		"modified": "2016-08-31T18:45:19.377Z",
-		"external_references": [],
-		"id": "relationship--0cb57b90-0b4b-471d-81c6-5631e97b969d",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -1231,15 +1163,6 @@
 		"id": "relationship--13cc6394-9d2d-4b9e-aad9-8ae047453f75",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--055ff7c0-8a74-4044-8af1-040c4f150255",
-		"target_ref": "attack-pattern--8024f8f7-39bb-4745-845b-71aa7a1ef940",
-		"version": "1",
-		"created": "2017-03-03T19:01:16.115Z",
-		"modified": "2017-03-03T19:01:16.115Z",
-		"id": "relationship--13ddfc0f-c4d4-4fd2-a0a7-68133a5a75be",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--e87812aa-45a9-4dc0-86c5-328d10850c0f",
 		"target_ref": "tool--c2cfa091-3c62-4720-8a2e-36620b7b96e7",
@@ -1277,16 +1200,6 @@
 		"created": "2017-03-03T19:42:28.947Z",
 		"modified": "2017-03-03T19:42:28.947Z",
 		"id": "relationship--1462cba5-76f6-4261-86d4-44f206c83552",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--9429f105-3da0-46c2-8bdb-1c3433252ec6",
-		"target_ref": "attack-pattern--081098a4-1583-4dc3-80c2-101b1943c5e5",
-		"version": "0",
-		"created": "2016-08-31T19:19:20.514Z",
-		"modified": "2016-08-31T19:19:20.514Z",
-		"external_references": [],
-		"id": "relationship--147e3c98-dc0b-49ae-8d9e-938026443824",
 		"type": "relationship"
 	}, {
 		"relationship_type": "indicates",
@@ -1430,16 +1343,7 @@
 		"modified": "2017-03-03T18:49:00.325Z",
 		"id": "relationship--15ef678b-7e3f-4e11-ae80-a49c6807649c",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--89d5208f-3f07-4e91-899c-f5fd8778cca3",
-		"version": "1",
-		"created": "2017-03-03T20:22:00.038Z",
-		"modified": "2017-03-03T20:22:00.038Z",
-		"id": "relationship--15f10523-6fae-4cec-8609-8fdab38bfd51",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--710851e4-b609-482c-810b-cd449822635f",
 		"target_ref": "malware--77989ae2-6c8c-4422-aa9b-15bbfe8f44de",
@@ -1449,16 +1353,7 @@
 		"external_references": [],
 		"id": "relationship--15fd8aef-e2a0-4a71-8571-baddc92d8c7b",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--055ff7c0-8a74-4044-8af1-040c4f150255",
-		"target_ref": "attack-pattern--ca8dbf07-00c6-4c69-8fec-53375e2b471c",
-		"version": "1",
-		"created": "2017-03-03T19:01:38.466Z",
-		"modified": "2017-03-03T19:01:38.466Z",
-		"id": "relationship--16088ae7-1565-4b26-94c5-7f48bde5b093",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--e87812aa-45a9-4dc0-86c5-328d10850c0f",
 		"target_ref": "attack-pattern--2bd0c119-48b4-4aef-8995-c17ea5334be0",
@@ -1641,15 +1536,6 @@
 		"id": "relationship--183e887e-b32b-44be-9fc7-5e45107738c1",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--89d5208f-3f07-4e91-899c-f5fd8778cca3",
-		"version": "1",
-		"created": "2017-03-03T20:43:19.393Z",
-		"modified": "2017-03-03T20:43:19.393Z",
-		"id": "relationship--18963416-8157-455a-8b5d-9cd3bd9d692e",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--9c67620d-a0fd-429c-8385-09ff89f06280",
 		"target_ref": "malware--8fa72365-8a5c-4f29-a807-39cb18c4945b",
@@ -1697,26 +1583,7 @@
 		"modified": "2017-03-03T19:56:28.317Z",
 		"id": "relationship--19ba5fd7-fc3e-4278-b094-9ee9fea7efa8",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--8055997d-c007-4611-81c8-5a5ef4bb7b15",
-		"version": "1",
-		"created": "2017-03-03T20:43:17.074Z",
-		"modified": "2017-03-03T20:43:17.074Z",
-		"id": "relationship--1a2cc16b-9063-481a-a508-48fb8fec1e42",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--05ffa602-61ad-44cb-8ecb-ce5a264fbc59",
-		"version": "0",
-		"created": "2016-08-31T19:06:46.085Z",
-		"modified": "2016-08-31T19:06:46.085Z",
-		"external_references": [],
-		"id": "relationship--1a365993-5b8f-458d-820d-6a8185798cfd",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--f156e7d2-fe40-4706-8124-087d5a52260f",
 		"target_ref": "malware--9ee993ad-a080-49a7-8b63-38eb1e7ba438",
@@ -1850,16 +1717,6 @@
 		"id": "relationship--1b6e9ecc-8903-44db-8625-4ab2bcf4b0dc",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--e1a029dd-f930-40ba-8a1c-0adf9153e955",
-		"version": "0",
-		"created": "2016-08-31T18:49:28.923Z",
-		"modified": "2016-08-31T18:49:28.923Z",
-		"external_references": [],
-		"id": "relationship--1b9ea6e3-782f-4943-840f-aeca4122bb95",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--0541e9a2-fafa-4ada-8466-cb20f5b021ba",
 		"target_ref": "tool--5f065dba-e67d-41cd-8c7d-ba6306b6b063",
@@ -1946,16 +1803,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--1cba3443-2b16-46bd-9c5f-b20c983f5c5b",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--d7d8ff89-45b7-42e6-85d0-6bcff7659170",
-		"target_ref": "attack-pattern--39f60500-a027-4278-8923-59a0f7450ce6",
-		"version": "0",
-		"created": "2016-08-31T19:12:59.140Z",
-		"modified": "2016-08-31T19:12:59.140Z",
-		"external_references": [],
-		"id": "relationship--1cd1222d-894d-442b-8291-99bb2048ee56",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -2205,15 +2052,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--d885fda8-591b-45f5-8184-4e62c182a448",
-		"version": "1",
-		"created": "2017-03-03T20:43:27.979Z",
-		"modified": "2017-03-03T20:43:27.979Z",
-		"id": "relationship--213dcd6d-db13-4507-aa33-4ca1d79c8f43",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--51759df5-7bee-4efc-8a13-e513a21a73dd",
 		"target_ref": "attack-pattern--f61d9afe-3461-45b2-8792-4aa2f2c1d958",
 		"version": "0",
@@ -2241,16 +2079,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--223056dc-4bdb-4232-bd0e-6374ed9e4866",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--68f387d6-21f1-4a39-8f3c-ec0407b844e4",
-		"version": "0",
-		"created": "2016-08-31T19:10:14.664Z",
-		"modified": "2016-08-31T19:10:14.664Z",
-		"external_references": [],
-		"id": "relationship--22741752-f9db-4a3e-84f7-37e8aaa59518",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -2454,16 +2282,7 @@
 		"modified": "2017-03-03T19:02:38.083Z",
 		"id": "relationship--25606914-f6ca-45c1-b7e0-38caa3432d42",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--8af72bd4-5cc3-49de-880c-a95bd6b263cd",
-		"version": "1",
-		"created": "2017-03-03T20:20:18.269Z",
-		"modified": "2017-03-03T20:20:18.269Z",
-		"id": "relationship--2563ca35-85cf-4a09-bd8b-bd4fe43bbc68",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--b937a3d3-95a9-47ba-8e1d-66398ac8a43f",
 		"target_ref": "attack-pattern--d1676272-6987-4929-8747-76070b7365bd",
@@ -2474,15 +2293,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--dd7c1bb7-f069-4f4a-87e6-7ca4b0b90a2d",
-		"version": "1",
-		"created": "2017-03-03T20:43:34.986Z",
-		"modified": "2017-03-03T20:43:34.986Z",
-		"id": "relationship--25e248e7-2453-4d6d-80f7-421747f44fd7",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--89744af5-3c3f-4422-8db0-0689d168489f",
 		"target_ref": "attack-pattern--da5b978a-15b5-4176-8c80-5229d0111e8f",
 		"version": "1",
@@ -2490,16 +2300,7 @@
 		"modified": "2017-03-03T18:37:06.036Z",
 		"id": "relationship--25e4fad0-e198-404a-9aca-60ee77c24d44",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--b5913dcd-dd96-4330-8ffa-96f0db49cb0b",
-		"version": "1",
-		"created": "2017-03-03T19:56:12.881Z",
-		"modified": "2017-03-03T19:56:12.881Z",
-		"id": "relationship--25eaabed-8583-465c-8d54-9be49371c0fb",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--657e5bca-7610-4410-a21b-f7f617987772",
 		"target_ref": "attack-pattern--8024f8f7-39bb-4745-845b-71aa7a1ef940",
@@ -2519,16 +2320,6 @@
 		"id": "relationship--26b8baab-5c65-42d0-874e-2d3ad2b9a883",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
-		"target_ref": "attack-pattern--da5b978a-15b5-4176-8c80-5229d0111e8f",
-		"version": "0",
-		"created": "2016-08-31T18:50:03.657Z",
-		"modified": "2016-08-31T18:50:03.657Z",
-		"external_references": [],
-		"id": "relationship--26e53a1f-b37d-4a33-8aac-822c0962e841",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--2bd0c119-48b4-4aef-8995-c17ea5334be0",
 		"target_ref": "malware--1fd3cf9c-8c5a-48d1-91c3-e27896037527",
@@ -2537,16 +2328,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--2736f3c0-8990-4544-af04-06b0f9562f57",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--8c2472c4-e2ab-4a37-8e6b-28deff92e3ea",
-		"version": "0",
-		"created": "2016-08-31T18:49:54.440Z",
-		"modified": "2016-08-31T18:49:54.440Z",
-		"external_references": [],
-		"id": "relationship--27437dd3-68ee-4e60-8ec4-81983dbb40dd",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -2645,15 +2426,6 @@
 		"id": "relationship--2873b354-89f2-4090-97ea-daff5333b5e8",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
-		"target_ref": "attack-pattern--b28949eb-61b2-4547-8376-41334b4eec6d",
-		"version": "1",
-		"created": "2017-03-03T18:38:37.603Z",
-		"modified": "2017-03-03T18:38:37.603Z",
-		"id": "relationship--2877ce4e-2bd9-459a-ab3b-a6ca5654bc93",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "indicator--7079f46e-c99e-4f19-bb04-fda80da486f3",
 		"target_ref": "observable-path--c31a2111-6a80-46e2-ace7-8a2e220a2812",
@@ -2738,16 +2510,6 @@
 		"id": "relationship--2b5d216c-fd9a-40f8-a178-92b9b2bec04d",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--ce1c3bb5-d7f0-40c8-8f0b-a951b1dd96f7",
-		"target_ref": "attack-pattern--7e71df01-d12c-4eeb-8c2a-ebe389102e8e",
-		"version": "0",
-		"created": "2016-08-31T19:20:38.669Z",
-		"modified": "2016-08-31T19:20:38.669Z",
-		"external_references": [],
-		"id": "relationship--2b66f131-b1b9-445e-8c37-cea0a44c1bd8",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--df09fe54-fcbf-44eb-8fc1-cc5e265ae896",
 		"target_ref": "malware--9ee993ad-a080-49a7-8b63-38eb1e7ba438",
@@ -2765,16 +2527,6 @@
 		"created": "2017-03-03T18:48:13.231Z",
 		"modified": "2017-03-03T18:48:13.231Z",
 		"id": "relationship--2baf61c4-829a-4079-b031-3a84e56f9ef2",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--4bc7e752-733a-470d-8eac-a2eab704e156",
-		"version": "0",
-		"created": "2016-08-31T19:10:13.484Z",
-		"modified": "2016-08-31T19:10:13.484Z",
-		"external_references": [],
-		"id": "relationship--2beeae37-fd54-43be-8068-9531fee4178c",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -2825,16 +2577,7 @@
 		"external_references": [],
 		"id": "relationship--2c458dee-d0c3-4fc8-a957-89fa5bc6edc7",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--9c67620d-a0fd-429c-8385-09ff89f06280",
-		"version": "1",
-		"created": "2017-03-03T20:43:25.153Z",
-		"modified": "2017-03-03T20:43:25.153Z",
-		"id": "relationship--2cc57994-6133-4861-90ab-fb05d11395ae",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--1ff43ecc-594b-4a17-9335-df1840100835",
 		"target_ref": "attack-pattern--b28949eb-61b2-4547-8376-41334b4eec6d",
@@ -2920,15 +2663,6 @@
 		"modified": "2016-08-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--2e88a08a-5d68-4fa0-84b0-dcf9cd528c11",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--081098a4-1583-4dc3-80c2-101b1943c5e5",
-		"version": "1",
-		"created": "2017-03-03T20:41:15.062Z",
-		"modified": "2017-03-03T20:41:15.062Z",
-		"id": "relationship--2f0c6078-7484-4451-a274-3600a4efa0d2",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -3210,16 +2944,6 @@
 		"id": "relationship--33e86c30-d2ed-4b95-906a-4920ae983c30",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
-		"version": "0",
-		"created": "2016-08-31T18:51:49.161Z",
-		"modified": "2016-08-31T18:51:49.161Z",
-		"external_references": [],
-		"id": "relationship--33eaf915-e934-4877-81f1-5f2da1cacc67",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--fd901ec2-a649-43f4-88eb-55f0c28ff81e",
 		"target_ref": "malware--53bf58d4-b9b5-4a00-9102-af9dee06bc7c",
@@ -3476,15 +3200,6 @@
 		"id": "relationship--3933a64f-c6d4-4726-991e-deb4984b8fa7",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--3c754741-a537-455d-8278-6c806afbe641",
-		"version": "1",
-		"created": "2017-03-03T19:31:25.048Z",
-		"modified": "2017-03-03T19:31:25.049Z",
-		"id": "relationship--39369a41-8e88-4429-831b-18fca5400aa0",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--89d5208f-3f07-4e91-899c-f5fd8778cca3",
 		"target_ref": "malware--3e97bc8a-f02c-48f1-803b-a7d1285b21be",
@@ -3512,15 +3227,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--39762a06-b27c-4da2-9411-331bb6b3add9",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--f61d9afe-3461-45b2-8792-4aa2f2c1d958",
-		"version": "1",
-		"created": "2017-03-03T19:43:48.128Z",
-		"modified": "2017-03-03T19:43:48.128Z",
-		"id": "relationship--397e02bf-3816-45f5-8485-e72b262518af",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -3739,16 +3445,6 @@
 		"id": "relationship--3d028c51-9819-4e14-8343-82b99cb5c64f",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--352c465b-9071-4933-87dd-af3309e6602a",
-		"version": "0",
-		"created": "2016-08-31T19:02:00.565Z",
-		"modified": "2016-08-31T19:02:00.565Z",
-		"external_references": [],
-		"id": "relationship--3d039de1-3e76-4929-87e4-a1620e408efa",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--3f3dd034-e43a-4101-80cd-f6d6d515cd4c",
 		"target_ref": "malware--53bf58d4-b9b5-4a00-9102-af9dee06bc7c",
@@ -3816,17 +3512,7 @@
 		"external_references": [],
 		"id": "relationship--3d959ede-d841-4a8e-81ed-c4301d9b7fb4",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--d1676272-6987-4929-8747-76070b7365bd",
-		"version": "0",
-		"created": "2016-08-31T19:00:20.248Z",
-		"modified": "2016-08-31T19:00:20.248Z",
-		"external_references": [],
-		"id": "relationship--3db8ec81-dfe2-48fe-84c5-16e1f98f287f",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--1ff43ecc-594b-4a17-9335-df1840100835",
 		"target_ref": "attack-pattern--f61d9afe-3461-45b2-8792-4aa2f2c1d958",
@@ -3930,26 +3616,6 @@
 		"id": "relationship--407eeb75-56ba-436e-8fbb-1508ae7832a4",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--ce1c3bb5-d7f0-40c8-8f0b-a951b1dd96f7",
-		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
-		"version": "0",
-		"created": "2016-08-31T19:20:52.483Z",
-		"modified": "2016-08-31T19:20:52.483Z",
-		"external_references": [],
-		"id": "relationship--408343c9-5301-4a70-8250-594fad9cf9de",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--410c2eee-1eaa-4114-8bec-e989a826856d",
-		"version": "0",
-		"created": "2016-08-31T19:09:24.042Z",
-		"modified": "2016-08-31T19:09:24.042Z",
-		"external_references": [],
-		"id": "relationship--40888561-7cdf-40e7-8d9c-6172f1672caf",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--8a187a5b-1f90-435f-8691-f97df3139353",
 		"target_ref": "malware--79c7c5be-f35a-4ce1-8367-859612335b2b",
@@ -3958,16 +3624,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--4094ad82-6a56-4581-bf26-b943c76466b3",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--ddbfa329-be52-49c3-87a0-e4b23c320e56",
-		"version": "0",
-		"created": "2016-08-31T19:02:41.905Z",
-		"modified": "2016-08-31T19:02:41.905Z",
-		"external_references": [],
-		"id": "relationship--4101c323-852e-46f8-8cac-a073813aba6f",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -4326,15 +3982,6 @@
 		"id": "relationship--462ee86d-f509-4221-881c-992975f59d4a",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--5665ede3-6c98-42b6-8d44-60b1e112a285",
-		"version": "1",
-		"created": "2017-03-03T19:56:06.569Z",
-		"modified": "2017-03-03T19:56:06.569Z",
-		"id": "relationship--46878670-a4ec-4ca1-ab8b-510aa0be4f77",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--fd901ec2-a649-43f4-88eb-55f0c28ff81e",
 		"target_ref": "malware--77989ae2-6c8c-4422-aa9b-15bbfe8f44de",
@@ -4547,17 +4194,7 @@
 		"external_references": [],
 		"id": "relationship--495ffe52-a37f-4d47-8034-3c69f4027926",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--2ea544a1-23f4-42ff-84ed-ef3d2c5c4c44",
-		"version": "0",
-		"created": "2016-08-31T19:02:58.749Z",
-		"modified": "2016-08-31T19:02:58.749Z",
-		"external_references": [],
-		"id": "relationship--49789b41-82ef-4525-88b4-f0ef596ad6f6",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--2bd0c119-48b4-4aef-8995-c17ea5334be0",
 		"target_ref": "malware--421aca0f-aaa3-41c8-ac75-1944de77a923",
@@ -4677,16 +4314,6 @@
 		"created": "2016-11-10T17:11:06.220Z",
 		"modified": "2016-11-10T17:11:06.220Z",
 		"id": "relationship--4b02b28e-253d-4972-9055-79e656ccfe84",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--9ed538bb-1e8b-401f-8ee9-81ebcf004f85",
-		"target_ref": "attack-pattern--fac9f92b-64d6-4aa4-8b56-c0a022d34cf1",
-		"version": "0",
-		"created": "2016-08-31T18:45:39.858Z",
-		"modified": "2016-08-31T18:45:39.858Z",
-		"external_references": [],
-		"id": "relationship--4b12c9f2-78a2-428b-86aa-a0a6b54c9198",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -4832,17 +4459,7 @@
 		"external_references": [],
 		"id": "relationship--4c6fd29d-c721-4f96-a13e-34c4a0361c50",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--d7d8ff89-45b7-42e6-85d0-6bcff7659170",
-		"target_ref": "attack-pattern--e57f210a-8c24-45c5-80b5-2c20f1dac2a6",
-		"version": "0",
-		"created": "2016-08-31T19:13:00.492Z",
-		"modified": "2016-08-31T19:13:00.492Z",
-		"external_references": [],
-		"id": "relationship--4cdb23d9-1499-4a4f-80c3-5c465bdd79e2",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--19ade15a-d875-4fcf-806d-1c49d844f9db",
 		"target_ref": "attack-pattern--5f4ec334-f93e-43c1-84c7-cd2be9306393",
@@ -5098,16 +4715,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--f61d9afe-3461-45b2-8792-4aa2f2c1d958",
-		"version": "0",
-		"created": "2016-08-31T19:02:10.013Z",
-		"modified": "2016-08-31T19:02:10.013Z",
-		"external_references": [],
-		"id": "relationship--5061370d-7334-45ce-842c-342bf1689698",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--572face6-a8bc-4890-9213-7459074120c0",
 		"target_ref": "attack-pattern--7c7d0de7-4775-46d4-8fb7-f28a4573005d",
 		"version": "1",
@@ -5210,16 +4817,7 @@
 		"modified": "2017-03-03T19:32:27.487Z",
 		"id": "relationship--52b1f5ea-0c33-40ea-bfab-10bc1f6e0af2",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--93b90c60-1041-41bd-8200-962c79ff3b87",
-		"version": "1",
-		"created": "2017-03-03T19:31:05.149Z",
-		"modified": "2017-03-03T19:31:05.149Z",
-		"id": "relationship--52b82dba-092b-4092-9834-54453f5d60ba",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--2bd0c119-48b4-4aef-8995-c17ea5334be0",
 		"target_ref": "malware--ce9b44f1-43bf-4e71-8f8f-b095e3f38a36",
@@ -5360,17 +4958,7 @@
 		"modified": "2017-03-03T19:42:30.106Z",
 		"id": "relationship--55a5ff5b-4207-4928-aefb-2a269ec1b818",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
-		"target_ref": "attack-pattern--9c67620d-a0fd-429c-8385-09ff89f06280",
-		"version": "0",
-		"created": "2016-08-31T18:49:32.772Z",
-		"modified": "2016-08-31T18:49:32.772Z",
-		"external_references": [],
-		"id": "relationship--55bce9ca-95cd-4888-8c6b-ddb7b965c454",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--3f3dd034-e43a-4101-80cd-f6d6d515cd4c",
 		"target_ref": "malware--ce9b44f1-43bf-4e71-8f8f-b095e3f38a36",
@@ -5398,16 +4986,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--561f9d01-4ac2-476d-8000-8461fb42ae96",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--62f8c113-9da8-4586-8c79-0e46ffb8c888",
-		"version": "0",
-		"created": "2016-08-31T19:10:05.571Z",
-		"modified": "2016-08-31T19:10:05.571Z",
-		"external_references": [],
-		"id": "relationship--562de89b-6b24-44ce-8767-97a4cad61a06",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -5447,16 +5025,7 @@
 		"external_references": [],
 		"id": "relationship--576159c5-1c90-49ca-9a6a-6434d7162ab8",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--e1b1efcf-c2d0-4150-8033-e11874e7d34a",
-		"version": "1",
-		"created": "2017-03-03T20:41:58.004Z",
-		"modified": "2017-03-03T20:41:58.004Z",
-		"id": "relationship--57b6fae0-d5c8-4a61-9def-12da48328537",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--3f3dd034-e43a-4101-80cd-f6d6d515cd4c",
 		"target_ref": "malware--652566bc-e0e8-4082-b73c-addd52f06162",
@@ -5967,16 +5536,6 @@
 		"id": "relationship--6082bf09-9628-4cc6-ae6f-f14090391449",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--0618560e-f4e0-4ca3-8139-7b3b7a627fbb",
-		"version": "0",
-		"created": "2016-08-31T18:51:58.433Z",
-		"modified": "2016-08-31T18:51:58.433Z",
-		"external_references": [],
-		"id": "relationship--60b64967-1f74-4b11-832f-65d99df271c0",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--3f38e893-03ee-45f3-80f2-fcb1aad2674e",
 		"target_ref": "malware--4ea34ba5-260f-4586-8137-ceb8a849df3b",
@@ -6045,26 +5604,7 @@
 		"external_references": [],
 		"id": "relationship--625c0440-3e42-43ff-89f1-9087584ff705",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--ac1c24e1-f18b-40c2-8f58-f616d4759002",
-		"version": "0",
-		"created": "2016-08-31T19:10:07.922Z",
-		"modified": "2016-08-31T19:10:07.922Z",
-		"external_references": [],
-		"id": "relationship--6263c438-c342-4847-8df5-f2ebd06706fe",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--7c7d0de7-4775-46d4-8fb7-f28a4573005d",
-		"version": "1",
-		"created": "2017-03-03T19:56:11.580Z",
-		"modified": "2017-03-03T19:56:11.580Z",
-		"id": "relationship--627e3115-22f0-48eb-b406-952888a34de1",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "uses",
 		"source_ref": "indicator--f953771a-06d7-4566-a2b6-51c79a5b7f3a",
 		"target_ref": "observable-path--558c20d8-5783-414e-8923-d71bc492182d",
@@ -6139,17 +5679,7 @@
 		"external_references": [],
 		"id": "relationship--6401e173-4617-4463-ad71-4c165e5c4a94",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--710851e4-b609-482c-810b-cd449822635f",
-		"version": "0",
-		"created": "2016-08-31T19:10:10.738Z",
-		"modified": "2016-08-31T19:10:10.738Z",
-		"external_references": [],
-		"id": "relationship--64282d8e-ada6-4b16-8c02-1f02070cdd2f",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--9c67620d-a0fd-429c-8385-09ff89f06280",
 		"target_ref": "malware--2765c797-fad7-425a-9b35-61fb1e06d0ab",
@@ -6206,16 +5736,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--65515d92-90a2-418f-8c09-a9f2239a35d0",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--d1676272-6987-4929-8747-76070b7365bd",
-		"version": "0",
-		"created": "2016-08-31T18:49:51.926Z",
-		"modified": "2016-08-31T18:49:51.926Z",
-		"external_references": [],
-		"id": "relationship--664c7a5e-5d27-4643-8a8a-7eb81a04b769",
 		"type": "relationship"
 	}, {
 		"relationship_type": "provides",
@@ -6403,25 +5923,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
-		"target_ref": "attack-pattern--0618560e-f4e0-4ca3-8139-7b3b7a627fbb",
-		"version": "0",
-		"created": "2016-08-31T18:50:07.104Z",
-		"modified": "2016-08-31T18:50:07.104Z",
-		"external_references": [],
-		"id": "relationship--68ba74a8-6d33-4161-83e0-44daea9f03af",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--7ffd7ab5-d331-4c63-8d55-0c7a6a2f5532",
-		"version": "1",
-		"created": "2017-03-03T20:43:11.092Z",
-		"modified": "2017-03-03T20:43:11.092Z",
-		"id": "relationship--6903906c-dcfe-43ad-8d7f-310651343277",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--7b35838e-abc6-4b14-adda-8109d1847ce4",
 		"target_ref": "attack-pattern--dd7c1bb7-f069-4f4a-87e6-7ca4b0b90a2d",
 		"version": "1",
@@ -6547,26 +6048,6 @@
 		"id": "relationship--6b06f32b-3ba4-461c-9690-69a36e10ec9c",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--59c3a0fe-6657-45b9-8431-532faebf6a2b",
-		"version": "0",
-		"created": "2016-08-31T19:00:29.096Z",
-		"modified": "2016-08-31T19:00:29.096Z",
-		"external_references": [],
-		"id": "relationship--6b1ff24a-95fd-4c19-8601-d2b20215db6a",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--ddbfa329-be52-49c3-87a0-e4b23c320e56",
-		"version": "0",
-		"created": "2016-08-31T19:10:01.772Z",
-		"modified": "2016-08-31T19:10:01.772Z",
-		"external_references": [],
-		"id": "relationship--6b6ee8ba-43cd-4caa-8b74-7032ad87b84f",
-		"type": "relationship"
-	}, {
 		"relationship_type": "provides",
 		"source_ref": "tool--c9884b23-584d-4f33-88c1-b4aecaf63cd3",
 		"target_ref": "observable-path--f7f5bc0c-00b2-414c-9fe7-7cdb4b34f519",
@@ -6641,15 +6122,6 @@
 		"created": "2017-03-03T18:33:44.309Z",
 		"modified": "2017-03-03T18:33:44.309Z",
 		"id": "relationship--6d4426f5-b650-491e-af9a-5e2ea2bde5ed",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--93b90c60-1041-41bd-8200-962c79ff3b87",
-		"version": "1",
-		"created": "2017-03-03T20:41:09.329Z",
-		"modified": "2017-03-03T20:41:09.329Z",
-		"id": "relationship--6d5eeacb-e6aa-40e1-86d3-47307ca41209",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -6823,16 +6295,7 @@
 		"modified": "2017-03-03T19:01:06.484Z",
 		"id": "relationship--6fac5e3d-4ba1-4062-8464-2444655af42b",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--5f4ec334-f93e-43c1-84c7-cd2be9306393",
-		"version": "1",
-		"created": "2017-03-03T20:44:17.444Z",
-		"modified": "2017-03-03T20:44:17.444Z",
-		"id": "relationship--6faf9067-7eaf-403c-ac48-a2d8a2fc5375",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--3f3dd034-e43a-4101-80cd-f6d6d515cd4c",
 		"target_ref": "malware--2765c797-fad7-425a-9b35-61fb1e06d0ab",
@@ -6861,16 +6324,7 @@
 		"external_references": [],
 		"id": "relationship--6ff80d41-738c-4dec-8468-81a33b6752aa",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--39f60500-a027-4278-8923-59a0f7450ce6",
-		"version": "1",
-		"created": "2017-03-03T19:55:59.178Z",
-		"modified": "2017-03-03T19:55:59.178Z",
-		"id": "relationship--7020489b-301a-4786-9298-ec3abb505622",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--ad0a33e1-7a7c-4e0c-8045-bca7a1eb6682",
 		"target_ref": "attack-pattern--5665ede3-6c98-42b6-8d44-60b1e112a285",
@@ -7080,16 +6534,8 @@
 		"modified": "2017-03-03T19:32:12.485Z",
 		"id": "relationship--738d4278-798d-45d3-a393-d0b44f5e91cb",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--8024f8f7-39bb-4745-845b-71aa7a1ef940",
-		"version": "1",
-		"created": "2017-03-03T20:43:14.712Z",
-		"modified": "2017-03-03T20:43:14.712Z",
-		"id": "relationship--74072f5e-42eb-47e5-a121-677ff3c9c76e",
-		"type": "relationship"
-	}, {
+	}, 
+	 {
 		"relationship_type": "provides",
 		"source_ref": "tool--c9884b23-584d-4f33-88c1-b4aecaf63cd3",
 		"target_ref": "observable-path--6ed4a794-645d-4993-ada2-2bb1ab0ddf1e",
@@ -7811,16 +7257,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--fac9f92b-64d6-4aa4-8b56-c0a022d34cf1",
-		"version": "0",
-		"created": "2016-08-31T19:00:13.776Z",
-		"modified": "2016-08-31T19:00:13.776Z",
-		"external_references": [],
-		"id": "relationship--807998ac-ec9d-4a9f-8579-65d18209499f",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--39c325ab-e34c-45a8-9188-a64228c421a3",
 		"target_ref": "attack-pattern--8011f553-dc5f-4574-80f6-4aae9117faa8",
 		"version": "1",
@@ -8048,33 +7484,6 @@
 		"id": "relationship--853c2ef9-5d96-4e97-a9e3-887a6a4f3a88",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
-		"target_ref": "attack-pattern--f31ead67-c64d-43f0-8230-7fd108b8e048",
-		"version": "1",
-		"created": "2017-03-03T18:39:26.145Z",
-		"modified": "2017-03-03T18:39:26.145Z",
-		"id": "relationship--857700a9-4f36-4163-b230-18cc18940f08",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--055ff7c0-8a74-4044-8af1-040c4f150255",
-		"target_ref": "attack-pattern--c3053154-bb0d-42af-8272-7517ea71ee92",
-		"version": "1",
-		"created": "2017-03-03T19:02:35.923Z",
-		"modified": "2017-03-03T19:02:35.923Z",
-		"id": "relationship--85bcefb7-5d74-4540-97c9-74f62960cf3b",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
-		"target_ref": "attack-pattern--5f4ec334-f93e-43c1-84c7-cd2be9306393",
-		"version": "1",
-		"created": "2017-03-03T18:38:03.165Z",
-		"modified": "2017-03-03T18:38:03.165Z",
-		"id": "relationship--85de251f-700d-40c2-a05f-3d89ead64bb6",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--af536f52-0666-443e-8546-55deecb2098f",
 		"target_ref": "attack-pattern--4b363289-669a-4310-851a-a1ea0574af46",
@@ -8102,15 +7511,6 @@
 		"created": "2016-11-10T17:11:05.788Z",
 		"modified": "2016-11-10T17:11:05.788Z",
 		"id": "relationship--86b629c4-cfa9-43d0-8dbd-8e9614ff3daa",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
-		"target_ref": "attack-pattern--fdc9276a-b5b6-4cbd-8141-7b8f6ac4e15b",
-		"version": "1",
-		"created": "2017-03-03T18:39:30.415Z",
-		"modified": "2017-03-03T18:39:30.415Z",
-		"id": "relationship--86ce1a29-81bd-4114-99ea-b8e0f41d6870",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -8176,16 +7576,6 @@
 		"created": "2017-03-03T20:48:18.233Z",
 		"modified": "2017-03-03T20:48:18.233Z",
 		"id": "relationship--87ab0a7c-ae6c-4d7a-b0eb-d4a790a4748b",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--8024f8f7-39bb-4745-845b-71aa7a1ef940",
-		"version": "0",
-		"created": "2016-08-31T18:50:40.005Z",
-		"modified": "2016-08-31T18:50:40.005Z",
-		"external_references": [],
-		"id": "relationship--87ab671f-f8ef-46bb-8034-68e02235308f",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -8488,26 +7878,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--dd7c1bb7-f069-4f4a-87e6-7ca4b0b90a2d",
-		"version": "0",
-		"created": "2016-08-31T18:52:04.537Z",
-		"modified": "2016-08-31T18:52:04.537Z",
-		"external_references": [],
-		"id": "relationship--8c19209b-0bb1-484b-8097-e1022a53e885",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--7f9d9176-d7d3-4f28-8fed-3ea72c099d9f",
-		"version": "0",
-		"created": "2016-08-31T18:59:36.131Z",
-		"modified": "2016-08-31T18:59:36.131Z",
-		"external_references": [],
-		"id": "relationship--8c2113d2-d9d5-4726-8cf1-978e62fc29cf",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--119a6d1f-fb6e-4adc-904e-95c28f6f599b",
 		"target_ref": "attack-pattern--2ea544a1-23f4-42ff-84ed-ef3d2c5c4c44",
 		"version": "1",
@@ -8599,15 +7969,6 @@
 		"created": "2017-03-03T19:56:19.643Z",
 		"modified": "2017-03-03T19:56:19.643Z",
 		"id": "relationship--8cd2eed4-8fc5-4a53-8156-ad9c241d6650",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--410c2eee-1eaa-4114-8bec-e989a826856d",
-		"version": "1",
-		"created": "2017-03-03T20:21:27.919Z",
-		"modified": "2017-03-03T20:21:27.919Z",
-		"id": "relationship--8d02b902-8464-4c40-ba0f-0f250a7c302c",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -8707,16 +8068,7 @@
 		"external_references": [],
 		"id": "relationship--8fc792cd-426f-475f-b4c8-11c3542e0e44",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--68f387d6-21f1-4a39-8f3c-ec0407b844e4",
-		"version": "1",
-		"created": "2017-03-03T20:21:39.733Z",
-		"modified": "2017-03-03T20:21:39.733Z",
-		"id": "relationship--900f0ea4-2fc5-4e17-89d0-b4c4a8e2982a",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--7b35838e-abc6-4b14-adda-8109d1847ce4",
 		"target_ref": "attack-pattern--0d39a87b-9a7a-41d6-8cf0-b3ce68a2079f",
@@ -8827,17 +8179,7 @@
 		"modified": "2017-03-03T19:56:19.034Z",
 		"id": "relationship--91def82d-3d53-42ac-8b4d-954e3b55e0eb",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--7e71df01-d12c-4eeb-8c2a-ebe389102e8e",
-		"version": "0",
-		"created": "2016-08-31T19:00:05.217Z",
-		"modified": "2016-08-31T19:00:05.217Z",
-		"external_references": [],
-		"id": "relationship--922afd6d-b4d2-4945-8fd4-89b83810a091",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--861d772e-32c1-41c8-b5e6-badc1030f7fa",
 		"target_ref": "attack-pattern--301d0279-3961-4be7-8745-8b7486a4b99f",
@@ -8846,16 +8188,7 @@
 		"modified": "2017-03-03T19:02:58.941Z",
 		"id": "relationship--923f23c1-fd43-48da-b3ae-0d8b917207f8",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--0541e9a2-fafa-4ada-8466-cb20f5b021ba",
-		"version": "1",
-		"created": "2017-03-03T18:46:24.532Z",
-		"modified": "2017-03-03T18:46:24.532Z",
-		"id": "relationship--92671dfa-b7c9-41d7-ab8f-7d1af322556e",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--c14501e1-5b11-409e-82b2-7d6cd01332fe",
 		"target_ref": "malware--5ea50552-4d8f-454b-9fd2-6b6b4b377c2a",
@@ -8865,16 +8198,7 @@
 		"external_references": [],
 		"id": "relationship--927e46e1-816f-47ae-99e8-b95eb35cb201",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--4c2fe815-0791-4ad3-8c41-25042ca83532",
-		"version": "1",
-		"created": "2017-03-03T20:21:35.450Z",
-		"modified": "2017-03-03T20:21:35.450Z",
-		"id": "relationship--927eb9d8-45da-4c6d-ae61-15ec0398af22",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--3c754741-a537-455d-8278-6c806afbe641",
 		"target_ref": "tool--5f065dba-e67d-41cd-8c7d-ba6306b6b063",
@@ -8981,15 +8305,6 @@
 		"id": "relationship--94943f2a-0a5a-4517-8f06-da2897cd5560",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--89d5208f-3f07-4e91-899c-f5fd8778cca3",
-		"version": "1",
-		"created": "2017-03-03T19:41:58.898Z",
-		"modified": "2017-03-03T19:41:58.898Z",
-		"id": "relationship--94bc8200-d3f2-4aa7-9a9e-e11922a95bab",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--ad0a33e1-7a7c-4e0c-8045-bca7a1eb6682",
 		"target_ref": "attack-pattern--e57f210a-8c24-45c5-80b5-2c20f1dac2a6",
@@ -9085,17 +8400,7 @@
 		"modified": "2017-03-03T19:41:19.976Z",
 		"id": "relationship--95762f39-5a68-47fd-8b06-376fcde750f3",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--8011f553-dc5f-4574-80f6-4aae9117faa8",
-		"version": "0",
-		"created": "2016-08-31T18:59:53.165Z",
-		"modified": "2016-08-31T18:59:53.165Z",
-		"external_references": [],
-		"id": "relationship--95daef51-9ade-4b63-8b92-756064219bcb",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "provides",
 		"source_ref": "tool--740fd3a1-e325-4646-a8c8-a959e4064c34",
 		"target_ref": "observable-path--46e5661b-aec3-4307-b055-d74f76a44250",
@@ -9241,16 +8546,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--9ed538bb-1e8b-401f-8ee9-81ebcf004f85",
-		"target_ref": "attack-pattern--b3ac34c7-d232-4ef1-85c8-f19caa1aa581",
-		"version": "0",
-		"created": "2016-08-31T18:45:33.197Z",
-		"modified": "2016-08-31T18:45:33.197Z",
-		"external_references": [],
-		"id": "relationship--98996596-7e09-4526-8093-6eb971b061a5",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--6dedaff5-735a-4e16-bbe0-75829e09b489",
 		"target_ref": "attack-pattern--e0004835-95f0-4dae-8084-4fe760d910b7",
 		"version": "1",
@@ -9295,16 +8590,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--9902a87e-8798-495d-98a5-d6041e00aa94",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--92ed0ca4-41ef-4cee-81f1-5e290af85224",
-		"version": "0",
-		"created": "2016-08-31T19:02:28.169Z",
-		"modified": "2016-08-31T19:02:28.169Z",
-		"external_references": [],
-		"id": "relationship--9976a6fa-70b8-4159-836b-279a4c60e326",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -9404,16 +8689,6 @@
 		"id": "relationship--9b3e195f-c6ed-4108-ba93-f3625c8a9615",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--9ed538bb-1e8b-401f-8ee9-81ebcf004f85",
-		"target_ref": "attack-pattern--2ea544a1-23f4-42ff-84ed-ef3d2c5c4c44",
-		"version": "0",
-		"created": "2016-08-31T18:46:19.214Z",
-		"modified": "2016-08-31T18:46:19.214Z",
-		"external_references": [],
-		"id": "relationship--9b8471b6-b7e6-4d07-8c02-b14d586e7c40",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--5168404f-16e1-4ea0-864d-a8c546e8cb7b",
 		"target_ref": "malware--8d4cfca6-ce20-4430-adff-34d191602ad8",
@@ -9492,15 +8767,6 @@
 		"id": "relationship--9cc75fca-a2d9-4458-adf1-d3c8b95c5e25",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--0541e9a2-fafa-4ada-8466-cb20f5b021ba",
-		"version": "1",
-		"created": "2017-03-03T19:31:29.886Z",
-		"modified": "2017-03-03T19:31:29.886Z",
-		"id": "relationship--9ce69332-5af6-4637-8acd-f219aef3396d",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--9c2fc7a1-82de-491b-8842-683bdd66ce94",
 		"target_ref": "malware--088ad626-90c8-40c0-91ac-519e704e92d4",
@@ -9539,16 +8805,6 @@
 		"id": "relationship--9d94ef7f-e1d4-470b-83de-0838110ec617",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--d4872ee4-448a-4bdd-89f9-41d811d331f9",
-		"version": "0",
-		"created": "2016-08-31T18:59:30.002Z",
-		"modified": "2016-08-31T18:59:30.002Z",
-		"external_references": [],
-		"id": "relationship--9dd6ad5d-5ed6-4c88-8d9f-20424bc14cec",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--9cfb9f9b-c846-4015-8a11-9c2112cf5379",
 		"target_ref": "malware--f974d317-7fd3-4d90-8a21-cb5fa58cfec7",
@@ -9566,16 +8822,6 @@
 		"created": "2017-03-03T18:39:03.762Z",
 		"modified": "2017-03-03T18:39:03.762Z",
 		"id": "relationship--9e41943a-e64f-4c0a-9733-ab8c0a33931f",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--ce1c3bb5-d7f0-40c8-8f0b-a951b1dd96f7",
-		"target_ref": "attack-pattern--92ed0ca4-41ef-4cee-81f1-5e290af85224",
-		"version": "0",
-		"created": "2016-08-31T19:20:39.540Z",
-		"modified": "2016-08-31T19:20:39.540Z",
-		"external_references": [],
-		"id": "relationship--9e43b214-3c18-4043-8b86-3fdd5c709b17",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -9823,15 +9069,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--4bc7e752-733a-470d-8eac-a2eab704e156",
-		"version": "1",
-		"created": "2017-03-03T20:21:32.999Z",
-		"modified": "2017-03-03T20:21:32.999Z",
-		"id": "relationship--a1d642a2-d3f8-46af-828d-47814080aef2",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--572face6-a8bc-4890-9213-7459074120c0",
 		"target_ref": "attack-pattern--5665ede3-6c98-42b6-8d44-60b1e112a285",
 		"version": "1",
@@ -9946,17 +9183,7 @@
 		"modified": "2016-11-10T17:11:06.220Z",
 		"id": "relationship--a4180b57-d191-462e-96e6-b1818aca7c75",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--081098a4-1583-4dc3-80c2-101b1943c5e5",
-		"version": "0",
-		"created": "2016-08-31T19:01:46.222Z",
-		"modified": "2016-08-31T19:01:46.222Z",
-		"external_references": [],
-		"id": "relationship--a467d51d-68f2-4176-88b0-06c3d9d8e84b",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--5ce34eec-6484-4c72-afb2-e5735bb6cf89",
 		"target_ref": "attack-pattern--fdc9276a-b5b6-4cbd-8141-7b8f6ac4e15b",
@@ -9975,17 +9202,7 @@
 		"external_references": [],
 		"id": "relationship--a4fad1a6-07e1-4ba5-89f5-34847d828da9",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--d7d8ff89-45b7-42e6-85d0-6bcff7659170",
-		"target_ref": "attack-pattern--3ec92158-90c6-4527-8023-fb43aa180212",
-		"version": "0",
-		"created": "2016-08-31T19:13:01.432Z",
-		"modified": "2016-08-31T19:13:01.432Z",
-		"external_references": [],
-		"id": "relationship--a61b17ee-230f-4184-84cb-7a461dbb1b7e",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--ac8110aa-88a7-4c22-882d-1027216d386c",
 		"target_ref": "attack-pattern--cebb31d3-090f-441d-8c10-36d4aafaf83e",
@@ -10111,16 +9328,6 @@
 		"id": "relationship--a8a4bf72-c709-4b80-801f-998f2d413294",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--46d01ec8-43dd-4adc-8494-74ef477e3ec1",
-		"version": "0",
-		"created": "2016-08-31T19:06:12.301Z",
-		"modified": "2016-08-31T19:06:12.301Z",
-		"external_references": [],
-		"id": "relationship--a8a57c83-aa11-45d7-8417-0b9dc74f4c5d",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--081098a4-1583-4dc3-80c2-101b1943c5e5",
 		"target_ref": "malware--5ea50552-4d8f-454b-9fd2-6b6b4b377c2a",
@@ -10175,16 +9382,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--d7d8ff89-45b7-42e6-85d0-6bcff7659170",
-		"target_ref": "attack-pattern--6dd8b3f8-11cc-4d7e-8ced-5e3a6a29ca23",
-		"version": "0",
-		"created": "2016-08-31T19:13:02.885Z",
-		"modified": "2016-08-31T19:13:02.885Z",
-		"external_references": [],
-		"id": "relationship--a9808b78-16df-45d0-8fa4-40c8cf1db1b1",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--6ae46694-87b8-49e5-bd0e-dcb7285c215f",
 		"target_ref": "attack-pattern--da5b978a-15b5-4176-8c80-5229d0111e8f",
 		"version": "1",
@@ -10211,15 +9408,6 @@
 		"modified": "2016-08-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--a99d9271-17dc-4468-8a9f-10dfc0a32b6b",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
-		"target_ref": "attack-pattern--e1a029dd-f930-40ba-8a1c-0adf9153e955",
-		"version": "1",
-		"created": "2017-03-03T18:39:18.092Z",
-		"modified": "2017-03-03T18:39:18.092Z",
-		"id": "relationship--a9a6042b-334c-41d0-9bb9-08be014593f2",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -10252,15 +9440,6 @@
 		"id": "relationship--aa7b2959-8ba5-476b-991f-bc6b00f9b1f3",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--8354e94a-6042-41f5-85e2-d6fe7515b5aa",
-		"version": "1",
-		"created": "2017-03-03T18:46:23.777Z",
-		"modified": "2017-03-03T18:46:23.777Z",
-		"id": "relationship--aa86902b-d39c-44cb-b2b0-9ba29998540b",
-		"type": "relationship"
-	}, {
 		"relationship_type": "provides",
 		"source_ref": "tool--e8af761e-ce31-40bd-bf1f-6f003ef27b68",
 		"target_ref": "observable-path--0ef6e66a-ed3f-4fc8-8a00-2946ee56658a",
@@ -10278,15 +9457,6 @@
 		"modified": "2016-08-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--aab261cb-4886-482f-8d99-a52719354c60",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--b28949eb-61b2-4547-8376-41334b4eec6d",
-		"version": "1",
-		"created": "2017-03-03T20:20:25.176Z",
-		"modified": "2017-03-03T20:20:25.176Z",
-		"id": "relationship--aab273b4-8924-4fb4-b5cc-da4a3194ba58",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -10314,15 +9484,6 @@
 		"created": "2016-11-10T17:11:05.788Z",
 		"modified": "2016-11-10T17:11:05.788Z",
 		"id": "relationship--ab008d58-25d4-41fc-aeff-35f23c4552ea",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--e0004835-95f0-4dae-8084-4fe760d910b7",
-		"version": "1",
-		"created": "2017-03-03T18:46:26.130Z",
-		"modified": "2017-03-03T18:46:26.130Z",
-		"id": "relationship--ab42c806-77f8-460b-83dc-692356edfbe8",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -10362,17 +9523,7 @@
 		"external_references": [],
 		"id": "relationship--ac12b21e-b4a1-47fc-81ed-9b7475b1727b",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--055ff7c0-8a74-4044-8af1-040c4f150255",
-		"target_ref": "attack-pattern--e0004835-95f0-4dae-8084-4fe760d910b7",
-		"version": "0",
-		"created": "2016-08-31T18:57:14.420Z",
-		"modified": "2016-08-31T18:57:14.420Z",
-		"external_references": [],
-		"id": "relationship--ac34be12-d99d-490d-8c26-e5236ba55a80",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "provides",
 		"source_ref": "tool--e8af761e-ce31-40bd-bf1f-6f003ef27b68",
 		"target_ref": "observable-path--cfa4110b-1eaa-47f7-ad7c-60e77da16b19",
@@ -10419,16 +9570,6 @@
 		"created": "2017-03-03T20:46:36.857Z",
 		"modified": "2017-03-03T20:46:36.857Z",
 		"id": "relationship--acc4a951-7340-4df8-a5ee-846967a81f97",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--d7d8ff89-45b7-42e6-85d0-6bcff7659170",
-		"target_ref": "attack-pattern--5665ede3-6c98-42b6-8d44-60b1e112a285",
-		"version": "0",
-		"created": "2016-08-31T19:12:56.022Z",
-		"modified": "2016-08-31T19:12:56.022Z",
-		"external_references": [],
-		"id": "relationship--acd6a084-83e4-4544-804b-4566dc82d4f9",
 		"type": "relationship"
 	}, {
 		"relationship_type": "provides",
@@ -10574,16 +9715,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--b0853fa6-c425-4118-8ea3-6146d93e47f7",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--d7d8ff89-45b7-42e6-85d0-6bcff7659170",
-		"target_ref": "attack-pattern--7c7d0de7-4775-46d4-8fb7-f28a4573005d",
-		"version": "0",
-		"created": "2016-08-31T19:13:02.144Z",
-		"modified": "2016-08-31T19:13:02.144Z",
-		"external_references": [],
-		"id": "relationship--b08ee1aa-b9dc-414e-8d06-53d5dcf00731",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -10765,16 +9896,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--e0004835-95f0-4dae-8084-4fe760d910b7",
-		"version": "0",
-		"created": "2016-08-31T19:06:28.496Z",
-		"modified": "2016-08-31T19:06:28.496Z",
-		"external_references": [],
-		"id": "relationship--b360c61b-25ce-494e-86a2-0673fc9da208",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--7b35838e-abc6-4b14-adda-8109d1847ce4",
 		"target_ref": "attack-pattern--b3ac34c7-d232-4ef1-85c8-f19caa1aa581",
 		"version": "1",
@@ -10802,17 +9923,7 @@
 		"external_references": [],
 		"id": "relationship--b3d3c17c-d2d5-4746-9c8a-37b18541ffff",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
-		"target_ref": "attack-pattern--46d01ec8-43dd-4adc-8494-74ef477e3ec1",
-		"version": "0",
-		"created": "2016-08-31T18:49:55.965Z",
-		"modified": "2016-08-31T18:49:55.965Z",
-		"external_references": [],
-		"id": "relationship--b3ec4db6-7f90-4d4a-83c6-9c05def4d0e7",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--b8b4fb65-fe84-4ed7-8dc9-7bdc169cfe6f",
 		"target_ref": "malware--77989ae2-6c8c-4422-aa9b-15bbfe8f44de",
@@ -11111,16 +10222,7 @@
 		"modified": "2017-03-03T19:32:26.306Z",
 		"id": "relationship--b9c9fce4-866a-4597-9c2c-95a2eb94da4a",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--53aa91f9-480a-479f-8b9e-9dcebabd1b9d",
-		"version": "1",
-		"created": "2017-03-03T20:42:44.742Z",
-		"modified": "2017-03-03T20:42:44.742Z",
-		"id": "relationship--b9d56b71-dbf2-478c-bfb7-8dcab43d20f8",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--4aaaeb3b-1a44-4ded-8dbb-737ba6c701cd",
 		"target_ref": "malware--484cc51b-55b0-4f15-a5ab-3495f882d1b9",
@@ -11294,17 +10396,7 @@
 		"external_references": [],
 		"id": "relationship--bcfe4fb1-ebe5-4d05-8948-6ed9f418d80a",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--2ea544a1-23f4-42ff-84ed-ef3d2c5c4c44",
-		"version": "0",
-		"created": "2016-08-31T19:00:36.268Z",
-		"modified": "2016-08-31T19:00:36.268Z",
-		"external_references": [],
-		"id": "relationship--bd04d8a2-34e0-48cd-834d-af67d3023578",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "indicates",
 		"source_ref": "indicator--1791d3bc-678d-4ec4-9e07-019be611bb1d",
 		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
@@ -11717,15 +10809,6 @@
 		"id": "relationship--c4dde459-e414-4ba2-bffa-5775d720a58e",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--8354e94a-6042-41f5-85e2-d6fe7515b5aa",
-		"version": "1",
-		"created": "2017-03-03T19:31:11.519Z",
-		"modified": "2017-03-03T19:31:11.519Z",
-		"id": "relationship--c51a7a02-1532-41a4-9633-f4843d7b8fe6",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--c8a8d731-6777-47bf-8613-ab8d5135cb4b",
 		"target_ref": "attack-pattern--cebb31d3-090f-441d-8c10-36d4aafaf83e",
@@ -12108,16 +11191,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7fc07bbf-034e-47d5-89d3-fd023601aee0",
-		"target_ref": "attack-pattern--301d0279-3961-4be7-8745-8b7486a4b99f",
-		"version": "0",
-		"created": "2016-08-31T18:52:14.591Z",
-		"modified": "2016-08-31T18:52:14.591Z",
-		"external_references": [],
-		"id": "relationship--cbc27ae0-22c0-4dc7-82c0-e1a369c84170",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--2a4dc07a-a7fb-45d6-90dd-431361d650e0",
 		"target_ref": "attack-pattern--8011f553-dc5f-4574-80f6-4aae9117faa8",
 		"version": "1",
@@ -12143,16 +11216,6 @@
 		"created": "2016-11-10T17:11:06.220Z",
 		"modified": "2016-11-10T17:11:06.220Z",
 		"id": "relationship--cc14c0be-3596-4c38-95df-6dc01e63af95",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--3fd331c8-1c3f-4889-88f2-11c8ac28254d",
-		"version": "0",
-		"created": "2016-08-31T19:09:49.742Z",
-		"modified": "2016-08-31T19:09:49.742Z",
-		"external_references": [],
-		"id": "relationship--cc2b5943-67ed-4b23-8ef0-ec6fc41ce336",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -12193,17 +11256,7 @@
 		"external_references": [],
 		"id": "relationship--ccc59ef4-f83f-407d-958d-28f5913a04fa",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--d1676272-6987-4929-8747-76070b7365bd",
-		"version": "0",
-		"created": "2016-08-31T19:02:54.430Z",
-		"modified": "2016-08-31T19:02:54.430Z",
-		"external_references": [],
-		"id": "relationship--ccda2be2-fc38-4acc-8ad9-44e872795f31",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--6ae46694-87b8-49e5-bd0e-dcb7285c215f",
 		"target_ref": "attack-pattern--b28949eb-61b2-4547-8376-41334b4eec6d",
@@ -12252,15 +11305,6 @@
 		"id": "relationship--cdcd5dc4-8dc6-4f9b-9208-c73a387a9c11",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--8af72bd4-5cc3-49de-880c-a95bd6b263cd",
-		"version": "1",
-		"created": "2017-03-03T20:22:09.354Z",
-		"modified": "2017-03-03T20:22:09.354Z",
-		"id": "relationship--ce258a52-d2a6-4b74-8360-856714772916",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "indicator--20ab0b2d-9a79-4bd3-a9c6-d6aed0880287",
 		"target_ref": "observable-path--c31a2111-6a80-46e2-ace7-8a2e220a2812",
@@ -12278,16 +11322,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--ce46fbdb-5c30-4127-90c2-1878f74f8dc8",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--b3ac34c7-d232-4ef1-85c8-f19caa1aa581",
-		"version": "0",
-		"created": "2016-08-31T19:10:07.240Z",
-		"modified": "2016-08-31T19:10:07.240Z",
-		"external_references": [],
-		"id": "relationship--ce58a431-c24b-45c0-8b12-061cc214ba9d",
 		"type": "relationship"
 	}, {
 		"relationship_type": "indicates",
@@ -12446,16 +11480,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--59c3a0fe-6657-45b9-8431-532faebf6a2b",
-		"version": "0",
-		"created": "2016-08-31T18:49:56.806Z",
-		"modified": "2016-08-31T18:49:56.806Z",
-		"external_references": [],
-		"id": "relationship--d1a70351-63f2-4810-80e3-9f7d9a950608",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--5ce34eec-6484-4c72-afb2-e5735bb6cf89",
 		"target_ref": "attack-pattern--b28949eb-61b2-4547-8376-41334b4eec6d",
 		"version": "1",
@@ -12595,15 +11619,6 @@
 		"id": "relationship--d424862f-7fd5-4a14-8b65-d5f92f05d662",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--8af72bd4-5cc3-49de-880c-a95bd6b263cd",
-		"version": "1",
-		"created": "2017-03-03T20:43:22.027Z",
-		"modified": "2017-03-03T20:43:22.027Z",
-		"id": "relationship--d47c003b-7fad-4666-8164-fa0345204d40",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "intrusion-set--f156e7d2-fe40-4706-8124-087d5a52260f",
 		"target_ref": "attack-pattern--cebb31d3-090f-441d-8c10-36d4aafaf83e",
@@ -12705,16 +11720,6 @@
 		"created": "2017-03-03T20:43:38.721Z",
 		"modified": "2017-03-03T20:43:38.721Z",
 		"id": "relationship--d6a31f6e-932e-4a7d-85fc-893be3b30d3b",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--609f30ab-47bf-4bcf-8553-d5250418e4b4",
-		"target_ref": "attack-pattern--e0004835-95f0-4dae-8084-4fe760d910b7",
-		"version": "0",
-		"created": "2016-08-31T19:04:15.040Z",
-		"modified": "2016-08-31T19:04:15.040Z",
-		"external_references": [],
-		"id": "relationship--d6c6ae56-a519-40a6-8003-78a3c1f608fd",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -13150,16 +12155,6 @@
 		"id": "relationship--deaa2b37-4a9c-448b-a739-575a10695c24",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--4c2fe815-0791-4ad3-8c41-25042ca83532",
-		"version": "0",
-		"created": "2016-08-31T19:09:46.681Z",
-		"modified": "2016-08-31T19:09:46.681Z",
-		"external_references": [],
-		"id": "relationship--df02b277-4d64-4548-8dc6-db51ee7c7a4b",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--410c2eee-1eaa-4114-8bec-e989a826856d",
 		"target_ref": "malware--80c32d5d-49ed-4231-ba18-727f292161d5",
@@ -13206,16 +12201,6 @@
 		"created": "2017-03-03T20:22:23.597Z",
 		"modified": "2017-03-03T20:22:23.597Z",
 		"id": "relationship--dfc34ac8-406c-424f-90e5-2c2c42d55cb1",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--7e71df01-d12c-4eeb-8c2a-ebe389102e8e",
-		"version": "0",
-		"created": "2016-08-31T19:02:27.404Z",
-		"modified": "2016-08-31T19:02:27.404Z",
-		"external_references": [],
-		"id": "relationship--dfd63a63-e50e-480d-80cb-b92837709416",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -13381,16 +12366,6 @@
 		"id": "relationship--e37bf8bf-d745-4e3e-8b10-aef12142e297",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--5168404f-16e1-4ea0-864d-a8c546e8cb7b",
-		"version": "0",
-		"created": "2016-08-31T19:10:06.597Z",
-		"modified": "2016-08-31T19:10:06.597Z",
-		"external_references": [],
-		"id": "relationship--e3e16c0d-113b-4cff-83c0-31bea3aee31e",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--3a69ab30-e1d2-473a-8b25-b2fbcd29f9ae",
 		"target_ref": "malware--45a3bf06-6819-4a74-9467-5cef79347769",
@@ -13399,16 +12374,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--e3e8767e-1f7c-4a31-a76b-8dc89f5a1d3d",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--9ed538bb-1e8b-401f-8ee9-81ebcf004f85",
-		"target_ref": "attack-pattern--a51d4601-24ec-4b59-81d6-89eca24698a3",
-		"version": "0",
-		"created": "2016-08-31T18:45:52.221Z",
-		"modified": "2016-08-31T18:45:52.221Z",
-		"external_references": [],
-		"id": "relationship--e3fc1709-d3ef-498c-8814-811a9172c655",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -13469,17 +12434,7 @@
 		"external_references": [],
 		"id": "relationship--e530484b-f10e-4cbd-8672-b2cba275dff0",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--055ff7c0-8a74-4044-8af1-040c4f150255",
-		"target_ref": "attack-pattern--5f492dcb-f433-450c-83c4-002589d4b446",
-		"version": "0",
-		"created": "2016-08-31T18:59:16.959Z",
-		"modified": "2016-08-31T18:59:16.959Z",
-		"external_references": [],
-		"id": "relationship--e5413dcc-ded4-4143-8485-5738dfa311c7",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--6863bc2e-58dd-48ef-a111-4489dfb34dac",
 		"target_ref": "attack-pattern--e1b1efcf-c2d0-4150-8033-e11874e7d34a",
@@ -13680,17 +12635,7 @@
 		"external_references": [],
 		"id": "relationship--e759212e-25be-412b-876a-707d353d532c",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--df09fe54-fcbf-44eb-8fc1-cc5e265ae896",
-		"version": "0",
-		"created": "2016-08-31T19:10:22.832Z",
-		"modified": "2016-08-31T19:10:22.832Z",
-		"external_references": [],
-		"id": "relationship--e7e48bc0-352e-4c9f-8bfd-a557245c021a",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--39f60500-a027-4278-8923-59a0f7450ce6",
 		"target_ref": "malware--3e97bc8a-f02c-48f1-803b-a7d1285b21be",
@@ -13865,15 +12810,6 @@
 		"id": "relationship--ec54ac93-f399-4a23-8d31-15e5e2e7b659",
 		"type": "relationship"
 	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--e57f210a-8c24-45c5-80b5-2c20f1dac2a6",
-		"version": "1",
-		"created": "2017-03-03T19:56:14.985Z",
-		"modified": "2017-03-03T19:56:14.985Z",
-		"id": "relationship--ec78550c-e7ad-4dba-933c-b7c056a709b2",
-		"type": "relationship"
-	}, {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--ac1c24e1-f18b-40c2-8f58-f616d4759002",
 		"target_ref": "malware--e4f5e056-3eaa-4a7a-9a91-1beb788c4409",
@@ -13968,17 +12904,7 @@
 		"external_references": [],
 		"id": "relationship--ee420a00-f5d6-4e12-b059-bee9b57707d9",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--d7d8ff89-45b7-42e6-85d0-6bcff7659170",
-		"target_ref": "attack-pattern--05ffa602-61ad-44cb-8ecb-ce5a264fbc59",
-		"version": "0",
-		"created": "2016-08-31T19:12:54.357Z",
-		"modified": "2016-08-31T19:12:54.357Z",
-		"external_references": [],
-		"id": "relationship--ee435675-3b44-4d63-8818-ae0cbc0a1322",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--410c2eee-1eaa-4114-8bec-e989a826856d",
 		"target_ref": "malware--ce9b44f1-43bf-4e71-8f8f-b095e3f38a36",
@@ -14034,15 +12960,6 @@
 		"created": "2016-11-10T17:11:05.788Z",
 		"modified": "2016-11-10T17:11:05.788Z",
 		"id": "relationship--eea9cb4b-8162-42c2-95c6-b0dc4eb4642f",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--246c19d8-7631-4bbe-88f7-6e565be04777",
-		"target_ref": "attack-pattern--a91d40c2-9e35-42ce-8ff0-ddda534b1034",
-		"version": "1",
-		"created": "2017-03-03T18:45:43.278Z",
-		"modified": "2017-03-03T18:45:43.278Z",
-		"id": "relationship--ef26115f-0b1a-4f66-8388-cec7cfb46674",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -14121,16 +13038,7 @@
 		"modified": "2017-03-03T18:38:40.224Z",
 		"id": "relationship--f02faaa4-e2a7-4597-a794-34cdbfab49de",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--93b90c60-1041-41bd-8200-962c79ff3b87",
-		"version": "1",
-		"created": "2017-03-03T20:20:34.865Z",
-		"modified": "2017-03-03T20:20:34.865Z",
-		"id": "relationship--f046b187-6bc0-4b99-a46b-5e7007bdabe0",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "provides",
 		"source_ref": "tool--e8af761e-ce31-40bd-bf1f-6f003ef27b68",
 		"target_ref": "observable-path--705a4aa3-7311-454b-8a0b-cecc065daab3",
@@ -14379,16 +13287,6 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--9ed538bb-1e8b-401f-8ee9-81ebcf004f85",
-		"target_ref": "attack-pattern--59c3a0fe-6657-45b9-8431-532faebf6a2b",
-		"version": "0",
-		"created": "2016-08-31T18:46:16.135Z",
-		"modified": "2016-08-31T18:46:16.135Z",
-		"external_references": [],
-		"id": "relationship--f53194a6-3124-4d2b-8461-b53cc028dde4",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--5ce34eec-6484-4c72-afb2-e5735bb6cf89",
 		"target_ref": "attack-pattern--301d0279-3961-4be7-8745-8b7486a4b99f",
 		"version": "1",
@@ -14522,41 +13420,12 @@
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--0d39a87b-9a7a-41d6-8cf0-b3ce68a2079f",
-		"version": "0",
-		"created": "2016-08-31T19:10:12.554Z",
-		"modified": "2016-08-31T19:10:12.554Z",
-		"external_references": [],
-		"id": "relationship--f71ad4b2-9743-4827-802b-4513b990e196",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--7c30843f-a5c9-48c4-859b-114638d78a2b",
-		"target_ref": "attack-pattern--6dd8b3f8-11cc-4d7e-8ced-5e3a6a29ca23",
-		"version": "1",
-		"created": "2017-03-03T19:56:10.777Z",
-		"modified": "2017-03-03T19:56:10.777Z",
-		"id": "relationship--f7573117-815e-44e7-9f59-a86e732e22a3",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--fdd1250f-80d3-404f-b803-e8bdea271199",
 		"target_ref": "attack-pattern--e0004835-95f0-4dae-8084-4fe760d910b7",
 		"version": "1",
 		"created": "2017-03-03T19:00:55.674Z",
 		"modified": "2017-03-03T19:00:55.674Z",
 		"id": "relationship--f7a720ca-cd65-47ba-84a3-71941a500c0b",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--92ed0ca4-41ef-4cee-81f1-5e290af85224",
-		"version": "0",
-		"created": "2016-08-31T19:00:06.790Z",
-		"modified": "2016-08-31T19:00:06.790Z",
-		"external_references": [],
-		"id": "relationship--f7af91bf-3286-4ee7-8db8-5a978945cb06",
 		"type": "relationship"
 	}, {
 		"relationship_type": "uses",
@@ -14686,17 +13555,7 @@
 		"external_references": [],
 		"id": "relationship--f91a24e0-175c-432e-9cfb-4777040fd637",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--ce1c3bb5-d7f0-40c8-8f0b-a951b1dd96f7",
-		"target_ref": "attack-pattern--d4872ee4-448a-4bdd-89f9-41d811d331f9",
-		"version": "0",
-		"created": "2016-08-31T19:20:48.464Z",
-		"modified": "2016-08-31T19:20:48.464Z",
-		"external_references": [],
-		"id": "relationship--f93cbfff-b3be-41ec-873c-9b7bacbaf031",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--ddbfa329-be52-49c3-87a0-e4b23c320e56",
 		"target_ref": "malware--76a4876b-b7dc-4290-9c64-1c30a3d9bf36",
@@ -14705,16 +13564,6 @@
 		"modified": "2016-09-01T00:00:00.000Z",
 		"external_references": [],
 		"id": "relationship--f94eac12-845b-4c8a-8eb9-d90009bd95a3",
-		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--c36f6def-f95e-4994-842e-f593f9fcdef8",
-		"target_ref": "attack-pattern--e1a029dd-f930-40ba-8a1c-0adf9153e955",
-		"version": "0",
-		"created": "2016-08-31T19:00:00.528Z",
-		"modified": "2016-08-31T19:00:00.528Z",
-		"external_references": [],
-		"id": "relationship--f986c8f2-efdd-4e8b-8164-68c08089f960",
 		"type": "relationship"
 	}, {
 		"relationship_type": "mitigates",
@@ -14782,16 +13631,7 @@
 		"modified": "2016-11-10T17:11:06.220Z",
 		"id": "relationship--fa445b0a-4ef3-424d-9a90-7ec31cfc713b",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--dd8a6be5-7f99-400b-8542-d69cf2d2f900",
-		"version": "1",
-		"created": "2017-03-03T20:43:37.888Z",
-		"modified": "2017-03-03T20:43:37.888Z",
-		"id": "relationship--fa757de7-658d-4c4f-ab23-a2350a90c8f4",
-		"type": "relationship"
-	}, {
+	},  {
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--a18a5edd-a9b3-4adf-8980-a6abc994e011",
 		"target_ref": "malware--1fd3cf9c-8c5a-48d1-91c3-e27896037527",
@@ -14899,17 +13739,7 @@
 		"external_references": [],
 		"id": "relationship--fbfa4931-d3ac-4733-8db1-7820d4e36d66",
 		"type": "relationship"
-	}, {
-		"relationship_type": "mitigates",
-		"source_ref": "course-of-action--73da7c7d-86da-43e6-8b24-9968acc05fa1",
-		"target_ref": "attack-pattern--1863d516-9524-4636-89be-b6ed42c4dd5f",
-		"version": "0",
-		"created": "2016-08-31T19:10:09.032Z",
-		"modified": "2016-08-31T19:10:09.032Z",
-		"external_references": [],
-		"id": "relationship--fc083009-5333-40cb-8e6f-d9f03071ef2b",
-		"type": "relationship"
-	}, {
+	},{
 		"relationship_type": "mitigates",
 		"source_ref": "course-of-action--f472db22-9265-4402-b1c6-3d18f1d9202c",
 		"target_ref": "attack-pattern--d1676272-6987-4929-8747-76070b7365bd",
