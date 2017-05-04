@@ -75,6 +75,7 @@ services:
      - /tmp/examples/mitre-attack-cis/reports.json
      - /tmp/examples/mitre-attack-cis/tools.json
      - /tmp/examples/mitre-attack-cis/intrusion-sets.json
+     - /tmp/examples/mitre-attack-cis/x-unfetter-control-assessments.json
     depends_on:
      - cti-stix-store
   cti-stix-store:
