@@ -32,6 +32,12 @@ services:
     volumes:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
+    environment:
+    - STIX_API_PROTOCOL=http
+    - STIX_API_HOST=cti-stix-store
+    - STIX_API_PORT=3000
+    - STIX_API_PATH=cti-stix-store-api
+    - ENV=dev
     entrypoint:
     - npm
     - start
