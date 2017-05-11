@@ -2,7 +2,8 @@
     "type": "bundle",
     "id": "bundle--31fbadca-9849-4326-9367-a7be817ba3c1",
     "spec_version": "2.0",
-    "relationships": [
+    "x_unfetter_resource_path": "relationships",
+    "objects": [
         {
             "type": "relationship",
             "id": "relationship--417a6b23-dae3-47b2-8f85-117a38b01b78",

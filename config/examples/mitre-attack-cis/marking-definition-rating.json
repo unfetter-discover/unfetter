@@ -2,7 +2,8 @@
     "type": "bundle",
     "id": "bundle--d8432719-d91a-4711-87f6-7bf9b02d7310",
     "spec_version": "2.0",
-    "marking_definitions": [
+    "x_unfetter_resource_path": "marking-definitions",
+    "objects": [
         {
             "created": "2016-08-24T00:00:00.000Z",
             "definition_type": "rating",

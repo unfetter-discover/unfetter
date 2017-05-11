@@ -2,6 +2,7 @@
     "type": "bundle",
     "id": "bundle--05439efa-5eaa-424b-9a7a-55c8e53ad96f",
     "spec_version": "2.0",
+    "x_unfetter_resource_path": "unknown",
     "custom_objects": [
         {
             "object_type": "file",
