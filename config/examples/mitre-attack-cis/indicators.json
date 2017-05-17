@@ -2,7 +2,8 @@
     "type": "bundle",
     "id": "bundle--d2bf9a72-a7e6-4f84-a62d-1f031c80887e",
     "spec_version": "2.0",
-    "indicators": [
+    "x_unfetter_resource_path": "indicators",
+    "objects": [
         {
             "modified": "2016-09-21T13:14:10.776Z",
             "created": "2016-09-21T13:14:10.776Z",

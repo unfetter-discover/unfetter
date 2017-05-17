@@ -2,7 +2,8 @@
     "type": "bundle",
     "id": "bundle--8bc6457a-5b7f-4b1a-8b09-c15a3e79a1a7",
     "spec_version": "2.0",
-    "attack_patterns": [
+    "x_unfetter_resource_path": "attack-patterns",
+    "objects": [
         {
             "version": 0,
             "name": "Data from Local System",
