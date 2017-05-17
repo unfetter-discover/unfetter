@@ -10,7 +10,6 @@ services:
     links:
      - unfetter-discover-ui
      - cti-stix-store
-     - unfetter-discover-api
     volumes:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
