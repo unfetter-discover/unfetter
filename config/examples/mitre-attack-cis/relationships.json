@@ -2,7 +2,8 @@
 	"type": "bundle",
 	"id": "bundle--73d707fa-877a-4420-bcdf-5934c7520543",
 	"spec_version": "2.0",
-	"relationships": [{
+  "x_unfetter_resource_path": "relationships",
+	"objects": [{
 		"relationship_type": "uses",
 		"source_ref": "attack-pattern--3f3dd034-e43a-4101-80cd-f6d6d515cd4c",
 		"target_ref": "malware--45a3bf06-6819-4a74-9467-5cef79347769",

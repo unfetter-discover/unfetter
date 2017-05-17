@@ -2,7 +2,8 @@
 	"type": "bundle",
 	"id": "bundle--1590ead2-7629-4c59-9038-7b5ebdc96d12",
 	"spec_version": "2.0",
-	"courses_of_action": [{
+  "x_unfetter_resource_path": "course-of-actions",
+	"objects": [{
 		"name": "CSC 5.9",
 		"description": "Administrators shall use a dedicated machine for all administrative tasks or tasks requiring elevated access. This machine shall be isolated from the organization's primary network and not be allowed Internet access. This machine shall not be used for reading e-mail, composing documents, or surfing the Internet.",
 		"labelNames": [{

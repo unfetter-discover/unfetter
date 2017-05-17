@@ -2,7 +2,8 @@
 	"type": "bundle",
 	"id": "bundle--5d44847c-90dd-45ab-9253-8673694502f4",
 	"spec_version": "2.0",
-	"x_unfetter_control_assessments": [{
+  "x_unfetter_resource_path": "x-unfetter-control-assessments",
+	"objects": [{
 		"course_of_action_id": "course-of-action--d12e7674-4229-4fa0-b566-365af83c026b",
 		"group_coa_id": null,
 		"risk": 0.4375,

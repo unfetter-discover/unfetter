@@ -2,7 +2,8 @@
     "type": "bundle",
     "id": "bundle--05439efa-5eaa-424b-9a7a-55c8e53ad96f",
     "spec_version": "2.0",
-    "custom_objects": [
+    "x_unfetter_resource_path": "observable-path",
+    "objects": [
         {
             "object_type": "file",
             "object_action": "create",

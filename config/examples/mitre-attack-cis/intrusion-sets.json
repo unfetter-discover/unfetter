@@ -2,7 +2,8 @@
     "type": "bundle",
     "id": "bundle--c3804f10-6847-433c-b3c2-a557c4f4d123",
     "spec_version": "2.0",
-    "intrusion_sets": [
+    "x_unfetter_resource_path": "intrusion-sets",
+    "objects": [
         {
             "modified": "2016-09-01T18:10:08.412Z",
             "created": "2016-09-01T18:10:08.412Z",

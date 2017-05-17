@@ -2,7 +2,8 @@
 	"type": "bundle",
 	"id": "bundle--3d2eeb2c-aecb-49bc-b2ff-ead154df8468",
 	"spec_version": "2.0",
-	"reports": [{
+  "x_unfetter_resource_path": "reports",
+	"objects": [{
 		"name": "Assessment Report - Mitigation",
 		"published": "2017-05-04T18:23:51.218Z",
 		"description": null,
