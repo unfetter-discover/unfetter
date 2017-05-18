@@ -73,16 +73,7 @@ services:
      - -c
      - stix
      - -j
-     - /tmp/examples/mitre-attack-cis/attack-patterns.json
-     - /tmp/examples/mitre-attack-cis/course-of-actions.json
-     - /tmp/examples/mitre-attack-cis/indicators.json
-     - /tmp/examples/mitre-attack-cis/malwares.json
-     - /tmp/examples/mitre-attack-cis/marking-definition-rating.json
-     - /tmp/examples/mitre-attack-cis/relationships.json
-     - /tmp/examples/mitre-attack-cis/reports.json
-     - /tmp/examples/mitre-attack-cis/tools.json
-     - /tmp/examples/mitre-attack-cis/intrusion-sets.json
-     - /tmp/examples/mitre-attack-cis/x-unfetter-control-assessments.json
+     - /tmp/examples/mitre-attack-cis/stix.json
     depends_on:
      - cti-stix-store
      - cti-stix-store-repository
