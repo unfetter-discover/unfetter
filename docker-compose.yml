@@ -96,6 +96,8 @@ services:
     container_name: cti-stix-store-repository
     ports:
     - "27018:27017"
+    volumes:
+    - ./data/db:/data/db
   cti-stix-ui:
     image: unfetter/cti-stix-ui
     container_name: cti-stix-ui
