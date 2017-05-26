@@ -40,7 +40,6 @@
 			"kill_chain_name": "csc",
 			"phase_name": "CSC5 Controlled Use of Administrative Privileges",
 			"description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications."
-
 		}],
 		"type": "course-of-action"
 	}, {
