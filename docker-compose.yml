@@ -84,15 +84,13 @@ services:
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
-    links:
-     - cti-stix-store-repository:repository
     volumes:
      - ./config/schema/examples/schemas:/tmp/schemas
     environment:
      - SCHEMA_LOCATION=/tmp/schemas
     command: /bin/ash wait-for-repository.sh
   cti-stix-store-repository:
-    image: mongo:3.0
+    image: mongo:3.4.4
     container_name: cti-stix-store-repository
     ports:
     - "27018:27017"
