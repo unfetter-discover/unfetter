@@ -123,6 +123,9 @@ services:
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
+    - cti-stix-store-repository
+    links:
+     - cti-stix-store-repository:repository
     ports:
     - "49160:3000"
     volumes:
@@ -133,6 +136,9 @@ services:
     - STIX_API_HOST=cti-stix-store
     - STIX_API_PORT=3000
     - STIX_API_PATH=cti-stix-store-api
+    - MONGO_REPOSITORY=repository
+    - MONGO_PORT=27017
+    - MONGO_DBNAME=stix
     - ENV=dev
     entrypoint:
     - npm
