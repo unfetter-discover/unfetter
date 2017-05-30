@@ -84,6 +84,8 @@ services:
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
+    links:
+     - cti-stix-store-repository:repository
     volumes:
      - ./config/schema/examples/schemas:/tmp/schemas
     environment:
