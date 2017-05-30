@@ -10,11 +10,12 @@ services:
     links:
      - unfetter-discover-ui
      - cti-stix-store
+     - unfetter-discover-api
     volumes:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-ui:
-    image: unfetter/unfetter-discover-ui:0.2.9
+    image: unfetter/unfetter-discover-ui
     container_name: unfetter-discover-ui
     ports:
      - "50000:50000"
@@ -54,33 +55,32 @@ services:
     volumes:
      - ./certs/:/tmp/certs
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:0.2.8
+    image: unfetter/unfetter-discover-processor
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
     entrypoint:
      - node
-     - processor.js
+     - processor-direct.js
      - -p
      - "3000"
      - -h
      - cti-stix-store
+     - -r
+     - repository
+     - -x
+     - "27017"
+     - -c
+     - stix
      - -j
-     - /tmp/examples/mitre-attack-cis/attack-patterns.json
-     - /tmp/examples/mitre-attack-cis/course-of-actions.json
-     - /tmp/examples/mitre-attack-cis/indicators.json
-     - /tmp/examples/mitre-attack-cis/malwares.json
-     - /tmp/examples/mitre-attack-cis/marking-definition-rating.json
-     - /tmp/examples/mitre-attack-cis/relationships.json
-     - /tmp/examples/mitre-attack-cis/reports.json
-     - /tmp/examples/mitre-attack-cis/tools.json
-     - /tmp/examples/mitre-attack-cis/intrusion-sets.json
-     - /tmp/examples/mitre-attack-cis/x-unfetter-sensors.json
-     - /tmp/examples/mitre-attack-cis/x-unfetter-control-assessments.json
+     - /tmp/examples/mitre-attack-cis/stix.json
     depends_on:
      - cti-stix-store
+     - cti-stix-store-repository
+    links:
+     - cti-stix-store-repository:repository
   cti-stix-store:
-    image: unfetter/cti-stix-store:0.2.9
+    image: unfetter/cti-stix-store
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
@@ -94,8 +94,12 @@ services:
   cti-stix-store-repository:
     image: mongo:3.0
     container_name: cti-stix-store-repository
+    ports:
+    - "27018:27017"
+    volumes:
+    - ./data/db:/data/db
   cti-stix-ui:
-    image: unfetter/cti-stix-ui:0.2.9
+    image: unfetter/cti-stix-ui
     container_name: cti-stix-ui
     ports:
      - "40000:40000"
@@ -113,3 +117,23 @@ services:
      - /etc/pki/tls/certs/server.key
      - -ssl-cert
      - /etc/pki/tls/certs/server.crt
+  unfetter-discover-api:
+    image: unfetter/unfetter-discover-api
+    build: ../unfetter-discover-api
+    container_name: unfetter-discover-api
+    depends_on:
+    - unfetter-discover-openssl
+    ports:
+    - "49160:3000"
+    volumes:
+    - ./certs/:/etc/pki/tls/certs
+    - ../unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
+    environment:
+    - STIX_API_PROTOCOL=http
+    - STIX_API_HOST=cti-stix-store
+    - STIX_API_PORT=3000
+    - STIX_API_PATH=cti-stix-store-api
+    - ENV=dev
+    entrypoint:
+    - npm
+    - start
