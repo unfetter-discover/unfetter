@@ -15,7 +15,7 @@ services:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-ui:
-    image: unfetter/unfetter-discover-ui:
+    image: unfetter/unfetter-discover-ui
     container_name: unfetter-discover-ui
     ports:
      - "50000:50000"
@@ -55,7 +55,7 @@ services:
     volumes:
      - ./certs/:/tmp/certs
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:
+    image: unfetter/unfetter-discover-processor
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -80,7 +80,7 @@ services:
     links:
      - cti-stix-store-repository:repository
   cti-stix-store:
-    image: unfetter/cti-stix-store:
+    image: unfetter/cti-stix-store
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
@@ -92,14 +92,14 @@ services:
      - SCHEMA_LOCATION=/tmp/schemas
     command: /bin/ash wait-for-repository.sh
   cti-stix-store-repository:
-    image: mongo:3.0
+    image: mongo:3.4.4
     container_name: cti-stix-store-repository
     ports:
     - "27018:27017"
     volumes:
     - ./data/db:/data/db
   cti-stix-ui:
-    image: unfetter/cti-stix-ui:
+    image: unfetter/cti-stix-ui
     container_name: cti-stix-ui
     ports:
      - "40000:40000"
@@ -118,11 +118,14 @@ services:
      - -ssl-cert
      - /etc/pki/tls/certs/server.crt
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api:
+    image: unfetter/unfetter-discover-api
     build: ../unfetter-discover-api
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
+    - cti-stix-store-repository
+    links:
+     - cti-stix-store-repository:repository
     ports:
     - "49160:3000"
     volumes:
@@ -133,6 +136,9 @@ services:
     - STIX_API_HOST=cti-stix-store
     - STIX_API_PORT=3000
     - STIX_API_PATH=cti-stix-store-api
+    - MONGO_REPOSITORY=repository
+    - MONGO_PORT=27017
+    - MONGO_DBNAME=stix
     - ENV=dev
     entrypoint:
     - npm
