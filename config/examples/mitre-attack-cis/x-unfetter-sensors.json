@@ -2,7 +2,9 @@
     "type": "bundle",
     "id": "bundle--2fc27f1f-f308-426f-83c1-12436f2b2de4",
     "spec_version": "2.0",
-    "x_unfetter_sensors": [
+  	"x_unfetter_resource_path": "x-unfetter-sensors",
+
+    "objects": [
         {
             "modified": "2016-09-14T17:56:37.031Z",
             "created": "2016-09-14T17:56:37.031Z",
