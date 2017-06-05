@@ -73,7 +73,6 @@ services:
      - -c
      - stix
      - -j
-     - /tmp/examples/mitre-attack-cis/x-unfetter-sensors.json
      - /tmp/examples/mitre-attack-cis/stix.json
     depends_on:
      - cti-stix-store
