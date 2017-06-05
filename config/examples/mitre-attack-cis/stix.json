@@ -2635,7 +2635,17 @@
 		"x_unfetter_sophistication_level": null,
 		"type": "attack-pattern",
 		"id": "attack-pattern--fdc9276a-b5b6-4cbd-8141-7b8f6ac4e15b"
+<<<<<<< HEAD
 	}, {
+=======
+	}]
+}, {
+	"type": "bundle",
+	"id": "stix-archive-bundle-1",
+	"spec_version": "2.0",
+	"x_unfetter_resource_path": "course-of-actions",
+	"objects": [{
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 		"created": "2017-03-02T15:06:24.749Z",
 		"modified": "2017-03-02T15:06:24.749Z",
 		"version": "1",
@@ -3905,7 +3915,17 @@
 		}],
 		"type": "course-of-action",
 		"id": "course-of-action--ff4d224a-bdab-4a4d-948b-51dfaa9837c8"
+<<<<<<< HEAD
 	}, {
+=======
+	}]
+}, {
+	"type": "bundle",
+	"id": "stix-archive-bundle-3",
+	"spec_version": "2.0",
+	"x_unfetter_resource_path": "indicators",
+	"objects": [{
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 		"created": "2016-09-21T13:14:10.901Z",
 		"modified": "2016-09-21T13:14:10.901Z",
 		"version": 0,
@@ -5075,7 +5095,17 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--f953771a-06d7-4566-a2b6-51c79a5b7f3a"
+<<<<<<< HEAD
 	}, {
+=======
+	}]
+}, {
+	"type": "bundle",
+	"id": "stix-archive-bundle-5",
+	"spec_version": "2.0",
+	"x_unfetter_resource_path": "intrusion-sets",
+	"objects": [{
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 		"created": "2016-09-01T18:10:10.039Z",
 		"modified": "2016-09-01T18:10:10.039Z",
 		"version": 0,
@@ -5683,7 +5713,17 @@
 		"description": "Carbanak is a threat group that mainly targets banks. It also refers to malware of the same name (Carbanak).14",
 		"type": "intrusion-set",
 		"id": "intrusion-set--fe9e243d-4c8b-4b54-8e94-62355293f69e"
+<<<<<<< HEAD
 	}, {
+=======
+	}]
+}, {
+	"type": "bundle",
+	"id": "stix-archive-bundle-6",
+	"spec_version": "2.0",
+	"x_unfetter_resource_path": "malwares",
+	"objects": [{
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 		"created": "2016-09-14T17:56:32.754Z",
 		"modified": "2016-09-14T17:56:32.754Z",
 		"version": 0,
@@ -9680,7 +9720,17 @@
 		"aliases": ["Psylo"],
 		"type": "malware",
 		"id": "malware--ff707a8d-6d84-43f1-88f8-f2ecf956c82b"
+<<<<<<< HEAD
 	}, {
+=======
+	}]
+}, {
+	"type": "bundle",
+	"id": "stix-archive-bundle-7",
+	"spec_version": "2.0",
+	"x_unfetter_resource_path": "marking-definitions",
+	"objects": [{
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 		"definition_type": "rating",
 		"definition": {
 			"rating": 2,
@@ -9730,7 +9780,17 @@
 		"external_references": [],
 		"type": "marking-definition",
 		"id": "marking-definition--bc99f74c-46c1-4012-8d91-f7c59e98fc02"
+<<<<<<< HEAD
 	}, {
+=======
+	}]
+}, {
+	"type": "bundle",
+	"id": "stix-archive-bundle-9",
+	"spec_version": "2.0",
+	"x_unfetter_resource_path": "relationships",
+	"objects": [{
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -22288,7 +22348,17 @@
 		"target_ref": "malware--7fcd5766-e0e0-481b-bc7a-24b8ba3cf5e1",
 		"type": "relationship",
 		"id": "relationship--ffdc9eb4-5365-443a-9173-7eb79e8fbae6"
+<<<<<<< HEAD
 	}, {
+=======
+	}]
+}, {
+	"type": "bundle",
+	"id": "stix-archive-bundle-12",
+	"spec_version": "2.0",
+	"x_unfetter_resource_path": "tools",
+	"objects": [{
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 		"created": "2016-09-14T17:56:37.033Z",
 		"modified": "2016-09-14T17:56:37.033Z",
 		"version": 0,
@@ -23095,7 +23165,17 @@
 		}],
 		"type": "tool",
 		"id": "tool--f8dd65c2-399c-4f27-9536-fbd96b293c10"
+<<<<<<< HEAD
 	}, {
+=======
+	}]
+}, {
+	"type": "bundle",
+	"id": "stix-archive-bundle-13",
+	"spec_version": "2.0",
+	"x_unfetter_resource_path": "reports",
+	"objects": [{
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 		"created": "2017-05-04T18:23:51.218Z",
 		"modified": "2017-05-04T18:23:51.218Z",
 		"version": 1,
@@ -23127,7 +23207,17 @@
 		"published": "2017-06-05T12:29:52.577Z",
 		"object_refs": ["x-unfetter-control-assessment--ccc77da1-ec09-4eac-9044-e59ebdff7eac", "x-unfetter-control-assessment--db216f54-c16c-48a7-9531-1f734a18e261", "x-unfetter-control-assessment--4888932e-7806-4b04-af83-c4e92e0e899b", "x-unfetter-control-assessment--9854c7c1-d895-4391-b4d7-acf157f5fdf4"],
 		"id": "report--63309d53-709f-484a-b522-1a3566ec4076"
+<<<<<<< HEAD
 	}, {
+=======
+	}]
+}, {
+	"type": "bundle",
+	"id": "stix-archive-bundle-14",
+	"spec_version": "2.0",
+	"x_unfetter_resource_path": "x-unfetter-control-assessments",
+	"objects": [{
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
 		"version": "1",
@@ -27048,12 +27138,17 @@
 		"modified": "2017-06-05T12:29:52.602Z",
 		"version": 1,
 		"course_of_action_id": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
+<<<<<<< HEAD
 		"group_coa_id": "",
+=======
+		"group_coa_id": null,
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 		"risk": 0.25,
 		"measurements": [{
 			"name": "coverage",
 			"risk": 0.25,
 			"options": [{
+<<<<<<< HEAD
 				"label": "",
 				"value": 0,
 				"id": "",
@@ -27092,6 +27187,26 @@
 				"id": "",
 				"name": "most critical systems covered",
 				"risk": "0.25"
+=======
+				"name": "no coverage",
+				"risk": 1
+			}, {
+				"name": "some coverage",
+				"risk": 0.75
+			}, {
+				"name": "half coverage",
+				"risk": 0.5
+			}, {
+				"name": "most critical systems covered",
+				"risk": 0.25
+			}, {
+				"name": "all critical systems covered",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "most critical systems covered",
+				"risk": 0.25
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 			}
 		}],
 		"id": "x-unfetter-control-assessment--4888932e-7806-4b04-af83-c4e92e0e899b"
@@ -31064,6 +31179,7 @@
 	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
+<<<<<<< HEAD
 		"version": 1,
 		"course_of_action_id": "course-of-action--7b35838e-abc6-4b14-adda-8109d1847ce4",
 		"group_coa_id": "",
@@ -31239,6 +31355,107 @@
 				"id": "",
 				"name": "Reported on Most Systems",
 				"risk": "0.25"
+=======
+		"version": "1",
+		"course_of_action_id": "course-of-action--7b35838e-abc6-4b14-adda-8109d1847ce4",
+		"group_coa_id": null,
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "No Policy",
+				"risk": 1
+			}, {
+				"name": "Informal Policy",
+				"risk": 0.75
+			}, {
+				"name": "Partial Written Policy",
+				"risk": 0.5
+			}, {
+				"name": "Written Policy",
+				"risk": 0.25
+			}, {
+				"name": "Approved Written Policy",
+				"risk": 0
+			}],
+			"selected_option": 0,
+			"selected_value": {
+				"name": "No Policy",
+				"risk": 1
+			}
+		}, {
+			"name": "implementation",
+			"risk": 1,
+			"options": [{
+				"name": "Not Implemented",
+				"risk": 1
+			}, {
+				"name": "Parts of Policy Implemented",
+				"risk": 0.75
+			}, {
+				"name": "Implemented on Some Systems",
+				"risk": 0.5
+			}, {
+				"name": "Implemented on Most Systems",
+				"risk": 0.25
+			}, {
+				"name": "Implemented on All Systems",
+				"risk": 0
+			}],
+			"selected_option": 0,
+			"selected_value": {
+				"name": "Not Implemented",
+				"risk": 1
+			}
+		}, {
+			"name": "automation",
+			"risk": 1,
+			"options": [{
+				"name": "Not Automated",
+				"risk": 1
+			}, {
+				"name": "Parts of Policy Automated",
+				"risk": 0.75
+			}, {
+				"name": "Automated on Some Systems",
+				"risk": 0.5
+			}, {
+				"name": "Automated on Most Systems",
+				"risk": 0.25
+			}, {
+				"name": "Automated on All Systems",
+				"risk": 0
+			}],
+			"selected_option": 0,
+			"selected_value": {
+				"name": "Not Automated",
+				"risk": 1
+			}
+		}, {
+			"name": "reporting",
+			"risk": 1,
+			"options": [{
+				"name": "Not Reported",
+				"risk": 1
+			}, {
+				"name": "Parts of Policy Reported",
+				"risk": 0.75
+			}, {
+				"name": "Reported on Some Systems",
+				"risk": 0.5
+			}, {
+				"name": "Reported on Most Systems",
+				"risk": 0.25
+			}, {
+				"name": "Reported on All Systems",
+				"risk": 0
+			}],
+			"selected_option": 0,
+			"selected_value": {
+				"name": "Not Reported",
+				"risk": 1
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
 			}
 		}],
 		"type": "x-unfetter-control-assessment",
@@ -33706,4 +33923,8 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--fee6c663-db80-478e-b6e9-25a8473fbba7"
 	}]
+<<<<<<< HEAD
 }
+=======
+}]
+>>>>>>> 63332b9c689e42f15ee190828e3a8a2e96a2ea5e
