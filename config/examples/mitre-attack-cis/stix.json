@@ -1,8 +1,7 @@
-[{
+{
 	"type": "bundle",
-	"id": "stix-archive-bundle-0",
+	"id": "stix-archive-bundle",
 	"spec_version": "2.0",
-	"x_unfetter_resource_path": "attack-patterns",
 	"objects": [{
 		"created": "2016-08-01T10:00:00.000Z",
 		"modified": "2016-08-01T10:00:00.000Z",
@@ -968,6 +967,20 @@
 		"type": "attack-pattern",
 		"id": "attack-pattern--6c3273bf-1656-4199-8e85-f8366ea575c3"
 	}, {
+		"created": "2017-06-07T17:20:28.605Z",
+		"modified": "2017-06-07T17:20:28.605Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "newone",
+		"description": "dfd",
+		"kill_chain_phases": [{
+			"kill_chain_name": "gates",
+			"phase_name": "cool stuff"
+		}],
+		"x_unfetter_sophistication_level": 2,
+		"id": "attack-pattern--6d5c7140-88fb-4a6b-8a1c-c2d11613c9c4"
+	}, {
 		"created": "2016-08-01T10:00:00.000Z",
 		"modified": "2016-08-01T10:00:00.000Z",
 		"version": 0,
@@ -1721,6 +1734,20 @@
 		"x_unfetter_sophistication_level": 2,
 		"type": "attack-pattern",
 		"id": "attack-pattern--adeb5574-0649-461b-822c-7706c2607971"
+	}, {
+		"created": "2017-06-09T17:03:39.913Z",
+		"modified": "2017-06-09T17:03:39.913Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "test",
+		"description": "test",
+		"kill_chain_phases": [{
+			"kill_chain_name": "test",
+			"phase_name": "test"
+		}],
+		"x_unfetter_sophistication_level": 2,
+		"id": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe"
 	}, {
 		"created": "2016-08-01T10:00:00.000Z",
 		"modified": "2016-08-01T10:00:00.000Z",
@@ -2636,13 +2663,7 @@
 		"x_unfetter_sophistication_level": null,
 		"type": "attack-pattern",
 		"id": "attack-pattern--fdc9276a-b5b6-4cbd-8141-7b8f6ac4e15b"
-	}]
-}, {
-	"type": "bundle",
-	"id": "stix-archive-bundle-1",
-	"spec_version": "2.0",
-	"x_unfetter_resource_path": "course-of-actions",
-	"objects": [{
+	}, {
 		"created": "2017-03-02T15:06:24.749Z",
 		"modified": "2017-03-02T15:06:24.749Z",
 		"version": "1",
@@ -3912,13 +3933,39 @@
 		}],
 		"type": "course-of-action",
 		"id": "course-of-action--ff4d224a-bdab-4a4d-948b-51dfaa9837c8"
-	}]
-}, {
-	"type": "bundle",
-	"id": "stix-archive-bundle-3",
-	"spec_version": "2.0",
-	"x_unfetter_resource_path": "indicators",
-	"objects": [{
+	}, {
+		"created": "2017-06-09T17:32:55.817Z",
+		"modified": "2017-06-09T17:32:55.817Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "ddd",
+		"description": "ddd",
+		"pattern": "dd",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--00ba608e-88d5-4d28-8dd0-fe8726f0f359"
+	}, {
+		"created": "2017-06-09T17:28:45.185Z",
+		"modified": "2017-06-09T17:28:45.185Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "ddd",
+		"description": "ddd",
+		"pattern": "ddd",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--012dc50b-70fe-4380-a99f-2a3426be4d0d"
+	}, {
 		"created": "2016-09-21T13:14:10.901Z",
 		"modified": "2016-09-21T13:14:10.901Z",
 		"version": 0,
@@ -3940,6 +3987,70 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--020dae65-75bd-4db5-9e7b-3e45afc8f9f4"
+	}, {
+		"created": "2017-06-07T18:32:33.576Z",
+		"modified": "2017-06-07T18:32:33.576Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aa",
+		"pattern": "aaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--047b994a-21d6-40da-8762-ef0b24a536c9"
+	}, {
+		"created": "2017-06-09T17:21:11.948Z",
+		"modified": "2017-06-09T17:21:11.948Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aaa",
+		"pattern": "aa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--04b3bfdd-61de-4857-a18b-dac770e94009"
+	}, {
+		"created": "2017-06-09T16:09:09.859Z",
+		"modified": "2017-06-09T16:09:09.859Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "hhh",
+		"description": "h",
+		"pattern": "h",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--09dba279-bc86-4fcd-8d5c-fd3d44051cd2"
+	}, {
+		"created": "2017-06-07T16:22:38.090Z",
+		"modified": "2017-06-07T16:22:38.090Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "bbbbb",
+		"description": "bbb",
+		"pattern": "bbbb",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--0b0e83bd-1ebb-4627-8cf9-b2aeacee9ed8"
 	}, {
 		"created": "2016-09-21T13:14:10.804Z",
 		"modified": "2016-09-21T13:14:10.804Z",
@@ -4053,6 +4164,51 @@
 		"type": "indicator",
 		"id": "indicator--0fe64688-c2a8-49a1-ba68-760c82231e2e"
 	}, {
+		"created": "2017-06-07T02:50:10.664Z",
+		"modified": "2017-06-07T02:50:10.664Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "bbb",
+		"pattern": "ccccc",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--109e4dce-6386-499f-b6d4-f785c3d266a2"
+	}, {
+		"created": "2017-06-09T15:58:41.015Z",
+		"modified": "2017-06-09T15:58:41.015Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "ffff",
+		"description": "fff",
+		"pattern": "ff",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--14a85e55-d109-47eb-91a1-700254db3adc"
+	}, {
+		"created": "2017-06-09T15:36:35.537Z",
+		"modified": "2017-06-09T15:36:35.537Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "eee",
+		"description": "eee",
+		"pattern": "eee",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--16051868-e036-462f-9c89-5f875f343b9e"
+	}, {
 		"created": "2016-09-21T13:14:10.875Z",
 		"modified": "2016-09-21T13:14:10.875Z",
 		"version": 0,
@@ -4077,6 +4233,38 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--1791d3bc-678d-4ec4-9e07-019be611bb1d"
+	}, {
+		"created": "2017-06-07T16:44:34.991Z",
+		"modified": "2017-06-07T16:44:34.991Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "d",
+		"description": "f",
+		"pattern": "f",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--180bbb11-0289-493a-836a-ab8b08d3ccea"
+	}, {
+		"created": "2017-06-07T16:25:17.038Z",
+		"modified": "2017-06-07T16:25:17.038Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aaa",
+		"pattern": "aaaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--18ff00b3-0899-4a60-924b-382afe0dcdfa"
 	}, {
 		"created": "2016-09-21T13:14:10.781Z",
 		"modified": "2016-09-21T13:14:10.781Z",
@@ -4105,6 +4293,32 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--19a94aad-b4c8-47ac-8150-fca3170e8c42"
+	}, {
+		"created": "2017-06-07T02:46:07.918Z",
+		"modified": "2017-06-07T02:46:07.918Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaaa",
+		"description": "bbbb",
+		"pattern": "cccc",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--1beaaf61-b014-4e17-8c1c-483993da71a3"
+	}, {
+		"created": "2017-06-07T03:14:01.639Z",
+		"modified": "2017-06-07T03:14:01.639Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "xxx",
+		"description": "xxx",
+		"pattern": "xxx",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--1cabbf51-ac3b-48b0-a9f7-59f0181aebd5"
 	}, {
 		"created": "2016-09-21T13:14:10.836Z",
 		"modified": "2016-09-21T13:14:10.836Z",
@@ -4203,6 +4417,54 @@
 		"type": "indicator",
 		"id": "indicator--23977a6f-b9b6-44a7-84f3-40add71e1b75"
 	}, {
+		"created": "2017-06-09T17:10:07.835Z",
+		"modified": "Fri Jun 09 2017 13:10:07 GMT-0400 (EDT)",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "zz",
+		"description": "zzz",
+		"pattern": null,
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "test",
+			"phase_name": "test"
+		}],
+		"id": "indicator--2452bed6-e68d-47a1-8425-732b4218d166"
+	}, {
+		"created": "2017-06-07T16:18:49.862Z",
+		"modified": "2017-06-07T16:18:49.862Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aa",
+		"pattern": "aaaaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "defense-evasion"
+		}],
+		"id": "indicator--262dc5d4-582d-4912-9917-cac0498ddaa7"
+	}, {
+		"created": "2017-06-07T18:13:47.368Z",
+		"modified": "2017-06-07T18:13:47.368Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "fds",
+		"description": "fds",
+		"pattern": "fds",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--26ed0809-3cd1-4425-8a66-51b235003ea2"
+	}, {
 		"created": "2016-09-21T13:14:10.743Z",
 		"modified": "2016-09-21T13:14:10.743Z",
 		"version": 0,
@@ -4237,6 +4499,80 @@
 		"type": "indicator",
 		"id": "indicator--29dcb1ca-d6fb-44e0-9377-10f588ad0c5b"
 	}, {
+		"created": "2017-06-07T15:27:41.047Z",
+		"modified": "2017-06-07T15:27:41.047Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "rrr",
+		"description": "rr",
+		"pattern": "rrr",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--2bc50b34-7378-4d78-8dee-c5350cd9d173"
+	}, {
+		"created": "2017-06-07T18:41:15.226Z",
+		"modified": "2017-06-07T18:41:15.226Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaaa",
+		"description": "aaa",
+		"pattern": "aaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--2c9c6702-a55a-46c5-8420-b4e32891faf4"
+	}, {
+		"created": "2017-06-07T15:41:29.502Z",
+		"modified": "2017-06-07T15:41:29.502Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "xxx",
+		"description": "xx",
+		"pattern": "xx",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--33f68a55-5bf9-40f9-811b-4d52d549946d"
+	}, {
+		"created": "2017-06-09T17:26:27.226Z",
+		"modified": "2017-06-09T17:26:27.226Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "bbb",
+		"description": "bb",
+		"pattern": "bbb",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--351e5380-1cc8-4782-8fca-3535cd66a55f"
+	}, {
+		"created": "2017-06-07T18:35:41.374Z",
+		"modified": "2017-06-07T18:35:41.374Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aaa",
+		"pattern": "aaaaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--36a5ae87-9e13-40cf-a8a3-66d751d181f3"
+	}, {
 		"created": "2016-09-21T13:14:10.875Z",
 		"modified": "2016-09-21T13:14:10.875Z",
 		"version": 0,
@@ -4261,6 +4597,51 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--39a79a97-f612-406a-8558-94b8cdddceba"
+	}, {
+		"created": "2017-06-09T18:11:12.945Z",
+		"modified": "2017-06-09T18:11:12.945Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "test",
+		"description": "test",
+		"pattern": "test",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--3aa6c242-4c2f-4095-9950-1c4a13629a5b"
+	}, {
+		"created": "2017-06-07T16:40:36.992Z",
+		"modified": "2017-06-07T16:40:36.992Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "fdsaf",
+		"description": "fdsa",
+		"pattern": "fdsaf",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--3de7d352-87d7-4948-a9dd-a4f7c9897252"
+	}, {
+		"created": "2017-06-07T02:37:11.789Z",
+		"modified": "2017-06-07T02:37:11.789Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "bbb",
+		"pattern": "ccc",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--46f78647-2000-4a76-8f7f-ca0724684201"
 	}, {
 		"created": "2016-09-21T13:14:10.773Z",
 		"modified": "2016-09-21T13:14:10.773Z",
@@ -4290,6 +4671,144 @@
 		"type": "indicator",
 		"id": "indicator--48d2d0eb-c2bd-4777-b389-7bd3804de89c"
 	}, {
+		"created": "2017-06-07T18:55:59.707Z",
+		"modified": "2017-06-07T18:55:59.707Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "fds==",
+		"description": "fd",
+		"pattern": "fs",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--49501634-32b3-48fa-b36b-7fe2a6c70a59"
+	}, {
+		"created": "2017-06-07T18:32:33.576Z",
+		"modified": "2017-06-07T18:32:33.576Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aa",
+		"pattern": "aaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--4a20b7c6-07d9-4be9-8bc1-ca0aaf978a97"
+	}, {
+		"created": "2017-06-07T02:43:06.451Z",
+		"modified": "2017-06-07T02:43:06.451Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "bbb",
+		"pattern": "cccc",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--4b28270c-1e5b-43e5-83b9-e6f3038ac1f1"
+	}, {
+		"created": "2017-06-07T16:42:45.256Z",
+		"modified": "2017-06-07T16:42:45.256Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "fdsa",
+		"description": "fds",
+		"pattern": "fsdaf",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--4ccc8dc1-4adc-42c9-8d45-9d61c08ba739"
+	}, {
+		"created": "2017-06-09T16:07:57.430Z",
+		"modified": "2017-06-09T16:07:57.430Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "ggg",
+		"description": "ggg",
+		"pattern": "gg",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--4dbdfc38-a91d-4cd4-a051-ac27965803ce"
+	}, {
+		"created": "2017-06-07T16:04:03.218Z",
+		"modified": "2017-06-07T16:04:03.218Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "fdsafdsa",
+		"description": "fdsafdsa",
+		"pattern": "fdsafdsa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--50b64faf-07ec-4dfa-976e-9eb8cd618611"
+	}, {
+		"created": "2017-06-09T15:25:46.051Z",
+		"modified": "2017-06-09T15:25:46.051Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "bb",
+		"description": "bb",
+		"pattern": "bb",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--50ce9933-2560-4e82-ae4f-e5bf0ad7f3c2"
+	}, {
+		"created": "2017-06-09T17:37:37.085Z",
+		"modified": "2017-06-09T17:37:37.085Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "eee",
+		"description": "ee",
+		"pattern": "ee",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--516cc54d-3d7f-4bc5-ab10-54fb153fc3e0"
+	}, {
+		"created": "2017-06-07T18:27:41.858Z",
+		"modified": "2017-06-07T18:27:41.858Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "blahblah",
+		"description": "blahblah",
+		"pattern": null,
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--545fb4fa-6ef9-4555-89f7-3113ad040dd3"
+	}, {
 		"created": "2016-09-21T13:14:10.911Z",
 		"modified": "2016-09-21T13:14:10.911Z",
 		"version": 0,
@@ -4312,6 +4831,54 @@
 		"type": "indicator",
 		"id": "indicator--58d3f9d7-cbb1-4932-8023-5529dc41ae31"
 	}, {
+		"created": "2017-06-07T18:45:08.510Z",
+		"modified": "2017-06-07T18:45:08.510Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaaa",
+		"description": "aaa",
+		"pattern": "aaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--59b85327-e090-49f3-badf-7f97b8197f85"
+	}, {
+		"created": "2017-06-09T18:04:54.703Z",
+		"modified": "2017-06-09T18:04:54.703Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aaa",
+		"pattern": null,
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--5deee88f-6005-4b29-925f-fc70fdcaaddb"
+	}, {
+		"created": "2017-06-09T16:53:32.640Z",
+		"modified": "2017-06-09T16:53:32.640Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "mmm",
+		"description": "mmm",
+		"pattern": "mmm",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--607bfeee-4f45-42e0-9fa9-87879f032f7f"
+	}, {
 		"created": "2016-09-21T13:14:10.912Z",
 		"modified": "2016-09-21T13:14:10.912Z",
 		"version": 0,
@@ -4333,6 +4900,19 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--64121a4b-67fd-4390-adcc-9592339762be"
+	}, {
+		"created": "2017-06-07T16:06:26.838Z",
+		"modified": "2017-06-07T16:06:26.838Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "fdas",
+		"description": "fda",
+		"pattern": "fdsafsa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--6ce50ace-1da2-447d-b9ae-5928ec7fa69e"
 	}, {
 		"created": "2016-09-21T13:14:10.852Z",
 		"modified": "2016-09-21T13:14:10.852Z",
@@ -4375,6 +4955,22 @@
 		"type": "indicator",
 		"id": "indicator--7079f46e-c99e-4f19-bb04-fda80da486f3"
 	}, {
+		"created": "2017-06-09T17:46:12.661Z",
+		"modified": "2017-06-09T17:46:12.661Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "eee",
+		"description": "ee",
+		"pattern": "ee",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--72af8d5f-6da4-4fc0-90d7-06b02d9f28b0"
+	}, {
 		"created": "2016-09-21T13:14:10.922Z",
 		"modified": "2016-09-21T13:14:10.922Z",
 		"version": 0,
@@ -4396,6 +4992,22 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--7522721a-b267-4b21-ad38-910044ce4720"
+	}, {
+		"created": "2017-06-07T17:29:30.247Z",
+		"modified": "Wed Jun 07 2017 13:29:30 GMT-0400 (EDT)",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "New analytic",
+		"description": "fdf",
+		"pattern": "{script}",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--7a236207-7ba0-4632-bc8a-9416e4bc835f"
 	}, {
 		"created": "2016-09-21T13:14:10.737Z",
 		"modified": "2016-09-21T13:14:10.737Z",
@@ -4430,6 +5042,22 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--7c12711d-673f-4708-9575-f589790d6cdb"
+	}, {
+		"created": "2017-06-07T18:35:41.374Z",
+		"modified": "2017-06-07T18:35:41.374Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aaa",
+		"pattern": "aaaaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--7e1fc5fc-600b-47be-8014-3dd343a8ea83"
 	}, {
 		"created": "2016-09-21T13:14:10.872Z",
 		"modified": "2016-09-21T13:14:10.872Z",
@@ -4514,6 +5142,64 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--7fa8057e-f943-4c22-8e66-4ba1b862afb1"
+	}, {
+		"created": "2017-06-07T02:42:03.923Z",
+		"modified": "2017-06-07T02:42:03.923Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "bbbb",
+		"pattern": "cccc",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--83b8a55b-898e-4b88-8309-07ab721c2a57"
+	}, {
+		"created": "2017-06-07T18:45:08.510Z",
+		"modified": "2017-06-07T18:45:08.510Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaaa",
+		"description": "aaa",
+		"pattern": "aaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--853de109-2812-4da9-8f0b-41a263d819cf"
+	}, {
+		"created": "2017-06-07T16:14:27.033Z",
+		"modified": "2017-06-07T16:14:27.033Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "tttt",
+		"description": "tttt",
+		"pattern": "ttt",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--85717aef-c68a-4c32-84f3-06c46c868c1e"
+	}, {
+		"created": "2017-06-07T18:27:41.858Z",
+		"modified": "2017-06-07T18:27:41.858Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "blahblah",
+		"description": "blahblah",
+		"pattern": null,
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--862a9670-2546-497a-9cc8-0df643ffdb76"
 	}, {
 		"created": "2016-09-21T13:14:10.901Z",
 		"modified": "2016-09-21T13:14:10.901Z",
@@ -4608,6 +5294,22 @@
 		"type": "indicator",
 		"id": "indicator--8b42093b-f76a-4e02-8987-3e7e35be98d5"
 	}, {
+		"created": "2017-06-09T16:47:28.572Z",
+		"modified": "2017-06-09T16:47:28.572Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "lll",
+		"description": "lll",
+		"pattern": "lll",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--8d8162d9-62a1-4fba-954d-46624ecee5d2"
+	}, {
 		"created": "2016-09-21T13:14:10.900Z",
 		"modified": "2016-09-21T13:14:10.900Z",
 		"version": 0,
@@ -4680,6 +5382,38 @@
 		"type": "indicator",
 		"id": "indicator--969e7eb3-2810-4e72-99da-8bba40f31729"
 	}, {
+		"created": "2017-06-09T15:28:56.518Z",
+		"modified": "2017-06-09T15:28:56.518Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "ddd",
+		"description": "ddd",
+		"pattern": null,
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--99f3d5fb-8894-4db8-8d02-a0435935de25"
+	}, {
+		"created": "2017-06-09T16:21:55.607Z",
+		"modified": "2017-06-09T16:21:55.607Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "iii",
+		"description": "iii",
+		"pattern": "iii",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--9ba1c015-53f9-4bff-96f1-6f91f0cd2b37"
+	}, {
 		"created": "2016-09-21T13:14:10.900Z",
 		"modified": "2016-09-21T13:14:10.900Z",
 		"version": 0,
@@ -4701,6 +5435,22 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--9e98f542-da4b-40f3-b557-753139795b13"
+	}, {
+		"created": "2017-06-09T17:26:27.226Z",
+		"modified": "2017-06-09T17:26:27.226Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "bbb",
+		"description": "bb",
+		"pattern": "bbb",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--9f9116da-d08d-4d2f-9bfc-6fcccad70a27"
 	}, {
 		"created": "2016-09-21T13:14:10.832Z",
 		"modified": "2016-09-21T13:14:10.832Z",
@@ -4733,6 +5483,38 @@
 		"type": "indicator",
 		"id": "indicator--a3ac6178-31f6-483c-a525-43418d1751bd"
 	}, {
+		"created": "2017-06-09T17:21:11.948Z",
+		"modified": "2017-06-09T17:21:11.948Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aaa",
+		"pattern": "aa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--a6eec9eb-6eb9-4ade-b9d6-fbc53e8a43a4"
+	}, {
+		"created": "2017-06-07T18:30:42.897Z",
+		"modified": "2017-06-07T18:30:42.897Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aa",
+		"pattern": "aa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--a80d498e-0fac-4d6e-b0d7-e14012025062"
+	}, {
 		"created": "2016-09-21T13:14:10.772Z",
 		"modified": "2016-09-21T13:14:10.772Z",
 		"version": 0,
@@ -4761,6 +5543,22 @@
 		"type": "indicator",
 		"id": "indicator--a98a7044-b118-464e-b8a6-f18e97591ab0"
 	}, {
+		"created": "2017-06-07T18:30:42.897Z",
+		"modified": "2017-06-07T18:30:42.897Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aa",
+		"pattern": "aa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--ab1084e0-bacc-4a66-a765-a0bb119428bc"
+	}, {
 		"created": "2016-09-21T13:14:10.923Z",
 		"modified": "2016-09-21T13:14:10.923Z",
 		"version": 0,
@@ -4788,6 +5586,48 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--ab50dc6b-3389-4228-96ea-4f5543426785"
+	}, {
+		"created": "2017-06-07T16:02:25.454Z",
+		"modified": "2017-06-07T16:02:25.454Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaafdsaf",
+		"description": "fdsf",
+		"pattern": "fdsafds",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--aeee5bf6-ac6f-4283-a993-b9d4f8f85963"
+	}, {
+		"created": "2017-06-07T15:20:34.112Z",
+		"modified": "2017-06-07T15:20:34.112Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "ttt",
+		"description": "tt",
+		"pattern": "tt",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--b0be2866-d31c-4661-9c4c-b56cb88276da"
+	}, {
+		"created": "2017-06-09T17:51:54.960Z",
+		"modified": "2017-06-09T17:51:54.960Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaaabbb",
+		"description": "aaabbb",
+		"pattern": null,
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--b35c58a7-0ff8-4a74-90b1-ad25b6d205b3"
 	}, {
 		"created": "2016-09-21T13:14:10.876Z",
 		"modified": "2016-09-21T13:14:10.876Z",
@@ -4858,6 +5698,35 @@
 		"type": "indicator",
 		"id": "indicator--b82936b1-a050-4f02-9b94-050103ba52ac"
 	}, {
+		"created": "2017-06-07T16:42:45.256Z",
+		"modified": "2017-06-07T16:42:45.256Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "fdsa",
+		"description": "fds",
+		"pattern": "fsdaf",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--c0e6f287-ac0b-4a2d-a13f-c4a58fea6e6f"
+	}, {
+		"created": "2017-06-07T15:37:05.313Z",
+		"modified": "2017-06-07T15:37:05.313Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "pppp",
+		"description": "pppp",
+		"pattern": "pppp",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--c1038f3a-68e4-43c0-b7c4-c12989cf83ae"
+	}, {
 		"created": "2016-09-21T13:14:10.837Z",
 		"modified": "2016-09-21T13:14:10.837Z",
 		"version": 0,
@@ -4882,6 +5751,19 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--c31ffbb5-a56e-4ed9-9e4c-d1c018aa5ebd"
+	}, {
+		"created": "2017-06-07T15:03:28.147Z",
+		"modified": "2017-06-07T15:03:28.147Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "ggggg",
+		"description": "gggg",
+		"pattern": "ggggg",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--c52b2118-2dc6-424d-9942-52cca485349a"
 	}, {
 		"created": "2016-09-21T13:14:10.853Z",
 		"modified": "2016-09-21T13:14:10.853Z",
@@ -4961,6 +5843,163 @@
 		"type": "indicator",
 		"id": "indicator--c80f9614-d40b-4978-8c01-dc3de97c3556"
 	}, {
+		"created": "2017-06-09T17:21:11.948Z",
+		"modified": "2017-06-09T17:21:11.948Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aaa",
+		"pattern": "aa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--cbcb5bac-2686-41c2-bc2e-7e76fc672166"
+	}, {
+		"created": "2017-06-09T16:22:27.847Z",
+		"modified": "2017-06-09T16:22:27.847Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "jjj",
+		"description": "jjj",
+		"pattern": "jjj",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--cc4bf783-c6bd-4f12-a453-571d67af3cfc"
+	}, {
+		"created": "2017-06-09T15:15:51.694Z",
+		"modified": "2017-06-09T15:15:51.694Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aa",
+		"pattern": "aaaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--d009b35d-eddd-4a7a-a57b-95c5882dacf9"
+	}, {
+		"created": "2017-06-07T18:30:42.897Z",
+		"modified": "2017-06-07T18:30:42.897Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aa",
+		"pattern": "aa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--d181c123-c0cf-4df8-916a-ef35d9183f6c"
+	}, {
+		"created": "2017-06-09T17:52:27.833Z",
+		"modified": "2017-06-09T17:52:27.833Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aa",
+		"description": "aaa",
+		"pattern": null,
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--d3737cb1-b519-4c77-82c5-dbc9140ad932"
+	}, {
+		"created": "2017-06-07T16:42:45.256Z",
+		"modified": "2017-06-07T16:42:45.256Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "fdsa",
+		"description": "fds",
+		"pattern": "fsdaf",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--d3f3e7d0-ac67-40ce-9e6a-f978344c1fc6"
+	}, {
+		"created": "2017-06-07T16:28:37.585Z",
+		"modified": "2017-06-07T16:28:37.585Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "fdsfd",
+		"description": "afdaf",
+		"pattern": "dfdas",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--d49a7859-fc82-491e-b241-8e58dd6d7e33"
+	}, {
+		"created": "2017-06-07T03:02:58.851Z",
+		"modified": "2017-06-07T03:02:58.851Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "bbbb",
+		"description": "bbbb",
+		"pattern": "bbbb",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--d67ce1b9-7ba5-44df-8ca9-fbcaafdb6419"
+	}, {
+		"created": "2017-06-09T15:28:10.785Z",
+		"modified": "2017-06-09T15:28:10.785Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "ccc",
+		"description": "ccc",
+		"pattern": "ccc",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--da7e29f5-b779-4a71-b402-ef181b8851b1"
+	}, {
+		"created": "2017-06-07T18:32:33.576Z",
+		"modified": "2017-06-07T18:32:33.576Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "aa",
+		"pattern": "aaa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--dd815c29-59d1-41f2-8703-16f291b70ed8"
+	}, {
 		"created": "2016-09-21T13:14:10.902Z",
 		"modified": "2016-09-21T13:14:10.902Z",
 		"version": 0,
@@ -4979,6 +6018,19 @@
 		"kill_chain_phases": [],
 		"type": "indicator",
 		"id": "indicator--de8755a2-d914-4a78-bd71-9f14b545a5f1"
+	}, {
+		"created": "2017-06-07T15:06:51.596Z",
+		"modified": "2017-06-07T15:06:51.596Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "ccc",
+		"description": "ccc",
+		"pattern": "ccc",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--e3ccb2f5-9a8e-4242-a376-41eecaf6c10c"
 	}, {
 		"created": "2016-09-21T13:14:10.780Z",
 		"modified": "2016-09-21T13:14:10.780Z",
@@ -5013,6 +6065,35 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--e69935ec-d4d6-44d6-b5aa-8562b15b2f01"
+	}, {
+		"created": "2017-06-07T02:34:50.316Z",
+		"modified": "2017-06-07T02:34:50.317Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaaa",
+		"description": "bbbb",
+		"pattern": "ccc",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--e98d9b51-ba27-4405-a7c1-018210370676"
+	}, {
+		"created": "2017-06-07T16:34:34.341Z",
+		"modified": "2017-06-07T16:34:34.341Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "fds",
+		"description": "fdsaf",
+		"pattern": "fdsfa",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--ec8a74b9-7808-44d7-9e82-61990934f1fe"
 	}, {
 		"created": "2016-09-21T13:14:10.780Z",
 		"modified": "2016-09-21T13:14:10.780Z",
@@ -5067,6 +6148,22 @@
 		"type": "indicator",
 		"id": "indicator--f04e6079-0439-47f1-8a3b-d16d459461a9"
 	}, {
+		"created": "2017-06-09T16:24:33.725Z",
+		"modified": "2017-06-09T16:24:33.725Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "kkk",
+		"description": "kkk",
+		"pattern": "kkk",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--f724c13e-e339-45a0-a4ad-d3ab5c2c3bad"
+	}, {
 		"created": "2016-09-21T13:14:10.884Z",
 		"modified": "2016-09-21T13:14:10.884Z",
 		"version": 0,
@@ -5088,13 +6185,36 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--f953771a-06d7-4566-a2b6-51c79a5b7f3a"
-	}]
-}, {
-	"type": "bundle",
-	"id": "stix-archive-bundle-5",
-	"spec_version": "2.0",
-	"x_unfetter_resource_path": "intrusion-sets",
-	"objects": [{
+	}, {
+		"created": "2017-06-09T17:28:01.794Z",
+		"modified": "2017-06-09T17:28:01.794Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "ccc",
+		"description": "ccc",
+		"pattern": "ccc",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [{
+			"kill_chain_name": "mitre-attack",
+			"phase_name": "persistence"
+		}],
+		"id": "indicator--fc98458d-387d-47e7-a65f-7f0cbe698050"
+	}, {
+		"created": "2017-06-07T03:02:43.790Z",
+		"modified": "2017-06-07T03:02:43.790Z",
+		"version": 1,
+		"labels": [],
+		"external_references": [],
+		"name": "aaa",
+		"description": "bbbb",
+		"pattern": "ccc",
+		"valid_from": null,
+		"valid_until": null,
+		"kill_chain_phases": [],
+		"id": "indicator--ff6cbd85-1b1a-4786-b495-f17df7606ed9"
+	}, {
 		"created": "2016-09-01T18:10:10.039Z",
 		"modified": "2016-09-01T18:10:10.039Z",
 		"version": 0,
@@ -5702,13 +6822,7 @@
 		"description": "Carbanak is a threat group that mainly targets banks. It also refers to malware of the same name (Carbanak).14",
 		"type": "intrusion-set",
 		"id": "intrusion-set--fe9e243d-4c8b-4b54-8e94-62355293f69e"
-	}]
-}, {
-	"type": "bundle",
-	"id": "stix-archive-bundle-6",
-	"spec_version": "2.0",
-	"x_unfetter_resource_path": "malwares",
-	"objects": [{
+	}, {
 		"created": "2016-09-14T17:56:32.754Z",
 		"modified": "2016-09-14T17:56:32.754Z",
 		"version": 0,
@@ -9705,13 +10819,7 @@
 		"aliases": ["Psylo"],
 		"type": "malware",
 		"id": "malware--ff707a8d-6d84-43f1-88f8-f2ecf956c82b"
-	}]
-}, {
-	"type": "bundle",
-	"id": "stix-archive-bundle-7",
-	"spec_version": "2.0",
-	"x_unfetter_resource_path": "marking-definitions",
-	"objects": [{
+	}, {
 		"definition_type": "rating",
 		"definition": {
 			"rating": 2,
@@ -9761,13 +10869,7 @@
 		"external_references": [],
 		"type": "marking-definition",
 		"id": "marking-definition--bc99f74c-46c1-4012-8d91-f7c59e98fc02"
-	}]
-}, {
-	"type": "bundle",
-	"id": "stix-archive-bundle-9",
-	"spec_version": "2.0",
-	"x_unfetter_resource_path": "relationships",
-	"objects": [{
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -9797,6 +10899,14 @@
 		"target_ref": "attack-pattern--4b363289-669a-4310-851a-a1ea0574af46",
 		"type": "relationship",
 		"id": "relationship--0067df66-8eee-46f7-b8fd-37fab6ae2df2"
+	}, {
+		"created": "2017-06-07T16:35:55.867Z",
+		"modified": "2017-06-07T16:35:55.867Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--ec8a74b9-7808-44d7-9e82-61990934f1fe",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--007397b9-3bea-4056-87db-10af891f50a1"
 	}, {
 		"created": "2016-08-01T00:00:00.000Z",
 		"modified": "2016-08-01T00:00:00.000Z",
@@ -9953,6 +11063,14 @@
 		"type": "relationship",
 		"id": "relationship--04a1ddba-13ab-4304-815c-9b8877d6cb5e"
 	}, {
+		"created": "2017-06-07T16:07:48.755Z",
+		"modified": "2017-06-07T16:07:48.755Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--6ce50ace-1da2-447d-b9ae-5928ec7fa69e",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--04c346b9-252f-4ea6-b761-e5949a4164c3"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -9982,6 +11100,14 @@
 		"target_ref": "malware--12de12b2-7dd5-4b5a-8192-2368ac3c0931",
 		"type": "relationship",
 		"id": "relationship--05a21e0b-89b8-44f1-8fc2-04ca3778b9ab"
+	}, {
+		"created": "2017-06-09T17:26:31.659Z",
+		"modified": "2017-06-09T17:26:31.659Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--9f9116da-d08d-4d2f-9bfc-6fcccad70a27",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--05ebe5f2-c007-41e6-92e3-b0fb815176b9"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -10659,6 +11785,14 @@
 		"type": "relationship",
 		"id": "relationship--113126ba-9444-421d-b504-ec0a986537db"
 	}, {
+		"created": "2017-06-07T15:41:45.179Z",
+		"modified": "2017-06-07T15:41:45.179Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--33f68a55-5bf9-40f9-811b-4d52d549946d",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--118d8c22-7ee7-4a03-acc9-f060713f7363"
+	}, {
 		"created": "2017-03-03T18:36:31.076Z",
 		"modified": "2017-03-03T18:36:31.076Z",
 		"version": "1",
@@ -10966,6 +12100,22 @@
 		"type": "relationship",
 		"id": "relationship--162a6320-9f6a-4296-8d11-b8a7011b27ee"
 	}, {
+		"created": "2017-06-07T18:56:18.596Z",
+		"modified": "2017-06-07T18:56:18.596Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--49501634-32b3-48fa-b36b-7fe2a6c70a59",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--1634d16c-c5a7-457d-9511-40713638565a"
+	}, {
+		"created": "2017-06-09T16:47:37.594Z",
+		"modified": "2017-06-09T16:47:37.594Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--8d8162d9-62a1-4fba-954d-46624ecee5d2",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--164d137b-8bbc-47a2-bdf2-f1d585e9341f"
+	}, {
 		"created": "2017-03-03T19:42:25.182Z",
 		"modified": "2017-03-03T19:42:25.182Z",
 		"version": "1",
@@ -11108,6 +12258,14 @@
 		"target_ref": "malware--3921baaf-9e8e-4a1a-9926-8525922fb058",
 		"type": "relationship",
 		"id": "relationship--17c5261f-8632-4ea3-9893-b7cb1c5ccc04"
+	}, {
+		"created": "2017-06-09T16:24:48.142Z",
+		"modified": "2017-06-09T16:24:48.142Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--f724c13e-e339-45a0-a4ad-d3ab5c2c3bad",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--182294dc-0b7c-4601-a59e-78399702d0df"
 	}, {
 		"created": "2016-08-01T00:00:00.000Z",
 		"modified": "2016-08-01T00:00:00.000Z",
@@ -11428,6 +12586,14 @@
 		"type": "relationship",
 		"id": "relationship--1d8f052a-0fae-4dec-9b47-7649ed972828"
 	}, {
+		"created": "2017-06-07T16:43:27.567Z",
+		"modified": "2017-06-07T16:43:27.567Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--4ccc8dc1-4adc-42c9-8d45-9d61c08ba739",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--1dc3c205-b04c-4951-a149-76eb55964a9c"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -11551,6 +12717,14 @@
 		"type": "relationship",
 		"id": "relationship--20d9dcdb-73bd-4fa1-8742-e0b473801f5e"
 	}, {
+		"created": "2017-06-09T16:22:05.756Z",
+		"modified": "2017-06-09T16:22:05.756Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--9ba1c015-53f9-4bff-96f1-6f91f0cd2b37",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--210567a7-ec53-4620-a5c8-5bf9f5fa66b3"
+	}, {
 		"created": "2016-08-01T00:00:00.000Z",
 		"modified": "2016-08-01T00:00:00.000Z",
 		"version": "0",
@@ -11560,6 +12734,14 @@
 		"target_ref": "attack-pattern--62f8c113-9da8-4586-8c79-0e46ffb8c888",
 		"type": "relationship",
 		"id": "relationship--21147d0e-c255-40ab-886e-d5ac2c20a495"
+	}, {
+		"created": "2017-06-07T18:15:32.490Z",
+		"modified": "2017-06-07T18:15:32.490Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--26ed0809-3cd1-4425-8a66-51b235003ea2",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--21e35948-4ac4-4ab0-ac03-ee4e45dcf375"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -12002,6 +13184,14 @@
 		"type": "relationship",
 		"id": "relationship--2baf61c4-829a-4079-b031-3a84e56f9ef2"
 	}, {
+		"created": "2017-06-07T16:25:40.044Z",
+		"modified": "2017-06-07T16:25:40.044Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--18ff00b3-0899-4a60-924b-382afe0dcdfa",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--2bd92e97-8ca9-414c-ace5-e56b09a028d7"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -12080,6 +13270,14 @@
 		"target_ref": "malware--717c2e23-30c8-4739-b8c5-d308bb1f28ad",
 		"type": "relationship",
 		"id": "relationship--2d8991fa-4c18-431f-bbd6-e692ac503f44"
+	}, {
+		"created": "2017-06-07T16:22:48.390Z",
+		"modified": "2017-06-07T16:22:48.390Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--0b0e83bd-1ebb-4627-8cf9-b2aeacee9ed8",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--2dfded82-483c-4779-bf3b-e04a0d8b25ed"
 	}, {
 		"created": "2017-03-03T19:42:36.228Z",
 		"modified": "2017-03-03T19:42:36.228Z",
@@ -12234,6 +13432,14 @@
 		"target_ref": "attack-pattern--a18a5edd-a9b3-4adf-8980-a6abc994e011",
 		"type": "relationship",
 		"id": "relationship--30d54222-37e5-4ba2-82e9-72aea69337e5"
+	}, {
+		"created": "2017-06-09T16:09:31.847Z",
+		"modified": "2017-06-09T16:09:31.847Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--09dba279-bc86-4fcd-8d5c-fd3d44051cd2",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--30e68112-1d12-423c-ae93-ad80fbb1df13"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -13151,6 +14357,14 @@
 		"type": "relationship",
 		"id": "relationship--42f5d84d-2d89-4627-95a3-1ed3e080b72b"
 	}, {
+		"created": "2017-06-09T15:25:51.934Z",
+		"modified": "2017-06-09T15:25:51.934Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--50ce9933-2560-4e82-ae4f-e5bf0ad7f3c2",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--436c674c-cb60-4c8e-a42c-36b23af5f491"
+	}, {
 		"created": "2017-03-03T18:39:19.701Z",
 		"modified": "2017-03-03T18:39:19.701Z",
 		"version": "1",
@@ -13994,6 +15208,14 @@
 		"type": "relationship",
 		"id": "relationship--502dcbfd-ba68-4b1e-961d-57458ffae8d2"
 	}, {
+		"created": "2017-06-09T17:26:45.741Z",
+		"modified": "2017-06-09T17:26:45.741Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--351e5380-1cc8-4782-8fca-3535cd66a55f",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--503a86c6-ded9-4d9d-9b64-cdef13f3acf9"
+	}, {
 		"created": "2016-08-01T00:00:00.000Z",
 		"modified": "2016-08-01T00:00:00.000Z",
 		"version": "0",
@@ -14061,6 +15283,14 @@
 		"target_ref": "attack-pattern--cc45ac58-81e3-4e3c-8fc0-28157951699e",
 		"type": "relationship",
 		"id": "relationship--511df46a-0b1f-429f-89e8-0f527a4f2737"
+	}, {
+		"created": "2017-06-07T18:45:35.313Z",
+		"modified": "2017-06-07T18:45:35.313Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--59b85327-e090-49f3-badf-7f97b8197f85",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--511e3d69-3dd3-402e-860f-b0e680c74e61"
 	}, {
 		"created": "2017-03-03T19:42:08.673Z",
 		"modified": "2017-03-03T19:42:08.673Z",
@@ -14328,6 +15558,14 @@
 		"target_ref": "attack-pattern--53aa91f9-480a-479f-8b9e-9dcebabd1b9d",
 		"type": "relationship",
 		"id": "relationship--5863f2b9-def3-4d06-a1a0-53190b0025d7"
+	}, {
+		"created": "2017-06-07T16:15:00.374Z",
+		"modified": "2017-06-07T16:15:00.374Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--85717aef-c68a-4c32-84f3-06c46c868c1e",
+		"target_ref": "attack-pattern--89d5208f-3f07-4e91-899c-f5fd8778cca3",
+		"id": "relationship--58e8b8e4-8f17-48ba-8028-917d559be6eb"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -14657,6 +15895,14 @@
 		"type": "relationship",
 		"id": "relationship--5f82117e-fcf6-4231-8fc3-7b48c2b4164e"
 	}, {
+		"created": "2017-06-09T18:05:00.292Z",
+		"modified": "2017-06-09T18:05:00.292Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--5deee88f-6005-4b29-925f-fc70fdcaaddb",
+		"target_ref": "attack-pattern--ec631abd-de82-414e-8a50-25bf6cdddb21",
+		"id": "relationship--5f824628-b5cd-49ec-a8ca-e664793b382c"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -14858,6 +16104,14 @@
 		"target_ref": "malware--9a610d42-634d-435a-96a1-32e5aa3593ce",
 		"type": "relationship",
 		"id": "relationship--6401e173-4617-4463-ad71-4c165e5c4a94"
+	}, {
+		"created": "2017-06-09T16:53:39.912Z",
+		"modified": "2017-06-09T16:53:39.912Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--607bfeee-4f45-42e0-9fa9-87879f032f7f",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--641ae5c8-d6d3-4e39-853e-1a9c005cc93a"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -15414,6 +16668,14 @@
 		"type": "relationship",
 		"id": "relationship--7025f79a-ee24-4339-8779-375f64ba5cbd"
 	}, {
+		"created": "2017-06-07T15:24:39.815Z",
+		"modified": "2017-06-07T15:24:39.815Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--b0be2866-d31c-4661-9c4c-b56cb88276da",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--708925a9-13e1-4353-8eb6-5d9c15afb7da"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -15927,6 +17189,14 @@
 		"type": "relationship",
 		"id": "relationship--7ac76110-19c7-4206-a986-0dc8739e2f11"
 	}, {
+		"created": "2017-06-09T18:11:20.965Z",
+		"modified": "2017-06-09T18:11:20.965Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--3aa6c242-4c2f-4095-9950-1c4a13629a5b",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--7ae2bb7b-ac9a-4267-bd72-b7ff20062663"
+	}, {
 		"created": "2017-03-03T18:37:11.088Z",
 		"modified": "2017-03-03T18:37:11.088Z",
 		"version": "1",
@@ -16040,6 +17310,14 @@
 		"target_ref": "attack-pattern--e1a029dd-f930-40ba-8a1c-0adf9153e955",
 		"type": "relationship",
 		"id": "relationship--7ce62f34-ee98-4ae7-bf4c-b688e718d997"
+	}, {
+		"created": "2017-06-09T17:21:39.244Z",
+		"modified": "2017-06-09T17:21:39.244Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--cbcb5bac-2686-41c2-bc2e-7e76fc672166",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--7d3859e4-9dd5-4478-80f3-5653cad7913a"
 	}, {
 		"created": "2017-03-03T19:41:22.101Z",
 		"modified": "2017-03-03T19:41:22.101Z",
@@ -16157,6 +17435,14 @@
 		"target_ref": "malware--8d3ab2a6-2a47-4bcf-96a3-119a577146eb",
 		"type": "relationship",
 		"id": "relationship--7f7cd293-23cc-4691-84cd-fbcb9ad9fdb2"
+	}, {
+		"created": "2017-06-07T18:45:19.213Z",
+		"modified": "2017-06-07T18:45:19.213Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--853de109-2812-4da9-8f0b-41a263d819cf",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--7f9ac1fb-9ba9-4640-ac46-7609c495ba10"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -16377,6 +17663,14 @@
 		"type": "relationship",
 		"id": "relationship--84a90400-8d77-44de-8715-1a1e0fa28985"
 	}, {
+		"created": "2017-06-07T15:03:42.986Z",
+		"modified": "2017-06-07T15:03:42.986Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--c52b2118-2dc6-424d-9942-52cca485349a",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--84ec7b53-3e6c-48d9-bf58-0f000c6fbd22"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -16436,6 +17730,14 @@
 		"type": "relationship",
 		"id": "relationship--866d877b-7c3b-418d-826e-9957b914ba29"
 	}, {
+		"created": "2017-06-09T17:46:16.841Z",
+		"modified": "2017-06-09T17:46:16.841Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--72af8d5f-6da4-4fc0-90d7-06b02d9f28b0",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--86f2baff-4e10-47bb-b162-fb161d70c3df"
+	}, {
 		"created": "2017-03-03T19:01:08.091Z",
 		"modified": "2017-03-03T19:01:08.091Z",
 		"version": "1",
@@ -16473,6 +17775,14 @@
 		"type": "relationship",
 		"id": "relationship--872568bf-edff-466a-9d7b-cd6ce07012b9"
 	}, {
+		"created": "2017-06-09T15:16:07.762Z",
+		"modified": "2017-06-09T15:16:07.762Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--d009b35d-eddd-4a7a-a57b-95c5882dacf9",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--875b2df8-8146-427d-aeea-53ee62192b62"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -16491,6 +17801,14 @@
 		"target_ref": "attack-pattern--3fd331c8-1c3f-4889-88f2-11c8ac28254d",
 		"type": "relationship",
 		"id": "relationship--87ab0a7c-ae6c-4d7a-b0eb-d4a790a4748b"
+	}, {
+		"created": "2017-06-07T16:04:17.263Z",
+		"modified": "2017-06-07T16:04:17.263Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--50b64faf-07ec-4dfa-976e-9eb8cd618611",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--87c1ecc0-e87d-4512-b947-578eb0fdee9b"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -16772,6 +18090,14 @@
 		"type": "relationship",
 		"id": "relationship--8b332403-4b2a-49ed-8365-6bed93854787"
 	}, {
+		"created": "2017-06-07T03:03:07.417Z",
+		"modified": "2017-06-07T03:03:07.417Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--d67ce1b9-7ba5-44df-8ca9-fbcaafdb6419",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--8b385da4-a7f0-4292-bc17-1f9e7b65a10d"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -16955,6 +18281,14 @@
 		"target_ref": "malware--76a4876b-b7dc-4290-9c64-1c30a3d9bf36",
 		"type": "relationship",
 		"id": "relationship--8fc792cd-426f-475f-b4c8-11c3542e0e44"
+	}, {
+		"created": "2017-06-09T15:28:25.453Z",
+		"modified": "2017-06-09T15:28:25.453Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--da7e29f5-b779-4a71-b402-ef181b8851b1",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--8feadc1d-18a3-46bc-b298-53dde8675190"
 	}, {
 		"created": "2017-03-03T20:41:23.922Z",
 		"modified": "2017-03-03T20:41:23.922Z",
@@ -17239,6 +18573,14 @@
 		"type": "relationship",
 		"id": "relationship--955c4c9b-f8f6-4687-a499-ee73cdb49e84"
 	}, {
+		"created": "2017-06-07T18:43:29.328Z",
+		"modified": "2017-06-07T18:43:29.328Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--2c9c6702-a55a-46c5-8420-b4e32891faf4",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--955d572e-d97d-4378-bc7d-d2dca1db40bf"
+	}, {
 		"created": "2017-03-03T20:48:19.808Z",
 		"modified": "2017-03-03T20:48:19.808Z",
 		"version": "1",
@@ -17315,6 +18657,14 @@
 		"type": "relationship",
 		"id": "relationship--967cd0fd-92aa-4a91-882f-a0cd5d7d82ed"
 	}, {
+		"created": "2017-06-09T17:28:05.834Z",
+		"modified": "2017-06-09T17:28:05.834Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--fc98458d-387d-47e7-a65f-7f0cbe698050",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--970472ff-2ad0-4302-bc5c-52bf3ffcda4b"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -17343,6 +18693,14 @@
 		"target_ref": "malware--e6924a2e-dbe3-461c-9fa2-8a8dd2c3d7b4",
 		"type": "relationship",
 		"id": "relationship--97692a2e-cd80-4b6a-b3b0-72eaa901df1c"
+	}, {
+		"created": "2017-06-09T17:52:08.788Z",
+		"modified": "2017-06-09T17:52:08.788Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--b35c58a7-0ff8-4a74-90b1-ad25b6d205b3",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--97985a03-391b-4fb8-b40e-ff3d8147e814"
 	}, {
 		"created": "2016-08-01T00:00:00.000Z",
 		"modified": "2016-08-01T00:00:00.000Z",
@@ -17487,6 +18845,14 @@
 		"source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"target_ref": "attack-pattern--9cfb9f9b-c846-4015-8a11-9c2112cf5379",
 		"id": "relationship--99f2b0ae-b74e-4aff-9de6-98e1268226a2"
+	}, {
+		"created": "2017-06-07T16:19:02.982Z",
+		"modified": "2017-06-07T16:19:02.982Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--262dc5d4-582d-4912-9917-cac0498ddaa7",
+		"target_ref": "attack-pattern--89d5208f-3f07-4e91-899c-f5fd8778cca3",
+		"id": "relationship--99f7aca6-8caa-4b96-89f9-4f7a289f37a9"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -17952,6 +19318,14 @@
 		"type": "relationship",
 		"id": "relationship--a1e9f43a-f30e-485d-8700-1d28551a6484"
 	}, {
+		"created": "2017-06-09T15:36:46.048Z",
+		"modified": "2017-06-09T15:36:46.048Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--16051868-e036-462f-9c89-5f875f343b9e",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--a2bb74b3-eace-4f1f-a9f0-56d4cba148e2"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -18040,6 +19414,14 @@
 		"target_ref": "malware--96a2bcdd-7371-413b-9b83-cdbe7673fa18",
 		"type": "relationship",
 		"id": "relationship--a4fad1a6-07e1-4ba5-89f5-34847d828da9"
+	}, {
+		"created": "2017-06-07T15:07:58.687Z",
+		"modified": "2017-06-07T15:07:58.687Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--e3ccb2f5-9a8e-4242-a376-41eecaf6c10c",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--a50ce33d-2065-4733-af18-646fca8f269d"
 	}, {
 		"created": "2016-08-01T00:00:00.000Z",
 		"modified": "2016-08-01T00:00:00.000Z",
@@ -18138,6 +19520,14 @@
 		"type": "relationship",
 		"id": "relationship--a83ad7d2-81c3-4a1f-ab81-76aebc6fd022"
 	}, {
+		"created": "2017-06-07T03:14:12.320Z",
+		"modified": "2017-06-07T03:14:12.320Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--1cabbf51-ac3b-48b0-a9f7-59f0181aebd5",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--a84b2e9c-474c-4f47-a3ee-f8feeb2d0bfd"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -18175,6 +19565,14 @@
 		"target_ref": "attack-pattern--0541e9a2-fafa-4ada-8466-cb20f5b021ba",
 		"type": "relationship",
 		"id": "relationship--a8ef1442-28b9-46d6-8520-44aa851284fc"
+	}, {
+		"created": "2017-06-07T15:37:28.528Z",
+		"modified": "2017-06-07T15:37:28.528Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--c1038f3a-68e4-43c0-b7c4-c12989cf83ae",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--a91e29f8-add0-453c-a310-d65c67ef1871"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -18274,6 +19672,22 @@
 		"type": "relationship",
 		"id": "relationship--aaf7a50f-b1b7-4348-b898-77e335e5f1ff"
 	}, {
+		"created": "2017-06-09T16:08:13.110Z",
+		"modified": "2017-06-09T16:08:13.110Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--4dbdfc38-a91d-4cd4-a051-ac27965803ce",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--ab359e74-3a53-4f22-904c-da3a2e319111"
+	}, {
+		"created": "2017-06-09T17:37:40.420Z",
+		"modified": "2017-06-09T17:37:40.420Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--516cc54d-3d7f-4bc5-ab10-54fb153fc3e0",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--ab39408f-4d5b-4158-955f-fe0ebd641288"
+	}, {
 		"created": "2017-03-03T19:42:20.835Z",
 		"modified": "2017-03-03T19:42:20.835Z",
 		"version": "1",
@@ -18351,6 +19765,14 @@
 		"type": "relationship",
 		"id": "relationship--acc4a951-7340-4df8-a5ee-846967a81f97"
 	}, {
+		"created": "2017-06-07T16:42:57.631Z",
+		"modified": "2017-06-07T16:42:57.631Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--c0e6f287-ac0b-4a2d-a13f-c4a58fea6e6f",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--acca085a-36ac-4bff-b27b-48968c0c65e7"
+	}, {
 		"created": "2017-03-03T19:31:30.617Z",
 		"modified": "2017-03-03T19:31:30.617Z",
 		"version": "1",
@@ -18389,6 +19811,14 @@
 		"target_ref": "tool--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
 		"type": "relationship",
 		"id": "relationship--ad7f3f1b-e9dd-4f0a-999c-b76747ed4cd0"
+	}, {
+		"created": "2017-06-09T17:33:01.678Z",
+		"modified": "2017-06-09T17:33:01.678Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--00ba608e-88d5-4d28-8dd0-fe8726f0f359",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--ae6c85f3-d072-4b0d-aca7-f9bb559a1992"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -18918,6 +20348,14 @@
 		"type": "relationship",
 		"id": "relationship--b8b5c8b5-a5ed-4bec-85bf-7c421792e847"
 	}, {
+		"created": "2017-06-07T03:02:50.574Z",
+		"modified": "2017-06-07T03:02:50.574Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--ff6cbd85-1b1a-4786-b495-f17df7606ed9",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--b9209586-270b-453d-b9e2-a569c15f2b9d"
+	}, {
 		"created": "2016-08-01T00:00:00.000Z",
 		"modified": "2016-08-01T00:00:00.000Z",
 		"version": "0",
@@ -19254,6 +20692,14 @@
 		"target_ref": "attack-pattern--89d5208f-3f07-4e91-899c-f5fd8778cca3",
 		"type": "relationship",
 		"id": "relationship--bfd9490e-aaa5-488e-81a9-b2a5885cfdb4"
+	}, {
+		"created": "2017-06-07T16:28:41.547Z",
+		"modified": "2017-06-07T16:28:41.547Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--d49a7859-fc82-491e-b241-8e58dd6d7e33",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--c060ccef-8848-4593-9317-4027a60b94f5"
 	}, {
 		"created": "2017-03-03T19:56:33.896Z",
 		"modified": "2017-03-03T19:56:33.896Z",
@@ -19739,6 +21185,14 @@
 		"type": "relationship",
 		"id": "relationship--ca3bf472-6e6c-4ee0-9730-c99eff326aeb"
 	}, {
+		"created": "2017-06-07T16:43:45.208Z",
+		"modified": "2017-06-07T16:43:45.208Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--d3f3e7d0-ac67-40ce-9e6a-f978344c1fc6",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--ca3c4caa-b04c-456f-84e5-6eb6d0c4df01"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -19798,6 +21252,14 @@
 		"target_ref": "attack-pattern--5f492dcb-f433-450c-83c4-002589d4b446",
 		"type": "relationship",
 		"id": "relationship--cb147e90-7b69-4c74-8b64-a5300ee8d0a3"
+	}, {
+		"created": "2017-06-09T17:28:50.186Z",
+		"modified": "2017-06-09T17:28:50.186Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--012dc50b-70fe-4380-a99f-2a3426be4d0d",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--cb2c886b-2c1d-4a4a-b1fb-f4144831466c"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -19895,6 +21357,14 @@
 		"target_ref": "malware--8d4cfca6-ce20-4430-adff-34d191602ad8",
 		"type": "relationship",
 		"id": "relationship--cd0c55c8-c22b-41dd-a5e1-456a1a1e5047"
+	}, {
+		"created": "2017-06-09T16:05:53.837Z",
+		"modified": "2017-06-09T16:05:53.837Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--14a85e55-d109-47eb-91a1-700254db3adc",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--cd58c52d-cbb5-475f-aeda-3d21ab146aea"
 	}, {
 		"created": "2016-08-01T00:00:00.000Z",
 		"modified": "2016-08-01T00:00:00.000Z",
@@ -20206,6 +21676,14 @@
 		"type": "relationship",
 		"id": "relationship--d544b2d2-ec5e-4442-869a-05d9a719cbd3"
 	}, {
+		"created": "2017-06-09T16:22:36.297Z",
+		"modified": "2017-06-09T16:22:36.297Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--cc4bf783-c6bd-4f12-a453-571d67af3cfc",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--d56d40bb-50c8-489c-a33c-ea76b1d0def6"
+	}, {
 		"created": "2017-06-05T12:40:47.439Z",
 		"modified": "2017-06-05T12:40:47.439Z",
 		"version": 1,
@@ -20318,6 +21796,14 @@
 		"type": "relationship",
 		"id": "relationship--d8330546-67da-4e09-8bb0-176caf9cf2b6"
 	}, {
+		"created": "2017-06-07T16:02:34.911Z",
+		"modified": "2017-06-07T16:02:34.911Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--aeee5bf6-ac6f-4283-a993-b9d4f8f85963",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--d841d835-dab6-49a5-abd7-61464fe55ddc"
+	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
 		"version": "0",
@@ -20347,6 +21833,14 @@
 		"target_ref": "malware--9a610d42-634d-435a-96a1-32e5aa3593ce",
 		"type": "relationship",
 		"id": "relationship--d8a2f6a4-acf3-495d-8ee2-2bfac9d61211"
+	}, {
+		"created": "2017-06-09T15:29:56.811Z",
+		"modified": "2017-06-09T15:29:56.811Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--99f3d5fb-8894-4db8-8d02-a0435935de25",
+		"target_ref": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+		"id": "relationship--d8b5d1b0-8ccd-48f3-8a28-83dd3fb47a8f"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -20607,6 +22101,14 @@
 		"type": "relationship",
 		"id": "relationship--dda6f8fa-1453-4bb6-b6e9-00ec2118f704"
 	}, {
+		"created": "2017-06-09T17:21:30.061Z",
+		"modified": "2017-06-09T17:21:30.061Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--04b3bfdd-61de-4857-a18b-dac770e94009",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--ddc6538c-1581-4c34-98d5-d278b93d7b80"
+	}, {
 		"created": "2016-08-01T00:00:00.000Z",
 		"modified": "2016-08-01T00:00:00.000Z",
 		"version": "0",
@@ -20763,6 +22265,14 @@
 		"target_ref": "attack-pattern--b3ac34c7-d232-4ef1-85c8-f19caa1aa581",
 		"type": "relationship",
 		"id": "relationship--e29deec3-db2b-46d4-8377-7f47985373ec"
+	}, {
+		"created": "2017-06-07T16:40:47.758Z",
+		"modified": "2017-06-07T16:40:47.758Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--3de7d352-87d7-4948-a9dd-a4f7c9897252",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--e2a77b4b-525a-4c25-9ef8-00041748b473"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -21042,6 +22552,14 @@
 		"type": "relationship",
 		"id": "relationship--e6e8402c-5010-4159-b19d-5c02fb249f4b"
 	}, {
+		"created": "2017-06-07T02:50:21.910Z",
+		"modified": "2017-06-07T02:50:21.910Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--109e4dce-6386-499f-b6d4-f785c3d266a2",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--e6f7f6d3-3ba3-4aaf-bb57-555c164d4e6c"
+	}, {
 		"created": "2016-08-01T00:00:00.000Z",
 		"modified": "2016-08-01T00:00:00.000Z",
 		"version": "0",
@@ -21051,6 +22569,14 @@
 		"target_ref": "attack-pattern--081098a4-1583-4dc3-80c2-101b1943c5e5",
 		"type": "relationship",
 		"id": "relationship--e759212e-25be-412b-876a-707d353d532c"
+	}, {
+		"created": "2017-06-09T17:52:31.855Z",
+		"modified": "2017-06-09T17:52:31.855Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--d3737cb1-b519-4c77-82c5-dbc9140ad932",
+		"target_ref": "attack-pattern--ec631abd-de82-414e-8a50-25bf6cdddb21",
+		"id": "relationship--e7a0e6d3-0b95-43a3-bced-cd25a54c0a7c"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -21109,6 +22635,14 @@
 		"target_ref": "attack-pattern--5665ede3-6c98-42b6-8d44-60b1e112a285",
 		"type": "relationship",
 		"id": "relationship--e929e1ea-7a48-4295-93c9-e9e3007bf054"
+	}, {
+		"created": "2017-06-07T15:35:35.996Z",
+		"modified": "2017-06-07T15:35:35.996Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--2bc50b34-7378-4d78-8dee-c5350cd9d173",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--e96e9e15-d9a7-4ca7-a1d3-f28ef5cd45a8"
 	}, {
 		"created": "2017-03-03T20:22:07.138Z",
 		"modified": "2017-03-03T20:22:07.138Z",
@@ -21424,6 +22958,14 @@
 		"target_ref": "attack-pattern--b28949eb-61b2-4547-8376-41334b4eec6d",
 		"type": "relationship",
 		"id": "relationship--f02faaa4-e2a7-4597-a794-34cdbfab49de"
+	}, {
+		"created": "2017-06-07T16:44:45.518Z",
+		"modified": "2017-06-07T16:44:45.518Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--180bbb11-0289-493a-836a-ab8b08d3ccea",
+		"target_ref": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+		"id": "relationship--f07a9806-cea4-436c-b72d-2a6bf105e595"
 	}, {
 		"created": "2016-09-01T00:00:00.000Z",
 		"modified": "2016-09-01T00:00:00.000Z",
@@ -22307,6 +23849,14 @@
 		"type": "relationship",
 		"id": "relationship--ff76348e-ac99-423e-90c3-a32d79c6cff4"
 	}, {
+		"created": "2017-06-09T17:21:20.079Z",
+		"modified": "2017-06-09T17:21:20.079Z",
+		"version": 1,
+		"relationship_type": "indicates",
+		"source_ref": "indicator--a6eec9eb-6eb9-4ade-b9d6-fbc53e8a43a4",
+		"target_ref": "attack-pattern--adee23f2-61ec-43ba-9c3a-cbdf01a1ecbe",
+		"id": "relationship--ff78f881-43b0-4ac1-8140-7386e4e4d708"
+	}, {
 		"created": "2017-03-03T20:35:53.861Z",
 		"modified": "2017-03-03T20:35:53.861Z",
 		"version": "1",
@@ -22325,13 +23875,7 @@
 		"target_ref": "malware--7fcd5766-e0e0-481b-bc7a-24b8ba3cf5e1",
 		"type": "relationship",
 		"id": "relationship--ffdc9eb4-5365-443a-9173-7eb79e8fbae6"
-	}]
-}, {
-	"type": "bundle",
-	"id": "stix-archive-bundle-12",
-	"spec_version": "2.0",
-	"x_unfetter_resource_path": "tools",
-	"objects": [{
+	}, {
 		"created": "2016-09-14T17:56:37.033Z",
 		"modified": "2016-09-14T17:56:37.033Z",
 		"version": 0,
@@ -23138,21 +24682,15 @@
 		}],
 		"type": "tool",
 		"id": "tool--f8dd65c2-399c-4f27-9536-fbd96b293c10"
-	}]
-}, {
-	"type": "bundle",
-	"id": "stix-archive-bundle-13",
-	"spec_version": "2.0",
-	"x_unfetter_resource_path": "reports",
-	"objects": [{
+	}, {
 		"created": "2017-05-04T18:23:51.218Z",
 		"modified": "2017-05-04T18:23:51.218Z",
 		"version": 1,
 		"labels": ["assessment"],
 		"name": "Assessment Report - Mitigation",
-		"description": null,
+		"description": "",
 		"published": "2017-05-04T18:23:51.218Z",
-		"object_refs": ["x-unfetter-control-assessment--dc04b86f-328e-478c-8d8a-5f65cd7f676c", "x-unfetter-control-assessment--22850575-50c4-4f51-8e33-0a51b391c80b", "x-unfetter-control-assessment--ba9d582f-39c4-4d59-a270-89a48e12f3fd", "x-unfetter-control-assessment--424e216b-a848-4ab8-bc3d-d5ac0890efd8", "x-unfetter-control-assessment--85302445-1027-4435-99ff-0156f135c420", "x-unfetter-control-assessment--33d56f52-3bfe-4259-8392-9d075b552851", "x-unfetter-control-assessment--b48444e4-c3f0-459d-9472-08d2e22e92ee", "x-unfetter-control-assessment--784bb449-1128-4e0b-a20a-fbbca8183d8f", "x-unfetter-control-assessment--1f4384b7-f555-4f98-a9d5-58728f04a5c0", "x-unfetter-control-assessment--d66fe755-ba6e-46f8-8f1a-b5fa53486e25", "x-unfetter-control-assessment--792915a1-15ed-4f89-b6dd-ff3247ba9ba7", "x-unfetter-control-assessment--8be6b4d8-fac0-401e-9fa9-13cf445a1087", "x-unfetter-control-assessment--b1b4f768-08e8-4c9d-9ae0-510375af2cf6", "x-unfetter-control-assessment--5fb56576-ac1f-4c42-b116-0cae0f1dd25a", "x-unfetter-control-assessment--cb1f93f4-eaec-4746-8fcb-65cfdcc688a3", "x-unfetter-control-assessment--58a3854e-47e9-4280-924a-0dfb3f82ef71", "x-unfetter-control-assessment--faabac4d-28b0-4d85-b80f-08110e370c64", "x-unfetter-control-assessment--acc5be23-2fab-4457-9ab6-071228be4ac8", "x-unfetter-control-assessment--033ebcfa-34cb-46ab-a344-f9b4d303bda3", "x-unfetter-control-assessment--ae0798af-24c7-48df-bac8-5cbe3a69dc28", "x-unfetter-control-assessment--ba9f3009-8194-4eef-8f36-5ce7df6c868b", "x-unfetter-control-assessment--29596bee-f8ce-4ee8-83b8-10b1e3274d9c", "x-unfetter-control-assessment--f340518c-556a-4ad9-93f0-69e49aac57f9", "x-unfetter-control-assessment--0357a0b1-6965-41a4-aa02-0621278148e6", "x-unfetter-control-assessment--42a9fe11-bd73-4f14-a6df-a2042c8823d7", "x-unfetter-control-assessment--3102a472-02f5-47d7-8762-7a26ce67eb23", "x-unfetter-control-assessment--99d40b93-5543-4cdf-ad7d-b88114a853f2", "x-unfetter-control-assessment--375bdc9b-18b9-4a9d-81a8-227ddb367a1b", "x-unfetter-control-assessment--8beb0856-fec1-4822-b42a-4f7ed30de3ef", "x-unfetter-control-assessment--cc1adf87-dcd2-4a68-bf8d-48b7d49c112e", "x-unfetter-control-assessment--c4a7ed44-a466-4102-b6e9-62513f0e9c31", "x-unfetter-control-assessment--225cda4a-6928-4b78-bea5-065e2e0341b3", "x-unfetter-control-assessment--48b44f5c-1caf-403b-bffa-b02dfd247857", "x-unfetter-control-assessment--e942fa96-cf1f-43f8-99eb-51640027aa6b", "x-unfetter-control-assessment--4319469e-e626-4c1f-b845-d36e82d4b312", "x-unfetter-control-assessment--0b02f960-5773-4d93-b9ce-451427f39357", "x-unfetter-control-assessment--2959ee99-2439-4b97-8f31-4cd39bec254a", "x-unfetter-control-assessment--624013de-b813-4ac4-8598-b28278959bdc", "x-unfetter-control-assessment--ed8026bd-86fb-4b3c-8fc4-598d82b33338", "x-unfetter-control-assessment--14f63ba7-3860-4a1b-9a6e-07a5a1b6a4f2", "x-unfetter-control-assessment--d672a6d5-3bd2-47a8-9ba4-f760ddf4ee15", "x-unfetter-control-assessment--0a7770cd-f907-492a-9da4-71035db5ce35", "x-unfetter-control-assessment--d51974e5-5936-4f9f-a851-d6f908086174", "x-unfetter-control-assessment--8fb2e2e5-12d0-4df7-9d61-79ef3249ea20", "x-unfetter-control-assessment--1d67af26-6ce5-4c20-92f4-f9ccf91c9b54", "x-unfetter-control-assessment--a356a25a-1cd3-4999-84e3-c7d1ea4a7363", "x-unfetter-control-assessment--6118673f-25d9-4159-a04d-b510a2e9425a", "x-unfetter-control-assessment--3661a12c-3f65-46c7-a393-5424d2d48040", "x-unfetter-control-assessment--9ef093e3-101b-4dea-bf03-30a3bddc6c1c", "x-unfetter-control-assessment--3c2699a7-798f-49bf-aab8-8d0ffb67e4ac", "x-unfetter-control-assessment--10c3aa85-d0c0-4dbf-95d4-444d9a597123", "x-unfetter-control-assessment--004dd776-1fc2-4379-901e-d02607604c7a", "x-unfetter-control-assessment--b1b06b66-48d2-4c02-b9ad-f3cc2038da1c", "x-unfetter-control-assessment--25b34b6a-769c-4942-88db-b644ef64c779", "x-unfetter-control-assessment--bc10fab0-636b-41ab-a49d-20465c9677e0", "x-unfetter-control-assessment--3351b3c6-3f37-4461-b4a0-480d4953b7c0", "x-unfetter-control-assessment--2571b0df-6162-4389-8963-1412b859a84a", "x-unfetter-control-assessment--274243df-fe94-4d6d-8e15-877683b244e3", "x-unfetter-control-assessment--e131a7f8-bd09-4682-8c0c-3f2882a6879c", "x-unfetter-control-assessment--ac5d29cf-e77c-48ad-ae83-4380abc1ec7e", "x-unfetter-control-assessment--f0c1f939-bde6-40d1-b089-42d6845c7ec9", "x-unfetter-control-assessment--4d8d8771-055d-4f16-9680-c9adb367bd15", "x-unfetter-control-assessment--2db94868-85b6-48d8-aa5c-aa13785c7e04", "x-unfetter-control-assessment--23bc68bd-bb21-488c-915e-25fa4a175e82"],
+		"object_refs": ["x-unfetter-control-assessment--dc04b86f-328e-478c-8d8a-5f65cd7f676c", "x-unfetter-control-assessment--22850575-50c4-4f51-8e33-0a51b391c80b", "x-unfetter-control-assessment--ba9d582f-39c4-4d59-a270-89a48e12f3fd", "x-unfetter-control-assessment--424e216b-a848-4ab8-bc3d-d5ac0890efd8", "x-unfetter-control-assessment--85302445-1027-4435-99ff-0156f135c420", "x-unfetter-control-assessment--33d56f52-3bfe-4259-8392-9d075b552851", "x-unfetter-control-assessment--b48444e4-c3f0-459d-9472-08d2e22e92ee", "x-unfetter-control-assessment--784bb449-1128-4e0b-a20a-fbbca8183d8f", "x-unfetter-control-assessment--1f4384b7-f555-4f98-a9d5-58728f04a5c0", "x-unfetter-control-assessment--d66fe755-ba6e-46f8-8f1a-b5fa53486e25", "x-unfetter-control-assessment--792915a1-15ed-4f89-b6dd-ff3247ba9ba7", "x-unfetter-control-assessment--8be6b4d8-fac0-401e-9fa9-13cf445a1087", "x-unfetter-control-assessment--b1b4f768-08e8-4c9d-9ae0-510375af2cf6", "x-unfetter-control-assessment--5fb56576-ac1f-4c42-b116-0cae0f1dd25a", "x-unfetter-control-assessment--cb1f93f4-eaec-4746-8fcb-65cfdcc688a3", "x-unfetter-control-assessment--58a3854e-47e9-4280-924a-0dfb3f82ef71", "x-unfetter-control-assessment--faabac4d-28b0-4d85-b80f-08110e370c64", "x-unfetter-control-assessment--acc5be23-2fab-4457-9ab6-071228be4ac8", "x-unfetter-control-assessment--033ebcfa-34cb-46ab-a344-f9b4d303bda3", "x-unfetter-control-assessment--ae0798af-24c7-48df-bac8-5cbe3a69dc28", "x-unfetter-control-assessment--ba9f3009-8194-4eef-8f36-5ce7df6c868b", "x-unfetter-control-assessment--29596bee-f8ce-4ee8-83b8-10b1e3274d9c", "x-unfetter-control-assessment--f340518c-556a-4ad9-93f0-69e49aac57f9", "x-unfetter-control-assessment--0357a0b1-6965-41a4-aa02-0621278148e6", "x-unfetter-control-assessment--42a9fe11-bd73-4f14-a6df-a2042c8823d7", "x-unfetter-control-assessment--3102a472-02f5-47d7-8762-7a26ce67eb23", "x-unfetter-control-assessment--99d40b93-5543-4cdf-ad7d-b88114a853f2", "x-unfetter-control-assessment--375bdc9b-18b9-4a9d-81a8-227ddb367a1b", "x-unfetter-control-assessment--8beb0856-fec1-4822-b42a-4f7ed30de3ef", "x-unfetter-control-assessment--cc1adf87-dcd2-4a68-bf8d-48b7d49c112e", "x-unfetter-control-assessment--c4a7ed44-a466-4102-b6e9-62513f0e9c31", "x-unfetter-control-assessment--225cda4a-6928-4b78-bea5-065e2e0341b3", "x-unfetter-control-assessment--48b44f5c-1caf-403b-bffa-b02dfd247857", "x-unfetter-control-assessment--e942fa96-cf1f-43f8-99eb-51640027aa6b", "x-unfetter-control-assessment--4319469e-e626-4c1f-b845-d36e82d4b312", "x-unfetter-control-assessment--0b02f960-5773-4d93-b9ce-451427f39357", "x-unfetter-control-assessment--2959ee99-2439-4b97-8f31-4cd39bec254a", "x-unfetter-control-assessment--624013de-b813-4ac4-8598-b28278959bdc", "x-unfetter-control-assessment--ed8026bd-86fb-4b3c-8fc4-598d82b33338", "x-unfetter-control-assessment--14f63ba7-3860-4a1b-9a6e-07a5a1b6a4f2", "x-unfetter-control-assessment--d672a6d5-3bd2-47a8-9ba4-f760ddf4ee15", "x-unfetter-control-assessment--0a7770cd-f907-492a-9da4-71035db5ce35", "x-unfetter-control-assessment--d51974e5-5936-4f9f-a851-d6f908086174", "x-unfetter-control-assessment--8fb2e2e5-12d0-4df7-9d61-79ef3249ea20", "x-unfetter-control-assessment--1d67af26-6ce5-4c20-92f4-f9ccf91c9b54", "x-unfetter-control-assessment--a356a25a-1cd3-4999-84e3-c7d1ea4a7363", "x-unfetter-control-assessment--6118673f-25d9-4159-a04d-b510a2e9425a", "x-unfetter-control-assessment--3661a12c-3f65-46c7-a393-5424d2d48040", "x-unfetter-control-assessment--9ef093e3-101b-4dea-bf03-30a3bddc6c1c", "x-unfetter-control-assessment--3c2699a7-798f-49bf-aab8-8d0ffb67e4ac", "x-unfetter-control-assessment--10c3aa85-d0c0-4dbf-95d4-444d9a597123", "x-unfetter-control-assessment--004dd776-1fc2-4379-901e-d02607604c7a", "x-unfetter-control-assessment--b1b06b66-48d2-4c02-b9ad-f3cc2038da1c", "x-unfetter-control-assessment--25b34b6a-769c-4942-88db-b644ef64c779", "x-unfetter-control-assessment--bc10fab0-636b-41ab-a49d-20465c9677e0", "x-unfetter-control-assessment--3351b3c6-3f37-4461-b4a0-480d4953b7c0", "x-unfetter-control-assessment--2571b0df-6162-4389-8963-1412b859a84a", "x-unfetter-control-assessment--274243df-fe94-4d6d-8e15-877683b244e3", "x-unfetter-control-assessment--e131a7f8-bd09-4682-8c0c-3f2882a6879c", "x-unfetter-control-assessment--ac5d29cf-e77c-48ad-ae83-4380abc1ec7e", "x-unfetter-control-assessment--f0c1f939-bde6-40d1-b089-42d6845c7ec9", "x-unfetter-control-assessment--4d8d8771-055d-4f16-9680-c9adb367bd15", "x-unfetter-control-assessment--2db94868-85b6-48d8-aa5c-aa13785c7e04", "x-unfetter-control-assessment--23bc68bd-bb21-488c-915e-25fa4a175e82", "x-unfetter-control-assessment--1b7bb462-096a-42fd-9932-dd98dfc0eda3"],
 		"type": "report",
 		"id": "report--1f1c3140-0482-4deb-9f64-27b8f0b02179"
 	}, {
@@ -23161,9 +24699,9 @@
 		"version": 1,
 		"labels": ["assessment"],
 		"name": "Assessment Report - Indicator",
-		"description": null,
+		"description": "",
 		"published": "2017-05-04T18:22:11.888Z",
-		"object_refs": ["x-unfetter-control-assessment--f17b7d2d-481b-4b67-89b6-2c671597af67", "x-unfetter-control-assessment--22433b5c-c98c-4c5c-9afb-f704f0cb9fe2", "x-unfetter-control-assessment--e639281f-9e8a-4b1f-9340-a8110804b5dd", "x-unfetter-control-assessment--95da2dee-8c77-45e7-b61c-fed940f0b9e3", "x-unfetter-control-assessment--1d7ffebb-44fa-4a4d-9d53-303137f71788", "x-unfetter-control-assessment--560203fb-ec1c-41ea-927d-911eaf717351", "x-unfetter-control-assessment--7279e8fa-0385-4a48-937d-7175458c7a9a", "x-unfetter-control-assessment--309f9d52-06dd-4a5a-b59f-dbace13f93b8", "x-unfetter-control-assessment--2111c2e5-1f7b-44b5-8ae8-6668fa4992ab", "x-unfetter-control-assessment--01a74cb4-8f19-4672-a3e0-9d6be438c913", "x-unfetter-control-assessment--87dfa434-bf93-4a8d-bb73-dec9671a6175", "x-unfetter-control-assessment--6eccb001-b2d6-442e-b404-853bdf6e8b91", "x-unfetter-control-assessment--1994b0fd-2ec2-42b8-8ca5-153c965b58a6", "x-unfetter-control-assessment--d4770694-2d34-4835-87ad-055a18f9993b", "x-unfetter-control-assessment--1b611099-c938-4fc8-bd95-65ef5b00c6a6", "x-unfetter-control-assessment--fa6f360a-8225-4b1d-ac51-1bab71d6fb26", "x-unfetter-control-assessment--7ab5547e-49e8-4250-a5fa-8efc7340444b", "x-unfetter-control-assessment--138c4f76-a113-4fb4-8ad6-c658f28e602c", "x-unfetter-control-assessment--aa497265-e285-41bf-8cb1-86040bb1a68d", "x-unfetter-control-assessment--93c76474-8116-427f-b76f-5211d8c1af70", "x-unfetter-control-assessment--b26e62e1-f815-49f5-991f-b7538fe3ba5a", "x-unfetter-control-assessment--2ae35787-c1f6-467a-b2f2-77775f5cdb39", "x-unfetter-control-assessment--b120b08c-887d-4e95-8d0b-310223dfbf11", "x-unfetter-control-assessment--d0a6019b-e9e8-45da-9ba5-d5ef36d63263", "x-unfetter-control-assessment--7dc9de20-b8c2-4e50-b4d2-e85bc248538a", "x-unfetter-control-assessment--0d221876-de83-4f3b-94ac-9ed69963aa28", "x-unfetter-control-assessment--9f8f16fa-3199-4b0c-a258-98e7b4bc1b81", "x-unfetter-control-assessment--1a01c876-9157-443a-8be7-f8c79a95b082", "x-unfetter-control-assessment--c3f7b897-2674-4eff-af3a-591caac8c0c8", "x-unfetter-control-assessment--cf55b549-6db2-4035-b033-7e517169da00", "x-unfetter-control-assessment--cbd1768b-4647-49ac-8534-7228e5fc19a0", "x-unfetter-control-assessment--c575adc8-9537-4a58-aa30-17947ccd979c", "x-unfetter-control-assessment--b3d80c6d-9722-4cda-b07d-e5e059e501eb", "x-unfetter-control-assessment--fee6c663-db80-478e-b6e9-25a8473fbba7", "x-unfetter-control-assessment--662de206-29f5-4d6c-9ebc-1fc6f27b75c0", "x-unfetter-control-assessment--5e86df2e-7432-4c86-bfd4-79350ad4f34e", "x-unfetter-control-assessment--b495c7fe-b691-4bc6-9f2a-c11af8642565", "x-unfetter-control-assessment--4feb536c-d894-48b1-9971-c63fb219b30f", "x-unfetter-control-assessment--9d7de172-ea1c-4e89-9360-0fbd392403f7", "x-unfetter-control-assessment--0de66a83-caf5-4066-b487-fdc4ee9acaeb", "x-unfetter-control-assessment--5df266bd-a638-40cc-be34-a32aeb019308", "x-unfetter-control-assessment--f02ccf56-a63c-4f2b-be2c-00fe72854f20", "x-unfetter-control-assessment--948c71c1-7213-444e-a2af-317605af277e", "x-unfetter-control-assessment--e913b348-0110-4c32-bf4c-654004de956a", "x-unfetter-control-assessment--36b506ff-51ca-4025-bbf7-d0ee22ef3490", "x-unfetter-control-assessment--b3e4992c-fa9b-47bb-83de-4d96782bce96", "x-unfetter-control-assessment--bf1d6c60-4287-4118-908d-4506b66ae1ad", "x-unfetter-control-assessment--6d74fb05-0815-4425-8b42-333a07402a40", "x-unfetter-control-assessment--43271f54-3d23-4ef5-a090-bdb458046e72", "x-unfetter-control-assessment--c6fa2e43-9d62-4296-87a4-bfb8ab9c81d5", "x-unfetter-control-assessment--5fce8976-377f-4fea-a83d-93072a604ae6", "x-unfetter-control-assessment--3099289f-5d0e-4bc8-8045-f9290b005cd4", "x-unfetter-control-assessment--3ecbe853-b937-44ce-9fc9-c3dd6f23850c", "x-unfetter-control-assessment--4ba32afc-4409-4526-aa6b-d221a475a02a", "x-unfetter-control-assessment--02b02fa6-40c9-47ab-879b-9d659256c9de", "x-unfetter-control-assessment--e8cc9d34-4a51-4d8e-8960-4df38d6e46aa", "x-unfetter-control-assessment--7035540e-ada7-41fa-be6d-f2c57849a50f", "x-unfetter-control-assessment--52921aa6-76e3-45db-9833-af72dccedb47", "x-unfetter-control-assessment--1fb9087a-96bf-4c81-83fe-73bab17a5aba", "x-unfetter-control-assessment--e317ef55-3cf2-4202-baf5-5dcea5b63157", "x-unfetter-control-assessment--0f8b877f-510b-4c3a-b9c0-2b40f56b731d", "x-unfetter-control-assessment--c0923e10-225c-4cb1-836d-9386eca5d38a", "x-unfetter-control-assessment--1bd2de36-1aa4-4881-b274-9d78c3539c61", "x-unfetter-control-assessment--087301d7-dd56-41d7-b5c9-12e2142613c7", "x-unfetter-control-assessment--82d2ba46-0f25-4718-a5cc-e1dc19fcae5f", "x-unfetter-control-assessment--3d16115b-71fe-4fa9-a730-bf070706638d", "x-unfetter-control-assessment--a3a08e4d-ef5d-4079-9671-eecf9bbd7011", "x-unfetter-control-assessment--7848ca93-45ae-4277-aa01-6ec2c9d38584", "x-unfetter-control-assessment--3bc66d9d-82ea-4ffe-8df4-3c0a0ea12fae", "x-unfetter-control-assessment--d746a7d6-6dec-4ac1-8bcb-0b9cbfbfca8c", "x-unfetter-control-assessment--2dfc34ea-49b2-4192-889b-dd4c0469c18a", "x-unfetter-control-assessment--8ec66035-97cf-4ed9-9011-65c7b799fe19", "x-unfetter-control-assessment--94aa3f75-2f05-4673-b5ca-68f00a529f12", "x-unfetter-control-assessment--810e0b7d-6066-46ef-916d-3072dd0e8171", "x-unfetter-control-assessment--57076afd-4c20-4461-93ca-5925241862e9", "x-unfetter-control-assessment--336f60ad-64b0-42b6-b1b8-47bde1faff87", "x-unfetter-control-assessment--9be2737d-4f89-4f81-82a6-a87a6cd0bdb9", "x-unfetter-control-assessment--0e6e32d0-3283-410b-804a-27d598f2b773", "x-unfetter-control-assessment--f70e48fe-6569-4d86-a71e-9bc42a79c9c0", "x-unfetter-control-assessment--c3636584-f5ca-4dfe-9f44-936fb06a4430", "x-unfetter-control-assessment--ce04eac6-16ed-4031-b2dd-004e7fe1b78f", "x-unfetter-control-assessment--3315818c-bab3-4131-b805-a34c3e2c12ff", "x-unfetter-control-assessment--c5aa6c4d-832e-48d5-8f4c-7f88c71ae683", "x-unfetter-control-assessment--bf586365-265e-4d66-920a-e821f9570c1e", "x-unfetter-control-assessment--ad0b2f05-a4c5-4cdb-bc81-c0c934c32496", "x-unfetter-control-assessment--5bd23571-35d4-4478-8fb7-5a979a163b7e", "x-unfetter-control-assessment--c8a56405-aded-44b8-948d-2fbd24efd55d", "x-unfetter-control-assessment--ad4ec306-209f-4f45-9607-d7b0bcdc4155", "x-unfetter-control-assessment--a8ee808a-7df2-4bc1-ac0d-55ef9b8005c0", "x-unfetter-control-assessment--f8ae0a34-33d3-420f-96cd-7f4939b9a736", "x-unfetter-control-assessment--60c3aed1-d2e1-468d-81cc-f9e794e14088", "x-unfetter-control-assessment--9d103eb8-0c24-40a7-ba23-84d7e7ac66e7", "x-unfetter-control-assessment--16f0851f-eea7-467a-9fb2-432e7c6b5fe8", "x-unfetter-control-assessment--fa8b785c-4f1c-4c10-b1d2-9093f5a74e62", "x-unfetter-control-assessment--eb698f96-14dd-42d5-9bad-f22db547dfb4", "x-unfetter-control-assessment--04835e64-48ae-44b4-937a-25791fb88745", "x-unfetter-control-assessment--50ea26e8-b8b6-4b82-b20c-ae368379030f", "x-unfetter-control-assessment--d9215649-790e-4796-b100-b3b5abfc171a", "x-unfetter-control-assessment--2366b4ec-6c1f-44e1-9f62-ad01ec243560", "x-unfetter-control-assessment--b4656c5a-e91e-4239-994f-862801529727", "x-unfetter-control-assessment--0990ccf9-c875-4b91-9c52-13cfe6ef4d53", "x-unfetter-control-assessment--d977cd5c-9f00-4805-a2d5-d414d1c6f9b6", "x-unfetter-control-assessment--86e5326c-6378-49c9-9131-b9d4189971bc", "x-unfetter-control-assessment--da84f203-f93d-437f-802e-680fcb47b6b2", "x-unfetter-control-assessment--abe30c47-33f9-4809-b88a-dfdf490a910d"],
+		"object_refs": ["x-unfetter-control-assessment--f17b7d2d-481b-4b67-89b6-2c671597af67", "x-unfetter-control-assessment--22433b5c-c98c-4c5c-9afb-f704f0cb9fe2", "x-unfetter-control-assessment--e639281f-9e8a-4b1f-9340-a8110804b5dd", "x-unfetter-control-assessment--95da2dee-8c77-45e7-b61c-fed940f0b9e3", "x-unfetter-control-assessment--1d7ffebb-44fa-4a4d-9d53-303137f71788", "x-unfetter-control-assessment--560203fb-ec1c-41ea-927d-911eaf717351", "x-unfetter-control-assessment--7279e8fa-0385-4a48-937d-7175458c7a9a", "x-unfetter-control-assessment--309f9d52-06dd-4a5a-b59f-dbace13f93b8", "x-unfetter-control-assessment--2111c2e5-1f7b-44b5-8ae8-6668fa4992ab", "x-unfetter-control-assessment--01a74cb4-8f19-4672-a3e0-9d6be438c913", "x-unfetter-control-assessment--87dfa434-bf93-4a8d-bb73-dec9671a6175", "x-unfetter-control-assessment--6eccb001-b2d6-442e-b404-853bdf6e8b91", "x-unfetter-control-assessment--1994b0fd-2ec2-42b8-8ca5-153c965b58a6", "x-unfetter-control-assessment--d4770694-2d34-4835-87ad-055a18f9993b", "x-unfetter-control-assessment--1b611099-c938-4fc8-bd95-65ef5b00c6a6", "x-unfetter-control-assessment--fa6f360a-8225-4b1d-ac51-1bab71d6fb26", "x-unfetter-control-assessment--7ab5547e-49e8-4250-a5fa-8efc7340444b", "x-unfetter-control-assessment--138c4f76-a113-4fb4-8ad6-c658f28e602c", "x-unfetter-control-assessment--aa497265-e285-41bf-8cb1-86040bb1a68d", "x-unfetter-control-assessment--93c76474-8116-427f-b76f-5211d8c1af70", "x-unfetter-control-assessment--b26e62e1-f815-49f5-991f-b7538fe3ba5a", "x-unfetter-control-assessment--2ae35787-c1f6-467a-b2f2-77775f5cdb39", "x-unfetter-control-assessment--b120b08c-887d-4e95-8d0b-310223dfbf11", "x-unfetter-control-assessment--d0a6019b-e9e8-45da-9ba5-d5ef36d63263", "x-unfetter-control-assessment--7dc9de20-b8c2-4e50-b4d2-e85bc248538a", "x-unfetter-control-assessment--0d221876-de83-4f3b-94ac-9ed69963aa28", "x-unfetter-control-assessment--9f8f16fa-3199-4b0c-a258-98e7b4bc1b81", "x-unfetter-control-assessment--1a01c876-9157-443a-8be7-f8c79a95b082", "x-unfetter-control-assessment--c3f7b897-2674-4eff-af3a-591caac8c0c8", "x-unfetter-control-assessment--cf55b549-6db2-4035-b033-7e517169da00", "x-unfetter-control-assessment--cbd1768b-4647-49ac-8534-7228e5fc19a0", "x-unfetter-control-assessment--c575adc8-9537-4a58-aa30-17947ccd979c", "x-unfetter-control-assessment--b3d80c6d-9722-4cda-b07d-e5e059e501eb", "x-unfetter-control-assessment--fee6c663-db80-478e-b6e9-25a8473fbba7", "x-unfetter-control-assessment--662de206-29f5-4d6c-9ebc-1fc6f27b75c0", "x-unfetter-control-assessment--5e86df2e-7432-4c86-bfd4-79350ad4f34e", "x-unfetter-control-assessment--b495c7fe-b691-4bc6-9f2a-c11af8642565", "x-unfetter-control-assessment--4feb536c-d894-48b1-9971-c63fb219b30f", "x-unfetter-control-assessment--9d7de172-ea1c-4e89-9360-0fbd392403f7", "x-unfetter-control-assessment--0de66a83-caf5-4066-b487-fdc4ee9acaeb", "x-unfetter-control-assessment--5df266bd-a638-40cc-be34-a32aeb019308", "x-unfetter-control-assessment--f02ccf56-a63c-4f2b-be2c-00fe72854f20", "x-unfetter-control-assessment--948c71c1-7213-444e-a2af-317605af277e", "x-unfetter-control-assessment--e913b348-0110-4c32-bf4c-654004de956a", "x-unfetter-control-assessment--36b506ff-51ca-4025-bbf7-d0ee22ef3490", "x-unfetter-control-assessment--b3e4992c-fa9b-47bb-83de-4d96782bce96", "x-unfetter-control-assessment--bf1d6c60-4287-4118-908d-4506b66ae1ad", "x-unfetter-control-assessment--6d74fb05-0815-4425-8b42-333a07402a40", "x-unfetter-control-assessment--43271f54-3d23-4ef5-a090-bdb458046e72", "x-unfetter-control-assessment--c6fa2e43-9d62-4296-87a4-bfb8ab9c81d5", "x-unfetter-control-assessment--5fce8976-377f-4fea-a83d-93072a604ae6", "x-unfetter-control-assessment--3099289f-5d0e-4bc8-8045-f9290b005cd4", "x-unfetter-control-assessment--3ecbe853-b937-44ce-9fc9-c3dd6f23850c", "x-unfetter-control-assessment--4ba32afc-4409-4526-aa6b-d221a475a02a", "x-unfetter-control-assessment--02b02fa6-40c9-47ab-879b-9d659256c9de", "x-unfetter-control-assessment--e8cc9d34-4a51-4d8e-8960-4df38d6e46aa", "x-unfetter-control-assessment--7035540e-ada7-41fa-be6d-f2c57849a50f", "x-unfetter-control-assessment--52921aa6-76e3-45db-9833-af72dccedb47", "x-unfetter-control-assessment--1fb9087a-96bf-4c81-83fe-73bab17a5aba", "x-unfetter-control-assessment--e317ef55-3cf2-4202-baf5-5dcea5b63157", "x-unfetter-control-assessment--0f8b877f-510b-4c3a-b9c0-2b40f56b731d", "x-unfetter-control-assessment--c0923e10-225c-4cb1-836d-9386eca5d38a", "x-unfetter-control-assessment--1bd2de36-1aa4-4881-b274-9d78c3539c61", "x-unfetter-control-assessment--087301d7-dd56-41d7-b5c9-12e2142613c7", "x-unfetter-control-assessment--82d2ba46-0f25-4718-a5cc-e1dc19fcae5f", "x-unfetter-control-assessment--3d16115b-71fe-4fa9-a730-bf070706638d", "x-unfetter-control-assessment--a3a08e4d-ef5d-4079-9671-eecf9bbd7011", "x-unfetter-control-assessment--7848ca93-45ae-4277-aa01-6ec2c9d38584", "x-unfetter-control-assessment--3bc66d9d-82ea-4ffe-8df4-3c0a0ea12fae", "x-unfetter-control-assessment--d746a7d6-6dec-4ac1-8bcb-0b9cbfbfca8c", "x-unfetter-control-assessment--2dfc34ea-49b2-4192-889b-dd4c0469c18a", "x-unfetter-control-assessment--8ec66035-97cf-4ed9-9011-65c7b799fe19", "x-unfetter-control-assessment--94aa3f75-2f05-4673-b5ca-68f00a529f12", "x-unfetter-control-assessment--810e0b7d-6066-46ef-916d-3072dd0e8171", "x-unfetter-control-assessment--57076afd-4c20-4461-93ca-5925241862e9", "x-unfetter-control-assessment--336f60ad-64b0-42b6-b1b8-47bde1faff87", "x-unfetter-control-assessment--9be2737d-4f89-4f81-82a6-a87a6cd0bdb9", "x-unfetter-control-assessment--0e6e32d0-3283-410b-804a-27d598f2b773", "x-unfetter-control-assessment--f70e48fe-6569-4d86-a71e-9bc42a79c9c0", "x-unfetter-control-assessment--c3636584-f5ca-4dfe-9f44-936fb06a4430", "x-unfetter-control-assessment--ce04eac6-16ed-4031-b2dd-004e7fe1b78f", "x-unfetter-control-assessment--3315818c-bab3-4131-b805-a34c3e2c12ff", "x-unfetter-control-assessment--c5aa6c4d-832e-48d5-8f4c-7f88c71ae683", "x-unfetter-control-assessment--bf586365-265e-4d66-920a-e821f9570c1e", "x-unfetter-control-assessment--ad0b2f05-a4c5-4cdb-bc81-c0c934c32496", "x-unfetter-control-assessment--5bd23571-35d4-4478-8fb7-5a979a163b7e", "x-unfetter-control-assessment--c8a56405-aded-44b8-948d-2fbd24efd55d", "x-unfetter-control-assessment--ad4ec306-209f-4f45-9607-d7b0bcdc4155", "x-unfetter-control-assessment--a8ee808a-7df2-4bc1-ac0d-55ef9b8005c0", "x-unfetter-control-assessment--f8ae0a34-33d3-420f-96cd-7f4939b9a736", "x-unfetter-control-assessment--60c3aed1-d2e1-468d-81cc-f9e794e14088", "x-unfetter-control-assessment--9d103eb8-0c24-40a7-ba23-84d7e7ac66e7", "x-unfetter-control-assessment--16f0851f-eea7-467a-9fb2-432e7c6b5fe8", "x-unfetter-control-assessment--fa8b785c-4f1c-4c10-b1d2-9093f5a74e62", "x-unfetter-control-assessment--eb698f96-14dd-42d5-9bad-f22db547dfb4", "x-unfetter-control-assessment--04835e64-48ae-44b4-937a-25791fb88745", "x-unfetter-control-assessment--50ea26e8-b8b6-4b82-b20c-ae368379030f", "x-unfetter-control-assessment--d9215649-790e-4796-b100-b3b5abfc171a", "x-unfetter-control-assessment--2366b4ec-6c1f-44e1-9f62-ad01ec243560", "x-unfetter-control-assessment--b4656c5a-e91e-4239-994f-862801529727", "x-unfetter-control-assessment--0990ccf9-c875-4b91-9c52-13cfe6ef4d53", "x-unfetter-control-assessment--d977cd5c-9f00-4805-a2d5-d414d1c6f9b6", "x-unfetter-control-assessment--86e5326c-6378-49c9-9131-b9d4189971bc", "x-unfetter-control-assessment--da84f203-f93d-437f-802e-680fcb47b6b2", "x-unfetter-control-assessment--abe30c47-33f9-4809-b88a-dfdf490a910d", "x-unfetter-control-assessment--92f482c6-3ae1-477d-be27-de1540440861", "x-unfetter-control-assessment--46b132e9-e490-4150-847f-c24ed62a1abd", "x-unfetter-control-assessment--3751c92b-7cc7-468a-9ba4-85d65c54b7fe", "x-unfetter-control-assessment--9cdb36ef-c9ed-426f-88d9-c2323c8b3a29", "x-unfetter-control-assessment--8501d070-dd89-42b7-a1b8-fcec4af6bfac", "x-unfetter-control-assessment--90da3a0d-ec70-4085-a27c-007b18f2848c", "x-unfetter-control-assessment--f2dca9ca-43f3-46ee-bb1e-a53b19b878ae", "x-unfetter-control-assessment--729d0e1f-ce9a-4b7d-8f84-cf8cc3818f5c", "x-unfetter-control-assessment--a9c72170-e108-48c7-8929-c2a23491f27e", "x-unfetter-control-assessment--d765d0ab-27f9-459c-98b5-94da6b2bfa84", "x-unfetter-control-assessment--e1f85122-1c36-4d2b-b5a2-0f029d9beac1", "x-unfetter-control-assessment--543fc9a5-b6b4-4018-8739-c0e646aad728", "x-unfetter-control-assessment--7135fe50-95fc-4f57-8e48-edc48a8a892f", "x-unfetter-control-assessment--258dd0f1-cba2-4c62-a89a-ea6fc1a76017", "x-unfetter-control-assessment--378fe3aa-fd6e-48c4-85f5-6c5d7e132619", "x-unfetter-control-assessment--aad1b8af-742d-4cbd-ab3f-294c826f6f5d", "x-unfetter-control-assessment--1a0c7657-e2b9-409e-8c77-56639725ca42", "x-unfetter-control-assessment--5e8560e3-860e-4f33-ace3-c2cf1abfa761", "x-unfetter-control-assessment--7f4e8917-3f73-4270-aaa5-55082b8fdb46", "x-unfetter-control-assessment--9ed40194-ec79-4617-8989-b132e02dc140", "x-unfetter-control-assessment--4bce9352-1d1a-4e0a-aa8b-8927b6e0935c", "x-unfetter-control-assessment--b61b23ad-8854-44e0-91b1-ad3267d8ff87", "x-unfetter-control-assessment--07b85a7c-a5b9-4f10-933a-be0fa0d6a62a", "x-unfetter-control-assessment--6eeb8054-baf1-4f89-aa28-bf447a87b293", "x-unfetter-control-assessment--efd89ca8-aaf6-4995-8de8-d7655d5ad61c", "x-unfetter-control-assessment--1267ce1a-6667-46d1-8910-74cd4998e147", "x-unfetter-control-assessment--4894bfe7-dac8-4b20-acdd-47bf64ec1cbd", "x-unfetter-control-assessment--1cccb264-bdcb-49fd-93b1-249b1872a406", "x-unfetter-control-assessment--87cacb5e-2f91-47ed-a980-c4cd7c4257c8", "x-unfetter-control-assessment--23b47022-a0a8-4cb2-8834-bcbacff1273f", "x-unfetter-control-assessment--50f855df-0854-4c63-97b8-f0f168bd8e02", "x-unfetter-control-assessment--43de098b-e696-4fb4-a35e-6b2232a0c0f7", "x-unfetter-control-assessment--de8426c1-389e-4aab-a46d-ae4cb5951c86", "x-unfetter-control-assessment--1d90707f-c6c6-4d00-9a63-69ea6768a79e", "x-unfetter-control-assessment--b74fd33e-d129-48f3-b1e6-dfee3c5d5f96", "x-unfetter-control-assessment--8b29d222-87f6-459a-b9b0-06288f97bf32", "x-unfetter-control-assessment--f36a7df9-f2c2-49e2-b5a9-205f0f386e8e", "x-unfetter-control-assessment--bee853a2-1631-40fc-8a8d-64612c548440", "x-unfetter-control-assessment--ae1dad96-925d-4b15-b1ba-88aafe72029e", "x-unfetter-control-assessment--d418297b-57dd-49e5-a078-b0536b0c3ab2"],
 		"type": "report",
 		"id": "report--3fe84631-953c-40f3-94e2-f6f4378ac5be"
 	}, {
@@ -23176,13 +24714,7 @@
 		"published": "2017-06-05T12:29:52.577Z",
 		"object_refs": ["x-unfetter-control-assessment--ccc77da1-ec09-4eac-9044-e59ebdff7eac", "x-unfetter-control-assessment--db216f54-c16c-48a7-9531-1f734a18e261", "x-unfetter-control-assessment--4888932e-7806-4b04-af83-c4e92e0e899b", "x-unfetter-control-assessment--9854c7c1-d895-4391-b4d7-acf157f5fdf4"],
 		"id": "report--63309d53-709f-484a-b522-1a3566ec4076"
-	}]
-}, {
-	"type": "bundle",
-	"id": "stix-archive-bundle-14",
-	"spec_version": "2.0",
-	"x_unfetter_resource_path": "x-unfetter-control-assessments",
-	"objects": [{
+	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
 		"version": "1",
@@ -23359,105 +24891,169 @@
 	}, {
 		"created": "2017-05-04T18:23:51.240Z",
 		"modified": "2017-05-04T18:23:51.240Z",
-		"version": "1",
+		"version": 1,
 		"course_of_action_id": "course-of-action--dfa439cd-7466-496c-90e9-498313f4fab5",
-		"group_coa_id": null,
+		"group_coa_id": "",
 		"risk": 1,
 		"measurements": [{
 			"name": "policy",
 			"risk": 1,
 			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "No Policy",
-				"risk": 1
+				"risk": "1"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Informal Policy",
-				"risk": 0.75
+				"risk": "0.75"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Partial Written Policy",
-				"risk": 0.5
+				"risk": "0.5"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Written Policy",
-				"risk": 0.25
+				"risk": "0.25"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Approved Written Policy",
-				"risk": 0
+				"risk": "0"
 			}],
 			"selected_option": 0,
+			"id": null,
 			"selected_value": {
 				"name": "No Policy",
-				"risk": 1
+				"risk": "1"
 			}
 		}, {
 			"name": "implementation",
 			"risk": 1,
 			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Not Implemented",
-				"risk": 1
+				"risk": "1"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Parts of Policy Implemented",
-				"risk": 0.75
+				"risk": "0.75"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Implemented on Some Systems",
-				"risk": 0.5
+				"risk": "0.5"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Implemented on Most Systems",
-				"risk": 0.25
+				"risk": "0.25"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Implemented on All Systems",
-				"risk": 0
+				"risk": "0"
 			}],
 			"selected_option": 0,
+			"id": null,
 			"selected_value": {
 				"name": "Not Implemented",
-				"risk": 1
+				"risk": "1"
 			}
 		}, {
 			"name": "automation",
 			"risk": 1,
 			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Not Automated",
-				"risk": 1
+				"risk": "1"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Parts of Policy Automated",
-				"risk": 0.75
+				"risk": "0.75"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Automated on Some Systems",
-				"risk": 0.5
+				"risk": "0.5"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Automated on Most Systems",
-				"risk": 0.25
+				"risk": "0.25"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Automated on All Systems",
-				"risk": 0
+				"risk": "0"
 			}],
 			"selected_option": 0,
+			"id": null,
 			"selected_value": {
 				"name": "Not Automated",
-				"risk": 1
+				"risk": "1"
 			}
 		}, {
 			"name": "reporting",
 			"risk": 1,
 			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Not Reported",
-				"risk": 1
+				"risk": "1"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Parts of Policy Reported",
-				"risk": 0.75
+				"risk": "0.75"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Reported on Some Systems",
-				"risk": 0.5
+				"risk": "0.5"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Reported on Most Systems",
-				"risk": 0.25
+				"risk": "0.25"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Reported on All Systems",
-				"risk": 0
+				"risk": "0"
 			}],
 			"selected_option": 0,
+			"id": null,
 			"selected_value": {
 				"name": "Not Reported",
-				"risk": 1
+				"risk": "1"
 			}
 		}],
 		"type": "x-unfetter-control-assessment",
@@ -23602,6 +25198,46 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--04835e64-48ae-44b4-937a-25791fb88745"
+	}, {
+		"created": "2017-06-09T16:08:13.110Z",
+		"modified": "2017-06-09T16:08:13.110Z",
+		"version": 1,
+		"course_of_action_id": "indicator--4dbdfc38-a91d-4cd4-a051-ac27965803ce",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--07b85a7c-a5b9-4f10-933a-be0fa0d6a62a"
+	}, {
+		"created": "2017-06-07T02:46:07.918Z",
+		"modified": "2017-06-07T02:46:07.918Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--0807e74f-d4d4-4e86-8a75-3798330ca22d"
 	}, {
 		"created": "2017-05-04T18:22:12.055Z",
 		"modified": "2017-05-04T18:22:12.055Z",
@@ -24125,6 +25761,38 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--10c3aa85-d0c0-4dbf-95d4-444d9a597123"
 	}, {
+		"created": "2017-06-09T16:22:36.297Z",
+		"modified": "2017-06-09T16:22:36.297Z",
+		"version": 1,
+		"course_of_action_id": "indicator--cc4bf783-c6bd-4f12-a453-571d67af3cfc",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--1267ce1a-6667-46d1-8910-74cd4998e147"
+	}, {
 		"created": "2017-05-04T18:22:12.051Z",
 		"modified": "2017-05-04T18:22:12.051Z",
 		"version": "1",
@@ -24265,6 +25933,38 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--14f63ba7-3860-4a1b-9a6e-07a5a1b6a4f2"
 	}, {
+		"created": "2017-06-07T18:45:19.213Z",
+		"modified": "2017-06-07T18:45:19.213Z",
+		"version": 1,
+		"course_of_action_id": "indicator--853de109-2812-4da9-8f0b-41a263d819cf",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--16d81af5-1b52-4476-a9b3-8a2fa39d43c2"
+	}, {
 		"created": "2017-05-04T18:22:12.056Z",
 		"modified": "2017-05-04T18:22:12.056Z",
 		"version": "1",
@@ -24367,6 +26067,38 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--1a01c876-9157-443a-8be7-f8c79a95b082"
 	}, {
+		"created": "2017-06-09T15:16:07.762Z",
+		"modified": "2017-06-09T15:16:07.762Z",
+		"version": 1,
+		"course_of_action_id": "indicator--d009b35d-eddd-4a7a-a57b-95c5882dacf9",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--1a0c7657-e2b9-409e-8c77-56639725ca42"
+	}, {
 		"created": "2017-05-04T18:22:12.051Z",
 		"modified": "2017-05-04T18:22:12.051Z",
 		"version": "1",
@@ -24401,11 +26133,93 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--1b611099-c938-4fc8-bd95-65ef5b00c6a6"
 	}, {
+		"created": "2017-06-09T18:11:20.965Z",
+		"modified": "2017-06-09T18:11:20.965Z",
+		"version": 1,
+		"course_of_action_id": "indicator--3aa6c242-4c2f-4095-9950-1c4a13629a5b",
+		"group_coa_id": "",
+		"risk": 0.5,
+		"measurements": [{
+			"name": "policy",
+			"risk": 0.5,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}
+		}],
+		"id": "x-unfetter-control-assessment--1b7bb462-096a-42fd-9932-dd98dfc0eda3"
+	}, {
 		"created": "2017-05-04T18:22:12.055Z",
 		"modified": "2017-05-04T18:22:12.055Z",
-		"version": "1",
+		"version": 1,
 		"course_of_action_id": "indicator--1791d3bc-678d-4ec4-9e07-019be611bb1d",
-		"group_coa_id": null,
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Nothing",
+				"risk": "1"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Local Logging",
+				"risk": "0.75"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Central Logging, No Alerting",
+				"risk": "0.5"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Alerting, but false positives/negatives",
+				"risk": "0.25"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": "0"
+			}],
+			"selected_option": 0,
+			"id": null,
+			"selected_value": {
+				"name": "Nothing",
+				"risk": "1"
+			}
+		}],
+		"type": "x-unfetter-control-assessment",
+		"id": "x-unfetter-control-assessment--1bd2de36-1aa4-4881-b274-9d78c3539c61"
+	}, {
+		"created": "2017-06-09T16:47:37.594Z",
+		"modified": "2017-06-09T16:47:37.594Z",
+		"version": 1,
+		"course_of_action_id": "indicator--8d8162d9-62a1-4fba-954d-46624ecee5d2",
+		"group_coa_id": "",
 		"risk": 1,
 		"measurements": [{
 			"name": "policy",
@@ -24426,14 +26240,12 @@
 				"name": "Real Time Alerting, No False Positives/Negatives",
 				"risk": 0
 			}],
-			"selected_option": 0,
 			"selected_value": {
 				"name": "Nothing",
 				"risk": 1
 			}
 		}],
-		"type": "x-unfetter-control-assessment",
-		"id": "x-unfetter-control-assessment--1bd2de36-1aa4-4881-b274-9d78c3539c61"
+		"id": "x-unfetter-control-assessment--1cccb264-bdcb-49fd-93b1-249b1872a406"
 	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
@@ -24574,6 +26386,38 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--1d7ffebb-44fa-4a4d-9d53-303137f71788"
+	}, {
+		"created": "2017-06-09T17:26:45.741Z",
+		"modified": "2017-06-09T17:26:45.741Z",
+		"version": 1,
+		"course_of_action_id": "indicator--351e5380-1cc8-4782-8fca-3535cd66a55f",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--1d90707f-c6c6-4d00-9a63-69ea6768a79e"
 	}, {
 		"created": "2017-05-04T18:23:51.239Z",
 		"modified": "2017-05-04T18:23:51.239Z",
@@ -25029,6 +26873,38 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--2366b4ec-6c1f-44e1-9f62-ad01ec243560"
 	}, {
+		"created": "2017-06-09T17:21:20.079Z",
+		"modified": "2017-06-09T17:21:20.079Z",
+		"version": 1,
+		"course_of_action_id": "indicator--a6eec9eb-6eb9-4ade-b9d6-fbc53e8a43a4",
+		"group_coa_id": "",
+		"risk": 0.5,
+		"measurements": [{
+			"name": "policy",
+			"risk": 0.5,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}
+		}],
+		"id": "x-unfetter-control-assessment--23b47022-a0a8-4cb2-8834-bcbacff1273f"
+	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
 		"version": "1",
@@ -25240,6 +27116,14 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--2571b0df-6162-4389-8963-1412b859a84a"
+	}, {
+		"created": "2017-06-07T16:28:37.585Z",
+		"modified": "2017-06-07T16:28:37.585Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--258dd0f1-cba2-4c62-a89a-ea6fc1a76017"
 	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
@@ -25699,6 +27583,14 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--2ae35787-c1f6-467a-b2f2-77775f5cdb39"
 	}, {
+		"created": "2017-06-07T02:50:10.664Z",
+		"modified": "2017-06-07T02:50:10.664Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--2b57f7de-ab5d-4be3-b371-b7037cb218f2"
+	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
 		"version": "1",
@@ -25807,33 +27699,49 @@
 	}, {
 		"created": "2017-05-04T18:22:12.055Z",
 		"modified": "2017-05-04T18:22:12.055Z",
-		"version": "1",
+		"version": 1,
 		"course_of_action_id": "indicator--7fa8057e-f943-4c22-8e66-4ba1b862afb1",
-		"group_coa_id": null,
-		"risk": 1,
+		"group_coa_id": "",
+		"risk": 0.25,
 		"measurements": [{
 			"name": "policy",
-			"risk": 1,
+			"risk": 0.25,
 			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Nothing",
-				"risk": 1
+				"risk": "1"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Local Logging",
-				"risk": 0.75
+				"risk": "0.75"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Central Logging, No Alerting",
-				"risk": 0.5
+				"risk": "0.5"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Alerting, but false positives/negatives",
-				"risk": 0.25
+				"risk": "0.25"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Real Time Alerting, No False Positives/Negatives",
-				"risk": 0
+				"risk": "0"
 			}],
 			"selected_option": 0,
+			"id": null,
 			"selected_value": {
-				"name": "Nothing",
-				"risk": 1
+				"name": "Alerting, but false positives/negatives",
+				"risk": "0.25"
 			}
 		}],
 		"type": "x-unfetter-control-assessment",
@@ -26433,6 +28341,14 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--36b506ff-51ca-4025-bbf7-d0ee22ef3490"
 	}, {
+		"created": "2017-06-07T15:06:51.596Z",
+		"modified": "2017-06-07T15:06:51.596Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--3751c92b-7cc7-468a-9ba4-85d65c54b7fe"
+	}, {
 		"created": "2017-05-04T18:23:51.240Z",
 		"modified": "2017-05-04T18:23:51.240Z",
 		"version": "1",
@@ -26538,6 +28454,38 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--375bdc9b-18b9-4a9d-81a8-227ddb367a1b"
+	}, {
+		"created": "2017-06-07T18:15:32.490Z",
+		"modified": "2017-06-07T18:15:32.490Z",
+		"version": 1,
+		"course_of_action_id": "indicator--26ed0809-3cd1-4425-8a66-51b235003ea2",
+		"group_coa_id": "",
+		"risk": 0.5,
+		"measurements": [{
+			"name": "policy",
+			"risk": 0.5,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}
+		}],
+		"id": "x-unfetter-control-assessment--378fe3aa-fd6e-48c4-85f5-6c5d7e132619"
 	}, {
 		"created": "2017-05-04T18:22:12.055Z",
 		"modified": "2017-05-04T18:22:12.055Z",
@@ -26712,6 +28660,14 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--3d16115b-71fe-4fa9-a730-bf070706638d"
+	}, {
+		"created": "2017-06-07T15:37:05.313Z",
+		"modified": "2017-06-07T15:37:05.313Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--3d35e85e-3659-4eb2-ac01-c0e36d27c1e2"
 	}, {
 		"created": "2017-05-04T18:22:12.054Z",
 		"modified": "2017-05-04T18:22:12.054Z",
@@ -27099,37 +29055,129 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--43271f54-3d23-4ef5-a090-bdb458046e72"
 	}, {
+		"created": "2017-06-09T17:21:39.244Z",
+		"modified": "2017-06-09T17:21:39.244Z",
+		"version": 1,
+		"course_of_action_id": "indicator--cbcb5bac-2686-41c2-bc2e-7e76fc672166",
+		"group_coa_id": "",
+		"risk": 0.5,
+		"measurements": [{
+			"name": "policy",
+			"risk": 0.5,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}
+		}],
+		"id": "x-unfetter-control-assessment--43de098b-e696-4fb4-a35e-6b2232a0c0f7"
+	}, {
+		"created": "2017-06-07T15:03:28.147Z",
+		"modified": "2017-06-07T15:03:28.147Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--46b132e9-e490-4150-847f-c24ed62a1abd"
+	}, {
 		"created": "2017-06-05T12:29:52.602Z",
 		"modified": "2017-06-05T12:29:52.602Z",
 		"version": 1,
 		"course_of_action_id": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
-		"group_coa_id": null,
+		"group_coa_id": "",
 		"risk": 0.25,
 		"measurements": [{
 			"name": "coverage",
 			"risk": 0.25,
 			"options": [{
+				"label": "",
+				"value": 0,
+				"id": "",
 				"name": "no coverage",
-				"risk": 1
+				"risk": "1"
 			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
 				"name": "some coverage",
-				"risk": 0.75
+				"risk": "0.75"
 			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
 				"name": "half coverage",
-				"risk": 0.5
+				"risk": "0.5"
 			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
 				"name": "most critical systems covered",
-				"risk": 0.25
+				"risk": "0.25"
 			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
 				"name": "all critical systems covered",
-				"risk": 0
+				"risk": "0"
 			}],
+			"selected_option": 0,
+			"id": "",
 			"selected_value": {
+				"label": "",
+				"value": "0",
+				"id": "",
 				"name": "most critical systems covered",
-				"risk": 0.25
+				"risk": "0.25"
 			}
 		}],
 		"id": "x-unfetter-control-assessment--4888932e-7806-4b04-af83-c4e92e0e899b"
+	}, {
+		"created": "2017-06-09T16:24:48.142Z",
+		"modified": "2017-06-09T16:24:48.142Z",
+		"version": 1,
+		"course_of_action_id": "indicator--f724c13e-e339-45a0-a4ad-d3ab5c2c3bad",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--4894bfe7-dac8-4b20-acdd-47bf64ec1cbd"
 	}, {
 		"created": "2017-05-04T18:23:51.240Z",
 		"modified": "2017-05-04T18:23:51.240Z",
@@ -27270,6 +29318,38 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--4ba32afc-4409-4526-aa6b-d221a475a02a"
+	}, {
+		"created": "2017-06-09T15:36:46.048Z",
+		"modified": "2017-06-09T15:36:46.048Z",
+		"version": 1,
+		"course_of_action_id": "indicator--16051868-e036-462f-9c89-5f875f343b9e",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--4bce9352-1d1a-4e0a-aa8b-8927b6e0935c"
 	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
@@ -27445,6 +29525,38 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--50ea26e8-b8b6-4b82-b20c-ae368379030f"
 	}, {
+		"created": "2017-06-09T17:21:30.061Z",
+		"modified": "2017-06-09T17:21:30.061Z",
+		"version": 1,
+		"course_of_action_id": "indicator--04b3bfdd-61de-4857-a18b-dac770e94009",
+		"group_coa_id": "",
+		"risk": 0.5,
+		"measurements": [{
+			"name": "policy",
+			"risk": 0.5,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}
+		}],
+		"id": "x-unfetter-control-assessment--50f855df-0854-4c63-97b8-f0f168bd8e02"
+	}, {
 		"created": "2017-05-04T18:22:12.055Z",
 		"modified": "2017-05-04T18:22:12.055Z",
 		"version": "1",
@@ -27478,6 +29590,14 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--52921aa6-76e3-45db-9833-af72dccedb47"
+	}, {
+		"created": "2017-06-07T16:22:38.090Z",
+		"modified": "2017-06-07T16:22:38.090Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--543fc9a5-b6b4-4018-8739-c0e646aad728"
 	}, {
 		"created": "2017-05-04T18:22:12.050Z",
 		"modified": "2017-05-04T18:22:12.050Z",
@@ -27721,6 +29841,38 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--5df266bd-a638-40cc-be34-a32aeb019308"
 	}, {
+		"created": "2017-06-09T15:25:51.934Z",
+		"modified": "2017-06-09T15:25:51.934Z",
+		"version": 1,
+		"course_of_action_id": "indicator--50ce9933-2560-4e82-ae4f-e5bf0ad7f3c2",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--5e8560e3-860e-4f33-ace3-c2cf1abfa761"
+	}, {
 		"created": "2017-05-04T18:22:12.053Z",
 		"modified": "2017-05-04T18:22:12.053Z",
 		"version": "1",
@@ -27895,6 +30047,14 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--5fce8976-377f-4fea-a83d-93072a604ae6"
 	}, {
+		"created": "2017-06-07T02:43:06.451Z",
+		"modified": "2017-06-07T02:43:06.451Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--601eaf64-3b86-48f7-aff4-1efc23f6d1a0"
+	}, {
 		"created": "2017-05-04T18:22:12.056Z",
 		"modified": "2017-05-04T18:22:12.056Z",
 		"version": "1",
@@ -27928,6 +30088,38 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--60c3aed1-d2e1-468d-81cc-f9e794e14088"
+	}, {
+		"created": "2017-06-09T17:28:50.186Z",
+		"modified": "2017-06-09T17:28:50.186Z",
+		"version": 1,
+		"course_of_action_id": "indicator--012dc50b-70fe-4380-a99f-2a3426be4d0d",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--611360e1-1033-42af-91e8-38276e8f6d94"
 	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
@@ -28243,6 +30435,38 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--6eccb001-b2d6-442e-b404-853bdf6e8b91"
 	}, {
+		"created": "2017-06-09T16:09:31.847Z",
+		"modified": "2017-06-09T16:09:31.847Z",
+		"version": 1,
+		"course_of_action_id": "indicator--09dba279-bc86-4fcd-8d5c-fd3d44051cd2",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--6eeb8054-baf1-4f89-aa28-bf447a87b293"
+	}, {
 		"created": "2017-05-04T18:22:12.055Z",
 		"modified": "2017-05-04T18:22:12.055Z",
 		"version": "1",
@@ -28277,6 +30501,14 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--7035540e-ada7-41fa-be6d-f2c57849a50f"
 	}, {
+		"created": "2017-06-07T16:25:17.038Z",
+		"modified": "2017-06-07T16:25:17.038Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--7135fe50-95fc-4f57-8e48-edc48a8a892f"
+	}, {
 		"created": "2017-05-04T18:22:12.050Z",
 		"modified": "2017-05-04T18:22:12.050Z",
 		"version": "1",
@@ -28310,6 +30542,22 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--7279e8fa-0385-4a48-937d-7175458c7a9a"
+	}, {
+		"created": "2017-06-07T16:04:03.218Z",
+		"modified": "2017-06-07T16:04:03.218Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--729d0e1f-ce9a-4b7d-8f84-cf8cc3818f5c"
+	}, {
+		"created": "2017-06-07T02:34:50.316Z",
+		"modified": "2017-06-07T02:34:50.317Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--7430582e-2332-4a07-8425-3cd9690375eb"
 	}, {
 		"created": "2017-05-04T18:22:12.055Z",
 		"modified": "2017-05-04T18:22:12.055Z",
@@ -28593,9 +30841,59 @@
 	}, {
 		"created": "2017-05-04T18:22:12.052Z",
 		"modified": "2017-05-04T18:22:12.052Z",
-		"version": "1",
+		"version": 1,
 		"course_of_action_id": "indicator--f04e6079-0439-47f1-8a3b-d16d459461a9",
-		"group_coa_id": null,
+		"group_coa_id": "",
+		"risk": 0.5,
+		"measurements": [{
+			"name": "policy",
+			"risk": 0.5,
+			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Nothing",
+				"risk": "1"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Local Logging",
+				"risk": "0.75"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Central Logging, No Alerting",
+				"risk": "0.5"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Alerting, but false positives/negatives",
+				"risk": "0.25"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": "0"
+			}],
+			"selected_option": 0,
+			"id": null,
+			"selected_value": {
+				"name": "Central Logging, No Alerting",
+				"risk": "0.5"
+			}
+		}],
+		"type": "x-unfetter-control-assessment",
+		"id": "x-unfetter-control-assessment--7dc9de20-b8c2-4e50-b4d2-e85bc248538a"
+	}, {
+		"created": "2017-06-09T15:28:25.453Z",
+		"modified": "2017-06-09T15:28:25.453Z",
+		"version": 1,
+		"course_of_action_id": "indicator--da7e29f5-b779-4a71-b402-ef181b8851b1",
+		"group_coa_id": "",
 		"risk": 1,
 		"measurements": [{
 			"name": "policy",
@@ -28616,14 +30914,12 @@
 				"name": "Real Time Alerting, No False Positives/Negatives",
 				"risk": 0
 			}],
-			"selected_option": 0,
 			"selected_value": {
 				"name": "Nothing",
 				"risk": 1
 			}
 		}],
-		"type": "x-unfetter-control-assessment",
-		"id": "x-unfetter-control-assessment--7dc9de20-b8c2-4e50-b4d2-e85bc248538a"
+		"id": "x-unfetter-control-assessment--7f4e8917-3f73-4270-aaa5-55082b8fdb46"
 	}, {
 		"created": "2017-05-04T18:22:12.055Z",
 		"modified": "2017-05-04T18:22:12.055Z",
@@ -28692,6 +30988,14 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--82d2ba46-0f25-4718-a5cc-e1dc19fcae5f"
+	}, {
+		"created": "2017-06-07T15:27:41.047Z",
+		"modified": "2017-06-07T15:27:41.047Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--8501d070-dd89-42b7-a1b8-fcec4af6bfac"
 	}, {
 		"created": "2017-05-04T18:23:51.239Z",
 		"modified": "2017-05-04T18:23:51.239Z",
@@ -28833,6 +31137,46 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--86e5326c-6378-49c9-9131-b9d4189971bc"
 	}, {
+		"created": "2017-06-07T03:02:58.851Z",
+		"modified": "2017-06-07T03:02:58.851Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--87567240-b640-4d98-86b2-68278b3a1a58"
+	}, {
+		"created": "2017-06-09T16:53:39.912Z",
+		"modified": "2017-06-09T16:53:39.912Z",
+		"version": 1,
+		"course_of_action_id": "indicator--607bfeee-4f45-42e0-9fa9-87879f032f7f",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--87cacb5e-2f91-47ed-a980-c4cd7c4257c8"
+	}, {
 		"created": "2017-05-04T18:22:12.050Z",
 		"modified": "2017-05-04T18:22:12.050Z",
 		"version": "1",
@@ -28866,6 +31210,38 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--87dfa434-bf93-4a8d-bb73-dec9671a6175"
+	}, {
+		"created": "2017-06-09T17:33:01.678Z",
+		"modified": "2017-06-09T17:33:01.678Z",
+		"version": 1,
+		"course_of_action_id": "indicator--00ba608e-88d5-4d28-8dd0-fe8726f0f359",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--8b29d222-87f6-459a-b9b0-06288f97bf32"
 	}, {
 		"created": "2017-05-04T18:23:51.239Z",
 		"modified": "2017-05-04T18:23:51.239Z",
@@ -29079,6 +31455,38 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--8beb0856-fec1-4822-b42a-4f7ed30de3ef"
 	}, {
+		"created": "2017-06-09T17:37:40.420Z",
+		"modified": "2017-06-09T17:37:40.420Z",
+		"version": 1,
+		"course_of_action_id": "indicator--516cc54d-3d7f-4bc5-ab10-54fb153fc3e0",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--8cdfcfea-83e1-470c-88d1-be5a257e0767"
+	}, {
 		"created": "2017-05-04T18:22:12.055Z",
 		"modified": "2017-05-04T18:22:12.055Z",
 		"version": "1",
@@ -29219,6 +31627,22 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--8fb2e2e5-12d0-4df7-9d61-79ef3249ea20"
 	}, {
+		"created": "2017-06-07T15:41:29.502Z",
+		"modified": "2017-06-07T15:41:29.502Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--90da3a0d-ec70-4085-a27c-007b18f2848c"
+	}, {
+		"created": "2017-06-07T03:14:01.639Z",
+		"modified": "2017-06-07T03:14:01.639Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--92f482c6-3ae1-477d-be27-de1540440861"
+	}, {
 		"created": "2017-05-04T18:22:12.051Z",
 		"modified": "2017-05-04T18:22:12.051Z",
 		"version": "1",
@@ -29354,6 +31778,46 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--95da2dee-8c77-45e7-b61c-fed940f0b9e3"
+	}, {
+		"created": "2017-06-07T18:45:35.313Z",
+		"modified": "2017-06-07T18:45:35.313Z",
+		"version": 1,
+		"course_of_action_id": "indicator--59b85327-e090-49f3-badf-7f97b8197f85",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--96d28071-5c27-4388-baea-77a805176791"
+	}, {
+		"created": "2017-06-07T03:02:43.790Z",
+		"modified": "2017-06-07T03:02:43.790Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--98483b97-7b05-44fa-a2c9-eb9c8593b9ba"
 	}, {
 		"created": "2017-06-05T12:29:52.602Z",
 		"modified": "2017-06-05T12:29:52.602Z",
@@ -29527,6 +31991,14 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--9be2737d-4f89-4f81-82a6-a87a6cd0bdb9"
 	}, {
+		"created": "2017-06-07T15:20:34.112Z",
+		"modified": "2017-06-07T15:20:34.112Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--9cdb36ef-c9ed-426f-88d9-c2323c8b3a29"
+	}, {
 		"created": "2017-05-04T18:22:12.056Z",
 		"modified": "2017-05-04T18:22:12.056Z",
 		"version": "1",
@@ -29594,6 +32066,38 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--9d7de172-ea1c-4e89-9360-0fbd392403f7"
+	}, {
+		"created": "2017-06-09T15:29:56.811Z",
+		"modified": "2017-06-09T15:29:56.811Z",
+		"version": 1,
+		"course_of_action_id": "indicator--99f3d5fb-8894-4db8-8d02-a0435935de25",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--9ed40194-ec79-4617-8989-b132e02dc140"
 	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
@@ -29909,6 +32413,14 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--a8ee808a-7df2-4bc1-ac0d-55ef9b8005c0"
 	}, {
+		"created": "2017-06-07T16:06:26.838Z",
+		"modified": "2017-06-07T16:06:26.838Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--a9c72170-e108-48c7-8929-c2a23491f27e"
+	}, {
 		"created": "2017-05-04T18:22:12.051Z",
 		"modified": "2017-05-04T18:22:12.051Z",
 		"version": "1",
@@ -29943,11 +32455,11 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--aa497265-e285-41bf-8cb1-86040bb1a68d"
 	}, {
-		"created": "2017-05-04T18:22:12.056Z",
-		"modified": "2017-05-04T18:22:12.056Z",
-		"version": "1",
-		"course_of_action_id": "indicator--f04e6079-0439-47f1-8a3b-d16d459461a9",
-		"group_coa_id": null,
+		"created": "2017-06-07T18:56:18.596Z",
+		"modified": "2017-06-07T18:56:18.596Z",
+		"version": 1,
+		"course_of_action_id": "indicator--49501634-32b3-48fa-b36b-7fe2a6c70a59",
+		"group_coa_id": "",
 		"risk": 1,
 		"measurements": [{
 			"name": "policy",
@@ -29968,10 +32480,58 @@
 				"name": "Real Time Alerting, No False Positives/Negatives",
 				"risk": 0
 			}],
-			"selected_option": 0,
 			"selected_value": {
 				"name": "Nothing",
 				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--aad1b8af-742d-4cbd-ab3f-294c826f6f5d"
+	}, {
+		"created": "2017-05-04T18:22:12.056Z",
+		"modified": "2017-05-04T18:22:12.056Z",
+		"version": 1,
+		"course_of_action_id": "indicator--f04e6079-0439-47f1-8a3b-d16d459461a9",
+		"group_coa_id": "",
+		"risk": 0.5,
+		"measurements": [{
+			"name": "policy",
+			"risk": 0.5,
+			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Nothing",
+				"risk": "1"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Local Logging",
+				"risk": "0.75"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Central Logging, No Alerting",
+				"risk": "0.5"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Alerting, but false positives/negatives",
+				"risk": "0.25"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": "0"
+			}],
+			"selected_option": 0,
+			"id": null,
+			"selected_value": {
+				"name": "Central Logging, No Alerting",
+				"risk": "0.5"
 			}
 		}],
 		"type": "x-unfetter-control-assessment",
@@ -30191,33 +32751,49 @@
 	}, {
 		"created": "2017-05-04T18:22:12.056Z",
 		"modified": "2017-05-04T18:22:12.056Z",
-		"version": "1",
+		"version": 1,
 		"course_of_action_id": "indicator--1791d3bc-678d-4ec4-9e07-019be611bb1d",
-		"group_coa_id": null,
-		"risk": 1,
+		"group_coa_id": "",
+		"risk": 0,
 		"measurements": [{
 			"name": "policy",
-			"risk": 1,
+			"risk": 0,
 			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Nothing",
-				"risk": 1
+				"risk": "1"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Local Logging",
-				"risk": 0.75
+				"risk": "0.75"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Central Logging, No Alerting",
-				"risk": 0.5
+				"risk": "0.5"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Alerting, but false positives/negatives",
-				"risk": 0.25
+				"risk": "0.25"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Real Time Alerting, No False Positives/Negatives",
-				"risk": 0
+				"risk": "0"
 			}],
 			"selected_option": 0,
+			"id": null,
 			"selected_value": {
-				"name": "Nothing",
-				"risk": 1
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": "0"
 			}
 		}],
 		"type": "x-unfetter-control-assessment",
@@ -30362,6 +32938,38 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--ae0798af-24c7-48df-bac8-5cbe3a69dc28"
+	}, {
+		"created": "2017-06-09T17:52:31.855Z",
+		"modified": "2017-06-09T17:52:31.855Z",
+		"version": 1,
+		"course_of_action_id": "indicator--d3737cb1-b519-4c77-82c5-dbc9140ad932",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--ae1dad96-925d-4b15-b1ba-88aafe72029e"
 	}, {
 		"created": "2017-05-04T18:22:12.051Z",
 		"modified": "2017-05-04T18:22:12.051Z",
@@ -30885,6 +33493,95 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--b495c7fe-b691-4bc6-9f2a-c11af8642565"
 	}, {
+		"created": "2017-06-07T02:42:03.923Z",
+		"modified": "2017-06-07T02:42:03.923Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--b5af5c40-0448-49f8-b4d1-609dce7fa77f"
+	}, {
+		"created": "2017-06-09T16:05:53.837Z",
+		"modified": "2017-06-09T16:05:53.837Z",
+		"version": 1,
+		"course_of_action_id": "indicator--14a85e55-d109-47eb-91a1-700254db3adc",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--b61b23ad-8854-44e0-91b1-ad3267d8ff87"
+	}, {
+		"created": "2017-06-09T17:28:05.834Z",
+		"modified": "2017-06-09T17:28:05.834Z",
+		"version": 1,
+		"course_of_action_id": "indicator--fc98458d-387d-47e7-a65f-7f0cbe698050",
+		"group_coa_id": "",
+		"risk": 0.25,
+		"measurements": [{
+			"name": "policy",
+			"risk": 0.25,
+			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Nothing",
+				"risk": "1"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Local Logging",
+				"risk": "0.75"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Central Logging, No Alerting",
+				"risk": "0.5"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Alerting, but false positives/negatives",
+				"risk": "0.25"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": "0"
+			}],
+			"selected_option": null,
+			"id": null,
+			"selected_value": {
+				"name": "Alerting, but false positives/negatives",
+				"risk": "0.25"
+			}
+		}],
+		"id": "x-unfetter-control-assessment--b74fd33e-d129-48f3-b1e6-dfee3c5d5f96"
+	}, {
 		"created": "2017-05-04T18:23:51.239Z",
 		"modified": "2017-05-04T18:23:51.239Z",
 		"version": "1",
@@ -31099,109 +33796,217 @@
 	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
-		"version": "1",
+		"version": 1,
 		"course_of_action_id": "course-of-action--7b35838e-abc6-4b14-adda-8109d1847ce4",
-		"group_coa_id": null,
+		"group_coa_id": "",
+		"risk": 0.75,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "No Policy",
+				"risk": "1"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Informal Policy",
+				"risk": "0.75"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Partial Written Policy",
+				"risk": "0.5"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Written Policy",
+				"risk": "0.25"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Approved Written Policy",
+				"risk": "0"
+			}],
+			"selected_option": 0,
+			"id": "",
+			"selected_value": {
+				"label": "",
+				"value": "0",
+				"id": "",
+				"name": "No Policy",
+				"risk": "1"
+			}
+		}, {
+			"name": "implementation",
+			"risk": 0.75,
+			"options": [{
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Not Implemented",
+				"risk": "1"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Parts of Policy Implemented",
+				"risk": "0.75"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Implemented on Some Systems",
+				"risk": "0.5"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Implemented on Most Systems",
+				"risk": "0.25"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Implemented on All Systems",
+				"risk": "0"
+			}],
+			"selected_option": 0,
+			"id": "",
+			"selected_value": {
+				"label": "",
+				"value": "0",
+				"id": "",
+				"name": "Parts of Policy Implemented",
+				"risk": "0.75"
+			}
+		}, {
+			"name": "automation",
+			"risk": 0.75,
+			"options": [{
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Not Automated",
+				"risk": "1"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Parts of Policy Automated",
+				"risk": "0.75"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Automated on Some Systems",
+				"risk": "0.5"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Automated on Most Systems",
+				"risk": "0.25"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Automated on All Systems",
+				"risk": "0"
+			}],
+			"selected_option": 0,
+			"id": "",
+			"selected_value": {
+				"label": "",
+				"value": "0",
+				"id": "",
+				"name": "Parts of Policy Automated",
+				"risk": "0.75"
+			}
+		}, {
+			"name": "reporting",
+			"risk": 0.5,
+			"options": [{
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Not Reported",
+				"risk": "1"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Parts of Policy Reported",
+				"risk": "0.75"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Reported on Some Systems",
+				"risk": "0.5"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Reported on Most Systems",
+				"risk": "0.25"
+			}, {
+				"label": "",
+				"value": 0,
+				"id": "",
+				"name": "Reported on All Systems",
+				"risk": "0"
+			}],
+			"selected_option": 0,
+			"id": "",
+			"selected_value": {
+				"label": "",
+				"value": "0",
+				"id": "",
+				"name": "Reported on Some Systems",
+				"risk": "0.5"
+			}
+		}],
+		"type": "x-unfetter-control-assessment",
+		"id": "x-unfetter-control-assessment--bc10fab0-636b-41ab-a49d-20465c9677e0"
+	}, {
+		"created": "2017-06-09T17:52:08.788Z",
+		"modified": "2017-06-09T17:52:08.788Z",
+		"version": 1,
+		"course_of_action_id": "indicator--b35c58a7-0ff8-4a74-90b1-ad25b6d205b3",
+		"group_coa_id": "",
 		"risk": 1,
 		"measurements": [{
 			"name": "policy",
 			"risk": 1,
 			"options": [{
-				"name": "No Policy",
+				"name": "Nothing",
 				"risk": 1
 			}, {
-				"name": "Informal Policy",
+				"name": "Local Logging",
 				"risk": 0.75
 			}, {
-				"name": "Partial Written Policy",
+				"name": "Central Logging, No Alerting",
 				"risk": 0.5
 			}, {
-				"name": "Written Policy",
+				"name": "Alerting, but false positives/negatives",
 				"risk": 0.25
 			}, {
-				"name": "Approved Written Policy",
+				"name": "Real Time Alerting, No False Positives/Negatives",
 				"risk": 0
 			}],
-			"selected_option": 0,
 			"selected_value": {
-				"name": "No Policy",
-				"risk": 1
-			}
-		}, {
-			"name": "implementation",
-			"risk": 1,
-			"options": [{
-				"name": "Not Implemented",
-				"risk": 1
-			}, {
-				"name": "Parts of Policy Implemented",
-				"risk": 0.75
-			}, {
-				"name": "Implemented on Some Systems",
-				"risk": 0.5
-			}, {
-				"name": "Implemented on Most Systems",
-				"risk": 0.25
-			}, {
-				"name": "Implemented on All Systems",
-				"risk": 0
-			}],
-			"selected_option": 0,
-			"selected_value": {
-				"name": "Not Implemented",
-				"risk": 1
-			}
-		}, {
-			"name": "automation",
-			"risk": 1,
-			"options": [{
-				"name": "Not Automated",
-				"risk": 1
-			}, {
-				"name": "Parts of Policy Automated",
-				"risk": 0.75
-			}, {
-				"name": "Automated on Some Systems",
-				"risk": 0.5
-			}, {
-				"name": "Automated on Most Systems",
-				"risk": 0.25
-			}, {
-				"name": "Automated on All Systems",
-				"risk": 0
-			}],
-			"selected_option": 0,
-			"selected_value": {
-				"name": "Not Automated",
-				"risk": 1
-			}
-		}, {
-			"name": "reporting",
-			"risk": 1,
-			"options": [{
-				"name": "Not Reported",
-				"risk": 1
-			}, {
-				"name": "Parts of Policy Reported",
-				"risk": 0.75
-			}, {
-				"name": "Reported on Some Systems",
-				"risk": 0.5
-			}, {
-				"name": "Reported on Most Systems",
-				"risk": 0.25
-			}, {
-				"name": "Reported on All Systems",
-				"risk": 0
-			}],
-			"selected_option": 0,
-			"selected_value": {
-				"name": "Not Reported",
+				"name": "Nothing",
 				"risk": 1
 			}
 		}],
-		"type": "x-unfetter-control-assessment",
-		"id": "x-unfetter-control-assessment--bc10fab0-636b-41ab-a49d-20465c9677e0"
+		"id": "x-unfetter-control-assessment--bee853a2-1631-40fc-8a8d-64612c548440"
 	}, {
 		"created": "2017-05-04T18:22:12.054Z",
 		"modified": "2017-05-04T18:22:12.054Z",
@@ -31995,6 +34800,38 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--d0a6019b-e9e8-45da-9ba5-d5ef36d63263"
 	}, {
+		"created": "2017-06-09T18:05:00.292Z",
+		"modified": "2017-06-09T18:05:00.292Z",
+		"version": 1,
+		"course_of_action_id": "indicator--5deee88f-6005-4b29-925f-fc70fdcaaddb",
+		"group_coa_id": "",
+		"risk": 0.25,
+		"measurements": [{
+			"name": "policy",
+			"risk": 0.25,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}
+		}],
+		"id": "x-unfetter-control-assessment--d418297b-57dd-49e5-a078-b0536b0c3ab2"
+	}, {
 		"created": "2017-05-04T18:22:12.051Z",
 		"modified": "2017-05-04T18:22:12.051Z",
 		"version": "1",
@@ -32381,6 +35218,14 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--d746a7d6-6dec-4ac1-8bcb-0b9cbfbfca8c"
 	}, {
+		"created": "2017-06-07T16:14:27.033Z",
+		"modified": "2017-06-07T16:14:27.033Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--d765d0ab-27f9-459c-98b5-94da6b2bfa84"
+	}, {
 		"created": "2017-05-04T18:22:12.056Z",
 		"modified": "2017-05-04T18:22:12.056Z",
 		"version": "1",
@@ -32621,6 +35466,46 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--dc04b86f-328e-478c-8d8a-5f65cd7f676c"
 	}, {
+		"created": "2017-06-07T02:37:11.789Z",
+		"modified": "2017-06-07T02:37:11.789Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--dcc86cd3-743f-4ad4-9d5b-2b86461d11ea"
+	}, {
+		"created": "2017-06-09T17:26:31.659Z",
+		"modified": "2017-06-09T17:26:31.659Z",
+		"version": 1,
+		"course_of_action_id": "indicator--9f9116da-d08d-4d2f-9bfc-6fcccad70a27",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--de8426c1-389e-4aab-a46d-ae4cb5951c86"
+	}, {
 		"created": "2017-05-04T18:23:51.241Z",
 		"modified": "2017-05-04T18:23:51.241Z",
 		"version": "1",
@@ -32727,35 +35612,59 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--e131a7f8-bd09-4682-8c0c-3f2882a6879c"
 	}, {
+		"created": "2017-06-07T16:18:49.862Z",
+		"modified": "2017-06-07T16:18:49.862Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--e1f85122-1c36-4d2b-b5a2-0f029d9beac1"
+	}, {
 		"created": "2017-05-04T18:22:12.055Z",
 		"modified": "2017-05-04T18:22:12.055Z",
-		"version": "1",
+		"version": 1,
 		"course_of_action_id": "indicator--f04e6079-0439-47f1-8a3b-d16d459461a9",
-		"group_coa_id": null,
-		"risk": 1,
+		"group_coa_id": "",
+		"risk": 0.5,
 		"measurements": [{
 			"name": "policy",
-			"risk": 1,
+			"risk": 0.5,
 			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Nothing",
-				"risk": 1
+				"risk": "1"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Local Logging",
-				"risk": 0.75
+				"risk": "0.75"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Central Logging, No Alerting",
-				"risk": 0.5
+				"risk": "0.5"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Alerting, but false positives/negatives",
-				"risk": 0.25
+				"risk": "0.25"
 			}, {
+				"label": null,
+				"value": null,
+				"id": null,
 				"name": "Real Time Alerting, No False Positives/Negatives",
-				"risk": 0
+				"risk": "0"
 			}],
 			"selected_option": 0,
+			"id": null,
 			"selected_value": {
-				"name": "Nothing",
-				"risk": 1
+				"name": "Central Logging, No Alerting",
+				"risk": "0.5"
 			}
 		}],
 		"type": "x-unfetter-control-assessment",
@@ -33109,6 +36018,38 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--ed8026bd-86fb-4b3c-8fc4-598d82b33338"
 	}, {
+		"created": "2017-06-09T16:22:05.756Z",
+		"modified": "2017-06-09T16:22:05.756Z",
+		"version": 1,
+		"course_of_action_id": "indicator--9ba1c015-53f9-4bff-96f1-6f91f0cd2b37",
+		"group_coa_id": "",
+		"risk": 1,
+		"measurements": [{
+			"name": "policy",
+			"risk": 1,
+			"options": [{
+				"name": "Nothing",
+				"risk": 1
+			}, {
+				"name": "Local Logging",
+				"risk": 0.75
+			}, {
+				"name": "Central Logging, No Alerting",
+				"risk": 0.5
+			}, {
+				"name": "Alerting, but false positives/negatives",
+				"risk": 0.25
+			}, {
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": 0
+			}],
+			"selected_value": {
+				"name": "Nothing",
+				"risk": 1
+			}
+		}],
+		"id": "x-unfetter-control-assessment--efd89ca8-aaf6-4995-8de8-d7655d5ad61c"
+	}, {
 		"created": "2017-05-04T18:22:12.054Z",
 		"modified": "2017-05-04T18:22:12.054Z",
 		"version": "1",
@@ -33283,6 +36224,14 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--f17b7d2d-481b-4b67-89b6-2c671597af67"
 	}, {
+		"created": "2017-06-07T16:02:25.454Z",
+		"modified": "2017-06-07T16:02:25.454Z",
+		"version": 1,
+		"course_of_action_id": null,
+		"group_coa_id": null,
+		"risk": null,
+		"id": "x-unfetter-control-assessment--f2dca9ca-43f3-46ee-bb1e-a53b19b878ae"
+	}, {
 		"created": "2017-05-04T18:23:51.240Z",
 		"modified": "2017-05-04T18:23:51.240Z",
 		"version": "1",
@@ -33388,6 +36337,55 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--f340518c-556a-4ad9-93f0-69e49aac57f9"
+	}, {
+		"created": "2017-06-09T17:46:16.841Z",
+		"modified": "2017-06-09T17:46:16.841Z",
+		"version": 1,
+		"course_of_action_id": "indicator--72af8d5f-6da4-4fc0-90d7-06b02d9f28b0",
+		"group_coa_id": "",
+		"risk": 0.5,
+		"measurements": [{
+			"name": "policy",
+			"risk": 0.5,
+			"options": [{
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Nothing",
+				"risk": "1"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Local Logging",
+				"risk": "0.75"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Central Logging, No Alerting",
+				"risk": "0.5"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Alerting, but false positives/negatives",
+				"risk": "0.25"
+			}, {
+				"label": null,
+				"value": null,
+				"id": null,
+				"name": "Real Time Alerting, No False Positives/Negatives",
+				"risk": "0"
+			}],
+			"selected_option": null,
+			"id": null,
+			"selected_value": {
+				"name": "Central Logging, No Alerting",
+				"risk": "0.5"
+			}
+		}],
+		"id": "x-unfetter-control-assessment--f36a7df9-f2c2-49e2-b5a9-205f0f386e8e"
 	}, {
 		"created": "2017-05-04T18:22:12.056Z",
 		"modified": "2017-05-04T18:22:12.056Z",
@@ -33665,4 +36663,4 @@
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--fee6c663-db80-478e-b6e9-25a8473fbba7"
 	}]
-}]
+}
