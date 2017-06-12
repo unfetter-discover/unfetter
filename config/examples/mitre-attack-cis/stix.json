@@ -3934,38 +3934,7 @@
 		"type": "course-of-action",
 		"id": "course-of-action--ff4d224a-bdab-4a4d-948b-51dfaa9837c8"
 	}, {
-		"created": "2017-06-09T17:32:55.817Z",
-		"modified": "2017-06-09T17:32:55.817Z",
-		"version": 1,
-		"labels": [],
-		"external_references": [],
-		"name": "ddd",
-		"description": "ddd",
-		"pattern": "dd",
-		"valid_from": null,
-		"valid_until": null,
-		"kill_chain_phases": [{
-			"kill_chain_name": "mitre-attack",
-			"phase_name": "persistence"
-		}],
-		"id": "indicator--00ba608e-88d5-4d28-8dd0-fe8726f0f359"
-	}, {
-		"created": "2017-06-09T17:28:45.185Z",
-		"modified": "2017-06-09T17:28:45.185Z",
-		"version": 1,
-		"labels": [],
-		"external_references": [],
-		"name": "ddd",
-		"description": "ddd",
-		"pattern": "ddd",
-		"valid_from": null,
-		"valid_until": null,
-		"kill_chain_phases": [{
-			"kill_chain_name": "mitre-attack",
-			"phase_name": "persistence"
-		}],
-		"id": "indicator--012dc50b-70fe-4380-a99f-2a3426be4d0d"
-	}, {
+
 		"created": "2016-09-21T13:14:10.901Z",
 		"modified": "2016-09-21T13:14:10.901Z",
 		"version": 0,
@@ -6185,35 +6154,6 @@
 		}],
 		"type": "indicator",
 		"id": "indicator--f953771a-06d7-4566-a2b6-51c79a5b7f3a"
-	}, {
-		"created": "2017-06-09T17:28:01.794Z",
-		"modified": "2017-06-09T17:28:01.794Z",
-		"version": 1,
-		"labels": [],
-		"external_references": [],
-		"name": "ccc",
-		"description": "ccc",
-		"pattern": "ccc",
-		"valid_from": null,
-		"valid_until": null,
-		"kill_chain_phases": [{
-			"kill_chain_name": "mitre-attack",
-			"phase_name": "persistence"
-		}],
-		"id": "indicator--fc98458d-387d-47e7-a65f-7f0cbe698050"
-	}, {
-		"created": "2017-06-07T03:02:43.790Z",
-		"modified": "2017-06-07T03:02:43.790Z",
-		"version": 1,
-		"labels": [],
-		"external_references": [],
-		"name": "aaa",
-		"description": "bbbb",
-		"pattern": "ccc",
-		"valid_from": null,
-		"valid_until": null,
-		"kill_chain_phases": [],
-		"id": "indicator--ff6cbd85-1b1a-4786-b495-f17df7606ed9"
 	}, {
 		"created": "2016-09-01T18:10:10.039Z",
 		"modified": "2016-09-01T18:10:10.039Z",
@@ -33799,10 +33739,9 @@
 		"version": 1,
 		"course_of_action_id": "course-of-action--7b35838e-abc6-4b14-adda-8109d1847ce4",
 		"group_coa_id": "",
-		"risk": 0.75,
 		"measurements": [{
 			"name": "policy",
-			"risk": 1,
+			"risk": 0.5,
 			"options": [{
 				"label": "",
 				"value": 0,
@@ -33840,12 +33779,12 @@
 				"label": "",
 				"value": "0",
 				"id": "",
-				"name": "No Policy",
-				"risk": "1"
+				"name": "Partial Written Policy",
+				"risk": "0.5"
 			}
 		}, {
 			"name": "implementation",
-			"risk": 0.75,
+			"risk": 0.25,
 			"options": [{
 				"label": "",
 				"value": 0,
@@ -33883,8 +33822,8 @@
 				"label": "",
 				"value": "0",
 				"id": "",
-				"name": "Parts of Policy Implemented",
-				"risk": "0.75"
+				"name": "Implemented on Most Systems",
+				"risk": "0.25"
 			}
 		}, {
 			"name": "automation",
@@ -33931,7 +33870,7 @@
 			}
 		}, {
 			"name": "reporting",
-			"risk": 0.5,
+			"risk": 0.25,
 			"options": [{
 				"label": "",
 				"value": 0,
