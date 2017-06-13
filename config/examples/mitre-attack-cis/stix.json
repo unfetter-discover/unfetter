@@ -25192,6 +25192,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--07b85a7c-a5b9-4f10-933a-be0fa0d6a62a"
 		}, {
 			"created": "2017-06-07T02:46:07.918Z",
@@ -25754,6 +25755,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--1267ce1a-6667-46d1-8910-74cd4998e147"
 		}, {
 			"created": "2017-05-04T18:22:12.051Z",
@@ -26060,6 +26062,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--1a0c7657-e2b9-409e-8c77-56639725ca42"
 		}, {
 			"created": "2017-05-04T18:22:12.051Z",
@@ -26126,6 +26129,7 @@
 					"risk": 0.5
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--1b7bb462-096a-42fd-9932-dd98dfc0eda3"
 		}, {
 			"created": "2017-05-04T18:22:12.055Z",
@@ -26380,6 +26384,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--1d90707f-c6c6-4d00-9a63-69ea6768a79e"
 		}, {
 			"created": "2017-05-04T18:23:51.239Z",
@@ -26866,6 +26871,7 @@
 					"risk": 0.5
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--23b47022-a0a8-4cb2-8834-bcbacff1273f"
 		}, {
 			"created": "2017-05-04T18:23:51.241Z",
@@ -27086,6 +27092,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--258dd0f1-cba2-4c62-a89a-ea6fc1a76017"
 		}, {
 			"created": "2017-05-04T18:23:51.241Z",
@@ -28310,6 +28317,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--3751c92b-7cc7-468a-9ba4-85d65c54b7fe"
 		}, {
 			"created": "2017-05-04T18:23:51.240Z",
@@ -28448,6 +28456,7 @@
 					"risk": 0.5
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--378fe3aa-fd6e-48c4-85f5-6c5d7e132619"
 		}, {
 			"created": "2017-05-04T18:22:12.055Z",
@@ -29048,6 +29057,7 @@
 					"risk": 0.5
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--43de098b-e696-4fb4-a35e-6b2232a0c0f7"
 		}, {
 			"created": "2017-06-07T15:03:28.147Z",
@@ -29056,6 +29066,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--46b132e9-e490-4150-847f-c24ed62a1abd"
 		}, {
 			"created": "2017-06-05T12:29:52.602Z",
@@ -29141,6 +29152,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--4894bfe7-dac8-4b20-acdd-47bf64ec1cbd"
 		}, {
 			"created": "2017-05-04T18:23:51.240Z",
@@ -29313,6 +29325,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--4bce9352-1d1a-4e0a-aa8b-8927b6e0935c"
 		}, {
 			"created": "2017-05-04T18:23:51.241Z",
@@ -29519,6 +29532,7 @@
 					"risk": 0.5
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--50f855df-0854-4c63-97b8-f0f168bd8e02"
 		}, {
 			"created": "2017-05-04T18:22:12.055Z",
@@ -29561,6 +29575,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--543fc9a5-b6b4-4018-8739-c0e646aad728"
 		}, {
 			"created": "2017-05-04T18:22:12.050Z",
@@ -29835,6 +29850,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--5e8560e3-860e-4f33-ace3-c2cf1abfa761"
 		}, {
 			"created": "2017-05-04T18:22:12.053Z",
@@ -30429,6 +30445,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--6eeb8054-baf1-4f89-aa28-bf447a87b293"
 		}, {
 			"created": "2017-05-04T18:22:12.055Z",
@@ -30471,6 +30488,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--7135fe50-95fc-4f57-8e48-edc48a8a892f"
 		}, {
 			"created": "2017-05-04T18:22:12.050Z",
@@ -30513,6 +30531,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--729d0e1f-ce9a-4b7d-8f84-cf8cc3818f5c"
 		}, {
 			"created": "2017-06-07T02:34:50.316Z",
@@ -30883,6 +30902,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--7f4e8917-3f73-4270-aaa5-55082b8fdb46"
 		}, {
 			"created": "2017-05-04T18:22:12.055Z",
@@ -30959,6 +30979,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--8501d070-dd89-42b7-a1b8-fcec4af6bfac"
 		}, {
 			"created": "2017-05-04T18:23:51.239Z",
@@ -31139,6 +31160,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--87cacb5e-2f91-47ed-a980-c4cd7c4257c8"
 		}, {
 			"created": "2017-05-04T18:22:12.050Z",
@@ -31205,6 +31227,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--8b29d222-87f6-459a-b9b0-06288f97bf32"
 		}, {
 			"created": "2017-05-04T18:23:51.239Z",
@@ -31597,6 +31620,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--90da3a0d-ec70-4085-a27c-007b18f2848c"
 		}, {
 			"created": "2017-06-07T03:14:01.639Z",
@@ -31605,6 +31629,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--92f482c6-3ae1-477d-be27-de1540440861"
 		}, {
 			"created": "2017-05-04T18:22:12.051Z",
@@ -31773,6 +31798,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--96d28071-5c27-4388-baea-77a805176791"
 		}, {
 			"created": "2017-06-07T03:02:43.790Z",
@@ -31781,6 +31807,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--98483b97-7b05-44fa-a2c9-eb9c8593b9ba"
 		}, {
 			"created": "2017-06-05T12:29:52.602Z",
@@ -31790,6 +31817,7 @@
 			"course_of_action_id": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 			"group_coa_id": null,
 			"risk": 0.5,
+
 			"measurements": [{
 				"name": "coverage",
 				"risk": 0.5,
@@ -31965,6 +31993,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--9cdb36ef-c9ed-426f-88d9-c2323c8b3a29"
 		}, {
 			"created": "2017-05-04T18:22:12.056Z",
@@ -32065,6 +32094,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--9ed40194-ec79-4617-8989-b132e02dc140"
 		}, {
 			"created": "2017-05-04T18:23:51.241Z",
@@ -32387,6 +32417,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--a9c72170-e108-48c7-8929-c2a23491f27e"
 		}, {
 			"created": "2017-05-04T18:22:12.051Z",
@@ -32453,6 +32484,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--aad1b8af-742d-4cbd-ab3f-294c826f6f5d"
 		}, {
 			"created": "2017-05-04T18:22:12.056Z",
@@ -32937,6 +32969,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--ae1dad96-925d-4b15-b1ba-88aafe72029e"
 		}, {
 			"created": "2017-05-04T18:22:12.051Z",
@@ -33467,6 +33500,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",
 			"id": "x-unfetter-control-assessment--b5af5c40-0448-49f8-b4d1-609dce7fa77f"
 		}, {
 			"created": "2017-06-09T16:05:53.837Z",
@@ -33499,6 +33533,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--b61b23ad-8854-44e0-91b1-ad3267d8ff87"
 		}, {
 			"created": "2017-06-09T17:28:05.834Z",
@@ -33548,6 +33583,7 @@
 					"risk": "0.25"
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--b74fd33e-d129-48f3-b1e6-dfee3c5d5f96"
 		}, {
 			"created": "2017-05-04T18:23:51.239Z",
@@ -33973,6 +34009,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--bee853a2-1631-40fc-8a8d-64612c548440"
 		}, {
 			"created": "2017-05-04T18:22:12.054Z",
@@ -34664,6 +34701,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--ccc77da1-ec09-4eac-9044-e59ebdff7eac"
 		}, {
 			"created": "2017-05-04T18:22:12.056Z",
@@ -34798,6 +34836,7 @@
 					"risk": 0.25
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--d418297b-57dd-49e5-a078-b0536b0c3ab2"
 		}, {
 			"created": "2017-05-04T18:22:12.051Z",
@@ -35192,6 +35231,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--d765d0ab-27f9-459c-98b5-94da6b2bfa84"
 		}, {
 			"created": "2017-05-04T18:22:12.056Z",
@@ -35441,6 +35481,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--dcc86cd3-743f-4ad4-9d5b-2b86461d11ea"
 		}, {
 			"created": "2017-06-09T17:26:31.659Z",
@@ -35473,6 +35514,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--de8426c1-389e-4aab-a46d-ae4cb5951c86"
 		}, {
 			"created": "2017-05-04T18:23:51.241Z",
@@ -35587,6 +35629,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--e1f85122-1c36-4d2b-b5a2-0f029d9beac1"
 		}, {
 			"created": "2017-05-04T18:22:12.055Z",
@@ -36017,6 +36060,7 @@
 					"risk": 1
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--efd89ca8-aaf6-4995-8de8-d7655d5ad61c"
 		}, {
 			"created": "2017-05-04T18:22:12.054Z",
@@ -36199,6 +36243,7 @@
 			"course_of_action_id": null,
 			"group_coa_id": null,
 			"risk": null,
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--f2dca9ca-43f3-46ee-bb1e-a53b19b878ae"
 		}, {
 			"created": "2017-05-04T18:23:51.240Z",
@@ -36354,6 +36399,7 @@
 					"risk": "0.5"
 				}
 			}],
+			"type": "x-unfetter-control-assessment",			
 			"id": "x-unfetter-control-assessment--f36a7df9-f2c2-49e2-b5a9-205f0f386e8e"
 		}, {
 			"created": "2017-05-04T18:22:12.056Z",
