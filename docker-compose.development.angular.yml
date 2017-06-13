@@ -1,0 +1,25 @@
+version: '2'
+services:  
+  unfetter-discover-gateway:
+    links:
+     - unfetter-ui
+     - unfetter-discover-api
+    volumes:
+     - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
+  unfetter-ui:
+    image: unfetter/unfetter-ui
+    build: ../unfetter-ui
+    container_name: unfetter-ui
+    depends_on:
+    - unfetter-discover-openssl
+    ports:
+    - "80:80"
+    volumes:
+    - ./certs/:/etc/pki/tls/certs
+    - ../unfetter-ui/src:/usr/share/unfetter-ui/src
+    - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
+    - ../unfetter-ui/config:/usr/share/unfetter-ui/config
+    entrypoint:
+    - npm
+    - run
+    - server:dev
