@@ -15,7 +15,7 @@ services:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-ui:
-    image: unfetter/unfetter-discover-ui
+    image: unfetter/unfetter-discover-ui:0.2.11
     container_name: unfetter-discover-ui
     ports:
      - "50000:50000"
@@ -55,7 +55,7 @@ services:
     volumes:
      - ./certs/:/tmp/certs
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor
+    image: unfetter/unfetter-discover-processor:0.2.11
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -80,7 +80,7 @@ services:
     links:
      - cti-stix-store-repository:repository
   cti-stix-store:
-    image: unfetter/cti-stix-store
+    image: unfetter/cti-stix-store:0.2.11
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
@@ -99,7 +99,7 @@ services:
     volumes:
     - ./data/db:/data/db
   cti-stix-ui:
-    image: unfetter/cti-stix-ui
+    image: unfetter/cti-stix-ui:0.2.11
     container_name: cti-stix-ui
     ports:
      - "40000:40000"
@@ -118,7 +118,7 @@ services:
      - -ssl-cert
      - /etc/pki/tls/certs/server.crt
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api
+    image: unfetter/unfetter-discover-api:0.2.11
     build: ../unfetter-discover-api
     container_name: unfetter-discover-api
     depends_on:
