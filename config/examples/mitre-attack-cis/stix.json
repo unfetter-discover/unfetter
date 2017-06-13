@@ -12147,7 +12147,7 @@
 		"modified": "2017-06-05T12:40:20.179Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
 		"target_ref": "attack-pattern--301d0279-3961-4be7-8745-8b7486a4b99f",
 		"id": "relationship--17826e70-4ae5-4275-94b1-6625d304c9b7"
 	}, {
@@ -13902,7 +13902,7 @@
 		"modified": "2017-06-05T12:40:03.615Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
 		"target_ref": "attack-pattern--da5b978a-15b5-4176-8c80-5229d0111e8f",
 		"id": "relationship--3aef9f7a-eb2a-4c42-8814-a8909028f6b5"
 	}, {
@@ -14727,7 +14727,7 @@
 		"modified": "2017-06-05T12:40:17.750Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"target_ref": "attack-pattern--301d0279-3961-4be7-8745-8b7486a4b99f",
 		"id": "relationship--4a168114-3047-4cf6-88d9-5ec82734fae3"
 	}, {
@@ -15521,7 +15521,7 @@
 		"modified": "2017-06-05T12:41:20.751Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
 		"target_ref": "attack-pattern--4c2fe815-0791-4ad3-8c41-25042ca83532",
 		"id": "relationship--599c26da-7f73-4d89-95a3-8aab48603a17"
 	}, {
@@ -17068,7 +17068,7 @@
 		"modified": "2017-06-05T12:38:47.354Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"target_ref": "attack-pattern--53b2162b-b448-472d-8bb9-0720d0891e41",
 		"id": "relationship--79a4540c-a871-497d-8b7c-72bcaf0f339f"
 	}, {
@@ -17465,7 +17465,7 @@
 		"modified": "2017-06-05T12:40:31.374Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"target_ref": "attack-pattern--a18a5edd-a9b3-4adf-8980-a6abc994e011",
 		"id": "relationship--810648be-3640-4957-80e7-87ebdc5ba3d6"
 	}, {
@@ -18243,7 +18243,7 @@
 		"modified": "2017-06-05T12:41:28.153Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
 		"target_ref": "attack-pattern--d688f0b4-71d7-4cae-846d-4e45e8cdf0cb",
 		"id": "relationship--90b0b2cf-8c0c-41f8-98ba-5b5a5d2cd171"
 	}, {
@@ -18411,7 +18411,7 @@
 		"modified": "2017-06-05T12:38:48.805Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"target_ref": "attack-pattern--5f4ec334-f93e-43c1-84c7-cd2be9306393",
 		"id": "relationship--9398bafd-f1df-4130-9316-38679875dbeb"
 	}, {
@@ -18782,7 +18782,7 @@
 		"modified": "2017-06-05T12:39:09.787Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"target_ref": "attack-pattern--9cfb9f9b-c846-4015-8a11-9c2112cf5379",
 		"id": "relationship--99f2b0ae-b74e-4aff-9de6-98e1268226a2"
 	}, {
@@ -18828,7 +18828,7 @@
 		"modified": "2017-06-05T12:41:27.388Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
 		"target_ref": "attack-pattern--b3ac34c7-d232-4ef1-85c8-f19caa1aa581",
 		"id": "relationship--9a523d02-dcbd-48bf-a60c-164f6a7c43c7"
 	}, {
@@ -20234,7 +20234,7 @@
 		"modified": "2017-06-05T12:39:18.225Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
 		"target_ref": "attack-pattern--a91d40c2-9e35-42ce-8ff0-ddda534b1034",
 		"id": "relationship--b7cdd3bd-f876-4ac2-8c16-4d8c8b28f477"
 	}, {
@@ -20407,7 +20407,7 @@
 		"modified": "2017-06-05T12:38:35.935Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"target_ref": "attack-pattern--301d0279-3961-4be7-8745-8b7486a4b99f",
 		"id": "relationship--ba99799f-cb8a-4568-b490-2ac41f0fd0cf"
 	}, {
@@ -20876,7 +20876,7 @@
 		"modified": "2017-06-05T12:38:10.510Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
 		"target_ref": "attack-pattern--39f60500-a027-4278-8923-59a0f7450ce6",
 		"id": "relationship--c52bff21-fa0a-4c2d-8454-9be26f0dbe50"
 	}, {
@@ -20913,7 +20913,7 @@
 		"modified": "2017-06-05T12:41:13.371Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
 		"target_ref": "attack-pattern--0d39a87b-9a7a-41d6-8cf0-b3ce68a2079f",
 		"id": "relationship--c5c0e401-9806-498e-8657-fb05daaf7128"
 	}, {
@@ -20940,7 +20940,7 @@
 		"modified": "2017-06-05T12:40:05.723Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
 		"target_ref": "attack-pattern--e0004835-95f0-4dae-8084-4fe760d910b7",
 		"id": "relationship--c6286447-dc9b-4655-8387-020d7b8c18f5"
 	}, {
@@ -21628,7 +21628,7 @@
 		"modified": "2017-06-05T12:40:47.439Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"target_ref": "attack-pattern--0541e9a2-fafa-4ada-8466-cb20f5b021ba",
 		"id": "relationship--d57fcf53-6b2e-4863-93ee-8135b3b69954"
 	}, {
@@ -21969,7 +21969,7 @@
 		"modified": "2017-06-05T12:38:06.922Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
 		"target_ref": "attack-pattern--05ffa602-61ad-44cb-8ecb-ce5a264fbc59",
 		"id": "relationship--dbfa5107-ef2b-4a4e-b752-a4e35603294d"
 	}, {
@@ -22247,7 +22247,7 @@
 		"modified": "2017-06-05T12:40:01.617Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
 		"target_ref": "attack-pattern--c3053154-bb0d-42af-8272-7517ea71ee92",
 		"id": "relationship--e364973f-5beb-4655-9d45-5e594308827c"
 	}, {
@@ -22626,7 +22626,7 @@
 		"modified": "2017-06-05T12:38:25.112Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
 		"target_ref": "attack-pattern--e57f210a-8c24-45c5-80b5-2c20f1dac2a6",
 		"id": "relationship--e9bb3b1e-6f49-4eb1-a437-816aa6e4adb5"
 	}, {
@@ -22779,7 +22779,7 @@
 		"modified": "2017-06-05T12:38:45.881Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"target_ref": "attack-pattern--4aaaeb3b-1a44-4ded-8dbb-737ba6c701cd",
 		"id": "relationship--ede32dd1-7096-4d57-8ada-31683be19b36"
 	}, {
@@ -23188,7 +23188,7 @@
 		"modified": "2017-06-05T12:39:03.629Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"target_ref": "attack-pattern--9b09a83f-9602-4a2f-832b-9d5c2417e1cf",
 		"id": "relationship--f60f56ae-dbed-451f-9faa-1550559453fa"
 	}, {
@@ -23775,7 +23775,7 @@
 		"modified": "2017-06-05T12:41:18.928Z",
 		"version": 1,
 		"relationship_type": "mitigates",
-		"source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
+		"type":"relationship", "source_ref": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
 		"target_ref": "attack-pattern--4bc7e752-733a-470d-8eac-a2eab704e156",
 		"id": "relationship--ff10ff77-0a5b-485b-b786-b517ddeaa509"
 	}, {
@@ -24651,6 +24651,7 @@
 		"labels": ["assessment"],
 		"name": "Assessment Report - Sensors",
 		"description": null,
+		"type": "report",		
 		"published": "2017-06-05T12:29:52.577Z",
 		"object_refs": ["x-unfetter-control-assessment--ccc77da1-ec09-4eac-9044-e59ebdff7eac", "x-unfetter-control-assessment--db216f54-c16c-48a7-9531-1f734a18e261", "x-unfetter-control-assessment--4888932e-7806-4b04-af83-c4e92e0e899b", "x-unfetter-control-assessment--9854c7c1-d895-4391-b4d7-acf157f5fdf4"],
 		"id": "report--63309d53-709f-484a-b522-1a3566ec4076"
@@ -29085,6 +29086,7 @@
 				"risk": "0.25"
 			}
 		}],
+		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--4888932e-7806-4b04-af83-c4e92e0e899b"
 	}, {
 		"created": "2017-06-09T16:24:48.142Z",
@@ -31762,6 +31764,7 @@
 		"created": "2017-06-05T12:29:52.602Z",
 		"modified": "2017-06-05T12:29:52.602Z",
 		"version": 1,
+		"type":"x-unfetter-control-assessment",
 		"course_of_action_id": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
 		"group_coa_id": null,
 		"risk": 0.5,
@@ -31789,11 +31792,13 @@
 				"risk": 0.5
 			}
 		}],
+		
 		"id": "x-unfetter-control-assessment--9854c7c1-d895-4391-b4d7-acf157f5fdf4"
 	}, {
 		"created": "2017-05-04T18:23:51.240Z",
 		"modified": "2017-05-04T18:23:51.240Z",
 		"version": "1",
+		"type":"x-unfetter-control-assessment",
 		"course_of_action_id": "course-of-action--861d772e-32c1-41c8-b5e6-badc1030f7fa",
 		"group_coa_id": null,
 		"risk": 1,
@@ -31894,12 +31899,13 @@
 				"risk": 1
 			}
 		}],
-		"type": "x-unfetter-control-assessment",
+
 		"id": "x-unfetter-control-assessment--99d40b93-5543-4cdf-ad7d-b88114a853f2"
 	}, {
 		"created": "2017-05-04T18:22:12.056Z",
 		"modified": "2017-05-04T18:22:12.056Z",
 		"version": "1",
+		
 		"course_of_action_id": "indicator--ab50dc6b-3389-4228-96ea-4f5543426785",
 		"group_coa_id": null,
 		"risk": 0.5,
@@ -34608,6 +34614,7 @@
 		"created": "2017-06-05T12:29:52.602Z",
 		"modified": "2017-06-05T12:29:52.602Z",
 		"version": 1,
+		"type": "x-unfetter-control-assessment",
 		"course_of_action_id": "x-unfetter-sensor--5f065dba-e67d-41cd-8c7d-ba6306b6b063",
 		"group_coa_id": null,
 		"risk": 1,
@@ -35270,6 +35277,7 @@
 		"created": "2017-06-05T12:29:52.602Z",
 		"modified": "2017-06-05T12:29:52.602Z",
 		"version": 1,
+		"type": "x-unfetter-control-assessment",
 		"course_of_action_id": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
 		"group_coa_id": null,
 		"risk": 0.5,
@@ -36601,5 +36609,151 @@
 		}],
 		"type": "x-unfetter-control-assessment",
 		"id": "x-unfetter-control-assessment--fee6c663-db80-478e-b6e9-25a8473fbba7"
-	}]
+	},
+	
+{
+            "modified": "2016-09-14T17:56:37.031Z",
+            "created": "2016-09-14T17:56:37.031Z",
+            "name": "sysmon",
+            "description": "System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time. By collecting the events it generates using Windows Event Collection or SIEM agents and subsequently analyzing them, you can identify malicious or anomalous activity and understand how intruders and malware operate on your network.",
+            "version": 0, 
+
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "sensors",
+                    "phase_name": "host"
+                }
+            ],
+            "external_references": [
+                {
+                    "source_name": "Windows Sysinternals",
+                    "external_id": "",
+                    "url": "https://technet.microsoft.com/en-us/sysinternals/sysmon"
+                }
+            ],
+            "labels": [
+                "information-gathering"
+            ],
+            "id": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+            "type": "x-unfetter-sensor"
+        },
+        {
+            "modified": "2016-09-14T17:56:37.034Z",
+            "created": "2016-09-14T17:56:37.034Z",
+            "name": "Standard EDR",
+            "description": "Generic endpoint detection and response tool.",
+            "version": 0,
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "sensors",
+                    "phase_name": "host"
+                }
+            ],
+            "aliases": [
+
+            ],
+            "granular_markings": [],
+            "external_references": [
+            ],
+            "labels": [
+                "information-gathering", "hunting"
+            ],
+            "id": "x-unfetter-sensor--1e340fde-4dd8-4fc7-a478-bd637304247b",
+            "type": "x-unfetter-sensor"
+        },
+        {
+            "modified": "2016-09-14T17:56:37.030Z",
+            "created": "2016-09-14T17:56:37.030Z",
+            "name": "Generic AV",
+            "description": "Generic anti virus software",
+            "version": 0,
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "sensors",
+                    "phase_name": "host"
+                }          
+
+            ],
+            "aliases": [
+            ],
+            "granular_markings": [],
+            "external_references": [
+            ],
+            "labels": [
+                "information-gathering", "antivirus"
+            ],
+            "id": "x-unfetter-sensor--8ed44d6a-687b-42f6-a46c-9d84c9c20e64",
+            "type": "x-unfetter-sensor"
+        },
+        {
+            "modified": "2016-09-14T17:56:37.032Z",
+            "created": "2016-09-14T17:56:37.032Z",
+            "name": "Enterprise SIEM",
+            "description": "Enterprise SIEM",
+            "version": 0,
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "sensors",
+                    "phase_name": "security event and incident management (seim)"
+                }
+            ],
+            "aliases": [
+                ""
+            ],
+            "granular_markings": [],
+            "external_references": [
+            ],
+            "labels": [
+                "information-gathering", "log-collection"
+            ],
+            "id": "x-unfetter-sensor--5f065dba-e67d-41cd-8c7d-ba6306b6b063",
+            "type": "x-unfetter-sensor"
+        },
+        {
+            "modified": "2016-09-14T17:56:37.033Z",
+            "created": "2016-09-14T17:56:37.033Z",
+            "name": "Network Firewall",
+            "description": "Network firewall device",
+            "version": 0,
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "sensors",
+                    "phase_name": "network"
+                }
+            ],
+            "aliases": [],
+            "granular_markings": [],
+            "external_references": [
+            ],
+            "labels": [
+                "information-gathering"
+            ],
+            "id": "x-unfetter-sensor--0214a0f5-b7e8-47d0-98fa-8be08ca1dcd3",
+            "type": "x-unfetter-sensor"
+        },
+        {
+            "modified": "2016-09-14T17:56:37.031Z",
+            "created": "2016-09-14T17:56:37.031Z",
+            "name": "Network Analysis",
+            "description": "Network monitoring and analysis device.",
+            "version": 0,
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "sensors",
+                    "phase_name": "network"
+                }
+            ],
+            "aliases": [
+            ],
+            "granular_markings": [],
+            "external_references": [
+            ],
+            "labels": [
+                "information-gathering"
+            ],
+            "id": "x-unfetter-sensor--7fdabb41-397c-4a0e-936f-f06f11f29175",
+            "type": "x-unfetter-sensor"
+        }	
+	
+	]
 }
