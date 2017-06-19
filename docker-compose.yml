@@ -56,7 +56,7 @@ services:
     volumes:
      - ./certs/:/tmp/certs
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor
+    image: unfetter/unfetter-discover-processor 
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -81,7 +81,7 @@ services:
     links:
      - cti-stix-store-repository:repository
   cti-stix-store:
-    image: unfetter/cti-stix-store
+    image: unfetter/cti-stix-store 
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
@@ -100,7 +100,7 @@ services:
     volumes:
     - ./data/db:/data/db
   cti-stix-ui:
-    image: unfetter/cti-stix-ui
+    image: unfetter/cti-stix-ui 
     container_name: cti-stix-ui
     ports:
      - "40000:40000"
@@ -141,11 +141,11 @@ services:
     - MONGO_REPOSITORY=repository
     - MONGO_PORT=27017
     - MONGO_DBNAME=stix
-    - ENV=dev
+    - ENV=prod
     entrypoint:
     - npm
     - run
-    - swagger-editor-docker
+    - swagger-editor
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api
     container_name: unfetter-discover-api
