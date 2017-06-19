@@ -120,7 +120,6 @@ services:
      - /etc/pki/tls/certs/server.crt
   unfetter-discover-api-explorer:
     image: unfetter/unfetter-discover-api
-    build: ../unfetter-discover-api
     container_name: unfetter-discover-api-explorer
     depends_on:
     - unfetter-discover-openssl
@@ -146,10 +145,9 @@ services:
     entrypoint:
     - npm
     - run
-    - swagger-editor
+    - swagger-editor-docker
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api
-    build: ../unfetter-discover-api
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl

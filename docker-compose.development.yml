@@ -9,10 +9,12 @@ services:
     volumes:
     - ../cti-stix-ui/app:/usr/share/cti-stix-ui/app
     - ../cti-stix-ui/tests:/usr/share/cti-stix-ui/tests
-
   unfetter-discover-processor:
     build: ../unfetter-discover-processor
-
+  unfetter-discover-api-explorer:
+    build: ../unfetter-discover-api
+  unfetter-discover-api:
+    build: ../unfetter-discover-api
   cti-stix-store:
     build: ../cti-stix-store
     volumes:
