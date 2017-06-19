@@ -119,7 +119,6 @@ services:
      - /etc/pki/tls/certs/server.crt
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api:0.2.11
-    build: ../unfetter-discover-api
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
