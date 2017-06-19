@@ -1,11 +1,6 @@
 version: '2'
 services:  
   unfetter-discover-gateway:
-    links:
-     - unfetter-discover-ui
-     - cti-stix-store
-     - unfetter-discover-api-explorer
-     - unfetter-discover-api
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
   unfetter-ui:
