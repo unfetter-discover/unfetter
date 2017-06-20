@@ -3,7 +3,6 @@ services:
   unfetter-discover-gateway:
     links:
      - unfetter-ui
-     - unfetter-discover-api
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
   unfetter-ui:
