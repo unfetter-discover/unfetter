@@ -5,6 +5,7 @@ services:
     container_name: unfetter-discover-gateway
     ports:
      - "443:443"
+     - "80:80"
     depends_on:
      - unfetter-discover-openssl
     links:
