@@ -11,8 +11,6 @@ services:
     container_name: unfetter-ui
     depends_on:
     - unfetter-discover-openssl
-    ports:
-    - "80:80"
     volumes:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-ui/src:/usr/share/unfetter-ui/src
