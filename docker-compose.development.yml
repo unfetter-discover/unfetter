@@ -13,8 +13,22 @@ services:
     build: ../unfetter-discover-processor
   unfetter-discover-api-explorer:
     build: ../unfetter-discover-api
+    volumes:
+    - ../unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
+    - ../unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
+    entrypoint:
+    - npm
+    - run
+    - swaggerdev
   unfetter-discover-api:
     build: ../unfetter-discover-api
+    entrypoint:
+    - npm
+    - run
+    - startdev
+    volumes:
+    - ../unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
+    - ../unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
   cti-stix-store:
     build: ../cti-stix-store
     volumes:

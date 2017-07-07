@@ -132,7 +132,6 @@ services:
      - cti-stix-store-repository:repository
     volumes:
     - ./certs/:/etc/pki/tls/certs
-    - ../unfetter-discover-api/api:/usr/share/unfetter-discover-api-explorer/api
     environment:
     - STIX_API_PROTOCOL=http
     - STIX_API_HOST=cti-stix-store
@@ -155,10 +154,9 @@ services:
     links:
      - cti-stix-store-repository:repository
     ports:
-    - "49160:3000"
+    - "49360:3000"
     volumes:
     - ./certs/:/etc/pki/tls/certs
-    - ../unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     environment:
     - STIX_API_PROTOCOL=http
     - STIX_API_HOST=cti-stix-store
