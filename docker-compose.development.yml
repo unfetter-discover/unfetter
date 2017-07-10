@@ -26,6 +26,8 @@ services:
     - npm
     - run
     - startdev
+    ports:
+    - "5858:5858"    
     volumes:
     - ../unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
