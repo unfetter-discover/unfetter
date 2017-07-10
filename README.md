@@ -25,7 +25,7 @@ is recommended for most cases.
 from source, then you will need to clone all the repos in [unfetter-discover](https://www.github.com/unfetter-discover)
 and use the `docker-compose.development.yml` config file.
 
-### Case 1: Build from Docker Hub.  Normal Use Case
+### Case 1: Either.....build from Docker Hub.  Normal Use Case
 
 You will only need to clone the unfetter project. Then, run docker-compose
 with default arguments. First, go into your working directory that you want
@@ -37,7 +37,7 @@ cd unfetter
 docker-compose up
 ```
 
-### Case 2: Build from local source files.  Developer Use Case
+### Case 2: OR.....build from local source files.  
 
 Create a directory to hold all the projects, 
 ```bash
