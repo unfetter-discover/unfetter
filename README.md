@@ -51,7 +51,7 @@ Next, you will need to clone all the projects in [unfetter-discover](https://www
  Next, change directories into the unfetter directory, which houses the docker-compose.yml files, and run docker-compose
  ```
  cd unfetter
- docker-compose -f docker-compose.yml -f docker-compose.development.yml up
+ docker-compose -f docker-compose.development.yml up
 ```
 
 ### The Web Application
