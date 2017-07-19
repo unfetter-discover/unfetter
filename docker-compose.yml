@@ -81,6 +81,8 @@ services:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
+    environment:
+    - INCLUDE_MITRE_GITHUB_DATA=false
   cti-stix-store:
     image: unfetter/cti-stix-store 
     container_name: cti-stix-store
