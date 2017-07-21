@@ -105,27 +105,6 @@ services:
     - "27018:27017"
     volumes:
     - ./data/db:/data/db
-  cti-stix-ui:
-    build: ../cti-stix-ui
-    container_name: cti-stix-ui
-    ports:
-     - "40000:40000"
-    depends_on:
-    - unfetter-discover-openssl
-    volumes:
-     - ./certs/:/etc/pki/tls/certs
-     - ../cti-stix-ui/app:/usr/share/cti-stix-ui/app
-     - ../cti-stix-ui/tests:/usr/share/cti-stix-ui/tests
-    entrypoint:
-     - ember
-     - server
-     - -live-reload-port
-     - "40000"
-     - -ssl
-     - -ssl-key
-     - /etc/pki/tls/certs/server.key
-     - -ssl-cert
-     - /etc/pki/tls/certs/server.crt
   unfetter-discover-api-explorer:
     build: ../unfetter-discover-api
     container_name: unfetter-discover-api-explorer
