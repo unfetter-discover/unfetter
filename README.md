@@ -46,7 +46,7 @@ cd unfetter-discover
 ```
 Next, you will need to clone all the projects in [unfetter-discover](https://www.github.com/unfetter-discover).  
 ```bash
- curl -s https://api.github.com/orgs/unfetter-discover/repos\?per_page\=200 | perl -ne 'print "$1\n" if (/"clone_url": "([^"]+)/)' | xargs -n 1 git clone
+ curl -s https://api.github.com/orgs/unfetter-discover/repos\?per_page\=200 | perl -ne 'print "$1\n" if (/"clone_url": "([^"]+)/)' | xargs -n 1 git clone -b develop
  ```
  Next, change directories into the unfetter directory, which houses the docker-compose.yml files, and run docker-compose
  ```
