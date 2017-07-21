@@ -60,9 +60,6 @@ After running the `docker-compose` command you can view the application at:
 
 https://localhost/unfetter-discover-ui/
 
-> Note: If you receive a 404 error from nginx, ensure you include the trailing slash
-> on the URL
-
 Unfetter-Discover will create certs and store them locally. You will need to
 accept the certificates to move forward.
 
