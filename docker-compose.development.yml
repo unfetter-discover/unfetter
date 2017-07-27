@@ -175,4 +175,4 @@ services:
     entrypoint:
     - npm
     - run
-    - server:dev
+    - server:dev:alt
