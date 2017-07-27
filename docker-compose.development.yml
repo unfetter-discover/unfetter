@@ -59,7 +59,7 @@ services:
     volumes:
      - ./certs/:/tmp/certs
   unfetter-discover-processor:
-    build: ../unfetter-discover-processor 
+    build: ../unfetter-discover-processor
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -86,7 +86,7 @@ services:
     environment:
     - INCLUDE_MITRE_GITHUB_DATA=true
   cti-stix-store:
-    build: ../cti-stix-store 
+    build: ../cti-stix-store
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
@@ -144,6 +144,7 @@ services:
      - cti-stix-store-repository:repository
     ports:
     - "49360:3000"
+    - "5555:5555"
     volumes:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
@@ -160,7 +161,7 @@ services:
     entrypoint:
     - npm
     - run
-    - startdev
+    - debugdev
   unfetter-ui:
     build: ../unfetter-ui
     container_name: unfetter-ui
@@ -175,5 +176,3 @@ services:
     - npm
     - run
     - server:dev:alt
-
-      
