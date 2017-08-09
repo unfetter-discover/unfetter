@@ -1,3 +1,5 @@
+# this is in place temporarily until our Angular code replaces the Ember UI 
+#   we will remove this when we make the switch over
 version: '2'
 services:
   unfetter-discover-gateway:
@@ -16,7 +18,7 @@ services:
      - unfetter-discover-api
      - unfetter-ui
     volumes:
-     - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.legacy:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-ui:
     build: ../unfetter-discover-ui
