@@ -136,7 +136,7 @@ services:
     - swaggerdev
   unfetter-discover-api:
     build: ../unfetter-discover-api
-    container_name: unfetter-discover-api
+    image: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
     - cti-stix-store-repository
@@ -164,7 +164,7 @@ services:
     - debugdev
   unfetter-ui:
     build: ../unfetter-ui
-    container_name: unfetter-ui
+    image: unfetter-ui
     depends_on:
     - unfetter-discover-openssl
     volumes:
@@ -172,6 +172,7 @@ services:
     - ../unfetter-ui/src:/usr/share/unfetter-ui/src
     - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
     - ../unfetter-ui/config:/usr/share/unfetter-ui/config
+    - ../unfetter-ui/node_modules:/usr/share/node_modules
     entrypoint:
     - npm
     - run
