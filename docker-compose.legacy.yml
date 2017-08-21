@@ -196,7 +196,7 @@ services:
     - ../unfetter-ui/src:/usr/share/unfetter-ui/src
     - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
     - ../unfetter-ui/config:/usr/share/unfetter-ui/config
-    - ../unfetter-ui/node_modules:/usr/share/node_modules
+    #- ../unfetter-ui/node_modules:/usr/share/unfetter-ui/node_modules
     entrypoint:
     - npm
     - run
