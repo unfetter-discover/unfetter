@@ -9,7 +9,6 @@ services:
     depends_on:
      - unfetter-discover-openssl
     links:
-     - unfetter-discover-ui
      - cti-stix-store
      - unfetter-discover-api-explorer
      - unfetter-discover-api
@@ -17,26 +16,6 @@ services:
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
-  unfetter-discover-ui:
-    build: ../unfetter-discover-ui
-    container_name: unfetter-discover-ui
-    ports:
-     - "50000:50000"
-    depends_on:
-     - unfetter-discover-openssl
-    volumes:
-     - ./certs/:/etc/pki/tls/certs
-     - ../unfetter-discover-ui/app:/usr/share/unfetter-discover-ui/app
-    entrypoint:
-     - ember
-     - server
-     - -live-reload-port
-     - "50000"
-     - -ssl
-     - -ssl-key
-     - /etc/pki/tls/certs/server.key
-     - -ssl-cert
-     - /etc/pki/tls/certs/server.crt
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -136,7 +115,7 @@ services:
     - swaggerdev
   unfetter-discover-api:
     build: ../unfetter-discover-api
-    container_name: unfetter-discover-api
+    image: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
     - cti-stix-store-repository
@@ -164,7 +143,7 @@ services:
     - debugdev
   unfetter-ui:
     build: ../unfetter-ui
-    container_name: unfetter-ui
+    image: unfetter-ui
     depends_on:
     - unfetter-discover-openssl
     volumes:
