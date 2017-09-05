@@ -76,6 +76,8 @@ services:
      - "27017"
      - -c
      - stix
+     - -k
+     - /tmp/examples/unfetter-config/config.json
      - -j
      - /tmp/examples/mitre-attack-cis/stix.json
     depends_on:
