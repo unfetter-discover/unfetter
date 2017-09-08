@@ -40,6 +40,7 @@ services:
   unfetter-discover-processor:
     build: ../unfetter-discover-processor
     container_name: unfetter-discover-processor
+    image: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
     entrypoint:
@@ -69,6 +70,7 @@ services:
   cti-stix-store:
     build: ../cti-stix-store
     container_name: cti-stix-store
+    image: cti-stix-store
     depends_on:
      - cti-stix-store-repository
     links:
@@ -89,6 +91,7 @@ services:
   unfetter-discover-api-explorer:
     build: ../unfetter-discover-api
     container_name: unfetter-discover-api-explorer
+    image: unfetter-discover-api       
     depends_on:
     - unfetter-discover-openssl
     - cti-stix-store-repository
@@ -117,7 +120,8 @@ services:
     - swaggerdev
   unfetter-discover-api:
     build: ../unfetter-discover-api
-    image: unfetter-discover-api
+    container_name: unfetter-discover-api
+    image: unfetter-discover-api   
     depends_on:
     - unfetter-discover-openssl
     - cti-stix-store-repository
@@ -146,6 +150,7 @@ services:
   unfetter-ui:
     build: ../unfetter-ui
     image: unfetter-ui
+    container_name: unfetter-ui
     depends_on:
     - unfetter-discover-openssl
     volumes:
