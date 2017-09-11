@@ -9,13 +9,32 @@ services:
     depends_on:
      - unfetter-discover-openssl
     links:
+     - unfetter-discover-ui
      - cti-stix-store
      - unfetter-discover-api-explorer
      - unfetter-discover-api
-     - unfetter-ui
     volumes:
-     - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
+     - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
+  unfetter-discover-ui:
+    image: unfetter/unfetter-discover-ui
+    container_name: unfetter-discover-ui
+    ports:
+     - "50000:50000"
+    depends_on:
+     - unfetter-discover-openssl
+    volumes:
+     - ./certs/:/etc/pki/tls/certs
+    entrypoint:
+     - ember
+     - server
+     - -live-reload-port
+     - "50000"
+     - -ssl
+     - -ssl-key
+     - /etc/pki/tls/certs/server.key
+     - -ssl-cert
+     - /etc/pki/tls/certs/server.crt
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -37,11 +56,9 @@ services:
      - /tmp/certs/server.crt
     volumes:
      - ./certs/:/tmp/certs
-    
   unfetter-discover-processor:
-    build: ../unfetter-store/unfetter-discover-processor
+    image: unfetter/unfetter-discover-processor 
     container_name: unfetter-discover-processor
-    image: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
     entrypoint:
@@ -57,8 +74,6 @@ services:
      - "27017"
      - -c
      - stix
-     - -k
-     - /tmp/examples/unfetter-config/config.json
      - -j
      - /tmp/examples/mitre-attack-cis/stix.json
     depends_on:
@@ -67,19 +82,16 @@ services:
     links:
      - cti-stix-store-repository:repository
     environment:
-    - INCLUDE_MITRE_GITHUB_DATA=true
-
+    - INCLUDE_MITRE_GITHUB_DATA=false
   cti-stix-store:
-    build: ../unfetter-store/cti-stix-store
+    image: unfetter/cti-stix-store 
     container_name: cti-stix-store
-    image: cti-stix-store
     depends_on:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
     volumes:
      - ./config/schema/examples/schemas:/tmp/schemas
-     - ../unfetter-store/cti-stix-store/server:/usr/share/cti-stix-store/server
     environment:
      - SCHEMA_LOCATION=/tmp/schemas
     command: /bin/ash wait-for-repository.sh
@@ -89,11 +101,29 @@ services:
     ports:
     - "27018:27017"
     volumes:
-    - ./data/db:/data/db
+    - /data/db:/data/db
+  cti-stix-ui:
+    image: unfetter/cti-stix-ui 
+    container_name: cti-stix-ui
+    ports:
+     - "40000:40000"
+    depends_on:
+    - unfetter-discover-openssl
+    volumes:
+     - ./certs/:/etc/pki/tls/certs
+    entrypoint:
+     - ember
+     - server
+     - -live-reload-port
+     - "40000"
+     - -ssl
+     - -ssl-key
+     - /etc/pki/tls/certs/server.key
+     - -ssl-cert
+     - /etc/pki/tls/certs/server.crt
   unfetter-discover-api-explorer:
-    build: ../unfetter-store/unfetter-discover-api
+    image: unfetter/unfetter-discover-api
     container_name: unfetter-discover-api-explorer
-    image: unfetter-discover-api       
     depends_on:
     - unfetter-discover-openssl
     - cti-stix-store-repository
@@ -105,8 +135,6 @@ services:
      - cti-stix-store-repository:repository
     volumes:
     - ./certs/:/etc/pki/tls/certs
-    - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
-    - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     environment:
     - STIX_API_PROTOCOL=http
     - STIX_API_HOST=cti-stix-store
@@ -119,11 +147,10 @@ services:
     entrypoint:
     - npm
     - run
-    - swaggerdev
+    - swagger-editor
   unfetter-discover-api:
-    build: ../unfetter-store/unfetter-discover-api
+    image: unfetter/unfetter-discover-api
     container_name: unfetter-discover-api
-    image: unfetter-discover-api   
     depends_on:
     - unfetter-discover-openssl
     - cti-stix-store-repository
@@ -131,11 +158,8 @@ services:
      - cti-stix-store-repository:repository
     ports:
     - "49360:3000"
-    - "5555:5555"
     volumes:
     - ./certs/:/etc/pki/tls/certs
-    - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
-    - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     environment:
     - STIX_API_PROTOCOL=http
     - STIX_API_HOST=cti-stix-store
@@ -147,20 +171,4 @@ services:
     - ENV=dev
     entrypoint:
     - npm
-    - run
-    - debugdev
-  unfetter-ui:
-    build: ../unfetter-ui
-    image: unfetter-ui
-    container_name: unfetter-ui
-    depends_on:
-    - unfetter-discover-openssl
-    volumes:
-    - ./certs/:/etc/pki/tls/certs
-    - ../unfetter-ui/src:/usr/share/unfetter-ui/src
-    - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
-    - ../unfetter-ui/config:/usr/share/unfetter-ui/config
-    entrypoint:
-    - npm
-    - run
-    - server:dev:alt
+    - start
