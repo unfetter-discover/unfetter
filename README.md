@@ -44,9 +44,12 @@ Create a directory to hold all the projects,
 mkdir unfetter-discover
 cd unfetter-discover
 ```
-Next, you will need to clone all the projects in [unfetter-discover](https://www.github.com/unfetter-discover).  
+Next, you will need to clone three projects in [unfetter-discover](https://www.github.com/unfetter-discover).  
 ```bash
- curl -s https://api.github.com/orgs/unfetter-discover/repos\?per_page\=200 | perl -ne 'print "$1\n" if (/"clone_url": "([^"]+)/)' | xargs -n 1 git clone -b develop
+ git clone git@github.com:unfetter-discover/unfetter.git
+ git clone git@github.com:unfetter-discover/unfetter-ui.git
+ git clone git@github.com:unfetter-discover/unfetter-store.git
+ 
  ```
  Next, change directories into the unfetter directory, which houses the docker-compose.development.yml file, and run docker-compose
  ```
@@ -58,7 +61,7 @@ Next, you will need to clone all the projects in [unfetter-discover](https://www
 
 After running the `docker-compose` command you can view the application at:
 
-https://localhost/unfetter-discover-ui/
+https://localhost/
 
 Unfetter-Discover will create certs and store them locally. You will need to
 accept the certificates to move forward.
