@@ -14,7 +14,7 @@ services:
      - unfetter-discover-api
      - unfetter-ui
     volumes:
-     - ./config/nginx/conf.d:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-openssl:
     image: svagi/openssl:latest
