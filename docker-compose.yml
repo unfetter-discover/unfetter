@@ -17,7 +17,7 @@ services:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-ui:
-    image: unfetter/unfetter-discover-ui
+    image: unfetter/unfetter-discover-ui:0.3.0
     container_name: unfetter-discover-ui
     ports:
      - "50000:50000"
@@ -57,7 +57,7 @@ services:
     volumes:
      - ./certs/:/tmp/certs
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor 
+    image: unfetter/unfetter-discover-processor:0.3.0 
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -84,7 +84,7 @@ services:
     environment:
     - INCLUDE_MITRE_GITHUB_DATA=false
   cti-stix-store:
-    image: unfetter/cti-stix-store 
+    image: unfetter/cti-stix-store:0.3.0
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
@@ -122,7 +122,7 @@ services:
      - -ssl-cert
      - /etc/pki/tls/certs/server.crt
   unfetter-discover-api-explorer:
-    image: unfetter/unfetter-discover-api
+    image: unfetter/unfetter-discover-api:0.3.0
     container_name: unfetter-discover-api-explorer
     depends_on:
     - unfetter-discover-openssl
@@ -149,7 +149,7 @@ services:
     - run
     - swagger-editor
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api
+    image: unfetter/unfetter-discover-api:0.3.0
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
