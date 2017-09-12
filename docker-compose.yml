@@ -9,32 +9,13 @@ services:
     depends_on:
      - unfetter-discover-openssl
     links:
-     - unfetter-discover-ui
      - cti-stix-store
      - unfetter-discover-api-explorer
      - unfetter-discover-api
+     - unfetter-ui
     volumes:
-     - ./config/nginx/conf.d:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
-  unfetter-discover-ui:
-    image: unfetter/unfetter-discover-ui
-    container_name: unfetter-discover-ui
-    ports:
-     - "50000:50000"
-    depends_on:
-     - unfetter-discover-openssl
-    volumes:
-     - ./certs/:/etc/pki/tls/certs
-    entrypoint:
-     - ember
-     - server
-     - -live-reload-port
-     - "50000"
-     - -ssl
-     - -ssl-key
-     - /etc/pki/tls/certs/server.key
-     - -ssl-cert
-     - /etc/pki/tls/certs/server.crt
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -57,7 +38,7 @@ services:
     volumes:
      - ./certs/:/tmp/certs
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor 
+    image: unfetter/unfetter-discover-processor:0.3.0
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -84,7 +65,7 @@ services:
     environment:
     - INCLUDE_MITRE_GITHUB_DATA=false
   cti-stix-store:
-    image: unfetter/cti-stix-store 
+    image: unfetter/cti-stix-store:0.3.0
     container_name: cti-stix-store
     depends_on:
      - cti-stix-store-repository
@@ -102,27 +83,9 @@ services:
     - "27018:27017"
     volumes:
     - ./data/db:/data/db
-  cti-stix-ui:
-    image: unfetter/cti-stix-ui 
-    container_name: cti-stix-ui
-    ports:
-     - "40000:40000"
-    depends_on:
-    - unfetter-discover-openssl
-    volumes:
-     - ./certs/:/etc/pki/tls/certs
-    entrypoint:
-     - ember
-     - server
-     - -live-reload-port
-     - "40000"
-     - -ssl
-     - -ssl-key
-     - /etc/pki/tls/certs/server.key
-     - -ssl-cert
-     - /etc/pki/tls/certs/server.crt
+
   unfetter-discover-api-explorer:
-    image: unfetter/unfetter-discover-api
+    image: unfetter/unfetter-discover-api:0.3.0
     container_name: unfetter-discover-api-explorer
     depends_on:
     - unfetter-discover-openssl
@@ -149,7 +112,7 @@ services:
     - run
     - swagger-editor
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api
+    image: unfetter/unfetter-discover-api:0.3.0
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
@@ -172,3 +135,15 @@ services:
     entrypoint:
     - npm
     - start
+
+  unfetter-ui:
+    image: unfetter/unfetter-ui:0.3.0
+    container_name: unfetter-ui
+    depends_on:
+    - unfetter-discover-openssl
+    volumes:
+    - ./certs/:/etc/pki/tls/certs
+    entrypoint:
+    - npm
+    - run
+    - server:dev:alt
