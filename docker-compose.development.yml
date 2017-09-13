@@ -43,7 +43,7 @@ services:
     image: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
-    enviroment:
+    environment:
      - MONGO_HOST=repository
     entrypoint: 
      - node
