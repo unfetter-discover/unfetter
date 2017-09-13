@@ -9,7 +9,6 @@ services:
     depends_on:
      - unfetter-discover-openssl
     links:
-     - cti-stix-store
      - unfetter-discover-api-explorer
      - unfetter-discover-api
      - unfetter-ui
@@ -44,45 +43,18 @@ services:
     image: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
-    entrypoint:
+    enviroment:
+     - MONGO_HOST=repository
+    entrypoint: 
      - node
-     - processor-direct.js
-     - -p
-     - "3000"
-     - -h
-     - cti-stix-store
-     - -r
-     - repository
-     - -x
-     - "27017"
-     - -c
-     - stix
-     - -k
-     - /tmp/examples/unfetter-config/config.json
-     - -j
+     - processor.js
+     - --stix
      - /tmp/examples/mitre-attack-cis/stix.json
     depends_on:
-     - cti-stix-store
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
-    environment:
-    - INCLUDE_MITRE_GITHUB_DATA=true
 
-  cti-stix-store:
-    build: ../unfetter-store/cti-stix-store
-    container_name: cti-stix-store
-    image: cti-stix-store
-    depends_on:
-     - cti-stix-store-repository
-    links:
-     - cti-stix-store-repository:repository
-    volumes:
-     - ./config/schema/examples/schemas:/tmp/schemas
-     - ../unfetter-store/cti-stix-store/server:/usr/share/cti-stix-store/server
-    environment:
-     - SCHEMA_LOCATION=/tmp/schemas
-    command: /bin/ash wait-for-repository.sh
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
