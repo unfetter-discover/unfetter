@@ -43,6 +43,7 @@ services:
     image: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
+     - ../unfetter-store/unfetter-discover-processor:/usr/src/app
     environment:
      - MONGO_HOST=repository
     entrypoint: 
@@ -50,6 +51,8 @@ services:
      - processor.js
      - --stix
      - /tmp/examples/mitre-attack-cis/stix.json
+     - --config
+     - /tmp/examples/unfetter-config/config.json
     depends_on:
      - cti-stix-store-repository
     links:
