@@ -1,7 +1,7 @@
 [
     {
         "_id": "d9732cfc-166e-41a0-af79-d37e7abc69b2",
-        "configKey":"killChains",
+        "configKey": "killChains",
         "configValue": [
             {
                 "name": "mitre-attack",
@@ -19,13 +19,7 @@
                 ],
                 "description": "Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK™) is a threat modeling methodology and suite of models for the various phases of an adversary's lifecycle and platforms that are known to be targeted by cyber threats. ATT&CK models are useful for understanding security risk against known adversary behavior, for planning security improvements, and verifying defenses work as expected.",
                 "url": "https://attack.mitre.org/wiki/Main_Page"
-            }
-        ]
-    },
-    {
-        "_id": "e95c174e-2e4c-435e-b767-5d718d572677",
-        "configKey": "killChains",
-        "configValue": [
+            },
             {
                 "name": "ctf",
                 "phase_names": [
@@ -56,6 +50,9 @@
                     "Effect"
                 ]
             }
+        ],
+        "configGroups": [
+            "stixConfig"
         ]
     }
 ]
