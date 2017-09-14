@@ -21,5 +21,41 @@
                 "url": "https://attack.mitre.org/wiki/Main_Page"
             }
         ]
+    },
+    {
+        "_id": "e95c174e-2e4c-435e-b767-5d718d572677",
+        "configKey": "killChains",
+        "configValue": [
+            {
+                "name": "ctf",
+                "phase_names": [
+                    "planning",
+                    "research",
+                    "develop-resources",
+                    "acquire-knowledge",
+                    "complete-preparation",
+                    "deployment",
+                    "interaction",
+                    "exploitation",
+                    "delivery",
+                    "control",
+                    "evasion",
+                    "expansion",
+                    "focus",
+                    "persistence",
+                    "enablement",
+                    "access-denial",
+                    "data-extraction",
+                    "data-alteration",
+                    "data-destruction"
+                ],
+                "stage_names": [
+                    "Preparation",
+                    "Engagement",
+                    "Presence",
+                    "Effect"
+                ]
+            }
+        ]
     }
 ]
