@@ -67,17 +67,21 @@ services:
     image: unfetter-ctf-ingest
     volumes:
      - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
+    environment:
+     - API_HOST=apihost
+     - API_PORT=3000
+     - API_CONTEXT=/
     entrypoint: 
      - npm
      - run
      - ctf-ingest
      - --
-     - -f 
+     - -f
      - /tmp/test-data/ctf-sample.csv
     depends_on:
-     - cti-stix-store-repository
+     - unfetter-discover-api
     links:
-     - cti-stix-store-repository:repository
+     - unfetter-discover-api:apihost
 
   cti-stix-store-repository:
     image: mongo:3.4.1
