@@ -61,6 +61,24 @@ services:
     links:
      - cti-stix-store-repository:repository
 
+  unfetter-ctf-ingest:
+    build: ../unfetter-store/unfetter-ctf-ingest
+    container_name: unfetter-ctf-ingest
+    image: unfetter-ctf-ingest
+    volumes:
+     - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
+    entrypoint: 
+     - npm
+     - run
+     - ctf-ingest
+     - --
+     - -f 
+     - /tmp/test-data/ctf-sample.csv
+    depends_on:
+     - cti-stix-store-repository
+    links:
+     - cti-stix-store-repository:repository
+
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
@@ -68,6 +86,7 @@ services:
     - "27018:27017"
     volumes:
     - ./data/db:/data/db
+
   unfetter-discover-api-explorer:
     build: ../unfetter-store/unfetter-discover-api
     container_name: unfetter-discover-api-explorer
@@ -98,6 +117,7 @@ services:
     - npm
     - run
     - swaggerdev
+
   unfetter-discover-api:
     build: ../unfetter-store/unfetter-discover-api
     container_name: unfetter-discover-api
@@ -127,6 +147,7 @@ services:
     - npm
     - run
     - debugdev
+
   unfetter-ui:
     build: ../unfetter-ui
     image: unfetter-ui
