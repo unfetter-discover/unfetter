@@ -107,6 +107,9 @@ https://localhost/
 Unfetter-Discover will create certs and store them locally. You will need to
 accept the certificates to move forward.
 
+# Developers
+If you are interested in contributing to Unfetter, take a look at our more detailed [Unfetter Wiki](https://github.com/unfetter-discover/unfetter/wiki)
+
 ## License
 
 See [LICENSE](LICENSE.md).
