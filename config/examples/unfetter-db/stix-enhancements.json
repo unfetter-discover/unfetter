@@ -1,8 +1,770 @@
 [
-    {
-        "id": "attack-pattern--0541e9a2-fafa-4ada-8466-cb20f5b021ba",
-        "extendedProperties": {        
-            "x_unfetter_sophistication_level": 2
-        }
+  {
+    "id": "attack-pattern--0541e9a2-fafa-4ada-8466-cb20f5b021ba",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
     }
+  },
+  {
+    "id": "attack-pattern--05ffa602-61ad-44cb-8ecb-ce5a264fbc59",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--0618560e-f4e0-4ca3-8139-7b3b7a627fbb",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--1863d516-9524-4636-89be-b6ed42c4dd5f",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--0d39a87b-9a7a-41d6-8cf0-b3ce68a2079f",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--3563b627-4140-41a2-8faf-9732faff0e18",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--2ea544a1-23f4-42ff-84ed-ef3d2c5c4c44",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--410c2eee-1eaa-4114-8bec-e989a826856d",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--3e698f0c-dd55-4227-89ac-e625f1423a40",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--301d0279-3961-4be7-8745-8b7486a4b99f",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--3a69ab30-e1d2-473a-8b25-b2fbcd29f9ae",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--4bc7e752-733a-470d-8eac-a2eab704e156",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--32f9616c-25a1-40bf-83b7-cb58f2353162",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--6dd8b3f8-11cc-4d7e-8ced-5e3a6a29ca23",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--6c3273bf-1656-4199-8e85-f8366ea575c3",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--5f4ec334-f93e-43c1-84c7-cd2be9306393",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--8011f553-dc5f-4574-80f6-4aae9117faa8",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--62f8c113-9da8-4586-8c79-0e46ffb8c888",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--837752e2-632a-4670-8db1-364a179b59f6",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--9c2fc7a1-82de-491b-8842-683bdd66ce94",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--ac1c24e1-f18b-40c2-8f58-f616d4759002",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--7e71df01-d12c-4eeb-8c2a-ebe389102e8e",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--c14501e1-5b11-409e-82b2-7d6cd01332fe",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--8354e94a-6042-41f5-85e2-d6fe7515b5aa",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--3ec92158-90c6-4527-8023-fb43aa180212",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--8c2472c4-e2ab-4a37-8e6b-28deff92e3ea",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--bebf03ba-a393-4854-8302-e179cb3d3804",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--a51d4601-24ec-4b59-81d6-89eca24698a3",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--df09fe54-fcbf-44eb-8fc1-cc5e265ae896",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--b58b56fd-b395-46cd-8312-83061878cf61",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--f5b0b948-3232-44e1-8fab-8628e0d3a9be",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--a18a5edd-a9b3-4adf-8980-a6abc994e011",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--ddbfa329-be52-49c3-87a0-e4b23c320e56",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--b28949eb-61b2-4547-8376-41334b4eec6d",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--fac9f92b-64d6-4aa4-8b56-c0a022d34cf1",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--493d7fa2-d142-40e1-86b6-d54c16e0db55",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--4ed2a056-34b1-43d4-a4ac-cc5069a5422f",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--f31ead67-c64d-43f0-8230-7fd108b8e048",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--d885fda8-591b-45f5-8184-4e62c182a448",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--ec631abd-de82-414e-8a50-25bf6cdddb21",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--8024f8f7-39bb-4745-845b-71aa7a1ef940",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--9cfb9f9b-c846-4015-8a11-9c2112cf5379",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--b5913dcd-dd96-4330-8ffa-96f0db49cb0b",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--aae656da-2b72-44a0-89b1-08151700cfbb",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--7d81bd58-8960-485e-88a4-00a4898b20fb",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--d68cad1c-40bb-4455-8ae2-93ccbd18be18",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--93b90c60-1041-41bd-8200-962c79ff3b87",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--d1676272-6987-4929-8747-76070b7365bd",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--95a4aab6-15ac-4107-8efd-ce5acee5a2eb",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--c3d3cd95-d415-4685-84ef-5f3f57ee55c0",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--e88968aa-1fb4-4784-8e4d-78e84da59542",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--dd7c1bb7-f069-4f4a-87e6-7ca4b0b90a2d",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--1154b9d4-2c49-4269-8dc3-9f61fc510cf4",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--2bd0c119-48b4-4aef-8995-c17ea5334be0",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--077f6598-d53b-4e47-8b36-ce9a6f4a2155",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--1aeb7750-22f5-4010-818b-e4524964f079",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--375220a7-b5e9-4d57-83b9-c357f3096d1a",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--46d01ec8-43dd-4adc-8494-74ef477e3ec1",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--3fd331c8-1c3f-4889-88f2-11c8ac28254d",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--352c465b-9071-4933-87dd-af3309e6602a",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--4c2fe815-0791-4ad3-8c41-25042ca83532",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--53b2162b-b448-472d-8bb9-0720d0891e41",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--5168404f-16e1-4ea0-864d-a8c546e8cb7b",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--68f387d6-21f1-4a39-8f3c-ec0407b844e4",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--5f492dcb-f433-450c-83c4-002589d4b446",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--7ffd7ab5-d331-4c63-8d55-0c7a6a2f5532",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 3
+    }
+  },
+  {
+    "id": "attack-pattern--7f9d9176-d7d3-4f28-8fed-3ea72c099d9f",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--92ed0ca4-41ef-4cee-81f1-5e290af85224",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--39f60500-a027-4278-8923-59a0f7450ce6",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--bf291398-2dcc-4577-8120-b6c75d74ee06",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--cebb31d3-090f-441d-8c10-36d4aafaf83e",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--d4872ee4-448a-4bdd-89f9-41d811d331f9",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--de8ebbc2-c5bc-450b-83f7-25992e6aa570",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--ca8dbf07-00c6-4c69-8fec-53375e2b471c",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--fdc9276a-b5b6-4cbd-8141-7b8f6ac4e15b",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--65900064-0968-4dc4-87ec-f386fc2b0a7a",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--a0f2934b-4dc7-432b-86c0-ffaaccbc3561",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--d2143637-1f59-40c2-8106-2c31e80e05bb",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--f8f9016e-90c4-4fd2-875f-bc6628f54fc9",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--d688f0b4-71d7-4cae-846d-4e45e8cdf0cb",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--3f3dd034-e43a-4101-80cd-f6d6d515cd4c",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--4b363289-669a-4310-851a-a1ea0574af46",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--52db62de-d700-4dd0-894d-7ce0bcf4e54c",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--710851e4-b609-482c-810b-cd449822635f",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--818de9e4-3462-4201-9cf6-79068d5264d5",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--9c67620d-a0fd-429c-8385-09ff89f06280",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--adeb5574-0649-461b-822c-7706c2607971",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--9b09a83f-9602-4a2f-832b-9d5c2417e1cf",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--aaec23f3-1751-4d5d-8e22-d89fe8e3e6b7",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--d97a3d94-c075-4707-81b3-ec78d851c88d",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 3
+    }
+  },
+  {
+    "id": "attack-pattern--e486d928-7424-4239-80d8-e5a56e8524b7",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 3
+    }
+  },
+  {
+    "id": "attack-pattern--d3ee473a-6a9e-4f0d-83d6-b24dd7020c9c",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--f61d9afe-3461-45b2-8792-4aa2f2c1d958",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--e1b1efcf-c2d0-4150-8033-e11874e7d34a",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--6f2a245e-9976-4d37-8be0-5163f4e75ceb",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--8055997d-c007-4611-81c8-5a5ef4bb7b15",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--b15ee8f6-24e3-41e0-8816-0f827639be20",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--dd8a6be5-7f99-400b-8542-d69cf2d2f900",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--e0004835-95f0-4dae-8084-4fe760d910b7",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--081098a4-1583-4dc3-80c2-101b1943c5e5",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--203f567f-2bd6-41c4-8482-caa769eb6301",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--3c754741-a537-455d-8278-6c806afbe641",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--3ae3c259-596e-4dd8-8bb8-4a9ed94c28d5",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--53aa91f9-480a-479f-8b9e-9dcebabd1b9d",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 3
+    }
+  },
+  {
+    "id": "attack-pattern--4aaaeb3b-1a44-4ded-8dbb-737ba6c701cd",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--59c3a0fe-6657-45b9-8431-532faebf6a2b",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": null
+    }
+  },
+  {
+    "id": "attack-pattern--7c7d0de7-4775-46d4-8fb7-f28a4573005d",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--1cb13e3a-d997-4051-b88f-db7d341e5485",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--30b589f4-0a1d-4dc2-b87e-cb4d392bdc12",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--8af72bd4-5cc3-49de-880c-a95bd6b263cd",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--a25d8098-4f97-4d20-8564-a5a8d892eae6",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--b3ac34c7-d232-4ef1-85c8-f19caa1aa581",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--cc45ac58-81e3-4e3c-8fc0-28157951699e",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--d4723ba8-d48e-43f7-8e34-239f72b4cf0d",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--da5b978a-15b5-4176-8c80-5229d0111e8f",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--e57f210a-8c24-45c5-80b5-2c20f1dac2a6",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--fd901ec2-a649-43f4-88eb-55f0c28ff81e",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--5665ede3-6c98-42b6-8d44-60b1e112a285",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--89746dc6-8724-4828-8004-aeed6eb9c23d",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--a91d40c2-9e35-42ce-8ff0-ddda534b1034",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 0
+    }
+  },
+  {
+    "id": "attack-pattern--c3053154-bb0d-42af-8272-7517ea71ee92",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--89d5208f-3f07-4e91-899c-f5fd8778cca3",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--b8a2657e-a2c9-4e52-85f9-a32337cafc67",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--e1a029dd-f930-40ba-8a1c-0adf9153e955",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  },
+  {
+    "id": "attack-pattern--e69a29ff-0345-4907-83b4-b5f1c39e3a65",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 1
+    }
+  },
+  {
+    "id": "attack-pattern--6d5c7140-88fb-4a6b-8a1c-c2d11613c9c4",
+    "extendedProperties": {
+      "x_unfetter_sophistication_level": 2
+    }
+  }
 ]
