@@ -24,7 +24,6 @@
           "phase_name": "credential-access"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--0541e9a2-fafa-4ada-8466-cb20f5b021ba"
     },
@@ -49,7 +48,6 @@
           "phase_name": "exfiltration"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--05ffa602-61ad-44cb-8ecb-ce5a264fbc59"
     },
@@ -78,7 +76,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--0618560e-f4e0-4ca3-8139-7b3b7a627fbb"
     },
@@ -103,7 +100,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--1863d516-9524-4636-89be-b6ed42c4dd5f"
     },
@@ -128,7 +124,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--0d39a87b-9a7a-41d6-8cf0-b3ce68a2079f"
     },
@@ -157,7 +152,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--3563b627-4140-41a2-8faf-9732faff0e18"
     },
@@ -186,7 +180,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--2ea544a1-23f4-42ff-84ed-ef3d2c5c4c44"
     },
@@ -211,7 +204,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--410c2eee-1eaa-4114-8bec-e989a826856d"
     },
@@ -236,7 +228,6 @@
           "phase_name": "collection"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--3e698f0c-dd55-4227-89ac-e625f1423a40"
     },
@@ -265,7 +256,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--301d0279-3961-4be7-8745-8b7486a4b99f"
     },
@@ -290,7 +280,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--3a69ab30-e1d2-473a-8b25-b2fbcd29f9ae"
     },
@@ -315,7 +304,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--4bc7e752-733a-470d-8eac-a2eab704e156"
     },
@@ -340,7 +328,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--32f9616c-25a1-40bf-83b7-cb58f2353162"
     },
@@ -365,7 +352,6 @@
           "phase_name": "exfiltration"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--6dd8b3f8-11cc-4d7e-8ced-5e3a6a29ca23"
     },
@@ -390,7 +376,6 @@
           "phase_name": "collection"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--6c3273bf-1656-4199-8e85-f8366ea575c3"
     },
@@ -419,7 +404,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--5f4ec334-f93e-43c1-84c7-cd2be9306393"
     },
@@ -444,7 +428,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--8011f553-dc5f-4574-80f6-4aae9117faa8"
     },
@@ -469,7 +452,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--62f8c113-9da8-4586-8c79-0e46ffb8c888"
     },
@@ -494,7 +476,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--837752e2-632a-4670-8db1-364a179b59f6"
     },
@@ -523,7 +504,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--7d1f5001-ecdf-4d05-81af-5abf6fb7a75f"
     },
@@ -552,7 +532,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--9c2fc7a1-82de-491b-8842-683bdd66ce94"
     },
@@ -577,7 +556,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--ac1c24e1-f18b-40c2-8f58-f616d4759002"
     },
@@ -602,7 +580,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--7e71df01-d12c-4eeb-8c2a-ebe389102e8e"
     },
@@ -627,7 +604,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--c14501e1-5b11-409e-82b2-7d6cd01332fe"
     },
@@ -652,7 +628,6 @@
           "phase_name": "credential-access"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--8354e94a-6042-41f5-85e2-d6fe7515b5aa"
     },
@@ -677,7 +652,6 @@
           "phase_name": "exfiltration"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--3ec92158-90c6-4527-8023-fb43aa180212"
     },
@@ -702,7 +676,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--8c2472c4-e2ab-4a37-8e6b-28deff92e3ea"
     },
@@ -726,7 +699,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "id": "attack-pattern--bebf03ba-a393-4854-8302-e179cb3d3804"
     },
     {
@@ -750,7 +722,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--a51d4601-24ec-4b59-81d6-89eca24698a3"
     },
@@ -775,7 +746,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--df09fe54-fcbf-44eb-8fc1-cc5e265ae896"
     },
@@ -804,7 +774,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--b58b56fd-b395-46cd-8312-83061878cf61"
     },
@@ -829,7 +798,6 @@
           "phase_name": "credential-access"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--f5b0b948-3232-44e1-8fab-8628e0d3a9be"
     },
@@ -854,7 +822,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--a18a5edd-a9b3-4adf-8980-a6abc994e011"
     },
@@ -879,7 +846,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--ddbfa329-be52-49c3-87a0-e4b23c320e56"
     },
@@ -904,7 +870,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--b28949eb-61b2-4547-8376-41334b4eec6d"
     },
@@ -929,7 +894,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--fac9f92b-64d6-4aa4-8b56-c0a022d34cf1"
     },
@@ -954,7 +918,6 @@
           "phase_name": "exfiltration"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--493d7fa2-d142-40e1-86b6-d54c16e0db55"
     },
@@ -981,7 +944,6 @@
           "id": null
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "id": "attack-pattern--4ed2a056-34b1-43d4-a4ac-cc5069a5422f"
     },
     {
@@ -1005,7 +967,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--f31ead67-c64d-43f0-8230-7fd108b8e048"
     },
@@ -1016,13 +977,6 @@
       "external_references": [],
       "name": "CSC 10.2",
       "description": "Test data on backup media on a regular basis by performing a data restoration process to ensure that the backup is properly working.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC10 Data Recovery",
-          "description": "The processes and tools used to properly back up critical information with a proven methodology for timely recovery of it."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--43bbcfb4-b996-4953-b353-75143bf18c78",
       "labels": [
@@ -1056,7 +1010,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--d885fda8-591b-45f5-8184-4e62c182a448"
     },
@@ -1067,13 +1020,6 @@
       "external_references": [],
       "name": "CSC 3.7",
       "description": "Deploy system configuration management tools, such as Active Directory Group Policy Objects for Microsoft Windows systems or Puppet for UNIX systems that will automatically enforce and redeploy configuration settings to systems at regularly scheduled intervals. They should be capable of triggering redeployment of configuration settings on a scheduled, manual, or event-driven basis.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC3 Secure Configurations for Hardware and Software",
-          "description": "Establish, implement, and actively manage (track, report on, correct) the security configuration of laptops, servers, and workstations using a rigorous configuration management and change control process in order to prevent attackers from exploiting vulnerable services and settings."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--719353be-997a-4813-bf87-2c3c45048a8e",
       "labels": [
@@ -1088,13 +1034,6 @@
       "external_references": [],
       "name": "CSC 6.2",
       "description": "Validate audit log settings for each hardware device and the software installed on it, ensuring that logs include a date, timestamp, source addresses, destination addresses, and various other useful elements of each packet and/or transaction. Systems should record logs in a standardized format such as syslog entries or those outlined by the Common Event Expression initiative. If systems cannot generate logs in a standardized format, log normalization tools can be deployed to convert logs into such a format.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC6 Audit Logs",
-          "description": "Collect, manage, and analyze audit logs of events that could help detect, understand, or recover from an attack."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--572face6-a8bc-4890-9213-7459074120c0",
       "labels": [
@@ -1123,7 +1062,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--ec631abd-de82-414e-8a50-25bf6cdddb21"
     },
@@ -1156,7 +1094,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--8024f8f7-39bb-4745-845b-71aa7a1ef940"
     },
@@ -1167,13 +1104,6 @@
       "external_references": [],
       "name": "CSC 3.5",
       "description": "Use file integrity checking tools to ensure that critical system files (including sensitive system and application executables, libraries, and configurations) have not been altered. The reporting system should: have the ability to account for routine and expected changes; highlight and alert on unusual or unexpected alterations; show the history of configuration changes over time and identify who made the change (including the original logged-in account in the event of a user ID switch, such as with the su or sudo command). These integrity checks should identify suspicious system alterations such as: owner and permissions changes to files or directories; the use of alternate data streams which could be used to hide malicious activities; and the introduction of extra files into key system areas (which could indicate malicious payloads left by attackers or additional files inappropriately added during batch distribution processes).",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC3 Secure Configurations for Hardware and Software",
-          "description": "Establish, implement, and actively manage (track, report on, correct) the security configuration of laptops, servers, and workstations using a rigorous configuration management and change control process in order to prevent attackers from exploiting vulnerable services and settings."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--28355a8f-1137-4e37-a3f1-c658d39dd073",
       "labels": [
@@ -1206,7 +1136,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--9cfb9f9b-c846-4015-8a11-9c2112cf5379"
     },
@@ -1217,13 +1146,6 @@
       "external_references": [],
       "name": "CSC 1.5",
       "description": "Deploy network level authentication via 802.1x to limit and control which devices can be connected to the network.  The 802.1x must be tied into the inventory data to determine authorized versus unauthorized systems.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC1 Hardware Inventory",
-          "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--327dfc29-f55c-4fc2-bf54-b7bbdc76cc34",
       "labels": [
@@ -1252,7 +1174,6 @@
           "phase_name": "exfiltration"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--b5913dcd-dd96-4330-8ffa-96f0db49cb0b"
     },
@@ -1263,13 +1184,6 @@
       "external_references": [],
       "name": "CSC 9.3",
       "description": "Perform automated port scans on a regular basis against all key servers and compared to a known effective baseline.  If a change that is not listed on the organization’s approved baseline is discovered, an alert should be generated and reviewed.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC9 Control of Network Ports",
-          "description": "Manage (track/control/correct) the ongoing operational use of ports, protocols, and services on networked devices in order to minimize windows of vulnerability available to attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--67cb51c0-572f-44fb-ac72-44535d8cc81b",
       "labels": [
@@ -1285,13 +1199,6 @@
       "external_references": [],
       "name": "CSC 5.8",
       "description": "Administrators should be required to access a system using a fully logged and non-administrative account. Then, once logged on to the machine without administrative privileges, the administrator should transition to administrative privileges using tools such as Sudo on Linux/UNIX, RunAs on Windows, and other similar facilities for other types of systems.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC5 Controlled Use of Administrative Privileges",
-          "description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--39c325ab-e34c-45a8-9188-a64228c421a3",
       "labels": [
@@ -1320,7 +1227,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--aae656da-2b72-44a0-89b1-08151700cfbb"
     },
@@ -1345,7 +1251,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--7d81bd58-8960-485e-88a4-00a4898b20fb"
     },
@@ -1370,7 +1275,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--d68cad1c-40bb-4455-8ae2-93ccbd18be18"
     },
@@ -1395,7 +1299,6 @@
           "phase_name": "credential-access"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--93b90c60-1041-41bd-8200-962c79ff3b87"
     },
@@ -1406,13 +1309,6 @@
       "external_references": [],
       "name": "CSC 5.5",
       "description": "Configure systems to issue a log entry and alert on any unsuccessful login to an administrative account.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC5 Controlled Use of Administrative Privileges",
-          "description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--0504298b-64e0-4cfc-a776-2cf829665a9e",
       "labels": [
@@ -1427,13 +1323,6 @@
       "external_references": [],
       "name": "CSC 4.6",
       "description": "Monitor logs associated with any scanning activity and associated administrator accounts to ensure that this activity is limited to the timeframes of legitimate scans.  ",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC4 Vulnerability Assessment",
-          "description": "Continuously acquire, assess, and take action on new information in order to identify vulnerabilities, remediate, and minimize the window of opportunity for attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--395acb74-e5d5-4b9d-9bb9-1da10a0e18a0",
       "labels": [
@@ -1462,7 +1351,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--d1676272-6987-4929-8747-76070b7365bd"
     },
@@ -1473,13 +1361,6 @@
       "external_references": [],
       "name": "CSC 10.4",
       "description": "Ensure that key systems have at least one backup destination that is not continuously addressable through operating system calls.  This will mitigate the risk of attacks like CryptoLocker which seek to encrypt or damage data on all addressable data shares, including backup destinations.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC10 Data Recovery",
-          "description": "The processes and tools used to properly back up critical information with a proven methodology for timely recovery of it."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--64fa5041-b04d-4b1e-b90e-471f1abf4737",
       "labels": [
@@ -1509,7 +1390,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--95a4aab6-15ac-4107-8efd-ce5acee5a2eb"
     },
@@ -1520,13 +1400,6 @@
       "external_references": [],
       "name": "CSC 4.5",
       "description": "Deploy automated patch management tools and software update tools for operating system and software/applications on all systems for which such tools are available and safe.  Patches should be applied to all systems, even systems that are properly air gapped.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC4 Vulnerability Assessment",
-          "description": "Continuously acquire, assess, and take action on new information in order to identify vulnerabilities, remediate, and minimize the window of opportunity for attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--ff4d224a-bdab-4a4d-948b-51dfaa9837c8",
       "labels": [
@@ -1554,7 +1427,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "id": "attack-pattern--c3d3cd95-d415-4685-84ef-5f3f57ee55c0"
     },
     {
@@ -1578,7 +1450,6 @@
           "phase_name": "credential-access"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--e88968aa-1fb4-4784-8e4d-78e84da59542"
     },
@@ -1589,13 +1460,6 @@
       "external_references": [],
       "name": "CSC 6.6",
       "description": "Deploy a SIEM (Security Information and Event Management) or log analytic tools for log aggregation and consolidation from multiple machines and for log correlation and analysis.  Using the SIEM tool, system administrators and security personnel should devise profiles of common events from given systems so that they can tune detection to focus on unusual activity, avoid false positives, more rapidly identify anomalies, and Protect overwhelming analysts with insignificant alerts. ",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC6 Audit Logs",
-          "description": "Collect, manage, and analyze audit logs of events that could help detect, understand, or recover from an attack."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--d12e7674-4229-4fa0-b566-365af83c026b",
       "labels": [
@@ -1611,13 +1475,6 @@
       "external_references": [],
       "name": "CSC 5.1",
       "description": "Minimize administrative privileges and only use administrative accounts when they are required.  Implement focused auditing on the use of administrative privileged functions and monitor for anomalous behavior.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC5 Controlled Use of Administrative Privileges",
-          "description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--2a4dc07a-a7fb-45d6-90dd-431361d650e0",
       "labels": [
@@ -1632,13 +1489,6 @@
       "external_references": [],
       "name": "CSC 1.2",
       "description": "If the organization is dynamically assigning addresses using DHCP, then deploy dynamic host configuration protocol (DHCP) server logging, and use this information to improve the asset inventory and help detect unknown systems.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC1 Hardware Inventory",
-          "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--545c013c-3483-4ab4-9af9-3990614cfcbb",
       "labels": [
@@ -1653,13 +1503,6 @@
       "external_references": [],
       "name": "CSC 4.7",
       "description": "Compare the results from back-to-back vulnerability scans to verify that vulnerabilities were addressed either by patching, implementing a compensating control, or documenting and accepting a reasonable business risk. Such acceptance of business risks for existing vulnerabilities should be periodically reviewed to determine if newer compensating controls or subsequent patches can address vulnerabilities that were previously accepted, or if conditions have changed, increasing the risk.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC4 Vulnerability Assessment",
-          "description": "Continuously acquire, assess, and take action on new information in order to identify vulnerabilities, remediate, and minimize the window of opportunity for attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--6dedaff5-735a-4e16-bbe0-75829e09b489",
       "labels": [
@@ -1674,13 +1517,6 @@
       "external_references": [],
       "name": "CSC 8.6",
       "description": "Enable domain name system (DNS) query logging to detect hostname lookup for known malicious C2 domains.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC8 Malware Defense",
-          "description": "Control the installation, spread, and execution of malicious code at multiple points in the enterprise, while optimizing the use of automation to enable rapid updating of defense, data gathering, and corrective action."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--e5586b2a-00e1-4cd6-894c-53cfce1a20dd",
       "labels": [
@@ -3078,13 +2914,6 @@
       "external_references": [],
       "name": "CSC 8.3",
       "description": "Limit use of external devices to those with an approved, documented business need. Monitor for use and attempted use of external devices. Configure laptops, workstations, and servers so that they will not auto-run content from removable media, like USB tokens (i.e., “thumb drives”), USB hard drives, CDs/DVDs, FireWire devices, external serial advanced technology attachment devices, and mounted network shares. Configure systems so that they automatically conduct an anti-malware scan of removable media when inserted.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC8 Malware Defense",
-          "description": "Control the installation, spread, and execution of malicious code at multiple points in the enterprise, while optimizing the use of automation to enable rapid updating of defense, data gathering, and corrective action."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--d709a601-7a28-462e-9f33-31891defb2a8",
       "labels": [
@@ -3434,7 +3263,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--dd7c1bb7-f069-4f4a-87e6-7ca4b0b90a2d"
     },
@@ -3468,13 +3296,6 @@
       "external_references": [],
       "name": "CSC 10.3",
       "description": "Ensure that backups are properly protected via physical security or encryption when they are stored, as well as when they are moved across the network.  This includes remote backups and cloud services.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC10 Data Recovery",
-          "description": "The processes and tools used to properly back up critical information with a proven methodology for timely recovery of it."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--1dc11a5c-46fc-45e8-96ba-e23eb3ad0910",
       "labels": [
@@ -3555,13 +3376,6 @@
       "external_references": [],
       "name": "CSC 2.4",
       "description": "Virtual machines and/or air-gapped systems should be used to isolate and run applications that are required for business operations but based on higher risk should not be installed within a networked environment. ",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC2 Software Inventory",
-          "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--6ae46694-87b8-49e5-bd0e-dcb7285c215f",
       "labels": [
@@ -3641,13 +3455,6 @@
       "external_references": [],
       "name": "CSC 3.2",
       "description": "Follow strict configuration management, building a secure image that is used to build all new systems that are deployed in the enterprise.  Any existing system that becomes compromised should be re-imaged with the secure build. Regular updates or exceptions to this image should be integrated into the organization’s change management processes.  Images should be created for workstations, servers, and other system types used by the organization.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC3 Secure Configurations for Hardware and Software",
-          "description": "Establish, implement, and actively manage (track, report on, correct) the security configuration of laptops, servers, and workstations using a rigorous configuration management and change control process in order to prevent attackers from exploiting vulnerable services and settings."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--dfa439cd-7466-496c-90e9-498313f4fab5",
       "labels": [
@@ -3795,7 +3602,6 @@
           "phase_name": "collection"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--1154b9d4-2c49-4269-8dc3-9f61fc510cf4"
     },
@@ -3820,7 +3626,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--2bd0c119-48b4-4aef-8995-c17ea5334be0"
     },
@@ -3845,7 +3650,6 @@
           "phase_name": "collection"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--077f6598-d53b-4e47-8b36-ce9a6f4a2155"
     },
@@ -3870,7 +3674,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--1aeb7750-22f5-4010-818b-e4524964f079"
     },
@@ -3895,7 +3698,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--375220a7-b5e9-4d57-83b9-c357f3096d1a"
     },
@@ -3924,7 +3726,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--46d01ec8-43dd-4adc-8494-74ef477e3ec1"
     },
@@ -3949,7 +3750,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--3fd331c8-1c3f-4889-88f2-11c8ac28254d"
     },
@@ -3974,7 +3774,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--352c465b-9071-4933-87dd-af3309e6602a"
     },
@@ -3999,7 +3798,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--4c2fe815-0791-4ad3-8c41-25042ca83532"
     },
@@ -4024,7 +3822,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--53b2162b-b448-472d-8bb9-0720d0891e41"
     },
@@ -4049,7 +3846,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--5168404f-16e1-4ea0-864d-a8c546e8cb7b"
     },
@@ -4074,7 +3870,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--68f387d6-21f1-4a39-8f3c-ec0407b844e4"
     },
@@ -4103,7 +3898,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--5f492dcb-f433-450c-83c4-002589d4b446"
     },
@@ -4128,7 +3922,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 3,
       "type": "attack-pattern",
       "id": "attack-pattern--7ffd7ab5-d331-4c63-8d55-0c7a6a2f5532"
     },
@@ -4153,7 +3946,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--7f9d9176-d7d3-4f28-8fed-3ea72c099d9f"
     },
@@ -4178,7 +3970,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--92ed0ca4-41ef-4cee-81f1-5e290af85224"
     },
@@ -4203,7 +3994,6 @@
           "phase_name": "exfiltration"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--39f60500-a027-4278-8923-59a0f7450ce6"
     },
@@ -4232,7 +4022,6 @@
           "phase_name": "credential-access"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--bf291398-2dcc-4577-8120-b6c75d74ee06"
     },
@@ -4257,7 +4046,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--cebb31d3-090f-441d-8c10-36d4aafaf83e"
     },
@@ -4282,7 +4070,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--d4872ee4-448a-4bdd-89f9-41d811d331f9"
     },
@@ -4307,7 +4094,6 @@
           "phase_name": "collection"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--de8ebbc2-c5bc-450b-83f7-25992e6aa570"
     },
@@ -4336,7 +4122,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--ca8dbf07-00c6-4c69-8fec-53375e2b471c"
     },
@@ -4365,7 +4150,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--fdc9276a-b5b6-4cbd-8141-7b8f6ac4e15b"
     },
@@ -4376,13 +4160,6 @@
       "external_references": [],
       "name": "CSC 2.1",
       "description": "Devise a list of authorized software and version that is required in the enterprise for each type of system, including servers, workstations, and laptops of various kinds and uses.  This list should be monitored by file integrity checking tools to validate that the authorized software has not been modified.\n",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC2 Software Inventory",
-          "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--19ade15a-d875-4fcf-806d-1c49d844f9db",
       "labels": [
@@ -4397,13 +4174,6 @@
       "external_references": [],
       "name": "CSC 5.4",
       "description": "Configure systems to issue a log entry and alert when an account is added to or removed from a domain administrators’ group, or when a new local administrator account is added on a system.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC5 Controlled Use of Administrative Privileges",
-          "description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--20cc736b-17d5-4117-b7f0-5e8853ecf14a",
       "labels": [
@@ -4418,13 +4188,6 @@
       "external_references": [],
       "name": "CSC 9.2",
       "description": "Apply host-based firewalls or port filtering tools on end systems, with a default-deny rule that drops all traffic except those services and ports that are explicitly allowed.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC9 Control of Network Ports",
-          "description": "Manage (track/control/correct) the ongoing operational use of ports, protocols, and services on networked devices in order to minimize windows of vulnerability available to attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--3f8255c2-a541-4634-b355-3a8d856bf4df",
       "labels": [
@@ -4440,13 +4203,6 @@
       "external_references": [],
       "name": "CSC 8.1",
       "description": "Employ automated tools to continuously monitor workstations, servers, and mobile devices with anti-virus, anti-spyware, personal firewalls, and host-based IPS functionality. All malware detection events should be sent to enterprise anti-malware administration tools and event log servers.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC8 Malware Defense",
-          "description": "Control the installation, spread, and execution of malicious code at multiple points in the enterprise, while optimizing the use of automation to enable rapid updating of defense, data gathering, and corrective action."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--6863bc2e-58dd-48ef-a111-4489dfb34dac",
       "labels": [
@@ -4476,7 +4232,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--65900064-0968-4dc4-87ec-f386fc2b0a7a"
     },
@@ -4487,13 +4242,6 @@
       "external_references": [],
       "name": "CSC 3.3",
       "description": "Store the master images on securely configured servers, validated with integrity checking tools capable of continuous inspection, and change management to ensure that only authorized changes to the images are possible. Alternatively, these master images can be stored in offline machines, air-gapped from the production network, with images copied via secure media to move them between the image storage servers and the production network.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC3 Secure Configurations for Hardware and Software",
-          "description": "Establish, implement, and actively manage (track, report on, correct) the security configuration of laptops, servers, and workstations using a rigorous configuration management and change control process in order to prevent attackers from exploiting vulnerable services and settings."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--6ef2fc6f-3895-418f-bdf0-63c3f0948632",
       "labels": [
@@ -4508,13 +4256,6 @@
       "external_references": [],
       "name": "CSC 2.3",
       "description": "Deploy software inventory tools throughout the organization covering each of the operating system types in use, including servers, workstations, and laptops. The software inventory system should track the version of the underlying operating system as well as the applications installed on it. The software inventory systems must be tied into the hardware asset inventory so all devices and associated software are tracked from a single location.\n",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC2 Software Inventory",
-          "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--89744af5-3c3f-4422-8db0-0689d168489f",
       "labels": [
@@ -4529,13 +4270,6 @@
       "external_references": [],
       "name": "CSC 6.3",
       "description": "Ensure that all systems that store logs have adequate storage space for the logs generated on a regular basis, so that log files will not fill up between log rotation intervals.  The logs must be archived and digitally signed on a periodic basis.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC6 Audit Logs",
-          "description": "Collect, manage, and analyze audit logs of events that could help detect, understand, or recover from an attack."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--d2eddf83-36b6-418b-b5f1-2f6fbb352fa6",
       "labels": [
@@ -4550,13 +4284,6 @@
       "external_references": [],
       "name": "CSC 4.8",
       "description": "Establish a process to risk-rate vulnerabilities based on the exploitability and potential impact of the vulnerability, and segmented by appropriate groups of assets (example, DMZ servers, internal network servers, desktops, laptops).  Apply patches for the riskiest vulnerabilities first.  A phased rollout can be used to minimize the impact to the organization. Establish expected patching timelines based on the risk rating level. ",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC4 Vulnerability Assessment",
-          "description": "Continuously acquire, assess, and take action on new information in order to identify vulnerabilities, remediate, and minimize the window of opportunity for attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--fdd1250f-80d3-404f-b803-e8bdea271199",
       "labels": [
@@ -4585,7 +4312,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--a0f2934b-4dc7-432b-86c0-ffaaccbc3561"
     },
@@ -4610,7 +4336,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--d2143637-1f59-40c2-8106-2c31e80e05bb"
     },
@@ -4635,7 +4360,6 @@
           "phase_name": "collection"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--f8f9016e-90c4-4fd2-875f-bc6628f54fc9"
     },
@@ -4646,13 +4370,6 @@
       "external_references": [],
       "name": "CSC 5.2",
       "description": "Use automated tools to inventory all administrative accounts and validate that each person with administrative privileges on desktops, laptops, and servers is authorized by a senior executive.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC5 Controlled Use of Administrative Privileges",
-          "description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--aa28725c-51ab-45fc-9ce4-e3926a9dd940",
       "labels": [
@@ -4667,13 +4384,6 @@
       "external_references": [],
       "name": "CSC 7.5",
       "description": "Deploy two separate browser configurations to each system. One configuration should disable the use of all plugins, unnecessary scripting languages, and generally be configured with limited functionality and be used for general web browsing. The other configuration shall allow for more browser functionality but should only be used to access specific websites that require the use of such functionality.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "CSC",
-          "phase_name": "CSC7 Email and Browser Protections",
-          "description": "Minimize the attack surface and the opportunities for attackers to manipulate human behavior though their interaction with web browsers and email systems."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--d6c6ed6e-701c-46df-a420-cf016320bc35",
       "labels": [
@@ -4689,13 +4399,6 @@
       "external_references": [],
       "name": "CSC 9.4",
       "description": "Verify any server that is visible from the Internet or an untrusted network, and if it is not required for business purposes, move it to an internal VLAN and give it a private address.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC9 Control of Network Ports",
-          "description": "Manage (track/control/correct) the ongoing operational use of ports, protocols, and services on networked devices in order to minimize windows of vulnerability available to attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--8910c774-5ba3-4098-a2c5-bcde44f00f1f",
       "labels": [
@@ -5563,13 +5266,6 @@
       "external_references": [],
       "name": "CSC 7.1",
       "description": "Ensure that only fully supported web browsers and email clients are allowed to execute in the organization, ideally only using the latest version of the browsers provided by the vendor in order to take advantage of the latest security functions and fixes.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "CSC",
-          "phase_name": "CSC7 Email and Browser Protections",
-          "description": "Minimize the attack surface and the opportunities for attackers to manipulate human behavior though their interaction with web browsers and email systems."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--c54e384e-4a16-4de5-aae6-2dad7102d5ea",
       "labels": [
@@ -5918,7 +5614,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--d688f0b4-71d7-4cae-846d-4e45e8cdf0cb"
     },
@@ -5929,13 +5624,6 @@
       "external_references": [],
       "name": "CSC 5.9",
       "description": "Administrators shall use a dedicated machine for all administrative tasks or tasks requiring elevated access. This machine shall be isolated from the organization's primary network and not be allowed Internet access. This machine shall not be used for reading e-mail, composing documents, or surfing the Internet.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC5 Controlled Use of Administrative Privileges",
-          "description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--045c6f31-d329-40b0-b819-660d77b6cd58",
       "labels": [
@@ -5950,13 +5638,6 @@
       "external_references": [],
       "name": "CSC 4.1",
       "description": "Run automated vulnerability scanning tools against all systems on the network on a weekly or more frequent basis and deliver prioritized lists of the most critical vulnerabilities to each responsible system administrator along with risk scores that compare the effectiveness of system administrators and departments in reducing risk.  Use a SCAP-validated vulnerability scanner that looks for both code-based vulnerabilities (such as those described by Common Vulnerabilities and Exposures entries) and configuration-based vulnerabilities (as enumerated by the Common Configuration Enumeration Project).",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC4 Vulnerability Assessment",
-          "description": "Continuously acquire, assess, and take action on new information in order to identify vulnerabilities, remediate, and minimize the window of opportunity for attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--61881633-a9ad-49e7-a83c-dbe7687d4832",
       "labels": [
@@ -5971,13 +5652,6 @@
       "external_references": [],
       "name": "CSC 7.2",
       "description": "Uninstall or disable any unnecessary or unauthorized browser or email client plugins or add-on applications. Each plugin shall utilize application / URL whitelisting and only allow the use of the application for pre-approved domains.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "CSC",
-          "phase_name": "CSC7 Email and Browser Protections",
-          "description": "Minimize the attack surface and the opportunities for attackers to manipulate human behavior though their interaction with web browsers and email systems."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--c6e0b64a-8e41-4bc0-9c91-ea4ec8974b66",
       "labels": [
@@ -6349,7 +6023,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--3f3dd034-e43a-4101-80cd-f6d6d515cd4c"
     },
@@ -6374,7 +6047,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--4b363289-669a-4310-851a-a1ea0574af46"
     },
@@ -6399,7 +6071,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--52db62de-d700-4dd0-894d-7ce0bcf4e54c"
     },
@@ -6424,7 +6095,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--710851e4-b609-482c-810b-cd449822635f"
     },
@@ -6457,7 +6127,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--718af91b-9a3b-4491-8ca7-b77fb84e4f5f"
     },
@@ -6481,7 +6150,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "id": "attack-pattern--818de9e4-3462-4201-9cf6-79068d5264d5"
     },
     {
@@ -6505,7 +6173,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--9c67620d-a0fd-429c-8385-09ff89f06280"
     },
@@ -6530,7 +6197,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--adeb5574-0649-461b-822c-7706c2607971"
     },
@@ -6559,7 +6225,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--9b09a83f-9602-4a2f-832b-9d5c2417e1cf"
     },
@@ -6588,7 +6253,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--aaec23f3-1751-4d5d-8e22-d89fe8e3e6b7"
     },
@@ -6613,7 +6277,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 3,
       "type": "attack-pattern",
       "id": "attack-pattern--d97a3d94-c075-4707-81b3-ec78d851c88d"
     },
@@ -6642,7 +6305,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": 3,
       "type": "attack-pattern",
       "id": "attack-pattern--e486d928-7424-4239-80d8-e5a56e8524b7"
     },
@@ -6667,7 +6329,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--d3ee473a-6a9e-4f0d-83d6-b24dd7020c9c"
     },
@@ -6692,7 +6353,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--f61d9afe-3461-45b2-8792-4aa2f2c1d958"
     },
@@ -6717,7 +6377,6 @@
           "phase_name": "command-and-control"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--e1b1efcf-c2d0-4150-8033-e11874e7d34a"
     },
@@ -6728,13 +6387,6 @@
       "external_references": [],
       "name": "CSC 1.4",
       "description": "Maintain an asset inventory of all systems connected to the network and the network devices themselves, recording at least the network addresses, machine name(s), purpose of each system, an asset owner responsible for each device, and the department associated with each device. The inventory should include every system that has an Internet protocol (IP) address on the network, including but not limited to desktops, laptops, servers, network equipment (routers, switches, firewalls, etc.), printers, storage area networks, Voice Over-IP telephones, multi-homed addresses, virtual addresses, etc.  The asset inventory created must also include data on whether the device is a portable and/or personal device. Devices such as mobile phones, tablets, laptops, and other portable electronic devices that store or process data must be identified, regardless of whether they are attached to the organization’s network.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC1 Hardware Inventory",
-          "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--446c6939-7b6c-4f4a-8051-7dd99c3c90b4",
       "labels": [
@@ -6749,13 +6401,6 @@
       "external_references": [],
       "name": "CSC 8.2",
       "description": "Employ anti-malware software that offers a centralized infrastructure that compiles information on file reputations or have administrators manually push updates to all machines. After applying an update, automated systems should verify that each system has received its signature update.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC8 Malware Defense",
-          "description": "Control the installation, spread, and execution of malicious code at multiple points in the enterprise, while optimizing the use of automation to enable rapid updating of defense, data gathering, and corrective action."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--27377f75-28af-4a7c-b06d-af8f69a6d779",
       "labels": [
@@ -6771,13 +6416,6 @@
       "external_references": [],
       "name": "CSC 9.6",
       "description": "Place application firewalls in front of any critical servers to verify and validate the traffic going to the server.  Any unauthorized services or traffic should be blocked and an alert generated.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC9 Control of Network Ports",
-          "description": "Manage (track/control/correct) the ongoing operational use of ports, protocols, and services on networked devices in order to minimize windows of vulnerability available to attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--acc99d7c-5675-4f22-be76-90c7c196420b",
       "labels": [
@@ -6793,13 +6431,6 @@
       "external_references": [],
       "name": "CSC 7.8",
       "description": "Scan and block all e-mail attachments entering the organization's e-mail gateway if they contain malicious code or file types that are unnecessary for the organization's business. This scanning should be done before the e-mail is placed in the user's inbox. This includes e-mail content filtering and web content filtering.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "CSC",
-          "phase_name": "CSC7 Email and Browser Protections",
-          "description": "Minimize the attack surface and the opportunities for attackers to manipulate human behavior though their interaction with web browsers and email systems."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--2b0588e5-0a59-4c81-82c8-df9ca0b2979d",
       "labels": [
@@ -6815,13 +6446,6 @@
       "external_references": [],
       "name": "CSC 4.3",
       "description": "Perform vulnerability scanning in authenticated mode either with agents running locally on each end system to analyze the security configuration or with remote scanners that are given administrative rights on the system being tested. Use a dedicated account for authenticated vulnerability scans, which should not be used for any other administrative activities and should be tied to specific machines at specific IP addresses.  Ensure that only authorized employees have access to the vulnerability management user interface and that roles are applied to each user.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC4 Vulnerability Assessment",
-          "description": "Continuously acquire, assess, and take action on new information in order to identify vulnerabilities, remediate, and minimize the window of opportunity for attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--5b039b3b-a199-4083-870c-6912918aafa5",
       "labels": [
@@ -6836,13 +6460,6 @@
       "external_references": [],
       "name": "CSC 5.6",
       "description": "Use multifactor authentication for all administrative access, including domain administrative access.  Multi-factor authentication can include a variety of techniques, to include the use of smart cards, certificates, One Time Password (OTP) tokens, biometrics, or other similar authentication methods.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC5 Controlled Use of Administrative Privileges",
-          "description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--73c3b80c-5ff4-4e9a-bc64-26a252ae287a",
       "labels": [
@@ -6871,7 +6488,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--6f2a245e-9976-4d37-8be0-5163f4e75ceb"
     },
@@ -6882,13 +6498,6 @@
       "external_references": [],
       "name": "CSC 7.7",
       "description": "To lower the chance of spoofed e-mail messages, implement the Sender Policy Framework (SPF) by deploying SPF records in DNS and enabling receiver-side verification in mail servers.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "CSC",
-          "phase_name": "CSC7 Email and Browser Protections",
-          "description": "Minimize the attack surface and the opportunities for attackers to manipulate human behavior though their interaction with web browsers and email systems."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--80280b26-45b0-42d5-8b91-6fafb2dbea5b",
       "labels": [
@@ -6914,13 +6523,6 @@
       "external_references": [],
       "name": "CSC 7.4",
       "description": "Log all URL requests from each of the organization's systems, whether onsite or a mobile device, in order to identify potentially malicious activity and assist incident handlers with identifying potentially compromised systems.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "CSC",
-          "phase_name": "CSC7 Email and Browser Protections",
-          "description": "Minimize the attack surface and the opportunities for attackers to manipulate human behavior though their interaction with web browsers and email systems."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--b3396dcd-7fa5-4824-a917-491fedd18441",
       "labels": [
@@ -6946,13 +6548,6 @@
       "external_references": [],
       "name": "CSC 3.6",
       "description": "Implement and test an automated configuration monitoring system that verifies all remotely testable secure configuration elements, and alerts when unauthorized changes occur. This includes detecting new listening ports, new administrative users, changes to group and local policy objects (where applicable), and new services running on a system. Whenever possible use tools compliant with the Security Content Automation Protocol (SCAP) in order to streamline reporting and integration.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC3 Secure Configurations for Hardware and Software",
-          "description": "Establish, implement, and actively manage (track, report on, correct) the security configuration of laptops, servers, and workstations using a rigorous configuration management and change control process in order to prevent attackers from exploiting vulnerable services and settings."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--e9b398ad-4ecb-4693-82b2-9f9be7a71d88",
       "labels": [
@@ -6992,7 +6587,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--8055997d-c007-4611-81c8-5a5ef4bb7b15"
     },
@@ -7028,7 +6622,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--b15ee8f6-24e3-41e0-8816-0f827639be20"
     },
@@ -7064,7 +6657,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--dd8a6be5-7f99-400b-8542-d69cf2d2f900"
     },
@@ -7085,13 +6677,6 @@
       "external_references": [],
       "name": "CSC 6.4",
       "description": "Have security personnel and/or system administrators run biweekly reports that identify anomalies in logs. They should then actively review the anomalies, documenting their findings.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC6 Audit Logs",
-          "description": "Collect, manage, and analyze audit logs of events that could help detect, understand, or recover from an attack."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--1ff43ecc-594b-4a17-9335-df1840100835",
       "labels": [
@@ -7118,13 +6703,6 @@
       "external_references": [],
       "name": "CSC 3.1",
       "description": "Establish standard secure configurations of your operating systems and software applications. Standardized images should represent hardened versions of the underlying operating system and the applications installed on the system. These images should be validated and refreshed on a regular basis to update their security configuration in light of recent vulnerabilities and attack vectors.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC3 Secure Configurations for Hardware and Software",
-          "description": "Establish, implement, and actively manage (track, report on, correct) the security configuration of laptops, servers, and workstations using a rigorous configuration management and change control process in order to prevent attackers from exploiting vulnerable services and settings."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--b937a3d3-95a9-47ba-8e1d-66398ac8a43f",
       "labels": [
@@ -7150,13 +6728,6 @@
       "external_references": [],
       "name": "CSC 9.5",
       "description": "Operate critical services on separate physical or logical host machines, such as DNS, file, mail, web, and database servers.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC9 Control of Network Ports",
-          "description": "Manage (track/control/correct) the ongoing operational use of ports, protocols, and services on networked devices in order to minimize windows of vulnerability available to attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--ee792f77-32ef-461b-8b56-b3a6f91012ff",
       "labels": [
@@ -7183,13 +6754,6 @@
       "external_references": [],
       "name": "CSC 8.4",
       "description": "Enable anti-exploitation features such as Data Execution Protection (DEP), Address Space Layout Randomization (ASLR), virtualization / containerization, etc. For increased protection, deploy capabilities such as Enhanced Mitigation Experience Toolkit (EMET) that can be configured to apply these protections to a broader set of applications and executables.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC8 Malware Defense",
-          "description": "Control the installation, spread, and execution of malicious code at multiple points in the enterprise, while optimizing the use of automation to enable rapid updating of defense, data gathering, and corrective action."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--7b35838e-abc6-4b14-adda-8109d1847ce4",
       "labels": [
@@ -7237,13 +6801,6 @@
       "external_references": [],
       "name": "CSC 3.4",
       "description": "Perform all remote administration of servers, workstation, network devices, and similar equipment over secure channels. Protocols such as telnet, VNC, RDP, or others that do not actively support strong encryption should only be used if they are performed over a secondary encryption channel, such as SSL, TLS or IPSEC.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC3 Secure Configurations for Hardware and Software",
-          "description": "Establish, implement, and actively manage (track, report on, correct) the security configuration of laptops, servers, and workstations using a rigorous configuration management and change control process in order to prevent attackers from exploiting vulnerable services and settings."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--f6cbf315-3cce-43a0-bb24-c1f0ccf812e7",
       "labels": [
@@ -8059,13 +7616,6 @@
       "external_references": [],
       "name": "CSC 1.6",
       "description": "Use client certificates to validate and authenticate systems prior to connecting to the private network.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC1 Hardware Inventory",
-          "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--86e4d81f-4c9b-42c9-926c-5c5d04897a52",
       "labels": [
@@ -8384,7 +7934,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--e0004835-95f0-4dae-8084-4fe760d910b7"
     },
@@ -8395,13 +7944,6 @@
       "external_references": [],
       "name": "CSC 6.1",
       "description": "Include at least two synchronized time sources from which all servers and network equipment retrieve time information on a regular basis so that timestamps in logs are consistent.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC6 Audit Logs",
-          "description": "Collect, manage, and analyze audit logs of events that could help detect, understand, or recover from an attack."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--28619fed-8577-422d-89f0-45c6df486ae7",
       "labels": [
@@ -8416,13 +7958,6 @@
       "external_references": [],
       "name": "CSC 10.1",
       "description": "Ensure that each system is automatically backed up on at least a weekly basis, and more often for systems storing sensitive information. To help ensure the ability to rapidly restore a system from backup, the operating system, application software, and data on a machine should each be included in the overall backup procedure. These three components of a system do not have to be included in the same backup file or use the same backup software. There should be multiple backups over time, so that in the event of malware infection, restoration can be from a version that is believed to predate the original infection. All backup policies should be compliant with any regulatory or official requirements.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC10 Data Recovery",
-          "description": "The processes and tools used to properly back up critical information with a proven methodology for timely recovery of it."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--749e2865-9706-4517-a631-4eccddcd0c54",
       "labels": [
@@ -8438,13 +7973,6 @@
       "external_references": [],
       "name": "CSC 7.3",
       "description": "Limit the use of unnecessary scripting languages in all web browsers and email clients. This includes the use of languages such as ActiveX and JavaScript on systems where it is unnecessary to support such capabilities.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "CSC",
-          "phase_name": "CSC7 Email and Browser Protections",
-          "description": "Minimize the attack surface and the opportunities for attackers to manipulate human behavior though their interaction with web browsers and email systems."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--f62a653a-1fe7-4303-a01c-a5fe49a8eeec",
       "labels": [
@@ -9022,7 +8550,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--081098a4-1583-4dc3-80c2-101b1943c5e5"
     },
@@ -9047,7 +8574,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--203f567f-2bd6-41c4-8482-caa769eb6301"
     },
@@ -9072,7 +8598,6 @@
           "phase_name": "credential-access"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--3c754741-a537-455d-8278-6c806afbe641"
     },
@@ -9097,7 +8622,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--3ae3c259-596e-4dd8-8bb8-4a9ed94c28d5"
     },
@@ -9122,7 +8646,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 3,
       "type": "attack-pattern",
       "id": "attack-pattern--53aa91f9-480a-479f-8b9e-9dcebabd1b9d"
     },
@@ -9147,7 +8670,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--4aaaeb3b-1a44-4ded-8dbb-737ba6c701cd"
     },
@@ -9172,7 +8694,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": null,
       "type": "attack-pattern",
       "id": "attack-pattern--59c3a0fe-6657-45b9-8431-532faebf6a2b"
     },
@@ -9197,7 +8718,6 @@
           "phase_name": "exfiltration"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--7c7d0de7-4775-46d4-8fb7-f28a4573005d"
     },
@@ -9224,7 +8744,6 @@
           "id": ""
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "id": "attack-pattern--1cb13e3a-d997-4051-b88f-db7d341e5485"
     },
     {
@@ -9250,7 +8769,6 @@
           "id": null
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "id": "attack-pattern--30b589f4-0a1d-4dc2-b87e-cb4d392bdc12"
     },
     {
@@ -9282,7 +8800,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--8af72bd4-5cc3-49de-880c-a95bd6b263cd"
     },
@@ -9307,7 +8824,6 @@
           "phase_name": "collection"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--a25d8098-4f97-4d20-8564-a5a8d892eae6"
     },
@@ -9336,7 +8852,6 @@
           "phase_name": "lateral-movement"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--b3ac34c7-d232-4ef1-85c8-f19caa1aa581"
     },
@@ -9361,7 +8876,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--cc45ac58-81e3-4e3c-8fc0-28157951699e"
     },
@@ -9386,7 +8900,6 @@
           "phase_name": "collection"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--d4723ba8-d48e-43f7-8e34-239f72b4cf0d"
     },
@@ -9415,7 +8928,6 @@
           "phase_name": "execution"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--da5b978a-15b5-4176-8c80-5229d0111e8f"
     },
@@ -9440,7 +8952,6 @@
           "phase_name": "exfiltration"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--e57f210a-8c24-45c5-80b5-2c20f1dac2a6"
     },
@@ -9465,7 +8976,6 @@
           "phase_name": "discovery"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--fd901ec2-a649-43f4-88eb-55f0c28ff81e"
     },
@@ -9476,13 +8986,6 @@
       "external_references": [],
       "name": "CSC 1.1",
       "description": "Deploy an automated asset inventory discovery tool and use it to build a preliminary inventory of systems connected to an organization’s public and private network(s). Both active tools that scan through IPv4 or IPv6 network address ranges and passive tools that identify hosts based on analyzing their traffic should be employed.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC1 Hardware Inventory",
-          "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--119a6d1f-fb6e-4adc-904e-95c28f6f599b",
       "labels": [
@@ -9497,13 +9000,6 @@
       "external_references": [],
       "name": "CSC 5.7",
       "description": "Where multi-factor authentication is not supported, user accounts shall be required to use long passwords on the system (longer than 14 characters). ",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC5 Controlled Use of Administrative Privileges",
-          "description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--0af31d24-3136-4701-ac87-13a8fa4fe15b",
       "labels": [
@@ -9518,13 +9014,6 @@
       "external_references": [],
       "name": "CSC 5.3",
       "description": "Before deploying any new devices in a networked environment, change all default passwords for applications, operating systems, routers, firewalls, wireless access points, and other systems to have values consistent with administration-level accounts.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC5 Controlled Use of Administrative Privileges",
-          "description": "The processes and tools used to track/control/prevent/correct the use, assignment, and configuration of administrative privileges on computers, networks, and applications."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--30533f16-57ba-46b8-bdc0-31d24ef89828",
       "labels": [
@@ -9539,13 +9028,6 @@
       "external_references": [],
       "name": "CSC 2.2",
       "description": "Deploy application whitelisting technology that allows systems to run software only if it is included on the whitelist and Protects execution of all other software on the system. The whitelist may be very extensive (as is available from commercial whitelist vendors), so that users are not inconvenienced when using common software. Or, for some special-purpose systems (which require only a small number of programs to achieve their needed business functionality), the whitelist may be quite narrow.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC2 Software Inventory",
-          "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--5ce34eec-6484-4c72-afb2-e5735bb6cf89",
       "labels": [
@@ -9574,7 +9056,6 @@
           "phase_name": "exfiltration"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--5665ede3-6c98-42b6-8d44-60b1e112a285"
     },
@@ -9585,13 +9066,6 @@
       "external_references": [],
       "name": "CSC 4.2",
       "description": "Run automated vulnerability scanning tools against all systems on the network on a weekly or more frequent basis and deliver prioritized lists of the most critical vulnerabilities to each responsible system administrator along with risk scores that compare the effectiveness of system administrators and departments in reducing risk.  Use a SCAP-validated vulnerability scanner that looks for both code-based vulnerabilities (such as those described by Common Vulnerabilities and Exposures entries) and configuration-based vulnerabilities (as enumerated by the Common Configuration Enumeration Project).",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC4 Vulnerability Assessment",
-          "description": "Continuously acquire, assess, and take action on new information in order to identify vulnerabilities, remediate, and minimize the window of opportunity for attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--657e5bca-7610-4410-a21b-f7f617987772",
       "labels": [
@@ -9620,7 +9094,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--89746dc6-8724-4828-8004-aeed6eb9c23d"
     },
@@ -9645,7 +9118,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 0,
       "type": "attack-pattern",
       "id": "attack-pattern--a91d40c2-9e35-42ce-8ff0-ddda534b1034"
     },
@@ -9670,7 +9142,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--c3053154-bb0d-42af-8272-7517ea71ee92"
     },
@@ -9699,7 +9170,6 @@
           "phase_name": "privilege-escalation"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--89d5208f-3f07-4e91-899c-f5fd8778cca3"
     },
@@ -9724,7 +9194,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--b8a2657e-a2c9-4e52-85f9-a32337cafc67"
     },
@@ -9753,7 +9222,6 @@
           "phase_name": "persistence"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "type": "attack-pattern",
       "id": "attack-pattern--e1a029dd-f930-40ba-8a1c-0adf9153e955"
     },
@@ -9764,13 +9232,6 @@
       "external_references": [],
       "name": "CSC 4.4",
       "description": "Subscribe to vulnerability intelligence services in order to stay aware of emerging exposures, and use the information gained from this subscription to update the organization’s vulnerability scanning activities on at least a monthly basis.  Alternatively, ensure that the vulnerability scanning tools you use are regularly updated with all relevant important security vulnerabilities.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC4 Vulnerability Assessment",
-          "description": "Continuously acquire, assess, and take action on new information in order to identify vulnerabilities, remediate, and minimize the window of opportunity for attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--861d772e-32c1-41c8-b5e6-badc1030f7fa",
       "labels": [
@@ -9785,13 +9246,6 @@
       "external_references": [],
       "name": "CSC 8.5",
       "description": "Use network-based anti-malware tools to identify executables in all network traffic and use techniques other than signature-based detection to identify and filter out malicious content before it arrives at the endpoint.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC8 Malware Defense",
-          "description": "Control the installation, spread, and execution of malicious code at multiple points in the enterprise, while optimizing the use of automation to enable rapid updating of defense, data gathering, and corrective action."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--b152f2d8-91f7-47a2-a1cf-4302e6d939b7",
       "labels": [
@@ -10512,13 +9966,6 @@
       "external_references": [],
       "name": "CSC 9.1",
       "description": "Ensure that only ports, protocols, and services with validated business needs are running on each system.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC9 Control of Network Ports",
-          "description": "Manage (track/control/correct) the ongoing operational use of ports, protocols, and services on networked devices in order to minimize windows of vulnerability available to attackers."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--abefb6b3-cc04-4842-81f5-303c27b82243",
       "labels": [
@@ -10534,13 +9981,6 @@
       "external_references": [],
       "name": "CSC 6.5",
       "description": "Configure network boundary devices, including firewalls, network-based IPS, and inbound and outbound proxies, to verbosely log all traffic (both allowed and blocked) arriving at the device.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC6 Audit Logs",
-          "description": "Collect, manage, and analyze audit logs of events that could help detect, understand, or recover from an attack."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--f472db22-9265-4402-b1c6-3d18f1d9202c",
       "labels": [
@@ -10853,7 +10293,6 @@
           "phase_name": "defense-evasion"
         }
       ],
-      "x_unfetter_sophistication_level": 1,
       "type": "attack-pattern",
       "id": "attack-pattern--e69a29ff-0345-4907-83b4-b5f1c39e3a65"
     },
@@ -10864,13 +10303,6 @@
       "external_references": [],
       "name": "CSC 7.6",
       "description": "The organization shall maintain and enforce network based URL filters that limit a system's ability to connect to websites not approved by the organization. The organization shall subscribe to URL categorization services to ensure that they are up-to-date with the most recent website category definitions available. Uncategorized sites shall be blocked by default. This filtering shall be enforced for each of the organization's systems, whether they are physically at an organization's facilities or not.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "CSC",
-          "phase_name": "CSC7 Email and Browser Protections",
-          "description": "Minimize the attack surface and the opportunities for attackers to manipulate human behavior though their interaction with web browsers and email systems."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--390fb9ac-4627-4c0a-9562-abd5565b9723",
       "labels": [
@@ -10886,13 +10318,6 @@
       "external_references": [],
       "name": "CSC 1.3",
       "description": "Ensure that all equipment acquisitions automatically update the inventory system as new, approved devices are connected to the network.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "csc",
-          "phase_name": "CSC1 Hardware Inventory",
-          "description": "Actively manage (inventory, track, and correct) all software on the network so that only authorized software is installed and can execute, and that unauthorized and unmanaged software is found and prevented from installation or execution."
-        }
-      ],
       "type": "course-of-action",
       "id": "course-of-action--8817f0c1-333f-4e3f-811f-8903931e3d08",
       "labels": [
@@ -19944,12 +19369,6 @@
       "name": "Network Analysis",
       "description": "Network monitoring and analysis device.",
       "version": 0,
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "sensors",
-          "phase_name": "network"
-        }
-      ],
       "aliases": [],
       "granular_markings": [],
       "external_references": [],
@@ -22302,12 +21721,6 @@
       "name": "Generic AV",
       "description": "Generic anti virus software",
       "version": 0,
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "sensors",
-          "phase_name": "host"
-        }
-      ],
       "aliases": [],
       "granular_markings": [],
       "external_references": [],
@@ -25100,12 +24513,6 @@
       "name": "Standard EDR",
       "description": "Generic endpoint detection and response tool.",
       "version": 0,
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "sensors",
-          "phase_name": "host"
-        }
-      ],
       "aliases": [],
       "granular_markings": [],
       "external_references": [],
@@ -33985,12 +33392,6 @@
       "name": "Enterprise SIEM",
       "description": "Enterprise SIEM",
       "version": 0,
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "sensors",
-          "phase_name": "security event and incident management (seim)"
-        }
-      ],
       "aliases": [
         ""
       ],
@@ -34039,12 +33440,6 @@
       "name": "Network Firewall",
       "description": "Network firewall device",
       "version": 0,
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "sensors",
-          "phase_name": "network"
-        }
-      ],
       "aliases": [],
       "granular_markings": [],
       "external_references": [],
@@ -35080,12 +34475,6 @@
       "name": "sysmon",
       "description": "System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time. By collecting the events it generates using Windows Event Collection or SIEM agents and subsequently analyzing them, you can identify malicious or anomalous activity and understand how intruders and malware operate on your network.",
       "version": 0,
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "sensors",
-          "phase_name": "host"
-        }
-      ],
       "external_references": [
         {
           "source_name": "Windows Sysinternals",
@@ -37526,7 +36915,6 @@
           "phase_name": "cool stuff"
         }
       ],
-      "x_unfetter_sophistication_level": 2,
       "id": "attack-pattern--6d5c7140-88fb-4a6b-8a1c-c2d11613c9c4"
     },
     {
