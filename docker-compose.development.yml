@@ -54,6 +54,7 @@ services:
      - /tmp/examples/mitre-attack-cis/stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
+     - /tmp/examples/unfetter-db/stix-meta.json
      - --config
      - /tmp/examples/unfetter-db/config.json
     depends_on:
