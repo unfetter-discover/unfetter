@@ -1,7 +1,7 @@
-version: '2'
+version: '3.0'
 services:
   unfetter-discover-gateway:
-    image: nginx:1.11
+    image: nginx:1.13.5
     container_name: unfetter-discover-gateway
     ports:
      - "443:443"
@@ -69,9 +69,10 @@ services:
     volumes:
      - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
     environment:
-     - API_HOST=apihost
-     - API_PORT=3000
-     - API_CONTEXT=/
+      - API_PROTOCOL=https
+      - API_HOST=apihost
+      - API_PORT=3000
+      - API_CONTEXT=/
     entrypoint: 
      - npm
      - run
@@ -80,6 +81,7 @@ services:
      - -f
      - /tmp/test-data/ctf-sample.csv
     depends_on:
+     - cti-stix-store-repository
      - unfetter-discover-api
     links:
      - unfetter-discover-api:apihost
