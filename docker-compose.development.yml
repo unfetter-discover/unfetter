@@ -1,7 +1,7 @@
-version: '3.0'
+version: '2.0'
 services:
   unfetter-discover-gateway:
-    image: nginx:1.13.5
+    image: nginx:1.13.5-alpine
     container_name: unfetter-discover-gateway
     ports:
      - "443:443"
@@ -85,11 +85,12 @@ services:
     depends_on:
      - cti-stix-store-repository
      - unfetter-discover-api
+     - unfetter-discover-processor
     links:
      - unfetter-discover-api:apihost
 
   cti-stix-store-repository:
-    image: mongo:3.4.1
+    image: mongo:3.5.9
     container_name: cti-stix-store-repository
     ports:
     - "27018:27017"
