@@ -57,6 +57,8 @@ services:
      - /tmp/examples/unfetter-db/stix-meta.json
      - --config
      - /tmp/examples/unfetter-db/config.json
+     - --add-mitre-data
+     - "true"
     depends_on:
      - cti-stix-store-repository
     links:
