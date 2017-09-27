@@ -4,53 +4,6 @@
   "spec_version": "2.0",
   "objects": [
     {
-      "created": "2017-05-26T13:42:58.512Z",
-      "modified": "2017-05-26T13:42:58.512Z",
-      "version": 1,
-      "labels": [],
-      "external_references": [
-        {
-          "source_name": "attack.mitre.org",
-          "external_id": "T1131",
-          "url": "https://attack.mitre.org/wiki/Technique/T1131"
-        }
-      ],
-      "name": "Authentication Package",
-      "description": "Windows Authentication Package DLLs are loaded by the Local Security Authority (LSA) process at system start. They provide support for multiple logon processes and multiple security protocols to the operating system.\n\nAdversaries can use the autostart mechanism provided by LSA Authentication Packages for persistence by placing a reference to a binary in the Windows Registry location HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\ with the key value of \"Authentication Packages\"=<target binary>. The binary will then be executed by the system when the authentication packages are loaded.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "MITRE",
-          "phase_name": "persistence"
-        }
-      ],
-      "id": "attack-pattern--bebf03ba-a393-4854-8302-e179cb3d3804"
-    },
-    {
-      "created": "2017-05-26T13:44:05.486Z",
-      "modified": "2017-05-26T13:44:05.486Z",
-      "version": 1,
-      "labels": [],
-      "external_references": [
-        {
-          "source_name": "attack.mitre.org",
-          "external_id": "T1132",
-          "description": null,
-          "url": "https://attack.mitre.org/wiki/Technique/T1132",
-          "id": null
-        }
-      ],
-      "name": "Data Encoding",
-      "description": "Command and control (C2) information is encoded using a standard data encoding system. Use of data encoding may be to adhere to existing protocol specifications and includes use of ASCII, Unicode, Base64, MIME, UTF-8, or other binary-to-text and character encoding systems.12 Some data encoding systems may also result in data compression, such as gzip.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "MITRE",
-          "phase_name": "command-and-control",
-          "id": null
-        }
-      ],
-      "id": "attack-pattern--4ed2a056-34b1-43d4-a4ac-cc5069a5422f"
-    },
-    {
       "created": "2017-03-02T15:19:04.307Z",
       "modified": "2017-03-02T15:19:04.307Z",
       "version": "1",
@@ -206,28 +159,6 @@
         "CSC 4",
         "CSC 4.5"
       ]
-    },
-    {
-      "created": "2017-05-26T13:38:21.138Z",
-      "modified": "2017-05-26T13:38:21.138Z",
-      "version": 1,
-      "labels": [],
-      "external_references": [
-        {
-          "source_name": "attack.mitre.org",
-          "external_id": "T1129",
-          "url": "https://attack.mitre.org/wiki/Technique/T1129"
-        }
-      ],
-      "name": "Execution through Module Load",
-      "description": "The Windows module loader can be instructed to load DLLs from arbitrary local paths and arbitrary Universal Naming Convention (UNC) network paths. This functionality resides in NTDLL.dll and is part of the Windows Native API which is called from functions like CreateProcess(), LoadLibrary(), etc. of the Win32 API.\n\nThe module loader can load DLLs:\n\n* via specification of the (fully-qualified or relative) DLL pathname in the IMPORT directory;\n* via EXPORT forwarded to another DLL, specified with (fully-qualified or relative) pathname (but without extension);\n* via an NTFS junction or symlink program.exe.local with the fully-qualified or relative pathname of a directory containing the DLLs specified in the IMPORT directory or forwarded EXPORTs;\n* via <file name=\"filename.extension\" loadFrom=\"fully-qualified or relative pathname\"> in an embedded or external \"application manifest\". The file name refers to an entry in the IMPORT directory or a forwarded EXPORT.\n\nAdversaries can use this functionality as a way to execute arbitrary code on a system.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "MITRE",
-          "phase_name": "execution"
-        }
-      ],
-      "id": "attack-pattern--c3d3cd95-d415-4685-84ef-5f3f57ee55c0"
     },
     {
       "created": "2017-03-02T15:09:34.672Z",
@@ -766,28 +697,6 @@
       "target_ref": "attack-pattern--35dd844a-b219-4e2b-a6bb-efa9a75995a9",
       "type": "relationship",
       "id": "relationship--22253623-c922-46b8-aeeb-d5f0ee52f8ff"
-    },
-    {
-      "created": "2017-05-26T13:45:25.357Z",
-      "modified": "2017-05-26T13:45:25.357Z",
-      "version": 1,
-      "labels": [],
-      "external_references": [
-        {
-          "source_name": "attack.mitre.org",
-          "external_id": "T1133",
-          "url": "https://attack.mitre.org/wiki/Technique/T1133"
-        }
-      ],
-      "name": "External Remote Services",
-      "description": "Remote services such as VPNs, Citrix, and other access mechanisms allow users to connect to internal enterprise network resources from external locations. There are often remote service gateways that manage connections and credential authentication for these services.\n\nAdversaries may use remote services to access and persist within a network.1 Access to Legitimate Credentials to use the service is often a requirement, which could be obtained through credential pharming or by obtaining the credentials from users after compromising the enterprise network. Access to remote services may be used as part of Redundant Access during an operation.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "MITRE",
-          "phase_name": "persistence"
-        }
-      ],
-      "id": "attack-pattern--818de9e4-3462-4201-9cf6-79068d5264d5"
     },
     {
       "created": "2017-03-02T14:51:17.983Z",
@@ -1338,56 +1247,6 @@
       "source_ref": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
       "target_ref": "attack-pattern--1c338d0f-a65e-4073-a5c1-c06878849f21",
       "id": "relationship--4a168114-3047-4cf6-88d9-5ec82734fae3"
-    },
-    {
-      "created": "2017-05-26T13:34:05.295Z",
-      "modified": "2017-05-26T13:34:05.295Z",
-      "version": 1,
-      "labels": [],
-      "external_references": [
-        {
-          "source_name": "attack.mitre.org",
-          "external_id": "T1128",
-          "description": "",
-          "url": "https://attack.mitre.org/wiki/Technique/T1128",
-          "id": ""
-        }
-      ],
-      "name": "Netsh Helper DLL",
-      "description": "Netsh.exe (also referred to as Netshell) is a command-line scripting utility used to interact with the network configuration of a system. It contains functionality to add helper DLLs for extending functionality of the utility. The paths to registered netsh.exe helper DLLs are entered into the Windows Registry at HKLM\\SOFTWARE\\Microsoft\\Netsh.\n\nAdversaries can use netsh.exe with helper DLLs to proxy execution of arbitrary code in a persistent manner when netsh.exe is executed automatically with another Persistence technique or if other persistent software is present on the system that executes netsh.exe as part of its normal functionality. Examples include some VPN software that invoke netsh.exe.\n\nProof of concept code exists to load Cobalt Strike's payload using netsh.exe helper DLLs.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "MITRE-ATTACK",
-          "phase_name": "persistence",
-          "id": ""
-        }
-      ],
-      "id": "attack-pattern--1cb13e3a-d997-4051-b88f-db7d341e5485"
-    },
-    {
-      "created": "2017-05-26T13:40:45.958Z",
-      "modified": "2017-05-26T13:40:45.958Z",
-      "version": 1,
-      "labels": [],
-      "external_references": [
-        {
-          "source_name": "attack.mitre.org",
-          "external_id": "T1130",
-          "description": null,
-          "url": "https://attack.mitre.org/wiki/Technique/T1130",
-          "id": null
-        }
-      ],
-      "name": "Install Root Certificate",
-      "description": "Root certificates are used in public key cryptography to identify a root certificate authority (CA). When a root certificate is installed, the system or application will trust certificates in the root's chain of trust that have been signed by the root certificate. Certificates are commonly used for establishing secure TLS/SSL communications within a web browser. When a user attempts to browse a website that presents a certificate that is not trusted an error message will be displayed to warn the user of the security risk. Depending on the security settings, the browser may not allow the user to establish a connection to the website.\n\nInstallation of a root certificate on a compromised system would give an adversary a way to degrade the security of that system. Adversaries have used this technique to avoid security warnings prompting users when compromised systems connect over HTTPS to adversary controlled web servers that spoof legitimate websites in order to collect login credentials.\n\nAtypical root certificates have also been pre-installed on systems by the manufacturer or in the software supply chain and were used in conjunction with malware/adware to provide a man-in-the-middle capability for intercepting information transmitted over secure TLS/SSL communications.",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "MITRE",
-          "phase_name": "defense-evasion",
-          "id": null
-        }
-      ],
-      "id": "attack-pattern--30b589f4-0a1d-4dc2-b87e-cb4d392bdc12"
     },
     {
       "created": "2017-03-02T14:44:20.459Z",
@@ -18015,22 +17874,6 @@
       ],
       "modified": "2017-09-14T13:56:18.919Z",
       "created": "2017-09-14T13:54:54.348Z"
-    },
-    {
-      "created": "2017-06-07T17:20:28.605Z",
-      "modified": "2017-06-07T17:20:28.605Z",
-      "version": 1,
-      "labels": [],
-      "external_references": [],
-      "name": "newone",
-      "description": "dfd",
-      "kill_chain_phases": [
-        {
-          "kill_chain_name": "gates",
-          "phase_name": "cool stuff"
-        }
-      ],
-      "id": "attack-pattern--6d5c7140-88fb-4a6b-8a1c-c2d11613c9c4"
     },
     {
       "created": "2016-09-21T13:14:10.746Z",
