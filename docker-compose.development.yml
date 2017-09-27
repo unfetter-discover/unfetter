@@ -90,7 +90,7 @@ services:
      - unfetter-discover-api:apihost
 
   cti-stix-store-repository:
-    image: mongo:3.5.9
+    image: mongo:3.4.1
     container_name: cti-stix-store-repository
     ports:
     - "27018:27017"
