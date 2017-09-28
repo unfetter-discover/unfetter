@@ -51,7 +51,7 @@ services:
      - node
      - processor.js
      - --stix
-     - /tmp/examples/mitre-attack-cis/stix.json
+     - /tmp/examples/unfetter-stix/stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
      - /tmp/examples/unfetter-db/stix-meta.json
