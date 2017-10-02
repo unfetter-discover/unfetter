@@ -1,7 +1,7 @@
 version: '2'
 services:
   unfetter-discover-gateway:
-    image: nginx:1.11
+    image: nginx:1.13.5-alpine
     container_name: unfetter-discover-gateway
     ports:
      - "443:443"
@@ -9,7 +9,6 @@ services:
     depends_on:
      - unfetter-discover-openssl
     links:
-     - cti-stix-store
      - unfetter-discover-api-explorer
      - unfetter-discover-api
      - unfetter-ui
@@ -37,45 +36,57 @@ services:
      - /tmp/certs/server.crt
     volumes:
      - ./certs/:/tmp/certs
+
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:0.3.0
+    image: unfetter/unfetter-discover-processor:0.3.1
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
     entrypoint:
      - node
-     - processor-direct.js
-     - -p
-     - "3000"
-     - -h
-     - cti-stix-store
-     - -r
-     - repository
-     - -x
-     - "27017"
-     - -c
-     - stix
-     - -j
-     - /tmp/examples/mitre-attack-cis/stix.json
-    depends_on:
-     - cti-stix-store
-     - cti-stix-store-repository
-    links:
-     - cti-stix-store-repository:repository
-    environment:
-    - INCLUDE_MITRE_GITHUB_DATA=false
-  cti-stix-store:
-    image: unfetter/cti-stix-store:0.3.0
-    container_name: cti-stix-store
+     - processor.js
+     - --stix
+     - /tmp/examples/unfetter-stix/stix.json
+     - --enhanced-stix-properties
+     - /tmp/examples/unfetter-db/stix-enhancements.json
+     - /tmp/examples/unfetter-db/stix-meta.json
+     - --config
+     - /tmp/examples/unfetter-db/config.json
+     - --add-mitre-data
+     - "true"
     depends_on:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
+
+
+
+  unfetter-ctf-ingest:
+    build: ../unfetter-store/unfetter-ctf-ingest
+    container_name: unfetter-ctf-ingest
+    image: unfetter-ctf-ingest
     volumes:
-     - ./config/schema/examples/schemas:/tmp/schemas
+     - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
     environment:
-     - SCHEMA_LOCATION=/tmp/schemas
-    command: /bin/ash wait-for-repository.sh
+      - API_PROTOCOL=https
+      - API_HOST=apihost
+      - API_PORT=3000
+      - API_CONTEXT=/
+    entrypoint: 
+     - npm
+     - run
+     - ctf-ingest
+     - --
+     - -f
+     - /tmp/test-data/ctf-sample.csv
+    depends_on:
+     - cti-stix-store-repository
+     - unfetter-discover-api
+     - unfetter-discover-processor
+    links:
+     - unfetter-discover-api:apihost
+
+
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
@@ -84,8 +95,9 @@ services:
     volumes:
     - ./data/db:/data/db
 
+
   unfetter-discover-api-explorer:
-    image: unfetter/unfetter-discover-api:0.3.0
+    image: unfetter/unfetter-discover-api:0.3.1
     container_name: unfetter-discover-api-explorer
     depends_on:
     - unfetter-discover-openssl
@@ -111,8 +123,9 @@ services:
     - npm
     - run
     - swagger-editor
+    
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api:0.3.0
+    image: unfetter/unfetter-discover-api:0.3.1
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
@@ -137,7 +150,7 @@ services:
     - start
 
   unfetter-ui:
-    image: unfetter/unfetter-ui:0.3.0
+    image: unfetter/unfetter-ui:0.3.1
     container_name: unfetter-ui
     depends_on:
     - unfetter-discover-openssl
