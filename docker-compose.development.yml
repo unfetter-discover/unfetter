@@ -11,6 +11,7 @@ services:
     links:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
+     - unfetter-ctf-ingest
      - unfetter-ui
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
@@ -75,17 +76,14 @@ services:
       - API_HOST=apihost
       - API_PORT=3000
       - API_CONTEXT=/
+    ports:
+    - "3001:10010"
     entrypoint: 
      - npm
-     - run
-     - ctf-ingest
-     - --
-     - -f
-     - /tmp/test-data/ctf-sample.csv
+     - start
     depends_on:
      - cti-stix-store-repository
      - unfetter-discover-api
-     - unfetter-discover-processor
     links:
      - unfetter-discover-api:apihost
 
@@ -145,6 +143,7 @@ services:
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     environment:
+    - CTF_PARSE_HOST=http://unfetter-ctf-ingest
     - STIX_API_PROTOCOL=http
     - STIX_API_HOST=cti-stix-store
     - STIX_API_PORT=3000
