@@ -1,0 +1,172 @@
+version: '2.0'
+services:
+  unfetter-discover-gateway:
+    image: nginx:1.13.5-alpine
+    container_name: unfetter-discover-gateway
+    ports:
+     - "443:443"
+     - "80:80"
+    depends_on:
+     - unfetter-discover-openssl
+     - unfetter-ui-build
+    links:
+     - unfetter-discover-api-explorer
+     - unfetter-discover-api
+     - unfetter-ctf-ingest
+     - unfetter-ui-build
+    volumes:
+     - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
+     - ./certs/:/etc/pki/tls/certs
+     - ../unfetter-ui/dist:/etc/nginx/html
+
+  unfetter-discover-openssl:
+    image: svagi/openssl:latest
+    container_name: unfetter-discover-openssl
+    entrypoint:
+     - openssl
+     - req
+     - -subj
+     - /CN=localhost/DC=localhost/DC=localdomain
+     - -new
+     - -newkey
+     - rsa:2048
+     - -days
+     - "365"
+     - -nodes
+     - -x509
+     - -keyout
+     - /tmp/certs/server.key
+     - -out
+     - /tmp/certs/server.crt
+    volumes:
+     - ./certs/:/tmp/certs
+    
+  unfetter-discover-processor:
+    build: ../unfetter-store/unfetter-discover-processor
+    container_name: unfetter-discover-processor
+    image: unfetter-discover-processor
+    volumes:
+     - ./config/examples:/tmp/examples
+    #  TODO find a working volume mounting
+    #  - ../unfetter-store/unfetter-discover-processor:/usr/src/app
+    environment:
+     - MONGO_HOST=repository
+    entrypoint: 
+     - node
+     - processor.js
+     - --stix
+     - /tmp/examples/unfetter-stix/stix.json
+     - --enhanced-stix-properties
+     - /tmp/examples/unfetter-db/stix-enhancements.json
+     - /tmp/examples/unfetter-db/stix-meta.json
+     - --config
+     - /tmp/examples/unfetter-db/config.json
+     - --add-mitre-data
+     - "true"
+    depends_on:
+     - cti-stix-store-repository
+    links:
+     - cti-stix-store-repository:repository
+
+  unfetter-ctf-ingest:
+    build: ../unfetter-store/unfetter-ctf-ingest
+    container_name: unfetter-ctf-ingest
+    image: unfetter-ctf-ingest
+    volumes:
+     - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
+    environment:
+      - API_PROTOCOL=https
+      - API_HOST=apihost
+      - API_PORT=3000
+      - API_CONTEXT=/
+    ports:
+    - "3001:10010"
+    entrypoint: 
+     - npm
+     - start
+    depends_on:
+     - cti-stix-store-repository
+     - unfetter-discover-api
+    links:
+     - unfetter-discover-api:apihost
+
+  cti-stix-store-repository:
+    image: mongo:3.4.1
+    container_name: cti-stix-store-repository
+    ports:
+    - "27018:27017"
+    volumes:
+    - ./data/db:/data/db
+
+  unfetter-discover-api-explorer:
+    build: ../unfetter-store/unfetter-discover-api
+    container_name: unfetter-discover-api-explorer
+    image: unfetter-discover-api       
+    depends_on:
+    - unfetter-discover-openssl
+    - cti-stix-store-repository
+    expose:
+    - "3000"
+    ports:
+    - "49260:3000"
+    links:
+     - cti-stix-store-repository:repository
+    volumes:
+    - ./certs/:/etc/pki/tls/certs
+    - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
+    - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
+    environment:
+    - STIX_API_PROTOCOL=http
+    - STIX_API_HOST=cti-stix-store
+    - STIX_API_PORT=3000
+    - STIX_API_PATH=cti-stix-store-api
+    - MONGO_REPOSITORY=repository
+    - MONGO_PORT=27017
+    - MONGO_DBNAME=stix
+    - ENV=prod
+    entrypoint:
+    - npm
+    - run
+    - swaggerdev
+
+  unfetter-discover-api:
+    build: ../unfetter-store/unfetter-discover-api
+    container_name: unfetter-discover-api
+    image: unfetter-discover-api   
+    depends_on:
+    - unfetter-discover-openssl
+    - cti-stix-store-repository
+    links:
+     - cti-stix-store-repository:repository
+    ports:
+    - "49360:3000"
+    - "5555:5555"
+    volumes:
+    - ./certs/:/etc/pki/tls/certs
+    - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
+    - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
+    environment:
+    - CTF_PARSE_HOST=http://unfetter-ctf-ingest
+    - STIX_API_PROTOCOL=http
+    - STIX_API_HOST=cti-stix-store
+    - STIX_API_PORT=3000
+    - STIX_API_PATH=cti-stix-store-api
+    - MONGO_REPOSITORY=repository
+    - MONGO_PORT=27017
+    - MONGO_DBNAME=stix
+    - ENV=dev
+    entrypoint:
+    - npm
+    - run
+    - debugdev
+
+  unfetter-ui-build:
+    build: ../unfetter-ui
+    image: unfetter-ui
+    container_name: unfetter-ui-build
+    entrypoint:
+     - npm
+     - run
+     - build:aot:prod:noclean
+    volumes:
+     - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
