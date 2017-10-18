@@ -8,6 +8,7 @@ services:
      - "80:80"
     depends_on:
      - unfetter-discover-openssl
+     - unfetter-ui-build
     links:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
@@ -16,6 +17,8 @@ services:
     volumes:
      - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
+     - ../unfetter-ui/dist:/etc/nginx/html
+
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
