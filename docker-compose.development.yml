@@ -76,6 +76,9 @@ services:
       - API_HOST=apihost
       - API_PORT=3000
       - API_CONTEXT=/
+      - MONGO_REPOSITORY=repository
+      - MONGO_PORT=27017
+      - MONGO_DBNAME=stix
     ports:
     - "3001:10010"
     entrypoint: 
@@ -85,6 +88,7 @@ services:
      - cti-stix-store-repository
      - unfetter-discover-api
     links:
+     - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
 
   cti-stix-store-repository:
@@ -168,6 +172,9 @@ services:
     - ../unfetter-ui/src:/usr/share/unfetter-ui/src
     - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
     - ../unfetter-ui/config:/usr/share/unfetter-ui/config
+    environment:
+    - SHOWBANNER=true
+    - BANNERTEXT=TOPCLASSIFIED
     entrypoint:
     - npm
     - run
