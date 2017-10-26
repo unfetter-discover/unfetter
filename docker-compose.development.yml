@@ -146,6 +146,7 @@ services:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
+    - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
     environment:
     - CTF_PARSE_HOST=http://unfetter-ctf-ingest
     - STIX_API_PROTOCOL=http
