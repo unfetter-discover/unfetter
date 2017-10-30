@@ -18181,7 +18181,7 @@
       "name": "Reg.exe called from Command Shell",
       "description": "Registry modifications are often essential in establishing persistence via known Windows mechanisms. Many legitimate modifications are done graphically via regedit.exe or by using the corresponding channels, or even calling the Registry APIs directly. \nThe built-in utility reg.exe provides a command-line interface to the registry, so that queries and modifications can be performed from a shell, such as cmd.exe.\n\nWhen a user is responsible for these actions, the parent of cmd.exe will likely be explorer.exe. Occasionally, power users and administrators write scripts that do this behavior as well, but likely from a different process tree. These background scripts must be learned so they can be tuned out accordingly.",
       "pattern_lang": "mitre-car",
-      "pattern": "CAR-2013-03-001",
+      "pattern": "[process:name = 'reg.exe' AND process:parent_ref.name = 'cmd.exe' AND process:parent_ref.parent_ref.name != 'explorer.exe']",
       "valid_from": "2013-03-01T00:00:00.000Z",
       "kill_chain_phases": [
         {
@@ -18941,7 +18941,7 @@
       "name": "Remote PowerShell Sessions",
       "description": "According to ATT&CK, PowerShell can be used over WinRM to remotely run commands on a host. When a remote PowerShell session starts, svchost.exe executes wsmprovhost.exe",
       "pattern_lang": "mitre-car",
-      "pattern": "CAR-2014-11-004",
+      "pattern": "[process:name = 'wsmprovhost.exe' AND process:parent_ref.name = 'svchost.exe']",
       "valid_from": "2014-11-01T00:00:00.000Z",
       "kill_chain_phases": [
         {
@@ -19032,7 +19032,7 @@
       "name": "Suspicious Run Locations",
       "description": "In Windows, files should never execute out of certain directory locations. Any of these locations may exist for a variety of reasons, and executables may be present in the directory but should not execute. As a result, some defenders make the mistake of ignoring these directories and assuming that a process will never run from one. There are known TTPs that have taken advantage of this fact to go undetected. This fact should inform defenders to monitor these directories more closely, knowing that they should never contain running processes.",
       "pattern_lang": "mitre-car",
-      "pattern": "CAR-2013-05-002",
+      "pattern": "[process:binary_ref.parent_directory_ref.path MATCHES ':\\\\\\\\RECYCLER' OR process:binary_ref.parent_directory_ref.path MATCHES ':\\\\\\\\SystemVolumeInformation']",
       "valid_from": "2013-05-01T00:00:00.000Z",
       "kill_chain_phases": [
         {
