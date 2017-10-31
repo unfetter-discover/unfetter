@@ -155,6 +155,10 @@ services:
     - MONGO_PORT=27017
     - MONGO_DBNAME=stix
     - ENV=dev
+    # Options: UAC, TEST, DEMO
+    - RUN_MODE=UAC
+    # If deployed in a proxy, add the proxy's URL here
+    - HTTPS_PROXY_URL=
     entrypoint:
     - npm
     - run
@@ -168,5 +172,8 @@ services:
      - npm
      - run
      - build:aot:prod:noclean
+    environment:
+    # Options: UAC, TEST, DEMO
+    - RUN_MODE=UAC
     volumes:
      - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
