@@ -27,6 +27,18 @@
       ]
     },
     {
+      "name": "Unfetter Open",
+      "identity_class": "Organization",
+      "id": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "description": "This is an organization open to all Unfetter users.",
+      "type": "identity",
+      "modified": "2017-11-01T18:42:35.073Z",
+      "created": "2017-11-01T18:36:59.472Z",
+      "labels": [
+        "open-group"
+      ]
+    },
+    {
       "created": "2017-03-02T15:19:04.307Z",
       "modified": "2017-03-02T15:19:04.307Z",
       "version": "1",
