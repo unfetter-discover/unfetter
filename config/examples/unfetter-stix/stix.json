@@ -28,7 +28,7 @@
     },
     {
       "name": "Unfetter Open",
-      "identity_class": "Organization",
+      "identity_class": "organization",
       "id": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
       "description": "This is an organization open to all Unfetter users.",
       "type": "identity",
