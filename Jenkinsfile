@@ -3,8 +3,6 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker-compose up -d'
-        sleep(time: 1, unit: 'MINUTES')
         sh '''#!/bin/bash
 # Stop All Containers
 docker stop $(docker ps -a -q)
@@ -13,6 +11,9 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 # Delete all images
 docker rmi -f $(docker images -q)'''
+
+        sh 'docker-compose up -d'
+        sleep(time: 1, unit: 'MINUTES')
       }
     }
     stage('Verify') {
