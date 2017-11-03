@@ -13,7 +13,8 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'docker-compose up'
+        sh 'docker-compose up -d'
+        sleep(time: 1, unit: 'MINUTES')
       }
     }
     stage('Verify') {
