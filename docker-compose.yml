@@ -42,6 +42,8 @@ services:
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
+    environment:
+     - MONGO_HOST=repository
     entrypoint:
      - node
      - processor.js
@@ -59,34 +61,6 @@ services:
     links:
      - cti-stix-store-repository:repository
 
-
-
-  unfetter-ctf-ingest:
-    build: ../unfetter-store/unfetter-ctf-ingest
-    container_name: unfetter-ctf-ingest
-    image: unfetter-ctf-ingest
-    volumes:
-     - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
-    environment:
-      - API_PROTOCOL=https
-      - API_HOST=apihost
-      - API_PORT=3000
-      - API_CONTEXT=/
-    entrypoint: 
-     - npm
-     - run
-     - ctf-ingest
-     - --
-     - -f
-     - /tmp/test-data/ctf-sample.csv
-    depends_on:
-     - cti-stix-store-repository
-     - unfetter-discover-api
-     - unfetter-discover-processor
-    links:
-     - unfetter-discover-api:apihost
-
-
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
@@ -94,7 +68,6 @@ services:
     - "27018:27017"
     volumes:
     - ./data/db:/data/db
-
 
   unfetter-discover-api-explorer:
     image: unfetter/unfetter-discover-api:0.3.1
@@ -125,7 +98,7 @@ services:
     - npm
     - run
     - swagger-editor
-    
+
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api:0.3.1
     container_name: unfetter-discover-api
