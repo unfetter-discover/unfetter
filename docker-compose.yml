@@ -91,9 +91,7 @@ services:
     - MONGO_REPOSITORY=repository
     - MONGO_PORT=27017
     - MONGO_DBNAME=stix
-    - ENV=prod
-    # If deployed in a proxy, add the proxy's URL here
-    - HTTPS_PROXY_URL=
+    - ENV=prod    
     entrypoint:
     - npm
     - run
@@ -122,6 +120,8 @@ services:
     - ENV=dev
     # Options: UAC, TEST, DEMO
     - RUN_MODE=DEMO
+    # If deployed in a proxy, add the proxy's URL here
+    - HTTPS_PROXY_URL=
     entrypoint:
     - npm
     - start
