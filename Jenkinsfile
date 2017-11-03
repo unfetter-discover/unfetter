@@ -3,12 +3,17 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        echo 'test'
+        echo 'Starting to run docker'
       }
     }
     stage('Sleep') {
       steps {
-        sleep(time: 5, unit: 'MINUTES')
+        sleep(time: 5, unit: 'SECONDS')
+      }
+    }
+    stage('Build') {
+      steps {
+        sh 'docker-compose up'
       }
     }
     stage('Verify') {
