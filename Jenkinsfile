@@ -11,7 +11,6 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 # Delete all images
 docker rmi -f $(docker images -q)'''
-
         sh 'docker-compose up -d'
         sleep(time: 1, unit: 'MINUTES')
       }
@@ -19,6 +18,11 @@ docker rmi -f $(docker images -q)'''
     stage('Verify') {
       steps {
         sh 'docker ps'
+      }
+    }
+    stage('Test NPM') {
+      steps {
+        sh 'docker ps -it unfetter-discover-api npm test'
       }
     }
   }
