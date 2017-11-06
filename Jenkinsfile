@@ -23,6 +23,7 @@ docker rmi -f $(docker images -q)'''
     stage('Test NPM') {
       steps {
         sh 'docker exec -it unfetter-discover-api npm test'
+        sleep(time: 5, unit: 'MINUTES')
       }
     }
   }
