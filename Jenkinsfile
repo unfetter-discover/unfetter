@@ -22,7 +22,7 @@ docker rmi -f $(docker images -q)'''
     }
     stage('Test NPM') {
       steps {
-        sh 'docker ps -it unfetter-discover-api npm test'
+        sh 'docker exec -it unfetter-discover-api npm test'
       }
     }
   }
