@@ -14,7 +14,6 @@ pipeline {
         sleep(time: 5, unit: 'MINUTES')
       }
     }
-
     stage('Verify') {
       steps {
         sh 'docker ps'
@@ -22,8 +21,7 @@ pipeline {
     }
     stage('Test NPM') {
       steps {
-        sh 'docker exec -it unfetter-discover-api npm test'
-
+        sh 'docker exec -i unfetter-discover-api npm test'
       }
     }
   }
