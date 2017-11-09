@@ -99,7 +99,7 @@ For Windows
 
 By default, `docker-compose.development.yml` runs in a UAC mode that requires additional configuration.  Setting up UAC for Unfetter is documented [here](https://github.com/unfetter-discover/unfetter/wiki/GitHub-UAC-Configuration).
 
-You can disable this by editing `docker-compose.development.yml` and setting `RUN_MODE=DEMO`.
+If you wish to run it without UAC, you can disable it by editing `docker-compose.development.yml` and setting `RUN_MODE=DEMO` (Note, there are multiple instances of this variables.)
 
 ### The Web Application
 
