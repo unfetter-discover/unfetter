@@ -11,7 +11,6 @@ services:
     links:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
-     - unfetter-ctf-ingest
      - unfetter-ui
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
@@ -39,7 +38,6 @@ services:
      - ./certs/:/tmp/certs
     
   unfetter-discover-processor:
-    build: ../unfetter-store/unfetter-discover-processor
     container_name: unfetter-discover-processor
     image: unfetter-discover-processor
     volumes:
@@ -66,7 +64,6 @@ services:
      - cti-stix-store-repository:repository
 
   unfetter-ctf-ingest:
-    build: ../unfetter-store/unfetter-ctf-ingest
     container_name: unfetter-ctf-ingest
     image: unfetter-ctf-ingest
     volumes:
@@ -76,19 +73,18 @@ services:
       - API_HOST=apihost
       - API_PORT=3000
       - API_CONTEXT=/
-      - MONGO_REPOSITORY=repository
-      - MONGO_PORT=27017
-      - MONGO_DBNAME=stix
-    ports:
-    - "3001:10010"
     entrypoint: 
      - npm
-     - start
+     - run
+     - ctf-ingest
+     - --
+     - -f
+     - /tmp/test-data/ctf-sample.csv
     depends_on:
      - cti-stix-store-repository
      - unfetter-discover-api
+     - unfetter-discover-processor
     links:
-     - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
 
   cti-stix-store-repository:
@@ -100,7 +96,6 @@ services:
     - ./data/db:/data/db
 
   unfetter-discover-api-explorer:
-    build: ../unfetter-store/unfetter-discover-api
     container_name: unfetter-discover-api-explorer
     image: unfetter-discover-api       
     depends_on:
@@ -131,7 +126,6 @@ services:
     - swaggerdev
 
   unfetter-discover-api:
-    build: ../unfetter-store/unfetter-discover-api
     container_name: unfetter-discover-api
     image: unfetter-discover-api   
     depends_on:
@@ -146,9 +140,7 @@ services:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
-    - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
     environment:
-    - CTF_PARSE_HOST=http://unfetter-ctf-ingest
     - STIX_API_PROTOCOL=http
     - STIX_API_HOST=cti-stix-store
     - STIX_API_PORT=3000
@@ -157,17 +149,12 @@ services:
     - MONGO_PORT=27017
     - MONGO_DBNAME=stix
     - ENV=dev
-    # Options: UAC, TEST, DEMO
-    - RUN_MODE=UAC
-    # If deployed in a proxy, add the proxy's URL here
-    - HTTPS_PROXY_URL=
     entrypoint:
     - npm
     - run
     - debugdev
 
   unfetter-ui:
-    build: ../unfetter-ui
     image: unfetter-ui
     container_name: unfetter-ui
     depends_on:
@@ -177,9 +164,6 @@ services:
     - ../unfetter-ui/src:/usr/share/unfetter-ui/src
     - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
     - ../unfetter-ui/config:/usr/share/unfetter-ui/config
-    environment:
-    # Options: UAC, TEST, DEMO
-    - RUN_MODE=UAC
     entrypoint:
     - npm
     - run

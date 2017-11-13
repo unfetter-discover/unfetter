@@ -8,14 +8,17 @@ services:
      - "80:80"
     depends_on:
      - unfetter-discover-openssl
+     - unfetter-ui-build
     links:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
-     - unfetter-ui
+     - unfetter-ui-build
     volumes:
-     - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
+     - ../unfetter-ui/dist:/etc/nginx/html
+
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -146,7 +149,6 @@ services:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
-    - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
     environment:
     - CTF_PARSE_HOST=http://unfetter-ctf-ingest
     - STIX_API_PROTOCOL=http
@@ -158,7 +160,7 @@ services:
     - MONGO_DBNAME=stix
     - ENV=dev
     # Options: UAC, TEST, DEMO
-    - RUN_MODE=UAC
+    - RUN_MODE=DEMO
     # If deployed in a proxy, add the proxy's URL here
     - HTTPS_PROXY_URL=
     entrypoint:
@@ -166,21 +168,16 @@ services:
     - run
     - debugdev
 
-  unfetter-ui:
+  unfetter-ui-build:
     build: ../unfetter-ui
     image: unfetter-ui
-    container_name: unfetter-ui
-    depends_on:
-    - unfetter-discover-openssl
-    volumes:
-    - ./certs/:/etc/pki/tls/certs
-    - ../unfetter-ui/src:/usr/share/unfetter-ui/src
-    - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
-    - ../unfetter-ui/config:/usr/share/unfetter-ui/config
+    container_name: unfetter-ui-build
+    entrypoint:
+     - npm
+     - run
+     - build:aot:prod:noclean
     environment:
     # Options: UAC, TEST, DEMO
-    - RUN_MODE=UAC
-    entrypoint:
-    - npm
-    - run
-    - server:dev:alt
+    - RUN_MODE=DEMO
+    volumes:
+     - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist

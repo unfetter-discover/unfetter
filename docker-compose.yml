@@ -11,6 +11,7 @@ services:
     links:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
+     - unfetter-ctf-ingest     
      - unfetter-ui
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
@@ -38,7 +39,7 @@ services:
      - ./certs/:/tmp/certs
 
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:0.3.1
+    image: unfetter/unfetter-discover-processor:0.3.2
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -61,6 +62,30 @@ services:
     links:
      - cti-stix-store-repository:repository
 
+  unfetter-ctf-ingest:
+    container_name: unfetter-ctf-ingest
+    image: unfetter/unfetter-ctf-ingest:0.3.2
+    environment:
+      - API_PROTOCOL=https
+      - API_HOST=apihost
+      - API_PORT=3000
+      - API_CONTEXT=/
+      - MONGO_REPOSITORY=repository
+      - MONGO_PORT=27017
+      - MONGO_DBNAME=stix
+    ports:
+    - "3001:10010"
+    entrypoint: 
+     - npm
+     - start
+    depends_on:
+     - cti-stix-store-repository
+     - unfetter-discover-api
+    links:
+     - cti-stix-store-repository:repository
+     - unfetter-discover-api:apihost
+
+
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
@@ -70,7 +95,7 @@ services:
     - ./data/db:/data/db
 
   unfetter-discover-api-explorer:
-    image: unfetter/unfetter-discover-api:0.3.1
+    image: unfetter/unfetter-discover-api:0.3.2
     container_name: unfetter-discover-api-explorer
     depends_on:
     - unfetter-discover-openssl
@@ -91,14 +116,14 @@ services:
     - MONGO_REPOSITORY=repository
     - MONGO_PORT=27017
     - MONGO_DBNAME=stix
-    - ENV=prod
+    - ENV=prod    
     entrypoint:
     - npm
     - run
     - swagger-editor
 
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api:0.3.1
+    image: unfetter/unfetter-discover-api:0.3.2
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
@@ -118,17 +143,24 @@ services:
     - MONGO_PORT=27017
     - MONGO_DBNAME=stix
     - ENV=dev
+    # Options: UAC, TEST, DEMO
+    - RUN_MODE=DEMO
+    # If deployed in a proxy, add the proxy's URL here
+    - HTTPS_PROXY_URL=
     entrypoint:
     - npm
     - start
 
   unfetter-ui:
-    image: unfetter/unfetter-ui:0.3.1
+    image: unfetter/unfetter-ui:0.3.2
     container_name: unfetter-ui
     depends_on:
     - unfetter-discover-openssl
     volumes:
     - ./certs/:/etc/pki/tls/certs
+    environment:
+    # Options: UAC, TEST, DEMO
+    - RUN_MODE=DEMO
     entrypoint:
     - npm
     - run
