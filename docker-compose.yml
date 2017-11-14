@@ -12,6 +12,7 @@ services:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
      - unfetter-ui
+     - unfetter-ctf-ingest
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
@@ -38,7 +39,7 @@ services:
      - ./certs/:/tmp/certs
 
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:0.3.1
+    image: unfetter/unfetter-discover-processor:0.3.2
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -61,6 +62,33 @@ services:
     links:
      - cti-stix-store-repository:repository
 
+  unfetter-ctf-ingest:
+    build: ../unfetter-store/unfetter-ctf-ingest
+    container_name: unfetter-ctf-ingest
+    image: unfetter-ctf-ingest
+    volumes:
+     - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
+    environment:
+      - API_PROTOCOL=https
+      - API_HOST=apihost
+      - API_PORT=3000
+      - API_CONTEXT=/
+      - MONGO_REPOSITORY=repository
+      - MONGO_PORT=27017
+      - MONGO_DBNAME=stix
+    ports:
+    - "3001:10010"
+    entrypoint: 
+     - npm
+     - start
+    depends_on:
+     - cti-stix-store-repository
+     - unfetter-discover-api
+    links:
+     - cti-stix-store-repository:repository
+     - unfetter-discover-api:apihost
+
+
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
@@ -70,7 +98,7 @@ services:
     - ./data/db:/data/db
 
   unfetter-discover-api-explorer:
-    image: unfetter/unfetter-discover-api:0.3.1
+    image: unfetter/unfetter-discover-api:0.3.2
     container_name: unfetter-discover-api-explorer
     depends_on:
     - unfetter-discover-openssl
@@ -98,7 +126,7 @@ services:
     - swagger-editor
 
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api:0.3.1
+    image: unfetter/unfetter-discover-api:0.3.2
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
@@ -110,6 +138,7 @@ services:
     volumes:
     - ./certs/:/etc/pki/tls/certs
     environment:
+    - CTF_PARSE_HOST=http://unfetter-ctf-ingest
     - STIX_API_PROTOCOL=http
     - STIX_API_HOST=cti-stix-store
     - STIX_API_PORT=3000
@@ -127,7 +156,7 @@ services:
     - start
 
   unfetter-ui:
-    image: unfetter/unfetter-ui:0.3.1
+    image: unfetter/unfetter-ui:0.3.2
     container_name: unfetter-ui
     depends_on:
     - unfetter-discover-openssl
