@@ -13,7 +13,6 @@ services:
      - unfetter-discover-api
      - unfetter-ctf-ingest     
      - unfetter-ui
-     - unfetter-ctf-ingest
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
