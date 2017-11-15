@@ -39,6 +39,7 @@ is recommended for most cases.
 from source, then you will need to clone all the repos in [unfetter-discover](https://www.github.com/unfetter-discover)
 and use the `docker-compose.development.yml` config file.
 
+For more information about build types and run modes, see the [Unfetter Build Types & Run Modes](https://github.com/unfetter-discover/unfetter/wiki/Unfetter-Build-Types-&-Run-Modes) wiki.
 
 
 ### Case 1: Normal installation, pulling from approved Docker Hub builds
