@@ -1,0 +1,58 @@
+[
+    {
+        "_id": "31d67373-ade0-4d5f-a2c5-1b75a66d0b8d",
+        "configKey": "adapter.rules.url",
+        "configValue": {
+            "systemName": "sample-report-system",
+            "searchPattern": "https://(.*)\/(.*)$",
+            "replacementPattern": "https://domian.next/report/$2?accept=application/json"
+        },
+        "configGroups": [
+            "stixConfig"
+        ]
+    },
+    {
+        "_id": "8a1abdb6-5fdb-4842-96b4-51e3d3436bb0",
+        "configKey": "adapter.rules.data",
+        "configValue": {
+            "systemName": "sample-report-system",
+            "rules": [
+                {
+                    "jsonPath": ".id",
+                    "stixPath": "stix.id"
+                },
+                {
+                    "jsonPath": ".type",
+                    "stixPath": "stix.type"
+                },
+                {
+                    "jsonPath": ".published",
+                    "stixPath": "stix.published"
+                },
+                {
+                    "jsonPath": ".description",
+                    "stixPath": "stix.description"
+                },
+                {
+                    "jsonPath": ".protection.level",
+                    "stixPath": "stix.granular_markings.marking_ref"
+                },
+                {
+                    "jsonPath": ".report.id",
+                    "stixPath": "stix.external_references.external_id"
+                },
+                {
+                    "jsonPath": ".report.url",
+                    "stixPath": "stix.external_references.url"
+                },
+                {
+                    "jsonPath": ".report.description",
+                    "stixPath": "stix.external_references.description"
+                }
+            ]
+        },
+        "configGroups": [
+            "stixConfig"
+        ]
+    }
+]
