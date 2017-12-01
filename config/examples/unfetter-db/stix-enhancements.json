@@ -1,5 +1,37 @@
 [
   {
+    "extendedProperties": {
+      "x_unfetter_object_actions": [
+        "The attacker used injected JavaScript on the compromised websites to redirect targets to an Internet Explorer exploit that dropped Stage 1 launcher/downloader mobile code. This downloader then retrieved and installed a PIVY RAT variant."
+      ]
+    },
+    "id": "report--44c023fa-dfcb-4334-9a44-ee9c096f96cf"
+  },
+  {
+    "extendedProperties": {
+      "x_unfetter_object_actions": [
+        "The attacker used injected JavaScript on the compromised websites to redirect targets to an Internet Explorer exploit that dropped Stage 1 launcher/downloader mobile code. This downloader then retrieved and installed a PIVY RAT variant."
+      ]
+    },
+    "id": "report--3284a25f-114a-490c-af70-ccfc694f7f02"
+  },
+  {
+    "extendedProperties": {
+      "x_unfetter_object_actions": [
+        "The attacker used injected JavaScript on the compromised websites to redirect targets to an Internet Explorer exploit that dropped Stage 1 launcher/downloader mobile code. This downloader then retrieved and installed a PIVY RAT variant."
+      ]
+    },
+    "id": "report--2a4fd840-1856-4776-af90-2eb67acee3ee"
+  },
+  {
+    "extendedProperties": {
+      "x_unfetter_object_actions": [
+        "The attacker used injected JavaScript on the compromised websites to redirect targets to an Internet Explorer exploit that dropped Stage 1 launcher/downloader mobile code. This downloader then retrieved and installed a PIVY RAT variant."
+      ]
+    },
+    "id": "report--de00c562-6afe-4e5c-994d-1aff0762b783"
+  },
+  {
     "id": "attack-pattern--0a3ead4e-6d47-4ccb-854c-a6a4f9d96b22",
     "extendedProperties": {
       "x_unfetter_sophistication_level": 2
