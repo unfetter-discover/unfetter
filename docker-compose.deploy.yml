@@ -61,6 +61,7 @@ services:
      - /tmp/examples/unfetter-db/stix-meta.json
      - --config
      - /tmp/examples/unfetter-db/config.json
+     - /tmp/examples/unfetter-db/translation-config.json
      - --add-mitre-data
      - "true"
     depends_on:
