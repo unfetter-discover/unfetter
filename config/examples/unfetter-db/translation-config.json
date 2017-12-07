@@ -1,17 +1,5 @@
 [
     {
-        "_id": "31d67373-ade0-4d5f-a2c5-1b75a66d0b8d",
-        "configKey": "adapter.rules.url",
-        "configValue": {
-            "systemName": "report-system",
-            "searchPattern": "https://(.*)\/(.*)$",
-            "replacementPattern": "https://domian.next/report/$2?accept=application/json"
-        },
-        "configGroups": [
-            "stixConfig"
-        ]
-    },
-    {
         "_id": "0d0886e1-fec2-4a62-80c5-5528ad3dd11e",
         "configKey": "adapter.rules.url",
         "configValue": {
