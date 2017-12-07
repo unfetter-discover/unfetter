@@ -3,8 +3,8 @@
         "_id": "0d0886e1-fec2-4a62-80c5-5528ad3dd11e",
         "configKey": "adapter.rules.url",
         "configValue": {
-            "systemName": "sample-report-system",
-            "searchPattern": "https://(.*)\/(.*)$",
+            "systemName" : "sample-report-system",
+            "searchPattern" : "https://(.*)/?(.*)?$",
             "replacementPattern": "/api/ctf/translate/report/data/sample"
         },
         "configGroups": [
