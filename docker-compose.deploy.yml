@@ -16,6 +16,7 @@ services:
      - unfetter-ui-build
     volumes:
      - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
      - ../unfetter-ui/dist:/etc/nginx/html
 
