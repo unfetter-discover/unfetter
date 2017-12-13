@@ -94,6 +94,27 @@ services:
      - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
 
+  unfetter-socket-server:
+    build: ../unfetter-store/unfetter-socket-server
+    container_name: unfetter-socket-server
+    image: unfetter-socket-server
+    volumes:
+      - ../unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src
+      - ./certs/:/etc/pki/tls/certs
+    environment:
+      - MONGO_REPOSITORY=repository
+      - MONGO_PORT=27017
+      - MONGO_DBNAME=stix
+    ports:
+    - "10101:3333"
+    entrypoint: 
+     - npm
+     - start
+    depends_on:
+     - cti-stix-store-repository
+    links:
+     - cti-stix-store-repository:repository
+
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
