@@ -46,7 +46,7 @@ services:
     volumes:
      - ./config/examples:/tmp/examples
     #  TODO find a working volume mounting
-    #  - ../unfetter-store/unfetter-discover-processor:/usr/src/app
+     - ../unfetter-store/unfetter-discover-processor/processor.js:/usr/src/app/processor.js
     environment:
      - MONGO_HOST=repository
     entrypoint: 
