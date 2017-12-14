@@ -1,7 +1,7 @@
 [
   {
     "metaProperties": {
-      "work_product": {
+      "work_products": [{
         "id": "293019f5-23f2-402f-af5c-f75a2096d11d",
         "author": "",
         "date": "2017-11-30T21:38:36.715Z",
@@ -37,13 +37,13 @@
             }
           ]
         }
-      }
+      }]
     },
     "id": "report--44c023fa-dfcb-4334-9a44-ee9c096f96cf"
   },
   {
     "metaProperties": {
-      "work_product": {
+      "work_products": [{
         "id": "293019f5-23f2-402f-af5c-f75a2096d11d",
         "author": "",
         "date": "2017-11-30T21:38:36.715Z",
@@ -79,13 +79,13 @@
             }
           ]
         }
-      }
+      }]
     },
     "id": "report--3284a25f-114a-490c-af70-ccfc694f7f02"
   },
   {
     "metaProperties": {
-      "work_product": {
+      "work_products": [{
         "id": "293019f5-23f2-402f-af5c-f75a2096d11d",
         "author": "",
         "date": "2017-11-30T21:38:36.715Z",
@@ -121,13 +121,13 @@
             }
           ]
         }
-      }
+      }]
     },
     "id": "report--2a4fd840-1856-4776-af90-2eb67acee3ee"
   },
   {
     "metaProperties": {
-      "work_product": {
+      "work_products": [{
         "id": "293019f5-23f2-402f-af5c-f75a2096d11d",
         "author": "",
         "date": "2017-11-30T21:38:36.715Z",
@@ -163,7 +163,7 @@
             }
           ]
         }
-      }
+      }]
     },
     "id": "report--de00c562-6afe-4e5c-994d-1aff0762b783"
   },
