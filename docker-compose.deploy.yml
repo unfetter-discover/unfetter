@@ -16,6 +16,7 @@ services:
      - unfetter-ui-build
     volumes:
      - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
      - ../unfetter-ui/dist:/etc/nginx/html
 
@@ -61,6 +62,7 @@ services:
      - /tmp/examples/unfetter-db/stix-meta.json
      - --config
      - /tmp/examples/unfetter-db/config.json
+     - /tmp/examples/unfetter-db/translation-config.json
      - --add-mitre-data
      - "true"
     depends_on:
@@ -144,7 +146,6 @@ services:
      - cti-stix-store-repository:repository
     ports:
     - "49360:3000"
-    - "5555:5555"
     volumes:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
@@ -166,7 +167,7 @@ services:
     entrypoint:
     - npm
     - run
-    - debugdev
+    - startdeploy
 
   unfetter-ui-build:
     build: ../unfetter-ui

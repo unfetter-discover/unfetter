@@ -1,9 +1,7 @@
-[
-    {
+[{
         "_id": "d9732cfc-166e-41a0-af79-d37e7abc69b2",
         "configKey": "killChains",
-        "configValue": [
-            {
+        "configValue": [{
                 "name": "mitre-attack",
                 "phase_names": [
                     "persistence",
@@ -232,5 +230,193 @@
         "configGroups": [
             "stixConfig"
         ]
+
+    },
+    {
+        "_id": "98fba9e7-6ad8-4bac-a178-af9282f8b05c",
+        "configKey": "observableDataTypes",
+        "configValue": [{
+                "name": "driver",
+                "actions": [
+                    "load",
+                    "unload"
+                ],
+                "properties": [
+                    "base_address",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "md5_hash_,module_name",
+                    "sha1_hash",
+                    "sh256_hash",
+                    "signer"
+                ]
+            },
+            {
+                "name": "file",
+                "actions": [
+                    "create",
+                    "delete",
+                    "modify",
+                    "read",
+                    "timestomp",
+                    "write"
+                ],
+                "properties": [
+                    "hashes",
+                    "size",
+                    "name",
+                    "name_enc",
+                    "magic_number_hex",
+                    "mime_type",
+                    "created",
+                    "modified",
+                    "accessed",
+                    "parent_directory",
+                    "is_encrypted",
+                    "encryption_algorithm",
+                    "decryption_key"
+                ]
+            },
+            {
+                "name": "network-traffic",
+                "actions": [
+                    "end",
+                    "message",
+                    "start"
+                ],
+                "properties": [
+                    "start",
+                    "end",
+                    "is_active",
+                    "src_ref",
+                    "dst_ref",
+                    "src_port",
+                    "dst_port",
+                    "protocols",
+                    "src_byte_count",
+                    "dst_byte_count",
+                    "src_packets",
+                    "dst_packets",
+                    "ipfix",
+                    "src_payload_ref",
+                    "dst_payload_ref"
+                ]
+            },
+            {
+                "name": "process",
+                "actions": [
+                    "create",
+                    "terminate"
+                ],
+                "properties": [
+                    "is_hidden",
+                    "pid",
+                    "name",
+                    "created",
+                    "cwd",
+                    "arguments",
+                    "command_line",
+                    "environment_variables",
+                    "opened_connection_refs",
+                    "creator_user_ref",
+                    "binary_ref",
+                    "parent_ref",
+                    "child_refs"
+                ]
+            },
+            {
+                "name": "windows-registry-key",
+                "actions": [
+                    "add",
+                    "edit",
+                    "remove"
+                ],
+                "properties": [
+                    "key",
+                    "values",
+                    "modified",
+                    "creator_user_ref",
+                    "number_of_subkeys"
+                ]
+            },
+            {
+                "name": "service",
+                "actions": [
+                    "create",
+                    "delete",
+                    "pause",
+                    "start",
+                    "stop"
+                ],
+                "properties": [
+                    "service_name",
+                    "descriptions",
+                    "display_name",
+                    "group_name",
+                    "start_type",
+                    "service_dll_refs",
+                    "service_type",
+                    "service_status"
+                ]
+            },
+            {
+                "name": "thread",
+                "actions": [
+                    "create",
+                    "remote_create",
+                    "suspend",
+                    "terminate"
+                ],
+                "properties": [
+                    "hostname",
+                    "src_pid",
+                    "src_tid",
+                    "stack_base",
+                    "stack_limit",
+                    "start_address",
+                    "start_function",
+                    "start_module",
+                    "start_module_name",
+                    "subprocess_tag",
+                    "tgt_pid",
+                    "tgt_tid",
+                    "user",
+                    "user_stack_base",
+                    "user_stack_limit"
+                ]
+            },
+            {
+                "name": "user-account",
+                "actions": [
+                    "interactive",
+                    "local",
+                    "lock",
+                    "login",
+                    "logout",
+                    "rdp",
+                    "reconnect",
+                    "remote",
+                    "unlock"
+                ],
+                "properties": [
+                    "user_id",
+                    "account_login",
+                    "account_type",
+                    "display_name",
+                    "is_service_account",
+                    "is_privileged",
+                    "can_escalate_privs",
+                    "is_disabled",
+                    "account_created",
+                    "account_expires",
+                    "password_last_changed",
+                    "account_first_login",
+                    "acount_last_login"
+                ]
+            }
+        ]
+
+
     }
 ]

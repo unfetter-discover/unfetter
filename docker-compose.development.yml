@@ -15,6 +15,7 @@ services:
      - unfetter-ui
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-openssl:
     image: svagi/openssl:latest
@@ -45,7 +46,7 @@ services:
     volumes:
      - ./config/examples:/tmp/examples
     #  TODO find a working volume mounting
-    #  - ../unfetter-store/unfetter-discover-processor:/usr/src/app
+     - ../unfetter-store/unfetter-discover-processor/processor.js:/usr/src/app/processor.js
     environment:
      - MONGO_HOST=repository
     entrypoint: 
@@ -58,6 +59,7 @@ services:
      - /tmp/examples/unfetter-db/stix-meta.json
      - --config
      - /tmp/examples/unfetter-db/config.json
+     - /tmp/examples/unfetter-db/translation-config.json
      - --add-mitre-data
      - "true"
     depends_on:
