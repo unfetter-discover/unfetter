@@ -39,7 +39,7 @@ services:
      - ./certs/:/tmp/certs
 
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:0.3.2
+    image: unfetter/unfetter-discover-processor:0.3.3
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -64,7 +64,7 @@ services:
 
   unfetter-ctf-ingest:
     container_name: unfetter-ctf-ingest
-    image: unfetter/unfetter-ctf-ingest:0.3.2
+    image: unfetter/unfetter-ctf-ingest:0.3.3
     environment:
       - API_PROTOCOL=https
       - API_HOST=apihost
@@ -95,7 +95,7 @@ services:
     - ./data/db:/data/db
 
   unfetter-discover-api-explorer:
-    image: unfetter/unfetter-discover-api:0.3.2
+    image: unfetter/unfetter-discover-api:0.3.3
     container_name: unfetter-discover-api-explorer
     depends_on:
     - unfetter-discover-openssl
@@ -123,7 +123,7 @@ services:
     - swagger-editor
 
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api:0.3.2
+    image: unfetter/unfetter-discover-api:0.3.3
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
@@ -153,7 +153,7 @@ services:
     - start
 
   unfetter-ui:
-    image: unfetter/unfetter-ui:0.3.2
+    image: unfetter/unfetter-ui:0.3.3
     container_name: unfetter-ui
     depends_on:
     - unfetter-discover-openssl
