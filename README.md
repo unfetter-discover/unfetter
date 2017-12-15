@@ -13,7 +13,7 @@ Docker-compose is part of the installation
 ### Windows:
 * [Docker Toolbox](https://docs.docker.com/toolbox/overview/) for [Docker on Windows](https://docs.docker.com/docker-for-windows/install/)
 * [Docker Compose](https://www.docker.com/products/docker-compose) is installed with Docker Toolbox
-* Follow the stnadard installation instructions for Docker Toolbox for Windows from teh Docker website.  Once installed, there should be a Docker quickstart, Oracle VM VirtualBox, and Kitematic shortcuts on the desktop
+* Follow the standard installation instructions for Docker Toolbox for Windows from the Docker website.  Once installed, there should be a Docker quickstart, Oracle VM VirtualBox, and Kitematic shortcuts on the desktop
 
 ### Linux/Ubuntu:
 * [Docker Community Edition](https://www.docker.com) (version 17.06.0-ce or higher)
@@ -26,7 +26,7 @@ Docker-compose is part of the installation
 
 ## The Project Setup
 The entire application, Unfetter Discover, is made up of multiple of docker
-containers. Each builds upon the other. We use
+containers. Each build upon the other. We use
 [Docker Compose](https://www.docker.com/products/docker-compose) to manage
 the startup and shutdown of all those Docker containers.
 
@@ -39,6 +39,7 @@ is recommended for most cases.
 from source, then you will need to clone all the repos in [unfetter-discover](https://www.github.com/unfetter-discover)
 and use the `docker-compose.development.yml` config file.
 
+For more information about build types and run modes, see the [Unfetter Build Types & Run Modes](https://github.com/unfetter-discover/unfetter/wiki/Unfetter-Build-Types-&-Run-Modes) wiki.
 
 
 ### Case 1: Normal installation, pulling from approved Docker Hub builds
@@ -57,7 +58,7 @@ docker-compose up
 It will take few minutes for the Docker images to download and build.
 
 #### Windows 
-For Windows, Docker Toolbox will install a virtual machine through VirtualBox and execute inside of that environment.  There is a couple of steps that have to happen.
+For Windows, Docker Toolbox will install a virtual machine through VirtualBox and execute inside of that environment.  There is a couple of steps that must happen.
 
 * Double click on the Docker Quickstart Terminal Icon on the windows.  When, done, you will see a $ prompt.
 * Check the ip address of the Docker-machine now running.  At the prompt, run "docker-machine.exe ip".  The returning IP is the IP address of the docker machine, usually 192.168.99.100.  NOTE: If no IP address is returned, type "docker-machine.exe env"
@@ -120,4 +121,3 @@ See [LICENSE](LICENSE.md).
 ## Disclaimer
 
 See [DISCLAIMER](DISCLAIMER.md).
-

@@ -2,6 +2,7 @@
   "type": "bundle",
   "id": "stix-archive-bundle",
   "spec_version": "2.0",
+
   "objects": [{
       "name": "POISON IVY:Assessing Damage and Extracting Intelligence",
       "external_references": [{
@@ -197,6 +198,7 @@
       "modified": "2015-11-01T00:00:00.000Z",
       "created": "2014-09-01T00:00:00.000Z"
     },
+
     {
       "labels": [],
       "external_references": [],
@@ -213,6 +215,7 @@
       "created": "2017-09-26T20:08:11.279Z",
       "contact_info": "https://wwww.unfetter.io",
       "external_refernce": [{
+
           "source_name": "organization",
           "description": "Unfetter is a team from the National Security Agency part of the Information Assurance Mission",
           "url": "https://www.iad.gov"

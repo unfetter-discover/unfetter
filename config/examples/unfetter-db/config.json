@@ -230,6 +230,7 @@
         "configGroups": [
             "stixConfig"
         ]
+
     },
     {
         "_id": "98fba9e7-6ad8-4bac-a178-af9282f8b05c",
@@ -415,5 +416,7 @@
                 ]
             }
         ]
+
+
     }
 ]
