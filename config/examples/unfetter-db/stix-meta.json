@@ -792,10 +792,7 @@
         "groupingValue": "host"
       }]
     }
-  }
-]
-=======
-[{
+  }, {
   "id": "course-of-action--43bbcfb4-b996-4953-b353-75143bf18c78",
   "metaProperties": {
     "groupings": [{
