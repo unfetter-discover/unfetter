@@ -160,7 +160,7 @@ services:
     - MONGO_DBNAME=stix
     - ENV=dev
     # Options: UAC, TEST, DEMO
-    - RUN_MODE=UAC
+    - RUN_MODE=DEMO
     # If deployed in a proxy, add the proxy's URL here
     - HTTPS_PROXY_URL=
     entrypoint:
@@ -177,12 +177,11 @@ services:
     volumes:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-ui/src:/usr/share/unfetter-ui/src
-    - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
     - ../unfetter-ui/config:/usr/share/unfetter-ui/config
     environment:
     # Options: UAC, TEST, DEMO
-    - RUN_MODE=UAC
+    - RUN_MODE=DEMO
     entrypoint:
     - npm
     - run
-    - server:dev:alt
+    - start:dev
