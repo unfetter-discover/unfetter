@@ -8,6 +8,7 @@ services:
      - "80:80"
     depends_on:
      - unfetter-discover-openssl
+     - unfetter-ui
     links:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
@@ -160,7 +161,7 @@ services:
     - MONGO_DBNAME=stix
     - ENV=dev
     # Options: UAC, TEST, DEMO
-    - RUN_MODE=DEMO
+    - RUN_MODE=UAC
     # If deployed in a proxy, add the proxy's URL here
     - HTTPS_PROXY_URL=
     entrypoint:
@@ -172,16 +173,10 @@ services:
     build: ../unfetter-ui
     image: unfetter-ui
     container_name: unfetter-ui
-    depends_on:
-    - unfetter-discover-openssl
     volumes:
-    - ./certs/:/etc/pki/tls/certs
     - ../unfetter-ui/src:/usr/share/unfetter-ui/src
     - ../unfetter-ui/config:/usr/share/unfetter-ui/config
-    environment:
-    # Options: UAC, TEST, DEMO
-    - RUN_MODE=DEMO
     entrypoint:
     - npm
     - run
-    - start:dev
+    - serve:docker:dev:uac
