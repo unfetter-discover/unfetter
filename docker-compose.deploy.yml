@@ -13,7 +13,6 @@ services:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
-     - unfetter-ui-build
     volumes:
      - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
@@ -176,9 +175,6 @@ services:
     entrypoint:
      - npm
      - run
-     - build:aot:prod:noclean
-    environment:
-    # Options: UAC, TEST, DEMO
-    - RUN_MODE=DEMO
+     - build:prod:noclean
     volumes:
      - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist

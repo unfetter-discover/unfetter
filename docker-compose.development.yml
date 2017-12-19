@@ -8,6 +8,7 @@ services:
      - "80:80"
     depends_on:
      - unfetter-discover-openssl
+     - unfetter-ui
     links:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
@@ -172,17 +173,10 @@ services:
     build: ../unfetter-ui
     image: unfetter-ui
     container_name: unfetter-ui
-    depends_on:
-    - unfetter-discover-openssl
     volumes:
-    - ./certs/:/etc/pki/tls/certs
     - ../unfetter-ui/src:/usr/share/unfetter-ui/src
-    - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
     - ../unfetter-ui/config:/usr/share/unfetter-ui/config
-    environment:
-    # Options: UAC, TEST, DEMO
-    - RUN_MODE=UAC
     entrypoint:
     - npm
     - run
-    - server:dev:alt
+    - serve:docker:dev:uac
