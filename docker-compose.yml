@@ -11,7 +11,7 @@ services:
     links:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
-     - unfetter-ctf-ingest     
+     - unfetter-ctf-ingest
      - unfetter-ui
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
@@ -45,6 +45,8 @@ services:
      - ./config/examples:/tmp/examples
     environment:
      - MONGO_HOST=repository
+     # If deployed in a proxy, add the proxy's URL here
+     - HTTPS_PROXY_URL=
     entrypoint:
      - node
      - processor.js
@@ -75,7 +77,7 @@ services:
       - MONGO_DBNAME=stix
     ports:
     - "3001:10010"
-    entrypoint: 
+    entrypoint:
      - npm
      - start
     depends_on:
@@ -116,7 +118,7 @@ services:
     - MONGO_REPOSITORY=repository
     - MONGO_PORT=27017
     - MONGO_DBNAME=stix
-    - ENV=prod    
+    - ENV=prod
     entrypoint:
     - npm
     - run
