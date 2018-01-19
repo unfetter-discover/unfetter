@@ -19,6 +19,7 @@ services:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
+
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -168,6 +169,7 @@ services:
     links:
     - cti-stix-store-repository:repository
     - unfetter-socket-server:socketserver
+    - unfetter-pattern-handler
     ports:
     - "49360:3000"
     - "5555:5555"
@@ -178,6 +180,8 @@ services:
     - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
     environment:
     - CTF_PARSE_HOST=http://unfetter-ctf-ingest
+    - PATTERN_HANDLER_DOMAIN = unfetter-pattern-handler
+    - PATTERN_HANDLER_PORT = 5000
     - SOCKET_SERVER_DOMAIN = socketserver
     - SOCKET_SERVER_PORT = 3333
     - STIX_API_PROTOCOL=http
@@ -208,3 +212,18 @@ services:
     - npm
     - run
     - serve:docker:dev:uac
+
+  unfetter-pattern-handler:
+    build: ../stix2pattern
+    container_name: unfetter-pattern-handler
+    image: unfetter-pattern-handler
+    volumes:
+      - ../stix2pattern/app.py:/opt/stix/app.py
+      - ../stix2pattern/test.py:/opt/stix/test.py
+    ports:
+    - "5000:5000"
+    entrypoint:
+    # ["python3","app.py","0.0.0.0"]
+     - python3
+     - app.py
+     - 0.0.0.0
