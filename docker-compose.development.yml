@@ -109,6 +109,10 @@ services:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
       - MONGO_DBNAME=stix
+      # If deployed in a proxy, add the proxy's URL here
+      - HTTPS_PROXY_URL=
+      # Options: true, false ; NOTE Always commit set to `false`
+      - SEND_EMAIL_ALERTS=false
     ports:
     - "13333:3333"
     entrypoint:
@@ -196,6 +200,8 @@ services:
     - RUN_MODE=UAC
     # If deployed in a proxy, add the proxy's URL here
     - HTTPS_PROXY_URL=
+    # Options: true, false ; NOTE Always commit set to `false`
+    - SEND_EMAIL_ALERTS=false
     entrypoint:
     - npm
     - run
