@@ -113,6 +113,8 @@ services:
       - HTTPS_PROXY_URL=
       # Options: true, false ; NOTE Always commit set to `false`
       - SEND_EMAIL_ALERTS=false
+      # This is only needed if using SEND_EMAIL_ALERTS *AND* private-config.email.json does not have a service email address
+      - SERVICE_EMAIL=
     ports:
     - "13333:3333"
     entrypoint:
