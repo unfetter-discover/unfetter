@@ -1,4 +1,4 @@
-version: '2.0'
+version: '3.0'
 services:
   unfetter-discover-gateway:
     image: nginx:1.13.5-alpine
@@ -10,7 +10,7 @@ services:
      - unfetter-discover-openssl
      - unfetter-ui
     links:
-     - unfetter-discover-api-explorer
+     - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
      - unfetter-ui
@@ -133,36 +133,21 @@ services:
     volumes:
     - ./data/db:/data/db
 
-  unfetter-discover-api-explorer:
-    build: ../unfetter-store/unfetter-discover-api
-    container_name: unfetter-discover-api-explorer
-    image: unfetter-discover-api
-    depends_on:
-    - unfetter-discover-openssl
-    - cti-stix-store-repository
-    expose:
-    - "3000"
-    ports:
-    - "49260:3000"
-    links:
-     - cti-stix-store-repository:repository
+  unfetter-api-explorer:
+    build: 
+      context: ../unfetter-store
+      dockerfile: unfetter-api-explorer/parent-context.Dockerfile
+    container_name: unfetter-api-explorer
+    image: unfetter-api-explorer
     volumes:
-    - ./certs/:/etc/pki/tls/certs
-    - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
-    - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
-    environment:
-    - STIX_API_PROTOCOL=http
-    - STIX_API_HOST=cti-stix-store
-    - STIX_API_PORT=3000
-    - STIX_API_PATH=cti-stix-store-api
-    - MONGO_REPOSITORY=repository
-    - MONGO_PORT=27017
-    - MONGO_DBNAME=stix
-    - ENV=prod
+     - ../unfetter-store/unfetter-api-explorer/src:/usr/share/unfetter-api-explorer/src
+     - ../unfetter-store/unfetter-discover-api/multifile-remote.yaml:/usr/share/unfetter-discover-api/multifile-remote.yaml
+     - ../unfetter-store/unfetter-discover-api/api/swagger:/usr/share/unfetter-discover-api/api/swagger
+    ports:
+    - "3200:3200"
     entrypoint:
-    - npm
-    - run
-    - swaggerdev
+     - npm
+     - start
 
   unfetter-discover-api:
     build: ../unfetter-store/unfetter-discover-api
