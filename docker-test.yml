@@ -1,0 +1,46 @@
+version: '2.3'
+services:
+  unfetter-discover-gateway:
+    image: nginx:1.13.5-alpine
+    container_name: unfetter-discover-gateway
+    ports:
+     - "443:443"
+     - "80:80"
+    volumes:
+     - certs:/etc/pki/tls/certs
+
+  unfetter-discover-openssl:
+    image: svagi/openssl:latest
+    container_name: unfetter-discover-openssl
+    entrypoint:
+     - openssl
+     - req
+     - -subj
+     - /CN=localhost/DC=localhost/DC=localdomain
+     - -new
+     - -newkey
+     - rsa:2048
+     - -days
+     - "365"
+     - -nodes
+     - -x509
+     - -keyout
+     - /tmp/certs/server.key
+     - -out
+     - /tmp/certs/server.crt
+    volumes:
+     - certs:/tmp/certs
+
+
+  cti-stix-store-repository:
+    image: mongo:3.4.1
+    container_name: cti-stix-store-repository
+    ports:
+    - "27018:27017"
+    volumes:
+    - /Users/alchemist/workspace/alchemist/unfetter-discover/unfetter/data2:/data
+
+
+volumes:
+  certs:
+  

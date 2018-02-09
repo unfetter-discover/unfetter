@@ -18,7 +18,7 @@ services:
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
-     - ./certs/:/etc/pki/tls/certs
+     - certs:/etc/pki/tls/certs
 
   unfetter-discover-openssl:
     image: svagi/openssl:latest
@@ -40,7 +40,7 @@ services:
      - -out
      - /tmp/certs/server.crt
     volumes:
-     - ./certs/:/tmp/certs
+     - certs:/tmp/certs
 
   unfetter-discover-processor:
     build: ../unfetter-store/unfetter-discover-processor
@@ -104,7 +104,7 @@ services:
     image: unfetter-socket-server
     volumes:
       - ../unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src
-      - ./certs/:/etc/pki/tls/certs
+      - certs:/etc/pki/tls/certs
     environment:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
@@ -125,7 +125,7 @@ services:
     ports:
     - "27018:27017"
     volumes:
-    - ./data/db:/data/db
+    - ./data:/data
 
   unfetter-discover-api-explorer:
     build: ../unfetter-store/unfetter-discover-api
@@ -141,7 +141,7 @@ services:
     links:
      - cti-stix-store-repository:repository
     volumes:
-    - ./certs/:/etc/pki/tls/certs
+    - certs:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     environment:
@@ -174,7 +174,7 @@ services:
     - "49360:3000"
     - "5555:5555"
     volumes:
-    - ./certs/:/etc/pki/tls/certs
+    - certs:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
@@ -227,3 +227,7 @@ services:
      - python3
      - app.py
      - 0.0.0.0
+
+volumes:
+  certs:
+  
