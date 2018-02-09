@@ -125,7 +125,7 @@ services:
     ports:
     - "27018:27017"
     volumes:
-    - ./data:/data
+    - data-db:/data/db
 
   unfetter-discover-api-explorer:
     build: ../unfetter-store/unfetter-discover-api
@@ -230,4 +230,5 @@ services:
 
 volumes:
   certs:
+  data-db:
   
