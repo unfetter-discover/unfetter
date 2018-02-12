@@ -239,7 +239,8 @@
                 "name": "driver",
                 "actions": [
                     "load",
-                    "unload"
+                    "unload",
+                    "*"
                 ],
                 "properties": [
                     "base_address",
@@ -260,7 +261,8 @@
                     "modify",
                     "read",
                     "timestomp",
-                    "write"
+                    "write",
+                    "*"
                 ],
                 "properties": [
                     "hashes",
@@ -283,7 +285,8 @@
                 "actions": [
                     "end",
                     "message",
-                    "start"
+                    "start",
+                    "*"
                 ],
                 "properties": [
                     "start",
@@ -307,7 +310,8 @@
                 "name": "process",
                 "actions": [
                     "create",
-                    "terminate"
+                    "terminate",
+                    "*"
                 ],
                 "properties": [
                     "is_hidden",
@@ -330,7 +334,8 @@
                 "actions": [
                     "add",
                     "edit",
-                    "remove"
+                    "remove",
+                    "*"
                 ],
                 "properties": [
                     "key",
@@ -347,7 +352,8 @@
                     "delete",
                     "pause",
                     "start",
-                    "stop"
+                    "stop",
+                    "*"
                 ],
                 "properties": [
                     "service_name",
@@ -366,7 +372,8 @@
                     "create",
                     "remote_create",
                     "suspend",
-                    "terminate"
+                    "terminate",
+                    "*"
                 ],
                 "properties": [
                     "hostname",
@@ -397,7 +404,8 @@
                     "rdp",
                     "reconnect",
                     "remote",
-                    "unlock"
+                    "unlock",
+                    "*"
                 ],
                 "properties": [
                     "user_id",

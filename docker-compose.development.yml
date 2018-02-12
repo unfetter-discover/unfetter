@@ -10,7 +10,7 @@ services:
      - unfetter-discover-openssl
      - unfetter-ui
     links:
-     - unfetter-discover-api-explorer
+     - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
      - unfetter-ui
@@ -73,30 +73,8 @@ services:
      - cti-stix-store-repository:repository
 
   unfetter-ctf-ingest:
-    build: ../unfetter-store/unfetter-ctf-ingest
+    image: nginx:1.13.5-alpine
     container_name: unfetter-ctf-ingest
-    image: unfetter-ctf-ingest
-    volumes:
-     - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
-    environment:
-      - API_PROTOCOL=https
-      - API_HOST=apihost
-      - API_PORT=3000
-      - API_CONTEXT=/
-      - MONGO_REPOSITORY=repository
-      - MONGO_PORT=27017
-      - MONGO_DBNAME=stix
-    ports:
-    - "3001:10010"
-    entrypoint:
-     - npm
-     - start
-    depends_on:
-     - cti-stix-store-repository
-     - unfetter-discover-api
-    links:
-     - cti-stix-store-repository:repository
-     - unfetter-discover-api:apihost
 
   unfetter-socket-server:
     build: ../unfetter-store/unfetter-socket-server
@@ -105,10 +83,17 @@ services:
     volumes:
       - ../unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src
       - certs:/etc/pki/tls/certs
+      - socket-config:/usr/share/unfetter-socket-server/config
     environment:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
       - MONGO_DBNAME=stix
+      # If deployed in a proxy, add the proxy's URL here
+      - HTTPS_PROXY_URL=
+      # Options: true, false ; NOTE Always commit set to `false`
+      - SEND_EMAIL_ALERTS=false
+      # This is only needed if using SEND_EMAIL_ALERTS *AND* private-config.email.json does not have a service email address
+      - SERVICE_EMAIL=
     ports:
     - "13333:3333"
     entrypoint:
@@ -128,36 +113,21 @@ services:
     - data-db:/data/db
     - data-config:/data/configdb
 
-  unfetter-discover-api-explorer:
-    build: ../unfetter-store/unfetter-discover-api
-    container_name: unfetter-discover-api-explorer
-    image: unfetter-discover-api
-    depends_on:
-    - unfetter-discover-openssl
-    - cti-stix-store-repository
-    expose:
-    - "3000"
-    ports:
-    - "49260:3000"
-    links:
-     - cti-stix-store-repository:repository
+  unfetter-api-explorer:
+    build: 
+      context: ../unfetter-store
+      dockerfile: unfetter-api-explorer/parent-context.Dockerfile
+    container_name: unfetter-api-explorer
+    image: unfetter-api-explorer
     volumes:
-    - certs:/etc/pki/tls/certs
-    - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
-    - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
-    environment:
-    - STIX_API_PROTOCOL=http
-    - STIX_API_HOST=cti-stix-store
-    - STIX_API_PORT=3000
-    - STIX_API_PATH=cti-stix-store-api
-    - MONGO_REPOSITORY=repository
-    - MONGO_PORT=27017
-    - MONGO_DBNAME=stix
-    - ENV=prod
+     - ../unfetter-store/unfetter-api-explorer/src:/usr/share/unfetter-api-explorer/src
+     - ../unfetter-store/unfetter-discover-api/multifile-remote.yaml:/usr/share/unfetter-discover-api/multifile-remote.yaml
+     - ../unfetter-store/unfetter-discover-api/api/swagger:/usr/share/unfetter-discover-api/api/swagger
+    ports:
+    - "3200:3200"
     entrypoint:
-    - npm
-    - run
-    - swaggerdev
+     - npm
+     - start
 
   unfetter-discover-api:
     build: ../unfetter-store/unfetter-discover-api
@@ -178,7 +148,9 @@ services:
     - certs:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
-    - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
+    - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js    
+    - api-config:/usr/share/unfetter-discover-api/api/config/
+
     environment:
     - CTF_PARSE_HOST=http://unfetter-ctf-ingest
     - PATTERN_HANDLER_DOMAIN = unfetter-pattern-handler
@@ -197,6 +169,8 @@ services:
     - RUN_MODE=UAC
     # If deployed in a proxy, add the proxy's URL here
     - HTTPS_PROXY_URL=
+    # Options: true, false ; NOTE Always commit set to `false`
+    - SEND_EMAIL_ALERTS=false
     entrypoint:
     - npm
     - run
@@ -234,3 +208,5 @@ volumes:
   certs:
   data-db:
   data-config:
+  socket-config:
+  api-config:

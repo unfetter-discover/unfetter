@@ -13,6 +13,7 @@ services:
      - unfetter-discover-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
+     - unfetter-socket-server
     volumes:
      - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
@@ -85,8 +86,6 @@ services:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
       - MONGO_DBNAME=stix
-    ports:
-    - "3001:10010"
     entrypoint:
      - npm
      - start
@@ -97,11 +96,28 @@ services:
      - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
 
+  unfetter-socket-server:
+    build: ../unfetter-store/unfetter-socket-server
+    container_name: unfetter-socket-server
+    image: unfetter-socket-server
+    volumes:
+      - ../unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src
+      - ./certs/:/etc/pki/tls/certs
+    environment:
+      - MONGO_REPOSITORY=repository
+      - MONGO_PORT=27017
+      - MONGO_DBNAME=stix
+    entrypoint:
+     - npm
+     - start
+    depends_on:
+     - cti-stix-store-repository
+    links:
+     - cti-stix-store-repository:repository
+
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
-    ports:
-    - "27018:27017"
     volumes:
     - ./data/db:/data/db
 
@@ -112,10 +128,6 @@ services:
     depends_on:
     - unfetter-discover-openssl
     - cti-stix-store-repository
-    expose:
-    - "3000"
-    ports:
-    - "49260:3000"
     links:
      - cti-stix-store-repository:repository
     volumes:
@@ -145,8 +157,8 @@ services:
     - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
-    ports:
-    - "49360:3000"
+     - unfetter-socket-server:socketserver
+     - unfetter-pattern-handler
     volumes:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
@@ -162,7 +174,7 @@ services:
     - MONGO_DBNAME=stix
     - ENV=dev
     # Options: UAC, TEST, DEMO
-    - RUN_MODE=DEMO
+    - RUN_MODE=UAC
     # If deployed in a proxy, add the proxy's URL here
     - HTTPS_PROXY_URL=
     entrypoint:
@@ -180,3 +192,16 @@ services:
      - build:prod:noclean
     volumes:
      - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
+
+  unfetter-pattern-handler:
+    build: ../stix2pattern
+    container_name: unfetter-pattern-handler
+    image: unfetter-pattern-handler
+    volumes:
+      - ../stix2pattern/app.py:/opt/stix/app.py
+      - ../stix2pattern/test.py:/opt/stix/test.py
+    entrypoint:
+    # ["python3","app.py","0.0.0.0"]
+     - python3
+     - app.py
+     - 0.0.0.0
