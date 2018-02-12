@@ -126,6 +126,7 @@ services:
     - "27018:27017"
     volumes:
     - data-db:/data/db
+    - data-config:/data/configdb
 
   unfetter-discover-api-explorer:
     build: ../unfetter-store/unfetter-discover-api
@@ -228,7 +229,8 @@ services:
      - app.py
      - 0.0.0.0
 
+
 volumes:
   certs:
   data-db:
-  
+  data-config:
