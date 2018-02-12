@@ -17,7 +17,7 @@ services:
     volumes:
      - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
-     - ./certs/:/etc/pki/tls/certs
+     - certs:/etc/pki/tls/certs
      - ../unfetter-ui/dist:/etc/nginx/html
 
   unfetter-discover-openssl:
@@ -40,7 +40,7 @@ services:
      - -out
      - /tmp/certs/server.crt
     volumes:
-     - ./certs/:/tmp/certs
+     - certs:/tmp/certs
 
   unfetter-discover-processor:
     build: ../unfetter-store/unfetter-discover-processor
@@ -102,7 +102,7 @@ services:
     image: unfetter-socket-server
     volumes:
       - ../unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src
-      - ./certs/:/etc/pki/tls/certs
+      - certs:/etc/pki/tls/certs
     environment:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
@@ -119,7 +119,7 @@ services:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
     volumes:
-    - ./data/db:/data/db
+    - data-db:/data/db
 
   unfetter-discover-api-explorer:
     build: ../unfetter-store/unfetter-discover-api
@@ -131,7 +131,7 @@ services:
     links:
      - cti-stix-store-repository:repository
     volumes:
-    - ./certs/:/etc/pki/tls/certs
+    - certs:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     environment:
@@ -160,7 +160,8 @@ services:
      - unfetter-socket-server:socketserver
      - unfetter-pattern-handler
     volumes:
-    - ./certs/:/etc/pki/tls/certs
+    - certs:/etc/pki/tls/certs
+    - api-config:/usr/share/unfetter-discover-api/api/config/
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     environment:
@@ -205,3 +206,11 @@ services:
      - python3
      - app.py
      - 0.0.0.0
+
+
+volumes:
+  certs:
+  data-db:
+  data-config:
+  socket-config:
+  api-config:

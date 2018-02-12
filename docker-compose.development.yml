@@ -186,7 +186,7 @@ services:
     entrypoint:
     - npm
     - run
-    - serve:docker:dev:uac
+    - server:docker:dev:uac
 
   unfetter-pattern-handler:
     build: ../stix2pattern
