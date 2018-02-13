@@ -18,7 +18,7 @@ services:
     volumes:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
-     - ./certs/:/etc/pki/tls/certs
+     - certs:/etc/pki/tls/certs
 
   unfetter-discover-openssl:
     image: svagi/openssl:latest
@@ -40,7 +40,7 @@ services:
      - -out
      - /tmp/certs/server.crt
     volumes:
-     - ./certs/:/tmp/certs
+     - certs:/tmp/certs
 
   unfetter-discover-processor:
     build: ../unfetter-store/unfetter-discover-processor
@@ -104,7 +104,8 @@ services:
     image: unfetter-socket-server
     volumes:
       - ../unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src
-      - ./certs/:/etc/pki/tls/certs
+      - certs:/etc/pki/tls/certs
+      - socket-config:/usr/share/unfetter-socket-server/config
     environment:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
@@ -131,7 +132,8 @@ services:
     ports:
     - "27018:27017"
     volumes:
-    - ./data/db:/data/db
+    - data-db:/data/db
+    - data-config:/data/configdb
 
   unfetter-api-explorer:
     build: 
@@ -165,10 +167,12 @@ services:
     - "49360:3000"
     - "5555:5555"
     volumes:
-    - ./certs/:/etc/pki/tls/certs
+    - certs:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
-    - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
+    - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js    
+    - api-config:/usr/share/unfetter-discover-api/api/config/
+
     environment:
     - CTF_PARSE_HOST=http://unfetter-ctf-ingest
     - PATTERN_HANDLER_DOMAIN = unfetter-pattern-handler
@@ -204,7 +208,7 @@ services:
     entrypoint:
     - npm
     - run
-    - serve:docker:dev:uac
+    - server:docker:dev:uac
 
   unfetter-pattern-handler:
     build: ../stix2pattern
@@ -220,3 +224,11 @@ services:
      - python3
      - app.py
      - 0.0.0.0
+
+
+volumes:
+  certs:
+  data-db:
+  data-config:
+  socket-config:
+  api-config:
