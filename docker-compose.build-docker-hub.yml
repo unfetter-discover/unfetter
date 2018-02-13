@@ -160,6 +160,17 @@ services:
     - run
     - startdeploy
 
+  unfetter-ui-build:
+    build: ../unfetter-ui
+    image: unfetter-ui
+    container_name: unfetter-ui-build
+    entrypoint:
+     - npm
+     - run
+     - build:demo:noclean
+    volumes:
+     - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
+
   unfetter-pattern-handler:
     build: ../stix2pattern
     container_name: unfetter-pattern-handler
