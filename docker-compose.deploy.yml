@@ -118,6 +118,9 @@ services:
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
+    # NOTE: Uncomment this out and restart the stac to run ../unfetter-store/unfetter-utils/user_promotion_tool.py
+    # ports:
+    # - "27018:27017"
     volumes:
     - ./data/db:/data/db
 
