@@ -79,13 +79,26 @@ Create a directory to hold all the projects,
 mkdir unfetter-discover
 cd unfetter-discover
 ```
-Next, you will need to clone three projects in [unfetter-discover](https://www.github.com/unfetter-discover).  
+Next, you will need to clone four projects in [unfetter-discover](https://www.github.com/unfetter-discover).  
+
+SSH:
 ```bash
  git clone git@github.com:unfetter-discover/unfetter.git
  git clone git@github.com:unfetter-discover/unfetter-ui.git
  git clone git@github.com:unfetter-discover/unfetter-store.git
+ git clone git@github.com:unfetter-discover/stix2pattern.git
  cd unfetter
  ```
+ 
+ HTTPS:
+ ```bash
+ git clone https://github.com/unfetter-discover/unfetter.git
+ git clone https://github.com/unfetter-discover/unfetter-ui.git
+ git clone https://github.com/unfetter-discover/unfetter-store.git
+ git clone https://github.com/unfetter-discover/stix2pattern.git
+ cd unfetter
+ ```
+ 
  Next, change directories into the unfetter directory, which houses the docker-compose.development.yml file, and run docker-compose
  
  For MaxOSX and Linux

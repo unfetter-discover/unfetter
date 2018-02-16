@@ -9,13 +9,14 @@ services:
     depends_on:
      - unfetter-discover-openssl
     links:
-     - unfetter-discover-api-explorer
+     - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
-     - unfetter-ui
     volumes:
-     - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
+     - ./config/nginx/conf.d:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
+     - ./uifiles:/etc/nginx/html
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -96,33 +97,14 @@ services:
     volumes:
     - ./data/db:/data/db
 
-  unfetter-discover-api-explorer:
-    image: unfetter/unfetter-discover-api:0.3.4
-    container_name: unfetter-discover-api-explorer
-    depends_on:
-    - unfetter-discover-openssl
-    - cti-stix-store-repository
-    expose:
-    - "3000"
+  unfetter-api-explorer:
+    image: unfetter/unfetter-api-explorer:0.3.4
+    container_name: unfetter-api-explorer
     ports:
-    - "49260:3000"
-    links:
-     - cti-stix-store-repository:repository
-    volumes:
-    - ./certs/:/etc/pki/tls/certs
-    environment:
-    - STIX_API_PROTOCOL=http
-    - STIX_API_HOST=cti-stix-store
-    - STIX_API_PORT=3000
-    - STIX_API_PATH=cti-stix-store-api
-    - MONGO_REPOSITORY=repository
-    - MONGO_PORT=27017
-    - MONGO_DBNAME=stix
-    - ENV=prod
+    - "3200:3200"
     entrypoint:
-    - npm
-    - run
-    - swagger-editor
+     - npm
+     - start
 
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api:0.3.4
@@ -154,17 +136,13 @@ services:
     - npm
     - start
 
-  unfetter-ui:
-    image: unfetter/unfetter-ui:0.3.4
-    container_name: unfetter-ui
-    depends_on:
-    - unfetter-discover-openssl
-    volumes:
-    - ./certs/:/etc/pki/tls/certs
-    environment:
-    # Options: UAC, TEST, DEMO
-    - RUN_MODE=DEMO
+  unfetter-pattern-handler:
+    image: unfetter/unfetter-pattern-handler:0.3.4
+    container_name: unfetter-pattern-handler
+    ports:
+    - "5000:5000"
     entrypoint:
-    - npm
-    - run
-    - server:dev:alt
+    # ["python3","app.py","0.0.0.0"]
+     - python3
+     - app.py
+     - 0.0.0.0
