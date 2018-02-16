@@ -12,11 +12,11 @@ services:
      - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
-     - unfetter-ui
     volumes:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
+     - ./uifiles:/etc/nginx/html
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -135,21 +135,6 @@ services:
     entrypoint:
     - npm
     - start
-
-  unfetter-ui:
-    image: unfetter/unfetter-ui:0.3.4
-    container_name: unfetter-ui
-    depends_on:
-    - unfetter-discover-openssl
-    volumes:
-    - ./certs/:/etc/pki/tls/certs
-    environment:
-    # Options: UAC, TEST, DEMO
-    - RUN_MODE=DEMO
-    entrypoint:
-    - npm
-    - run
-    - serve:docker:dev:demo
 
   unfetter-pattern-handler:
     image: unfetter/unfetter-pattern-handler:0.3.4
