@@ -14,7 +14,8 @@ services:
      - unfetter-ctf-ingest
      - unfetter-ui
     volumes:
-     - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
+     - ./config/nginx/conf.d:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
   unfetter-discover-openssl:
     image: svagi/openssl:latest
@@ -96,6 +97,22 @@ services:
     volumes:
     - ./data/db:/data/db
 
+  unfetter-api-explorer:
+    build: 
+      context: ../unfetter-store
+      dockerfile: unfetter-api-explorer/parent-context.Dockerfile
+    container_name: unfetter-api-explorer
+    image: unfetter-api-explorer
+    volumes:
+     - ../unfetter-store/unfetter-api-explorer/src:/usr/share/unfetter-api-explorer/src
+     - ../unfetter-store/unfetter-discover-api/multifile-remote.yaml:/usr/share/unfetter-discover-api/multifile-remote.yaml
+     - ../unfetter-store/unfetter-discover-api/api/swagger:/usr/share/unfetter-discover-api/api/swagger
+    ports:
+    - "3200:3200"
+    entrypoint:
+     - npm
+     - start
+
   unfetter-discover-api-explorer:
     image: unfetter/unfetter-discover-api:0.3.4
     container_name: unfetter-discover-api-explorer
@@ -167,4 +184,15 @@ services:
     entrypoint:
     - npm
     - run
-    - server:dev:alt
+    - serve:docker:dev:demo
+
+  unfetter-pattern-handler:
+    image: unfetter/unfetter-pattern-handler:0.3.4
+    container_name: unfetter-pattern-handler
+    ports:
+    - "5000:5000"
+    entrypoint:
+    # ["python3","app.py","0.0.0.0"]
+     - python3
+     - app.py
+     - 0.0.0.0
