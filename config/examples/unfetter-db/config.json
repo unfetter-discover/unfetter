@@ -247,7 +247,8 @@
                     "fqdn",
                     "hostname",
                     "image_path",
-                    "md5_hash_,module_name",
+                    "md5_hash",
+                    "module_name",
                     "sha1_hash",
                     "sh256_hash",
                     "signer"
@@ -265,23 +266,25 @@
                     "*"
                 ],
                 "properties": [
-                    "hashes",
-                    "size",
-                    "name",
-                    "name_enc",
-                    "magic_number_hex",
-                    "mime_type",
-                    "created",
-                    "modified",
-                    "accessed",
-                    "parent_directory",
-                    "is_encrypted",
-                    "encryption_algorithm",
-                    "decryption_key"
+                    "company",
+                    "creation_time",
+                    "file_name",
+                    "file_path",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "md5_hash",
+                    "pid",
+                    "ppid",
+                    "previous_creation_time",
+                    "sha1_hash",
+                    "sha256_hash",
+                    "signer",
+                    "user"
                 ]
             },
             {
-                "name": "network-traffic",
+                "name": "flow",
                 "actions": [
                     "end",
                     "message",
@@ -289,21 +292,50 @@
                     "*"
                 ],
                 "properties": [
-                    "start",
-                    "end",
-                    "is_active",
-                    "src_ref",
-                    "dst_ref",
+                    "content",
+                    "dest_fqdn",
+                    "dest_hostname",
+                    "dest_ip",
+                    "dest_port",
+                    "end_time",
+                    "exe",
+                    "flags",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "packet_count",
+                    "pid",
+                    "ppid",
+                    "proto_info",
+                    "protocol",
+                    "src_fqdn",
+                    "src_hostname",
+                    "src_ip",
                     "src_port",
-                    "dst_port",
-                    "protocols",
-                    "src_byte_count",
-                    "dst_byte_count",
-                    "src_packets",
-                    "dst_packets",
-                    "ipfix",
-                    "src_payload_ref",
-                    "dst_payload_ref"
+                    "start_time",
+                    "user"
+                ]
+            },
+            {
+                "name": "module",
+                "actions": [
+                    "load",
+                    "unload",
+                    "*"
+                ],
+                "properties": [
+                    "base_address",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "md5_hash",
+                    "module_name",
+                    "module_path",
+                    "pid",
+                    "sha1_hash",
+                    "sha256_hash",
+                    "signer",
+                    "tid"
                 ]
             },
             {
@@ -314,23 +346,25 @@
                     "*"
                 ],
                 "properties": [
-                    "is_hidden",
-                    "pid",
-                    "name",
-                    "created",
-                    "cwd",
-                    "arguments",
                     "command_line",
-                    "environment_variables",
-                    "opened_connection_refs",
-                    "creator_user_ref",
-                    "binary_ref",
-                    "parent_ref",
-                    "child_refs"
+                    "exe",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "md5_hash",
+                    "parent_exe",
+                    "parent_image_path",
+                    "pid",
+                    "ppid",
+                    "sha1_hash",
+                    "sha256_hash",
+                    "sid",
+                    "signer",
+                    "user"
                 ]
             },
             {
-                "name": "windows-registry-key",
+                "name": "registry",
                 "actions": [
                     "add",
                     "edit",
@@ -338,11 +372,16 @@
                     "*"
                 ],
                 "properties": [
+                    "data",
+                    "fqdn",
+                    "hive",
+                    "hostname",
+                    "image_path",
                     "key",
-                    "values",
-                    "modified",
-                    "creator_user_ref",
-                    "number_of_subkeys"
+                    "pid",
+                    "type",
+                    "user",
+                    "value"
                 ]
             },
             {
@@ -356,16 +395,17 @@
                     "*"
                 ],
                 "properties": [
-                    "service_name",
-                    "descriptions",
-                    "display_name",
-                    "group_name",
-                    "start_type",
-                    "service_dll_refs",
-                    "service_type",
-                    "service_status"
+                    "command_line",
+                    "exe",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "name",
+                    "pid",
+                    "ppid",
+                    "user"
                 ]
-            },
+            },                      
             {
                 "name": "thread",
                 "actions": [
@@ -394,7 +434,7 @@
                 ]
             },
             {
-                "name": "user-account",
+                "name": "user-session",
                 "actions": [
                     "interactive",
                     "local",
@@ -408,19 +448,13 @@
                     "*"
                 ],
                 "properties": [
-                    "user_id",
-                    "account_login",
-                    "account_type",
-                    "display_name",
-                    "is_service_account",
-                    "is_privileged",
-                    "can_escalate_privs",
-                    "is_disabled",
-                    "account_created",
-                    "account_expires",
-                    "password_last_changed",
-                    "account_first_login",
-                    "acount_last_login"
+                    "dest_ip",
+                    "dest_port",
+                    "hostname",
+                    "logon_id",
+                    "src_ip",
+                    "src_port",
+                    "user"
                 ]
             }
         ]

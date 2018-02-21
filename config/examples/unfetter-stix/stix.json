@@ -19737,6 +19737,14 @@
       "type": "indicator",
       "id": "indicator--f04e6079-0439-47f1-8a3b-d16d459461a9",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99"
+    },
+    {
+      "description": "This utility shows the user what programs are configured to run during system bootup or login, and/or on execution of various built-in Windows applications like Internet Explorer, Explorer and media players. These programs and drivers include ones in your startup folder, Run, RunOnce, and other Registry keys. Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Winlogon notifications, auto-start services, etc.",
+      "name": "Autoruns",
+      "id": "x-unfetter-sensor--dd299697-9a11-4278-800f-83b1b9dfdb71",
+      "type": "x-unfetter-sensor",
+      "modified": "2018-02-21T21:22:15.833Z",
+      "created": "2018-02-21T21:22:15.833Z"
     }
   ]
 }
