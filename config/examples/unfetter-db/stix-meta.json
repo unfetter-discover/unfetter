@@ -787,10 +787,524 @@
   }, {
     "id": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
     "metaProperties": {
-      "groupings": [{
-        "groupingName": "sensors",
-        "groupingValue": "host"
-      }]
+      "observedData": [
+        {
+          "property": "fqdn",
+          "action": "load",
+          "name": "driver"
+        },
+        {
+          "property": "hostname",
+          "action": "load",
+          "name": "driver"
+        },
+        {
+          "property": "image_path",
+          "action": "load",
+          "name": "driver"
+        },
+        {
+          "property": "md5_hash",
+          "action": "load",
+          "name": "driver"
+        },
+        {
+          "property": "module_name",
+          "action": "load",
+          "name": "driver"
+        },
+        {
+          "property": "sha1_hash",
+          "action": "load",
+          "name": "driver"
+        },
+        {
+          "property": "sh256_hash",
+          "action": "load",
+          "name": "driver"
+        },
+        {
+          "property": "creation_time",
+          "action": "timestomp",
+          "name": "file"
+        },
+        {
+          "property": "file_name",
+          "action": "timestomp",
+          "name": "file"
+        },
+        {
+          "property": "hostname",
+          "action": "timestomp",
+          "name": "file"
+        },
+        {
+          "property": "image_path",
+          "action": "timestomp",
+          "name": "file"
+        },
+        {
+          "property": "pid",
+          "action": "timestomp",
+          "name": "file"
+        },
+        {
+          "property": "user",
+          "action": "timestomp",
+          "name": "file"
+        },
+        {
+          "property": "dest_ip",
+          "action": "start",
+          "name": "flow"
+        },
+        {
+          "property": "dest_port",
+          "action": "start",
+          "name": "flow"
+        },
+        {
+          "property": "exe",
+          "action": "start",
+          "name": "flow"
+        },
+        {
+          "property": "hostname",
+          "action": "start",
+          "name": "flow"
+        },
+        {
+          "property": "image_path",
+          "action": "start",
+          "name": "flow"
+        },
+        {
+          "property": "protocol",
+          "action": "start",
+          "name": "flow"
+        },
+        {
+          "property": "src_ip",
+          "action": "start",
+          "name": "flow"
+        },
+        {
+          "property": "src_port",
+          "action": "start",
+          "name": "flow"
+        },
+        {
+          "property": "start_time",
+          "action": "start",
+          "name": "flow"
+        },
+        {
+          "property": "user",
+          "action": "start",
+          "name": "flow"
+        },
+        {
+          "property": "fqdn",
+          "action": "load",
+          "name": "module"
+        },
+        {
+          "property": "hostname",
+          "action": "load",
+          "name": "module"
+        },
+        {
+          "property": "image_path",
+          "action": "load",
+          "name": "module"
+        },
+        {
+          "property": "md5_hash",
+          "action": "load",
+          "name": "module"
+        },
+        {
+          "property": "module_name",
+          "action": "load",
+          "name": "module"
+        },
+        {
+          "property": "pid",
+          "action": "load",
+          "name": "module"
+        },
+        {
+          "property": "sha1_hash",
+          "action": "load",
+          "name": "module"
+        },
+        {
+          "property": "sha256_hash",
+          "action": "load",
+          "name": "module"
+        },
+        {
+          "property": "command_line",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "exe",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "fqdn",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "hostname",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "image_path",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "md5_hash",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "parent_exe",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "parent_image_path",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "pid",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "sha1_hash",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "ppid",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "sha256_hash",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "user",
+          "action": "create",
+          "name": "process"
+        },
+        {
+          "property": "fqdn",
+          "action": "terminate",
+          "name": "process"
+        },
+        {
+          "property": "hostname",
+          "action": "terminate",
+          "name": "process"
+        },
+        {
+          "property": "pid",
+          "action": "terminate",
+          "name": "process"
+        },
+        {
+          "property": "user",
+          "action": "terminate",
+          "name": "process"
+        },
+        {
+          "property": "hostname",
+          "action": "remote_create",
+          "name": "thread"
+        },
+        {
+          "property": "src_pid",
+          "action": "remote_create",
+          "name": "thread"
+        },
+        {
+          "property": "src_tid",
+          "action": "remote_create",
+          "name": "thread"
+        },
+        {
+          "property": "start_address",
+          "action": "remote_create",
+          "name": "thread"
+        },
+        {
+          "property": "start_function",
+          "action": "remote_create",
+          "name": "thread"
+        },
+        {
+          "property": "start_module",
+          "action": "remote_create",
+          "name": "thread"
+        },
+        {
+          "property": "start_module_name",
+          "action": "remote_create",
+          "name": "thread"
+        },
+        {
+          "property": "tgt_pid",
+          "action": "remote_create",
+          "name": "thread"
+        },
+        {
+          "property": "tgt_tid",
+          "action": "remote_create",
+          "name": "thread"
+        },
+        {
+          "property": "user",
+          "action": "remote_create",
+          "name": "thread"
+        },
+        {
+          "property": "fqdn",
+          "action": "*",
+          "name": "driver"
+        },
+        {
+          "property": "hostname",
+          "action": "*",
+          "name": "driver"
+        },
+        {
+          "property": "image_path",
+          "action": "*",
+          "name": "driver"
+        },
+        {
+          "property": "md5_hash",
+          "action": "*",
+          "name": "driver"
+        },
+        {
+          "property": "module_name",
+          "action": "*",
+          "name": "driver"
+        },
+        {
+          "property": "sha1_hash",
+          "action": "*",
+          "name": "driver"
+        },
+        {
+          "property": "sh256_hash",
+          "action": "*",
+          "name": "driver"
+        },
+        {
+          "property": "creation_time",
+          "action": "*",
+          "name": "file"
+        },
+        {
+          "property": "file_name",
+          "action": "*",
+          "name": "file"
+        },
+        {
+          "property": "hostname",
+          "action": "*",
+          "name": "file"
+        },
+        {
+          "property": "image_path",
+          "action": "*",
+          "name": "file"
+        },
+        {
+          "property": "pid",
+          "action": "*",
+          "name": "file"
+        },
+        {
+          "property": "user",
+          "action": "*",
+          "name": "file"
+        },
+        {
+          "property": "fqdn",
+          "action": "*",
+          "name": "module"
+        },
+        {
+          "property": "hostname",
+          "action": "*",
+          "name": "module"
+        },
+        {
+          "property": "image_path",
+          "action": "*",
+          "name": "module"
+        },
+        {
+          "property": "md5_hash",
+          "action": "*",
+          "name": "module"
+        },
+        {
+          "property": "module_name",
+          "action": "*",
+          "name": "module"
+        },
+        {
+          "property": "pid",
+          "action": "*",
+          "name": "module"
+        },
+        {
+          "property": "sha1_hash",
+          "action": "*",
+          "name": "module"
+        },
+        {
+          "property": "sha256_hash",
+          "action": "*",
+          "name": "module"
+        },
+        {
+          "property": "user",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "sha256_hash",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "sha1_hash",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "pid",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "ppid",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "parent_image_path",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "parent_exe",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "md5_hash",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "image_path",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "hostname",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "fqdn",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "exe",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "command_line",
+          "action": "*",
+          "name": "process"
+        },
+        {
+          "property": "hostname",
+          "action": "*",
+          "name": "thread"
+        },
+        {
+          "property": "src_pid",
+          "action": "*",
+          "name": "thread"
+        },
+        {
+          "property": "src_tid",
+          "action": "*",
+          "name": "thread"
+        },
+        {
+          "property": "start_address",
+          "action": "*",
+          "name": "thread"
+        },
+        {
+          "property": "start_function",
+          "action": "*",
+          "name": "thread"
+        },
+        {
+          "property": "start_module",
+          "action": "*",
+          "name": "thread"
+        },
+        {
+          "property": "start_module_name",
+          "action": "*",
+          "name": "thread"
+        },
+        {
+          "property": "tgt_pid",
+          "action": "*",
+          "name": "thread"
+        },
+        {
+          "property": "tgt_tid",
+          "action": "*",
+          "name": "thread"
+        },
+        {
+          "property": "user",
+          "action": "*",
+          "name": "thread"
+        }
+      ],
+      "groupings": [
+        {
+          "groupingValue": "host",
+          "groupingName": "sensors"
+        }
+      ]
     }
 },{
   "id": "course-of-action--43bbcfb4-b996-4953-b353-75143bf18c78",
@@ -1408,13 +1922,307 @@
       "groupingValue": "network"
     }]
   }
-}, {
-  "id": "x-unfetter-sensor--d0ec488b-ae08-4388-a793-8a4de471cdf8",
+},
+{
+  "id": "x-unfetter-sensor--dd299697-9a11-4278-800f-83b1b9dfdb71",
   "metaProperties": {
-    "groupings": [{
-      "groupingName": "sensors",
-      "groupingValue": "host"
-    }]
+    "observedData": [
+      {
+        "property": "company",
+        "action": "create",
+        "name": "file"
+      },
+      {
+        "property": "creation_time",
+        "action": "create",
+        "name": "file"
+      },
+      {
+        "property": "file_name",
+        "action": "create",
+        "name": "file"
+      },
+      {
+        "property": "fqdn",
+        "action": "create",
+        "name": "file"
+      },
+      {
+        "property": "hostname",
+        "action": "create",
+        "name": "file"
+      },
+      {
+        "property": "md5_hash",
+        "action": "create",
+        "name": "file"
+      },
+      {
+        "property": "company",
+        "action": "modify",
+        "name": "file"
+      },
+      {
+        "property": "creation_time",
+        "action": "modify",
+        "name": "file"
+      },
+      {
+        "property": "file_name",
+        "action": "modify",
+        "name": "file"
+      },
+      {
+        "property": "fqdn",
+        "action": "modify",
+        "name": "file"
+      },
+      {
+        "property": "hostname",
+        "action": "modify",
+        "name": "file"
+      },
+      {
+        "property": "md5_hash",
+        "action": "modify",
+        "name": "file"
+      },
+      {
+        "property": "sha256_hash",
+        "action": "modify",
+        "name": "file"
+      },
+      {
+        "property": "sha1_hash",
+        "action": "modify",
+        "name": "file"
+      },
+      {
+        "property": "company",
+        "action": "*",
+        "name": "file"
+      },
+      {
+        "property": "creation_time",
+        "action": "*",
+        "name": "file"
+      },
+      {
+        "property": "fqdn",
+        "action": "*",
+        "name": "file"
+      },
+      {
+        "property": "file_name",
+        "action": "*",
+        "name": "file"
+      },
+      {
+        "property": "hostname",
+        "action": "*",
+        "name": "file"
+      },
+      {
+        "property": "md5_hash",
+        "action": "*",
+        "name": "file"
+      },
+      {
+        "property": "sha1_hash",
+        "action": "*",
+        "name": "file"
+      },
+      {
+        "property": "sha256_hash",
+        "action": "*",
+        "name": "file"
+      },
+      {
+        "property": "signer",
+        "action": "*",
+        "name": "file"
+      },
+      {
+        "property": "data",
+        "action": "add",
+        "name": "registry"
+      },
+      {
+        "property": "hive",
+        "action": "add",
+        "name": "registry"
+      },
+      {
+        "property": "hostname",
+        "action": "add",
+        "name": "registry"
+      },
+      {
+        "property": "key",
+        "action": "add",
+        "name": "registry"
+      },
+      {
+        "property": "type",
+        "action": "add",
+        "name": "registry"
+      },
+      {
+        "property": "value",
+        "action": "add",
+        "name": "registry"
+      },
+      {
+        "property": "data",
+        "action": "edit",
+        "name": "registry"
+      },
+      {
+        "property": "hive",
+        "action": "edit",
+        "name": "registry"
+      },
+      {
+        "property": "hostname",
+        "action": "edit",
+        "name": "registry"
+      },
+      {
+        "property": "key",
+        "action": "edit",
+        "name": "registry"
+      },
+      {
+        "property": "type",
+        "action": "edit",
+        "name": "registry"
+      },
+      {
+        "property": "value",
+        "action": "edit",
+        "name": "registry"
+      },
+      {
+        "property": "data",
+        "action": "*",
+        "name": "registry"
+      },
+      {
+        "property": "hive",
+        "action": "*",
+        "name": "registry"
+      },
+      {
+        "property": "hostname",
+        "action": "*",
+        "name": "registry"
+      },
+      {
+        "property": "key",
+        "action": "*",
+        "name": "registry"
+      },
+      {
+        "property": "type",
+        "action": "*",
+        "name": "registry"
+      },
+      {
+        "property": "value",
+        "action": "*",
+        "name": "registry"
+      },
+      {
+        "property": "name",
+        "action": "create",
+        "name": "service"
+      },
+      {
+        "property": "image_path",
+        "action": "create",
+        "name": "service"
+      },
+      {
+        "property": "hostname",
+        "action": "create",
+        "name": "service"
+      },
+      {
+        "property": "fqdn",
+        "action": "create",
+        "name": "service"
+      },
+      {
+        "property": "exe",
+        "action": "create",
+        "name": "service"
+      },
+      {
+        "property": "command_line",
+        "action": "create",
+        "name": "service"
+      },
+      {
+        "property": "command_line",
+        "action": "delete",
+        "name": "service"
+      },
+      {
+        "property": "exe",
+        "action": "delete",
+        "name": "service"
+      },
+      {
+        "property": "fqdn",
+        "action": "delete",
+        "name": "service"
+      },
+      {
+        "property": "hostname",
+        "action": "delete",
+        "name": "service"
+      },
+      {
+        "property": "image_path",
+        "action": "delete",
+        "name": "service"
+      },
+      {
+        "property": "name",
+        "action": "delete",
+        "name": "service"
+      },
+      {
+        "property": "command_line",
+        "action": "*",
+        "name": "service"
+      },
+      {
+        "property": "exe",
+        "action": "*",
+        "name": "service"
+      },
+      {
+        "property": "fqdn",
+        "action": "*",
+        "name": "service"
+      },
+      {
+        "property": "hostname",
+        "action": "*",
+        "name": "service"
+      },
+      {
+        "property": "image_path",
+        "action": "*",
+        "name": "service"
+      },
+      {
+        "property": "name",
+        "action": "*",
+        "name": "service"
+      }
+    ]
   }
 }]
 
