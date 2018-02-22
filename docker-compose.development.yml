@@ -54,6 +54,9 @@ services:
      - MONGO_HOST=repository
      # If deployed in a proxy, add the proxy's URL here
      - HTTPS_PROXY_URL=
+     # If using password protection, enter it here
+     - MONGO_USER=
+     - MONGO_PASSWORD=
     entrypoint:
      - node
      - processor.js
@@ -86,6 +89,9 @@ services:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
       - MONGO_DBNAME=stix
+      # If using password protection, enter it here
+      - MONGO_USER=
+      - MONGO_PASSWORD=
     ports:
     - "3001:10010"
     entrypoint:
@@ -109,6 +115,9 @@ services:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
       - MONGO_DBNAME=stix
+      # If using password protection, enter it here
+      - MONGO_USER=
+      - MONGO_PASSWORD=
       # If deployed in a proxy, add the proxy's URL here
       - HTTPS_PROXY_URL=
       # Options: true, false ; NOTE Always commit set to `false`
@@ -132,6 +141,8 @@ services:
     - "27018:27017"
     volumes:
     - ./data/db:/data/db
+    # Uncomment this if using authentication
+    # entrypoint: /entrypoint.sh mongod --auth
 
   unfetter-api-explorer:
     build: 
@@ -182,6 +193,9 @@ services:
     - MONGO_REPOSITORY=repository
     - MONGO_PORT=27017
     - MONGO_DBNAME=stix
+    # If using password protection, enter it here
+    - MONGO_USER=
+    - MONGO_PASSWORD=
     - ENV=dev
     # Options: UAC, TEST, DEMO
     - RUN_MODE=UAC
