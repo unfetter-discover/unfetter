@@ -10,7 +10,7 @@ services:
      - unfetter-discover-openssl
      - unfetter-ui-build
     links:
-     - unfetter-discover-api-explorer
+     - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
      - unfetter-socket-server
@@ -54,6 +54,9 @@ services:
      - MONGO_HOST=repository
      # If deployed in a proxy, add the proxy's URL here
      - HTTPS_PROXY_URL=
+     # If using password protection, enter it here
+     - MONGO_USER=
+     - MONGO_PASSWORD=
     entrypoint:
      - node
      - processor.js
@@ -86,6 +89,9 @@ services:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
       - MONGO_DBNAME=stix
+      # If using password protection, enter it here
+      - MONGO_USER=
+      - MONGO_PASSWORD=
     entrypoint:
      - npm
      - start
@@ -107,6 +113,9 @@ services:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
       - MONGO_DBNAME=stix
+      # If using password protection, enter it here
+      - MONGO_USER=
+      - MONGO_PASSWORD=
     entrypoint:
      - npm
      - start
@@ -123,33 +132,24 @@ services:
     # - "27018:27017"
     volumes:
     - ./data/db:/data/db
+    # Uncomment this if using authentication
+    # entrypoint: /entrypoint.sh mongod --auth
 
-  unfetter-discover-api-explorer:
-    build: ../unfetter-store/unfetter-discover-api
-    container_name: unfetter-discover-api-explorer
-    image: unfetter-discover-api
-    depends_on:
-    - unfetter-discover-openssl
-    - cti-stix-store-repository
-    links:
-     - cti-stix-store-repository:repository
+  unfetter-api-explorer:
+    build: 
+      context: ../unfetter-store
+      dockerfile: unfetter-api-explorer/parent-context.Dockerfile
+    container_name: unfetter-api-explorer
+    image: unfetter-api-explorer
     volumes:
-    - ./certs/:/etc/pki/tls/certs
-    - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
-    - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
-    environment:
-    - STIX_API_PROTOCOL=http
-    - STIX_API_HOST=cti-stix-store
-    - STIX_API_PORT=3000
-    - STIX_API_PATH=cti-stix-store-api
-    - MONGO_REPOSITORY=repository
-    - MONGO_PORT=27017
-    - MONGO_DBNAME=stix
-    - ENV=prod
+     - ../unfetter-store/unfetter-api-explorer/src:/usr/share/unfetter-api-explorer/src
+     - ../unfetter-store/unfetter-discover-api/multifile-remote.yaml:/usr/share/unfetter-discover-api/multifile-remote.yaml
+     - ../unfetter-store/unfetter-discover-api/api/swagger:/usr/share/unfetter-discover-api/api/swagger
+    ports:
+    - "3200:3200"
     entrypoint:
-    - npm
-    - run
-    - swaggerdev
+     - npm
+     - start
 
   unfetter-discover-api:
     build: ../unfetter-store/unfetter-discover-api
@@ -175,6 +175,9 @@ services:
     - MONGO_REPOSITORY=repository
     - MONGO_PORT=27017
     - MONGO_DBNAME=stix
+    # If using password protection, enter it here
+    - MONGO_USER=
+    - MONGO_PASSWORD=
     - ENV=dev
     # Options: UAC, TEST, DEMO
     - RUN_MODE=UAC
