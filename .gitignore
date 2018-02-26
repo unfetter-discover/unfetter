@@ -1,6 +1,7 @@
 certs/
 .idea/
 *.iml
+gateway/dist
 
 # keep the data/db folder but not the files
 data/db/*
