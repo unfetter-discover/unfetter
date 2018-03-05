@@ -460,5 +460,10 @@
         ]
 
 
+    },
+    {
+        "_id": "905f4e32-528c-479a-bb20-aa36bb54be9f",
+        "configKey": "jwtDurationSeconds",
+        "configValue": 900
     }
 ]
