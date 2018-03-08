@@ -1,4 +1,4 @@
-version: '2.0'
+version: '3.3'
 services:
   unfetter-discover-gateway:
     image: nginx:1.13.5-alpine
@@ -19,6 +19,8 @@ services:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
+    networks:
+      - unfetter-net
 
   unfetter-discover-openssl:
     image: svagi/openssl:latest
@@ -41,6 +43,8 @@ services:
      - /tmp/certs/server.crt
     volumes:
      - ./certs/:/tmp/certs
+    networks:
+      - unfetter-net     
 
   unfetter-discover-processor:
     build: ../unfetter-store/unfetter-discover-processor
@@ -71,6 +75,8 @@ services:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
+    networks:
+      - unfetter-net     
 
   unfetter-ctf-ingest:
     build: ../unfetter-store/unfetter-ctf-ingest
@@ -97,6 +103,8 @@ services:
     links:
      - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
+    networks:
+      - unfetter-net     
 
   unfetter-socket-server:
     build: ../unfetter-store/unfetter-socket-server
@@ -126,6 +134,8 @@ services:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
+    networks:
+      - unfetter-net     
 
   cti-stix-store-repository:
     image: mongo:3.4.1
@@ -134,6 +144,8 @@ services:
     - "27018:27017"
     volumes:
     - ./data/db:/data/db
+    networks:
+      - unfetter-net    
     # Uncomment this if using authentication
     # entrypoint: /entrypoint.sh mongod --auth
 
@@ -152,6 +164,8 @@ services:
     entrypoint:
      - npm
      - start
+    networks:
+      - unfetter-net     
 
   unfetter-discover-api:
     build: ../unfetter-store/unfetter-discover-api
@@ -198,6 +212,8 @@ services:
     - npm
     - run
     - debugdev
+    networks:
+      - unfetter-net    
 
   unfetter-ui:
     build: ../unfetter-ui
@@ -210,6 +226,8 @@ services:
     - npm
     - run
     - serve:docker:dev:uac
+    networks:
+      - unfetter-net    
 
   unfetter-pattern-handler:
     build: ../stix2pattern
@@ -225,3 +243,10 @@ services:
      - python3
      - app.py
      - 0.0.0.0
+    networks:
+      - unfetter-net     
+networks:
+  unfetter-net:
+    driver: overlay
+    driver_opts:
+      encrypted: "true"
