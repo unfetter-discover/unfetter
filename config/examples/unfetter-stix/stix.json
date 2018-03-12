@@ -6396,7 +6396,7 @@
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99"
     },
     {
-      "name": "Sensors Assessment Demonstration",
+      "name": "Demonstration",
       "description": "",
       "id": "x-unfetter-assessment--8ef94b52-d2b7-402c-a97f-ea85e9950c97",
       "type": "x-unfetter-assessment",
@@ -7982,7 +7982,7 @@
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99"
     },
     {
-      "name": "Mitigations Assessment Demonstration",
+      "name": "Demonstration",
       "description": "",
       "id": "x-unfetter-assessment--dc93f163-4287-49f7-a9d4-8e27126b645b",
       "type": "x-unfetter-assessment",
@@ -17199,7 +17199,7 @@
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99"
     },
     {
-      "name": "Indicators Assessment Demonstration",
+      "name": "Demonstration",
       "description": "",
       "id": "x-unfetter-assessment--49b4ec3d-5f7a-4a8e-b467-54c26953dd70",
       "type": "x-unfetter-assessment",
