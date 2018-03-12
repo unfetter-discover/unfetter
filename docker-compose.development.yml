@@ -59,7 +59,6 @@ services:
      - processor.js
      - --stix
      - /tmp/examples/unfetter-stix/stix.json
-     - --stix
      - /tmp/examples/unfetter-stix/reports.stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
