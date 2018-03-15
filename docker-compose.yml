@@ -40,7 +40,7 @@ services:
      - ./certs/:/tmp/certs
 
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:0.3.4
+    image: unfetter/unfetter-discover-processor:0.3.5
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -68,7 +68,7 @@ services:
 
   unfetter-ctf-ingest:
     container_name: unfetter-ctf-ingest
-    image: unfetter/unfetter-ctf-ingest:0.3.4
+    image: unfetter/unfetter-ctf-ingest:0.3.5
     environment:
       - API_PROTOCOL=https
       - API_HOST=apihost
@@ -99,7 +99,7 @@ services:
     - ./data/db:/data/db
 
   unfetter-api-explorer:
-    image: unfetter/unfetter-api-explorer:0.3.4
+    image: unfetter/unfetter-api-explorer:0.3.5
     container_name: unfetter-api-explorer
     ports:
     - "3200:3200"
@@ -108,7 +108,7 @@ services:
      - start
 
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api:0.3.4
+    image: unfetter/unfetter-discover-api:0.3.5
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
@@ -138,7 +138,7 @@ services:
     - start
 
   unfetter-pattern-handler:
-    image: unfetter/unfetter-pattern-handler:0.3.4
+    image: unfetter/unfetter-pattern-handler:0.3.5
     container_name: unfetter-pattern-handler
     ports:
     - "5000:5000"
