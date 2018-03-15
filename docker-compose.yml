@@ -1,8 +1,8 @@
 version: '2'
 services:
   unfetter-discover-gateway:
-    image: nginx:1.13.5-alpine
     container_name: unfetter-discover-gateway
+    image: unfetter/unfetter-discover-gateway:0.3.5
     ports:
      - "443:443"
      - "80:80"
@@ -16,7 +16,6 @@ services:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
-     - ./uifiles:/etc/nginx/html
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
