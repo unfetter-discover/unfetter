@@ -59,6 +59,7 @@ services:
      - processor.js
      - --stix
      - /tmp/examples/unfetter-stix/stix.json
+     - /tmp/examples/unfetter-stix/reports.stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
      - /tmp/examples/unfetter-db/stix-meta.json
@@ -105,6 +106,8 @@ services:
     volumes:
       - ../unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src
       - ./certs/:/etc/pki/tls/certs
+      - ../unfetter-store/unfetter-socket-server/config/private-config.json:/usr/share/unfetter-socket-server/config/private-config.json
+      - ../unfetter-store/unfetter-socket-server/config/private-config.email.json:/usr/share/unfetter-socket-server/config/private-config.email.json
     environment:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
@@ -132,6 +135,8 @@ services:
     - "27018:27017"
     volumes:
     - ./data/db:/data/db
+    # Uncomment this if using authentication
+    # entrypoint: /entrypoint.sh mongod --auth
 
   unfetter-api-explorer:
     build: 
@@ -169,6 +174,7 @@ services:
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
+    - ../unfetter-store/unfetter-discover-api/config/private-config.json:/usr/share/unfetter-discover-api/config/private-config.json
     environment:
     - CTF_PARSE_HOST=http://unfetter-ctf-ingest
     - PATTERN_HANDLER_DOMAIN = unfetter-pattern-handler

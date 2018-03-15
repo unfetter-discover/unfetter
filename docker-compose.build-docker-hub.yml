@@ -1,7 +1,8 @@
 version: '2.0'
 services:
   unfetter-discover-gateway:
-    image: nginx:1.13.5-alpine
+    build: ./gateway
+    image: unfetter-discover-gateway
     container_name: unfetter-discover-gateway
     ports:
      - "443:443"
@@ -15,7 +16,6 @@ services:
      - ./config/nginx/conf.d.dockerhub:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
-     - ../unfetter-ui/dist:/etc/nginx/html
 
   unfetter-discover-openssl:
     image: svagi/openssl:latest
@@ -56,6 +56,7 @@ services:
      - processor.js
      - --stix
      - /tmp/examples/unfetter-stix/stix.json
+     - /tmp/examples/unfetter-stix/reports.stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
      - /tmp/examples/unfetter-db/stix-meta.json
@@ -159,17 +160,6 @@ services:
     - npm
     - run
     - startdeploy
-
-  unfetter-ui-build:
-    build: ../unfetter-ui
-    image: unfetter-ui
-    container_name: unfetter-ui-build
-    entrypoint:
-     - npm
-     - run
-     - build:demo:noclean
-    volumes:
-     - ../unfetter-ui/dist:/usr/share/unfetter-ui/dist
 
   unfetter-pattern-handler:
     build: ../stix2pattern
