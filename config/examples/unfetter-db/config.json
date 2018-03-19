@@ -1,7 +1,9 @@
-[{
+[
+    {
         "_id": "d9732cfc-166e-41a0-af79-d37e7abc69b2",
         "configKey": "killChains",
-        "configValue": [{
+        "configValue": [
+            {
                 "name": "mitre-attack",
                 "phase_names": [
                     "persistence",
@@ -19,34 +21,54 @@
                 "url": "https://attack.mitre.org/wiki/Main_Page"
             },
             {
-                "name": "ctf",
+                "name": "lockheed-matin",
                 "phase_names": [
-                    "planning",
-                    "research",
-                    "develop-resources",
-                    "acquire-knowledge",
-                    "complete-preparation",
-                    "deployment",
-                    "interaction",
-                    "exploitation",
+                    "reconnaissance",
+                    "weaponization",
                     "delivery",
-                    "control",
-                    "evasion",
-                    "expansion",
-                    "focus",
-                    "persistence",
-                    "enablement",
-                    "access-denial",
-                    "data-extraction",
-                    "data-alteration",
-                    "data-destruction"
+                    "exploitation",
+                    "installation",
+                    "command & control (c2)",
+                    "actions on objectives"
+                ],
+                "description": "Lockheed Martin Cyber Threat Framework",
+                "url": "https://www.lockheedmartin.com/us/what-we-do/aerospace-defense/cyber/cyber-kill-chain.html"
+            },
+            {
+                "name": "ntctf",
+                "phase_names": [
+                    "administer - planning",
+                    "administer - research development",
+                    "administer - research",
+                    "preparation - reconnaissance",
+                    "preparation - staging",
+                    "engagement - delivery",
+                    "engagement - exploitation",
+                    "presence - installation & execution",
+                    "presence - internal reconnaissance",
+                    "presence - privilege escalation",
+                    "presence - credential access",
+                    "presence - lateral movement",
+                    "presence - persistence",
+                    "effect - monitor",
+                    "effect - exflitration",
+                    "effect - modify",
+                    "effect - deny",
+                    "effect - destroy",
+                    "ongoing processes - analysis, evaluation, and feedback",
+                    "ongoing processes - command & control (c2)",
+                    "ongoing processes - evasion"
                 ],
                 "stage_names": [
-                    "Preparation",
-                    "Engagement",
-                    "Presence",
-                    "Effect"
-                ]
+                    "administer",
+                    "preparation",
+                    "engagement",
+                    "presence",
+                    "effect",
+                    "ongoing processes"
+                ],
+                "description": "NSA/CSS Technical Cyber Threat Framework v1",
+                "url": "https://www.iad.gov/iad/library/reports/nsa-css-technical-cyber-threat-framework-v1.cfm"
             }
         ],
         "configGroups": [
@@ -230,12 +252,12 @@
         "configGroups": [
             "stixConfig"
         ]
-
     },
     {
         "_id": "98fba9e7-6ad8-4bac-a178-af9282f8b05c",
         "configKey": "observableDataTypes",
-        "configValue": [{
+        "configValue": [
+            {
                 "name": "driver",
                 "actions": [
                     "load",
@@ -405,7 +427,7 @@
                     "ppid",
                     "user"
                 ]
-            },                      
+            },
             {
                 "name": "thread",
                 "actions": [
@@ -458,8 +480,6 @@
                 ]
             }
         ]
-
-
     },
     {
         "_id": "905f4e32-528c-479a-bb20-aa36bb54be9f",
