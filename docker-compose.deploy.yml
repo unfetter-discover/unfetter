@@ -1,4 +1,4 @@
-version: '2.0'
+version: '3.3'
 services:
   unfetter-discover-gateway:
     image: nginx:1.13.5-alpine
@@ -18,6 +18,7 @@ services:
      - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
+     # Deploy mode is using recently on disk source code.  
      - ../unfetter-ui/dist:/etc/nginx/html
 
   unfetter-discover-openssl:
@@ -97,6 +98,8 @@ services:
      - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
 
+
+
   unfetter-socket-server:
     build: ../unfetter-store/unfetter-socket-server
     container_name: unfetter-socket-server
@@ -117,6 +120,14 @@ services:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
+
+
+
+
+
+
+
+
 
   cti-stix-store-repository:
     image: mongo:3.4.1

@@ -16,6 +16,11 @@ services:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
+
+
+
+
+
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -65,6 +70,10 @@ services:
     links:
      - cti-stix-store-repository:repository
 
+
+
+
+
   unfetter-ctf-ingest:
     container_name: unfetter-ctf-ingest
     image: unfetter/unfetter-ctf-ingest:0.3.5
@@ -89,6 +98,37 @@ services:
      - unfetter-discover-api:apihost
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
@@ -96,6 +136,9 @@ services:
     - "27018:27017"
     volumes:
     - ./data/db:/data/db
+
+
+
 
   unfetter-api-explorer:
     image: unfetter/unfetter-api-explorer:0.3.5
@@ -105,6 +148,13 @@ services:
     entrypoint:
      - npm
      - start
+
+
+
+
+
+
+
 
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api:0.3.5

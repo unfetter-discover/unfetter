@@ -2,7 +2,7 @@ version: '3.3'
 services:
   unfetter-discover-gateway:
     image: nginx:1.13.5-alpine
-    container_name: unfetter-discover-gateway
+    container_name: unfetter-discover-gateway:0.3.6
     ports:
      - "443:443"
      - "80:80"
@@ -19,8 +19,7 @@ services:
      - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
-    networks:
-      - unfetter-net
+
 
   unfetter-discover-openssl:
     image: svagi/openssl:latest
@@ -43,13 +42,11 @@ services:
      - /tmp/certs/server.crt
     volumes:
      - ./certs/:/tmp/certs
-    networks:
-      - unfetter-net     
 
   unfetter-discover-processor:
     build: ../unfetter-store/unfetter-discover-processor
-    container_name: unfetter-discover-processor
-    image: unfetter-discover-processor
+    container_name: unfetter-discover-processor:0.3.6
+    image: unfetter-discover-processor:0.3.6
     volumes:
      - ./config/examples:/tmp/examples
     #  TODO find a working volume mounting
@@ -76,13 +73,11 @@ services:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
-    networks:
-      - unfetter-net     
 
   unfetter-ctf-ingest:
     build: ../unfetter-store/unfetter-ctf-ingest
-    container_name: unfetter-ctf-ingest
-    image: unfetter-ctf-ingest
+    container_name: unfetter-ctf-ingest:0.3.6
+    image: unfetter-ctf-ingest:0.3.6
     volumes:
      - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
     environment:
@@ -104,13 +99,11 @@ services:
     links:
      - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
-    networks:
-      - unfetter-net     
 
   unfetter-socket-server:
     build: ../unfetter-store/unfetter-socket-server
     container_name: unfetter-socket-server
-    image: unfetter-socket-server
+    image: unfetter-socket-server:0.3.6
     volumes:
       - ../unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src
       - ./certs/:/etc/pki/tls/certs
@@ -135,8 +128,6 @@ services:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
-    networks:
-      - unfetter-net     
 
   cti-stix-store-repository:
     image: mongo:3.4.1
@@ -145,17 +136,16 @@ services:
     - "27018:27017"
     volumes:
     - ./data/db:/data/db
-    networks:
-      - unfetter-net    
     # Uncomment this if using authentication
     # entrypoint: /entrypoint.sh mongod --auth
+
 
   unfetter-api-explorer:
     build: 
       context: ../unfetter-store
       dockerfile: unfetter-api-explorer/parent-context.Dockerfile
     container_name: unfetter-api-explorer
-    image: unfetter-api-explorer
+    image: unfetter-api-explorer:0.3.6
     volumes:
      - ../unfetter-store/unfetter-api-explorer/src:/usr/share/unfetter-api-explorer/src
      - ../unfetter-store/unfetter-discover-api/multifile-remote.yaml:/usr/share/unfetter-discover-api/multifile-remote.yaml
@@ -165,13 +155,11 @@ services:
     entrypoint:
      - npm
      - start
-    networks:
-      - unfetter-net     
 
   unfetter-discover-api:
     build: ../unfetter-store/unfetter-discover-api
     container_name: unfetter-discover-api
-    image: unfetter-discover-api
+    image: unfetter-discover-api:0.3.6
     depends_on:
     - unfetter-discover-openssl
     - cti-stix-store-repository
@@ -213,12 +201,10 @@ services:
     - npm
     - run
     - debugdev
-    networks:
-      - unfetter-net    
 
   unfetter-ui:
     build: ../unfetter-ui
-    image: unfetter-ui
+    image: unfetter-ui:0.3.6
     container_name: unfetter-ui
     volumes:
     - ../unfetter-ui/src:/usr/share/unfetter-ui/src
@@ -227,13 +213,11 @@ services:
     - npm
     - run
     - serve:docker:dev:uac
-    networks:
-      - unfetter-net    
 
   unfetter-pattern-handler:
     build: ../stix2pattern
     container_name: unfetter-pattern-handler
-    image: unfetter-pattern-handler
+    image: unfetter-pattern-handler:0.3.6
     volumes:
       - ../stix2pattern/app.py:/opt/stix/app.py
       - ../stix2pattern/test.py:/opt/stix/test.py
@@ -244,10 +228,3 @@ services:
      - python3
      - app.py
      - 0.0.0.0
-    networks:
-      - unfetter-net     
-networks:
-  unfetter-net:
-    driver: overlay
-    driver_opts:
-      encrypted: "true"
