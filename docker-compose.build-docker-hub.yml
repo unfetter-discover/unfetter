@@ -114,8 +114,8 @@ services:
      - ../unfetter-store/unfetter-api-explorer/src:/usr/share/unfetter-api-explorer/src
      - ../unfetter-store/unfetter-discover-api/multifile-remote.yaml:/usr/share/unfetter-discover-api/multifile-remote.yaml
      - ../unfetter-store/unfetter-discover-api/api/swagger:/usr/share/unfetter-discover-api/api/swagger
-    ports:
-    - "3200:3200"
+    environment:
+     - PUBLIC_PATH=/explorer/
     entrypoint:
      - npm
      - start
