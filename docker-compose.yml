@@ -145,6 +145,8 @@ services:
   unfetter-api-explorer:
     image: unfetter/unfetter-api-explorer:0.3.5
     container_name: unfetter-api-explorer
+    environment:
+     - PUBLIC_PATH=/explorer/
     entrypoint:
      - npm
      - start
