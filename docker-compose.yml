@@ -12,6 +12,9 @@ services:
      - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
+     - unfetter-ui
+#     - unfetter-socket-server
+
     volumes:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
@@ -63,6 +66,7 @@ services:
      - /tmp/examples/unfetter-db/stix-meta.json
      - --config
      - /tmp/examples/unfetter-db/config.json
+     - /tmp/examples/unfetter-db/translation-config.json
      - --add-mitre-data
      - "true"
     depends_on:
@@ -85,8 +89,6 @@ services:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
       - MONGO_DBNAME=stix
-    ports:
-    - "3001:10010"
     entrypoint:
      - npm
      - start
@@ -132,8 +134,9 @@ services:
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
-    ports:
-    - "27018:27017"
+# To debug the mongo database, uncomment the ports
+#    ports:
+#    - "27018:27017"
     volumes:
     - ./data/db:/data/db
 
@@ -143,8 +146,6 @@ services:
   unfetter-api-explorer:
     image: unfetter/unfetter-api-explorer:0.3.5
     container_name: unfetter-api-explorer
-    ports:
-    - "3200:3200"
     entrypoint:
      - npm
      - start
@@ -164,6 +165,8 @@ services:
     - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
+     - unfetter-pattern-handler
+     
     ports:
     - "49360:3000"
     volumes:
