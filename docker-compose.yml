@@ -128,17 +128,16 @@ services:
   
   
   
-  
-  
-  
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
-# To debug the mongo database, uncomment the ports
-#    ports:
-#    - "27018:27017"
+    # NOTE: Uncomment this out and restart the stac to run ../unfetter-store/unfetter-utils/user_promotion_tool.py
+    # ports:
+    # - "27018:27017"
     volumes:
     - ./data/db:/data/db
+    # Uncomment this if using authentication
+    # entrypoint: /entrypoint.sh mongod --auth
 
 
 
@@ -167,8 +166,6 @@ services:
      - cti-stix-store-repository:repository
      - unfetter-pattern-handler
      
-    ports:
-    - "49360:3000"
     volumes:
     - ./certs/:/etc/pki/tls/certs
     environment:
@@ -185,6 +182,8 @@ services:
     - RUN_MODE=DEMO
     # If deployed in a proxy, add the proxy's URL here
     - HTTPS_PROXY_URL=
+    - PATTERN_HANDLER_DOMAIN = unfetter-pattern-handler
+    - PATTERN_HANDLER_PORT = 5000
     entrypoint:
     - npm
     - start
@@ -192,8 +191,6 @@ services:
   unfetter-pattern-handler:
     image: unfetter/unfetter-pattern-handler:0.3.5
     container_name: unfetter-pattern-handler
-    ports:
-    - "5000:5000"
     entrypoint:
     # ["python3","app.py","0.0.0.0"]
      - python3
