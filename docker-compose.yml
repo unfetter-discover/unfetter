@@ -12,17 +12,11 @@ services:
      - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
-     - unfetter-ui
 #     - unfetter-socket-server
-
     volumes:
-     - ./config/nginx/conf.d:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.demo:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
-
-
-
-
 
   unfetter-discover-openssl:
     image: svagi/openssl:latest
@@ -73,10 +67,6 @@ services:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
-
-
-
-
 
   unfetter-ctf-ingest:
     container_name: unfetter-ctf-ingest
