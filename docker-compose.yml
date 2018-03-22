@@ -1,4 +1,4 @@
-version: '2'
+version: '3.3'
 services:
   unfetter-discover-gateway:
     container_name: unfetter-discover-gateway
@@ -12,10 +12,18 @@ services:
      - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
+     - unfetter-ui
+#     - unfetter-socket-server
+
     volumes:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
+
+
+
+
+
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -58,12 +66,17 @@ services:
      - /tmp/examples/unfetter-db/stix-meta.json
      - --config
      - /tmp/examples/unfetter-db/config.json
+     - /tmp/examples/unfetter-db/translation-config.json
      - --add-mitre-data
      - "true"
     depends_on:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
+
+
+
+
 
   unfetter-ctf-ingest:
     container_name: unfetter-ctf-ingest
@@ -76,8 +89,6 @@ services:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
       - MONGO_DBNAME=stix
-    ports:
-    - "3001:10010"
     entrypoint:
      - npm
      - start
@@ -89,13 +100,47 @@ services:
      - unfetter-discover-api:apihost
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
-    ports:
-    - "27018:27017"
+    # NOTE: Uncomment this out and restart the stac to run ../unfetter-store/unfetter-utils/user_promotion_tool.py
+    # ports:
+    # - "27018:27017"
     volumes:
     - ./data/db:/data/db
+    # Uncomment this if using authentication
+    # entrypoint: /entrypoint.sh mongod --auth
+
+
+
 
   unfetter-api-explorer:
     image: unfetter/unfetter-api-explorer:0.3.5
@@ -106,6 +151,13 @@ services:
      - npm
      - start
 
+
+
+
+
+
+
+
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api:0.3.5
     container_name: unfetter-discover-api
@@ -114,8 +166,8 @@ services:
     - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
-    ports:
-    - "49360:3000"
+     - unfetter-pattern-handler
+     
     volumes:
     - ./certs/:/etc/pki/tls/certs
     environment:
@@ -132,6 +184,8 @@ services:
     - RUN_MODE=DEMO
     # If deployed in a proxy, add the proxy's URL here
     - HTTPS_PROXY_URL=
+    - PATTERN_HANDLER_DOMAIN = unfetter-pattern-handler
+    - PATTERN_HANDLER_PORT = 5000
     entrypoint:
     - npm
     - start
@@ -139,8 +193,6 @@ services:
   unfetter-pattern-handler:
     image: unfetter/unfetter-pattern-handler:0.3.5
     container_name: unfetter-pattern-handler
-    ports:
-    - "5000:5000"
     entrypoint:
     # ["python3","app.py","0.0.0.0"]
      - python3

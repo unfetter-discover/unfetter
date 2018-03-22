@@ -1,77 +1,24 @@
-version: '2.0'
+version: '3.3'
 services:
   unfetter-discover-gateway:
     image: nginx:1.13.5-alpine
     container_name: unfetter-discover-gateway
-    ports:
-     - "443:443"
-     - "80:80"
     depends_on:
      - unfetter-discover-openssl
-     - unfetter-ui-build
     links:
-     - unfetter-api-explorer
-     - unfetter-discover-api
-     - unfetter-ctf-ingest
      - unfetter-socket-server
     volumes:
      - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
+     # Deploy mode is using recently on disk source code.  
      - ../unfetter-ui/dist:/etc/nginx/html
 
-  unfetter-discover-openssl:
-    image: svagi/openssl:latest
-    container_name: unfetter-discover-openssl
-    entrypoint:
-     - openssl
-     - req
-     - -subj
-     - /CN=localhost/DC=localhost/DC=localdomain
-     - -new
-     - -newkey
-     - rsa:2048
-     - -days
-     - "365"
-     - -nodes
-     - -x509
-     - -keyout
-     - /tmp/certs/server.key
-     - -out
-     - /tmp/certs/server.crt
-    volumes:
-     - ./certs/:/tmp/certs
 
   unfetter-discover-processor:
     build: ../unfetter-store/unfetter-discover-processor
     container_name: unfetter-discover-processor
     image: unfetter-discover-processor
-    volumes:
-     - ./config/examples:/tmp/examples
-    #  TODO find a working volume mounting
-    #  - ../unfetter-store/unfetter-discover-processor:/usr/src/app
-    environment:
-     - MONGO_HOST=repository
-     # If deployed in a proxy, add the proxy's URL here
-     - HTTPS_PROXY_URL=
-    entrypoint:
-     - node
-     - processor.js
-     - --stix
-     - /tmp/examples/unfetter-stix/stix.json
-     - /tmp/examples/unfetter-stix/reports.stix.json
-     - --enhanced-stix-properties
-     - /tmp/examples/unfetter-db/stix-enhancements.json
-     - /tmp/examples/unfetter-db/stix-meta.json
-     - --config
-     - /tmp/examples/unfetter-db/config.json
-     - /tmp/examples/unfetter-db/translation-config.json
-     - --add-mitre-data
-     - "true"
-    depends_on:
-     - cti-stix-store-repository
-    links:
-     - cti-stix-store-repository:repository
 
   unfetter-ctf-ingest:
     build: ../unfetter-store/unfetter-ctf-ingest
@@ -79,23 +26,8 @@ services:
     image: unfetter-ctf-ingest
     volumes:
      - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
-    environment:
-      - API_PROTOCOL=https
-      - API_HOST=apihost
-      - API_PORT=3000
-      - API_CONTEXT=/
-      - MONGO_REPOSITORY=repository
-      - MONGO_PORT=27017
-      - MONGO_DBNAME=stix
-    entrypoint:
-     - npm
-     - start
-    depends_on:
-     - cti-stix-store-repository
-     - unfetter-discover-api
-    links:
-     - cti-stix-store-repository:repository
-     - unfetter-discover-api:apihost
+
+
 
   unfetter-socket-server:
     build: ../unfetter-store/unfetter-socket-server
@@ -118,16 +50,13 @@ services:
     links:
      - cti-stix-store-repository:repository
 
-  cti-stix-store-repository:
-    image: mongo:3.4.1
-    container_name: cti-stix-store-repository
-    # NOTE: Uncomment this out and restart the stac to run ../unfetter-store/unfetter-utils/user_promotion_tool.py
-    # ports:
-    # - "27018:27017"
-    volumes:
-    - ./data/db:/data/db
-    # Uncomment this if using authentication
-    # entrypoint: /entrypoint.sh mongod --auth
+
+
+
+
+
+
+
 
   unfetter-api-explorer:
     build: 
@@ -153,9 +82,7 @@ services:
     - unfetter-discover-openssl
     - cti-stix-store-repository
     links:
-     - cti-stix-store-repository:repository
      - unfetter-socket-server:socketserver
-     - unfetter-pattern-handler
     volumes:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
@@ -163,25 +90,15 @@ services:
     - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
     - ../unfetter-store/unfetter-discover-api/config/private-config.json:/usr/share/unfetter-discover-api/config/private-config.json
     environment:
-    - CTF_PARSE_HOST=http://unfetter-ctf-ingest
-    - STIX_API_PROTOCOL=http
-    - STIX_API_HOST=cti-stix-store
-    - STIX_API_PORT=3000
-    - STIX_API_PATH=cti-stix-store-api
-    - MONGO_REPOSITORY=repository
-    - MONGO_PORT=27017
-    - MONGO_DBNAME=stix
-    - ENV=dev
     # Options: UAC, TEST, DEMO
     - RUN_MODE=UAC
     # If deployed in a proxy, add the proxy's URL here
-    - HTTPS_PROXY_URL=
     entrypoint:
     - npm
     - run
     - startdeploy
 
-  unfetter-ui-build:
+  unfetter-ui:
     build: ../unfetter-ui
     image: unfetter-ui
     container_name: unfetter-ui-build
@@ -199,8 +116,3 @@ services:
     volumes:
       - ../stix2pattern/app.py:/opt/stix/app.py
       - ../stix2pattern/test.py:/opt/stix/test.py
-    entrypoint:
-    # ["python3","app.py","0.0.0.0"]
-     - python3
-     - app.py
-     - 0.0.0.0
