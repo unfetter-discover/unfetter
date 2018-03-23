@@ -11,8 +11,23 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "sysmon",
       "description": "System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time",
-      "category": "System Monitor",
-      "external_references": [ ]
+      "category": "siem",
+      "external_references": [
+        {
+          "source_name": "Microsoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon",
+          "external_id": "Sysmon v7.01"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
     },
     {
       "type": "x-unfetter-capability",
@@ -22,8 +37,22 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "norton antivirus",
       "description": "Norton AntiVirus is an anti-malware software developed and distributed by Symantec Corporation. It uses signatures and heuristics to identify viruses. Other features included in it are e-mail spam filtering and phishing protection",
-      "category": "AnitVirus",
-      "external_references": [ ]
+      "category": "antivirus",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Norton_AntiVirus"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
     }
   ]
 }
