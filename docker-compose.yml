@@ -14,15 +14,10 @@ services:
      - unfetter-ctf-ingest
      - unfetter-ui
 #     - unfetter-socket-server
-
     volumes:
      - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
-
-
-
-
 
   unfetter-discover-openssl:
     image: svagi/openssl:latest
@@ -61,6 +56,7 @@ services:
      - --stix
      - /tmp/examples/unfetter-stix/stix.json
      - /tmp/examples/unfetter-stix/reports.stix.json
+     - /tmp/examples/unfetter-stix/dodcar.stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
      - /tmp/examples/unfetter-db/stix-meta.json
