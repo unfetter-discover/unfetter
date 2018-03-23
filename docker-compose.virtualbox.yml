@@ -9,16 +9,19 @@ services:
     depends_on:
      - unfetter-discover-openssl
     links:
-     - unfetter-discover-ui
+     - unfetter-ui
      - cti-stix-store
      - unfetter-discover-api-explorer
      - unfetter-discover-api
+     #- unfetter-socket-server
     volumes:
-     - ./config/nginx/conf.d:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.demo:/etc/nginx/conf.d
      - ./certs/:/etc/pki/tls/certs
-  unfetter-discover-ui:
-    image: unfetter/unfetter-discover-ui
-    container_name: unfetter-discover-ui
+
+  unfetter-ui:
+    build: ../unfetter-ui
+    image: unfetter-ui
+    container_name: unfetter-ui
     ports:
      - "50000:50000"
     depends_on:
@@ -35,6 +38,7 @@ services:
      - /etc/pki/tls/certs/server.key
      - -ssl-cert
      - /etc/pki/tls/certs/server.crt
+
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -56,6 +60,7 @@ services:
      - /tmp/certs/server.crt
     volumes:
      - ./certs/:/tmp/certs
+
   unfetter-discover-processor:
     image: unfetter/unfetter-discover-processor 
     container_name: unfetter-discover-processor
@@ -83,6 +88,7 @@ services:
      - cti-stix-store-repository:repository
     environment:
     - INCLUDE_MITRE_GITHUB_DATA=false
+
   cti-stix-store:
     image: unfetter/cti-stix-store 
     container_name: cti-stix-store
@@ -95,6 +101,7 @@ services:
     environment:
      - SCHEMA_LOCATION=/tmp/schemas
     command: /bin/ash wait-for-repository.sh
+
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
@@ -102,6 +109,7 @@ services:
     - "27018:27017"
     volumes:
     - /data/db:/data/db
+
   cti-stix-ui:
     image: unfetter/cti-stix-ui 
     container_name: cti-stix-ui
@@ -121,6 +129,7 @@ services:
      - /etc/pki/tls/certs/server.key
      - -ssl-cert
      - /etc/pki/tls/certs/server.crt
+
   unfetter-discover-api-explorer:
     image: unfetter/unfetter-discover-api
     container_name: unfetter-discover-api-explorer
@@ -148,6 +157,7 @@ services:
     - npm
     - run
     - swagger-editor
+
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api
     container_name: unfetter-discover-api

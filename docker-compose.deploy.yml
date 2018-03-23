@@ -7,13 +7,13 @@ services:
      - unfetter-discover-openssl
     links:
      - unfetter-socket-server
+     - unfetter-ui
     volumes:
-     - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
+     - ./config/nginx/conf.d.deploy:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
      # Deploy mode is using recently on disk source code.  
      - ../unfetter-ui/dist:/etc/nginx/html
-
 
   unfetter-discover-processor:
     build: ../unfetter-store/unfetter-discover-processor
@@ -26,8 +26,7 @@ services:
     image: unfetter-ctf-ingest
     volumes:
      - ../unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data
-
-
+     - ../unfetter-store/unfetter-ctf-ingest/src:/usr/share/unfetter-ctf-ingest/src
 
   unfetter-socket-server:
     build: ../unfetter-store/unfetter-socket-server
@@ -49,14 +48,6 @@ services:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
-
-
-
-
-
-
-
-
 
   unfetter-api-explorer:
     build: 
