@@ -8,9 +8,9 @@ services:
     links:
      - unfetter-socket-server
     volumes:
-     - ./config/nginx/conf.d.aot:/etc/nginx/conf.d
-     - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
-     - ./certs/:/etc/pki/tls/certs
+     - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
+     - ./config/nginx/socket-deploy.conf:/etc/nginx/conf.d.deploy/default.conf     
+
      # Deploy mode is using recently on disk source code.  
      - ../unfetter-ui/dist:/etc/nginx/html
 

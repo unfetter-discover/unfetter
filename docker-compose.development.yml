@@ -4,9 +4,8 @@ services:
     image: nginx:1.13.5-alpine
     container_name: unfetter-discover-gateway
     volumes:
-     - ./config/nginx/conf.d.angular:/etc/nginx/conf.d
-     - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
-     - ./certs/:/etc/pki/tls/certs
+     - ./config/nginx/socket-deploy.conf:/etc/nginx/conf.d.deploy/default.conf
+     - ./config/nginx/ui-dev.conf:/etc/nginx/conf.d.deploy/ui.conf
 
   unfetter-discover-processor:
     build: ../unfetter-store/unfetter-discover-processor

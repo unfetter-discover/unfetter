@@ -1,0 +1,35 @@
+--- 
+- hosts: all
+  vars:
+    containers:
+      - "unfetter-discover-gateway"
+      - "unfetter-ui"
+      - "unfetter-pattern-handler"
+      - "unfetter-ctf-ingest"
+      - "unfetter-discover-api"
+      - "unfetter-api-explorer"
+      - "unfetter-socket-server"
+      - "cti-stix-store-repository"
+
+  tasks:
+  - name: get container status
+    shell: docker inspect -f '{{ '{{' }} .State.Running }} '}}' }}' {{ item }} && echo true 
+    register: ps
+    ignore_errors: True
+    with_items: "{{ containers }}"
+ #- debug: msg="{{ ps }}"
+    
+  - debug: msg="{{ item.stdout }}"
+    with_items: "{{ ps.results }}"
+
+  - name: "failed"
+    shell: "docker-compose {% raw %} -f ../docker-compose.development.yml {% endraw %} up -d"
+    when: ps|failed
+    ignore_errors: True
+  - name: "suceed"
+    command: echo "something worked"
+    when: ps|succeeded
+  - name: "skipped"
+    command: echo "skipped"
+    when: ps|skipped
+

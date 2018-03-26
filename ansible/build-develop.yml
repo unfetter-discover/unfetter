@@ -1,0 +1,31 @@
+--- 
+- hosts: all
+  vars:
+    containers:
+      - "unfetter-ui"
+      - "unfetter-pattern-handler"
+      - "unfetter-ctf-ingest"
+      - "unfetter-discover-api"
+      - "unfetter-api-explorer"
+      - "unfetter-socket-server"
+      - "cti-stix-store-repository"
+      - "Blah"
+
+  tasks:
+ #- debug: msg="{{ ps }}"
+
+  - name: "build new"
+    shell: "docker-compose {% raw %} -f ../docker-compose.development.yml {% endraw %} build"
+
+    notify:
+      - inspect
+
+  handlers:
+    - name: inspect
+      shell: docker images  {{ item }}
+      register: ps
+      ignore_errors: True
+      with_items: "{{ containers }}"
+    - debug: msg="{{ item.stdout }}"
+      with_items: "{{ ps.results }}"
+    
