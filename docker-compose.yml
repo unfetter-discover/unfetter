@@ -59,6 +59,7 @@ services:
      - --stix
      - /tmp/examples/unfetter-stix/stix.json
      - /tmp/examples/unfetter-stix/reports.stix.json
+     - /tmp/examples/unfetter-stix/dodcar.stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
      - /tmp/examples/unfetter-db/stix-meta.json
@@ -94,6 +95,34 @@ services:
      - unfetter-discover-api:apihost
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
@@ -113,6 +142,13 @@ services:
     entrypoint:
      - npm
      - start
+
+
+
+
+
+
+
 
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api:0.3.5
