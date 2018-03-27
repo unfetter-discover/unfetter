@@ -59,7 +59,7 @@ services:
      - --stix
      - /tmp/examples/unfetter-stix/stix.json
      - /tmp/examples/unfetter-stix/reports.stix.json
-     - /tmp/examples/unfetter-stix/dodcar.stix.json
+     - /tmp/examples/unfetter-stix/assessments3.stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
      - /tmp/examples/unfetter-db/stix-meta.json
