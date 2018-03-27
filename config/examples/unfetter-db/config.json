@@ -72,7 +72,8 @@
             }
         ],
         "configGroups": [
-            "stixConfig"
+            "stixConfig",
+            "public"
         ]
     },
     {
@@ -250,7 +251,8 @@
             }
         },
         "configGroups": [
-            "stixConfig"
+            "stixConfig",
+            "public"
         ]
     },
     {
@@ -479,11 +481,18 @@
                     "user"
                 ]
             }
+        ],
+        "configGroups": [
+            "stixConfig",
+            "public"
         ]
     },
     {
         "_id": "905f4e32-528c-479a-bb20-aa36bb54be9f",
         "configKey": "jwtDurationSeconds",
-        "configValue": 900
+        "configValue": 900,
+        "configGroups": [
+            "public"
+        ]
     }
 ]
