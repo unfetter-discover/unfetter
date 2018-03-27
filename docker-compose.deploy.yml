@@ -10,7 +10,7 @@ services:
      - unfetter-ui
     volumes:
      - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
-     - ./config/nginx/socket-deploy.conf:/etc/nginx/conf.d.deploy/default.conf     
+     - ./config/nginx/uac-locations.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf     
 
      # Deploy mode is using recently on disk source code.  
      - ../unfetter-ui/dist:/etc/nginx/html
