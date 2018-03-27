@@ -13,7 +13,7 @@ services:
      - unfetter-api-explorer
      - unfetter-discover-api
     volumes:
-     - ./config/nginx/conf.d.deploy:/etc/nginx/conf.d
+     - ./config/nginx/conf.d:/etc/nginx/conf.d
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./certs/:/etc/pki/tls/certs
 

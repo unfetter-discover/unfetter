@@ -3,13 +3,9 @@ services:
   unfetter-discover-gateway:
     image: nginx:1.13.5-alpine
     container_name: unfetter-discover-gateway
-    links:
-      - unfetter-socket-server
-      - unfetter-ui
     volumes:
-     - ./config/nginx/conf.d.development:/etc/nginx/conf.d
-     - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
-     - ./certs/:/etc/pki/tls/certs
+     - ./config/nginx/uac-locations.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf
+     - ./config/nginx/ui-dev.conf:/etc/nginx/conf.d.runmode/ui.conf
 
   unfetter-discover-processor:
     build: ../unfetter-store/unfetter-discover-processor
@@ -67,6 +63,7 @@ services:
     - ./data/db:/data/db
     # Uncomment this if using authentication
     # entrypoint: /entrypoint.sh mongod --auth
+
 
   unfetter-api-explorer:
     build: 

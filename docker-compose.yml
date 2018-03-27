@@ -12,10 +12,14 @@ services:
      - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
+#     - unfetter-ui
 #     - unfetter-socket-server
+
     volumes:
-     - ./config/nginx/conf.d.demo:/etc/nginx/conf.d
+     - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
+     - ./config/nginx/blank.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf
+     - ./config/nginx/ui-prod.conf:/etc/nginx/conf.d.runmode/ui.conf
      - ./certs/:/etc/pki/tls/certs
 
   unfetter-discover-openssl:
@@ -129,9 +133,6 @@ services:
     - ./data/db:/data/db
     # Uncomment this if using authentication
     # entrypoint: /entrypoint.sh mongod --auth
-
-
-
 
   unfetter-api-explorer:
     image: unfetter/unfetter-api-explorer:0.3.5
