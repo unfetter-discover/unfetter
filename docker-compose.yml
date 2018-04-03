@@ -69,6 +69,8 @@ services:
      - /tmp/examples/unfetter-db/translation-config.json
      - --add-mitre-data
      - "true"
+     - --auto-publish
+     - "true"
     depends_on:
      - cti-stix-store-repository
     links:
