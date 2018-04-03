@@ -103,6 +103,7 @@ services:
     - ENV=dev
     # Options: UAC, TEST, DEMO
     - RUN_MODE=UAC
+    - MONGO_DEBUG=false
     entrypoint:
     - npm
     - run
