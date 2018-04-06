@@ -21,7 +21,7 @@
                 "url": "https://attack.mitre.org/wiki/Main_Page"
             },
             {
-                "name": "lockheed-matin",
+                "name": "lockheed-martin",
                 "phase_names": [
                     "reconnaissance",
                     "weaponization",
