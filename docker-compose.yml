@@ -59,6 +59,7 @@ services:
      - --stix
      - /tmp/examples/unfetter-stix/stix.json
      - /tmp/examples/unfetter-stix/reports.stix.json
+     - /tmp/examples/unfetter-stix/ntctf-attack-patterns.stix.json
      - /tmp/examples/unfetter-stix/assessments3.stix.json
      - /tmp/examples/unfetter-stix/sightings.stix.json
      - --enhanced-stix-properties
