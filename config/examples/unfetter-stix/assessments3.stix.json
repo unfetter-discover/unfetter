@@ -59,6 +59,7 @@
       "id" : "x-unfetter-object-assessment-4adf0a88-35a1-4502-bb81-bd41580b6663",
       "name" : "Sysmon Assessment",
       "description" : "An assessment of Sysmon capabilities against MT CTF attack patterns",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
       "object_ref" : "x-unfetter-capability--ce4171360-0cbf-4130-b01c-dea9ee4bae65",
       "is_baseline" : "false",
       "set_ref" : [
@@ -3080,6 +3081,7 @@
       "id" : "x-unfetter-object-assessment-e9c4fc71-fde9-4437-b279-d8ab04c3f058",
       "name" : "Norton Assessment",
       "description" : "An assessment of Norton Antivirus capabilities against MT CTF attack patterns",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
       "object_ref" : "x-unfetter-capability--64e5efcb-86ea-47f4-bb1a-c4dc2ffc136e",
       "is_baseline" : "false",
       "set_ref" : [
