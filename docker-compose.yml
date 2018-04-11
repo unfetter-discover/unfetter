@@ -96,36 +96,7 @@ services:
     links:
      - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
+     
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
@@ -145,13 +116,6 @@ services:
     entrypoint:
      - npm
      - start
-
-
-
-
-
-
-
 
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api:0.3.5
