@@ -1,8 +1,8 @@
-version: '2'
+version: '3.3'
 services:
   unfetter-discover-gateway:
     container_name: unfetter-discover-gateway
-    image: unfetter/unfetter-discover-gateway:0.3.5
+    image: unfetter/unfetter-discover-gateway:0.3.6
     ports:
      - "443:443"
      - "80:80"
@@ -12,10 +12,16 @@ services:
      - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
+#     - unfetter-ui
+#     - unfetter-socket-server
+
     volumes:
-     - ./config/nginx/conf.d:/etc/nginx/conf.d
+     - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
+     - ./config/nginx/blank.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf
+     - ./config/nginx/ui-prod.conf:/etc/nginx/conf.d.runmode/ui.conf
      - ./certs/:/etc/pki/tls/certs
+
   unfetter-discover-openssl:
     image: svagi/openssl:latest
     container_name: unfetter-discover-openssl
@@ -39,7 +45,7 @@ services:
      - ./certs/:/tmp/certs
 
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:0.3.5
+    image: unfetter/unfetter-discover-processor:0.3.6
     container_name: unfetter-discover-processor
     volumes:
      - ./config/examples:/tmp/examples
@@ -53,12 +59,19 @@ services:
      - --stix
      - /tmp/examples/unfetter-stix/stix.json
      - /tmp/examples/unfetter-stix/reports.stix.json
+     #- /tmp/examples/unfetter-stix/ntctf-attack-patterns.stix.json
+     #- /tmp/examples/unfetter-stix/assessments3-categories.stix.json
+     - /tmp/examples/unfetter-stix/assessments3.stix.json
+     - /tmp/examples/unfetter-stix/sightings.stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
      - /tmp/examples/unfetter-db/stix-meta.json
      - --config
      - /tmp/examples/unfetter-db/config.json
-     - --add-mitre-data
+     - /tmp/examples/unfetter-db/translation-config.json
+     - --mitre-attack-data
+     - enterprise
+     - --auto-publish
      - "true"
     depends_on:
      - cti-stix-store-repository
@@ -67,7 +80,7 @@ services:
 
   unfetter-ctf-ingest:
     container_name: unfetter-ctf-ingest
-    image: unfetter/unfetter-ctf-ingest:0.3.5
+    image: unfetter/unfetter-ctf-ingest:0.3.6
     environment:
       - API_PROTOCOL=https
       - API_HOST=apihost
@@ -76,8 +89,6 @@ services:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
       - MONGO_DBNAME=stix
-    ports:
-    - "3001:10010"
     entrypoint:
      - npm
      - start
@@ -87,35 +98,37 @@ services:
     links:
      - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
-
-
+     
   cti-stix-store-repository:
     image: mongo:3.4.1
     container_name: cti-stix-store-repository
-    ports:
-    - "27018:27017"
+    # NOTE: Uncomment this out and restart the stac to run ../unfetter-store/unfetter-utils/user_promotion_tool.py
+    # ports:
+    # - "27018:27017"
     volumes:
     - ./data/db:/data/db
+    # Uncomment this if using authentication
+    # entrypoint: /entrypoint.sh mongod --auth
 
   unfetter-api-explorer:
-    image: unfetter/unfetter-api-explorer:0.3.5
+    image: unfetter/unfetter-api-explorer:0.3.6
     container_name: unfetter-api-explorer
-    ports:
-    - "3200:3200"
+    environment:
+     - PUBLIC_PATH=/explorer/
     entrypoint:
      - npm
      - start
 
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api:0.3.5
+    image: unfetter/unfetter-discover-api:0.3.6
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
     - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
-    ports:
-    - "49360:3000"
+     - unfetter-pattern-handler
+     
     volumes:
     - ./certs/:/etc/pki/tls/certs
     environment:
@@ -132,15 +145,15 @@ services:
     - RUN_MODE=DEMO
     # If deployed in a proxy, add the proxy's URL here
     - HTTPS_PROXY_URL=
+    - PATTERN_HANDLER_DOMAIN = unfetter-pattern-handler
+    - PATTERN_HANDLER_PORT = 5000
     entrypoint:
     - npm
     - start
 
   unfetter-pattern-handler:
-    image: unfetter/unfetter-pattern-handler:0.3.5
+    image: unfetter/unfetter-pattern-handler:0.3.6
     container_name: unfetter-pattern-handler
-    ports:
-    - "5000:5000"
     entrypoint:
     # ["python3","app.py","0.0.0.0"]
      - python3

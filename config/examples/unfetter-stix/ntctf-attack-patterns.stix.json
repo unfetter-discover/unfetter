@@ -1,0 +1,4138 @@
+{
+	"objects": [
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.614Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Step taken by a threat actor, their sponsor, and/or leadership to determine the portion(s) of national strategy/interests that will be supported by the planned/intended cyber activity, or to justify that activity. Threat actor perception of programmatic/operational goals/environmental changes/outcomes that will contribute to the overall success of the threat activity.",
+			"name": "Determine strategy and goals",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - planning",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--50032924-8b25-4a92-8c1d-587dea51391c"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions taken by a threat actor (individual, team or government-sponsored agency), their sponsor and/or leadership to establish the overall strategy for, policy limitations of, and the requisite resources and capabilities needed to conduct the intended malicious cyber activity, (e.g., information needs, resources and capabilities, and partnerships), along with the criteria for evaluating the eventual success/failure (measures of performance, merit, and effectiveness [MoP/MoM/MoE]) of the activity.",
+			"name": "Analyze mission",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - planning",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--cdd5732b-0d74-4d13-acf4-93b25c6ff355"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Steps taken to integrate known information on the target, capabilities, and intended outcome into a plan for how to most effectively conduct intended cyber activity.",
+			"name": "Produce operational plans",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - planning",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--319faeb6-b933-4e32-ae3a-cc47b6397ac3"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The initial step in the planning process that produces a list of intended victim(s), and defines the intent for and desired outcome of the malicious cyber activity.",
+			"name": "Select strategic targets",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - planning",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--0c52f9e6-98ba-42c8-afb8-6f1155870cf1"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actors receive approval from their leadership to execute operations against identified targets.",
+			"name": "Receive approval to execute operations",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - planning",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--ab900f4b-f16b-439f-8fb5-18ae490a7b0e"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Individual cyber threat actor, their sponsor, or leadership decision to execute a planned/intended cyber threat activity/operation.",
+			"name": "Issue operational tasking",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - planning",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--b6182c37-971c-43be-bda3-57c31c1073cb"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Steps taken to define, develop, acquire, and test the selected technology, processes, and tools required to conduct the intended cyber activity.",
+			"name": "Develop capabilities",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - resource development",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--14d3b0eb-a824-4f63-8e72-e6f286fb1eaf"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Steps taken to identify and employ viable sources of financial support required to support staff, infrastructure, and other expenses that occur while conducting cyber activities.",
+			"name": "Obtain financing",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - resource development",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--0da78c27-0712-4c8a-8aae-b04a51a5f69e"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Steps taken to select and train the people required to conduct intended activity in areas such as cyber activities, targeting, and data analysis.",
+			"name": "Staff and train resources",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - resource development",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--545eefcd-7b87-49f7-8fbf-43364b46c35c"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Steps taken to establish relationships with individuals, groups or governments, to acquire or provide co-production and/or contract development of technology, processes and/or tools for use in the intended cyber activity, and to provide proxy support for compromising the intended victim's supply chain.",
+			"name": "Build alliances and partnerships",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - resource development",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--09e3cd74-3a9b-4e4e-b3ea-fc68ca0f47a1"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Steps taken to acquire the facilities and infrastructure required to conduct the intended cyber activity; infrastructure will be used across targeted operations",
+			"name": "Acquire operational infrastructure",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - resource development",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--1a29896f-9bc9-4078-a01d-c74ad12ca2b5"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions taken to establish a virtual network of target computer or information system resources for use in conducting threat actor activities.",
+			"name": "Create botnet",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - resource development",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--42125772-0bb9-448c-adcc-5140c047d135"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "",
+			"name": "Threat actor action to place compromised SW, HW and/or firmware on partner or organic supply chain.",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - resource development,\"Seed supply chain",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--9a0c5707-0dab-49c6-bb2f-689991e5e401"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions to determine the utility of available information related to a potential target and to document intelligence gaps.",
+			"name": "Identify intelligence gaps",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - research",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--475432b1-e764-4b7a-b0c3-ddc926a7ac08"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions to establish requirements for tools, including malware, needed to develop capabilities and/or conduct operations.",
+			"name": "Identify capability gaps",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - research",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--97c8dfec-161b-4576-aa18-018de84370ed"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions taken to compile and analyze all available information on potential targets.",
+			"name": "Gather intelligence",
+			"kill_chain_phases": [
+				{
+					"phase_name": "administer - research",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "administer"
+			},
+			"id": "attack-pattern--3005345d-325f-4915-b8cd-6e28ceb0c6ff"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The gathering of information about a potential target by searching open source information such as public forums, conference announcements, bulletin boards, or distribution lists looking for victim information. Can include the use of automated tools to overcome normal protective measures (e.g., Google dorking, bulk retrieval)",
+			"name": "Web scraping",
+			"kill_chain_phases": [
+				{
+					"phase_name": "preparation - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "preparation"
+			},
+			"id": "attack-pattern--ea54fd33-4dde-411d-9700-c3703dd60149"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The sending of transmissions to the network's nodes, examining the responses they receive to evaluate whether a specific node represents a weak point within the network.",
+			"name": "Network mapping",
+			"kill_chain_phases": [
+				{
+					"phase_name": "preparation - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "preparation"
+			},
+			"id": "attack-pattern--1da9bada-7003-461b-bef4-a35bcab0eda2"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The gathering of information about a potential target by searching public social media sites.",
+			"name": "Use social media",
+			"kill_chain_phases": [
+				{
+					"phase_name": "preparation - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "preparation"
+			},
+			"id": "attack-pattern--ad55b478-2c4a-4415-9dda-ab336715fd14"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Active or passive actions taken by the adversary in order to determine the software or firmware currently used by a target, versions of software or firmware, a target's patch status, and configuration (e.g., ports open)",
+			"name": "Scanning",
+			"kill_chain_phases": [
+				{
+					"phase_name": "preparation - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "preparation"
+			},
+			"id": "attack-pattern--f4b0f529-de5a-46d0-93ba-e6084da8a1da"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions taken by a threat actor to identify a specific target or targets from a broader list of potential targets.",
+			"name": "Select tactical targets",
+			"kill_chain_phases": [
+				{
+					"phase_name": "preparation - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "preparation"
+			},
+			"id": "attack-pattern--536c1a35-7dc2-4d34-8ae9-0cfbb4f5cdc1"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions to collect intelligence derived from the collection, processing, analysis, and exploitation of data and information pertaining to an identified target.",
+			"name": "Survey",
+			"kill_chain_phases": [
+				{
+					"phase_name": "preparation - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "preparation"
+			},
+			"id": "attack-pattern--ca282312-ad1a-4973-a20f-0bb90f5932ad"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions taken to determine the type and version of operating systems on the intended target's network.",
+			"name": "TCP fingerprinting",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--95613f06-f38a-40fc-b4d3-634ca16f210e"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "An enumeration technique used by threat actor to provide information about a computer system; generally used for operating system identification (also known as fingerprinting).",
+			"name": "Banner grabbing",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--5a2a5c33-25f9-4bec-bba9-b43af1040cb6"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Psychological manipulation of people by threat actor into performing actions or divulging information.",
+			"name": "Social engineering",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--f30cf30a-c707-4b30-84dc-9f2fe82b10b6"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions to identify the cryptographic systems used by target.",
+			"name": "Identify crypto",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--58bfae80-284e-4f1f-8918-0f724bbaaa72"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Activities to obtain credentials of unknowing users for the purpose of future engagement.",
+			"name": "Credential pharming",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--2250a469-ff65-4ce3-a2b2-7855237aa488"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": " \"Any phenomenon by which a signal transmitted on one circuit or channel creates an effect on another circuit or channel that is not physically connected. (Regular wireless communications channels",
+			"name": "Crosstalk (data emanation)",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--60e16bdf-b0ad-4220-bbb1-6567338fd9ef"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The creation of one or more intermediate landing zones between source and destination for data exfiltration and command and control.",
+			"name": "Create mid-points",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - staging",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--163afcf0-b9f3-4962-8b7a-7a9d3e7f3862"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Altering the normal content of data files (e.g., .PDF, .doc) to exploit a weakness in the application that normally parses that type of data file to have that application perform unintended actions (usually code execution or revealing sensitive information). (Note this is a change from \"Client Application Data Files (e.g. PDF, Office\")",
+			"name": "Add exploits to application data files",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - staging",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--aa6e45a4-05ea-4e39-9dc8-475419ac587a"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions taken to put in place facilities and associated infrastructure needed to support development of capabilities for and to support conduct of threat activities.",
+			"name": "Allocate operational infrastructure",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - staging",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--870ce2fe-8a37-426f-8fbb-c8fb1f5b4dc1"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "A website that has been created or modified by a threat actor to include malicious code, which can subsequently be used in phishing attacks, drive-by attacks and watering hole attacks.",
+			"name": "Infect or seed website",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - staging",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--d7d072a3-a076-43ae-8349-c0013f7e902b"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Pre-positioning of threat actor capabilities on threat actor internally owned/controlled storage locations.",
+			"name": "Pre-position payload",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - staging",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--fa283791-bd07-491e-a34b-d54145fdb8e4"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions taken to obtain facilities and infrastructure in close physical proximity to identified target's computer or information systems, networks, and/or data stores.",
+			"name": "Establish physical proximity",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - staging",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--2764a348-31bf-49b3-99a4-5c00cfa98ab7"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Embeds malicious attachments within an email message, sent to a specific target. The user's computer can be compromised after opening the attached file (e.g., opening a C2 channel to a malicious actor). Often the attached files are data files (e.g., .doc, .pdf) that contain exploits that compromise the associated program that usually processes that type of data file. Sometimes the attached file is an executable or compressed executable (e.g., .zip) that executes malware directly without needing to exploit a program.",
+			"name": "Spear-phishing emails w/ attachments",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--752d654e-a204-4a44-a3d6-04fdb14ad651"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Embeds malicious links within an email message, sent to a specific target, without utilizing a malicious file. The user's computer can be compromised after clicking (e.g., opening a C2 channel to a malicious actor).",
+			"name": "Spear-phishing email w/ malicious link",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--2bbdcd59-9dad-4770-84c1-16d2e6ce3069"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries embed malicious code into a website that a user visits that infects the computer that connects to it. Typically, this activity happens when a person is browsing unsafe, unverified, or spoofed sites. (e.g., watering holes)",
+			"name": "Websites",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--0bedbaa0-70f7-4b95-ac1a-6521f5c7ecd1"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The deployment of malicious code via removable media. Removable media can be programmed to auto-run upon insertion of a device, causing malware to be automatically executed.",
+			"name": "Removable media",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--5a7b087c-8644-490a-9b26-ced5e28ad8af"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The injection of malicious SQL commands into unchecked input fields, allowing data theft, modifications, or execution of malicious commands.",
+			"name": "SQL injection",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--3741a7e6-8535-44d5-b044-943bbe5fa94f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Modifying cache entries on a DNS table located on a DNS Server to redirect victim computers to fraudulent and malicious web sites and systems. This technique is used for pharming sensitive data from unknowing victims. However, direct modification of cache entries rarely happens. Pre-compromise DNS poisoning COULD happen under a race condition when a DNS query is sent out and a fraudulent one is sent back in. There are some examples of this in open source and is one of the reasons DNSSEC was created. Post-compromise poisoning is less likely because it's much easier to detect when systems attempt to poison cache tables through broadcasting information that makes traffic re-route back to a particular system on a subnet.",
+			"name": "DNS/cache poisoning",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--f1757ab6-83ed-4830-934e-027d8679d831"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Abusing physical collocation of separate virtual machines to compromise the integrity or confidentiality of target virtual machines.",
+			"name": "Virtualization attacks",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--e77aeade-3f60-49bc-868a-228ec1475fa0"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The insertion or use of existing rogue interfaces to authorized network devices.",
+			"name": "Connection of rogue network devices",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--eb88e9c8-2c47-44cc-a035-bab90d950abd"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries embed malicious code into a trusted website (e.g. xys.mil, aaa.gov, abc.com) that infects the computer that connects to it.",
+			"name": "Trusted website",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--13a36011-414d-469a-943c-29eb7799d6df"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The use of legitimate remote access capabilities without exploiting a vulnerability usually involving the reuse of legitimate credentials that were captured previously to gain access to internal network resources.",
+			"name": "Legitimate remote access",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--4951d08c-e7c0-4bd6-9f20-d6a6d02a9711"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Any instance in which an information system, either unaccredited or accredited for a specific network, is moved from said network to a secondary network without authorization.",
+			"name": "Device swapping (cross domain violation)",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--24c6f1b6-5023-45b7-bb82-ff6e6c273ace"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "A cross-domain solution (CDS) is a means of information assurance that provides the ability to manually or automatically access or transfer information between two or more differing security domains. In this case, the focus of this is the automated CDS. A Multi- Level Solution is a means of information assurance that provides the ability to connect to two or more differing security domains in one device, possibly simultaneously, keeping the domains separate. Both of these are integrated systems of hardware and software that enable transfer of or separation of information among incompatible security domains or levels of classification. Misconfigured CDS or multi-level solutions (MLS) can allow malicious content to traverse the CDS or MLS. This specific technique is not meant to be malicious, but a system administrator can inadvertently create an unsecured and unauthorized pathway from one domain to another network. This technique focuses on implementation problems stemming from known vulnerabilities or configuration mistakes that a system administrator should be able to prevent.",
+			"name": "Exploit CDS or MLS misconfiguration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--40ba9907-6af8-43a7-9554-8fc17f0ced5f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Networking hardware that creates an aggregate network from either two or more communication networks, or two or more network segments. Bridging is distinct from routing, which allows multiple different networks to communicate independently while remaining separate.",
+			"name": "Physical network bridge",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--f5e859b7-a61f-4209-a04e-30b958e52636"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversarial usage of essential capabilities that are utilized on both unclassified and classified networks, and often housed on unclassified networks, to gain unauthorized access to classified networks.",
+			"name": "Automatically transported trusted services",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--e278347a-f841-4cf6-a164-c07307dd0527"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Usage of cross domain or multi-level solutions to maliciously transfer content, or allow adversarial movement from one network to another. This technique focuses on zero-day unknown or design vulnerabilities in the trusted device or its component parts or software that a system administrator cannot be expected to prevent.",
+			"name": "Traverse CDS or MLS",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--7bbe7b6c-0b8b-42d0-831d-14ac492f2e3a"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adding malicious software, hardware, or configurations to items that are trusted to be non-malicious while on their way to the target network. This includes possible compromise of vendors, manufacturers, suppliers, transportation, staging areas for baselines or updates, master configurations, etc.",
+			"name": "Supply chain / trusted source compromise",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--c45e345a-4179-4351-91f4-2039cc0a8853"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Wireless access to network communications or a device connected to the network. Wireless includes WiFi, Bluetooth®, cellular, or any other form of RF signal.",
+			"name": "Wireless access",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--ccca2ca3-a026-45b1-a478-b6778f963a21"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Compromise of network infrastructure (either through code exploitation, exploiting a misconfiguration, or transitive compromise of related infrastructure) that connects to or transports the target network to deliver malicious content resulting in risk of denial, degradation, or access of a protected network through the compromise of infrastructure shared with a less protected network.",
+			"name": "Compromise common network infrastructure",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--f5202e24-8944-4e3b-8c14-6b018f3897d8"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor employs SMS, a communications protocol allowing the interchange of short text messages between mobile telephone devices, to communicate with a target.",
+			"name": "Short message service (SMS)",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--09b33ea8-97ad-43a6-90fb-a9fa384ae328"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions to track target use of firmware/hardware through tracking numbers embedded in QR codes.",
+			"name": "Quick response (QR) code",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--a7453abc-59df-432d-8c73-ff13b6708e01"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The process of converting data into another format.",
+			"name": "Encode data",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--d7858a95-e6c1-4f4c-a31e-4a68e0b29342"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The process of delivering malicious code to a victim computer within a victim's network to be used to gain access, while appearing to be benign content.",
+			"name": "Trojan",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - delivery",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--c54fa101-dea2-443f-9de8-7657959f636d"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploiting a software vulnerability in an application by having the exploit triggered locally on the host (e.g., opening a malicious document), often requiring some user interaction to launch and usually leading to user level access on the host. This occurs when a programming error in the normal program is triggered that causes the software to behave in an unintended and insecure way.",
+			"name": "Targets application vulnerability",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--11f07ccd-1c3f-4b98-abd6-b2454d42172e"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploiting a software vulnerability in an operating system service or kernel. This occurs when a programming error is triggered that causes the software to behave in an unintended and insecure way. Exploiting operating system vulnerabilities often leads directly to privileged access on the host.",
+			"name": "Targets operating system vulnerability",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--26fb1fd9-2982-47c8-bd98-0514af662acb"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploiting a software vulnerability in an application by having the exploit triggered remotely over the network (e.g., network packets that exploit a vulnerability in an email client), often without any user interaction and usually leading to user level access on the host. This occurs when a programming error in the normal program is triggered that causes the software to behave in an unintended and insecure way.",
+			"name": "Targets application vulnerability remotely",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--b5681cab-3b53-4724-bfa1-9ec02b20f60e"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Psychological manipulation of people by threat actor into performing actions or divulging information.",
+			"name": "Social engineering",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--efff67bd-d5ac-475a-b8a3-136f39277024"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Abusing physical collocation of separate virtual machines to compromise the integrity or confidentiality of target virtual machines.",
+			"name": "Virtualization attacks",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--0abf9285-64b9-42f4-bc54-ad7d90772979"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploitation of weak or misconfigured cryptographic algorithms or using acquired cryptographic keys to gain access to or manipulate the underlying unencrypted content.",
+			"name": "Defeat encryption",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--b26d1795-7704-4fd7-9cb8-6643750ea4fc"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploitation of weak, misconfigured, or missing access controls to gain access to a system or data.",
+			"name": "Exploit weak access controls",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--f1fd92e3-c2c8-42cf-bebf-a7defefbd2b3"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "A threat actor uses an application, script, or shell to create unauthorized access.",
+			"name": "Remote shell",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--5adfe591-71eb-4c67-92db-11215ccbfee5"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions taken to provide a string of input (malicious code) into a weak or non-existent bounds checking buffer, with the goal of corrupting the state of the program's adjacent pointers to either corrupt data, deny access, or cause the execution of malicious code.",
+			"name": "Buffer overflow vulnerability",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--471b0e47-4141-492b-98ce-5d6faf7fea95"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor makes use of exploit packs (also called an exploit kit), a toolkit that automates the exploitation of client side vulnerabilities, usually targeting browsers and programs that a website can invoke through the browser.",
+			"name": "Leverage exploit packs",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--4b29b6cb-d410-4a1f-a008-6e70e7023e77"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor launches a 0-day exploit at a target using software with an identified vulnerability. A 0-day exploit is a vulnerability in software that is unknown to the vendor, which is then exploited by the threat actor before the vendor becomes aware and fixes it.",
+			"name": "Launch 0-day exploit",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--05250123-0477-4dda-ba24-4908e1a1084b"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor converts data from standard approved format to a representation that may not be checked by the victim host system or browser. (e.g., Directory/web traversals using \"../..\" and \"%20\")",
+			"name": "Canonicalization",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--fabf6f9b-8884-4894-933c-b9239da44584"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Hijacking is a type of network security attack in which the threat actor takes control of a communication between two entities.",
+			"name": "Hijack",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--c093eb21-d877-46e9-bc08-141a02e4697d"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversary poses as an authorized user in order to gain access to target computer system.",
+			"name": "Impersonate / Spoof",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--d1725dd5-c566-42e0-a485-bf94dddfd67b"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actors conducts a replay attack, which is a network attack in which a valid data transmission is maliciously or fraudulently repeated or delayed, against a target.",
+			"name": "Replay",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--359dee5b-a0af-4ebd-9245-b4af345db803"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor use of standard target system or network protocols to gain unauthorized access through unanticipated use of the protocol (e.g., using legacy fields to issue commands, undocumented fields, slack space)",
+			"name": "Protocol abuse",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--461926b4-8d51-465a-a4cf-1269a573ebb3"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Leverage compromise of a connected peer network or other trusted relationship with another network.",
+			"name": "Leverage trusted relationship",
+			"kill_chain_phases": [
+				{
+					"phase_name": "engagement - exploitation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "engagement"
+			},
+			"id": "attack-pattern--f9534bb8-63d3-4726-8135-244ba5a35422"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Writing an executable to a file on a disk or network share that can then be executed natively by the operating system.",
+			"name": "Writing to disk",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--6e6c5c1d-0d06-47cf-bccf-46c989e4d31d"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Code that runs only in memory (without an executable file or script on disk)",
+			"name": "In memory code",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--36941afd-819c-41e0-b9df-fb30b663683f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Utilizing a scripting language, such as PowerShell, VBScript, JScript, Perl, Python, etc. Adversaries use scripts to execute code in a number of different ways, either with script files or script commands fed directly to the script interpreter. JIT compiled languages, such as .NET and Java, also fall into this category.",
+			"name": "Interpreted scripts",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--5ccb51d5-3084-4ae6-95a5-225fa58b0dd0"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions taken to replace a legitimate binary with a malicious executable in a commonly trusted location (such as C:\\Windows\\System32), from a legitimate source (e.g., via local patch updating mechanism), or named with a common name (such as \"explorer.exe\" or \"svchost.exe\") to bypass tools that trust executables by relying on file name or path. This also may be done to deceive defenders and system administrators into thinking a file is benign by name association to something that is known to be legitimate.",
+			"name": "Binary replacement",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--90d2a6df-6276-4f8c-b156-d58a2d34daa9"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Running executable code from the command line, cmd.exe. This can be done locally or remotely via RDP, reverse-shell, etc. Commands that are executed run with current permission level of the command line.",
+			"name": "Command line",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--a74ec1aa-6d17-451f-9b3c-b0f770497b3d"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions initiated by the user that enable the installation and execution of code.",
+			"name": "Enabled by user",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--4a4d6700-d5bf-4a57-b1a8-4edae04d8aa8"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Injecting malicious code into an existing legitimate process. Running code in the context of another process provides many benefits such as access to the process's memory, permissions, and identity. Code injection minimizes the malicious activity from casual inspection.",
+			"name": "Process injection",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--a9b7d025-cf5d-485a-861f-ebfe9d79bcfb"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Cause a file to execute based on a configuration change.",
+			"name": "Configuration modification to facilitate launch",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--3b8edcd9-1d20-4bf5-bc18-a1a7d6231fe1"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversary indirectly executes code through a trusted application and avoids triggering security tools.",
+			"name": "Use trusted application to execute untrusted code",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--5ae36d70-5020-4ed6-b2ea-d329e7d9a657"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Task scheduling is used to execute programs on a scheduled basis to persist adversary code or gain SYSTEM privileges. Task scheduling requires administrator privileges, but tasks may be configured to run with SYSTEM privileges, representing an escalation of privilege.",
+			"name": "Scheduled task",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--7a268c08-8a8b-4082-9fd0-5f8341766b9f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Execute a binary via the service controller or other methods of interacting with services.",
+			"name": "Execute via service controller",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--dc9dd485-9dbe-4daf-9902-fe3e4774ff46"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversary uses third-party applications in use in the environment to execute code",
+			"name": "Third party software",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--0a6a6c43-be5c-4719-8e7e-a201b042ff51"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": " Use remote administrative services to perform execution remotely. With valid credentials and the ability to remotely access the features, they can be used to read or modify system configuration and data and/or cause code to execute.",
+			"name": "Use remote management services",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--6ab7f5fb-da75-4018-b961-c453b26f74df"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversary tools directly use an operating system application programming interface (API) to execute binaries. E.g., in Windows, functions such as CreateProcess will allow programs and scripts to start other processes with proper path and argument parameters.",
+			"name": "OS APIs to facilitate launch",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--a6975ec8-e525-4fb5-83dd-8893eb6a0e0d"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Tools that have been electronically or physically transferred to the intended target’s or an intermediary host's computer(s), information system(s), and/or network(s), to support intended/subsequent malicious activity.",
+			"name": "Transfer toolkit",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - installation | execution",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--32f2cfe8-90ca-4325-9ba6-01a5fcadceb1"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries attempt to get a listing of all local or domain accounts and their permissions.",
+			"name": "Account enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--4cba34da-2240-438f-83a5-d8729026e118"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries enumerate all files and directories in certain areas of a host or remote share or perform a targeted search for specific files or directories. Also known as a directory walk.",
+			"name": "File system enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--f7d1938a-e743-48ef-a102-2651e993219b"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries get a listing of all local groups and their permissions and members.",
+			"name": "Group permission enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--95410781-251f-431b-a9ee-5f6a8f33f7db"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries attempt to get a listing of all network connections.",
+			"name": "Local network connection enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--6b65ae6e-1d49-4333-8b0c-efc0f0fe8f71"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries acquire information about local networks, typically using several utilities that describe local network settings.",
+			"name": "Local network settings enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--f51f5565-704a-4b97-8b20-c82f62da7d9e"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "An adversary attempts to get detailed information about the OS including version, patches, hotfixes, service packs, and architecture.",
+			"name": "Operating system enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--e8902219-94a3-4777-93f0-e3b863077ade"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries attempt to identify the primary users of the system, including reviewing logins or file modification times. Administrator permissions are required to view the home folder of other users.",
+			"name": "Owner/User enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--6922411b-2b77-4b9b-9d3b-eb4f5a440358"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries attempt to get information about running processes. This could also include enumerating loaded libraries that are part of the running processes",
+			"name": "Process enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--b6599687-60b1-4d89-ae2a-b2cf5459d4ec"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries attempt to get a listing of software or drivers that are installed on the system and their configurations. This may include security related system features (such as a built-in firewall or anti-spyware) as well as third-party software. Full-featured implants can have modules to check for particular antivirus software.",
+			"name": "Software enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--63370e42-e0cb-46fd-b779-6cd9e65ca415"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries try to get information about registered services",
+			"name": "Service enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--e88ea2d0-a88f-457b-b19a-f2eb7447c295"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries attempt to get a listing of all application windows (including invisible windows).",
+			"name": "Window enumeration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--c11ee4ca-1551-44d2-a309-1d16d84a40fe"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Use of software/hardware that records keystrokes and keyboard events",
+			"name": "Keylogging",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--6489e400-fbe7-4485-8e9e-116fb38376cd"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions taken to capture target screen shots during target operations",
+			"name": "Screen capture",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--53db1dbe-6cb6-4458-93a9-07fd08d7d891"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions to capture/record audio/video activity within the target's work space.",
+			"name": "Activate recording",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - internal reconnaissance",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--2933f3a0-ecd2-48cf-844b-d42d491ec4cd"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Compromised credentials may be used to leverage legitimate access controls placed on various resources on hosts and within the network and may even be used for persistent access to remote systems. Compromised credentials may also grant an adversary increased privilege to specific systems or access to restricted areas of the network. The adversary may choose not to use malware or tools in conjunction with the legitimate access those credentials provide to make it harder to detect their presence.",
+			"name": "Use legitimate credentials",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--ce303bce-febd-4be8-b322-f31a86536ef1"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "An OS may contain accessibility features that may be launched with a key combination before a user has logged in (for example when they are on the Windows Logon screen). An adversary can modify the way these programs are launched to get a command prompt or backdoor without logging in to the system.",
+			"name": "Accessibility features",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--59cad3fc-dd5c-4842-b164-10af1b29689d"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Causing the system to automatically load and execute code after the operating system has started.",
+			"name": "Automatic loading at startup",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--b4dcfc99-c6ae-46b8-a758-fbed55f151d1"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Operating Systems use a common method to look for required libraries to load into a program. Adversaries take advantage of the library search order and programs that ambiguously specify libraries to gain privilege escalation and persistence.",
+			"name": "Library search hijack",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--243dea93-9870-432f-a786-012a7981c4b4"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Install a new service started by the operating system by directly modifying the registry (or similar construct) or by using tools which do so.",
+			"name": "Create new service",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--3729c6a4-1611-4134-b8d6-503f63df9a7d"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Path interception occurs when an executable is placed in a specially crafted path so that it is executed instead of the intended target.",
+			"name": "Path interception",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--ee3aa9b9-c73e-4c9f-b958-8ff80a14f232"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Task scheduling is used to execute programs on a scheduled basis to persist adversary code or gain SYSTEM privileges. Task scheduling requires administrator privileges, but tasks may be configured to run with SYSTEM privileges, representing an escalation of privilege",
+			"name": " Scheduled task",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--1c567a3b-6f2f-4304-89ef-df8e9a870b0c"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "If the file system location of a service executable is modifiable by the user, it may be replaced by another executable. An adversary may use this capability to gain SYSTEM privileges by putting their own executable in place of the service executable. Once the service is started, either directly by the user (requiring ADMIN privileges) or through some other means, the replaced executable will run instead of the original service executable.",
+			"name": "Replace service binary",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--d1938dcc-3cdd-4a57-b2ef-da4d94df439a"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Links redirect from one location to another location. The adversary may edit or create a link so that data or execution occurs in an alternate location than intended to maintain persistence or escalate privileges.",
+			"name": "Link modification",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--3e8440c6-d7d4-4379-b2ba-75290adfd5ba"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Malicious software is injected into a trusted process to gain elevated privileges without prompting a user.",
+			"name": "Manipulate trusted process",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--aec01155-5a90-4b63-810c-7ad9accc370e"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Injecting malicious code into an existing legitimate process. Running code in the context of another process provides many benefits such as access to the process's memory, permissions, and identity. Code injection minimizes the malicious activity from casual inspection.",
+			"name": "Process injection",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--ce6fdcee-87cf-4105-ba62-1d31ca534658"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploiting a software vulnerability in an application by having the exploit triggered locally on the host (e.g., opening a malicious document), often requiring some user interaction to launch and usually leading to user level access on the host. This occurs when a programming error in the normal program is triggered that causes the software to behave in an unintended and insecure way.",
+			"name": "Targets application vulnerability",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--06cd3074-b02f-43ce-9ad3-7e4ff45da752"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploiting a software vulnerability in an operating system service or kernel. This occurs when a programming error is triggered that causes the software to behave in an unintended and insecure way. Exploiting operating system vulnerabilities often leads directly to privileged access on the host.",
+			"name": "Targets operating system vulnerability",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--9d51d6e5-668d-4cb8-835d-eae25f167ba6"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": " Alter subsequent load processes for service related executables and libraries by modifying the service’s configuration information. This does not include configuration of the service manager itself, but individual services run by the service manager.",
+			"name": "Modify service configuration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - privilege escalation",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--d2613d67-f967-4ef2-80fd-75007cd196fd"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Credential dumping is obtaining information from weaknesses in operating system or software that can be used to login to the operating system. Utilities do this in many different ways: extracting credential hashes for off-line cracking, extracting plaintext passwords, or finding Kerberos tickets. Examples of credential dumpers include: pwdump7, Windows Credential Editor, Mimikatz, and gsecdump. These tools are in use by both professional security testers and adversaries. Plaintext passwords can be obtained using tools such as Mimikatz to extract passwords from the Local Security Authority Subsystem Service (LSASS). If smart cards are used to authenticate to a domain using a personal identification number (PIN) then that PIN is also cached as a result and may be dumped",
+			"name": " Credential dumping",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - credential access",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--1b4d1f31-d0e0-481f-be7a-1534a08c075e"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Network sniffing is when the network is monitored to capture credentials. User credentials may be sent over an insecure, unencrypted protocol that can be captured and obtained through network packet analysis. An adversary may place a network interface into promiscuous mode, using a utility to capture traffic in transit over the network or use span ports to capture a larger amount of data.",
+			"name": "Network sniffing",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - credential access",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--eeb45805-7f7b-45c2-b5f7-bf72315f4444"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Use of software/hardware that records keystrokes and keyboard events",
+			"name": "Keylogging",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - credential access",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--dbc16b19-69b8-46b2-9156-94d955c72ec5"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Psychological manipulation of people by threat actor into performing actions or divulging information.",
+			"name": "Social engineering",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - credential access",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--f299564f-2baf-4c7c-b21a-36e5a4350e54"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries may use password cracking techniques to attempt access to accounts when passwords are unknown or when password hashes are obtained. Other terms: brute force, password recovery, use of rainbow tables, etc. \\n Credential dumping to obtain password hashes may only get an adversary so far when pass the hash is not an option. Techniques to systematically guess the passwords used to compute hashes are available or the adversary may use a pre-computed rainbow table. Cracking hashes is done on adversary controlled systems outside of the target network. \\n Adversaries may attempt to guess successful logins without knowledge of password hashes during an operation either with zero knowledge or by attempting a list of known or possible passwords. This is a riskier option because it could cause numerous authentication failures and account lockouts depending on the organizations login failure policies.",
+			"name": "Password cracking",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - credential access",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--33a33754-6683-44cc-bd69-6d7830baa3fb"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Account creation and manipulation may aid adversaries in maintaining access to credentials and certain permission levels within an environment. Manipulation could consist of the creation of new credentials, modifying permissions, adding or changing permission groups, or modifying account settings. In order to create or manipulate accounts, the adversary must already have sufficient permissions on systems or the domain.",
+			"name": "Add or modify credentials",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - credential access",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--dcf88bcf-245b-4199-8a75-33ab46f3cda8"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The malicious use of authentication tokens (either hardware or otherwise) while in use or activated by a legitimate user without the user's knowledge.",
+			"name": "Hijack active credential",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - credential access",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--31fb5657-f095-4d2f-8f7a-1c3a3951891f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries may search local file systems and remote file shares for files containing passwords. These can be files created by a user to store their own credentials, shared credential stores for a group of individuals, configuration files containing passwords for a system or service, or source code/binary files containing embedded passwords. Adversaries may read Group Policy Preference files stored on the Domain Controller. It is also possible to extract passwords from backups or saved virtual machines with a credential dumper. Adversaries may also acquire passwords from Group Policy Preferences stored on the Windows Domain Controller",
+			"name": "Find credentials in file",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - credential access",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--01eef86d-00fb-46d2-b743-74859134bdb9"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries may deploy new software to systems using application deployment systems already employed by site administrators. The permissions required for this action varies by system; local credentials may be sufficient with direct access to the deployment server. However the system may require an administrative user account to log in, or to perform software deployment.",
+			"name": "Application deployment software",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--ea7caa10-2204-476d-b949-8ef993e30f23"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploiting a software vulnerability in an application by having the exploit triggered locally on the host (e.g., opening a malicious document), often requiring some user interaction to launch and usually leading to user level access on the host. This occurs when a programming error in the normal program is triggered that causes the software to behave in an unintended and insecure way.",
+			"name": "Targets application vulnerability",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--5c58c1c8-0aa7-4301-838d-c47df1f4bf31"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": " Exploiting a software vulnerability in an operating system service or kernel. This occurs when a programming error is triggered that causes the software to behave in an unintended and insecure way. Exploiting operating system vulnerabilities often leads directly to privileged access on the host.",
+			"name": "Targets operating system vulnerability",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--51534f8d-727b-4f3e-aa68-d80421215a5c"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Logon scripts to be run whenever a specific user or users logon to a system. If adversaries can access these scripts, they may insert additional code into the logon script. This code can allow them to maintain persistence or move laterally within an enclave because it is executed every time the affected user or users logon to a computer. Modifying logon scripts can effectively bypass workstation and enclave firewalls. Depending on the access configuration of the logon scripts, either local credentials or a remote administrative account may be necessary.",
+			"name": "Employ logon scripts",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--3113d6a4-475d-427e-8454-73ead8df6eb6"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploit a peer-to-peer or mesh network to maneuver and expand presence within a network. The network may be within a single organization or across organizations with trust relationships.",
+			"name": "Exploit peer connections",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--1e807597-b044-4262-8ecc-2261e8957e88"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "An adversary may use valid credentials to login to a remote host for manual interaction, through a graphical user interface (GUI) or command line interface that is sent back to the initiator of the remote connection. They may then perform action as the logged on user.",
+			"name": "Remote interactive logon",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--0ff709a1-8f6f-4d78-96b0-ac539fe86017"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "In Windows, adversaries commonly connect to a remote host over Remote Desktop Protocol (RDP) to expand access. Adversaries may use RDP in conjunction with the Accessibility features technique. Other common variants are using VNC or GoToMyPC, or telnet and SSH.",
+			"name": "Use remote management services",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--38ab7c77-c197-4819-adf2-2bc84403f0cf"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "An adversary may use running remote services (which are not legitimate administrative services) that have implied trust or authentication that can be leveraged by the adversary to maneuver through the network.",
+			"name": "Remote services",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--5cb11c11-4392-4e6e-b0fd-a07f21849edb"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries may move between hosts, possibly those on disconnected or air-gapped networks, by copying to removable media and taking advantage of Autorun features, by modifying executable files stored on removable media, or by copying malware and renaming it to look like a legitimate file to trick users into executing it on a separate system.",
+			"name": "Replication through removable media",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--1e0c1d4d-58b6-4d6c-9c01-8b7c1b3f0c6b"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Content stored on network drives or in other shared locations may be tainted by adding malicious programs, scripts, or exploit code to valid content. Once a user opens the shared content, the tainted content is executed. Adversaries may taint shared content to move laterally.",
+			"name": "Shared webroot",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--7a7841dc-088f-4b0b-90e9-ef980c4bb336"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries may add malicious content to a website through the open file share and then browse to that content with a web browser to cause the server to execute the content. The malicious content will typically run under the context and permissions of the web server process, often resulting in local system or administrative privileges depending on how the web server is configured.",
+			"name": "Taint shared content",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--cec89269-9330-4d2a-9ac5-d143e7fb6454"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Writing data to remote hosts via file shares to cause a change that results in code execution either directly by overwriting files or configuration data or indirectly by preplacing code that is executed via another mechanism.",
+			"name": "Remote file shares",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--8772f75c-b062-4afc-9f23-43dad3b3c06f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversary actions to transmit malicious data/code through networks from host to host.",
+			"name": "Relay communications",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--e9856938-59ae-4a58-8058-89941e6b05b3"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Pass the hash (PtH) is a method of authenticating as a user without having access to the user's cleartext password. This method bypasses standard authentication steps that require a cleartext password, moving directly into the portion of the authentication that uses the password hash. In this technique, valid password hashes for the account being used are captured using a Credential Access technique. Captured hashes are used with Pass the hash to authenticate as that user. Once authenticated, PtH may be used to logon to remote or local systems. Windows 7 and higher with KB2871997 requires valid domain user credentials or RID 500 administrator hashes.",
+			"name": "Pass the hash",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--8552845a-c6d0-483a-8b02-db95ef18dbb3"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Pass the ticket (PtT) is a method of authenticating as a user without having access to the user's cleartext password. This method bypasses standard authentication steps that require a cleartext password, moving directly into the portion of the authentication that uses the Kerberos ticket. In this technique, valid Kerberos tickets for the account being used are captured using a Credential Access technique or generated by the attacker who has the right level of access to generate forged tickets through the golden ticket attack. Kerberos tickets are used with Pass the ticket to authenticate as a user. Once authenticated, PtT may be used to logon to remote or local systems.",
+			"name": "Pass the ticket",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - lateral movement",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--41bb0a78-28ae-4ba2-8cf0-847c3d2f0c87"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Compromised credentials may be used to leverage legitimate access controls placed on various resources on hosts and within the network and may even be used for persistent access to remote systems. Compromised credentials may also grant an adversary increased privilege to specific systems or access to restricted areas of the network. The adversary may choose not to use malware or tools in conjunction with the legitimate access those credentials provide to make it harder to detect their presence.",
+			"name": "Use legitimate credentials",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--592896f5-be66-4010-83d5-88d8767ed857"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "An OS may contain accessibility features that may be launched with a key combination before a user has logged in (for example when they are on the Windows Logon screen). An adversary can modify the way these programs are launched to get a command prompt or backdoor without logging in to the system.",
+			"name": "Accessibility features",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--425dd60e-fe15-4755-8eac-cd7fccd8fb9c"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Causing the system to automatically load and execute code after the operating system has started.",
+			"name": "Automatic loading at startup",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--3ed60ba5-fcf6-455c-b253-51b844fe4a87"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Operating Systems use a common method to look for required libraries to load into a program. Adversaries take advantage of the library search order and programs that ambiguously specify libraries to gain privilege escalation and persistence.",
+			"name": "Library search hijack",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--dc5d59b7-771e-4d90-85cf-2d255f850e9c"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Install a new service started by the operating system by directly modifying the registry (or similar construct) or by using tools which do so.",
+			"name": "Create new service",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--28d1698d-9d07-4a30-bf23-315589492980"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Path interception occurs when an executable is placed in a specially crafted path so that it is executed instead of the intended target.",
+			"name": "Path interception",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--c2ac8f1b-0413-486c-9d07-78faecfe3a18"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Task scheduling is used to execute programs on a scheduled basis to persist adversary code or gain SYSTEM privileges. Task scheduling requires administrator privileges, but tasks may be configured to run with SYSTEM privileges, representing an escalation of privilege.",
+			"name": "Scheduled task",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--de06bcdf-1ac8-4645-9b5f-352c01c48ba5"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "If the file system location of a service executable is modifiable by the user, it may be replaced by another executable. An adversary may use this capability to gain SYSTEM privileges by putting their own executable in place of the service executable. Once the service is started, either directly by the user (requiring ADMIN privileges) or through some other means, the replaced executable will run instead of the original service executable.",
+			"name": "Replace service binary",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--bb54c852-2718-4f17-a53a-40700fef60cd"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Links redirect from one location to another location. The adversary may edit or create a link so that data or execution occurs in an alternate location than intended to maintain persistence or escalate privileges.",
+			"name": "Link modification",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--e37d0d1b-c9f1-469f-b4d4-243a505b0edb"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "When a file is opened, its file extension or header is checked to determine which program opens the file. In Windows, these defaults are stored in the registry and can be edited by programs that have registry access. Applications can modify the file handler for a given file extension to call an arbitrary program when a file with the given extension is opened.",
+			"name": "Edit file type associations",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--6705c71a-c6a2-45c4-bdbd-b01e88334375"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The BIOS (Basic Input/Output System) or Unified Extensible Firmware Interface (UEFI), which underlies the functionality of a computer or other device, may be modified to perform or assist in malicious activity.",
+			"name": "Modify BIOS",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--458fae06-d646-4e5a-8cc4-297bf01b5ea6"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Install or manipulate a hypervisor at the root level to obfuscate further adversarial activity and survive reboot within the environment.",
+			"name": "Install hypervisor rootkit",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--6a1a2eca-5b0c-47b8-b690-fb75121ddd67"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Logon scripts to be run whenever a specific user or users logon to a system. If adversaries can access these scripts, they may insert additional code into the logon script. This code can allow them to maintain persistence or move laterally within an enclave because it is executed every time the affected user or users logon to a computer. Modifying logon scripts can effectively bypass workstation and enclave firewalls. Depending on the access configuration of the logon scripts, either local credentials or a remote administrative account may be necessary.",
+			"name": "Employ logon scripts",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--2358b22c-a2aa-4388-9f8d-4a5c4e59398d"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The master boot record (MBR) is the section of disk that is first loaded after completing hardware initialization by the BIOS. It is the location of the boot loader. If an adversary has raw access to the boot drive, they may modify or overwrite this area diverting execution during startup from the normal bootloader to adversary code",
+			"name": "Edit MBR",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--06b050e4-ebe0-4584-9ec8-4b0f5dc8ca25"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Modify an existing service to run adversary software by using tools that modify the registry (such as the command \"sc\") or by directly modifying the registry (regedit). Modifying existing services may break existing services or may enable services that are disabled/not commonly used.",
+			"name": "Modify existing services",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--e153fc37-fa9e-45d5-8a9a-a100a1ce88b3"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": " Alter subsequent load processes for service related executables and libraries by modifying the service’s configuration information. This does not include configuration of the service manager itself, but individual services run by the service manager.",
+			"name": "Modify service configuration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--a448c446-a2a7-4362-a36b-68cd9e767c1f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": " A web shell is a web script that is placed on an openly accessible web server that allows an adversary to use the web server as a gateway to access the command line on the server. In addition to a server-side script, a web shell may also have a client program that is used to talk to the web server. Web shells often serve as redundant access in case an adversary's primary access methods are compromised. Although webshells are primarily used on servers that may be accessed externally, they can also be used to access internal networks.",
+			"name": "Web shell",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--2e182579-798d-44d5-9079-3720d4e43806"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor created software designed to allow the actor to gain initial access to infiltrate a target's computer(s), information system(s), and/or network(s) while hiding their own presence, to support intended/subsequent malicious activity.",
+			"name": "Backdoor",
+			"kill_chain_phases": [
+				{
+					"phase_name": "presence - persistence",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "presence"
+			},
+			"id": "attack-pattern--bac41772-887b-4a7d-8e95-35ca762ba958"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploitation of weak, misconfigured, or missing access controls to gain access to a system or data.",
+			"name": "Exploit weak access controls",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - monitor",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--212ddaca-19d4-4979-81f8-cd01cfe72395"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Process of checking or maintaining accesses into or on targeted networks and hosts. Access can be tracked through the use of automated beacons, or interactive means to provide situational awareness.",
+			"name": "Tracking access",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - monitor",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--5c31b705-4863-4ee0-8ab9-16861c62e822"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions taken to collect information on the target using methods which require no active effort on behalf of the actor and for which the target has limited awareness.",
+			"name": "Passive collection",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - monitor",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--db59152e-c2fa-43cf-96cc-2a19ed8e63d8"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Measurable cyber threat activities that indicate, identify and/or establish a foundation for subsequent actions against a target's data, computer(s) and/or information systems. Analytic judgments or assessments are not included.",
+			"name": "Enable other operations",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - monitor",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--d819a5de-eb13-46f2-a0a9-3b192fb899cb"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Usage of cross domain or multi-level solutions to maliciously transfer content, or allow adversarial movement from one network to another. This technique focuses on zero-day unknown or design vulnerabilities in the trusted device or its component parts or software that a system administrator cannot be expected to prevent.",
+			"name": "Traverse CDS or MLS",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--a0108cef-5795-4674-b5c6-fc5b1259d26a"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data is collected and exfiltrated through the use of automated processing or scripting. This may include automated searching and transferring files matching criteria or entire directory structures.",
+			"name": "Scripted exfiltration",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--5b80c894-bb93-49d7-81ab-fbc64427b791"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data is compressed prior to exfiltration to minimize the amount of data sent over the network or to make the contents of the data less obvious. This compression is done separately from the exfiltration channel. The compression may be performed using a custom program or algorithm, or a more common compression library or program such as 7zip, RAR, ZIP, zlib.",
+			"name": "Compress data",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--596a929d-85c5-48a1-b2b5-334105477124"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data is arranged into defined chunks instead of whole files, or packet sizes are limited. This approach may be used to avoid operational limitations dealing with logical or physical transfer constraints related to transmission protocols.",
+			"name": "Throttle data",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--fbcf534b-b756-42ce-b386-fa96bac52e65"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data, gathered from one or more sources, is placed in a specified location for exfiltration at a later time. This technique may be used to aggregate files in preparation for exfiltration.",
+			"name": "Position data",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--23130cfc-c289-41ac-ac70-8d209d211ec7"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data exfiltration is performed over the adversary command and control channel. Data is transferred through the channel using the same protocol as command and control communications.",
+			"name": "Exfil over C2 channel",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--e1f2c9c3-2c78-4b03-a546-3449da0e69ad"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data exfiltration is performed over the same network as the adversary command and control channel, or other directly connected networks, but data is not routed through the existing adversary command and control channel. An alternate data connection would be made to transfer the data.",
+			"name": "Exfil over non-C2 channel",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--3daa5fef-9902-483c-b74d-1ba6689cc229"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exfiltration occurs over a completely different network medium than the command and control channel. If the command and control network is a wired Internet connection, the exfiltration may occur, for example, over a WiFi connection, cellular data connection, or Bluetooth®. Adversaries may broadcast and connect to their own wireless network specifically for data exfiltration.",
+			"name": "Exfil over other network medium",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--6f8d3ea8-1034-45b5-aa48-31f4039429fb"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data is collected from local sources such as the local host file system, processes or system configuration information.",
+			"name": "Collect from local system",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--6c12136d-1bd9-47b4-acce-5f985f209e47"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data is collected from a network resource (shared drive, file server, web server, etc.) that is accessible from the current system.",
+			"name": "Collect from network resources",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--484ed96a-f4c7-4a41-91bf-bf21fe169fd4"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data exfiltration may be performed only at certain times of day. This could be done to blend traffic patterns with normal activity, or due to adversary availability. Transfer of data may be initiated via manual or automated means.",
+			"name": "Scheduled transfer",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--e0f4e1c3-87f9-4f1c-b94b-3112c021ce71"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data exfiltration may be performed on demand, without falling within specific, or defined periods",
+			"name": "Ad-hoc transfer",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--db7f513f-5fbd-4493-9091-af90166dec3b"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exfiltration occurs with or without knowledge of the user via a physical medium. This medium can be an entire device being lost, stolen, or removed, just a component part, or even a non-digital medium such as printed papers. Such media could be an external hard drive, USB key, cellular phone, MP3 player, or other connected device. The physical media may be the final exfiltration point or may be used to hop between otherwise disconnected computers.",
+			"name": "Exfil over physical medium",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--24ee532b-b030-445d-a3af-7ca8b7b4dc46"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Any phenomenon by which a signal transmitted on one circuit or channel creates an effect on another circuit or channel that is not physically connected. (Regular wireless communications channels, such as WiFi, Bluetooth®, and cellular, are covered in the Wireless Access technique separately). In structured cabling, crosstalk can refer to electromagnetic interference from one unshielded twisted pair to another twisted pair, normally running parallel (example: 2 copper wires running parallel in close proximity passing bits of information from one wire to another). This includes emanations from monitors or any other equipment that gives off electromagnetic side effects, audio signals (by speakers, microphones, or side effect audio signals), video (by monitors, papers, webcams, or cameras) or others.",
+			"name": "Crosstalk (data emanation)",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--f42a3c00-160a-4db4-ba68-1d58d42648c3"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The process of converting data into another format.",
+			"name": "Encode data",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--421a0ecc-b585-45f0-9a8a-cb357f0b1aec"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploitation of weak or misconfigured cryptographic algorithms or using acquired cryptographic keys to gain access to or manipulate the underlying unencrypted content.",
+			"name": "Defeat encryption",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--3078ea32-91eb-4212-83f3-d4e73b8b33e9"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Release data/information to let unauthorized people read data/information to which they are not authorized access to deny integrity.",
+			"name": "Disclose data/information",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - exfiltrate",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--479a39b3-2c2d-49a1-82f7-2cef0cbadc33"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Exploitation of weak or misconfigured cryptographic algorithms or using acquired cryptographic keys to gain access to or manipulate the underlying unencrypted content.",
+			"name": "Defeat encryption",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - modify",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--78bfc01a-8139-4783-b031-5bdf36487646"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The modification of data within information systems. Data that is modified is not deleted, only changed for the purpose of influencing decisions, confusion, or debilitation.",
+			"name": "Alter data",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - modify",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--6bbb3cb1-a1b1-447d-b56d-51636ae039ad"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Causing a physical effect to occur, such as a piece of equipment malfunctioning or turning off power.",
+			"name": "Cause physical effects",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - modify",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--57169a02-fe96-4f80-a57c-dc38ada79498"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions taken in order to replicate information or processes within the target network.",
+			"name": "Clone data, systems",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - modify",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--45b6d3f3-9cf8-4eb0-8ccf-5eb207c14899"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions taken to alter the state (e.g. running, suspended, stopped) of processes operating on the target's computer(s), network(s), and/or information system(s), to achieve desired outcomes.",
+			"name": "Change run-state of system processes",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - modify",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--8a79e43a-9546-4962-81e4-667a38bd1898"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions taken to alter process outcomes of target's internal target computer(s), network(s), and/or information system(s).",
+			"name": "Alter process outcomes",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - modify",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--9057fac6-1379-45d9-8f26-d6613db509c5"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions taken to alter communications between processes operating on separate target computer(s), network(s) and/or information system(s).",
+			"name": "Change machine-to-machine (MtM) communications",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - modify",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--37353c63-affd-46cf-b1e9-e61b881a9eef"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions to change the visual appearance of a website or webpage.",
+			"name": "Deface websites",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - modify",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--e160b2c2-7e5d-4d05-8dcf-c3f066b95b23"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The use of multiple systems to overwhelm the resources of a targeted victim causing a Denial of Service.",
+			"name": "Distributed Denial of Service (DDOS)",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - deny",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--60dccc94-c12b-4aaf-b3ef-b96c498e516d"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The encrypting of data by an adversary to render the data unusable",
+			"name": "Encrypt data to render unusable",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - deny",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--68ba867a-a48d-4571-aff6-fc2078de1890"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Normal system activities directed at the victim's environment in a magnitude that overwhelms the normal operation of the victim's computer(s), network(s), and/or information system(s), thus severely limiting or precluding normal access.",
+			"name": "Denial of service / disrupt",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - deny",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--8f5b03f2-e60d-48c3-b595-f14b9632d0a3"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions taken to decrease capabilities to some degree and/or for a period of time the target's computer, information system, or network.",
+			"name": "Degrade",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - deny",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--dc56264a-1f5f-4ed8-b233-8a9a06e34c2a"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Deletion of some components of an operating system rendering it unusable by the target/victim. The system may have some recoverable information.",
+			"name": "Partial disk/OS deletion (corruption)",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - destroy",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--de3da66b-84de-4e6c-aae0-3873df449b1a"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Deletion of critical components of an operating system rendering it unusable by the target/victim.",
+			"name": "Full disk/OS deletion (bricking)",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - destroy",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--c9e3bd51-c87f-4798-a1af-5a08c1d577f7"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Deletion of partial data from a hard drive, or computer system, without damaging the operating system or hardware.",
+			"name": "Data deletion (partial)",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - destroy",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--9ecb0e44-0b2d-4b71-86ba-3e55cb241400"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Deletion of all data from a hard drive, or computer system, without damaging the operating system or hardware.",
+			"name": "Data deletion (full)",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - destroy",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--1cde377c-50e1-4229-b7d6-e31f3bdd9e8f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Permanently, completely and irreparably damage a target's physical computer or information system(s), network(s), and/or data stores.",
+			"name": "Destroy hardware",
+			"kill_chain_phases": [
+				{
+					"phase_name": "effect - destroy",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "effect"
+			},
+			"id": "attack-pattern--1e11016b-27e8-473f-ae2e-a74c61383091"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Actions taken (electronically or physically) to ensure presence and validity of intended target data/information, and/or identify additional potential targets (data, computers, and/or information systems), and that intended tools/processes will achieve intended outcome/result.",
+			"name": "Refine targeting",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - analysis, evaluation, and feedback",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--6a79b609-dc34-4b6a-b285-3832e1d17096"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": " Recurring actions taken to assess the success of cyber threat activities/operations in meeting intended objectives. Assessments may occur multiple times during ongoing activities/operations and serves as the starting point for validating/resetting objectives and courses of actions.",
+			"name": "Conduct effects assessments",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - analysis, evaluation, and feedback",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--43e0bd1a-c845-4271-80c9-ca071682e2e0"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries communicate over a commonly used port to bypass firewalls or network detection systems and to blend with normal network activity to better avoid more detailed inspection. They use commonly open ports such as TCP:80 (HTTP), TCP:443 (HTTPS), TCP:25 (SMTP) and TCP/UDP:53 (DNS). They use the protocol associated with the port or use a completely different protocol (see protocol-related actions to document the protocol). For connections that occur internally within an enclave (such as those between a proxy or pivot node and other nodes), common ports are TCP/UDP:135 (RPC), TCP/UDP:22 (SSH), and TCP/UDP:3389 (RDP).",
+			"name": "Commonly used port",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--d6b5a9f6-90cc-4f3b-8c0f-7d43fff900e7"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries communicate over a non-standard port to bypass proxies and firewalls. E.g., using standard protocols via non-standard ports, taking advantage of open ports or improperly configured firewalls",
+			"name": "Uncommonly used port",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--95385920-b0de-4f0c-86b2-85c1895eb378"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries communicate using a common, standardized application layer protocol such as HTTP, HTTPS, SMTP or DNS to avoid detection by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. For connections that occur internally within an enclave (such as those between a proxy or pivot node and other nodes), commonly used protocols are RPC, SSH, or RDP.",
+			"name": "Standard app layer protocol",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--69ca861c-0127-4f13-8c23-fbebf0aa5ea3"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Use of a standard non-application layer protocol for communication between host and C2 server or among infected hosts within a network. The list of possible protocols is extensive.",
+			"name": "Standard non-app layer protocol",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--bf66b2bb-0531-4276-bbdd-962d61dd198f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries communicate using a custom application layer protocol.",
+			"name": "Custom application layer protocol",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--55fcecd5-bde7-4c09-9df4-08497faf76d6"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The adversary's use of various protocols in concert to communicate with a system under their control in a target network. This is to enable the C2 to eventually get to the C2 server over multiple hops. This is usually where certain protocols are allowed inside the network for some connections and then other protocols are allowed from certain compromised devices to leave the network.",
+			"name": "Use chained protocols",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--a99e51e8-896a-4c38-99e4-20058f7815e9"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Use removable media to spread commands from computer to computer, including on potentially disconnected networks. E.g., a USB could be a trigger to perform commands",
+			"name": "Use removable media",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--5abf108c-ecf0-4cad-bbfa-2b119ab3c3d8"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The use of alternate communication channels if the primary channel is unavailable. Adversaries may use fallback channels if the primary channel is compromised or inaccessible to maintain reliable command and control and to better avoid data transfer thresholds.",
+			"name": "Fallback channels",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--6c67537b-3953-4e96-99ac-2c1a3ef72171"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Communications are split between different protocols. This split could have one protocol for inbound command and control and another for outbound data allowing it to bypass certain firewall restrictions. The split could also be random to simply avoid data threshold alerts on any one communication.",
+			"name": "Multiband comm",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--06a7a79e-5f74-4cf0-8f89-d6a3a358a19d"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Use a proxied, peer-to-peer or mesh network to manage command and control communications (e.g., C2 channels), to reduce the number of simultaneous outbound network connections, and to provide resiliency in the face of connection loss.",
+			"name": "Use peer connections",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--2fed5f0d-b580-47da-a6d1-ad093e8adf9a"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Establish a proxied, peer-to-peer or mesh network to manage C2 communications (e.g., C2 channels). The network may be within a single organization or across organizations with trust relationships.",
+			"name": "Establish peer network",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--18af7470-2e67-47bd-bb8f-9c393f4a5627"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Send command and control communications to or via a previously created botnet.",
+			"name": "Use botnet",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--23a40fb0-1efe-425a-a2c4-abbd9d8ad4b4"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries encrypt communications to conceal the specific activities",
+			"name": "Encrypt communications",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--40679f2f-846a-4701-a7dd-e346b3150613"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Use of two or more layers of encryption and/or encoding to conceal communications and data.",
+			"name": "Use multilayer encryption",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--76493ef7-12f3-4595-a5dd-4930c50eba5f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Use of known encryption standards and implementations to conceal communications and data.",
+			"name": "Use standard encryption",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--1960686e-e9ec-47b0-bddf-3f8c21741921"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Use of a custom encryption implementation to conceal communications and data",
+			"name": "Use custom encryption",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--cab6b9fe-513e-450a-be12-9ca617743e37"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Transmission of location, health, or other operational status of persistent access capabilities (e.g., malware) to a designated location and/or threat actor.",
+			"name": "Beaconing",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--21209e5f-53c7-4b7a-bbaf-f40a585b7bc4"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Automated (often periodic) actions taken to activate, calibrate, request status, change status, reconfigure or deactivate deployed Malware.",
+			"name": "Automated use of C2",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--3693698c-6c3f-4a23-95b9-50439111bf29"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Manual actions taken to activate, calibrate, request status, change status, reconfigure or deactivate deployed Malware.",
+			"name": "Manual use of C2",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - command & control (c2)",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--cae8a4d3-d03a-4829-a6ab-3b0daeeca96c"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The process of converting data into another format.",
+			"name": "Encode data",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--da32cae3-5823-4132-b9d0-ffa8716dd8ef"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data is encrypted to hide the target information, increasing inspection difficulty. This action is performed on the data at rest or in transit. Adversaries may encrypt data to conceal the specific activities (e.g. type of information being passed, content, size, etc.)",
+			"name": "Encrypt data",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--40f1b0ad-c560-4755-82b5-bbf480beb2a6"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Compromised credentials may be used to leverage legitimate access controls placed on various resources on hosts and within the network and may even be used for persistent access to remote systems. Compromised credentials may also grant an adversary increased privilege to specific systems or access to restricted areas of the network. The adversary may choose not to use malware or tools in conjunction with the legitimate access those credentials provide to make it harder to detect their presence.",
+			"name": "Use legitimate credentials",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--91b14b1b-9c75-4fca-8791-7368757ed3e6"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries may add inconsequential data to executables to increase the executable size beyond what security tools are capable of handling. Adding data to an executable also changes the file's hash obscuring the identification of the file.",
+			"name": "Binary padding",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--e7b5f66f-6827-4ad4-85f3-12a3a2a1078f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The disabling of security tools to avoid detection. This can take the form of killing processes, deleting registry keys so that tools do not start at run time, or other methods to prevent the intended operation.",
+			"name": "Disable security products",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--a219403d-49c9-4774-b9f0-d842d7e3d5d4"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The disruption of security tools to avoid detection. This can take the form of killing processes, deleting registry keys so that tools do not start at run time, or other methods to prevent the intended operation.",
+			"name": "Disrupt security products",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--f06b9454-7874-4d53-b00f-bf687148edd0"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Programs with direct drive access may read and write files directly from the drive by analyzing file system data structures. This enables covert storage and avoids operating system visibility.",
+			"name": "Accessing raw disk",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--6b4e3434-7b7c-4413-ada2-9017ea999a77"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Blocking indicators of host activity from leaving the host machine. In the case of network based reporting of indicators, an adversary may block traffic associated with reporting to prevent central station analysis. This may be accomplished by many means such as stopping a local process to creating a host-based firewall rule to block traffic to a specific server.",
+			"name": "Block indicators on host",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--4444b97c-cbb6-48b1-ad24-b713a08c6b93"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "If malware is detected and quarantined, or otherwise curtailed, an adversary may be able to determine why the malware was detected, modify the malware, and send an updated version to the system that is no longer detected by security tools.",
+			"name": "Modify malware to avoid detection",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--20ecd80c-420a-48fb-aa26-99364dde1d5e"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The deletion or modification of generated log/event files on a host system. This may compromise the integrity of the security solution causing security events to go unreported or impeding incident response.",
+			"name": "Remove logged data",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--85c21683-3b5f-421f-93c6-0898a8a42902"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Malicious software may inject into a trusted process to gain elevated privileges without prompting a user.",
+			"name": "Manipulate trusted process",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--c00b3543-97fb-46fb-bda9-57f819d1e3c4"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.615Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Injecting malicious code into an existing legitimate process. Running code in the context of another process provides many benefits such as access to the process's memory, permissions, and identity. Code injection minimizes the malicious activity from casual inspection.",
+			"name": "Process injection",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--d1a584d6-7db1-45d4-bdb8-e9c55d751984"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Placing a file in a commonly trusted location (such as C:\\Windows\\System32) or naming a file with a common name (such as \"explorer.exe\" or \"svchost.exe\") to leverage tools that trust executables by relying on file name or path. This also may be done to deceive defenders and system administrators into thinking a file is benign by name association to something that is known to be legitimate.",
+			"name": "Impersonate legitimate file",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--93e365b0-0242-416b-bd12-018d8a6c48ab"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data or executables may be stored in file system metadata (e.g., Extended Attributes in NTFS), slack space, registry, outside logical partition, or some other unconventional location instead of directly in files, while still leveraging standard disk read/write operations (different from raw access). This may be used to evade file monitoring tools.",
+			"name": "Store files in unconventional location",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--1b688dd9-fcd1-495a-82fa-c8abfd9630d2"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Make data (to include executables or network traffic) more difficult to analyze by encoding or otherwise concealing its contents.",
+			"name": "Obfuscate data",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--0f6c647a-8b42-4e1b-9904-bca5cfba3878"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": " Rootkits are programs that hide the existence of malware by intercepting and modifying operating system API calls that supply system information. Rootkits or rootkit enabling functionality may reside at the user level, kernel level in the operating system, or lower, to include a hypervisor, MBR, or the BIOS. Adversaries use rootkits to hide the presence of programs, files, network connections, services, drivers and other system components.",
+			"name": "Employ rootkit",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--ae8c0991-c217-4a45-9e52-5836c14abf2b"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Adversaries can indirectly execute code through a trusted application and avoid triggering security tools. E.g., in Windows, the Rundll32.exe program can be called to execute an arbitrary DLL; its activity is commonly ignored by security tools. Also, an adversary may use PowerShell (a trusted application) to executed scripts (untrusted code) to bypass process monitoring mechanisms by directly interacting with the operating system at an API level instead of calling other programs. E.g., in Linux, insmod (insert module) is used to inject executable code into the kernel.",
+			"name": "Use trusted application to execute untrusted code",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--8d01c4ee-75e5-4a31-aa35-16587e11f107"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Software packing is a method of compressing an executable. The act of packing an executable changes the file signature in an attempt to avoid signature-based detection. Most decompression techniques decompress the executable code in memory. Utilities used to perform software packing are called packers. A more comprehensive list of known packers is available, but adversaries may create their own packing techniques to evade defenses that do not leave the same artifacts as well-known packers.",
+			"name": "Software packing",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--872cd348-664c-4e2c-8a98-ba749c0c0691"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The use of signed content/code for malicious purposes -- including computed hash collisions, legitimate signed software (e.g. vulnerable drivers) for malicious purposes -- since signed content is either required or often trusted by default.",
+			"name": "Use signed content",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--2bc655e7-ba52-4e12-983e-e6235bb4f51f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Signing malicious code using stolen, self-generated, or compromised private keys, since signed content is either required by the operating system or often trusted by default.",
+			"name": "Sign malicious content",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--1075141f-26d5-4249-afa7-fa0b4bd5af98"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Malware, tools, or other non-native files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process. There are tools available from the host operation system to perform cleanup, but adversaries may choose to use other tools as well.",
+			"name": "Remove toolkit",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--69309d4e-f293-49b0-b18b-f92d48a73075"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Detecting the environment where code or scripts are executed and adjusting execution behaviors to avoid detection.",
+			"name": "Tailor behavior based on environment",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--748da393-dfd5-4c55-a062-698bc311108f"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "The use of sleep timers, user interaction, computationally intensive algorithms, and other means to delay malicious behavior execution in order to evade detection by timed behavioral detection technologies.",
+			"name": "Delay activity",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--33dc13c4-ca7b-4fc2-a8a0-dfda78bcf433"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Use a variety of activities to evade reverse engineering efforts. E.g., obfuscating API imports, avoiding installation on systems with debuggers present/running, obscuring the code execution flow (e.g., using structured exception handling)",
+			"name": "Employ anti-reverse engineering measures",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--0539c1b6-4264-4b55-b339-2dcebf0450aa"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actor actions to destroy or obfuscate data artifacts (beyond logs and files) that would indicate their presence on target computer(s), information system(s), and/or network(s), and thereby render target-initiated forensic analysis difficult or impossible. E.g., set timestamps to match system files, clean cache, clean registry entries    ",
+			"name": "Employ anti-forensics measures",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--d4bda31e-f175-483a-bc57-abcceb047cc3"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Threat actors mimic legitimate traffic to avoid detection by blending in with existing traffic. This could include using standard protocols and ports, similar volume, same time of day, source and destinations, and types of traffic that occur internally within an enclave. Malicious activity and commands to a remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server.",
+			"name": "Mimic legitimate traffic",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--1e4e4ec9-f168-4073-9c2c-9b384f469f49"
+		},
+		{
+			"type": "attack-pattern",
+			"created": "2018-04-12T16:00:55.616Z",
+			"created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+			"description": "Data being exfiltrated is sent in defined chunks instead of whole files or packet sizes are limited. This approach may be used to avoid triggering network threshold alerts",
+			"name": "Avoid data size limits.",
+			"kill_chain_phases": [
+				{
+					"phase_name": "ongoing processes - evasion",
+					"kill_chain_name": "ntctf"
+				}
+			],
+			"extendedProperties": {
+				"x_ntctf_stage": "ongoing process"
+			},
+			"id": "attack-pattern--224db6fd-1255-489e-bab8-3c870815583d"
+		}
+	],
+	"type": "bundle",
+	"id": "stix-archive-bundle",
+	"spec_version": "2.0"
+}

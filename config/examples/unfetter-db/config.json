@@ -1,7 +1,9 @@
-[{
+[
+    {
         "_id": "d9732cfc-166e-41a0-af79-d37e7abc69b2",
         "configKey": "killChains",
-        "configValue": [{
+        "configValue": [
+            {
                 "name": "mitre-attack",
                 "phase_names": [
                     "persistence",
@@ -13,44 +15,116 @@
                     "execution",
                     "collection",
                     "exflitration",
-                    "command-and-control"
+                    "command-and-control",
+                    "initial-access"
                 ],
                 "description": "Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK™) is a threat modeling methodology and suite of models for the various phases of an adversary's lifecycle and platforms that are known to be targeted by cyber threats. ATT&CK models are useful for understanding security risk against known adversary behavior, for planning security improvements, and verifying defenses work as expected.",
                 "url": "https://attack.mitre.org/wiki/Main_Page"
             },
             {
-                "name": "ctf",
+                "name": "lockheed-martin",
                 "phase_names": [
-                    "planning",
-                    "research",
-                    "develop-resources",
-                    "acquire-knowledge",
-                    "complete-preparation",
-                    "deployment",
-                    "interaction",
-                    "exploitation",
+                    "reconnaissance",
+                    "weaponization",
                     "delivery",
-                    "control",
-                    "evasion",
-                    "expansion",
-                    "focus",
-                    "persistence",
-                    "enablement",
-                    "access-denial",
-                    "data-extraction",
-                    "data-alteration",
-                    "data-destruction"
+                    "exploitation",
+                    "installation",
+                    "command & control (c2)",
+                    "actions on objectives"
+                ],
+                "description": "Lockheed Martin Cyber Threat Framework",
+                "url": "https://www.lockheedmartin.com/us/what-we-do/aerospace-defense/cyber/cyber-kill-chain.html"
+            },
+            {
+                "name": "ntctf",
+                "phase_names": [
+                    "administer - planning",
+                    "administer - research development",
+                    "administer - research",
+                    "preparation - reconnaissance",
+                    "preparation - staging",
+                    "engagement - delivery",
+                    "engagement - exploitation",
+                    "presence - installation & execution",
+                    "presence - internal reconnaissance",
+                    "presence - privilege escalation",
+                    "presence - credential access",
+                    "presence - lateral movement",
+                    "presence - persistence",
+                    "effect - monitor",
+                    "effect - exflitration",
+                    "effect - modify",
+                    "effect - deny",
+                    "effect - destroy",
+                    "ongoing processes - analysis, evaluation, and feedback",
+                    "ongoing processes - command & control (c2)",
+                    "ongoing processes - evasion"
                 ],
                 "stage_names": [
-                    "Preparation",
-                    "Engagement",
-                    "Presence",
-                    "Effect"
-                ]
+                    "administer",
+                    "preparation",
+                    "engagement",
+                    "presence",
+                    "effect",
+                    "ongoing processes"
+                ],
+                "description": "NSA/CSS Technical Cyber Threat Framework v1",
+                "url": "https://www.iad.gov/iad/library/reports/nsa-css-technical-cyber-threat-framework-v1.cfm"
+            },
+            {
+                "name": "mitre-pre-attack",
+                "phase_names": [
+                    "establish-&-maintain-infrastructure",
+                    "people-information-gathering",
+                    "technical-weakness-identification",
+                    "people-weakness-identification",
+                    "organizational-weakness-identification",
+                    "priority-definition-planning",
+                    "build-capabilities",
+                    "persona-development",
+                    "compromise",
+                    "organizational-information-gathering",
+                    "launch",
+                    "technical-information-gathering",
+                    "target-selection",
+                    "stage-capabilities",
+                    "adversary-opsec",
+                    "test-capabilities",
+                    "priority-definition-direction"
+                ],
+                "description": "Building on ATT&CK™ —Adversarial Tactics, Techniques, and Common Knowledge— a MITRE-developed model to quickly identify and categorize behavior post-network infiltration, PRE-ATT&CK provides the ability to prevent an attack before the adversary has a chance to get in. The seventeen tactic categories for PRE-ATT&CK were derived from the first four stages (recon, weaponize, deliver, and execute) of a seven-stage Cyber Attack Lifecycle2 (first articulated by Lockheed Martin as the Cyber Kill Chain®3). This cyber threat framework captures the tactics, techniques, and procedures adversaries use to select a target, obtain information, and launch a campaign. The framework lists the ways that adversaries perform each tactic and provides the ability to track and organize adversary statistics and patterns. Ultimately, this arms defenders with a broader understanding of adversary actions that they can use to determine technical or policy-based mitigations and evaluate the quality and utility of cyber threat intelligence data sources.",
+                "url": "https://attack.mitre.org/pre-attack/index.php/Main_Page"
+            },
+            {
+                "name": "mitre-mobile-attack",
+                "phase_names": [
+                    "collection",
+                    "command-and-control",
+                    "exfiltration",
+                    "defense-evasion",
+                    "discovery",
+                    "cellular-network-based",
+                    "general-network-based",
+                    "lateral-movement",
+                    "exploit-via-physical-access",
+                    "exploit-via-internet",
+                    "persistence",
+                    "credential-access",
+                    "app-delivery-via-authorized-app-store",
+                    "app-delivery-via-other-means",
+                    "effects",
+                    "supply-chain",
+                    "exploit-via-cellular-network",
+                    "cloud-based",
+                    "privilege-escalation"
+                ],
+                "description": "The ATT&CK Mobile Profile builds upon NIST's Mobile Threat Catalogue, providing a model of adversarial tactics and techniques used to gain access to mobile devices as well as tactics and techniques to then take advantage of that access in order to accomplish adversarial objectives. The ATT&CK Mobile Profile also depicts network-based effects, which are adversarial tactics and techniques that an adversary can employ without access to the mobile device itself. Each adversarial technique includes a technical description along with applicable mitigation/countermeasure approaches, applicable detection analytics, and examples of use.",
+                "url": "https://attack.mitre.org/mobile/index.php/Main_Page"
             }
         ],
         "configGroups": [
-            "stixConfig"
+            "stixConfig",
+            "public"
         ]
     },
     {
@@ -228,14 +302,15 @@
             }
         },
         "configGroups": [
-            "stixConfig"
+            "stixConfig",
+            "public"
         ]
-
     },
     {
         "_id": "98fba9e7-6ad8-4bac-a178-af9282f8b05c",
         "configKey": "observableDataTypes",
-        "configValue": [{
+        "configValue": [
+            {
                 "name": "driver",
                 "actions": [
                     "load",
@@ -405,7 +480,7 @@
                     "ppid",
                     "user"
                 ]
-            },                      
+            },
             {
                 "name": "thread",
                 "actions": [
@@ -457,13 +532,18 @@
                     "user"
                 ]
             }
+        ],
+        "configGroups": [
+            "stixConfig",
+            "public"
         ]
-
-
     },
     {
         "_id": "905f4e32-528c-479a-bb20-aa36bb54be9f",
         "configKey": "jwtDurationSeconds",
-        "configValue": 900
+        "configValue": 900,
+        "configGroups": [
+            "public"
+        ]
     }
 ]
