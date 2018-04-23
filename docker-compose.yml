@@ -54,8 +54,8 @@ services:
      # If deployed in a proxy, add the proxy's URL here
      - HTTPS_PROXY_URL=
     entrypoint:
-     - node
-     - processor.js
+     - ts-node
+     - src/app.ts
      - --stix
      - /tmp/examples/unfetter-stix/stix.json
      - /tmp/examples/unfetter-stix/reports.stix.json
