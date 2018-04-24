@@ -7,9 +7,10 @@
       "description": "Network monitoring and analysis device.",
       "created": "2018-04-12T16:00:55.616Z",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
-      "attack-patterns": [
+      "assessed_objects": [
         {
-          "id": "attack-pattern--0f6c647a-8b42-4e1b-9904-bca5cfba3878",
+          "id": "x-unfetter-assessed-object--b7c439ff-3d3e-44ee-9731-53c4913ca65d",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
               "name": "mitigate",
@@ -26,7 +27,8 @@
           ]
         },
         {
-          "id": "attack-pattern--21209e5f-53c7-4b7a-bbaf-f40a585b7bc4",
+          "id": "x-unfetter-assessed-object--b7c439ff-3d3e-44ee-9731-53c4913ca65d",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
               "name": "mitigate",
@@ -51,9 +53,10 @@
       "description": "Generic anti virus software",
       "created": "2018-04-12T16:00:55.616Z",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
-      "attack-patterns": [
+      "assessed_objects": [
         {
-          "id": "attack-pattern--0f6c647a-8b42-4e1b-9904-bca5cfba3878",
+          "id": "x-unfetter-assessed-object--3b013522-da3a-4200-af5c-fa39fbba9dee",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
               "name": "mitigate",
@@ -70,7 +73,8 @@
           ]
         },
         {
-          "id": "attack-pattern--21209e5f-53c7-4b7a-bbaf-f40a585b7bc4",
+          "id": "x-unfetter-assessed-object--a8b27632-bdde-4e91-b899-5f6f8cc9e49a",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
               "name": "mitigate",
@@ -95,9 +99,10 @@
       "description": "Generic endpoint detection and response tool.",
       "created": "2018-04-12T16:00:55.616Z",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
-      "attack-patterns": [
+      "assessed_objects": [
         {
-          "id": "attack-pattern--0f6c647a-8b42-4e1b-9904-bca5cfba3878",
+          "id": "x-unfetter-assessed-object--af8a2191-7810-454a-9034-0d24c29e7b1c",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
               "name": "mitigate",
@@ -114,7 +119,8 @@
           ]
         },
         {
-          "id": "attack-pattern--21209e5f-53c7-4b7a-bbaf-f40a585b7bc4",
+          "id": "x-unfetter-assessed-object--05c1a341-5de5-4196-a459-81983d4d3768",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
               "name": "mitigate",
@@ -139,9 +145,10 @@
       "description": "Enterprise SIEM",
       "created": "2018-04-12T16:00:55.616Z",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
-      "attack-patterns": [
+      "assessed_objects": [
         {
-          "id": "attack-pattern--0f6c647a-8b42-4e1b-9904-bca5cfba3878",
+          "id": "x-unfetter-assessed-object--be64be2d-2ebf-49de-aff8-7c70dbfecc88",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
               "name": "mitigate",
@@ -158,7 +165,8 @@
           ]
         },
         {
-          "id": "attack-pattern--21209e5f-53c7-4b7a-bbaf-f40a585b7bc4",
+          "id": "x-unfetter-assessed-object--0a4b4ad2-ae6e-49c9-a16a-4fb75b5c6ad0",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
               "name": "mitigate",
@@ -183,9 +191,10 @@
       "description": "Network firewall device",
       "created": "2018-04-12T16:00:55.616Z",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
-      "attack-patterns": [
+      "assessed_objects": [
         {
-          "id": "attack-pattern--0f6c647a-8b42-4e1b-9904-bca5cfba3878",
+          "id": "x-unfetter-assessed-object--572f29c0-fa35-4167-bbb6-5becf5f1fd9e",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
               "name": "mitigate",
@@ -202,7 +211,8 @@
           ]
         },
         {
-          "id": "attack-pattern--21209e5f-53c7-4b7a-bbaf-f40a585b7bc4",
+          "id": "x-unfetter-assessed-object--f69a9aaf-421d-43a2-a62b-117405bd0cc8",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
               "name": "mitigate",
@@ -227,9 +237,10 @@
       "description": "This utility shows the user what programs are configured to run during system bootup or login, and/or on execution of various built-in Windows applications like Internet Explorer, Explorer and media players. These programs and drivers include ones in your startup folder, Run, RunOnce, and other Registry keys. Autoruns reports Explorer shell extensions, toolbars, browser helper objects, Winlogon notifications, auto-start services, etc.",
       "created": "2018-04-12T16:00:55.616Z",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
-      "attack-patterns": [
+      "assessed_objects": [
         {
-          "id": "attack-pattern--0f6c647a-8b42-4e1b-9904-bca5cfba3878",
+          "id": "x-unfetter-assessed-object--2e02a9e7-31fc-4d38-909c-8f7b2393b18a",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
               "name": "mitigate",
@@ -246,7 +257,8 @@
           ]
         },
         {
-          "id": "attack-pattern--21209e5f-53c7-4b7a-bbaf-f40a585b7bc4",
+          "id": "x-unfetter-assessed-object--dd7a30fd-ca1d-4759-977d-d1fad413e055",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
               "name": "mitigate",
@@ -271,9 +283,10 @@
       "description": "System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time. By collecting the events it generates using Windows Event Collection or SIEM agents and subsequently analyzing them, you can identify malicious or anomalous activity and understand how intruders and malware operate on your network.",
       "created": "2018-04-12T16:00:55.616Z",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
-      "attack-patterns": [
+      "assessed_objects": [
         {
-          "id": "attack-pattern--0f6c647a-8b42-4e1b-9904-bca5cfba3878",
+          "id": "x-unfetter-assessed-object--d871eb2b-0c9b-41dd-ba51-7c22a3452752",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
               "name": "mitigate",
@@ -290,7 +303,8 @@
           ]
         },
         {
-          "id": "attack-pattern--21209e5f-53c7-4b7a-bbaf-f40a585b7bc4",
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
               "name": "mitigate",
@@ -299,6 +313,24 @@
             {
               "name": "indicate",
               "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--56a26dfe-762b-4c66-9b0d-94e327fcd307",
+          "questions": [
+            {
+              "name": "mitigate",
+              "score": "L"
+            },
+            {
+              "name": "indicate",
+              "score": "L"
             },
             {
               "name": "respond",
