@@ -73,6 +73,9 @@ services:
      - enterprise
      - --auto-publish
      - "true"
+     # Interval options: daily, weekly, monthly
+    #  - --interval
+    #  - daily
     depends_on:
      - cti-stix-store-repository
     links:
