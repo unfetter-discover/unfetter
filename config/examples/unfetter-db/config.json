@@ -6,17 +6,17 @@
             {
                 "name": "mitre-attack",
                 "phase_names": [
+                    "initial-access",
+                    "execution",
                     "persistence",
                     "privilege-escalation",
                     "defense-evasion",
                     "credential-access",
                     "discovery",
                     "lateral-movement",
-                    "execution",
                     "collection",
                     "exflitration",
-                    "command-and-control",
-                    "initial-access"
+                    "command-and-control"
                 ],
                 "description": "Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK™) is a threat modeling methodology and suite of models for the various phases of an adversary's lifecycle and platforms that are known to be targeted by cyber threats. ATT&CK models are useful for understanding security risk against known adversary behavior, for planning security improvements, and verifying defenses work as expected.",
                 "url": "https://attack.mitre.org/wiki/Main_Page"
