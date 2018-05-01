@@ -15,7 +15,7 @@
                     "discovery",
                     "lateral-movement",
                     "collection",
-                    "exflitration",
+                    "exfiltration",
                     "command-and-control"
                 ],
                 "description": "Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK™) is a threat modeling methodology and suite of models for the various phases of an adversary's lifecycle and platforms that are known to be targeted by cyber threats. ATT&CK models are useful for understanding security risk against known adversary behavior, for planning security improvements, and verifying defenses work as expected.",
@@ -52,7 +52,7 @@
                     "presence - lateral movement",
                     "presence - persistence",
                     "effect - monitor",
-                    "effect - exflitration",
+                    "effect - exfiltration",
                     "effect - modify",
                     "effect - deny",
                     "effect - destroy",
