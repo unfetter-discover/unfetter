@@ -70,6 +70,7 @@ services:
      - --config
      - /tmp/examples/unfetter-db/config.json
      - /tmp/examples/unfetter-db/translation-config.json
+     - /tmp/examples/unfetter-db/taxii.config.json
      - --mitre-attack-data
      - enterprise
      - --auto-publish
