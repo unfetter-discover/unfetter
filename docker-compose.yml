@@ -19,6 +19,7 @@ services:
      - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./config/nginx/blank.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf
+     - ./config/nginx/taxii-blank.conf:/etc/nginx/conf.d.runmode/taxii.conf
      - ./config/nginx/ui-prod.conf:/etc/nginx/conf.d.runmode/ui.conf
      - ./certs/:/etc/pki/tls/certs
 
@@ -69,6 +70,7 @@ services:
      - --config
      - /tmp/examples/unfetter-db/config.json
      - /tmp/examples/unfetter-db/translation-config.json
+     - /tmp/examples/unfetter-db/taxii.config.json
      - --mitre-attack-data
      - enterprise
      - --auto-publish
