@@ -13,11 +13,11 @@
           "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -31,11 +31,11 @@
           "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -59,11 +59,11 @@
           "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -77,11 +77,11 @@
           "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -105,11 +105,11 @@
           "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -123,11 +123,11 @@
           "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -151,11 +151,11 @@
           "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -169,11 +169,11 @@
           "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -197,11 +197,11 @@
           "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -215,11 +215,11 @@
           "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -243,11 +243,11 @@
           "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -261,11 +261,11 @@
           "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "L"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "L"
             },
             {
@@ -289,11 +289,11 @@
           "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -307,11 +307,11 @@
           "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "M"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "S"
             },
             {
@@ -325,11 +325,11 @@
           "assessed_object_ref": "attack-pattern--56a26dfe-762b-4c66-9b0d-94e327fcd307",
           "questions": [
             {
-              "name": "mitigate",
+              "name": "protect",
               "score": "L"
             },
             {
-              "name": "indicate",
+              "name": "detect",
               "score": "L"
             },
             {
