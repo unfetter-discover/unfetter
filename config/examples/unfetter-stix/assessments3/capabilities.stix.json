@@ -1,0 +1,182 @@
+{
+  "type": "bundle",
+  "id": "stix-archive-bundle",
+  "spec_version": "2.0",
+  "objects": [
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--ce4171360-0cbf-4130-b01c-dea9ee4bae65",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "sysmon",
+      "description": "System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time",
+      "category": "siem",
+      "external_references": [
+        {
+          "source_name": "Microsoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon",
+          "external_id": "Sysmon v7.01"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--abb82dcc-9160-41c7-adbb-0bb3f7e9ab9f",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "RootkitRevealer",
+      "description": "RootkitRevealer is an advanced rootkit detection utility. It runs on Windows XP (32-bit) and Windows Server 2003 (32-bit), and its output lists Registry and file system API discrepancies that may indicate the presence of a user-mode or kernel-mode rootkit. RootkitRevealer successfully detects many persistent rootkits including AFX, Vanquish and HackerDefender (note: RootkitRevealer is not intended to detect rootkits like Fu that don't attempt to hide their files or registry keys).",
+      "category": "Standard EDR",
+      "external_references": [
+        {
+          "source_name": "Microsoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/rootkit-revealer"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--8c62b586-79a8-41f4-8454-38a38937ec0e",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "PsLogList",
+      "description": "The Resource Kit comes with a utility, elogdump, that lets you dump the contents of an Event Log on the local or a remote computer. PsLogList is a clone of elogdump except that PsLogList lets you login to remote systems in situations your current set of security credentials would not permit access to the Event Log, and PsLogList retrieves message strings from the computer on which the event log you view resides.",
+      "category": "Standard EDR",
+      "external_references": [
+        {
+          "source_name": "Microsoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/rootkit-revealer"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--64e5efcb-86ea-47f4-bb1a-c4dc2ffc136e",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "NortMcFee antivirus",
+      "description": "NortMcFee AntiVirus is an anti-malware software developed and distributed. It uses signatures and heuristics to identify viruses. Other features included in it are e-mail spam filtering and phishing protection",
+      "category": "Generic AV",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/asdf"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--d03921e1-2113-406d-912a-d3e8d9981e56",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Iptables",
+      "description": "iptables is a user-space utility program that allows a system administrator to configure the tables[2] provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Iptables"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--d03921e1-2113-406d-912a-d3e8d9981e56",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Autologon",
+      "description": "iptables is a user-space utility program that allows a system administrator to configure the tables[2] provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Iptables"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--46d585a6-7480-415c-b29b-5c719934f519",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Autologon",
+      "description": "Autologon enables you to easily configure Windows’ built-in autologon mechanism. Instead of waiting for a user to enter their name and password, Windows uses the credentials you enter with Autologon, which are encrypted in the Registry, to log on the specified user automatically.",
+      "external_references": [
+        {
+          "source_name": "Microsoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/autologon"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    }
+  ]
+}
