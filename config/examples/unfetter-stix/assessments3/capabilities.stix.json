@@ -11,7 +11,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "sysmon",
       "description": "System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time",
-      "category": "siem",
+      "category": "Enterprise SIEM",
       "external_references": [
         {
           "source_name": "Microsoft",
@@ -111,31 +111,6 @@
       "modified": "2018-03-23T18:43:23.711Z",
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Iptables",
-      "description": "iptables is a user-space utility program that allows a system administrator to configure the tables[2] provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.",
-      "category": "Network Firewall",
-      "external_references": [
-        {
-          "source_name": "Wikipedia",
-          "description": "definition",
-          "url": "https://en.wikipedia.org/wiki/Iptables"
-        }
-      ],
-      "object_marking_refs": [
-        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
-      ],
-      "granular_markings": [
-        {
-          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
-        }
-      ]
-    },
-    {
-      "type": "x-unfetter-capability",
-      "id": "x-unfetter-capability--d03921e1-2113-406d-912a-d3e8d9981e56",
-      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
-      "modified": "2018-03-23T18:43:23.711Z",
-      "created": "2018-03-23T18:43:23.711Z",
-      "name": "Autologon",
       "description": "iptables is a user-space utility program that allows a system administrator to configure the tables[2] provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.",
       "category": "Network Firewall",
       "external_references": [

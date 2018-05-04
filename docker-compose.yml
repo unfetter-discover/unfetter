@@ -58,15 +58,15 @@ services:
      - ts-node
      - src/app.ts
      - --stix
-     - /tmp/examples/unfetter-stix/stix.json
+     - /tmp/examples/unfetter-stix/assessments3/assessment-sets.stix.json
+     - /tmp/examples/unfetter-stix/assessments3/capabilities.stix.json
+     - /tmp/examples/unfetter-stix/assessments3/categories.stix.json
+     - /tmp/examples/unfetter-stix/assessments3/object-assessments.stix.json
+     - /tmp/examples/unfetter-stix/ntctf-attack-patterns.stix.json
      - /tmp/examples/unfetter-stix/reports.alerts.stix.json
      - /tmp/examples/unfetter-stix/reports.vulns.stix.json
-    #  - /tmp/examples/unfetter-stix/ntctf-attack-patterns.stix.json
-    #  - /tmp/examples/unfetter-stix/assessments3/categories.stix.json
-    #  - /tmp/examples/unfetter-stix/assessments3/capabilities.stix.json
-    #  - /tmp/examples/unfetter-stix/assessments3/object-assessments.stix.json
-    #  - /tmp/examples/unfetter-stix/assessments3/assessment-sets.stix.json
      - /tmp/examples/unfetter-stix/sightings.stix.json
+     - /tmp/examples/unfetter-stix/stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
      - /tmp/examples/unfetter-db/stix-meta.json
