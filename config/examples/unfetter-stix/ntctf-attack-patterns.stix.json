@@ -385,8 +385,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - reconnaissance",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - reconnaissance",
+					"x_ntctf_stage": "preparation"
 				}
 			],
 			"id": "attack-pattern--20390353-78a3-4b1c-b8c0-ffedc482d3c7"
@@ -402,8 +402,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - reconnaissance",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - reconnaissance",
+					"x_ntctf_stage": "preparation"
 				}
 			],
 			"id": "attack-pattern--29020d97-7159-4542-acb7-160191b83c7e"
@@ -419,8 +419,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - reconnaissance",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - reconnaissance",
+					"x_ntctf_stage": "preparation"
 				},
 				{
 					"kill_chain_name": "ntctf",
@@ -446,8 +446,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - reconnaissance",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - reconnaissance",
+					"x_ntctf_stage": "preparation"
 				}
 			],
 			"id": "attack-pattern--1498d2da-5b26-4362-af5c-47e28e3ff193"
@@ -463,8 +463,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - reconnaissance",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - reconnaissance",
+					"x_ntctf_stage": "preparation"
 				}
 			],
 			"id": "attack-pattern--a7857ae5-ec41-4213-940d-139dc056f0d1"
@@ -480,8 +480,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - reconnaissance",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - reconnaissance",
+					"x_ntctf_stage": "preparation"
 				},
 				{
 					"kill_chain_name": "ntctf",
@@ -502,8 +502,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - staging",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - staging",
+					"x_ntctf_stage": "preparation"
 				}
 			],
 			"id": "attack-pattern--1ecd10bb-c56d-4102-9d96-8ab1cb330673"
@@ -519,8 +519,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - staging",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - staging",
+					"x_ntctf_stage": "preparation"
 				}
 			],
 			"id": "attack-pattern--6b771dc2-c3fb-4612-ac22-138b3b36220e"
@@ -536,8 +536,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - staging",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - staging",
+					"x_ntctf_stage": "preparation"
 				}
 			],
 			"id": "attack-pattern--98ef8d9f-027a-4f7f-978e-45a7d6c3d645"
@@ -553,8 +553,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - staging",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - staging",
+					"x_ntctf_stage": "preparation"
 				}
 			],
 			"id": "attack-pattern--9c87b777-0c96-418e-97f1-fda70a1464f1"
@@ -570,8 +570,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - staging",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - staging",
+					"x_ntctf_stage": "preparation"
 				}
 			],
 			"id": "attack-pattern--d7d91f3f-5c90-49e3-b871-97c48d97d257"
@@ -587,8 +587,8 @@
 			"kill_chain_phases": [
 				{
 					"kill_chain_name": "ntctf",
-					"phase_name": "engagement - staging",
-					"x_ntctf_stage": "engagement"
+					"phase_name": "preparation - staging",
+					"x_ntctf_stage": "preparation"
 				}
 			],
 			"id": "attack-pattern--5a32958d-81e2-499c-a403-16f8eeca134a"
