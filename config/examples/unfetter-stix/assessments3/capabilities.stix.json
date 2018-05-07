@@ -111,13 +111,188 @@
       "modified": "2018-03-23T18:43:23.711Z",
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Iptables",
-      "description": "iptables is a user-space utility program that allows a system administrator to configure the tables[2] provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.",
+      "description": "Iptables is a user-space utility program that allows a system administrator to configure the tables[2] provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.",
       "category": "Network Firewall",
       "external_references": [
         {
           "source_name": "Wikipedia",
           "description": "definition",
           "url": "https://en.wikipedia.org/wiki/Iptables"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--f7b46e76-7e8a-42f1-8779-19d5a31ae26f",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "UFW - Uncomplicated Firewall",
+      "description": "The default firewall configuration tool for Ubuntu is ufw. Developed to ease iptables firewall configuration, ufw provides a user friendly way to create an IPv4 or IPv6 host-based firewall. By default UFW is disabled.",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://help.ubuntu.com/community/UFW"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--663bd853-26e6-47df-9b03-c6a5958572cc",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "PfSense",
+      "description": "PfSense is an open source firewall/router computer software distribution based on FreeBSD.[2][3][4] It is installed on a physical computer or a virtual machine to make a dedicated firewall/router for a network.[5]",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/PfSense"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--2288d472-daeb-4be5-82f2-03b3d8eb3c51",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Ipfirewall",
+      "description": "Ipfirewall or ipfw is a FreeBSD IP packet filter and traffic accounting facility.",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Ipfirewall"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--8704a736-9d1a-495a-aa68-1e7ebdafc9ca",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "PF (Packet Filter)",
+      "description": "PF (Packet Filter, also written pf) is a BSD licensed stateful packet filter, a central piece of software for firewalling. It is comparable to netfilter (iptables), ipfw and ipfilter.",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Ipfirewall"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--58478f44-b428-45b3-a9ac-ef7cc617a93d",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Rsyslog",
+      "description": "Rsyslog is an open-source software utility used on UNIX and Unix-like computer systems for forwarding log messages in an IP network. It implements the basic syslog protocol, extends it with content-based filtering, rich filtering capabilities, flexible configuration options and adds features such as using TCP for transport.",
+      "category": "Syslog",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Rsyslog"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--90ad8de8-49b9-4329-9516-d83851b3ee4d",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Syslog-ng",
+      "description": "Syslog-ng is a free and open-source implementation of the syslog protocol for Unix and Unix-like systems. It extends the original syslogd model with content-based filtering, rich filtering capabilities, flexible configuration options and adds important features to syslog, like using TCP for transport. As of today syslog-ng is developed by Balabit IT Security Ltd.",
+      "category": "Syslog",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Syslog-ng"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--0e0844ce-3f05-46c3-8b2e-e5856d798581",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Systemd-journald",
+      "description": "Systemd-journald is a daemon responsible for event logging, with append-only binary files serving as its logfiles. The system administrator may choose whether to log system events with systemd-journald, syslog-ng or rsyslog. The potential for corruption of the binary format has led to much heated debate.[22]",
+      "category": "Syslog",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Syslog-ng"
         }
       ],
       "object_marking_refs": [
@@ -142,6 +317,81 @@
           "source_name": "Microsoft",
           "description": "definition",
           "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/autologon"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--6534fd60-9843-4526-9da5-4db4a64d92c5",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Snort",
+      "category": "IDS",
+      "description": "Snort is a free and open source network intrusion prevention system (IPS) and network intrusion detection system (IDS)[4] created by Martin Roesch in 1998.[5]",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Snort_(software)"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--ba130ec8-f0e7-4c53-995a-2ac809a2bf72",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Bro IDS",
+      "category": "IDS",
+      "description": "Often compared to a network intrusion detection system (NIDS), Bro can be used to build a NIDS but is much more. Bro can also be used for collecting network measurements, conducting forensic investigations, traffic baselining and more.",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https: //en.wikipedia.org/wiki/Bro_(software)"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--31cbe37d-8c50-4738-8bfc-3d4046688182",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Security Onion",
+      "category": "IDS",
+      "description": "Security Onion is a free and open source Linux distribution for intrusion detection, enterprise security monitoring, and log management.",
+      "external_references": [
+        {
+          "source_name": "security onion",
+          "description": "definition",
+          "url": "https://securityonion.net/#about"
         }
       ],
       "object_marking_refs": [

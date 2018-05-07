@@ -277,10 +277,166 @@
       ]
     },
     {
+      "id": "x-unfetter-category--cf0a3ea2-0689-4bb0-b17a-605d863564ec",
+      "type": "x-unfetter-category",
+      "name": "Syslog",
+      "description": "In computing, syslog is a standard for message logging. It allows separation of the software that generates messages, the system that stores them, and the software that reports and analyzes them. Each message is labeled with a facility code, indicating the software type generating the message, and assigned a severity label",
+      "created": "2018-04-12T16:00:55.616Z",
+      "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+      "assessed_objects": [
+        {
+          "id": "x-unfetter-assessed-object--2e02a9e7-31fc-4d38-909c-8f7b2393b18a",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--dd7a30fd-ca1d-4759-977d-d1fad413e055",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "L"
+            },
+            {
+              "name": "detect",
+              "score": "L"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "x-unfetter-category--a752dd34-8bc7-4267-8872-ca29369c9d1f",
       "type": "x-unfetter-category",
-      "name": "sysmon",
+      "name": "Sysmon",
       "description": "System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time. By collecting the events it generates using Windows Event Collection or SIEM agents and subsequently analyzing them, you can identify malicious or anomalous activity and understand how intruders and malware operate on your network.",
+      "created": "2018-04-12T16:00:55.616Z",
+      "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+      "assessed_objects": [
+        {
+          "id": "x-unfetter-assessed-object--d871eb2b-0c9b-41dd-ba51-7c22a3452752",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--56a26dfe-762b-4c66-9b0d-94e327fcd307",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "L"
+            },
+            {
+              "name": "detect",
+              "score": "L"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "x-unfetter-category--cf0a3ea2-0689-4bb0-b17a-605d863564ec",
+      "type": "x-unfetter-category",
+      "name": "Syslog",
+      "description": "In computing, syslog is a standard for message logging. It allows separation of the software that generates messages, the system that stores them, and the software that reports and analyzes them. Each message is labeled with a facility code, indicating the software type generating the message, and assigned a severity label",
+      "created": "2018-04-12T16:00:55.616Z",
+      "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+      "assessed_objects": [
+        {
+          "id": "x-unfetter-assessed-object--2e02a9e7-31fc-4d38-909c-8f7b2393b18a",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--dd7a30fd-ca1d-4759-977d-d1fad413e055",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "L"
+            },
+            {
+              "name": "detect",
+              "score": "L"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "x-unfetter-category--22ee1efb-1dbb-44a2-ac13-7a9c8cdbfeeb",
+      "type": "x-unfetter-category",
+      "name": "IDS",
+      "description": "An intrusion detection system (IDS) is a device or software application that monitors a network or systems for malicious activity or policy violations",
       "created": "2018-04-12T16:00:55.616Z",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
       "assessed_objects": [
