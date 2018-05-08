@@ -1,0 +1,38 @@
+
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "svagi/openssl"
+    tag: "latest"
+    state: present
+    pull: yes
+
+
+- name: Run {{ container_name }}
+  docker_container:
+    name: "{{ container_name }}"
+    image: "svagi/openssl:latest"
+    state: started
+    recreate: yes
+    pull: true
+    exposed_ports: 
+    - 443:443
+    - 80:80
+    entrypoint:
+     - openssl
+     - req
+     - -subj
+     - /CN=localhost/DC=localhost/DC=localdomain
+     - -new
+     - -newkey
+     - rsa:2048
+     - -days
+     - "365"
+     - -nodes
+     - -x509
+     - -keyout
+     - /tmp/certs/server.key
+     - -out
+     - /tmp/certs/server.crt
+    volumes:
+     - ./certs/:/tmp/certs
+  when: "run_action != ''"

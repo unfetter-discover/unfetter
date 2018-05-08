@@ -1,0 +1,39 @@
+# For now, we are always going to be pulling from docker hub, since I can't seem
+# to get images to be renamed
+
+- name: "Create {{ container_name }}"
+  docker_image:
+    name: "unfetter/unfetter-discover-gateway:{{ tag }}"
+    state: present
+    pull: yes
+  when: "build_action != ''"
+
+
+
+- name: Create the Gateway container
+  docker_container:
+    name: "{{ container_name }}"
+    image: "unfetter/unfetter-discover-gateway:{{ tag }}"
+    state: started
+    recreate: yes
+    pull: true
+#    network_mode: bridge        
+    exposed_ports: 
+    - "443"
+    - "80"
+    published_ports:
+    - "443:443"
+    - "80:80"
+    links:
+    - unfetter-discover-api:unfetter-discover-api
+    - unfetter-api-explorer:unfetter-api-explorer
+#  removing the volumes until I work out where I want these    
+    volumes: 
+     - "{{ prepath }}/unfetter/config/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+     - "{{ prepath }}/unfetter/config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra"
+     - "{{ prepath }}/unfetter/config/nginx/blank.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf"
+     - "{{ prepath }}/unfetter/config/nginx/ui-prod.conf:/etc/nginx/conf.d.runmode/ui.conf"
+     - "{{ prepath }}/unfetter/config/certs/:/etc/pki/tls/certs"
+  when: "run_action != ''"         
+
+  

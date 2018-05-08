@@ -1,0 +1,6 @@
+---
+container_name: unfetter-discover-openssl
+image_name: "openssl"
+tag: latest
+registry: "svagi"
+exposed_ports:

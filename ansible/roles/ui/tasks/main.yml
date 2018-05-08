@@ -1,0 +1,16 @@
+
+- name: "Create {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"     

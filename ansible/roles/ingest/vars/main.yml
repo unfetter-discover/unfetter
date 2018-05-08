@@ -1,0 +1,6 @@
+---
+dir: "unfetter-store/unfetter-ctf-ingest"
+path: "{{ prepath + dir}}"
+container_name: unfetter-ctf-ingest
+image_name: "{{registry}}{{ container_name }}:{{tag}}"
+

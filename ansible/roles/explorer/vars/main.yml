@@ -1,0 +1,7 @@
+---
+
+dir: "unfetter-store"
+path: "{{ prepath + dir}}"
+dockerfile: "unfetter-api-explorer/parent-context.Dockerfile"
+container_name: unfetter-api-explorer
+image_name: "{{registry}}{{ container_name }}:{{tag}}"

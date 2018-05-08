@@ -1,0 +1,35 @@
+
+- name: "Create {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"     
+
+  
+
+- name: Create pattern
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+    recreate: yes
+    exposed_ports: 
+    - "5000"
+    published_ports:
+    - "5000:5000"    
+    entrypoint:
+     - python3
+     - app.py
+     - 0.0.0.0
+  when: "run_action != ''"
+
+
+

@@ -1,0 +1,8 @@
+
+- name: Create {{ container_name}}
+
+  docker_image:
+    name: "{{ container_name }}"
+    tag: 0.4    
+    state: present
+    path: "{{ path }}"

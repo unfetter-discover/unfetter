@@ -1,0 +1,51 @@
+---
+
+- name: Create Processor
+  docker_container:
+    name: unfetter-discover-processor
+    image: "unfetter/unfetter-discover-processor:0.3.6"
+    state: started
+    volumes:
+     - ./config/examples:/tmp/examples
+    env:
+     - MONGO_HOST=repository
+     # If deployed in a proxy, add the proxy's URL here
+     - HTTPS_PROXY_URL=
+    entrypoint:
+     - ts-node
+     - src/app.ts
+     - --stix
+     - /tmp/examples/unfetter-stix/stix.json
+     - /tmp/examples/unfetter-stix/reports.stix.json
+     - /tmp/examples/unfetter-stix/assessments3.stix.json
+     - /tmp/examples/unfetter-stix/sightings.stix.json
+     - --enhanced-stix-properties
+     - /tmp/examples/unfetter-db/stix-enhancements.json
+     - /tmp/examples/unfetter-db/stix-meta.json
+     - --config
+     - /tmp/examples/unfetter-db/config.json
+     - /tmp/examples/unfetter-db/translation-config.json
+     - --mitre-attack-data
+     - enterprise
+     - --auto-publish
+     - "true"
+    links:
+     - cti-stix-store-repository:repository
+  when: "run_action == 'devrun'"     
+
+
+- name: "Create {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"     

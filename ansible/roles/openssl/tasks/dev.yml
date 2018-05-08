@@ -1,0 +1,198 @@
+---
+
+- name: Create OPENSSL
+  docker_container:
+    name: unfetter-discover-openssl
+    image: "svagi/openssl:latest"
+    state: started
+    recreate: yes
+    pull: true
+    exposed_ports: 
+    - 443:443
+    - 80:80
+    entrypoint:
+     - openssl
+     - req
+     - -subj
+     - /CN=localhost/DC=localhost/DC=localdomain
+     - -new
+     - -newkey
+     - rsa:2048
+     - -days
+     - "365"
+     - -nodes
+     - -x509
+     - -keyout
+     - /tmp/certs/server.key
+     - -out
+     - /tmp/certs/server.crt
+    volumes:
+     - ./certs/:/tmp/certs
+  when: "run_action != ''"
+       
+
+- name: Create pattern
+  docker_container:
+    name: unfetter-pattern-handler
+    image: unfetter/unfetter-pattern-handler:0.3.6 
+    state: started
+    recreate: yes
+    pull: true
+    exposed_ports: 
+    - "5000"
+    published_ports:
+    - "5000:5000"    
+    entrypoint:
+     - python3
+     - app.py
+     - 0.0.0.0
+       
+- name: Create Repository
+  docker_container:
+    name: cti-stix-store-repository
+    image: "mongo:3.4.1"
+    state: started
+    recreate: yes
+    pull: true
+    volumes:
+    - ./data/db:/data/db
+    exposed_ports: 
+    - "27018"
+    published_ports:
+    - "27018:27017"
+
+
+
+- name: Create Explorer
+  docker_container:
+    name: unfetter-api-explorer
+    image: "unfetter/unfetter-api-explorer:0.3.6"
+    state: started
+    recreate: yes
+    pull: true
+    env: 
+     PUBLIC_PATH: /explorer/
+    entrypoint:
+     - npm
+     - start
+
+
+
+- name: Create API
+  docker_container:
+    name: unfetter-discover-api
+    image: "unfetter/unfetter-discover-api:0.3.6"
+    state: started
+    recreate: yes
+    pull: true
+    links:
+     - cti-stix-store-repository:repository
+     - unfetter-pattern-handler:unfetter-pattern-handler
+    volumes:
+    - ./certs/:/etc/pki/tls/certs     
+    env:
+      CTF_PARSE_HOST: http://unfetter-ctf-ingest
+      STIX_API_PROTOCOL: http
+      STIX_API_HOST: cti-stix-store
+      STIX_API_PORT: 3000
+      STIX_API_PATH: cti-stix-store-api
+      MONGO_REPOSITORY: repository
+      MONGO_PORT: 27017
+      MONGO_DBNAME: stix
+      ENV: dev
+    # Options: UAC, TEST, DEMO
+      RUN_MODE: DEMO
+    # If deployed in a proxy, add the proxy's URL here
+      HTTPS_PROXY_URL: ""
+      PATTERN_HANDLER_DOMAIN: unfetter-pattern-handler
+      PATTERN_HANDLER_PORT: 5000
+    entrypoint:
+    - npm
+    - start
+
+- name: Create the Gateway container
+  docker_container:
+    name: unfetter-discover-gateway
+    image: "unfetter/unfetter-discover-gateway:0.3.6"
+    state: started
+    recreate: yes
+    pull: true
+#    network_mode: bridge        
+    exposed_ports: 
+    - "443"
+    - "80"
+    published_ports:
+    - "443:443"
+    - "80:80"
+    links:
+    - unfetter-discover-api:unfetter-discover-api
+    - unfetter-api-explorer:unfetter-api-explorer
+    volumes: 
+     - /{{ role_path }}/files/nginx/default.conf:/etc/nginx/conf.d/default.conf
+     - /{{ role_path }}/files/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
+     - /{{ role_path }}/files/nginx/blank.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf
+     - /{{ role_path }}/files/nginx/ui-prod.conf:/etc/nginx/conf.d.runmode/ui.conf
+     - /{{ role_path }}/files/certs/:/etc/pki/tls/certs
+
+
+
+- name: Create Ingest
+  docker_container:
+    name: unfetter-ctf-ingest
+    image: "unfetter/unfetter-ctf-ingest:0.3.6"
+    state: started
+    recreate: yes
+    pull: true
+#    network_mode: bridge        
+    env:
+      API_PROTOCOL: https
+      API_HOST: apihost
+      API_PORT: 3000
+      API_CONTEXT: /
+      MONGO_REPOSITORY: repository
+      MONGO_PORT: 27017
+      MONGO_DBNAME: stix
+    entrypoint:
+    - npm
+    - start
+    links:
+    - cti-stix-store-repository:repository
+    - unfetter-discover-api:apihost
+
+
+
+- name: Create Processor
+  docker_container:
+    name: unfetter-discover-processor
+    image: "unfetter/unfetter-discover-processor:0.3.6"
+    state: started
+    recreate: yes
+    pull: true
+#    network_mode: bridge        
+    volumes:
+     - /{{ role_path }}/files/examples/:/tmp/examples/
+    env:
+      MONGO_HOST: repository
+     # If deployed in a proxy, add the proxy's URL here
+    entrypoint:
+     - node
+     - processor.js
+     - --stix
+     - /tmp/examples/unfetter-stix/stix.json
+     - /tmp/examples/unfetter-stix/reports.stix.json
+     #- /tmp/examples/unfetter-stix/ntctf-attack-patterns.stix.json
+     #- /tmp/examples/unfetter-stix/assessments3-categories.stix.json
+     - /tmp/examples/unfetter-stix/assessments3.stix.json
+     - /tmp/examples/unfetter-stix/sightings.stix.json
+     - --enhanced-stix-properties
+     - /tmp/examples/unfetter-db/stix-enhancements.json
+     - /tmp/examples/unfetter-db/stix-meta.json
+     - --config
+     - /tmp/examples/unfetter-db/config.json
+     - /tmp/examples/unfetter-db/translation-config.json
+     - --mitre-attack-data
+     - enterprise
+     - --auto-publish
+     - "true" 
+    links:
+     - cti-stix-store-repository:repository    

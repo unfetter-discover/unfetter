@@ -1,0 +1,159 @@
+{
+    "type": "bundle",
+    "id": "stix-archive-bundle",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "sighting",
+            "id": "sighting--ee20065d-2555-424f-ad9e-0f8428623c75",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "created": "2016-04-06T20:08:31.000Z",
+            "modified": "2016-04-06T20:08:31.000Z",
+            "first_seen": "2015-12-21T19:00:00Z",
+            "last_seen": "2015-12-21T19:00:00Z",
+            "count": 50,
+            "sighting_of_ref": "indicator--8e2e2d2b-17d4-4cbf-938f-98ee46b3cd3f",
+            "observed_data_refs": [
+                "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3"
+            ],
+            "where_sighted_refs": [
+                "identity--b67d30ff-02ac-498a-92f9-32f845f448ff"
+            ]
+        },
+        {
+            "id": "sighting--ee20065d-2555-424f-ad9e-0f8428623c70",
+            "type": "sighting",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "first_seen": "2017-03-21T19:00:00Z",
+            "last_seen": "2017-03-21T19:00:00Z",
+            "count": 1,
+            "sighting_of_ref": "indicator--de8755a2-d914-4a78-bd71-9f14b545a5f1",
+            "observed_data_refs": [
+                "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3"
+            ],
+            "where_sighted_refs": [
+                "identity--b67d30ff-02ac-498a-92f9-32f845f448ff"
+            ]
+        },
+        {
+            "type": "sighting",
+            "id": "sighting--ee20065d-2555-424f-ad9e-0f8428623c72",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "first_seen": "2017-03-21T20:00:00Z",
+            "last_seen": "2017-03-21T20:00:00Z",
+            "count": 1,
+            "sighting_of_ref": "indicator--de8755a2-d914-4a78-bd71-9f14b545a5f1",
+            "observed_data_refs": [
+                "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3"
+            ],
+            "where_sighted_refs": [
+                "identity--b67d30ff-02ac-498a-92f9-32f845f448ff"
+            ]
+        },
+        {
+            "type": "sighting",
+            "id": "sighting--ee20065d-2555-424f-ad9e-0f8428623c73",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "first_seen": "2017-03-21T21:00:00Z",
+            "last_seen": "2017-03-21T21:00:00Z",
+            "count": 1,
+            "sighting_of_ref": "indicator--de8755a2-d914-4a78-bd71-9f14b545a5f1",
+            "observed_data_refs": [
+                "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3"
+            ],
+            "where_sighted_refs": [
+                "identity--b67d30ff-02ac-498a-92f9-32f845f448ff"
+            ]
+        },
+        {
+            "type": "sighting",
+            "id": "sighting--ee20065d-2555-424f-ad9e-0f8428623c74",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "first_seen": "2017-03-21T22:00:00Z",
+            "last_seen": "2017-03-21T22:00:00Z",
+            "count": 1,
+            "sighting_of_ref": "indicator--de8755a2-d914-4a78-bd71-9f14b545a5f1",
+            "observed_data_refs": [
+                "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3"
+            ],
+            "where_sighted_refs": [
+                "identity--b67d30ff-02ac-498a-92f9-32f845f448ff"
+            ]
+        },
+        {
+            "type": "sighting",
+            "id": "sighting--ee20065d-2555-424f-ad9e-0f8428623c76",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "first_seen": "2017-03-22T02:00:00Z",
+            "last_seen": "2017-03-22T02:00:00Z",
+            "count": 1,
+            "sighting_of_ref": "indicator--de8755a2-d914-4a78-bd71-9f14b545a5f1",
+            "observed_data_refs": [
+                "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3"
+            ],
+            "where_sighted_refs": [
+                "identity--b67d30ff-02ac-498a-92f9-32f845f448ff"
+            ]
+        },
+        {
+            "type": "sighting",
+            "id": "sighting--ee20065d-2555-424f-ad9e-0f8428623c77",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "first_seen": "2017-03-22T03:00:00Z",
+            "last_seen": "2017-03-22T03:00:00Z",
+            "count": 1,
+            "sighting_of_ref": "indicator--de8755a2-d914-4a78-bd71-9f14b545a5f1",
+            "observed_data_refs": [
+                "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3"
+            ],
+            "where_sighted_refs": [
+                "identity--b67d30ff-02ac-498a-92f9-32f845f448ff"
+            ]
+        },
+        {
+            "type": "sighting",
+            "id": "sighting--ee20065d-2555-424f-ad9e-0f8428623c78",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "first_seen": "2017-03-22T04:00:00Z",
+            "last_seen": "2017-03-22T04:00:00Z",
+            "count": 1,
+            "sighting_of_ref": "indicator--de8755a2-d914-4a78-bd71-9f14b545a5f1",
+            "observed_data_refs": [
+                "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3"
+            ],
+            "where_sighted_refs": [
+                "identity--b67d30ff-02ac-498a-92f9-32f845f448ff"
+            ]
+        },
+        {
+            "type": "sighting",
+            "id": "sighting--ee20065d-2555-424f-ad9e-0f8428623c80",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "first_seen": "2017-03-22T05:00:00Z",
+            "last_seen": "2017-03-22T05:00:00Z",
+            "count": 1,
+            "sighting_of_ref": "indicator--de8755a2-d914-4a78-bd71-9f14b545a5f1",
+            "observed_data_refs": [
+                "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3"
+            ],
+            "where_sighted_refs": [
+                "identity--b67d30ff-02ac-498a-92f9-32f845f448ff"
+            ]
+        },
+        {
+            "type": "sighting",
+            "id": "sighting--ee20065d-2555-424f-ad9e-0f8428623c81",
+            "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
+            "first_seen": "2017-03-22T05:00:00Z",
+            "last_seen": "2017-03-22T05:00:00Z",
+            "count": 1,
+            "sighting_of_ref": "indicator--de8755a2-d914-4a78-bd71-9f14b545a5f1",
+            "observed_data_refs": [
+                "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3"
+            ],
+            "where_sighted_refs": [
+                "identity--b67d30ff-02ac-498a-92f9-32f845f448ff"
+            ]
+        }
+    ]
+}

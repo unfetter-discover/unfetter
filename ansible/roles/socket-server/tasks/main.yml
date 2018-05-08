@@ -1,0 +1,20 @@
+
+
+- name: "Create {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+
+
+# We don't have a pull because the socket-server is not up in github.  It can only be built locally.  This needs to change
+#- name: "Pull {{ container_name }}"
+#  docker_image:
+#name: "{{ image_name }}"
+#
+#    state: present
+#    pull: yes
+#  when: "build_action == 'pull'"     
