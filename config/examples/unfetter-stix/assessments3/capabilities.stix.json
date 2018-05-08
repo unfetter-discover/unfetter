@@ -402,6 +402,301 @@
           "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
         }
       ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--05a9c56b-73e8-4462-92e9-6cea99dc0740",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Tripwire",
+      "category": "File Integrity Monitoring",
+      "description": "Open Source Tripwire is a free software security and data integrity tool for monitoring and alerting on specific file change(s) on a range of systems.",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Open_Source_Tripwire"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--8db34498-ce94-4e22-9892-ba378f37f55d",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "AIDE",
+      "category": "File Integrity Monitoring",
+      "description": "AIDE takes a snapshot of the state of the system, register hashes, modification times, and other data regarding the files defined by the administrator.",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Advanced_Intrusion_Detection_Environment"
+        },
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Host-based_intrusion_detection_system_comparison"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--442630b1-43da-4b98-8244-842b02174987",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "chkrootkit",
+      "description": "chkrootkit (Check Rootkit) is a common Unix-based program intended to help system administrators check their system for known rootkits.",
+      "category": "Standard EDR",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Chkrootkit"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--49632f3f-74f8-462d-be45-ed7a196bb350",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Yara",
+      "description": "YARA is the name of a tool primarily used in malware research and detection.",
+      "category": "File Integrity Monitoring",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/YARA"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--88962710-84a0-4c51-be6b-f768e5f57bf7",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "OSSEC",
+      "description": "OSSEC (Open Source HIDS SEcurity) is a free, open-source host-based intrusion detection system (HIDS). It performs log analysis, integrity checking, Windows registry monitoring, rootkit detection, time-based alerting, and active response.",
+      "category": "Standard EDR",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/OSSEC"
+        },
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": " https://en.wikipedia.org/wiki/Host-based_intrusion_detection_system_comparison"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--edc667e7-6f88-4403-805d-3a73808b4c4c",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Wireshark",
+      "description": "Wireshark is a free and open source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education.",
+      "category": "Packet Analyzer",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Wireshark"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--565fe69f-0088-484d-a1c5-19b374d1083d",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Tcpdump",
+      "description": "tcpdump is a common packet analyzer that runs under the command line",
+      "category": "Packet Analyzer",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Tcpdump"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--f42f974a-2f57-40aa-9f7f-02dc4d9dca40",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Ngrep",
+      "description": "ngrep (network grep) is a network packet analyzer written by Jordan Ritter.[2] It has a command-line interface, and relies upon the pcap library and the GNU regex library.",
+      "category": "Packet Analyzer",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Ngrep"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--f42f974a-2f57-40aa-9f7f-02dc4d9dca40",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Microsoft Message Analyzer",
+      "description": "Microsoft Message Analyzer is a new tool for capturing, displaying, and analyzing protocol messaging traffic, events, and other system or application messages in network troubleshooting and other diagnostic scenarios.",
+      "category": "Packet Analyzer",
+      "external_references": [
+        {
+          "source_name": "Mircosoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/message-analyzer/microsoft-message-analyzer-operating-guide"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--2b92de56-d985-49bd-ae28-91f36dacbcc1",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Sguil",
+      "description": "Sguil (pronounced sgweel or squeal) is a collection of free software components for Network Security Monitoring (NSM) and event driven analysis of IDS alerts.",
+      "category": "Network Security Monitoring (NSM)",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Sguil"
+        },
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Intrusion_detection_system"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--22159b84-3f9c-484e-bc74-da6ce9ddbec3",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Fail2ban",
+      "description": "Fail2Ban is an intrusion prevention software framework that protects computer servers from brute-force attacks",
+      "category": "Intrusion Prevention System (IPS)",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Fail2ban"
+        },
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Intrusion_detection_system"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
     }
   ]
 }
