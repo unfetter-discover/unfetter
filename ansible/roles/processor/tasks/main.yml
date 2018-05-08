@@ -47,5 +47,5 @@
     name: "{{ image_name }}"
 
     state: present
-    pull: yes
+    pull: yes.,./
   when: "build_action == 'pull'"     

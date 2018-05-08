@@ -33,8 +33,8 @@
 
 - name: Create pattern
   docker_container:
-    name: unfetter-pattern-handler
-    image: unfetter/unfetter-pattern-handler:0.3.6 
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
     state: started
     recreate: yes
     pull: true
@@ -67,8 +67,8 @@
 
 - name: Create Explorer
   docker_container:
-    name: unfetter-api-explorer
-    image: "unfetter/unfetter-api-explorer:0.3.6"
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
     state: started
     recreate: yes
     pull: true
@@ -83,8 +83,8 @@
 
 - name: Create API
   docker_container:
-    name: unfetter-discover-api
-    image: "unfetter/unfetter-discover-api:0.3.6"
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
     state: started
     recreate: yes
     pull: true
@@ -116,8 +116,8 @@
 
 - name: Create the Gateway container
   docker_container:
-    name: unfetter-discover-gateway
-    image: "unfetter/unfetter-discover-gateway:0.3.6"
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
     state: started
     recreate: yes
     pull: true
@@ -137,13 +137,14 @@
      - /{{ role_path }}/files/nginx/blank.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf
      - /{{ role_path }}/files/nginx/ui-prod.conf:/etc/nginx/conf.d.runmode/ui.conf
      - /{{ role_path }}/files/certs/:/etc/pki/tls/certs
+when: "run_action != ''"         
 
 
 
 - name: Create Ingest
   docker_container:
-    name: unfetter-ctf-ingest
-    image: "unfetter/unfetter-ctf-ingest:0.3.6"
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
     state: started
     recreate: yes
     pull: true
@@ -162,13 +163,14 @@
     links:
     - cti-stix-store-repository:repository
     - unfetter-discover-api:apihost
+when: "run_action != ''"        
 
 
 
 - name: Create Processor
   docker_container:
-    name: unfetter-discover-processor
-    image: "unfetter/unfetter-discover-processor:0.3.6"
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
     state: started
     recreate: yes
     pull: true
@@ -199,4 +201,5 @@
      - --auto-publish
      - "true" 
     links:
-     - cti-stix-store-repository:repository    
+     - cti-stix-store-repository:repository  
+when: "run_action != ''"           
