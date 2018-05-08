@@ -387,15 +387,15 @@
       ]
     },
     {
-      "id": "x-unfetter-category--cf0a3ea2-0689-4bb0-b17a-605d863564ec",
+      "id": "x-unfetter-category--22ee1efb-1dbb-44a2-ac13-7a9c8cdbfeeb",
       "type": "x-unfetter-category",
-      "name": "Syslog",
-      "description": "In computing, syslog is a standard for message logging. It allows separation of the software that generates messages, the system that stores them, and the software that reports and analyzes them. Each message is labeled with a facility code, indicating the software type generating the message, and assigned a severity label",
+      "name": "IDS",
+      "description": "An intrusion detection system (IDS) is a device or software application that monitors a network or systems for malicious activity or policy violations",
       "created": "2018-04-12T16:00:55.616Z",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
       "assessed_objects": [
         {
-          "id": "x-unfetter-assessed-object--2e02a9e7-31fc-4d38-909c-8f7b2393b18a",
+          "id": "x-unfetter-assessed-object--d871eb2b-0c9b-41dd-ba51-7c22a3452752",
           "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
           "questions": [
             {
@@ -413,8 +413,26 @@
           ]
         },
         {
-          "id": "x-unfetter-assessed-object--dd7a30fd-ca1d-4759-977d-d1fad413e055",
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
           "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--56a26dfe-762b-4c66-9b0d-94e327fcd307",
           "questions": [
             {
               "name": "protect",
@@ -433,10 +451,330 @@
       ]
     },
     {
-      "id": "x-unfetter-category--22ee1efb-1dbb-44a2-ac13-7a9c8cdbfeeb",
+      "id": "x-unfetter-category--0e0dc794-fe31-4dac-8b2e-3f26d84bab16",
       "type": "x-unfetter-category",
-      "name": "IDS",
-      "description": "An intrusion detection system (IDS) is a device or software application that monitors a network or systems for malicious activity or policy violations",
+      "name": "File Integrity Monitoring",
+      "description": "File integrity monitoring (FIM) is an internal control or process that performs the act of validating the integrity of operating system and application software files using a verification method between the current file state and a known, good baseline.",
+      "created": "2018-04-12T16:00:55.616Z",
+      "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+      "assessed_objects": [
+        {
+          "id": "x-unfetter-assessed-object--d871eb2b-0c9b-41dd-ba51-7c22a3452752",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--56a26dfe-762b-4c66-9b0d-94e327fcd307",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "L"
+            },
+            {
+              "name": "detect",
+              "score": "L"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "x-unfetter-category--4629bad7-ec4c-4e67-8684-29f56ab64429",
+      "type": "x-unfetter-category",
+      "name": "Packet Analyzer",
+      "description": "A packet analyzer (also known as a packet sniffer) is a computer program or piece of computer hardware that can intercept and log traffic that passes over a digital network or part of a network",
+      "created": "2018-04-12T16:00:55.616Z",
+      "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+      "assessed_objects": [
+        {
+          "id": "x-unfetter-assessed-object--d871eb2b-0c9b-41dd-ba51-7c22a3452752",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--56a26dfe-762b-4c66-9b0d-94e327fcd307",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "L"
+            },
+            {
+              "name": "detect",
+              "score": "L"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "x-unfetter-category--4370c89e-dcc0-4b7a-9cf5-de8d12b1ff0f",
+      "type": "x-unfetter-category",
+      "name": "Intrusion Prevention System (IPS)",
+      "description": "",
+      "created": "2018-04-12T16:00:55.616Z",
+      "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+      "assessed_objects": [
+        {
+          "id": "x-unfetter-assessed-object--d871eb2b-0c9b-41dd-ba51-7c22a3452752",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--56a26dfe-762b-4c66-9b0d-94e327fcd307",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "L"
+            },
+            {
+              "name": "detect",
+              "score": "L"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "x-unfetter-category--e737c6d2-e5b0-4b39-9a33-c712c3238266",
+      "type": "x-unfetter-category",
+      "name": "Network Intrusion Detection System (NIDS)",
+      "description": "",
+      "created": "2018-04-12T16:00:55.616Z",
+      "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+      "assessed_objects": [
+        {
+          "id": "x-unfetter-assessed-object--d871eb2b-0c9b-41dd-ba51-7c22a3452752",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--56a26dfe-762b-4c66-9b0d-94e327fcd307",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "L"
+            },
+            {
+              "name": "detect",
+              "score": "L"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "x-unfetter-category--98ee2d42-98d6-461e-a08a-fd1ceb4d7b37",
+      "type": "x-unfetter-category",
+      "name": "Network Security Monitoring (NSM)",
+      "description": "",
+      "created": "2018-04-12T16:00:55.616Z",
+      "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
+      "assessed_objects": [
+        {
+          "id": "x-unfetter-assessed-object--d871eb2b-0c9b-41dd-ba51-7c22a3452752",
+          "assessed_object_ref": "attack-pattern--8b6c02f6-5c43-4742-97d7-8bacd2a87cb2",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--2a487f65-3cf8-4c07-ace3-21577e08c832",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        },
+        {
+          "id": "x-unfetter-assessed-object--e19f08db-f71a-4aee-b795-b774261de315",
+          "assessed_object_ref": "attack-pattern--56a26dfe-762b-4c66-9b0d-94e327fcd307",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "L"
+            },
+            {
+              "name": "detect",
+              "score": "L"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "x-unfetter-category--233bfecf-58d7-42f3-811b-053e8883363",
+      "type": "x-unfetter-category",
+      "name": "Host Based Intrusion Detection System (HIDS)",
+      "description": "",
       "created": "2018-04-12T16:00:55.616Z",
       "created_by_ref": "identity--4ac44385-691d-411a-bda8-027c61d68e99",
       "assessed_objects": [
