@@ -1,8 +1,0 @@
----
-
-dir: unfetter-ui
-prepath: "../../"
-path: "{{ prepath + dir}}"
-
-
-container_name: unfetter-ui

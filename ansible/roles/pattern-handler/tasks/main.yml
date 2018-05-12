@@ -20,7 +20,6 @@
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
-    recreate: yes
     exposed_ports: 
     - "5000"
     published_ports:
@@ -29,7 +28,7 @@
      - python3
      - app.py
      - 0.0.0.0
-  when: "run_action != ''"
+  when: run_action
 
 
 

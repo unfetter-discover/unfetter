@@ -20,10 +20,9 @@
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
-    recreate: yes
     env: 
      PUBLIC_PATH: /explorer/
     entrypoint:
      - npm
      - start
-  when: "run_action != ''"       
+  when: run_action       

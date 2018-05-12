@@ -1,10 +1,10 @@
 ---
 
 
-- name: "Create {{ container_name }}"
+- name: "Build {{ container_name }}"
   docker_image:
     name: "{{ container_name }}"
-
+    tag: "{{ tag }}"
     state: present
     path: "{{ path }}"
   when: "build_action == 'local'"
@@ -12,31 +12,38 @@
 - name: "Pull {{ container_name }}"
   docker_image:
     name: "{{ image_name }}"
-
     state: present
     pull: yes
-  when: "build_action == 'pull'"     
+  when: "build_action == 'pull'"
 
 - name: Create Ingest
   docker_container:
-    name: unfetter-ctf-ingest
-    image: "unfetter/unfetter-ctf-ingest:0.3.6"
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
     state: started
     volumes:
-     - ./config/examples:/tmp/examples
-    env:
-      - API_PROTOCOL=https
-      - API_HOST=apihost
-      - API_PORT=3000
-      - API_CONTEXT=/
-      - MONGO_REPOSITORY=repository
-      - MONGO_PORT=27017
-      - MONGO_DBNAME=stix
+     - "{{ prepath }}/unfetter/config/examples:/tmp/examples"
+     - "{{ prepath+'/unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data' if run_mode=='dev' else '' }}"
+# I don't know if these ports need to be opened on the host
+#    exposed_ports: 
+#      - "{{ '3001' if run_mode=='dev' else '' }} "
+#    published_ports:
+#      - "{{ '3001:10010' if run_mode=='dev' else '' }} "
     entrypoint:
-     - npm
-     - start    
+      - npm
+      - start
+    env:
+      API_PROTOCOL: https
+      API_HOST: unfetter-discover-api
+      API_PORT: 3000
+      API_CONTEXT: "/"
+      MONGO_REPOSITORY: repository
+      MONGO_PORT: 27017
+      MONGO_DBNAME: stix
+
     links:
-     - cti-stix-store-repository:repository
-     - unfetter-discover-api:apihost
-  when: "run_action == 'devrun'"
+     - "unfetter-discover-api:unfetter-discover-api"
+     - "cti-stix-store-repository:repository"
+     
+  when: run_action
 

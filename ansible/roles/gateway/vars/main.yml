@@ -1,4 +1,3 @@
 ---
 container_name: "unfetter-discover-gateway"
 image_name: "{{registry}}{{ container_name }}:{{tag}}"
-nginx_tag: "1.13.5-alpine"

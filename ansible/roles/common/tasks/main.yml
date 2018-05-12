@@ -5,12 +5,9 @@
     name: cti-stix-store-repository
     image: "mongo:3.4.1"
     state: started
-    recreate: yes
     pull: true
     volumes:
-    - ./data/db:/data/db
-    exposed_ports: 
-    - "27018"
+    - "{{ prepath }}/unfetter/data/db:/data/db"
     published_ports:
     - "27018:27017"
-  when: "run_action != ''" 
+  when: run_action 

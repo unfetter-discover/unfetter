@@ -1,0 +1,41 @@
+---
+- hosts: localhost
+  vars:
+    tag: "0.3.6"
+    prepath: "../../"
+    build_action: "local" 
+    #build_action: "pull" 
+    #build_action: ""
+    #run_action: "demo"
+    run_action: ""
+    #registry: "unfetter/"
+    registry: ""
+
+    use_unfetter_ui: true
+    use_uac: false
+    use_taxii: false
+    
+
+  tasks:
+  - include_role:
+        name: common
+  - include_role:
+        name: openssl
+  - include_role:
+        name: pattern-handler
+  - include_role:
+        name: api
+  - include_role:
+        name: explorer
+  - include_role:
+        name: processor
+  - include_role:
+        name: socket-server
+  - include_role:
+        name: ui
+  - include_role:
+        name: ingest        
+  - include_role:
+        name: gateway
+    vars:
+        image_name: "nginx:1.13.5-alpine"

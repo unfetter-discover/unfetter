@@ -18,3 +18,31 @@
 #    state: present
 #    pull: yes
 #  when: "build_action == 'pull'"     
+
+
+- name: Create the {{ container_name }} container
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+#    network_mode: bridge   
+
+    entrypoint:
+     - npm
+     - start  
+    exposed_ports: 
+    - "13333"
+    - "6555"
+    published_ports:
+    - "13333:3333"
+    - "6555:6555"
+    links:
+    - "cti-stix-store-repository:repository"
+    volumes: 
+      - "{{ prepath }}/unfetter/certs/:/etc/pki/tls/certs"
+      - "{{ prepath }}/unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src"
+      - "{{ prepath }}/unfetter-store/unfetter-socket-server/dist:/usr/share/unfetter-socket-server/dist"
+      - "{{ prepath }}/unfetter-store/unfetter-socket-server/config/private-config.json:/usr/share/unfetter-socket-server/config/private-config.json"
+      - "{{ prepath }}/unfetter-store/unfetter-socket-server/config/private-config.email.json:/usr/share/unfetter-socket-server/config/private-config.email.json"
+     
+  when: "(use_uac) and (run_action != '')"      
