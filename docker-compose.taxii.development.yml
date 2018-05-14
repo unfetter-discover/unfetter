@@ -3,15 +3,22 @@ services:
   unfetter-discover-gateway:
     image: nginx:1.13.5-alpine
     container_name: unfetter-discover-gateway
+    ports:
+     - "8443:8443"
     links:
      - unfetter-taxii-server
     volumes:
-     - ./config/nginx/taxii.conf:/etc/nginx/conf.d.runmode/taxii.conf
+    #  - ./config/nginx/taxii.conf:/etc/nginx/conf.d.runmode/taxii.conf
+     - ./config/nginx/taxii-auth.conf:/etc/nginx/conf.d.runmode/taxii-auth.conf
 
   unfetter-taxii-server:
     build: ../taxii-server
     container_name: unfetter-taxii-server
     image: unfetter-taxii-server
+    # environment:
+    #  - SERVER_CERTIFICATE=/etc/pki/tls/certs/server-crt.pem
+    #  - SERVER_KEY=/etc/pki/tls/certs/server-key.pem
+    #  - SERVER_CA=/etc/pki/tls/certs/ca_client-crt.pem
     links:
      - cti-stix-store-repository:repository
     ports:
