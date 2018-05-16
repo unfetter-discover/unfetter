@@ -16,19 +16,22 @@
     pull: yes
   when: "build_action == 'pull'"
 
+- name: dev volume
+  set_fact:
+    volume_list: "{{ volume_list }} + {{ dev_volume_list }}"
+  when: run_mode=='dev'
+
+
+- debug:
+      msg: "This is the list {{ volume_list }}"
+
+
 - name: Create Ingest
   docker_container:
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
-    volumes:
-     - "{{ prepath }}/unfetter/config/examples:/tmp/examples"
-     - "{{ prepath+'/unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data' if run_mode=='dev' else '' }}"
-# I don't know if these ports need to be opened on the host
-#    exposed_ports: 
-#      - "{{ '3001' if run_mode=='dev' else '' }} "
-#    published_ports:
-#      - "{{ '3001:10010' if run_mode=='dev' else '' }} "
+    volumes: "{{ volume_list }}"
     entrypoint:
       - npm
       - start
@@ -42,7 +45,7 @@
       MONGO_DBNAME: stix
 
     links:
-     - "unfetter-discover-api:unfetter-discover-api"
+     #- "unfetter-discover-api:unfetter-discover-api"
      - "cti-stix-store-repository:repository"
      
   when: run_action

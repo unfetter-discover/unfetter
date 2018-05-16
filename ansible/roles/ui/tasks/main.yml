@@ -29,4 +29,4 @@
         - "{{ prepath }}/unfetter-ui/src:/usr/share/unfetter-ui/src"
         - "{{ prepath }}/unfetter-ui/config:/usr/share/unfetter-ui/config"
      
-  when: "(use_unfetter_ui) and (run_action != '')"      
+  when: "(use_unfetter_ui) and (run_action)"      

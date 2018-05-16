@@ -15,19 +15,21 @@
     pull: yes
   when: "build_action == 'pull'"     
 
+- name: dev volume
+  set_fact:
+    volume_list: "{{ volume_list }} + {{ dev_volume_list }}"
+  when: run_mode=='dev'
+
 - name: Create Processor
   docker_container:
     name: unfetter-discover-processor
     image: "{{ image_name }}"
     state: started
-    volumes:
-     - "{{ prepath }}/unfetter/config/examples:/tmp/examples"
-     - "{{ prepath+'/unfetter-store/unfetter-discover-processor/src:/usr/src/app/src' if run_mode=='dev' else '' }} "
-     - "{{ prepath+'/unfetter-store/unfetter-discover-processor/dist:/usr/src/app/dist' if run_mode=='dev' else '' }} "
+    volumes: "{{ volume_list }}"
     env:
-     MONGO_HOST: repository
+     MONGO_HOST: cti-stix-store-repository
      # If deployed in a proxy, add the proxy's URL here
-     HTTPS_PROXY_URL:
+     HTTPS_PROXY_URL: ''
     entrypoint:
      - node
      - processor.js
@@ -49,5 +51,5 @@
      - --auto-publish
      - "true"
     links:
-     - "cti-stix-store-repository:repository"
+     - "cti-stix-store-repository:cti-stix-store-repository"
   when: run_action

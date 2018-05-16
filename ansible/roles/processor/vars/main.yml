@@ -4,3 +4,11 @@ path: "{{ prepath + dir}}"
 container_name: "unfetter-discover-processor"
 image_name: "{{registry}}unfetter-discover-processor:{{tag}}"
 
+
+volume_list:
+  - "{{ prepath }}unfetter/config/examples:/tmp/examples"
+
+dev_volume_list:
+# If we are in dev, and thus we are linking in code
+  - "{{ prepath+'unfetter-store/unfetter-discover-processor/src:/usr/src/app/src'}} "
+  - "{{ prepath+'unfetter-store/unfetter-discover-processor/dist:/usr/src/app/dist'}} "

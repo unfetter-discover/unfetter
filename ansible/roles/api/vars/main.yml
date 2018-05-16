@@ -5,3 +5,16 @@ path: "{{ prepath + dir}}"
 container_name: unfetter-discover-api
 image_name: "{{registry}}{{ container_name }}:{{tag}}"
 
+    
+volume_list:
+  - "{{ prepath }}unfetter/certs/:/etc/pki/tls/certs"
+
+dev_volume_list:
+    # If we are in dev, and thus we are linking in code
+  - "{{ prepath+'unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test'}}"
+  - "{{ prepath+'unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api'}}"
+  - "{{ prepath+'unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js'}}"
+
+uac_volume_list:
+    # If we are in UAC, and thus need the private-config.json
+  - "{{ prepath+'unfetter-store/unfetter-discover-api/config/private-config.json:/usr/share/unfetter-discover-api/config/private-config.json' }}"
