@@ -25,13 +25,13 @@
   - include_role:
         name: pattern-handler
   - include_role:
+        name: socket-server
+  - include_role:
         name: api
   - include_role:
         name: explorer
   - include_role:
         name: processor
-  - include_role:
-        name: socket-server
   - include_role:
         name: ui
   - include_role:
