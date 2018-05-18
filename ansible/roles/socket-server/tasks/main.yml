@@ -33,6 +33,16 @@
     exposed_ports: 
     - "13333"
     - "6555"
+    env:
+      MONGO_REPOSITORY: repository
+      MONGO_PORT: 27017
+      MONGO_DBNAME: stix
+      # If deployed in a proxy, add the proxy's URL here
+      HTTPS_PROXY_URL: ''
+      # Options: true, false ; NOTE Always commit set to `false`
+      SEND_EMAIL_ALERTS: false
+      # This is only needed if using SEND_EMAIL_ALERTS *AND* private-config.email.json does not have a service email address
+      SERVICE_EMAIL: ''
     published_ports:
     - "13333:3333"
     - "6555:6555"

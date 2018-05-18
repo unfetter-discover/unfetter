@@ -19,22 +19,24 @@
     volume_list: "{{ volume_list }} + {{ dev_volume_list }}"
   when: run_mode=='dev'
 
-- name: uac volume
+- name: uac volume and link list
   set_fact:
     volume_list: "{{ volume_list }} + {{ uac_volume_list }}"
+    api_link_list: "{{ api_link_list }} + {{ api_uac_link_list }}"
   when: use_uac
 
 - debug:
-      msg: "This is the list {{ volume_list }}"
+      msg: "This is the volume list {{ volume_list }}"
+
+- debug:
+      msg: "This is the link list {{ api_link_list }}"
 
 - name: Create API
   docker_container:
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
-    links:
-     - cti-stix-store-repository:cti-stix-store-repository
-     - unfetter-pattern-handler:unfetter-pattern-handler
+    links: "{{ api_link_list }}"
     volumes: "{{ volume_list }}"
     env:
       CTF_PARSE_HOST: http://unfetter-ctf-ingest
