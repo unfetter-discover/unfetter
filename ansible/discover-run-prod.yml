@@ -2,11 +2,7 @@
 - hosts: localhost
   vars:
     tag: "0.3.6"
-
-
     prepath: "../../"
-    
-
     # For building from a repository 
     build_action: "pull" 
     registry: "unfetter/"
@@ -17,25 +13,5 @@
     use_uac: false
     use_taxii: false
 
-
   tasks:
-  - include_role:
-        name: common
-  - include_role:
-        name: openssl
-  - include_role:
-        name: pattern-handler
-  - include_role:
-        name: socket-server
-  - include_role:
-        name: api
-  - include_role:
-        name: explorer
-  - include_role:
-        name: processor
-  - include_role:
-        name: ui
-  - include_role:
-        name: ingest        
-  - include_role:
-        name: gateway
+  - import_tasks: discover-tasks.yml

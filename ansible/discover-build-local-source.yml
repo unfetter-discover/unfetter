@@ -13,29 +13,7 @@
     run_action: true
     use_unfetter_ui: true
     use_uac: true
-    use_taxii: true
-        
+    use_taxii: true        
 
   tasks:
-  - include_role:
-        name: common
-  - include_role:
-        name: openssl
-  - include_role:
-        name: pattern-handler
-  - include_role:
-        name: socket-server
-  - include_role:
-        name: api
-  - include_role:
-        name: explorer
-  - include_role:
-        name: processor
-  - include_role:
-        name: ui
-  - include_role:
-        name: ingest        
-  - include_role:
-        name: gateway
-    vars:
-        image_name: "nginx:1.13.5-alpine"
+  - import_tasks: discover-tasks.yml
