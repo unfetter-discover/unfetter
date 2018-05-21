@@ -5,4 +5,6 @@ if [ -z "${1+x}" ]; then
 	exit 1
 fi
 
-openssl x509 -req -in $1.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out $1.crt -days 500 -sha256
+echo 'Signing key for: ' $1
+
+openssl x509 -req -in ./output/$1.csr -CA ./output/rootCA.pem -CAkey ./output/rootCA.key -CAcreateserial -out ./output/$1.pem -days 500 -sha256
