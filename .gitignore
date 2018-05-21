@@ -2,7 +2,7 @@ certs/
 .idea/
 *.iml
 gateway/dist
-./test-certs/output/*
+test-certs/output/*
 !test-certs/output/.gitkeep
 # keep the data/db folder but not the files
 data/db/*
