@@ -1,0 +1,6 @@
+---
+
+dir: stix2pattern
+path: "{{ prepath + dir}}"
+container_name: unfetter-pattern-handler
+image_name: "{{registry}}{{ container_name }}:{{tag}}"

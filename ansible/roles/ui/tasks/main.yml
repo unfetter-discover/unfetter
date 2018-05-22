@@ -1,0 +1,32 @@
+
+- name: "Create {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"     
+
+
+
+- name: Create the {{ container_name }} container
+  docker_container:
+      name: "{{ container_name }}"
+      image: "{{ image_name }}"
+      state: started
+#Need to make this valued differently for UAC and Demo
+      entrypoint:
+      - npm
+      - run
+      - serve:docker:dev:{{ 'uac' if use_uac else 'demo'}}
+      volumes: 
+        - "{{ prepath }}/unfetter-ui/src:/usr/share/unfetter-ui/src"
+        - "{{ prepath }}/unfetter-ui/config:/usr/share/unfetter-ui/config"
+     
+  when: "(use_unfetter_ui) and (run_action)"      

@@ -1,0 +1,55 @@
+# For now, we are always going to be pulling from docker hub, since I can't seem
+# to get images to be renamed
+
+- name: "Build {{ container_name }} - {{ build_action }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action != ''"
+
+- debug:
+    msg: "The container is {{ container_name }} the image is {{ image_name }}"
+
+- name: build ui links
+  set_fact:
+    link_list: "{{ link_list }} + {{ ui_link_list }}"
+  when: use_unfetter_ui
+
+- name: build uac links
+  set_fact:
+    link_list: "{{ link_list }} + {{ uac_link_list }}"
+  when: use_uac
+
+
+- name: Create the {{ container_name }} from image {{ image_name }}
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+#    network_mode: bridge        
+    exposed_ports: 
+    - "443"
+    - "80"
+    published_ports:
+    - "443:443"
+    - "80:80"
+    links: "{{ link_list }}"
+    volumes: 
+     - "{{ prepath }}/unfetter/config/nginx/default.conf:/etc/nginx/conf.d/default.conf"
+     - "{{ prepath }}/unfetter/config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra"
+     - "{{ prepath }}/unfetter/config/certs/:/etc/pki/tls/certs"
+
+  # TAXII
+     - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii.conf' if use_taxii else 'taxii-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii.conf"
+    
+   # In UAC
+     - "{{ prepath }}/unfetter/config/nginx/{{ 'uac-locations.conf' if use_uac else 'blank.conf' }}:/etc/nginx/conf.d.runmode/runmode-locations.conf"
+   # In USE_UNFETTER_UI
+     - "{{ prepath }}/unfetter/config/nginx/{{ 'ui-dev.conf' if use_unfetter_ui else 'ui-prod.conf' }}:/etc/nginx/conf.d.runmode/ui.conf"
+
+
+
+  when: run_action         
+
+  

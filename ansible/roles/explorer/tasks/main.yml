@@ -1,0 +1,28 @@
+---
+- name: "Build {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    path: "{{ path }}"
+    dockerfile: "{{ dockerfile }}"
+  when: "build_action == 'local'"
+
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"     
+
+
+- name: Create Explorer
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+    env: 
+     PUBLIC_PATH: /explorer/
+    entrypoint:
+     - npm
+     - start
+  when: run_action       

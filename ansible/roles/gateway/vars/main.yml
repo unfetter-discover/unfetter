@@ -1,0 +1,19 @@
+---
+container_name: "unfetter-discover-gateway"
+image_name: "{{registry}}{{ container_name }}:{{tag}}"
+
+
+
+link_list:
+  - "unfetter-discover-api:unfetter-discover-api"
+  - "unfetter-api-explorer:unfetter-api-explorer"
+    
+
+
+ui_link_list:
+    # If we are in dev, and thus we are linking in code
+  - "{{ 'unfetter-ui:unfetter-ui' }}"
+ 
+
+uac_link_list:
+  - "{{ 'unfetter-socket-server:unfetter-socket-server' }}"
