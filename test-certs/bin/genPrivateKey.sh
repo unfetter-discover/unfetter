@@ -7,4 +7,4 @@ fi
 
 echo 'Generating private key for: ' $1
 
-openssl genrsa -out ./output/$1.key 2048
+openssl genrsa -out $1.key 2048

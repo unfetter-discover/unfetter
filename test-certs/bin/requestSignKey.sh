@@ -7,4 +7,4 @@ fi
 
 echo 'Generating signing request for: ' $1
 
-openssl req -new -key ./output/$1.key -out ./output/$1.csr
+openssl req -new -key $1.key -out $1.csr

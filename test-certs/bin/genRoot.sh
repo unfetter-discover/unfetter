@@ -2,4 +2,4 @@
 
 echo 'Generating root certificate'
 
-openssl genrsa -out ./output/rootCA.key 4096
+openssl genrsa -out rootCA.key 4096

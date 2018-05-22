@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 if [ -z "${1+x}" ]; then
 	clientName=client
 else
@@ -15,12 +13,10 @@ rm output/*
 ./bin/genPrivateKey.sh $clientName
 ./bin/requestSignKey.sh $clientName
 ./bin/signKey.sh $clientName
-
-# Artifact from key signing -- Not an ideal solution
-rm .srl
-
 ./bin/exportToP12.sh $clientName
+
+mv *.pem *.key *.crt *.srl *.p12 *.csr output
 
 cp ./output/rootCA.pem ../certs
 cp ./output/rootCA.key ../certs
-cp ./output/client.pem ../certs
+cp ./output/client.crt ../certs
