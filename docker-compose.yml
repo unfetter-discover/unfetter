@@ -20,6 +20,7 @@ services:
      - ./config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra
      - ./config/nginx/blank.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf
      - ./config/nginx/taxii-blank.conf:/etc/nginx/conf.d.runmode/taxii.conf
+     - ./config/nginx/taxii-blank.conf:/etc/nginx/conf.d.runmode/taxii-auth.conf
      - ./config/nginx/ui-prod.conf:/etc/nginx/conf.d.runmode/ui.conf
      - ./certs/:/etc/pki/tls/certs
 

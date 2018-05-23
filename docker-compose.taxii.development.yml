@@ -3,10 +3,16 @@ services:
   unfetter-discover-gateway:
     image: nginx:1.13.5-alpine
     container_name: unfetter-discover-gateway
+    ports:
+     - "8443:8443"
     links:
      - unfetter-taxii-server
     volumes:
-     - ./config/nginx/taxii.conf:/etc/nginx/conf.d.runmode/taxii.conf
+    # Only use one of the following volume mappings:
+    # DONT use mutual TLS authentication
+    #  - ./config/nginx/taxii.conf:/etc/nginx/conf.d.runmode/taxii.conf
+    # DO use mutual TLS authentication
+     - ./config/nginx/taxii-auth.conf:/etc/nginx/conf.d/taxii-auth.conf
 
   unfetter-taxii-server:
     build: ../taxii-server
@@ -18,7 +24,7 @@ services:
      - "13002:3002"
     volumes:
      - ../taxii-server/src:/usr/share/unfetter-taxii-server/src
-     - ./certs/:/etc/pki/tls/certs
+     - ./certs:/etc/pki/tls/certs
     entrypoint:
      - npm
      - start
