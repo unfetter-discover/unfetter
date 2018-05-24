@@ -14,6 +14,7 @@
     run_action: false
     use_uac: false
     use_taxii: false
+    use_taxii_tls: false
     #prepath: "../../"
     #build_action: "local" 
     #build_action: ""

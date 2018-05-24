@@ -21,13 +21,17 @@
     link_list: "{{ link_list }} + {{ uac_link_list }}"
   when: use_uac
 
+- name: build taxii links
+  set_fact:
+    link_list: "{{ link_list }} + {{ taxii_link_list }}"
+  when: use_taxii
 
 - name: Create the {{ container_name }} from image {{ image_name }}
   docker_container:
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
-#    network_mode: bridge        
+#    network_mode: bridge
     exposed_ports: 
     - "443"
     - "80"
@@ -40,16 +44,15 @@
      - "{{ prepath }}/unfetter/config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra"
      - "{{ prepath }}/unfetter/config/certs/:/etc/pki/tls/certs"
 
-  # TAXII
-     - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii.conf' if use_taxii else 'taxii-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii.conf"
-    
-   # In UAC
+     # TAXII
+     - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii.conf' if use_taxii and not use_taxii_tls else 'taxii-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii.conf"
+     - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii-auth.conf' if use_taxii and use_taxii_tls else 'taxii-auth-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii-auth.conf"    
+
+     # In UAC
      - "{{ prepath }}/unfetter/config/nginx/{{ 'uac-locations.conf' if use_uac else 'blank.conf' }}:/etc/nginx/conf.d.runmode/runmode-locations.conf"
-   # In USE_UNFETTER_UI
+
+     # In USE_UNFETTER_UI
      - "{{ prepath }}/unfetter/config/nginx/{{ 'ui-dev.conf' if use_unfetter_ui else 'ui-prod.conf' }}:/etc/nginx/conf.d.runmode/ui.conf"
 
-
-
-  when: run_action         
-
+  when: run_action
   
