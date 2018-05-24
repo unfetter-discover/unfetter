@@ -14,6 +14,7 @@
     use_unfetter_ui: true
     use_uac: true
     use_taxii: true        
+    use_taxii_tls: false        
 
   tasks:
   - import_tasks: discover-tasks.yml

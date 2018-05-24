@@ -11,6 +11,7 @@
     use_unfetter_ui: true
     use_uac: true
     use_taxii: false
+    use_taxii_tls: false
     run_mode: "dev"
     #run_mode: prod
     #registry: "unfetter/"

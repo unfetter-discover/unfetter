@@ -12,6 +12,7 @@
     run_action: true
     use_uac: false
     use_taxii: false
+    use_taxii_tls: false
 
   tasks:
   - import_tasks: discover-tasks.yml
