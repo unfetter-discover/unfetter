@@ -83,6 +83,8 @@ services:
      - enterprise
      - --auto-publish
      - "true"
+     - --auto-validate-patterns
+     - "true"
      # Interval options: daily, weekly, monthly
     #  - --interval
     #  - daily
@@ -167,7 +169,9 @@ services:
     image: unfetter/unfetter-pattern-handler:0.3.6
     container_name: unfetter-pattern-handler
     entrypoint:
-    # ["python3","app.py","0.0.0.0"]
-     - python3
-     - app.py
-     - 0.0.0.0
+    - gunicorn
+    - --config
+    - /opt/stix/gunicorn_config.py
+    - --access-logfile
+    - "-"
+    - app:app
