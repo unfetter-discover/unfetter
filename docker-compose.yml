@@ -49,12 +49,16 @@ services:
   unfetter-discover-processor:
     image: unfetter/unfetter-discover-processor:0.3.6
     container_name: unfetter-discover-processor
+    links:
+    - unfetter-pattern-handler
     volumes:
      - ./config/examples:/tmp/examples
     environment:
-     - MONGO_HOST=repository
-     # If deployed in a proxy, add the proxy's URL here
-     - HTTPS_PROXY_URL=
+    - PATTERN_HANDLER_DOMAIN=unfetter-pattern-handler
+    - PATTERN_HANDLER_PORT=5000
+    - MONGO_HOST=repository
+    # If deployed in a proxy, add the proxy's URL here
+    - HTTPS_PROXY_URL=
     entrypoint:
      - ts-node
      - src/app.ts
@@ -78,6 +82,8 @@ services:
      - --mitre-attack-data
      - enterprise
      - --auto-publish
+     - "true"
+     - --auto-validate-patterns
      - "true"
      # Interval options: daily, weekly, monthly
     #  - --interval
@@ -135,9 +141,8 @@ services:
     - unfetter-discover-openssl
     - cti-stix-store-repository
     links:
-     - cti-stix-store-repository:repository
-     - unfetter-pattern-handler
-     
+    - cti-stix-store-repository:repository
+    - unfetter-pattern-handler     
     volumes:
     - ./certs/:/etc/pki/tls/certs
     environment:
@@ -154,8 +159,8 @@ services:
     - RUN_MODE=DEMO
     # If deployed in a proxy, add the proxy's URL here
     - HTTPS_PROXY_URL=
-    - PATTERN_HANDLER_DOMAIN = unfetter-pattern-handler
-    - PATTERN_HANDLER_PORT = 5000
+    - PATTERN_HANDLER_DOMAIN=unfetter-pattern-handler
+    - PATTERN_HANDLER_PORT=5000
     entrypoint:
     - npm
     - start
@@ -164,7 +169,9 @@ services:
     image: unfetter/unfetter-pattern-handler:0.3.6
     container_name: unfetter-pattern-handler
     entrypoint:
-    # ["python3","app.py","0.0.0.0"]
-     - python3
-     - app.py
-     - 0.0.0.0
+    - gunicorn
+    - --config
+    - /opt/stix/gunicorn_config.py
+    - --access-logfile
+    - "-"
+    - app:app
