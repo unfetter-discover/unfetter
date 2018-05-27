@@ -1,4 +1,4 @@
-[localhost]
+[unfetter]
 localhost ansible_connection=local
 localhost ansible_python_interpreter=python
 
