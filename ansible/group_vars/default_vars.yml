@@ -1,0 +1,15 @@
+    tag: "0.3.6"
+    docker_tag: "0.3.6"
+    prepath: "../../"
+    #build_action: "local" 
+    #build_action: "pull" 
+    build_action: "local"
+    #run_action: "demo"
+    run_action: true
+    use_unfetter_ui: true
+    use_uac: true
+    use_taxii: false
+    run_mode: "dev"
+    #run_mode: prod
+    #registry: "unfetter/"
+    registry: ""
