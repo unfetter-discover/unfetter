@@ -7,3 +7,4 @@ gateway/dist
 data/db/*
 # need at least one file in the folder
 !data/db/.gitkeep
+.DS_Store
