@@ -1,6 +1,37 @@
 ---
-- hosts: localhost
-  roles:
-  - common
-  - gateway
+- name: Build Playbook
+  hosts: all
+  vars:
+    overrides:
+  tasks:
+  # Include the basic variables needed to run the docker build and docker run commands
+#  - include_vars:
+#      file: "{{ playbook_dir }}/group_vars/default_vars.yml"
+  # Deployers can override any of the variables in the "override_vars.yml" file
+  - name: Include override vars
+    include_vars:
+      file: "{{ playbook_dir }}/group_vars/override_vars.yml"
+    ignore_errors: yes
+  - set_fact:
+     docker_tag: "{{ overrides.docker_tag | default(docker_tag) }}"
+     build_action: "{{ overrides.build_action | default(build_action) }}"
+     run_action: "{{ overrides.run_action | default(run_action) }}"
+     use_unfetter_ui: "{{ overrides.use_unfetter_ui | default(use_unfetter_ui) }}"
+     use_uac: "{{ overrides.use_uac | default(use_uac) }}"
+     use_taxii: "{{ overrides.use_taxii | default(use_taxii) }}"
+     registry: "{{ overrides.docker_tag | default(registry) }}"
   
+  - name: getting docker_tag
+    debug:
+        msg: 
+          - "docker_tag: {{ docker_tag }} "
+          - "build_action: {{ build_action }}"
+          - "run_action: {{ run_action }}"
+          - "use_unfetter_ui: {{ use_unfetter_ui }}"
+          - "use_uac: {{ use_uac }}"
+          - "use_taxii: {{ use_taxii }}"
+          - "registry: {{ registry }}"                        
+  - name: Start running the commands
+    import_tasks: discover-tasks.yml
+
+

@@ -2,4 +2,4 @@
 dir: "unfetter-ui"
 path: "{{ prepath + dir}}"
 container_name: unfetter-ui
-image_name: "{{registry}}{{ container_name }}:{{tag}}"
+image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"

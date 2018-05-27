@@ -2,7 +2,7 @@
 dir: "unfetter-store/unfetter-discover-processor"
 path: "{{ prepath + dir}}"
 container_name: "unfetter-discover-processor"
-image_name: "{{registry}}unfetter-discover-processor:{{tag}}"
+image_name: "{{registry}}unfetter-discover-processor:{{docker_tag}}"
 
 
 volume_list:

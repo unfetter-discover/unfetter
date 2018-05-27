@@ -3,10 +3,9 @@
 - name: "Create {{ container_name }}"
   docker_image:
     name: "{{ image_name }}"
-
     state: present
     path: "{{ path }}"
-  when: "build_action == 'local'"
+  when: "build_action == 'local' and use_uac"
 
 
 
@@ -55,4 +54,4 @@
       - "{{ prepath }}/unfetter-store/unfetter-socket-server/config/private-config.json:/usr/share/unfetter-socket-server/config/private-config.json"
       - "{{ prepath }}/unfetter-store/unfetter-socket-server/config/private-config.email.json:/usr/share/unfetter-socket-server/config/private-config.email.json"
      
-  when: "(use_uac) and (run_action != '')"      
+  when: "(use_uac) and (run_action)"      

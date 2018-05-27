@@ -1,6 +1,6 @@
 ---
 container_name: "unfetter-discover-gateway"
-image_name: "{{registry}}{{ container_name }}:{{tag}}"
+image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
 
 
 

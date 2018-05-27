@@ -4,7 +4,7 @@
 - name: "Build {{ container_name }}"
   docker_image:
     name: "{{ container_name }}"
-    tag: "{{ tag }}"
+    tag: "{{ docker_tag }}"
     state: present
     path: "{{ path }}"
   when: "build_action == 'local'"

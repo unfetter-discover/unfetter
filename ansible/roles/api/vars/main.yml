@@ -3,7 +3,7 @@
 dir: "unfetter-store/unfetter-discover-api"
 path: "{{ prepath + dir}}"
 container_name: unfetter-discover-api
-image_name: "{{registry}}{{ container_name }}:{{tag}}"
+image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
 
     
 volume_list:

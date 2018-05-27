@@ -1,12 +1,12 @@
 ---
 - name: Build Playbook
-  hosts: unfetter
+  hosts: dev
   vars:
     overrides:
   tasks:
   # Include the basic variables needed to run the docker build and docker run commands
-  - include_vars:
-      file: "{{ playbook_dir }}/group_vars/default_vars.yml"
+#  - include_vars:
+#      file: "{{ playbook_dir }}/group_vars/default_vars.yml"
   # Deployers can override any of the variables in the "override_vars.yml" file
   - name: Include override vars
     include_vars:
