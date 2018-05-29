@@ -1,0 +1,5 @@
+---
+
+container_name: unfetter-discover-openssl
+image_name: "svagi/openssl"
+tag: latest

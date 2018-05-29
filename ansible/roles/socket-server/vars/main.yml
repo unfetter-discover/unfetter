@@ -1,0 +1,6 @@
+---
+
+dir: "unfetter-store/unfetter-socket-server"
+path: "{{ prepath + dir}}"
+container_name: unfetter-socket-server
+image_name: "{{registry}}{{ container_name }}:{{tag}}"

@@ -1,0 +1,58 @@
+
+
+- name: "Create {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+
+
+# We don't have a pull because the socket-server is not up in github.  It can only be built locally.  This needs to change
+#- name: "Pull {{ container_name }}"
+#  docker_image:
+#name: "{{ image_name }}"
+#
+#    state: present
+#    pull: yes
+#  when: "build_action == 'pull'"     
+
+
+- name: Create the {{ container_name }} container
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+#    network_mode: bridge   
+
+    entrypoint:
+     - npm
+     - start  
+    exposed_ports: 
+    - "13333"
+    - "6555"
+    env:
+      MONGO_REPOSITORY: repository
+      MONGO_PORT: 27017
+      MONGO_DBNAME: stix
+      # If deployed in a proxy, add the proxy's URL here
+      HTTPS_PROXY_URL: ''
+      # Options: true, false ; NOTE Always commit set to `false`
+      SEND_EMAIL_ALERTS: false
+      # This is only needed if using SEND_EMAIL_ALERTS *AND* private-config.email.json does not have a service email address
+      SERVICE_EMAIL: ''
+    published_ports:
+    - "13333:3333"
+    - "6555:6555"
+    links:
+    - "cti-stix-store-repository:repository"
+    volumes: 
+      - "{{ prepath }}/unfetter/certs/:/etc/pki/tls/certs"
+      - "{{ prepath }}/unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src"
+      - "{{ prepath }}/unfetter-store/unfetter-socket-server/dist:/usr/share/unfetter-socket-server/dist"
+      - "{{ prepath }}/unfetter-store/unfetter-socket-server/config/private-config.json:/usr/share/unfetter-socket-server/config/private-config.json"
+      - "{{ prepath }}/unfetter-store/unfetter-socket-server/config/private-config.email.json:/usr/share/unfetter-socket-server/config/private-config.email.json"
+     
+  when: "(use_uac) and (run_action != '')"      

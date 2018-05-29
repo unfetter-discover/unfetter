@@ -1,0 +1,13 @@
+
+
+- name: Create Repository
+  docker_container:
+    name: cti-stix-store-repository
+    image: "mongo:3.4.1"
+    state: started
+    pull: true
+    volumes:
+    - "{{ prepath }}/unfetter/data/db:/data/db"
+    published_ports:
+    - "27018:27017"
+  when: run_action 

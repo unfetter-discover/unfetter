@@ -1,0 +1,12 @@
+---
+dir: "unfetter-store/unfetter-ctf-ingest"
+path: "{{ prepath + dir}}"
+container_name: unfetter-ctf-ingest
+image_name: "{{registry}}{{ container_name }}:{{tag}}"
+
+volume_list:
+  - "{{ prepath }}unfetter/config/examples:/tmp/examples"
+
+dev_volume_list:
+    # If we are in dev, and thus we are linking in code
+  - "{{ prepath+'unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data'}}"

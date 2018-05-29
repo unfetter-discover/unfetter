@@ -1,0 +1,702 @@
+{
+  "type": "bundle",
+  "id": "stix-archive-bundle",
+  "spec_version": "2.0",
+  "objects": [
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--ce4171360-0cbf-4130-b01c-dea9ee4bae65",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "sysmon",
+      "description": "System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time",
+      "category": "Enterprise SIEM",
+      "external_references": [
+        {
+          "source_name": "Microsoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon",
+          "external_id": "Sysmon v7.01"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--abb82dcc-9160-41c7-adbb-0bb3f7e9ab9f",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "RootkitRevealer",
+      "description": "RootkitRevealer is an advanced rootkit detection utility. It runs on Windows XP (32-bit) and Windows Server 2003 (32-bit), and its output lists Registry and file system API discrepancies that may indicate the presence of a user-mode or kernel-mode rootkit. RootkitRevealer successfully detects many persistent rootkits including AFX, Vanquish and HackerDefender (note: RootkitRevealer is not intended to detect rootkits like Fu that don't attempt to hide their files or registry keys).",
+      "category": "Standard EDR",
+      "external_references": [
+        {
+          "source_name": "Microsoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/rootkit-revealer"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--8c62b586-79a8-41f4-8454-38a38937ec0e",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "PsLogList",
+      "description": "The Resource Kit comes with a utility, elogdump, that lets you dump the contents of an Event Log on the local or a remote computer. PsLogList is a clone of elogdump except that PsLogList lets you login to remote systems in situations your current set of security credentials would not permit access to the Event Log, and PsLogList retrieves message strings from the computer on which the event log you view resides.",
+      "category": "Standard EDR",
+      "external_references": [
+        {
+          "source_name": "Microsoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/rootkit-revealer"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--64e5efcb-86ea-47f4-bb1a-c4dc2ffc136e",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "NortMcFee antivirus",
+      "description": "NortMcFee AntiVirus is an anti-malware software developed and distributed. It uses signatures and heuristics to identify viruses. Other features included in it are e-mail spam filtering and phishing protection",
+      "category": "Generic AV",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/asdf"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--d03921e1-2113-406d-912a-d3e8d9981e56",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Iptables",
+      "description": "Iptables is a user-space utility program that allows a system administrator to configure the tables[2] provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Iptables"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--f7b46e76-7e8a-42f1-8779-19d5a31ae26f",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "UFW - Uncomplicated Firewall",
+      "description": "The default firewall configuration tool for Ubuntu is ufw. Developed to ease iptables firewall configuration, ufw provides a user friendly way to create an IPv4 or IPv6 host-based firewall. By default UFW is disabled.",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://help.ubuntu.com/community/UFW"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--663bd853-26e6-47df-9b03-c6a5958572cc",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "PfSense",
+      "description": "PfSense is an open source firewall/router computer software distribution based on FreeBSD.[2][3][4] It is installed on a physical computer or a virtual machine to make a dedicated firewall/router for a network.[5]",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/PfSense"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--2288d472-daeb-4be5-82f2-03b3d8eb3c51",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Ipfirewall",
+      "description": "Ipfirewall or ipfw is a FreeBSD IP packet filter and traffic accounting facility.",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Ipfirewall"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--8704a736-9d1a-495a-aa68-1e7ebdafc9ca",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "PF (Packet Filter)",
+      "description": "PF (Packet Filter, also written pf) is a BSD licensed stateful packet filter, a central piece of software for firewalling. It is comparable to netfilter (iptables), ipfw and ipfilter.",
+      "category": "Network Firewall",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Ipfirewall"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--58478f44-b428-45b3-a9ac-ef7cc617a93d",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Rsyslog",
+      "description": "Rsyslog is an open-source software utility used on UNIX and Unix-like computer systems for forwarding log messages in an IP network. It implements the basic syslog protocol, extends it with content-based filtering, rich filtering capabilities, flexible configuration options and adds features such as using TCP for transport.",
+      "category": "Syslog",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Rsyslog"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--90ad8de8-49b9-4329-9516-d83851b3ee4d",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Syslog-ng",
+      "description": "Syslog-ng is a free and open-source implementation of the syslog protocol for Unix and Unix-like systems. It extends the original syslogd model with content-based filtering, rich filtering capabilities, flexible configuration options and adds important features to syslog, like using TCP for transport. As of today syslog-ng is developed by Balabit IT Security Ltd.",
+      "category": "Syslog",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Syslog-ng"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--0e0844ce-3f05-46c3-8b2e-e5856d798581",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Systemd-journald",
+      "description": "Systemd-journald is a daemon responsible for event logging, with append-only binary files serving as its logfiles. The system administrator may choose whether to log system events with systemd-journald, syslog-ng or rsyslog. The potential for corruption of the binary format has led to much heated debate.[22]",
+      "category": "Syslog",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Syslog-ng"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--46d585a6-7480-415c-b29b-5c719934f519",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Autologon",
+      "description": "Autologon enables you to easily configure Windows’ built-in autologon mechanism. Instead of waiting for a user to enter their name and password, Windows uses the credentials you enter with Autologon, which are encrypted in the Registry, to log on the specified user automatically.",
+      "external_references": [
+        {
+          "source_name": "Microsoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/autologon"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--6534fd60-9843-4526-9da5-4db4a64d92c5",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Snort",
+      "category": "IDS",
+      "description": "Snort is a free and open source network intrusion prevention system (IPS) and network intrusion detection system (IDS)[4] created by Martin Roesch in 1998.[5]",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Snort_(software)"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--ba130ec8-f0e7-4c53-995a-2ac809a2bf72",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Bro IDS",
+      "category": "IDS",
+      "description": "Often compared to a network intrusion detection system (NIDS), Bro can be used to build a NIDS but is much more. Bro can also be used for collecting network measurements, conducting forensic investigations, traffic baselining and more.",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https: //en.wikipedia.org/wiki/Bro_(software)"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--31cbe37d-8c50-4738-8bfc-3d4046688182",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Security Onion",
+      "category": "IDS",
+      "description": "Security Onion is a free and open source Linux distribution for intrusion detection, enterprise security monitoring, and log management.",
+      "external_references": [
+        {
+          "source_name": "security onion",
+          "description": "definition",
+          "url": "https://securityonion.net/#about"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--05a9c56b-73e8-4462-92e9-6cea99dc0740",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Tripwire",
+      "category": "File Integrity Monitoring",
+      "description": "Open Source Tripwire is a free software security and data integrity tool for monitoring and alerting on specific file change(s) on a range of systems.",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Open_Source_Tripwire"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--8db34498-ce94-4e22-9892-ba378f37f55d",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "AIDE",
+      "category": "File Integrity Monitoring",
+      "description": "AIDE takes a snapshot of the state of the system, register hashes, modification times, and other data regarding the files defined by the administrator.",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Advanced_Intrusion_Detection_Environment"
+        },
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Host-based_intrusion_detection_system_comparison"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--442630b1-43da-4b98-8244-842b02174987",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "chkrootkit",
+      "description": "chkrootkit (Check Rootkit) is a common Unix-based program intended to help system administrators check their system for known rootkits.",
+      "category": "Standard EDR",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Chkrootkit"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--49632f3f-74f8-462d-be45-ed7a196bb350",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Yara",
+      "description": "YARA is the name of a tool primarily used in malware research and detection.",
+      "category": "File Integrity Monitoring",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/YARA"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--88962710-84a0-4c51-be6b-f768e5f57bf7",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "OSSEC",
+      "description": "OSSEC (Open Source HIDS SEcurity) is a free, open-source host-based intrusion detection system (HIDS). It performs log analysis, integrity checking, Windows registry monitoring, rootkit detection, time-based alerting, and active response.",
+      "category": "Standard EDR",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/OSSEC"
+        },
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": " https://en.wikipedia.org/wiki/Host-based_intrusion_detection_system_comparison"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--edc667e7-6f88-4403-805d-3a73808b4c4c",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Wireshark",
+      "description": "Wireshark is a free and open source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education.",
+      "category": "Packet Analyzer",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Wireshark"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--565fe69f-0088-484d-a1c5-19b374d1083d",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Tcpdump",
+      "description": "tcpdump is a common packet analyzer that runs under the command line",
+      "category": "Packet Analyzer",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Tcpdump"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--f42f974a-2f57-40aa-9f7f-02dc4d9dca40",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Ngrep",
+      "description": "ngrep (network grep) is a network packet analyzer written by Jordan Ritter.[2] It has a command-line interface, and relies upon the pcap library and the GNU regex library.",
+      "category": "Packet Analyzer",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Ngrep"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--f42f974a-2f57-40aa-9f7f-02dc4d9dca40",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Microsoft Message Analyzer",
+      "description": "Microsoft Message Analyzer is a new tool for capturing, displaying, and analyzing protocol messaging traffic, events, and other system or application messages in network troubleshooting and other diagnostic scenarios.",
+      "category": "Packet Analyzer",
+      "external_references": [
+        {
+          "source_name": "Mircosoft",
+          "description": "definition",
+          "url": "https://docs.microsoft.com/en-us/message-analyzer/microsoft-message-analyzer-operating-guide"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--2b92de56-d985-49bd-ae28-91f36dacbcc1",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Sguil",
+      "description": "Sguil (pronounced sgweel or squeal) is a collection of free software components for Network Security Monitoring (NSM) and event driven analysis of IDS alerts.",
+      "category": "Network Security Monitoring (NSM)",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Sguil"
+        },
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Intrusion_detection_system"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-capability",
+      "id": "x-unfetter-capability--22159b84-3f9c-484e-bc74-da6ce9ddbec3",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "modified": "2018-03-23T18:43:23.711Z",
+      "created": "2018-03-23T18:43:23.711Z",
+      "name": "Fail2ban",
+      "description": "Fail2Ban is an intrusion prevention software framework that protects computer servers from brute-force attacks",
+      "category": "Intrusion Prevention System (IPS)",
+      "external_references": [
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Fail2ban"
+        },
+        {
+          "source_name": "Wikipedia",
+          "description": "definition",
+          "url": "https://en.wikipedia.org/wiki/Intrusion_detection_system"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+      ],
+      "granular_markings": [
+        {
+          "marking_ref": "marking-definition--947e535f-65da-49c6-8500-a37ecff0e537"
+        }
+      ]
+    }
+  ]
+}
