@@ -1,3 +1,20 @@
+- name: Create Private Config Volume
+  docker_volume:
+    name: private-config
+
+- name: Create certs volume
+  docker_volume:
+    name: certs
+
+- name: Create data-db volume
+  docker_volume:
+    name: data-db
+
+- name: Create data-backup volume
+  docker_volume:
+    name: data-backup      
+
+
 - name: Create Repository
   docker_container:
     name: cti-stix-store-repository

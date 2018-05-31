@@ -17,7 +17,7 @@ dev_volume_list:
 
 uac_volume_list:
     # If we are in UAC, and thus need the private-config.json
-  - "{{ prepath+'unfetter-store/unfetter-discover-api/config/private-config.json:/usr/share/unfetter-discover-api/config/private-config.json' }}"
+  - "{{ prepath+'unfetter-store/unfetter-discover-api/config/:/usr/share/unfetter-discover-api/config/' }}"
 
 api_link_list:
   - "cti-stix-store-repository:cti-stix-store-repository"

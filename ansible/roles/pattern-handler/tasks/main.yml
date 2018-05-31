@@ -13,6 +13,9 @@
     pull: yes
   when: "build_action == 'pull'"     
 
+- debug:
+      msg: "This is {{ build_action }}"
+
 - name: Create pattern
   docker_container:
     name: "{{ container_name }}"
