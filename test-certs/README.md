@@ -14,13 +14,13 @@
 
 * request sign user private key
 
-	./bin/requestSignKey.sh
+	./bin/requestSignKey.sh <username>
 
 * sign the user cert, with new root certificate authority created in step 1
 
-	./bin/signKey.sh
+	./bin/signKey.sh <username>
 
 * export user cert to p12 for browser
 
-	./bin/exportToP12.sh
+	./bin/exportToP12.sh <username>
 

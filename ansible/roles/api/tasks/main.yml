@@ -1,0 +1,66 @@
+
+- name: "Create {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"
+
+
+- name: dev volume
+  set_fact:
+    volume_list: "{{ volume_list }} + {{ dev_volume_list }}"
+  when: run_mode=='dev'
+
+- name: uac volume and link list
+  set_fact:
+    volume_list: "{{ volume_list }} + {{ uac_volume_list }}"
+    api_link_list: "{{ api_link_list }} + {{ api_uac_link_list }}"
+  when: use_uac
+
+- debug:
+      msg: "This is the volume list {{ volume_list }}"
+
+- debug:
+      msg: "This is the link list {{ api_link_list }}"
+
+- name: Create API
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+    links: "{{ api_link_list }}"
+    volumes: "{{ volume_list }}"
+    env:
+      CTF_PARSE_HOST: http://unfetter-ctf-ingest
+      STIX_API_PROTOCOL: http
+      STIX_API_HOST: cti-stix-store
+      STIX_API_PORT: 3000
+      STIX_API_PATH: cti-stix-store-api
+      MONGO_REPOSITORY: cti-stix-store-repository
+      MONGO_PORT: 27017
+      MONGO_DBNAME: stix
+      ENV: dev
+    # Options: UAC, TEST, DEMO
+      RUN_MODE: "{{ 'UAC' if use_uac else 'DEMO' }}"
+    # If deployed in a proxy, add the proxy's URL here
+      HTTPS_PROXY_URL: ""
+      PATTERN_HANDLER_DOMAIN: unfetter-pattern-handler
+      PATTERN_HANDLER_PORT: 5000
+      SOCKET_SERVER_DOMAIN: "{{ 'socketserver' if use_uac else '' }}"
+      SOCKET_SERVER_PORT: "{{ '3333' if use_uac else '' }}"
+      #MONGO_DEBUG: "{{ 'false' if use_uac else '' }}"
+      MONGO_DEBUG: "true"
+    entrypoint:
+      - npm
+#    - run 
+      - start
+      #- "{{ 'start' if run_mode != 'dev' else 'run debugdev' }}" 
+  when: run_action     

@@ -13,7 +13,8 @@ services:
     image: unfetter-discover-processor
     volumes:
     #  TODO find a working volume mounting
-     - ../unfetter-store/unfetter-discover-processor/processor.js:/usr/src/app/processor.js
+     - ../unfetter-store/unfetter-discover-processor/src:/usr/src/app/src
+     - ../unfetter-store/unfetter-discover-processor/dist:/usr/src/app/dist
   unfetter-ctf-ingest:
     build: ../unfetter-store/unfetter-ctf-ingest
     container_name: unfetter-ctf-ingest

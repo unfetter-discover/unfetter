@@ -5,6 +5,8 @@ if [ -z "${1+x}" ]; then
 	exit 1
 fi
 
+echo 'Exporting to p12: ' $1
+
 key=$1.key
 cert=$1.crt
 p12=$1.p12
