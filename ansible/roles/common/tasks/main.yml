@@ -1,6 +1,12 @@
+- import_tasks: load-volumes.yml
+  when: load
+
 - name: Create Private Config Volume
   docker_volume:
     name: private-config
+#    state: present
+#  notify:
+#  - load private config    
 
 - name: Create certs volume
   docker_volume:
@@ -13,6 +19,7 @@
 - name: Create data-backup volume
   docker_volume:
     name: data-backup      
+
 
 
 - name: Create Repository
