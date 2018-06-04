@@ -546,7 +546,7 @@
     },
     {
         "_id": "f49ed2b9-3b09-4c3f-bd98-aa5394c53a84",
-        "configKey": "data_sources",
+        "configKey": "dataSources",
         "configValue": [
             "Asset Management",
             "API monitoring",
