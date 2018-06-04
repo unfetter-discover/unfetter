@@ -543,5 +543,62 @@
         "configGroups": [
             "public"
         ]
+    },
+    {
+        "_id": "f49ed2b9-3b09-4c3f-bd98-aa5394c53a84",
+        "configKey": "data_sources",
+        "configValue": [
+            "Asset Management",
+            "API monitoring",
+            "Anti - virus",
+            "Application logs",
+            "Authentication logs",
+            "BIOS",
+            "Binary file metadata",
+            "Browser extensions",
+            "DLL monitoring",
+            "Data loss prevention",
+            "Detonation chamber",
+            "Digital Certificate Logs",
+            "DNS records",
+            "EFI",
+            "Email gateway",
+            "Environment variable",
+            "File monitoring",
+            "Host network interface",
+            "Kernel drivers",
+            "Loaded DLLs",
+            "MBR",
+            "Mail server",
+            "Malware reverse engineering",
+            "Named pipes",
+            "Netflow / Enclave netflow",
+            "Network device logs",
+            "Network intrusion detection system",
+            "Network protocol analysis",
+            "Packet capture",
+            "PowerShell logs",
+            "Process command - line parameters",
+            "Process monitoring",
+            "Process use of network",
+            "Process whitelisting",
+            "SSL / TLS inspection",
+            "Sensor health and status",
+            "Services",
+            "System calls",
+            "Third - party application logs",
+            "User interface",
+            "VBR",
+            "Web application firewall logs",
+            "Web logs",
+            "Web proxy",
+            "WMI Objects",
+            "Windows Error Reporting",
+            "Windows Registry",
+            "Windows event logs"
+        ],
+        "configGroups": [
+            "stixConfig"
+        ]
     }
 ]
