@@ -45,6 +45,8 @@ services:
      - /tmp/certs/server.crt
     volumes:
      - ./certs/:/tmp/certs
+    cap_drop:
+    - ALL
 
   unfetter-discover-processor:
     image: unfetter/unfetter-discover-processor:0.3.7
@@ -92,6 +94,9 @@ services:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
+    cap_drop:
+    - ALL
+
 
   unfetter-ctf-ingest:
     container_name: unfetter-ctf-ingest
@@ -113,6 +118,9 @@ services:
     links:
      - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
+    cap_drop:
+    - ALL
+
      
   cti-stix-store-repository:
     image: mongo:3.4.1
@@ -124,6 +132,12 @@ services:
     - ./data/db:/data/db
     # Uncomment this if using authentication
     # entrypoint: /entrypoint.sh mongod --auth
+    cap_drop:
+    - ALL
+    cap_add:
+    - CHOWN
+    - SETUID
+    - SETGID
 
   unfetter-api-explorer:
     image: unfetter/unfetter-api-explorer:0.3.7
@@ -133,6 +147,9 @@ services:
     entrypoint:
      - npm
      - start
+    cap_drop:
+    - ALL
+
 
   unfetter-discover-api:
     image: unfetter/unfetter-discover-api:0.3.7
@@ -164,6 +181,9 @@ services:
     entrypoint:
     - npm
     - start
+    cap_drop:
+    - ALL
+
 
   unfetter-pattern-handler:
     image: unfetter/unfetter-pattern-handler:0.3.7
@@ -175,3 +195,6 @@ services:
     - --access-logfile
     - "-"
     - app:app
+    cap_drop:
+    - ALL
+
