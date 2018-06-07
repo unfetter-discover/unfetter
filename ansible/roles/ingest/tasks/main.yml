@@ -31,6 +31,9 @@
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
+    networks:
+      - name: "{{ docker_network }}"          
+    
     volumes: "{{ volume_list }}"
     entrypoint:
       - npm

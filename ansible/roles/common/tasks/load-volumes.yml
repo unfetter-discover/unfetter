@@ -1,6 +1,0 @@
-- name: Create Private Config Volume
-  docker_volume:
-    name: private-config
-  when: load
-  notify:
-  - load private config

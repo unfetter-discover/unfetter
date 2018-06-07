@@ -21,6 +21,9 @@
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
+    networks:
+      - name: "{{ docker_network }}"          
+    
     exposed_ports: 
     - "5000"
     published_ports:

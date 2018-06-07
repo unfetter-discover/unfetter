@@ -32,11 +32,17 @@
       msg: "This is the link list {{ api_link_list }}"
 - debug:
       msg: "This is {{ build_action }}"
+
+
+
+
 - name: Create API
   docker_container:
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
+    networks:
+      - name: "{{ docker_network }}"          
     links: "{{ api_link_list }}"
     volumes: "{{ volume_list }}"
     env:

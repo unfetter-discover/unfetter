@@ -1,6 +1,6 @@
 ---
 - name: Build Playbook
-  hosts: prod
+  hosts: dev
   tasks:
   # Include the basic variables needed to run the docker build and docker run commands
 #  - include_vars:

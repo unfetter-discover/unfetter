@@ -27,6 +27,9 @@
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
+    networks:
+      - name: "{{ docker_network }}"          
+
 #    network_mode: bridge        
     exposed_ports: 
     - "443"
@@ -38,7 +41,8 @@
     volumes: 
      - "{{ prepath }}/unfetter/config/nginx/default.conf:/etc/nginx/conf.d/default.conf"
      - "{{ prepath }}/unfetter/config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra"
-     - "{{ prepath }}/unfetter/config/certs/:/etc/pki/tls/certs"
+#     - "{{ prepath }}/unfetter/config/certs/:/etc/pki/tls/certs"
+     - "certs:/etc/pki/tls/certs:ro"
 
   # TAXII
      - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii.conf' if use_taxii else 'taxii-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii.conf"

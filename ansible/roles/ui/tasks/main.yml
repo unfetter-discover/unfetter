@@ -20,6 +20,8 @@
       name: "{{ container_name }}"
       image: "{{ image_name }}"
       state: started
+      networks:
+      - name: "{{ docker_network }}"      
 #Need to make this valued differently for UAC and Demo
       entrypoint:
       - npm

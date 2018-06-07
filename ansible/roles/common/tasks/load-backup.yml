@@ -1,0 +1,5 @@
+
+    - name: load backup mongo-db
+      command: "{{ item }}"
+      with_items:    
+        - docker exec -it cti-stix-store-repository mongorestore --host localhost --archive=/data/mongo.archive

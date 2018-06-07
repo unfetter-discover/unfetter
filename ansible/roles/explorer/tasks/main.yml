@@ -19,6 +19,9 @@
   docker_container:
     name: "{{ container_name }}"
     image: "{{ image_name }}"
+    networks:
+      - name: "{{ docker_network }}"          
+   
     state: started
     env: 
      PUBLIC_PATH: /explorer/
