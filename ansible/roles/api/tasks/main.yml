@@ -30,12 +30,19 @@
 
 - debug:
       msg: "This is the link list {{ api_link_list }}"
+- debug:
+      msg: "This is {{ build_action }}"
+
+
+
 
 - name: Create API
   docker_container:
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
+    networks:
+      - name: "{{ docker_network }}"          
     links: "{{ api_link_list }}"
     volumes: "{{ volume_list }}"
     env:
@@ -60,7 +67,5 @@
       MONGO_DEBUG: "true"
     entrypoint:
       - npm
-#    - run 
       - start
-      #- "{{ 'start' if run_mode != 'dev' else 'run debugdev' }}" 
   when: run_action     

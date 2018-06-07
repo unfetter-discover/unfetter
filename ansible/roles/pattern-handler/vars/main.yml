@@ -3,4 +3,8 @@
 dir: stix2pattern
 path: "{{ prepath + dir}}"
 container_name: unfetter-pattern-handler
+<<<<<<< HEAD
 image_name: "{{registry}}{{ container_name }}:{{tag}}"
+=======
+image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
+>>>>>>> ansible

@@ -1,0 +1,75 @@
+---
+- name: Upgrades Unfetter to support version 0.3.8
+  hosts: dev
+  tasks:
+    # Create the proper Volumes
+
+    - name: Create private-config volume
+      docker_volume:
+        name: private-config
+        state: present
+      notify:
+        - load private-config
+      
+
+  
+    - name: Create certs volume
+      docker_volume:
+        name: certs
+        state: present
+      notify:
+        - load certs
+
+    - name: Create mongo-db volume
+      docker_volume:
+        name: mongo-db
+        state: present
+
+        
+    - name: add to inventory for mongo
+      add_host:
+        name: cti-stix-store-repository
+        ansible_connection: docker
+      #changed_when: false
+      notify: 
+       - backup mongo
+
+    # Copy the certs from the unfetter-discover-gateway to the newly created volume      
+  handlers:
+    - name: load certs
+      command: "{{ item }}"
+      with_items:
+        - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/ ./backup/
+        - docker run -v certs:/data --name helper busybox true
+        - docker cp ./backup/certs helper:/data
+        - docker rm helper
+
+    - name: load private-config
+      command: "{{ item }}"
+      with_items:    
+        - docker cp unfetter-discover-api:/usr/share/unfetter-discover-api/config/ ./backup/
+        - docker run -v private-config:/data --name helper busybox true
+        - docker cp ./backup/config helper:/data
+        - docker rm helper
+
+    - name: backup mongo
+      delegate_to: cti-stix-store-repository
+      raw: "{{ item }}"
+      with_items:
+        - "mongodump --host localhost --archive=/data/db/mongo.archive"
+        - "cp ../data/db/mongo.archive /tmp/"
+      notify:
+      - load mongo-db volume
+
+    - name: load mongo-db volume
+      command: "{{ item }}"
+      with_items:    
+        - docker cp cti-stix-store-repository:/tmp/mongo.archive ./backup/mongo.archive
+        - docker run -d -v mongo-db:/data --name helperdb mongo:3.4.1
+        - docker cp ./backup/mongo.archive helperdb:/data
+        - docker exec helperdb mongorestore --host localhost --archive=/data/mongo.archive
+        - docker stop helperdb
+        - docker rm helperdb
+
+
+

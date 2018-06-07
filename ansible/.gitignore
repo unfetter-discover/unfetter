@@ -2,3 +2,5 @@ virtualenv
 data
 *.retry
 
+*.tar
+backup/

@@ -25,6 +25,9 @@
     name: unfetter-discover-processor
     image: "{{ image_name }}"
     state: started
+    networks:
+      - name: "{{ docker_network }}"          
+    
     volumes: "{{ volume_list }}"
     env:
      MONGO_HOST: cti-stix-store-repository

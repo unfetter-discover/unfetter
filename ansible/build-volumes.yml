@@ -1,0 +1,9 @@
+---
+- name: Build The volumes
+  hosts: dev
+  tasks:
+  
+  - include_role:
+        name: common
+    vars:
+      load: true
