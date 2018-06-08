@@ -11,7 +11,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "sysmon",
       "description": "System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations, network connections, and changes to file creation time",
-      "category": "Enterprise SIEM",
+      "category": "x-unfetter-category--a746e3b0-0e4a-439e-a2e1-e33105f6bada",
       "external_references": [
         {
           "source_name": "Microsoft",
@@ -37,7 +37,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "RootkitRevealer",
       "description": "RootkitRevealer is an advanced rootkit detection utility. It runs on Windows XP (32-bit) and Windows Server 2003 (32-bit), and its output lists Registry and file system API discrepancies that may indicate the presence of a user-mode or kernel-mode rootkit. RootkitRevealer successfully detects many persistent rootkits including AFX, Vanquish and HackerDefender (note: RootkitRevealer is not intended to detect rootkits like Fu that don't attempt to hide their files or registry keys).",
-      "category": "Standard EDR",
+      "category": "x-unfetter-category--07535ddb-899c-40ca-a08b-d08691689511",
       "external_references": [
         {
           "source_name": "Microsoft",
@@ -62,7 +62,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "PsLogList",
       "description": "The Resource Kit comes with a utility, elogdump, that lets you dump the contents of an Event Log on the local or a remote computer. PsLogList is a clone of elogdump except that PsLogList lets you login to remote systems in situations your current set of security credentials would not permit access to the Event Log, and PsLogList retrieves message strings from the computer on which the event log you view resides.",
-      "category": "Standard EDR",
+      "category": "x-unfetter-category--07535ddb-899c-40ca-a08b-d08691689511",
       "external_references": [
         {
           "source_name": "Microsoft",
@@ -87,7 +87,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "NortMcFee antivirus",
       "description": "NortMcFee AntiVirus is an anti-malware software developed and distributed. It uses signatures and heuristics to identify viruses. Other features included in it are e-mail spam filtering and phishing protection",
-      "category": "Generic AV",
+      "category": "x-unfetter-category--19cd220b-05b0-4fd4-9e53-0ba2cbf3add2",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -112,7 +112,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Iptables",
       "description": "Iptables is a user-space utility program that allows a system administrator to configure the tables[2] provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.",
-      "category": "Network Firewall",
+      "category": "x-unfetter-category--987e35d3-b8a4-45e2-a56b-c3fbf2ed14d2",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -137,7 +137,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "UFW - Uncomplicated Firewall",
       "description": "The default firewall configuration tool for Ubuntu is ufw. Developed to ease iptables firewall configuration, ufw provides a user friendly way to create an IPv4 or IPv6 host-based firewall. By default UFW is disabled.",
-      "category": "Network Firewall",
+      "category": "x-unfetter-category--987e35d3-b8a4-45e2-a56b-c3fbf2ed14d2",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -162,7 +162,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "PfSense",
       "description": "PfSense is an open source firewall/router computer software distribution based on FreeBSD.[2][3][4] It is installed on a physical computer or a virtual machine to make a dedicated firewall/router for a network.[5]",
-      "category": "Network Firewall",
+      "category": "x-unfetter-category--987e35d3-b8a4-45e2-a56b-c3fbf2ed14d2",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -187,7 +187,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Ipfirewall",
       "description": "Ipfirewall or ipfw is a FreeBSD IP packet filter and traffic accounting facility.",
-      "category": "Network Firewall",
+      "category": "x-unfetter-category--987e35d3-b8a4-45e2-a56b-c3fbf2ed14d2",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -212,7 +212,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "PF (Packet Filter)",
       "description": "PF (Packet Filter, also written pf) is a BSD licensed stateful packet filter, a central piece of software for firewalling. It is comparable to netfilter (iptables), ipfw and ipfilter.",
-      "category": "Network Firewall",
+      "category": "x-unfetter-category--987e35d3-b8a4-45e2-a56b-c3fbf2ed14d2",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -237,7 +237,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Rsyslog",
       "description": "Rsyslog is an open-source software utility used on UNIX and Unix-like computer systems for forwarding log messages in an IP network. It implements the basic syslog protocol, extends it with content-based filtering, rich filtering capabilities, flexible configuration options and adds features such as using TCP for transport.",
-      "category": "Syslog",
+      "category": "x-unfetter-category--cf0a3ea2-0689-4bb0-b17a-605d863564ec",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -262,7 +262,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Syslog-ng",
       "description": "Syslog-ng is a free and open-source implementation of the syslog protocol for Unix and Unix-like systems. It extends the original syslogd model with content-based filtering, rich filtering capabilities, flexible configuration options and adds important features to syslog, like using TCP for transport. As of today syslog-ng is developed by Balabit IT Security Ltd.",
-      "category": "Syslog",
+      "category": "x-unfetter-category--cf0a3ea2-0689-4bb0-b17a-605d863564ec",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -287,7 +287,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Systemd-journald",
       "description": "Systemd-journald is a daemon responsible for event logging, with append-only binary files serving as its logfiles. The system administrator may choose whether to log system events with systemd-journald, syslog-ng or rsyslog. The potential for corruption of the binary format has led to much heated debate.[22]",
-      "category": "Syslog",
+      "category": "x-unfetter-category--cf0a3ea2-0689-4bb0-b17a-605d863564ec",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -335,7 +335,7 @@
       "modified": "2018-03-23T18:43:23.711Z",
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Snort",
-      "category": "IDS",
+      "category": "x-unfetter-category--22ee1efb-1dbb-44a2-ac13-7a9c8cdbfeeb",
       "description": "Snort is a free and open source network intrusion prevention system (IPS) and network intrusion detection system (IDS)[4] created by Martin Roesch in 1998.[5]",
       "external_references": [
         {
@@ -360,7 +360,7 @@
       "modified": "2018-03-23T18:43:23.711Z",
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Bro IDS",
-      "category": "IDS",
+      "category": "x-unfetter-category--22ee1efb-1dbb-44a2-ac13-7a9c8cdbfeeb",
       "description": "Often compared to a network intrusion detection system (NIDS), Bro can be used to build a NIDS but is much more. Bro can also be used for collecting network measurements, conducting forensic investigations, traffic baselining and more.",
       "external_references": [
         {
@@ -385,7 +385,7 @@
       "modified": "2018-03-23T18:43:23.711Z",
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Security Onion",
-      "category": "IDS",
+      "category": "x-unfetter-category--22ee1efb-1dbb-44a2-ac13-7a9c8cdbfeeb",
       "description": "Security Onion is a free and open source Linux distribution for intrusion detection, enterprise security monitoring, and log management.",
       "external_references": [
         {
@@ -410,7 +410,7 @@
       "modified": "2018-03-23T18:43:23.711Z",
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Tripwire",
-      "category": "File Integrity Monitoring",
+      "category": "x-unfetter-category--0e0dc794-fe31-4dac-8b2e-3f26d84bab16",
       "description": "Open Source Tripwire is a free software security and data integrity tool for monitoring and alerting on specific file change(s) on a range of systems.",
       "external_references": [
         {
@@ -435,7 +435,7 @@
       "modified": "2018-03-23T18:43:23.711Z",
       "created": "2018-03-23T18:43:23.711Z",
       "name": "AIDE",
-      "category": "File Integrity Monitoring",
+      "category": "x-unfetter-category--0e0dc794-fe31-4dac-8b2e-3f26d84bab16",
       "description": "AIDE takes a snapshot of the state of the system, register hashes, modification times, and other data regarding the files defined by the administrator.",
       "external_references": [
         {
@@ -466,7 +466,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "chkrootkit",
       "description": "chkrootkit (Check Rootkit) is a common Unix-based program intended to help system administrators check their system for known rootkits.",
-      "category": "Standard EDR",
+      "category": "x-unfetter-category--07535ddb-899c-40ca-a08b-d08691689511",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -491,7 +491,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Yara",
       "description": "YARA is the name of a tool primarily used in malware research and detection.",
-      "category": "File Integrity Monitoring",
+      "category": "x-unfetter-category--0e0dc794-fe31-4dac-8b2e-3f26d84bab16",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -516,7 +516,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "OSSEC",
       "description": "OSSEC (Open Source HIDS SEcurity) is a free, open-source host-based intrusion detection system (HIDS). It performs log analysis, integrity checking, Windows registry monitoring, rootkit detection, time-based alerting, and active response.",
-      "category": "Standard EDR",
+      "category": "x-unfetter-category--07535ddb-899c-40ca-a08b-d08691689511",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -546,7 +546,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Wireshark",
       "description": "Wireshark is a free and open source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education.",
-      "category": "Packet Analyzer",
+      "category": "x-unfetter-category--4629bad7-ec4c-4e67-8684-29f56ab64429",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -571,7 +571,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Tcpdump",
       "description": "tcpdump is a common packet analyzer that runs under the command line",
-      "category": "Packet Analyzer",
+      "category": "x-unfetter-category--4629bad7-ec4c-4e67-8684-29f56ab64429",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -596,7 +596,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Ngrep",
       "description": "ngrep (network grep) is a network packet analyzer written by Jordan Ritter.[2] It has a command-line interface, and relies upon the pcap library and the GNU regex library.",
-      "category": "Packet Analyzer",
+      "category": "x-unfetter-category--4629bad7-ec4c-4e67-8684-29f56ab64429",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -621,7 +621,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Microsoft Message Analyzer",
       "description": "Microsoft Message Analyzer is a new tool for capturing, displaying, and analyzing protocol messaging traffic, events, and other system or application messages in network troubleshooting and other diagnostic scenarios.",
-      "category": "Packet Analyzer",
+      "category": "x-unfetter-category--4629bad7-ec4c-4e67-8684-29f56ab64429",
       "external_references": [
         {
           "source_name": "Mircosoft",
@@ -646,7 +646,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Sguil",
       "description": "Sguil (pronounced sgweel or squeal) is a collection of free software components for Network Security Monitoring (NSM) and event driven analysis of IDS alerts.",
-      "category": "Network Security Monitoring (NSM)",
+      "category": "x-unfetter-category--98ee2d42-98d6-461e-a08a-fd1ceb4d7b37",
       "external_references": [
         {
           "source_name": "Wikipedia",
@@ -676,7 +676,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Fail2ban",
       "description": "Fail2Ban is an intrusion prevention software framework that protects computer servers from brute-force attacks",
-      "category": "Intrusion Prevention System (IPS)",
+      "category": "x-unfetter-category--4370c89e-dcc0-4b7a-9cf5-de8d12b1ff0f",
       "external_references": [
         {
           "source_name": "Wikipedia",
