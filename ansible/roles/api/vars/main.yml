@@ -7,7 +7,7 @@ image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
 
     
 volume_list:
-  - "certs:/etc/pki/tls:ro"
+  - "certs:/etc/pki/tls/certs:ro"
 
 dev_volume_list:
     # If we are in dev, and thus we are linking in code
