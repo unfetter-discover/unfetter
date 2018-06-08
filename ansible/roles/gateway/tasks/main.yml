@@ -50,7 +50,7 @@
 
   # TAXII
      - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii.conf' if use_taxii else 'taxii-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii.conf"
-    
+     - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii-auth.conf' if use_taxii and use_taxii_tls else 'taxii-auth-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii-auth.conf"
    # In UAC
      - "{{ prepath }}/unfetter/config/nginx/{{ 'uac-locations.conf' if use_uac else 'blank.conf' }}:/etc/nginx/conf.d.runmode/runmode-locations.conf"
    # In USE_UNFETTER_UI

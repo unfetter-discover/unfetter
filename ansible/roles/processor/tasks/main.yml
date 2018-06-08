@@ -19,7 +19,8 @@
   set_fact:
     volume_list: "{{ volume_list }} + {{ dev_volume_list }}"
   when: run_mode=='dev'
-
+- debug:
+    msg: "PROCESSOR: volume List {{ volume_list }}"
 - name: Create Processor
   docker_container:
     name: unfetter-discover-processor
@@ -34,25 +35,34 @@
      # If deployed in a proxy, add the proxy's URL here
      HTTPS_PROXY_URL: ''
     entrypoint:
-     - node
-     - processor.js
+     - ts-node
+     - src/app.ts
      - --stix
-     - /tmp/examples/unfetter-stix/stix.json
-     - /tmp/examples/unfetter-stix/reports.stix.json
-     #- /tmp/examples/unfetter-stix/ntctf-attack-patterns.stix.json
-     #- /tmp/examples/unfetter-stix/assessments3-categories.stix.json
-     - /tmp/examples/unfetter-stix/assessments3.stix.json
+     - /tmp/examples/unfetter-stix/assessments3/assessment-sets.stix.json
+     - /tmp/examples/unfetter-stix/assessments3/capabilities.stix.json
+     - /tmp/examples/unfetter-stix/assessments3/categories.stix.json
+     - /tmp/examples/unfetter-stix/assessments3/object-assessments.stix.json
+     - /tmp/examples/unfetter-stix/ntctf-attack-patterns.stix.json
+     - /tmp/examples/unfetter-stix/reports.alerts.stix.json
+     - /tmp/examples/unfetter-stix/reports.vulns.stix.json
      - /tmp/examples/unfetter-stix/sightings.stix.json
+     - /tmp/examples/unfetter-stix/stix.json
      - --enhanced-stix-properties
      - /tmp/examples/unfetter-db/stix-enhancements.json
      - /tmp/examples/unfetter-db/stix-meta.json
      - --config
      - /tmp/examples/unfetter-db/config.json
      - /tmp/examples/unfetter-db/translation-config.json
+     - /tmp/examples/unfetter-db/taxii.config.json
      - --mitre-attack-data
      - enterprise
      - --auto-publish
      - "true"
+     - --auto-validate-patterns
+     - "true"
+     # Interval options: daily, weekly, monthly
+    #  - --interval
+    #  - daily
     links:
      - "cti-stix-store-repository:cti-stix-store-repository"
   when: run_action

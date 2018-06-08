@@ -8,7 +8,8 @@ link_list:
   - "unfetter-discover-api:unfetter-discover-api"
   - "unfetter-api-explorer:unfetter-api-explorer"
     
-
+taxii_link_list:
+  - "unfetter-taxii-server"
 
 ui_link_list:
     # If we are in dev, and thus we are linking in code
