@@ -25,6 +25,8 @@
     image: "{{ image_name }}"
     state: started
 #    network_mode: bridge   
+    networks:
+      - name: "{{ docker_network }}"          
 
     entrypoint:
      - npm

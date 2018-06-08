@@ -8,24 +8,10 @@
     pull: yes
   when: "build_action != ''"
 
-- debug:
-    msg: "The container is {{ container_name }} the image is {{ image_name }}"
 
-- name: build ui links
-  set_fact:
-    link_list: "{{ link_list }} + {{ ui_link_list }}"
-  when: use_unfetter_ui
 
-- name: build uac links
-  set_fact:
-    link_list: "{{ link_list }} + {{ uac_link_list }}"
-  when: use_uac
-
-- name: build taxii links
-  set_fact:
-    link_list: "{{ link_list }} + {{ taxii_link_list }}"
-  when: use_taxii
-
+- debug: 
+      msg: "{{ link_list }}"
 - name: Create the {{ container_name }} from image {{ image_name }}
   docker_container:
     name: "{{ container_name }}"

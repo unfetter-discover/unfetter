@@ -14,27 +14,10 @@
   when: "build_action == 'pull'"
 
 
-- name: dev volume
-  set_fact:
-    volume_list: "{{ volume_list }} + {{ dev_volume_list }}"
-  when: run_mode=='dev'
 
-- name: uac volume and link list
-  set_fact:
-    volume_list: "{{ volume_list }} + {{ uac_volume_list }}"
-    api_link_list: "{{ api_link_list }} + {{ api_uac_link_list }}"
-  when: use_uac
 
 - debug:
-      msg: "This is the volume list {{ volume_list }}"
-
-- debug:
-      msg: "This is the link list {{ api_link_list }}"
-- debug:
-      msg: "This is {{ build_action }}"
-
-
-
+    msg: "{{ container_name }}: volume List {{ volume_list }}"
 
 - name: Create API
   docker_container:
@@ -43,8 +26,9 @@
     state: started
     networks:
       - name: "{{ docker_network }}"          
-    links: "{{ api_link_list }}"
-    volumes: "{{ volume_list }}"
+    volumes: "{{ volume_list }} + {{ dev_volume_list if run_mode == 'dev' else '' }}"
+    links: "{{ api_link_list }} + {{ api_uac_link_list if use_uac == true else '' }}"
+
     env:
       CTF_PARSE_HOST: http://unfetter-ctf-ingest
       STIX_API_PROTOCOL: http

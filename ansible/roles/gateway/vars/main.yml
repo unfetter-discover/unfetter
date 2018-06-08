@@ -4,17 +4,12 @@ image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
 
 
 
-link_list:
-  - "unfetter-discover-api:unfetter-discover-api"
-  - "unfetter-api-explorer:unfetter-api-explorer"
+base_link: "unfetter-discover-api:unfetter-discover-api,unfetter-api-explorer:unfetter-api-explorer"
     
-taxii_link_list:
-  - "unfetter-taxii-server"
+taxii_link_list: ",unfetter-taxii-server"
 
-ui_link_list:
-    # If we are in dev, and thus we are linking in code
-  - "{{ 'unfetter-ui:unfetter-ui' }}"
+ui_link_list: ",unfetter-ui:unfetter-ui"
  
 
-uac_link_list:
-  - "{{ 'unfetter-socket-server:unfetter-socket-server' }}"
+uac_link_list: ",unfetter-socket-server:unfetter-socket-server"
+link_list: "{{ base_link }}{{ ui_link_list if use_unfetter_ui else '' }}{{ uac_link_list if use_uac else '' }}{{ taxii_link_list if use_taxii else '' }}"

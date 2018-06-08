@@ -15,22 +15,20 @@
     pull: yes
   when: "build_action == 'pull'"     
 
-- name: dev volume
-  set_fact:
-    volume_list: "{{ volume_list }} + {{ dev_volume_list }}"
-  when: run_mode=='dev'
-- debug:
-    msg: "PROCESSOR: volume List {{ volume_list }}"
+
 - name: Create Processor
   docker_container:
     name: unfetter-discover-processor
     image: "{{ image_name }}"
     state: started
+    restart: yes
     networks:
       - name: "{{ docker_network }}"          
     
-    volumes: "{{ volume_list }}"
+    volumes: "{{ volume_list }} + {{ dev_volume_list if run_mode=='dev' else '' }}"
     env:
+     PATTERN_HANDLER_DOMAIN: unfetter-pattern-handler
+     PATTERN_HANDLER_PORT: 5000    
      MONGO_HOST: cti-stix-store-repository
      # If deployed in a proxy, add the proxy's URL here
      HTTPS_PROXY_URL: ''
