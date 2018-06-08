@@ -1,13 +1,12 @@
 ---
 - name: Build Playbook
-  hosts: all
-
+  hosts: dev
   tasks:
   # Include the basic variables needed to run the docker build and docker run commands
 #  - include_vars:
 #      file: "{{ playbook_dir }}/group_vars/default_vars.yml"
   # Deployers can override any of the variables in the "override_vars.yml" file
-                    
+                   
   - name: Start running the commands
     import_tasks: discover-tasks.yml
 

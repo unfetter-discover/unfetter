@@ -1,4 +1,32 @@
 ---
+
+  - name: Include override vars
+    register: overrides
+    include_vars:
+      file: "{{ playbook_dir }}/group_vars/override_vars.yml"
+    ignore_errors: yes
+  - set_fact:
+     docker_tag: "{{ overrides.docker_tag | default(docker_tag) }}"
+     build_action: "{{ overrides.build_action | default(build_action) }}"
+     run_action: "{{ overrides.run_action | default(run_action) }}"
+     use_unfetter_ui: "{{ overrides.use_unfetter_ui | default(use_unfetter_ui) }}"
+     use_uac: "{{ overrides.use_uac | default(use_uac) }}"
+     use_taxii: "{{ overrides.use_taxii | default(use_taxii) }}"
+     registry: "{{ overrides.docker_tag | default(registry) }}"
+     prepath: "{{ overrides.prepath | default(prepath) }}"
+  
+  - name: getting docker_tag
+    debug:
+        msg: 
+          - "docker_tag: {{ docker_tag }} "
+          - "build_action: {{ build_action }}"
+          - "run_action: {{ run_action }}"
+          - "use_unfetter_ui: {{ use_unfetter_ui }}"
+          - "use_uac: {{ use_uac }}"
+          - "use_taxii: {{ use_taxii }}"
+          - "registry: {{ registry }}"    
+          - "prepath: {{ prepath }}"    
+  
   - include_role:
         name: common
   - include_role:
@@ -7,6 +35,10 @@
         name: pattern-handler
   - include_role:
         name: socket-server
+# at the moment, you have to build socket server from scratch.  This likely needs to be fixed so that it can be 
+# pulled from hub.docker.com        
+    vars:
+        build_action: 'local'
   - include_role:
         name: api
   - include_role:

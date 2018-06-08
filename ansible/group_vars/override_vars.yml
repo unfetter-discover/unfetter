@@ -1,0 +1,12 @@
+    # To override any of the variables, just uncomment the line to override
+    
+    #tag: "0.3.6"
+    #docker_tag: "0.3.6"
+    #prepath: "../../"
+    #build_action: "pull" 
+    #run_action: "demo"
+    #use_unfetter_ui: true
+    #use_uac: true
+    #use_taxii: false
+    #run_mode: "dev"
+    #registry: "unfetter/"
