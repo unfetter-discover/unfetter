@@ -4,11 +4,7 @@
 - name: "Build {{ container_name }}"
   docker_image:
     name: "{{ container_name }}"
-<<<<<<< HEAD
-    tag: "{{ tag }}"
-=======
     tag: "{{ docker_tag }}"
->>>>>>> ansible
     state: present
     path: "{{ path }}"
   when: "build_action == 'local'"
