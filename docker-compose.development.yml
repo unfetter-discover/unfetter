@@ -32,7 +32,8 @@ services:
       - ./certs/:/etc/pki/tls/certs
       - ../unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src
       - ../unfetter-store/unfetter-socket-server/dist:/usr/share/unfetter-socket-server/dist
-      - ../unfetter-store/unfetter-socket-server/config/private:/usr/share/unfetter-socket-server/config/private
+      - ../unfetter-store/unfetter-socket-server/config/private-config.json:/usr/share/unfetter-socket-server/config/private-config.json
+      - ../unfetter-store/unfetter-socket-server/config/private-config.email.json:/usr/share/unfetter-socket-server/config/private-config.email.json
     environment:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
@@ -96,7 +97,7 @@ services:
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
-    - ../unfetter-store/unfetter-discover-api/config/private:/usr/share/unfetter-discover-api/config/private
+    - ../unfetter-store/unfetter-discover-api/config/private-config.json:/usr/share/unfetter-discover-api/config/private-config.json
     environment:
     - SOCKET_SERVER_DOMAIN = socketserver
     - SOCKET_SERVER_PORT = 3333

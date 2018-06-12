@@ -58,7 +58,7 @@ services:
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
     - ../unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api
     - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
-    - ../unfetter-store/unfetter-discover-api/config/private:/usr/share/unfetter-discover-api/config/private
+    - ../unfetter-store/unfetter-discover-api/config/private-config.json:/usr/share/unfetter-discover-api/config/private-config.json
     entrypoint:
     - npm
     - run
