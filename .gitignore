@@ -8,3 +8,4 @@ test-certs/output/*
 data/db/*
 # need at least one file in the folder
 !data/db/.gitkeep
+docker-hub.pass.txt
