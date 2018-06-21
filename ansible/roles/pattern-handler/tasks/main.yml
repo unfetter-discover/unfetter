@@ -1,11 +1,11 @@
-
+# Create the image if the build_action is local
 - name: "Create {{ container_name }}"
   docker_image:
     name: "{{ image_name }}"
     state: present
     path: "{{ path }}"
   when: "build_action == 'local'"
-
+# Pull the image from a registry if the build_action is pull
 - name: "Pull {{ container_name }}"
   docker_image:
     name: "{{ image_name }}"
@@ -13,11 +13,16 @@
     pull: yes
   when: "build_action == 'pull'"     
 
+- debug:
+      msg: "This is {{ build_action }}"
+# Create the pattern-handler 
 - name: Create pattern
   docker_container:
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
     exposed_ports: 
     - "5000"
     published_ports:
