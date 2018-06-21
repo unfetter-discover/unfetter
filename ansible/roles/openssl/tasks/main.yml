@@ -1,8 +1,15 @@
+---
+# Pull and run the open ssl
+
+# TODO: Pull this into the common role
 - name: Create and Run {{ container_name }}
   docker_container:
     name: "{{ container_name }}"
     image: "svagi/openssl:latest"
     state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
+    
     pull: true
     exposed_ports: 
     - 443:443
@@ -24,5 +31,5 @@
      - -out
      - /tmp/certs/server.crt
     volumes:
-     - "{{ prepath }}/unfetter/config/certs/:/tmp/certs"
+     - "certs:/tmp:rw"
   when: run_action

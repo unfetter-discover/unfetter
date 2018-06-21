@@ -1,0 +1,20 @@
+#  The common role is run first, and contains all containers that are pulled from
+#  docker repositories that are not part of Unfetter
+
+#  It also will run generic tasks.
+
+
+
+- name: Validate private-config volume
+  docker_volume:
+    name: private-config      
+
+- name: Validate ui-config volume
+  docker_volume:
+    name: ui-config      
+
+
+
+- name: Run api_configuration_tool.py file
+  command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v $thepath/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+    

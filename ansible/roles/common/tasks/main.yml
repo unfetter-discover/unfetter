@@ -1,13 +1,63 @@
+#  The common role is run first, and contains all containers that are pulled from
+#  docker repositories that are not part of Unfetter
+
+#  It also will run generic tasks.
 
 
+
+# Ensure the volumes are created. 
+- name: Create certs volume
+  docker_volume:
+    name: certs
+
+- name: Create mongo-db volume
+  docker_volume:
+    name: mongo-db
+
+- name: Create mongo-db volume
+  docker_volume:
+    name: ui-config
+
+
+- name: Create private-config volume
+  docker_volume:
+    name: private-config
+  notify:
+    - build private config
+  
+
+
+
+
+# Create the docker network that all the containers will become part Unfetter
+# TODO - need to get the docker network to be created if it doesn't exist.  Getting errors right now
+- name: Create the Docker Network - {{ docker_network_name }}
+  docker_network:
+    state: present
+    name: "{{ docker_network_name }}"
+
+# Debug message to show what the docker name is    
+- debug:
+    msg: "The network is {{ docker_network_name }}"
+
+
+
+# Create the cti-stix-store-repository docker container
 - name: Create Repository
   docker_container:
     name: cti-stix-store-repository
     image: "mongo:3.4.1"
     state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
+    
+    # Since the repository is a mongodb, we always pull
     pull: true
     volumes:
-    - "{{ prepath }}/unfetter/data/db:/data/db"
+#    - "{{ prepath }}/unfetter/data/db:/data/db"
+    - "mongo-db:/data/db"
     published_ports:
     - "27018:27017"
   when: run_action 
+
+

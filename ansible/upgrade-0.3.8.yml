@@ -1,0 +1,100 @@
+---
+####################################################################################
+#  This playbook will upgrade from 0.3.7 to 0.3.8  
+#
+####################################################################################
+
+- name: Upgrades Unfetter to support version 0.3.8
+  hosts: dev
+  tasks:
+
+    # New in version 0.3.8, we will have Docker Volumes for shared configuration data, databases, etc.
+    #  For develop mode, local file directories for source will still be used.
+
+    # private-config will store the private configuration information for UAC.  This needs to be moved to
+    # Docker secrets management with Docker Swarm
+
+    - name: Create private-config volume
+      docker_volume:
+        name: private-config
+        state: present
+#      notify:
+#        - load private-config
+      
+
+    # Certs volume holds the SSL certs
+    - name: Create certs volume
+      docker_volume:
+        name: certs
+        state: present
+      notify:
+        - load certs
+
+    # Mongo-db volume will hold the mongo database
+    - name: Create mongo-db volume
+      docker_volume:
+        name: mongo-db
+        state: present
+
+        
+    # In order to run a command inside a docker container, then that container must be 
+    # added to the inventory.     
+    - name: add to inventory for mongo
+      add_host:
+        name: cti-stix-store-repository
+        ansible_connection: docker
+      #changed_when: false
+      notify: 
+       - backup mongo
+
+    
+    - name: The UI assets volume
+      docker_volume:
+          name: ui-assets
+          state: present
+    
+  handlers:
+    # Once the certs volume is created, this handler will pull the certs from the gateway, and store them
+    # into the volume.
+
+    # Running the commands with "with_items" lets us easily run one command after another and manage the order
+    - name: load certs
+      command: "{{ item }}"
+      with_items:
+        - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/ ./backup/
+        - docker run -v certs:/data --name helper busybox true
+        - docker cp ./backup/certs helper:/data
+        - docker rm helper
+    
+
+    
+    # Removing this for now, since we just need to rerun the configuration code again
+    # Once the private-config volume is created, this handler will pull the config data from unfetter-discover-api and store
+    # into the volume
+    - name: load private-config
+        command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v $thepath/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+    
+    # Once the mongo-db volume is created, this handler will backup the database and extract it
+    - name: backup mongo
+      delegate_to: cti-stix-store-repository
+      raw: "{{ item }}"
+      with_items:
+        - "mongodump --host localhost --archive=/data/db/mongo.archive"
+        - "cp ../data/db/mongo.archive /tmp/"
+      notify:
+      - load mongo-db volume
+    
+    # When the database file is archived and extracted, it needs to be moved into the 
+    # volume and restored as a valid mongo database
+    - name: load mongo-db volume
+      command: "{{ item }}"
+      with_items:    
+        - docker cp cti-stix-store-repository:/tmp/mongo.archive ./backup/mongo.archive
+        - docker run -d -v mongo-db:/data/db --name helperdb mongo:3.4.1
+        - docker cp ./backup/mongo.archive helperdb:/tmp
+        - docker exec helperdb mongorestore --host localhost --archive=/tmp/mongo.archive
+        - docker stop helperdb
+        - docker rm helperdb
+
+
+
