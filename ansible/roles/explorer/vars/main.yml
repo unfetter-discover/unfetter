@@ -1,7 +1,12 @@
 ---
 
+# The top level directory that the code is in
 dir: "unfetter-store"
+
+# The relative path to the directory
 path: "{{ prepath + dir}}"
+
+# Since this image does not use the standard Dockerfile, we must identify the Dockerfile to use
 dockerfile: "unfetter-api-explorer/parent-context.Dockerfile"
 container_name: unfetter-api-explorer
-image_name: "{{registry}}{{ container_name }}:{{tag}}"
+image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
