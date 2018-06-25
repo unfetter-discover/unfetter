@@ -1,4 +1,4 @@
-
+# Build the Unfetter UI if the build_action is local
 - name: "Create {{ container_name }}"
   docker_image:
     name: "{{ image_name }}"
@@ -6,6 +6,8 @@
     path: "{{ path }}"
   when: "build_action == 'local'"
 
+
+# Pull the image from a registry
 - name: "Pull {{ container_name }}"
   docker_image:
     name: "{{ image_name }}"
@@ -13,14 +15,14 @@
     pull: yes
   when: "build_action == 'pull'"     
 
-
-
+# Create the container
 - name: Create the {{ container_name }} container
   docker_container:
       name: "{{ container_name }}"
       image: "{{ image_name }}"
       state: started
-#Need to make this valued differently for UAC and Demo
+      networks:
+      - name: "{{ docker_network_name }}"      
       entrypoint:
       - npm
       - run
@@ -28,5 +30,4 @@
       volumes: 
         - "{{ prepath }}/unfetter-ui/src:/usr/share/unfetter-ui/src"
         - "{{ prepath }}/unfetter-ui/config:/usr/share/unfetter-ui/config"
-     
   when: "(use_unfetter_ui) and (run_action)"      

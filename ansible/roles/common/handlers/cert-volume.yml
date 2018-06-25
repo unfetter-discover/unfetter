@@ -1,0 +1,71 @@
+
+
+# Handles the CERTS Volumes
+- name: check-server-crt
+  listen: load certs-vol
+  stat:
+    path: '{{ certs_vol }}/certs/server.crt'
+  register: cert_server_stat
+  changed_when: True  
+  notify:
+    - Create New Certs
+
+- name: check-server-key
+  listen: load certs-vol
+  stat:
+    path: '{{ certs_vol }}/certs/server.key'
+  register: key_server_stat
+  changed_when: True
+  notify:
+    - Create New Certs  
+
+- name: Restore Certs From Backup
+  listen: Create New Certs
+  when: "key_server_stat.stat.exists and cert_server_stat.stat.exists"
+  command: "{{ item }}"
+  with_items:
+    - docker run -v certs:/data --name helper busybox true
+    - docker cp {{ certs_vol }}/certs helper:/data
+    - docker rm helper
+  #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v {{ role_path }}/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+
+- name: Fail because no certs found
+  fail:
+    msg: "server.key and server.cert not found in {{ certs_vol }}/certs and in production mode.  Please create certs and store in {{ certs_vol }}/certs"
+  listen: Create New Certs
+  when: "not (key_server_stat.stat.exists and cert_server_stat.stat.exists) and run_mode == 'prod'"
+
+- name: Create New Certs
+  when: "not (key_server_stat.stat.exists and cert_server_stat.stat.exists) and run_mode == 'dev'"
+  docker_container:
+    name: "unfetter-discover-openssl"
+    image: "svagi/openssl:latest"
+    state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
+    
+    pull: true
+    exposed_ports: 
+    - 443:443
+    - 80:80
+    entrypoint:
+     - openssl
+     - req
+     - -subj
+     - /CN=localhost/DC=localhost/DC=localdomain
+     - -new
+     - -newkey
+     - rsa:2048
+     - -days
+     - "365"
+     - -nodes
+     - -x509
+     - -keyout
+     - /tmp/certs/server.key
+     - -out
+     - /tmp/certs/server.crt
+    volumes:
+     - "certs:/tmp:rw"
+
+
+  
