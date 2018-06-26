@@ -1,14 +1,14 @@
 ---
-
-
+# Building the image if build_action is local
 - name: "Build {{ container_name }}"
   docker_image:
     name: "{{ container_name }}"
-    tag: "{{ tag }}"
+    tag: "{{ docker_tag }}"
     state: present
     path: "{{ path }}"
   when: "build_action == 'local'"
 
+# Pulling the image if build_action is pull
 - name: "Pull {{ container_name }}"
   docker_image:
     name: "{{ image_name }}"
@@ -16,22 +16,15 @@
     pull: yes
   when: "build_action == 'pull'"
 
-- name: dev volume
-  set_fact:
-    volume_list: "{{ volume_list }} + {{ dev_volume_list }}"
-  when: run_mode=='dev'
-
-
-- debug:
-      msg: "This is the list {{ volume_list }}"
-
-
+# Building the ingest container
 - name: Create Ingest
   docker_container:
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
-    volumes: "{{ volume_list }}"
+    networks:
+      - name: "{{ docker_network_name }}"          
+    volumes: "{{ volume_list }} + {{ dev_volume_list if run_mode == 'dev' else '' }}"
     entrypoint:
       - npm
       - start

@@ -1,0 +1,35 @@
+
+
+# Handles the PRIVATE Volumes
+- name: check-private
+  listen: load private-vol
+  stat:
+    path: '{{ private_vol }}/private-config.json'
+  register: private_vol_stat
+  changed_when: True  
+  notify:
+    - Create New Private
+
+
+- name: Restore Private From Backup
+  listen: Create New Private
+  when: "private_vol_stat.stat.exists"
+  command: "{{ item }}"
+  with_items:
+    - docker run -v private-config:/config/private --name helper busybox true
+    - docker cp {{ private_vol }}/private-config.json helper:/config/private
+    - docker rm helper
+
+  #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v {{ role_path }}/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+
+
+- name: Create New Private Config
+  listen: Create New Private
+  when: "not (private_vol_stat.stat.exists)"
+  fail:
+    msg: "You will need to run the api_configuration_tool.py using docker.\ndocker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v ansible/roles/common/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+  #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v {{ role_path }}/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+
+
+
+  
