@@ -25,7 +25,7 @@
     restart: yes
     networks:
       - name: "{{ docker_network_name }}"           
-    volumes: "{{ volume_list }} + {{ dev_volume_list if run_mode=='dev' else '' }}"
+    volumes: "{{ volume_list }}"
     env:
      PATTERN_HANDLER_DOMAIN: unfetter-pattern-handler
      PATTERN_HANDLER_PORT: 5000    
