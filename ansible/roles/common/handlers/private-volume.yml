@@ -1,6 +1,4 @@
-
-
-# Handles the PRIVATE Volumes
+# Check to see if the private-config file is there. 
 - name: check-private
   listen: load private-vol
   stat:
@@ -8,11 +6,12 @@
   register: private_vol_stat
   changed_when: True  
   notify:
-    - Create New Private
+    - Private Config Tested
 
 
+# The private file exists.  So, copy it into the volume
 - name: Restore Private From Backup
-  listen: Create New Private
+  listen: Private Config Tested
   when: "private_vol_stat.stat.exists"
   command: "{{ item }}"
   with_items:
@@ -20,15 +19,61 @@
     - docker cp {{ private_vol }}/private-config.json helper:/config/private
     - docker rm helper
 
-  #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v {{ role_path }}/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+# If the private-config is not there, then ask the user for the input information
 
+# Ask if GitHub authentication
+- pause:
+    prompt: "\tPlease enter the GitHub application client ID: "
+  listen: Private Config Tested          
+  when: '"github" in auth_services and not (private_vol_stat.stat.exists)'
+  register: github_clientID_register
 
-- name: Create New Private Config
-  listen: Create New Private
+- pause:
+    prompt: "\n\tPlease enter the GitHub application client secret: '"
+  listen: Private Config Tested
+  when: '"github" in auth_services and not (private_vol_stat.stat.exists)'
+  register: github_clientSecret_register
+
+# Git Gitlab info
+- pause:
+    prompt: "\n\tPlease enter the GitLb application client ID:'"
+  listen: Private Config Tested    
+  when: '"gitlab" in auth_services and not (private_vol_stat.stat.exists)'
+  register: gitlab_clientID_register
+- pause:
+    prompt: "\n\tPlease enter the GitLb application client secret:"
+  listen: Private Config Tested    
+  when: '"gitlab" in auth_services and not (private_vol_stat.stat.exists)'
+  register: gitlab_clientSecret_register
+  
+# Session and JWT standard secret information      
+- pause:
+    prompt: "Enter JWT secret "
+  when: "not (private_vol_stat.stat.exists)"    
+  listen: Private Config Tested    
+  register: secret_jwt_register
+
+- pause:
+    prompt: "Enter session secret "
+  when: "not (private_vol_stat.stat.exists)"      
+  listen: Private Config Tested    
+  register: secret_session_register
+
+# Create The backup directory if it doesn't exist
+- name: Create Directory
+  listen: Private Config Tested    
+  file: path={{ private_vol }} state=directory
+
+# Create the new private-config.json.  Then, restart to first handler to copy the private-config
+- name: Private Config Tested Config
+  listen: Private Config Tested
   when: "not (private_vol_stat.stat.exists)"
-  fail:
-    msg: "You will need to run the api_configuration_tool.py using docker.\ndocker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v ansible/roles/common/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
-  #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v {{ role_path }}/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+  template:
+    src: private-config.j2
+    dest: "{{ private_vol }}/private-config.json"
+  notify:
+    - load private-vol
+
 
 
 
