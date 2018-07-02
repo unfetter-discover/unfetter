@@ -24,7 +24,7 @@
     state: started
     networks:
       - name: "{{ docker_network_name }}"          
-    volumes: "{{ volume_list }} + {{ dev_volume_list if run_mode == 'dev' else '' }}"
+    volumes: "{{ volume_list }}"
     entrypoint:
       - npm
       - start

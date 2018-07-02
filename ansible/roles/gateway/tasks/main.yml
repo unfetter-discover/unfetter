@@ -1,11 +1,32 @@
 # TODO - Need to be able to build this from source for dev environments
+- debug:
+    msg: "Group Names: {{ group_names }} use_uac {{ use_uac }} build_action {{ build_action }}"
 
-- name: "Build {{ container_name }} - {{ build_action }}"
+- name: "Pull {{ container_name }} - {{ build_action }}"
   docker_image:
     name: "{{ image_name }}"
     state: present
     pull: yes
-  when: "build_action != ''"
+  when: "not ('production' in group_names and build_action=='local')"
+
+
+  # Building the image if build_action is local
+
+- name: "Copy the DISTRIBUTION code"
+  copy:
+    src: "{{ prepath }}/unfetter-ui/dist"
+    dest: "{{ role_path }}/files/"
+    force: true
+  when: "('production' in group_names and build_action=='local')"
+    
+    
+- name: "Build {{ container_name }} from Gateway Dockerfile"
+  docker_image:
+    name: "{{ container_name }}"
+    tag: "{{ docker_tag }}"
+    state: present
+    path: "{{ role_path }}/files"
+  when: "('production' in group_names and build_action=='local')"
 
 # Creates the docker container for the gateway
 - name: Create the {{ container_name }} from image {{ image_name }}
@@ -34,6 +55,6 @@
      - "{{ prepath }}/unfetter/config/nginx/{{ 'uac-locations.conf' if use_uac else 'blank.conf' }}:/etc/nginx/conf.d.runmode/runmode-locations.conf"
    # In USE_UNFETTER_UI
      - "{{ prepath }}/unfetter/config/nginx/{{ 'ui-dev.conf' if use_unfetter_ui else 'ui-prod.conf' }}:/etc/nginx/conf.d.runmode/ui.conf"
-  when: run_action         
+  when: run_action
 
   

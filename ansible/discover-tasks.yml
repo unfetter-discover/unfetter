@@ -72,14 +72,21 @@
   - include_role:
         name: ingest        
 # if running in dev mode, then the image will be nginx.
+
+# If build_action = pull, pull gateway
+# If building local, then nginx 
+# if dev mode
+
+
   - include_role:
         name: gateway
     vars:
         image_name: "nginx:1.13.5-alpine"
     when:
-     - run_mode == 'dev'
+     - build_action == 'local'
 # If not running in dev mode, then we are pulling the gateway from the registry     
   - include_role:
         name: gateway
     when:
-     - run_mode != 'dev'
+     - build_action != 'local'
+

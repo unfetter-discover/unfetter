@@ -1,0 +1,17 @@
+---
+####################################################################################
+#  This playbook only builds the docker images locally
+#
+####################################################################################
+
+
+- name: Build the Docker images only.  Do not 
+  hosts: build
+  tasks:
+  - name: Iterate over group variables
+    debug:
+      var: item
+    with_items: "{{ hostvars | to_nice_json }}"           
+  - name: Start running the commands
+    import_tasks: discover-tasks.yml
+
