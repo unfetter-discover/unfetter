@@ -6,5 +6,5 @@ image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
 
 base_list: "{{ prepath }}unfetter/config/examples:/tmp/examples"
 
-dev_volume_list: "{{ prepath }}unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data"
+dev_volume_list: ",{{ prepath }}unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data"
 volume_list: "{{ base_list }}{{ dev_volume_list if run_mode == 'dev' else '' }}"
