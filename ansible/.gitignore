@@ -5,3 +5,4 @@ data
 *.tar
 backup/*
 !backup/.gitkeep
+dist

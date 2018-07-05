@@ -7,6 +7,15 @@
   when: "build_action == 'local'"
 
 
+- debug:
+    msg: "Role is {{ role_path }} and playbook is {{ playbook_dir }} image is {{ image_name }}"
+- name: "Extract DIST from Unfetter UI"
+  command: "{{ item }}"
+  with_items:
+   - docker run --rm -v {{ role_path }}/files/dist:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp {{ image_name }} npm run build:prod:noclean:ff31
+   - cp -r {{ role_path }}/files/dist {{ playbook_dir }}/roles/gateway/files/dist
+  when: "(not use_unfetter_ui) and (build_action == 'local')"
+
 # Pull the image from a registry
 - name: "Pull {{ container_name }}"
   docker_image:
@@ -14,6 +23,9 @@
     state: present
     pull: yes
   when: "build_action == 'pull'"     
+
+- debug:
+    msg: "Run command is {{ run_command }}"
 
 # Create the container
 - name: Create the {{ container_name }} container
@@ -26,8 +38,11 @@
       entrypoint:
       - npm
       - run
-      - serve:docker:dev:{{ 'uac' if use_uac else 'demo'}}
+      #- serve:docker:dev:{{ 'uac' if use_uac else 'demo'}}
+      - "{{ run_command }}"
       volumes: 
         - "{{ prepath }}/unfetter-ui/src:/usr/share/unfetter-ui/src"
         - "{{ prepath }}/unfetter-ui/config:/usr/share/unfetter-ui/config"
-  when: "(use_unfetter_ui) and (run_action)"      
+  when: "(use_unfetter_ui) and (run_action)"
+
+#docker run --rm -v /Users/alchemist/workspace/alchemist/unfetter-discover/unfetter/ansible/roles/ui/files/dist:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:0.3.8 run build:prod:noclean:ff31
