@@ -3,3 +3,7 @@ dir: "unfetter-ui"
 path: "{{ prepath + dir}}"
 container_name: unfetter-ui
 image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
+
+run_base_command: "{{ 'serve:docker:dev:' if use_unfetter_ui else  'build:prod:noclean' }}"
+added_command: "{{ 'uac' if use_uac else 'demo' }}"
+run_command: "{{run_base_command+added_command if use_unfetter_ui else  run_base_command }}"
