@@ -1,5 +1,5 @@
 {
-    "authServices": {{ auth_services }},
+    "authServices": ["{{ auth_services | join('","') }}"],
     {% if 'github' in auth_services %}
     "github": {        
         "clientID": "{{ github_clientID_register.user_input }}",
