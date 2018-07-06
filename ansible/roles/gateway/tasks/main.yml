@@ -54,7 +54,7 @@
      - "{{ role_path }}/files/conf.d/default.conf:/etc/nginx/conf.d/default.conf"
      - "{{ prepath }}/unfetter/config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra"
 #     - "{{ prepath }}/unfetter/config/certs/:/etc/pki/tls/certs"
-     - "certs:/etc/pki/tls:ro"
+     - "certs:/etc/pki/tls/certs:ro"
   # TAXII
   #   - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii.conf' if use_taxii else 'taxii-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii.conf"
   #   - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii-auth.conf' if use_taxii and use_taxii_tls else 'taxii-auth-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii-auth.conf"

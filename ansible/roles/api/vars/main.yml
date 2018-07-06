@@ -6,7 +6,7 @@ container_name: unfetter-discover-api
 image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
 
     
-base_list: "certs:/etc/pki/tls:ro"
+base_list: "certs:/etc/pki/tls/certs:ro"
 dev_volume_list: ",{{ prepath }}unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test,{{ prepath }}unfetter-store/unfetter-discover-api/api:/usr/share/unfetter-discover-api/api,{{ prepath }}unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js"
 uac_volume_list: ",private-config:/usr/share/unfetter-discover-api/api/config/private"
 volume_list: "{{ base_list }}{{ uac_volume_list if use_uac else '' }}{{ dev_volume_list if run_mode == 'dev' else '' }}"

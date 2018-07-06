@@ -72,7 +72,7 @@
     src: private-config.j2
     dest: "{{ private_vol }}/private-config.json"
   notify:
-    - load private-vol
+    - check-private
 
 
 
