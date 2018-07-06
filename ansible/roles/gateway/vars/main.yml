@@ -2,11 +2,3 @@
 container_name: "unfetter-discover-gateway"
 image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
 
-# The list of links, depending on the type of deployment
-base_link: "unfetter-discover-api:unfetter-discover-api,unfetter-api-explorer:unfetter-api-explorer"
-taxii_link_list: ",unfetter-taxii-server"
-ui_link_list: ",unfetter-ui:unfetter-ui"
-uac_link_list: ",unfetter-socket-server:unfetter-socket-server"
-
-# Build out the links based on the deployment variables
-link_list: "{{ base_link }}{{ ui_link_list if use_unfetter_ui else '' }}{{ uac_link_list if use_uac else '' }}{{ taxii_link_list if use_taxii else '' }}"

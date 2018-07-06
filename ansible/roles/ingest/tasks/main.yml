@@ -36,10 +36,5 @@
       MONGO_REPOSITORY: repository
       MONGO_PORT: 27017
       MONGO_DBNAME: stix
-
-    links:
-     #- "unfetter-discover-api:unfetter-discover-api"
-     - "cti-stix-store-repository:repository"
-     
   when: run_action
 

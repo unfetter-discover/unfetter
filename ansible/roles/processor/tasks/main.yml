@@ -62,6 +62,4 @@
      # Interval options: daily, weekly, monthly
     #  - --interval
     #  - daily
-    links:
-     - "cti-stix-store-repository:cti-stix-store-repository"
   when: run_action
