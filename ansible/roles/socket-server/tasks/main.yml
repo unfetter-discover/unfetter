@@ -31,7 +31,7 @@
     - "13333"
     - "6555"
     env:
-      MONGO_REPOSITORY: repository
+      MONGO_REPOSITORY: cti-stix-store-repository
       MONGO_PORT: 27017
       MONGO_DBNAME: stix
       # If deployed in a proxy, add the proxy's URL here
@@ -43,8 +43,6 @@
     published_ports:
     - "13333:3333"
     - "6555:6555"
-    links:
-    - "cti-stix-store-repository:repository"
     volumes: 
       - "certs:/etc/pki/tls/certs:ro"
       - "{{ prepath }}/unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src"
