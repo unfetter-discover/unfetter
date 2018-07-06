@@ -31,5 +31,5 @@
      - -out
      - /tmp/certs/server.crt
     volumes:
-     - "certs:/tmp:rw"
+     - "certs:/tmp/certs:rw"
   when: run_action

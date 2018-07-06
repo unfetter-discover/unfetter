@@ -26,7 +26,8 @@
     - name: backup certs
       command: "{{ item }}"
       with_items:
-        - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/ {{ certs_vol }}
+        - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/server.crt {{ certs_vol }}
+        - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/server.key {{ certs_vol }}
     
     
     # Removing this for now, since we just need to rerun the configuration code again

@@ -46,7 +46,7 @@
     links:
     - "cti-stix-store-repository:repository"
     volumes: 
-      - "certs:/etc/pki/tls:ro"
+      - "certs:/etc/pki/tls/certs:ro"
       - "{{ prepath }}/unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src"
       - "{{ prepath }}/unfetter-store/unfetter-socket-server/dist:/usr/share/unfetter-socket-server/dist"
       - "private-config:/usr/share/unfetter-socket-server/config/private"
