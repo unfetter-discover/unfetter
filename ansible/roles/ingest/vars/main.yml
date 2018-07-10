@@ -2,11 +2,9 @@
 dir: "unfetter-store/unfetter-ctf-ingest"
 path: "{{ prepath + dir}}"
 container_name: unfetter-ctf-ingest
-image_name: "{{registry}}{{ container_name }}:{{tag}}"
+image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
 
-volume_list:
-  - "{{ prepath }}unfetter/config/examples:/tmp/examples"
+base_list: "{{ prepath }}unfetter/config/examples:/tmp/examples"
 
-dev_volume_list:
-    # If we are in dev, and thus we are linking in code
-  - "{{ prepath+'unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data'}}"
+dev_volume_list: ",{{ prepath }}unfetter-store/unfetter-ctf-ingest/test-data:/tmp/test-data"
+volume_list: "{{ base_list }}{{ dev_volume_list if run_mode == 'dev' else '' }}"

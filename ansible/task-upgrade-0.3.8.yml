@@ -1,0 +1,13 @@
+---
+####################################################################################
+#  This playbook will upgrade from 0.3.7 to 0.3.8  
+#
+####################################################################################
+
+- name: Upgrades Unfetter to support version 0.3.8
+  hosts: all
+  tasks:
+    
+    - import_tasks: backup-from-container.yml
+    # In order to run a command inside a docker container, then that container must be 
+    # added to the inventory.     

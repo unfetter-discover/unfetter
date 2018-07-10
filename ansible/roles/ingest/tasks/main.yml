@@ -1,14 +1,14 @@
 ---
-
-
+# Building the image if build_action is local
 - name: "Build {{ container_name }}"
   docker_image:
     name: "{{ container_name }}"
-    tag: "{{ tag }}"
+    tag: "{{ docker_tag }}"
     state: present
     path: "{{ path }}"
   when: "build_action == 'local'"
 
+# Pulling the image if build_action is pull
 - name: "Pull {{ container_name }}"
   docker_image:
     name: "{{ image_name }}"
@@ -16,21 +16,14 @@
     pull: yes
   when: "build_action == 'pull'"
 
-- name: dev volume
-  set_fact:
-    volume_list: "{{ volume_list }} + {{ dev_volume_list }}"
-  when: run_mode=='dev'
-
-
-- debug:
-      msg: "This is the list {{ volume_list }}"
-
-
+# Building the ingest container
 - name: Create Ingest
   docker_container:
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
     volumes: "{{ volume_list }}"
     entrypoint:
       - npm
@@ -43,10 +36,5 @@
       MONGO_REPOSITORY: repository
       MONGO_PORT: 27017
       MONGO_DBNAME: stix
-
-    links:
-     #- "unfetter-discover-api:unfetter-discover-api"
-     - "cti-stix-store-repository:repository"
-     
   when: run_action
 

@@ -1,0 +1,19 @@
+{
+    "authServices": ["{{ auth_services | join('","') }}"],
+    {% if 'github' in auth_services %}
+    "github": {        
+        "clientID": "{{ github_clientID_register.user_input }}",
+        "clientSecret": "{{ github_clientSecret_register.user_input }}"
+    },
+    {% endif %}
+    {% if 'gitlab' in auth_services %}
+    "gitlab": {
+        "clientID": "{{ gitlab_clientID_register.user_input }}",
+        "clientSecret": "{{ gitlab_clientSecret_register.user_input }}",
+        "gitlabURL": "{{ gitlab_url }}"
+    },   
+    {% endif %}    
+    "jwtSecret": "{{ secret_jwt_register.user_input }}",
+    "sessionSecret": "{{ secret_session_register.user_input }}",
+    "unfetterUiCallbackURL": "https://{{ ui_domain }}/#/users/login-callback"
+}

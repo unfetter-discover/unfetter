@@ -1,6 +1,13 @@
 ---
+
+# The common role starts the openssl for certificate creation.  However, this likely should not 
+# be done for PROD
 container_name: unfetter-discover-openssl
 image_name: "openssl"
 tag: latest
 registry: "svagi"
 exposed_ports:
+private_vol: '{{ backup_directory }}/private-vol'
+certs_vol: '{{ backup_directory }}/certs-vol'
+mongodb_vol: '{{ backup_directory }}/mongo-vol'
+ui_vol: '{{ backup_directory }}/ui-vol'

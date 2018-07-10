@@ -2,7 +2,7 @@ version: '3.3'
 services:
   unfetter-discover-gateway:
     container_name: unfetter-discover-gateway
-    image: unfetter/unfetter-discover-gateway:0.3.7
+    image: unfetter/unfetter-discover-gateway:0.3.8
     ports:
      - "443:443"
      - "80:80"
@@ -45,11 +45,9 @@ services:
      - /tmp/certs/server.crt
     volumes:
      - ./certs/:/tmp/certs
-    cap_drop:
-    - ALL
 
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:0.3.7
+    image: unfetter/unfetter-discover-processor:0.3.8
     container_name: unfetter-discover-processor
     links:
     - unfetter-pattern-handler
@@ -94,13 +92,10 @@ services:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
-    cap_drop:
-    - ALL
-
 
   unfetter-ctf-ingest:
     container_name: unfetter-ctf-ingest
-    image: unfetter/unfetter-ctf-ingest:0.3.7
+    image: unfetter/unfetter-ctf-ingest:0.3.8
     environment:
       - API_PROTOCOL=https
       - API_HOST=apihost
@@ -118,9 +113,6 @@ services:
     links:
      - cti-stix-store-repository:repository
      - unfetter-discover-api:apihost
-    cap_drop:
-    - ALL
-
      
   cti-stix-store-repository:
     image: mongo:3.4.1
@@ -132,27 +124,18 @@ services:
     - ./data/db:/data/db
     # Uncomment this if using authentication
     # entrypoint: /entrypoint.sh mongod --auth
-    cap_drop:
-    - ALL
-    cap_add:
-    - CHOWN
-    - SETUID
-    - SETGID
 
   unfetter-api-explorer:
-    image: unfetter/unfetter-api-explorer:0.3.7
+    image: unfetter/unfetter-api-explorer:0.3.8
     container_name: unfetter-api-explorer
     environment:
      - PUBLIC_PATH=/explorer/
     entrypoint:
      - npm
      - start
-    cap_drop:
-    - ALL
-
 
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api:0.3.7
+    image: unfetter/unfetter-discover-api:0.3.8
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
@@ -181,12 +164,9 @@ services:
     entrypoint:
     - npm
     - start
-    cap_drop:
-    - ALL
-
 
   unfetter-pattern-handler:
-    image: unfetter/unfetter-pattern-handler:0.3.7
+    image: unfetter/unfetter-pattern-handler:0.3.8
     container_name: unfetter-pattern-handler
     entrypoint:
     - gunicorn
@@ -195,6 +175,3 @@ services:
     - --access-logfile
     - "-"
     - app:app
-    cap_drop:
-    - ALL
-

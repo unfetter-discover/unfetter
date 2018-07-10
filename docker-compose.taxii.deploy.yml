@@ -27,4 +27,5 @@ services:
      - ./certs:/etc/pki/tls/certs
     entrypoint:
      - npm
-     - start
+     - run
+     - start:deploy

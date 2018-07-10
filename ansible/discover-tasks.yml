@@ -1,6 +1,61 @@
 ---
+
+#############################################
+# discover-tasks.yml
+# This task file is the main workhorse for building the docker containers.  
+#
+#############################################
+  
+  # Override variables allows user sto create a variable file that overrides any of the variables 
+  # from this playbook.  Override variables allows users to make changes to how the containers
+  # are built without changing the core playbook.
+
+
+  - name: Include override vars
+    register: overrides
+    include_vars:
+      file: "{{ playbook_dir }}/group_vars/override_vars.yml"
+    ignore_errors: yes
+
+#  These variables do not change through this playbook.  So the facts are set_fact
+#  here.  If override variables exist, they take precedence.
+
+  - set_fact:
+# docker_tag is the docker image version number.  
+     docker_tag: "{{ overrides.docker_tag | default(docker_tag) }}"
+# build_action tells ansible if we are building the image from source "local" or pulling
+# from a registry "pull"
+     build_action: "{{ overrides.build_action | default(build_action) }}"
+# Run action is true if we want to run the containers.  We can set to "false" to just build the images
+     run_action: "{{ overrides.run_action | default(run_action) }}"
+# If we are running in Dev mode, we need the unfetter-ui container.  If in Prod mode, we 
+#    store the UI code inside the gateway
+     use_unfetter_ui: "{{ overrides.use_unfetter_ui | default(use_unfetter_ui) }}"
+# use_uac is true/false, depending on if we are in demo mode or want uac turned on
+     use_uac: "{{ overrides.use_uac | default(use_uac) }}"
+# use_taxii for setting up the taxii server
+     use_taxii: "{{ overrides.use_taxii | default(use_taxii) }}"
+# The location of the registry.  Default is docker hub
+     registry: "{{ overrides.registry | default(registry) }}"
+# Prepath is the relative path of the start of the unfetter code directories
+     prepath: "{{ overrides.prepath | default(prepath) }}"
+  
+  #  Displaying the variables.
+  - debug:
+        msg: 
+          - "docker_tag: {{ docker_tag }} "
+          - "build_action: {{ build_action }}"
+          - "run_action: {{ run_action }}"
+          - "use_unfetter_ui: {{ use_unfetter_ui }}"
+          - "use_uac: {{ use_uac }}"
+          - "use_taxii: {{ use_taxii }}"
+          - "registry: {{ registry }}"    
+          - "prepath: {{ prepath }}"    
+  
   - include_role:
         name: common
+  - include_role:
+        name: processor
   - include_role:
         name: openssl
   - include_role:
@@ -11,19 +66,27 @@
         name: api
   - include_role:
         name: explorer
-  - include_role:
-        name: processor
+
   - include_role:
         name: ui
   - include_role:
         name: ingest        
+# if running in dev mode, then the image will be nginx.
+
+# If build_action = pull, pull gateway
+# If building local, then nginx 
+# if dev mode
+
+
   - include_role:
         name: gateway
     vars:
         image_name: "nginx:1.13.5-alpine"
     when:
-     - run_mode == 'dev'
+     - build_action == 'local'
+# If not running in dev mode, then we are pulling the gateway from the registry     
   - include_role:
         name: gateway
     when:
-     - run_mode != 'dev'
+     - build_action != 'local'
+
