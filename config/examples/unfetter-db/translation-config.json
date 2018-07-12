@@ -30,6 +30,14 @@
                     "stixPath": "stix.published"
                 },
                 {
+                    "jsonPath": ".published",
+                    "stixPath": "stix.modified"
+                },
+                {
+                    "jsonPath": ".published",
+                    "stixPath": "stix.created"
+                },
+                {
                     "jsonPath": ".description",
                     "stixPath": "stix.description"
                 },
@@ -48,6 +56,18 @@
                 {
                     "jsonPath": ".report.description",
                     "stixPath": "stix.external_references.description"
+                },
+                {
+                    "jsonPath": ".report.title",
+                    "stixPath": "stix.title"
+                },
+                {
+                    "jsonPath": ".report.title",
+                    "stixPath": "stix.name"
+                },
+                {
+                    "jsonPath": ".report.author",
+                    "stixPath": "stix.created_by_ref"
                 }
             ]
         },
