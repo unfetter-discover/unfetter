@@ -1,5 +1,13 @@
 version: '3.3'
 services:
+  unfetter-elk:
+    image: sebp/elk
+    container_name: unfetter-elk
+    ports:
+    - "5601:5601"
+    - "9200:9200"
+    - "5044:5044"
+
   unfetter-discover-gateway:
     image: nginx:1.13.5-alpine
     container_name: unfetter-discover-gateway
@@ -8,12 +16,16 @@ services:
     links:
      - unfetter-socket-server
      - unfetter-ui
+     - unfetter-elk
     volumes:
+     - ./config/scripts/gateway-deploy-entry.sh:/gateway-deploy-entry.sh
      - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
-     - ./config/nginx/uac-locations.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf     
+     - ./config/nginx/uac-locations.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf
 
      # Deploy mode is using recently on disk source code.  
      - ../unfetter-ui/dist:/etc/nginx/html
+    entrypoint:
+     - /gateway-deploy-entry.sh
 
 
   unfetter-discover-processor:
