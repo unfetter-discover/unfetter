@@ -14,6 +14,7 @@ filebeat:
         - /var/log/nginx/access-deploy.log
       document_type: nginx-access
 
+      # For some reason, having both of these active causes issues
       # paths:
       #   - /var/log/nginx/error-deploy.log
       # document_type: nginx-error
