@@ -1,1 +1,0 @@
-{"jwtSecret": "unfetter", "github": {"clientSecret": "b36335241357dea9148ddc384b78b25cba1cef36", "clientID": "5a4136aee6d768c2094d", "callbackURL": "https://localhost/api/auth/github-callback"}, "sessionSecret": "unfetter", "unfetterUiCallbackURL": "https://localhost/#/users/login-callback"}

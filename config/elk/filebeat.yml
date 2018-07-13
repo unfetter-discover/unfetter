@@ -1,0 +1,20 @@
+output:
+  logstash:
+    enabled: true
+    hosts:
+      - unfetter-elk:5044
+    ssl:
+      certificate_authorities:
+        - /etc/pki/tls/certs/logstash-beats.crt
+
+filebeat:
+  prospectors:
+    -
+      paths:
+        - /var/log/nginx/access-deploy.log
+      document_type: nginx-access
+
+      # For some reason, having both of these active causes issues
+      # paths:
+      #   - /var/log/nginx/error-deploy.log
+      # document_type: nginx-error
