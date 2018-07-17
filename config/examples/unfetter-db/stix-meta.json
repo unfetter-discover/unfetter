@@ -1,4 +1,3 @@
-
 [
   {
     "metaProperties": {
@@ -10,7 +9,7 @@
         "boundaries": {
           "endDate": "2017-11-30T05:00:00.000Z",
           "startDate": "2017-11-01T04:00:00.000Z",
-          "targets": [],
+          "targets": ["sample target 1"],
           "intrusions": [{
               "displayValue": "GCMAN",
               "value": "intrusion-set--0ea72cd5-ca30-46ba-bc04-378f701c658f"
@@ -52,7 +51,7 @@
         "boundaries": {
           "endDate": "2017-11-30T05:00:00.000Z",
           "startDate": "2017-11-01T04:00:00.000Z",
-          "targets": [],
+          "targets": ["sample target 1"],
           "intrusions": [{
               "displayValue": "GCMAN",
               "value": "intrusion-set--0ea72cd5-ca30-46ba-bc04-378f701c658f"
@@ -94,7 +93,7 @@
         "boundaries": {
           "endDate": "2017-11-30T05:00:00.000Z",
           "startDate": "2017-11-01T04:00:00.000Z",
-          "targets": [],
+          "targets": ["sample target 1"],
           "intrusions": [{
               "displayValue": "GCMAN",
               "value": "intrusion-set--0ea72cd5-ca30-46ba-bc04-378f701c658f"
@@ -136,7 +135,7 @@
         "boundaries": {
           "endDate": "2017-11-30T05:00:00.000Z",
           "startDate": "2017-11-01T04:00:00.000Z",
-          "targets": [],
+          "targets": ["sample target 1"],
           "intrusions": [{
               "displayValue": "GCMAN",
               "value": "intrusion-set--0ea72cd5-ca30-46ba-bc04-378f701c658f"
@@ -167,6 +166,48 @@
       }]
     },
     "id": "report--de00c562-6afe-4e5c-994d-1aff0762b783"
+  },
+  {
+    "metaProperties": {
+      "work_products": [{
+        "id": "293019f5-23f2-402f-af5c-f75a2096d11d",
+        "author": "",
+        "date": "2017-11-30T21:38:36.715Z",
+        "name": "Threat Report Demonstration",
+        "boundaries": {
+          "endDate": "2017-11-30T05:00:00.000Z",
+          "startDate": "2017-11-01T04:00:00.000Z",
+          "targets": ["sample target 1"],
+          "intrusions": [{
+              "displayValue": "GCMAN",
+              "value": "intrusion-set--0ea72cd5-ca30-46ba-bc04-378f701c658f"
+            },
+            {
+              "displayValue": "Winnti Group",
+              "value": "intrusion-set--c5947e1c-1cbc-434c-94b8-27c7e3be0fff"
+            },
+            {
+              "displayValue": "menuPass",
+              "value": "intrusion-set--222fbd21-fc4f-4b7e-9f85-0e6e3a76c33f"
+            },
+            {
+              "displayValue": "APT30",
+              "value": "intrusion-set--f047ee18-7985-4946-8bfb-4ed754d3a0dd"
+            }
+          ],
+          "malware": [{
+              "displayValue": "4H RAT",
+              "value": "malware--8e461ca3-0996-4e6e-a0df-e2a5bbc51ebc"
+            },
+            {
+              "displayValue": "Dyre",
+              "value": "malware--63c2a130-8a5b-452f-ad96-07cf0af12ffe"
+            }
+          ]
+        }
+      }]
+    },
+    "id": "report--4e539301-4ee3-4b92-9fdd-45d76894be63"
   },
   {
     "id": "course-of-action--43bbcfb4-b996-4953-b353-75143bf18c78",
