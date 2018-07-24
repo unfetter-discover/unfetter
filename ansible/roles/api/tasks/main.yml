@@ -26,7 +26,6 @@
     networks:
       - name: "{{ docker_network_name }}"          
     volumes: "{{ volume_list }}"
-#    links: "{{ api_link_list }} + {{ api_uac_link_list if use_uac == true else '' }}"
 
     env:
       CTF_PARSE_HOST: http://unfetter-ctf-ingest
@@ -50,5 +49,5 @@
       MONGO_DEBUG: "true"
     entrypoint:
       - npm
-      - start
+      - "{{ 'run debugdev' if run_mode == 'dev' else 'start' }}"
   when: run_action     
