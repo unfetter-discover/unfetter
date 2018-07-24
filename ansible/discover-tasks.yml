@@ -39,7 +39,13 @@
      registry: "{{ overrides.registry | default(registry) }}"
 # Prepath is the relative path of the start of the unfetter code directories
      prepath: "{{ overrides.prepath | default(prepath) }}"
-  
+# Variables that control how ansible connects to remote system.  Right now, we only 
+# assume a single remote system.
+# Ansible Host IP if remote.  Right now, we only have a single 
+     ansible_host: "{{ overrides.ansible_host | default(ansible_host) }}"
+     ansible_ssh_private_key_file: "{{ overrides.ansible_ssh_private_key_file | default(ansible_ssh_private_key_file) }}"
+     ansible_connection: "{{ overrides.ansible_connection | default(ansible_connection) }}"
+     ansible_python_interpreter: "{{ overrides.ansible_python_interpreter | default(ansible_python_interpreter) }}"
   #  Displaying the variables.
   - debug:
         msg: 
@@ -51,7 +57,10 @@
           - "use_taxii: {{ use_taxii }}"
           - "registry: {{ registry }}"    
           - "prepath: {{ prepath }}"    
-  
+          - "remote home: {{ ansible_env.HOME }}" 
+          - "ansible_host = {{ ansible_host }}"
+          - "ansible_ssh_private_key_file = {{ ansible_ssh_private_key_file }}"
+          - "ansible_connection = {{ ansible_connection }}"
   - include_role:
         name: common
   - include_role:
