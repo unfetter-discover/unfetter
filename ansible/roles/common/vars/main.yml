@@ -11,3 +11,4 @@ private_vol: '{{ backup_directory }}/private-vol'
 certs_vol: '{{ backup_directory }}/certs-vol'
 mongodb_vol: '{{ backup_directory }}/mongo-vol'
 ui_vol: '{{ backup_directory }}/ui-vol'
+remote_role_directory: "{{ prepath }}unfetter/ansible/roles/common/"

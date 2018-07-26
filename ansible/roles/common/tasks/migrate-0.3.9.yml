@@ -1,0 +1,46 @@
+
+####################################################################################
+#  This playbook migrates from 0.3.8 to 0.3.9
+#
+#
+####################################################################################
+
+- name: Create Repository
+  docker_container:
+    name: cti-stix-store-repository
+    image: "mongo:3.4.1"
+    state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
+    # Since the repository is a mongodb, we always pull
+    pull: true
+    volumes:
+#    - "{{ prepath }}/unfetter/data/db:/data/db"
+    - "mongo-db:/data/db"
+    published_ports:
+    - "27018:27017"
+  when: run_action 
+- debug:
+    msg: "role is :{{ remote_role_directory }}"
+
+- name: "Build Docker Image"
+  docker_image:
+    name: migration
+    tag: "{{ docker_tag }}"
+    state: present
+    force: true
+    path: "{{ remote_role_directory }}files/migrate"
+
+- name: "Run container"
+  docker_container:
+    name: "migration"
+    image: "migration:{{ docker_tag }}"
+    state: started
+    networks:
+      - name: "{{ docker_network_name }}"
+    # Since the repository is a mongodb, we always pull
+    #volumes:
+    #  - "{{ remote_role_directory }}/files/migrate:/usr/src/app/migrate"
+    entrypoint:
+      - node
+      - /usr/share/app/0.3.9-user-model.js -h cti-stix-store-repository -p 27017 -d stix
