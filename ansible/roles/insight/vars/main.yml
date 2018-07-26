@@ -1,0 +1,6 @@
+---
+path: "{{ prepath }}unfetter-insight"
+container_name: unfetter-insight
+image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
+dev_volume_list: "{{ prepath }}unfetter-insight/:/app"
+volume_list: "{{ dev_volume_list if run_mode == 'dev' else '' }}"

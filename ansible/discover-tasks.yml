@@ -76,7 +76,9 @@
         name: api
   - include_role:
         name: explorer
-
+  - include_role:
+        name: insight
+    when: run_insight
   - include_role:
         name: ui
   - include_role:
