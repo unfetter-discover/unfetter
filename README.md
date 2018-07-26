@@ -58,18 +58,7 @@ docker-compose up
 It will take few minutes for the Docker images to download and build.
 
 #### Windows 
-For Windows, Docker Toolbox will install a virtual machine through VirtualBox and execute inside of that environment.  There is a couple of steps that must happen.
-
-* Double click on the Docker Quickstart Terminal Icon on the windows.  When, done, you will see a $ prompt.
-* Check the ip address of the Docker-machine now running.  At the prompt, run "docker-machine.exe ip".  The returning IP is the IP address of the docker machine, usually 192.168.99.100.  NOTE: If no IP address is returned, type "docker-machine.exe env"
-* Inside the docker machine, do the following
-```bash
-mkdir unfetter-discover
-cd unfetter-discover
-git clone https://github.com/unfetter-discover/unfetter.git
-cd unfetter
-docker-compose -f docker-compose.virtualbox.yml up
-```
+Unfetter is no longer supporting a Windows deployment.  It is still possible, but we are focusing on Linux servers at the moment.
 
 
 ### Case 2: OR.....build from local source files.  
@@ -103,12 +92,7 @@ SSH:
  
  For MaxOSX and Linux
  ```
- docker-compose -f docker-compose.development.yml up
-```
-
-For Windows
- ```
- docker-compose -f docker-compose.virtualbox.yml -f docker-compose.development.yml up
+ docker-compose -f docker-compose.yml -f docker-compose.development.yml up
 ```
 
 By default, `docker-compose.development.yml` runs in a UAC mode that requires additional configuration.  Setting up UAC for Unfetter is documented [here](https://github.com/unfetter-discover/unfetter/wiki/GitHub-UAC-Configuration).
