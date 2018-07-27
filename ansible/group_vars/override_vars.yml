@@ -1,6 +1,5 @@
     # To override any of the variables, just uncomment the line to override
     
-    #tag: "0.3.6"
     #docker_tag: "0.3.6"
     #prepath: "../../"
     #build_action: "pull" 
@@ -10,3 +9,8 @@
     #use_taxii: false
     #run_mode: "dev"
     #registry: "unfetter/"
+    #ansible_host: "127.0.0.1"
+    #ansible_ssh_private_key_file: "~/.ssh/ansible"
+    #ansible_connection: "ssh"
+    
+    

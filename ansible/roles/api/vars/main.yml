@@ -11,12 +11,4 @@ dev_volume_list: ",{{ prepath }}unfetter-store/unfetter-discover-api/test:/usr/s
 uac_volume_list: ",private-config:/usr/share/unfetter-discover-api/api/config/private"
 volume_list: "{{ base_list }}{{ uac_volume_list if use_uac else '' }}{{ dev_volume_list if run_mode == 'dev' else '' }}"
 
-# Base link list
-api_link_list:
-  - "cti-stix-store-repository:cti-stix-store-repository"
-  - "unfetter-pattern-handler:unfetter-pattern-handler"
-
-# Added lists for UAC mode
-api_uac_link_list:
-  - "unfetter-socket-server:socketserver"
 

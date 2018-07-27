@@ -69,7 +69,7 @@
   listen: Private Config Tested
   when: "not (private_vol_stat.stat.exists)"
   template:
-    src: private-config.j2.json
+    src: private-config.j2
     dest: "{{ private_vol }}/private-config.json"
   notify:
     - check-private

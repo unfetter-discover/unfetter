@@ -1,0 +1,18 @@
+# Ensure the volumes are created. 
+- name: Clone Unfetter Git
+  git:
+     repo: "https://github.com/unfetter-discover/unfetter.git"
+     dest: "{{ prepath }}unfetter"
+     version: "{{ branch }}"
+
+- name: Clone if in Dev
+  git:
+     repo: "https://github.com/unfetter-discover/{{ item }}.git"
+     dest: "{{ prepath }}{{ item }}"
+     version: "{{ branch }}"
+  loop:
+     - unfetter-store
+     - unfetter-ui
+     - stix2pattern
+
+
