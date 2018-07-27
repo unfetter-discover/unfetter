@@ -1,0 +1,34 @@
+
+
+- name: "Create {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"
+
+# Creating the list of volumes has been difficult.  
+- debug:
+    msg: "{{ container_name }}: volume List {{ volume_list }}"
+
+- name: Create Insight
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
+    volumes: "{{ volume_list }}"
+
+    
+    entrypoint:
+      - python
+      - app.py
+  when: run_action     

@@ -20,7 +20,12 @@ server {
   location /api/ {
     proxy_pass https://unfetter-discover-api:3000/;
   }
-
+  {% if run_insight %}
+  location /insight/ {
+    proxy_pass http://unfetter-insight:8080/;
+  }
+  {% endif %}
+  
   # these conf files do not exist in name in the source repo
   #   they are specifically mapped based on the docker compose used
   {% if use_taxii %}
