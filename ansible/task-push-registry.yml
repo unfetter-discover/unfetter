@@ -1,0 +1,39 @@
+---
+####################################################################################
+#  This playbook only builds the docker images locally
+#
+####################################################################################
+
+
+- name: Pushes local images to a registry
+  hosts: build
+#  become: true
+  vars:
+     registry: "unfetter/"
+#     next_tag: "0.3.9"
+#     beta_version: ".beta.3"
+     image_list:
+         - "unfetter-api-explorer"
+         - "unfetter-discover-processor"
+         - "unfetter-discover-api"
+         - "unfetter-ui"
+         - "unfetter-ctf-ingest"
+         - "unfetter-pattern-handler"
+         - "unfetter-discover-gateway"
+
+  tasks:
+
+ # - debug:
+    - name: Tagging with Latest
+      command: "docker tag {{ item }}:{{ docker_tag }} {{ registry }}{{ item }}:latest"
+      with_items: "{{ image_list }}"
+
+    - name: Tagging with {{ next_tag }}
+      command: "docker tag {{ item }}:{{ docker_tag }} {{ registry }}{{ item }}:{{ next_tag }}"
+      with_items: "{{ image_list }}"       
+
+    - name: Pushing to {{ registry }}
+      command: "docker push {{ registry }}{{ item }}:{{ next_tag }}"
+      with_items: "{{ image_list }}"        
+
+ 
