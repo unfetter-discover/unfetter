@@ -12,13 +12,13 @@
 
   # Building the image if build_action is local
 
-- name: "Copy the DISTRIBUTION code"
-  copy:
-    src: "{{ prepath }}/unfetter-ui/dist"
-    dest: "{{ remote_role_directory }}files/"
-    force: true
-    remote_src: yes
-  when: "('production' in group_names and build_action=='local')"
+#- name: "Copy the DISTRIBUTION code"
+#  copy:
+#    src: "{{ prepath }}unfetter-ui/dist"
+#    dest: "{{ remote_role_directory }}files/"
+#    force: true
+#    remote_src: {{ if ansible_host == 'local' 'no' else 'yes' }}
+#  when: "('production' in group_names and build_action=='local')"
     
     
 - name: "Build {{ container_name }} from Gateway Dockerfile"
