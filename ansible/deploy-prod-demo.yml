@@ -1,17 +1,15 @@
 ---
 ####################################################################################
-#  This playbook only builds the docker images locally
+#  This playbook only builds in dev mode.  
 #
 ####################################################################################
 
 
-- name: Build the Docker images only.  Do not 
-  hosts: build
+- name: Build Playbook
+  hosts: prod-demo
   tasks:
-  - name: Iterate over group variables
-    debug:
-      var: item
-    with_items: "{{ hostvars | to_nice_json }}"           
+                   
   - name: Start running the commands
     import_tasks: discover-tasks.yml
+
 
