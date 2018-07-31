@@ -5,4 +5,6 @@ data
 *.tar
 backup/*
 !backup/.gitkeep
-dist
+**/dist
+
+roles/gateway/files/conf.d/default.conf
