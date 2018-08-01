@@ -8,3 +8,4 @@ backup/*
 **/dist
 
 roles/gateway/files/conf.d/default.conf
+roles/gateway/files/ui-dist/
