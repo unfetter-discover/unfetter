@@ -10,11 +10,10 @@ services:
      - unfetter-ui
     volumes:
      - ./config/nginx/default.conf:/etc/nginx/conf.d/default.conf
-     - ./config/nginx/uac-locations.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf     
+     - ./config/nginx/uac-locations.conf:/etc/nginx/conf.d.runmode/runmode-locations.conf
 
      # Deploy mode is using recently on disk source code.  
      - ../unfetter-ui/dist:/etc/nginx/html
-
 
   unfetter-discover-processor:
     build: ../unfetter-store/unfetter-discover-processor
@@ -40,14 +39,15 @@ services:
     environment:
       - MONGO_REPOSITORY=repository
       - MONGO_PORT=27017
-      - MONGO_DBNAME=stix
-    entrypoint:
-     - npm
-     - start
+      - MONGO_DBNAME=stix    
     depends_on:
      - cti-stix-store-repository
     links:
      - cti-stix-store-repository:repository
+    entrypoint:
+     - npm
+     - run
+     - start:deploy
 
   unfetter-api-explorer:
     build: 

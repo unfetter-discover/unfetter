@@ -168,3 +168,16 @@ services:
     - npm
     - run
     - server:dev:alt
+
+  build-process-test:
+    image: unfetter-discover
+    container_name: unfetter-discover
+    depends_on:
+    - unfetter-discover
+    volumes:
+    - ./unfetter-discover/unfetter/docker-compose
+    - ./unfetter-discover/unfetter/docker-compose.development.yml
+    entrypoint:
+    - npm
+    - run
+

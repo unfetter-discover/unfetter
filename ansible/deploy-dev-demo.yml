@@ -6,8 +6,7 @@
 
 
 - name: Build Playbook
-  hosts: prod
-  become: true
+  hosts: dev-demo
   tasks:
                    
   - name: Start running the commands
