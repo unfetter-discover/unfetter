@@ -6,13 +6,13 @@
 
 
 
-#  - name: "Extract DIST from Unfetter UI"
-#    command: "{{ item }}"
-#    with_items:
-#    - docker run --rm -v {{ role_path }}/files/ui-dist/prod-ff31:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:{{docker_tag}} npm run build:prod:noclean:ff31
-#    - docker run --rm -v {{ role_path }}/files/ui-dist/demo-ff31:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:{{docker_tag}} npm run build:demo:noclean:ff31
-#    - docker run --rm -v {{ role_path }}/files/ui-dist/prod:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:{{docker_tag}} npm run build:prod:noclean
-#    - docker run --rm -v {{ role_path }}/files/ui-dist/demo:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:{{docker_tag}} npm run build:demo:noclean
+  - name: "Extract DIST from Unfetter UI"
+    command: "{{ item }}"
+    with_items:
+    - docker run --rm -v {{ role_path }}/files/ui-dist/prod-ff31:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:{{docker_tag}} npm run build:prod:noclean:ff31
+    - docker run --rm -v {{ role_path }}/files/ui-dist/demo-ff31:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:{{docker_tag}} npm run build:demo:noclean:ff31
+    - docker run --rm -v {{ role_path }}/files/ui-dist/prod:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:{{docker_tag}} npm run build:prod:noclean
+    - docker run --rm -v {{ role_path }}/files/ui-dist/demo:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:{{docker_tag}} npm run build:demo:noclean
 
   - name: "Create {{ image_name }}.{{ item }}"
     docker_image:
