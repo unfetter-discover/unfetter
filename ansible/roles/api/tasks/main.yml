@@ -43,7 +43,7 @@
       HTTPS_PROXY_URL: ""
       PATTERN_HANDLER_DOMAIN: unfetter-pattern-handler
       PATTERN_HANDLER_PORT: 5000
-      SOCKET_SERVER_DOMAIN: "{{ 'socketserver' if use_uac else '' }}"
+      SOCKET_SERVER_DOMAIN: "{{ 'unfetter-socket-server' if use_uac else '' }}"
       SOCKET_SERVER_PORT: "{{ '3333' if use_uac else '' }}"
       #MONGO_DEBUG: "{{ 'false' if use_uac else '' }}"
       MONGO_DEBUG: "true"
