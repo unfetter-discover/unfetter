@@ -17,5 +17,9 @@
   - include_role:
       name: gateway
       tasks_from: task-build-release
+    vars:
+       gateway_tag: "{{ docker_tag }}"
+
+
 
 

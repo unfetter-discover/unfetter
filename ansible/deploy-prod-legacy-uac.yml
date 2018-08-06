@@ -6,8 +6,7 @@
 
 
 - name: Build Playbook
-  hosts: prod
-  become: true
+  hosts: prod-legacy-uac
   tasks:
                    
   - name: Start running the commands

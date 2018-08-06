@@ -24,7 +24,7 @@
 - name: "Build {{ container_name }} from Gateway Dockerfile"
   docker_image:
     name: "{{ container_name }}"
-    tag: "{{ docker_tag }}"
+    tag: "{{ gateway_tag }}"
     state: present
     path: "{{ remote_role_directory }}files"
   when: "('production' in group_names and build_action=='local')"
