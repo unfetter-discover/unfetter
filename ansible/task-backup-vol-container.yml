@@ -29,6 +29,11 @@
         - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/server.crt {{ certs_vol }}
         - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/server.key {{ certs_vol }}
     
+    - name: backup ui-config
+      command: "{{ item }}"
+      with_items:
+
+        - docker cp unfetter-ui:/usr/share/unfetter-ui/src/asset/config/local-settings.json {{ ui_vol }}/local-settings.json
     
     # Removing this for now, since we just need to rerun the configuration code again
     # Once the private-config volume is created, this handler will pull the config data from unfetter-discover-api and store

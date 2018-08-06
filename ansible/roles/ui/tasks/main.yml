@@ -42,7 +42,7 @@
       - "{{ run_command }}"
       volumes: 
         - "{{ prepath }}/unfetter-ui/src:/usr/share/unfetter-ui/src"
-        - "{{ prepath }}/unfetter-ui/config:/usr/share/unfetter-ui/config"
+        - "ui-config:/usr/share/unfetter-ui/src/asset/config"
   when: "(use_unfetter_ui) and (run_action)"
 
 #docker run --rm -v /Users/alchemist/workspace/alchemist/unfetter-discover/unfetter/ansible/roles/ui/files/dist:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:0.3.8 run build:prod:noclean:ff31

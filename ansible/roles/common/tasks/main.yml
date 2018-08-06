@@ -24,8 +24,7 @@
     name: ui-config
   notify:
     - load ui-vol
-  when: false
-
+  
 - name: Create private-config volume
   when: use_uac
   docker_volume:
