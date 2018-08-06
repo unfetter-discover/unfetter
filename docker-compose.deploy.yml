@@ -73,7 +73,7 @@ services:
     - unfetter-discover-openssl
     - cti-stix-store-repository
     links:
-     - unfetter-socket-server:socketserver
+     - unfetter-socket-server:unfetter-socket-server
     volumes:
     - ./certs/:/etc/pki/tls/certs
     - ../unfetter-store/unfetter-discover-api/test:/usr/share/unfetter-discover-api/test
