@@ -1,3 +1,4 @@
 - import_tasks: cert-volume.yml
 - import_tasks: private-volume.yml
 - import_tasks: mongodb-volume.yml
+- import_tasks: ui-volume.yml

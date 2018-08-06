@@ -1,0 +1,27 @@
+
+# Create The backup directory if it doesn't exist
+- name: Create Directory
+  listen: load ui-vol
+  file: path={{ ui_vol }} state=directory
+
+# Handles the CERTS Volumes
+- name: Write ui-vol
+  listen: load ui-vol
+  template: 
+    src: '{{ role_path }}/templates/local-settings.json.j2'
+    dest: '{{ ui_vol }}/local-settings.json'
+    force: true
+  remote_src: true
+  notify:
+   - Load UI Local Setting
+
+- name: Load UI Local Setting
+  command: "{{ item }}"
+  with_items:
+    - docker run -v ui-config:/ui-config --name helper busybox true
+    - docker cp {{ ui_vol }}/local-settings.json helper:/ui-config
+    - docker rm helper
+
+
+
+  
