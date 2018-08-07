@@ -26,10 +26,8 @@
       - name: "{{ docker_network_name }}"          
     entrypoint:
      - npm
-     - start  
-    exposed_ports: 
-    - "13333"
-    - "6555"
+     - run
+     - start:deploy
     env:
       MONGO_REPOSITORY: cti-stix-store-repository
       MONGO_PORT: 27017
@@ -40,9 +38,6 @@
       SEND_EMAIL_ALERTS: false
       # This is only needed if using SEND_EMAIL_ALERTS *AND* private-config.email.json does not have a service email address
       SERVICE_EMAIL: ''
-    published_ports:
-    - "13333:3333"
-    - "6555:6555"
     volumes: 
       - "certs:/etc/pki/tls/certs:ro"
       - "{{ prepath }}/unfetter-store/unfetter-socket-server/src:/usr/share/unfetter-socket-server/src"
