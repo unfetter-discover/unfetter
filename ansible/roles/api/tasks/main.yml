@@ -49,5 +49,6 @@
       MONGO_DEBUG: "true"
     entrypoint:
       - npm
-      - "{{ 'run debugdev' if run_mode == 'dev' else 'start' }}"
+      - run
+      - "{{ 'debugdev' if run_mode == 'dev' else 'startdeploy' }}"
   when: run_action     

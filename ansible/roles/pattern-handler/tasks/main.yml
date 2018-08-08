@@ -28,9 +28,12 @@
     published_ports:
     - "5000:5000"    
     entrypoint:
-     - python3
-     - app.py
-     - 0.0.0.0
+      - gunicorn
+      - --config
+      - /opt/stix/gunicorn_config.py
+      - --access-logfile
+      - "-"
+      - app:app      
   when: run_action
 
 
