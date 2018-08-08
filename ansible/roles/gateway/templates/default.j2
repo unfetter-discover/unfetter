@@ -18,6 +18,7 @@ server {
   }
   
   location /api/ {
+    client_max_body_size {{ attachments_max_size }};
     proxy_pass https://unfetter-discover-api:3000/;
   }
 

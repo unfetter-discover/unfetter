@@ -26,7 +26,6 @@
     networks:
       - name: "{{ docker_network_name }}"          
     volumes: "{{ volume_list }}"
-#    links: "{{ api_link_list }} + {{ api_uac_link_list if use_uac == true else '' }}"
 
     env:
       CTF_PARSE_HOST: http://unfetter-ctf-ingest
@@ -44,11 +43,12 @@
       HTTPS_PROXY_URL: ""
       PATTERN_HANDLER_DOMAIN: unfetter-pattern-handler
       PATTERN_HANDLER_PORT: 5000
-      SOCKET_SERVER_DOMAIN: "{{ 'socketserver' if use_uac else '' }}"
+      SOCKET_SERVER_DOMAIN: "{{ 'unfetter-socket-server' if use_uac else '' }}"
       SOCKET_SERVER_PORT: "{{ '3333' if use_uac else '' }}"
       #MONGO_DEBUG: "{{ 'false' if use_uac else '' }}"
       MONGO_DEBUG: "true"
     entrypoint:
       - npm
-      - start
+      - run
+      - "{{ 'debugdev' if run_mode == 'dev' else 'startdeploy' }}"
   when: run_action     

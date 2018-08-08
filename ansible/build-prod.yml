@@ -14,4 +14,12 @@
     with_items: "{{ hostvars | to_nice_json }}"           
   - name: Start running the commands
     import_tasks: discover-tasks.yml
+  - include_role:
+      name: gateway
+      tasks_from: task-build-release
+    vars:
+       gateway_tag: "{{ docker_tag }}"
+
+
+
 

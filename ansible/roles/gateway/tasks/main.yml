@@ -12,27 +12,29 @@
 
   # Building the image if build_action is local
 
-- name: "Copy the DISTRIBUTION code"
-  copy:
-    src: "{{ prepath }}/unfetter-ui/dist"
-    dest: "{{ role_path }}/files/"
-    force: true
-  when: "('production' in group_names and build_action=='local')"
+#- name: "Copy the DISTRIBUTION code"
+#  copy:
+#    src: "{{ prepath }}unfetter-ui/dist"
+#    dest: "{{ remote_role_directory }}files/"
+#    force: true
+#    remote_src: {{ if ansible_host == 'local' 'no' else 'yes' }}
+#  when: "('production' in group_names and build_action=='local')"
     
     
 - name: "Build {{ container_name }} from Gateway Dockerfile"
   docker_image:
     name: "{{ container_name }}"
-    tag: "{{ docker_tag }}"
+    tag: "{{ gateway_tag }}"
     state: present
-    path: "{{ role_path }}/files"
+    path: "{{ remote_role_directory }}files"
   when: "('production' in group_names and build_action=='local')"
 
 - name: "Build new template"
   template: 
     src: '{{ role_path }}/templates/default.j2'
-    dest: '{{ role_path }}/files/conf.d/default.conf'
+    dest: '{{ remote_role_directory }}files/conf.d/default.conf'
     force: true
+  remote_src: true 
 # when: Unsure when to do this, I guess every time this needs to get deployed.    
 
 # Creates the docker container for the gateway
@@ -51,7 +53,7 @@
     - "80:80"
 #    links: "{{ link_list }}"
     volumes: 
-     - "{{ role_path }}/files/conf.d/default.conf:/etc/nginx/conf.d/default.conf"
+     - "{{ remote_role_directory }}/files/conf.d/default.conf:/etc/nginx/conf.d/default.conf"
      - "{{ prepath }}/unfetter/config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra"
 #     - "{{ prepath }}/unfetter/config/certs/:/etc/pki/tls/certs"
      - "certs:/etc/pki/tls/certs:ro"

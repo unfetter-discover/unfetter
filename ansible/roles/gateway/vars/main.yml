@@ -1,4 +1,4 @@
 ---
 container_name: "unfetter-discover-gateway"
-image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
-
+image_name: "{{registry}}{{ container_name }}:{{ gateway_tag }}"
+remote_role_directory: "{{ prepath }}unfetter/ansible/roles/gateway/"

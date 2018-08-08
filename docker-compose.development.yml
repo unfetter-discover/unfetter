@@ -88,7 +88,7 @@ services:
     depends_on:
     - unfetter-socket-server
     links:
-    - unfetter-socket-server:socketserver
+    - unfetter-socket-server:unfetter-socket-server
     ports:
     - "49360:3000"
     - "5555:5555"
@@ -98,7 +98,7 @@ services:
     - ../unfetter-store/unfetter-discover-api/app.js:/usr/share/unfetter-discover-api/app.js
     - ../unfetter-store/unfetter-discover-api/config/private:/usr/share/unfetter-discover-api/config/private
     environment:
-    - SOCKET_SERVER_DOMAIN = socketserver
+    - SOCKET_SERVER_DOMAIN = unfetter-socket-server
     - SOCKET_SERVER_PORT = 3333
     - ENV=dev
     # Options: UAC, TEST, DEMO
