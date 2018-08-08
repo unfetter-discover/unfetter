@@ -32,6 +32,8 @@
       - --config
       - /opt/stix/gunicorn_config.py
       - --access-logfile
+      - "-"
+      - app:app      
   when: run_action
 
 
