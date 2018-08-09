@@ -27,7 +27,7 @@
     entrypoint:
      - npm
      - run
-     - start:deploy
+     - "{{ 'start' if run_mode == 'dev' else 'start:deploy' }}"
     env:
       MONGO_REPOSITORY: cti-stix-store-repository
       MONGO_PORT: 27017
