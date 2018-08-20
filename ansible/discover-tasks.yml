@@ -17,39 +17,31 @@
       file: "{{ playbook_dir }}/group_vars/override_vars.yml"
     ignore_errors: yes
 
+
 #  These variables do not change through this playbook.  So the facts are set_fact
 #  here.  If override variables exist, they take precedence.
-
+    
   - set_fact:
-# docker_tag is the docker image version number.  
      docker_tag: "{{ overrides.docker_tag | default(docker_tag) }}"
-# build_action tells ansible if we are building the image from source "local" or pulling
-# from a registry "pull"
      build_action: "{{ overrides.build_action | default(build_action) }}"
-# Run action is true if we want to run the containers.  We can set to "false" to just build the images
      run_action: "{{ overrides.run_action | default(run_action) }}"
-# If we are running in Dev mode, we need the unfetter-ui container.  If in Prod mode, we 
-#    store the UI code inside the gateway
      use_unfetter_ui: "{{ overrides.use_unfetter_ui | default(use_unfetter_ui) }}"
-# use_uac is true/false, depending on if we are in demo mode or want uac turned on
      use_uac: "{{ overrides.use_uac | default(use_uac) }}"
-# use_taxii for setting up the taxii server
      use_taxii: "{{ overrides.use_taxii | default(use_taxii) }}"
-# The location of the registry.  Default is docker hub
      registry: "{{ overrides.registry | default(registry) }}"
-# Prepath is the relative path of the start of the unfetter code directories
      prepath: "{{ overrides.prepath | default(prepath) }}"
-# Variables that control how ansible connects to remote system.  Right now, we only 
-# assume a single remote system.
-# Ansible Host IP if remote.  Right now, we only have a single 
      ansible_host: "{{ overrides.ansible_host | default(ansible_host) }}"
      ansible_ssh_private_key_file: "{{ overrides.ansible_ssh_private_key_file | default(ansible_ssh_private_key_file) }}"
      ansible_connection: "{{ overrides.ansible_connection | default(ansible_connection) }}"
      ansible_python_interpreter: "{{ overrides.ansible_python_interpreter | default(ansible_python_interpreter) }}"
+     gateway_tag: "{{ overrides.gateway_tag | default(gateway_tag) }}"
+  
+                    
   #  Displaying the variables.
   - debug:
         msg: 
           - "docker_tag: {{ docker_tag }} "
+          - "gateway_tag: {{ gateway_tag }} "
           - "build_action: {{ build_action }}"
           - "run_action: {{ run_action }}"
           - "use_unfetter_ui: {{ use_unfetter_ui }}"
@@ -61,7 +53,11 @@
           - "ansible_host = {{ ansible_host }}"
           - "ansible_ssh_private_key_file = {{ ansible_ssh_private_key_file }}"
           - "ansible_connection = {{ ansible_connection }}"
-          - "api_domain = {{ api_domain }}"
+          - "run_mode = {{ run_mode }}"
+          - "use_unfetter_ui = {{ use_unfetter_ui }}"
+
+
+
   - include_role:
         name: common
   - include_role:
