@@ -1,0 +1,14 @@
+
+####################################################################################
+#  This playbook migrates from 0.3.8 to 0.3.9
+#
+#
+####################################################################################
+
+
+- name: Dropping Indexes
+  command: "{{ item }}"
+  with_items:
+    - "docker exec cti-stix-store-repository mongo stix --eval \"db.getCollection('stix').dropIndexes()\""
+    - "docker exec cti-stix-store-repository mongo stix --eval \"db.getCollection('user').dropIndexes()\""
+
