@@ -1,0 +1,31 @@
+---
+# For version 0.3.10 of Unfetter Discover
+
+# For development, you can use the local ansible location as default
+ansible_host: "127.0.0.1"
+
+# If the host is local, then use "", else enter the location of the SSH key file
+#ansible_ssh_private_key_file: "~/.ssh/ansible"
+ansible_ssh_private_key_file: ""
+
+# "local" if this is a local build.  Else, "ssh"
+#ansible_connection: "ssh"
+ansible_connection: "local"
+
+# If local, then use ../../ or the full directory path to the directory above the "unfetter" directory.  
+prepath: '../../'
+
+# For testing, the API_Domain is "localhost"
+api_domain: "localhost"
+ui_domain: 'localhost'
+docker_tag: "0.3.10.beta.1"
+gateway_tag: "{{ docker_tag }}.uac"
+
+
+# Docker Tag specifies what will be the name of the developed tag.
+build_action: "local"
+run_mode: "dev"
+registry: ""
+
+# In production, the Unfetter UI is compiled and part of the gateway, served by NGINX
+use_unfetter_ui: true

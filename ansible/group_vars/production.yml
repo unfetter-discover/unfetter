@@ -1,0 +1,28 @@
+---
+# If local, then use ../../ or the full directory path to the directory above the "unfetter" directory.  
+#prepath: '../../'
+#prepath={{ ansible_env.HOME }}/unfetter-discover/
+# This is the default target host.  if the host is local, use 127.0.0.1
+ansible_host: "127.0.0.1"
+legacy: false
+# If the host is local, then use "", else enter the location of the SSH key file
+#ansible_ssh_private_key_file: "~/.ssh/ansible"
+ansible_ssh_private_key_file: ""
+# "local" if this is a local build.  Else, "ssh"
+#ansible_connection: "ssh"
+ansible_connection: "local"
+# If local, then use ../../ or the full directory path to the directory above the "unfetter" directory.  
+prepath: '../../'
+api_domain: "localhost"
+ui_domain: 'localhost'
+docker_tag: "0.3.9"
+gateway_tag: "{{ docker_tag }}.uac"
+
+ansible_python_interpreter: python
+
+# Docker Tag specifies what will be the name of the developed tag.
+build_action: "none"
+use_unfetter_ui: false
+run_mode: "prod"
+registry: "unfetter/"
+

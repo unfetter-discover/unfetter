@@ -11,5 +11,8 @@
                    
   - name: Start running the commands
     import_tasks: discover-tasks.yml
+    vars:
+      - run_action: true
+      - build_action: local
 
 

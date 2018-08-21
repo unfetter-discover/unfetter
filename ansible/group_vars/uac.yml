@@ -1,0 +1,4 @@
+---
+use_uac: true
+auth_services: '["github"]'
+gitlab_url: "https://gitlab.com"
