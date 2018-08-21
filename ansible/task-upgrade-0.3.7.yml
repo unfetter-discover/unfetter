@@ -1,0 +1,15 @@
+---
+####################################################################################
+#  This playbook will upgrade from 0.3.6 to 0.3.7
+#
+####################################################################################
+- name: Upgrades Unfetter to support version 0.3.7
+  hosts: all
+  tasks:
+    - include_role:
+          name: common
+          tasks_from: migrate-0.3.7.yml
+    - include_role:
+          name: common
+          tasks_from: restart-api-container.yml
+
