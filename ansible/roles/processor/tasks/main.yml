@@ -26,6 +26,7 @@
     networks:
       - name: "{{ docker_network_name }}"           
     volumes: "{{ volume_list }}"
+    working_dir: /usr/src/app
     env:
      PATTERN_HANDLER_DOMAIN: unfetter-pattern-handler
      PATTERN_HANDLER_PORT: 5000    
@@ -33,6 +34,7 @@
      # If deployed in a proxy, add the proxy's URL here
      HTTPS_PROXY_URL: ''
     entrypoint:
+    
      - ts-node
      - src/app.ts
      - --stix

@@ -26,7 +26,7 @@
     image: "{{ image_name }}"
     networks:
       - name: "{{ docker_network_name }}"          
-   
+    working_dir: /usr/share/unfetter-api-explorer
     state: started
     env: 
      PUBLIC_PATH: /explorer/

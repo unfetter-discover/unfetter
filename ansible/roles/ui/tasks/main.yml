@@ -33,6 +33,7 @@
       name: "{{ container_name }}"
       image: "{{ image_name }}"
       state: started
+      working_dir: /usr/share/unfetter-ui
       networks:
       - name: "{{ docker_network_name }}"      
       entrypoint:
@@ -44,5 +45,3 @@
         - "{{ prepath }}/unfetter-ui/src:/usr/share/unfetter-ui/src"
         - "ui-config:/usr/share/unfetter-ui/src/assets/config"
   when: "(use_unfetter_ui) and (run_action)"
-
-#docker run --rm -v /Users/alchemist/workspace/alchemist/unfetter-discover/unfetter/ansible/roles/ui/files/dist:/usr/share/unfetter-ui/dist --name unfetter-ui-build-temp unfetter-ui:0.3.8 run build:prod:noclean:ff31

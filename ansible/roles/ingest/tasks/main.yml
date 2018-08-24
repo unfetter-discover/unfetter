@@ -28,6 +28,7 @@
     entrypoint:
       - npm
       - start
+    working_dir: /usr/share/unfetter-ctf-ingest
     env:
       API_PROTOCOL: https
       API_HOST: unfetter-discover-api
