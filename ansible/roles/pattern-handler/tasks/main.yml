@@ -21,6 +21,7 @@
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
+    working_dir: /opt/stix/
     networks:
       - name: "{{ docker_network_name }}"          
     exposed_ports: 
