@@ -1,0 +1,4 @@
+- name: Restart API container
+  docker_container:
+    name: unfetter-discover-api
+    restart: true
