@@ -312,6 +312,7 @@
       "created": "2018-03-23T18:43:23.711Z",
       "name": "Autologon",
       "description": "Autologon enables you to easily configure Windows’ built-in autologon mechanism. Instead of waiting for a user to enter their name and password, Windows uses the credentials you enter with Autologon, which are encrypted in the Registry, to log on the specified user automatically.",
+      "category": "x-unfetter-category--77815162-52a2-4ce6-b5ad-b88105b6f63d",
       "external_references": [
         {
           "source_name": "Microsoft",
