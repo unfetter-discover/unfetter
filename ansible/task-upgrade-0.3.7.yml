@@ -11,5 +11,6 @@
           tasks_from: migrate-0.3.7.yml
     - include_role:
           name: common
-          tasks_from: restart-api-container.yml
+          tasks_from: restart-container.yml
+
 
