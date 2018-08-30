@@ -3,7 +3,7 @@
 
 #  It also will run generic tasks.
 - name: Backup the volume information from a file
-  hosts: dev
+  hosts: deployed
   vars:
     private_vol: '{{ backup_directory }}/private-vol'
     certs_vol: '{{ backup_directory }}/certs-vol'
