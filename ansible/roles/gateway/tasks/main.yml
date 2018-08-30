@@ -32,10 +32,12 @@
 - name: "Build new template"
   template: 
     src: '{{ role_path }}/templates/default.j2'
-    dest: '{{ remote_role_directory }}files/conf.d/default.conf'
+    dest: '{{ role_path }}/files/conf.d/default.conf'
     force: true
   remote_src: true 
-# when: Unsure when to do this, I guess every time this needs to get deployed.    
+
+- debug:
+      msg: The volume is {{ volume_list }}
 
 # Creates the docker container for the gateway
 - name: Create the {{ container_name }} from image {{ image_name }}
@@ -52,11 +54,11 @@
     - "443:443"
     - "80:80"
 #    links: "{{ link_list }}"
-    volumes: 
-     - "{{ remote_role_directory }}/files/conf.d/default.conf:/etc/nginx/conf.d/default.conf"
-     - "{{ prepath }}/unfetter/config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra"
+    volumes: "{{ volume_list }}"
+     #- "{{ remote_role_directory }}/files/conf.d/default.conf:/etc/nginx/conf.d/default.conf"
+     #- "{{ prepath }}/unfetter/config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra"
 #     - "{{ prepath }}/unfetter/config/certs/:/etc/pki/tls/certs"
-     - "certs:/etc/pki/tls/certs:ro"
+     #- "certs:/etc/pki/tls/certs:ro"
   # TAXII
   #   - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii.conf' if use_taxii else 'taxii-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii.conf"
   #   - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii-auth.conf' if use_taxii and use_taxii_tls else 'taxii-auth-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii-auth.conf"
@@ -65,5 +67,7 @@
    # In USE_UNFETTER_UI
   #   - "{{ prepath }}/unfetter/config/nginx/{{ 'ui-dev.conf' if use_unfetter_ui else 'ui-prod.conf' }}:/etc/nginx/conf.d.runmode/ui.conf"
   when: run_action
+#  notify:
+#    - start gateway
 
   

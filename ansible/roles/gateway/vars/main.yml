@@ -2,3 +2,6 @@
 container_name: "unfetter-discover-gateway"
 image_name: "{{registry}}{{ container_name }}:{{ gateway_tag }}"
 remote_role_directory: "{{ prepath }}unfetter/ansible/roles/gateway/"
+prod_volume_list: ",ui-config:/nginx/html/asset/config"
+base_list: "{{ role_path }}/files/conf.d/default.conf:/etc/nginx/conf.d/default.conf,{{ role_path }}/files/conf.d.extra/:/etc/nginx/conf.d.extra/,certs:/etc/pki/tls/certs"
+volume_list: "{{ base_list }}{{ prod_volume_list if ((not use_unfetter_ui) and (use_uac)) else ''}}"

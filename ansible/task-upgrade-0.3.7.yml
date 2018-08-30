@@ -4,7 +4,7 @@
 #
 ####################################################################################
 - name: Upgrades Unfetter to support version 0.3.7
-  hosts: all
+  hosts: deployed
   tasks:
     - include_role:
           name: common

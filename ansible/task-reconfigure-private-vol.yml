@@ -3,7 +3,7 @@
 
 #  It also will run generic tasks.
 - name: Calls the role task to reconfigure the private-vol file
-  hosts: dev
+  hosts: deployed
   vars:
     private_vol: '{{ backup_directory }}/private-vol'
 
