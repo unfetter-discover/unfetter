@@ -29,12 +29,18 @@
         - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/server.crt {{ certs_vol }}/certs
         - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/server.key {{ certs_vol }}/certs
     
-    - name: backup ui-config
+    - name: backup local-settings.json from unfetter-ui
       command: "{{ item }}"
       with_items:
-
         - docker cp unfetter-ui:/usr/share/unfetter-ui/src/assets/config/local-settings.json {{ ui_vol }}/local-settings.json
+      when: ((use_unfetter_ui) and (use_uac))
     
+    - name: backup local-settings.json from gateway
+      command: "{{ item }}"
+      with_items:
+        - docker cp unfetter-discover-gateway:/nginx/html/asset/config/local-settings.json {{ ui_vol }}/local-settings.json
+      when: ((not use_unfetter_ui) and (use_uac))
+
     # Removing this for now, since we just need to rerun the configuration code again
     # Once the private-config volume is created, this handler will pull the config data from unfetter-discover-api and store
     # into the volume
@@ -48,6 +54,7 @@
 #        - docker rm helper
         
         #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v $thepath/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+      when: use_uac
     - name: add to inventory for mongo
       add_host:
         name: cti-stix-store-repository
