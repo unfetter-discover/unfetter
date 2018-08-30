@@ -38,7 +38,7 @@
     - name: backup local-settings.json from gateway
       command: "{{ item }}"
       with_items:
-        - docker cp unfetter-discover-gateway:/nginx/html/asset/config/local-settings.json {{ ui_vol }}/local-settings.json
+        - docker cp unfetter-discover-gateway:/etc/nginx/html/assets/config/local-settings.json {{ ui_vol }}/local-settings.json
       when: ((not use_unfetter_ui) and (use_uac))
 
     # Removing this for now, since we just need to rerun the configuration code again
