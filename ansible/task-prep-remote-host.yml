@@ -6,7 +6,7 @@
 
 
 - name: Prepare the Docker Host 
-  hosts: dev 
+  hosts: deployed 
 #  become: true
   vars:
      pip_install_packages:

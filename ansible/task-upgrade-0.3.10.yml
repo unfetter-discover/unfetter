@@ -5,7 +5,7 @@
 ####################################################################################
 
 - name: Upgrades Unfetter to support version 0.3.10
-  hosts: dev
+  hosts: deployed
   tasks:
     - include_role:
           name: common
