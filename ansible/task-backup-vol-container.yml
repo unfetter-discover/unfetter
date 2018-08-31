@@ -40,6 +40,7 @@
       with_items:
         - docker cp unfetter-discover-gateway:/etc/nginx/html/assets/config/local-settings.json {{ ui_vol }}/local-settings.json
       when: ((not use_unfetter_ui) and (use_uac))
+      ignore_errors: yes
 
     # Removing this for now, since we just need to rerun the configuration code again
     # Once the private-config volume is created, this handler will pull the config data from unfetter-discover-api and store
@@ -55,6 +56,9 @@
         
         #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v $thepath/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
       when: use_uac
+      ignore_errors: yes
+
+      
     - name: add to inventory for mongo
       add_host:
         name: cti-stix-store-repository
