@@ -2,3 +2,9 @@
 use_uac: true
 auth_services: ["github"]
 gitlab_url: "https://gitlab.com"
+
+
+# The custom private config is anything that might go inside the private-config.json
+#    needed for UAC.  It will be used by the ansible templating feature.
+
+#custom_private_config: "Enter your custom template info here"

@@ -27,6 +27,7 @@
       - name: "{{ docker_network_name }}"          
     volumes: "{{ volume_list }}"
 
+    published_ports: "{{ '49360:3000,5555:5555' if 'development' in group_names else [] }}"
     env:
       CTF_PARSE_HOST: http://unfetter-ctf-ingest
       STIX_API_PROTOCOL: http

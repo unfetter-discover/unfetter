@@ -16,18 +16,15 @@
 - debug:
       msg: "This is {{ build_action }}"
 # Create the pattern-handler 
-- name: Create pattern
+- name: Create pattern in production
   docker_container:
     name: "{{ container_name }}"
     image: "{{ image_name }}"
     state: started
     working_dir: /opt/stix/
+    published_ports: "{{ '5000:5000' if 'development' in group_names else [] }}"
     networks:
       - name: "{{ docker_network_name }}"          
-    exposed_ports: 
-    - "5000"
-    published_ports:
-    - "5000:5000"    
     entrypoint:
       - gunicorn
       - --config
@@ -36,6 +33,5 @@
       - "-"
       - app:app      
   when: run_action
-
 
 

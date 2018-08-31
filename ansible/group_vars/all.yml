@@ -20,3 +20,7 @@ attachments_max_size: 0
 ansible_python_interpreter: python
 latest_production_tag: 0.3.9
 legacy: false
+
+
+#  Turn to "true" if you would like to block attachments
+block_attachments: false 

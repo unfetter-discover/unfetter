@@ -1,4 +1,8 @@
 {
+
+    {% if custom_private_config is defined %}
+        {{ custom_private_config }}
+    {% endif %}
     "authServices": [
         "{{ auth_services | join('",
         "') }}"
@@ -15,7 +19,12 @@
         "clientSecret": "{{ gitlab_clientSecret_register.user_input }}",
         "gitlabURL": "{{ gitlab_url }}"
     },
-    {% endif %}    
+    {% endif %}
+    {% if block_attachments is defined %}    
+    "blockAttachments":{% if block_attachments %}true,{% else %}false,{%endif%}
+    {% else %}
+        "blockAttachments": false,
+    {% endif %}
     "jwtSecret": "{{ secret_jwt_register.user_input }}",
     "sessionSecret": "{{ secret_session_register.user_input }}",
     "apiRoot": "https://{{ api_domain }}/api",
