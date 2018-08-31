@@ -19,7 +19,12 @@
         "clientSecret": "{{ gitlab_clientSecret_register.user_input }}",
         "gitlabURL": "{{ gitlab_url }}"
     },
-    {% endif %}    
+    {% endif %}
+    {% if blockAttachments is defined %}    
+    "blockAttachments":{% if blockAttachments %}true,{% else %}false,{%endif%}
+    {% else %}
+        "blockAttachments": true,
+    {% endif %}
     "jwtSecret": "{{ secret_jwt_register.user_input }}",
     "sessionSecret": "{{ secret_session_register.user_input }}",
     "apiRoot": "https://{{ api_domain }}/api",
