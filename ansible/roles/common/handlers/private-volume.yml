@@ -19,20 +19,50 @@
     - docker cp {{ private_vol }}/private-config.json helper:/config/private
     - docker rm helper
 
+# If the private-config is not there, then ask the user for the input information
 
-- name: include tasks to build the private config file
-  import_tasks: build-private-config.yml
-  when: 'not (private_vol_stat.stat.exists)'
+# Ask if GitHub authentication
+- pause:
+    prompt: "\tPlease enter the GitHub application client ID: "
+  listen: Private Config Tested          
+  when: '"github" in auth_services and not (private_vol_stat.stat.exists)'
+  register: github_clientID_register
+
+- pause:
+    prompt: "\n\tPlease enter the GitHub application client secret: '"
+  listen: Private Config Tested
+  when: '"github" in auth_services and not (private_vol_stat.stat.exists)'
+  register: github_clientSecret_register
+
+# Git Gitlab info
+- pause:
+    prompt: "\n\tPlease enter the GitLb application client ID:'"
+  listen: Private Config Tested    
+  when: '"gitlab" in auth_services and not (private_vol_stat.stat.exists)'
+  register: gitlab_clientID_register
+- pause:
+    prompt: "\n\tPlease enter the GitLb application client secret:"
+  listen: Private Config Tested    
+  when: '"gitlab" in auth_services and not (private_vol_stat.stat.exists)'
+  register: gitlab_clientSecret_register
+  
+# Session and JWT standard secret information      
+- pause:
+    prompt: "Enter JWT secret "
+  when: "not (private_vol_stat.stat.exists)"    
+  listen: Private Config Tested    
+  register: secret_jwt_register
+
+- pause:
+    prompt: "Enter session secret "
+  when: "not (private_vol_stat.stat.exists)"      
+  listen: Private Config Tested    
+  register: secret_session_register
+
 # Create The backup directory if it doesn't exist
-
-
-
-
 - name: Create Directory
   listen: Private Config Tested    
   file: path={{ private_vol }} state=directory
-
-- meta: flush_handlers
 
 # Create the new private-config.json.  Then, restart to first handler to copy the private-config
 - name: Private Config Tested Config
