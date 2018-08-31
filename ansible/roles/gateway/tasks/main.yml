@@ -29,6 +29,9 @@
     path: "{{ remote_role_directory }}files"
   when: "('production' in group_names and build_action=='local')"
 
+- name: make sure dirs are there
+  file: path={{ role_path }}/files/conf.d/ state=directory
+
 - name: "Build new template"
   template: 
     src: '{{ role_path }}/templates/default.j2'
