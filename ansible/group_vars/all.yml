@@ -23,4 +23,4 @@ legacy: false
 
 
 #  Turn to "true" if you would like to block attachments
-blockAttachments: false 
+block_attachments: false 

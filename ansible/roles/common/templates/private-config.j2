@@ -20,8 +20,8 @@
         "gitlabURL": "{{ gitlab_url }}"
     },
     {% endif %}
-    {% if blockAttachments is defined %}    
-    "blockAttachments":{% if blockAttachments %}true,{% else %}false,{%endif%}
+    {% if block_attachments is defined %}    
+    "blockAttachments":{% if block_attachments %}true,{% else %}false,{%endif%}
     {% else %}
         "blockAttachments": true,
     {% endif %}
