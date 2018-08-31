@@ -29,6 +29,7 @@
      - run
      - "{{ 'start' if run_mode == 'dev' else 'start:deploy' }}"
     working_dir: /usr/share/unfetter-socket-server
+    published_ports: "{{ '13333:3333,6555:6555' if 'development' in group_names else [] }}"
     env:
       MONGO_REPOSITORY: cti-stix-store-repository
       MONGO_PORT: 27017
