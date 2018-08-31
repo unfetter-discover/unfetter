@@ -23,7 +23,7 @@
     {% if block_attachments is defined %}    
     "blockAttachments":{% if block_attachments %}true,{% else %}false,{%endif%}
     {% else %}
-        "blockAttachments": true,
+        "blockAttachments": false,
     {% endif %}
     "jwtSecret": "{{ secret_jwt_register.user_input }}",
     "sessionSecret": "{{ secret_session_register.user_input }}",
