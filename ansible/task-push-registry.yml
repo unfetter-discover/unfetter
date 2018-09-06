@@ -59,41 +59,7 @@
         msg: "Do not put , between your variables"
       when: (push_docker_tag is search(",")) or (push_registry is search(","))
 
-    #- meta: end_play
 
-#    - debug:
-#        msg: "Item[0] is {{ item[0] }} Item[1] is {{ item[1] }}"
-#      loop: 
-#        - "{{ query('nested', '{{ image_list }}',['0.3.9','latest']) }}"
-#    - debug:
-#        msg: "Item[0] is {{ item[0] }} Item[1] is {{ item[1] }}"
-#      loop: "{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"  
-    - debug:
-        msg: push_latest is {{ push_latest }}
-
-
-# For testing, lets leave out latest.  
-
-#    - name: Build the image loops with Latest
-#      set_fact: 
-#        image_loop: "{{ query('nested', '{{ image_list }}',['0.3.9','latest']) }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}+{{ query('nested', ['unfetter-discover-gateway'],['latest']) }}"
-#      when: push_latest
-    - set_fact:
-        tag_list: 
-          - "{{ push_docker_tag }}"
-          - "latest"
-      when: push_latest
-
-    - set_fact:
-        tag_list: 
-          - "0.3.9"
-      when: not push_latest
-
-    - name: printing without a set fact
-      debug:
-        msg: "{{ item[0] }}:{{ item[1] }}"
-      loop: "{{ query('nested', '{{ image_list }}','{{ tag_list }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"     
-#    - meta: end_play
     - name: Build running containers for every image
       docker_container:
         name: "{{ item[0] }}.{{ item[1] }}.ready-to-export"
@@ -108,72 +74,25 @@
       command: "docker export -o {{ item[0] }}.{{ item[1] }}.ready-to-export.tar {{ item[0] }}.{{ item[1] }}.ready-to-export"
       loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
  
-    - name: Import the Images
-      command: docker import {{ item[0] }}.{{ item[1] }}.ready-to-export.tar  {{ push_registry }}{{ item[0] }}:{{ item[1] }}
+
+    - name: Import and push
+      docker_image:
+        name: "{{ push_registry }}{{ item[0] }}"
+        tag: "{{ item[1] }}"
+        push: yes
+        load_path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
+      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+    - name: Import and Push latest
+      docker_image:
+        name: "{{ push_registry }}{{ item[0] }}"
+        tag: "latest"
+        push: yes
+        load_path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
+      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],['{{ push_docker_tag }}.demo']) }}"
+
+    - name: Delete TAR Files
+      file: 
+        state: absent
+        path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
       loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
 
-    - name: Tag the Images to latest
-      command: docker tag {{ push_registry }}{{ item[0] }}:{{ item[1] }} {{ push_registry }}{{ item[0] }}:latest
-      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],['{{ push_docker_tag }}.demo']) }}"
-      when: push_latest
-
-
-      #- name: Import the Gateway Images
-      #  command: docker import unfetter-discover-gateway.{{ item }}.ready-to-export.tar  unfetter-discover-gateway:{{ push_docker_tag }}.{{ item }}
-      #  with_items: "{{ gateway_config }}"
-      #  notify: Delete gateway TAR Files
-
-#TODO Bring back in the latest
-#    - name: Tagging with Latest
-#      command: "docker tag {{ item }}:{{ push_docker_tag }} {{ push_registry }}{{ item }}:latest"
-#      with_items: "{{ image_list }}"
-#      when: push_latest
-
- #   - name: Tagging gateway with latest
-#      command: "docker tag unfetter-discover-gateway:{{ push_docker_tag }}.demo {{ push_registry }}unfetter-discover-gateway:latest"
-#      when: push_latest
-  
-#    - name: Tagging with {{ push_docker_tag }}
-#      command: "docker tag {{ item[0] }}:{{ item[1] }} {{ push_registry }}{{ item[0] }}:{{ item[1] }}"
-#      loop: "{{ query('nested', '{{ image_list }}','{{ tag_list }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"     
-
-#    - name: Tagging Gateway with {{ push_docker_tag }}
-#      command: "docker tag unfetter-discover-gateway:{{ push_docker_tag }}.{{ item }} {{ push_registry }}unfetter-discover-gateway:{{ push_docker_tag }}.{{ item }}"
-#      with_items: "{{ gateway_config }}"
-
-
-#    - name: Pushing to {{ push_registry }}
-#      docker_image:
-#        image_name: 
-#      command: "docker push {{ push_registry }}{{ item }}:{{ push_docker_tag }}"
-#      with_items: "{{ image_list }}"
-
-#    - name: Pushin Gateway with {{ push_registry }}
-#      command: "docker push {{ push_registry }}unfetter-discover-gateway:{{ push_docker_tag }}.{{ item }}"
-#      with_items: "{{ gateway_config }}"
-
- 
-
-    - name: Pushing to {{ push_registry }}
-      command: "docker push {{ push_registry }}{{ item[0] }}:{{ item[1] }}"
-      loop: "{{ query('nested', '{{ image_list }}','{{ tag_list }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"  
-
-#    - name: Pushin Gateway with {{ push_registry }}
-#      command: "docker push {{ push_registry }}unfetter-discover-gateway:latest"
-#      when: push_latest
-
- 
-
- # handlers:
-
-#    - name: Delete TAR Files
-#      file: 
-#        state: absent
-#        path: "{{ item }}.ready-to-export.tar"
-#      with_items: "{{ image_list }}"
-
-#    - name: Delete gateway TAR Files
-#      file: 
-#        state: absent
-#        path: "unfetter-discover-gateway.{{ item }}.ready-to-export.tar"
-#      with_items: "{{ gateway_config }}"
