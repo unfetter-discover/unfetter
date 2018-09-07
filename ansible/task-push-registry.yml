@@ -82,6 +82,7 @@
         push: yes
         load_path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
       loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+      
     - name: Import and Push latest
       docker_image:
         name: "{{ push_registry }}{{ item[0] }}"
@@ -89,6 +90,7 @@
         push: yes
         load_path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
       loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],['{{ push_docker_tag }}.demo']) }}"
+      when: push_latest
 
     - name: Delete TAR Files
       file: 
