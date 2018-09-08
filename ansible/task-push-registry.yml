@@ -60,41 +60,62 @@
       when: (push_docker_tag is search(",")) or (push_registry is search(","))
 
 
-    - name: Build running containers for every image
-      docker_container:
-        name: "{{ item[0] }}.{{ item[1] }}.ready-to-export"
-        image: "{{ item[0] }}:{{ item[1] }}"
-        state: present
-        entrypoint:
-           - ls /tmp
-      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+# We were exporting and importing the containers to tar files to flatten the images.  However, this appears
+#   to be problematic.  Thus, removing for now.
+
+    # - name: Build running containers for every image
+    #   docker_container:
+    #     name: "{{ item[0] }}.{{ item[1] }}.ready-to-export"
+    #     image: "{{ item[0] }}:{{ item[1] }}"
+    #     state: present
+    #     entrypoint:
+    #        - ls /tmp
+    #   loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
 
 
-    - name: Exporting the Images to tar
-      command: "docker export -o {{ item[0] }}.{{ item[1] }}.ready-to-export.tar {{ item[0] }}.{{ item[1] }}.ready-to-export"
-      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+    # - name: Exporting the Images to tar
+    #   command: "docker export -o {{ item[0] }}.{{ item[1] }}.ready-to-export.tar {{ item[0] }}.{{ item[1] }}.ready-to-export"
+    #   loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
  
 
-    - name: Import and push
+  #  - name: Import and push
+  #     docker_image:
+  #       name: "{{ push_registry }}{{ item[0] }}"
+  #       tag: "{{ item[1] }}"
+  #       push: yes
+  #       load_path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
+  #     loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+
+
+    - name: Tagging
       docker_image:
-        name: "{{ push_registry }}{{ item[0] }}"
+        name: "{{ item[0] }}"
         tag: "{{ item[1] }}"
-        push: yes
-        load_path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
+        state: present
+        repository: "{{ push_registry }}/{{ item[0] }}"
       loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
-      
-    - name: Import and Push latest
+
+    - name: push
       docker_image:
-        name: "{{ push_registry }}{{ item[0] }}"
-        tag: "latest"
+        name: "{{ push_registry }}/{{ item[0] }}:{{ item[1] }}"
+        force: yes
         push: yes
-        load_path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
+        repository: "{{ push_registry }}/{{ item[0] }}:{{ item[1] }}"
+      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+
+    
+    - name: Tagging Latest
+      docker_image:
+        name: "{{ item[0] }}:{{ item[1] }}"
+        state: present
+        repository: "{{ push_registry }}/{{ item[0] }}:latest"
       loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],['{{ push_docker_tag }}.demo']) }}"
       when: push_latest
 
-    - name: Delete TAR Files
-      file: 
-        state: absent
-        path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
-      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
-
+    - name: push
+      docker_image:
+        name: "{{ push_registry }}/{{ item }}:latest"
+        force: yes
+        push: yes
+        repository: "{{ push_registry }}/{{ item }}:latest"
+      loop: "{{ image_list+['unfetter-discover-gateway'] }}"
