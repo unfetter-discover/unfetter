@@ -1,7 +1,29 @@
 ---
 use_uac: true
+
+############################
+# auth_services identifies which service you want to use.  At the moment, github and gitlab are available.
+#
+############################
+
+# To use GitHub for Authentication
 auth_services: ["github"]
+
+# To use GitLab, uncomment below
+# auth_services:[ "gitlab"]
+
+# Its possible to change the gitlab domain by changing this value
 gitlab_url: "https://gitlab.com"
+
+
+###############################################
+# Out of the box, this deployment assumes you are running Unfetter locally
+#  for just you.  To expose Unfetter to others, you will need to set the domain to be something
+#  accessible
+#################################################
+
+api_domain: "localhost"
+ui_domain: 'localhost'
 
 
 # The custom private config is anything that might go inside the private-config.json

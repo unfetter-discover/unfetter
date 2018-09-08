@@ -10,122 +10,71 @@ Docker-compose is part of the installation
 * [Docker Compose](https://www.docker.com/products/docker-compose) is installed with Community Edition
 * Install [Git](https://git-scm.com/download/mac) and necessary tools
 
+## No Longer Supported
 ### Windows:
-* [Docker Toolbox](https://docs.docker.com/toolbox/overview/) for [Docker on Windows](https://docs.docker.com/docker-for-windows/install/)
-* [Docker Compose](https://www.docker.com/products/docker-compose) is installed with Docker Toolbox
-* Follow the standard installation instructions for Docker Toolbox for Windows from the Docker website.  Once installed, there should be a Docker quickstart, Oracle VM VirtualBox, and Kitematic shortcuts on the desktop
+We no longer support deployment on Windows systems.  It is still possible with alterations, but we are focusing more on automated deployment through Ansible and scripts.  And Windows Docker just works differently
 
 ### Linux/Ubuntu:
 * [Docker Community Edition](https://www.docker.com) (version 17.06.0-ce or higher)
 * [Docker Compose](https://docs.docker.com/compose/install) needs to be installed separately.
 * Install [Git](https://git-scm.com/download/mac) and necessary tools
 
-
-### Windows 10 Pro (issues):
-* Windows 10 Pro and Windows 2016 has native Docker support.  However, it can not run the Linux based Docker containers that Unfetter requires.  Likely, using the Docker Toolbox approach described above will work.
-
 ## The Project Setup
-The entire application, Unfetter Discover, is made up of multiple of docker
-containers. Each build upon the other. We use
-[Docker Compose](https://www.docker.com/products/docker-compose) to manage
-the startup and shutdown of all those Docker containers.
+Unfetter Discover is built up from multiple docker containers that are available on Docker Hub (https://hub.docker.com/u/unfetter/).  All source code is in the unfetter-discover GitHub organization (https://github.com/unfetter-discover).  We use Ansible (https://www.ansible.com/) for 
+configuration and deployment for production use.
 
-The GitHub organization [unfetter-discover] GitHub projects that logically separate the Unfetter Discover project.  There are two ways to run Unfetter Discover:
+### Deploy for Demo
+Its quick and simple to deploy a demo version of Unfetter with a single command.  By Demo, we mean there is no user access controls.
 
-1. You can run all the containers from Docker Hub, without recompiling. This
-is recommended for most cases.
-
-2. If you are a developer and would like to build the Unfetter-Discover project
-from source, then you will need to clone all the repos in [unfetter-discover](https://www.github.com/unfetter-discover)
-and use the `docker-compose.development.yml` config file.
-
-For more information about build types and run modes, see the [Unfetter Build Types & Run Modes](https://github.com/unfetter-discover/unfetter/wiki/Unfetter-Build-Types-&-Run-Modes) wiki.
-
-
-### Case 1: Normal installation, pulling from approved Docker Hub builds
-In general, the Unfetter repos is the only repo you need.  It has the docker-compose.yml file which will build and install all of Unfetter-Discover, leveraging the [Docker Hub Images](https://hub.docker.com/u/unfetter/).  
-
-After following the directions below, you can navigate to Unfetter Discover with Chrome or Firefox at https://localhost/
-
-#### Mac OSX and Linux
-```bash
+```
 mkdir unfetter-discover
 cd unfetter-discover
-git clone https://github.com/unfetter-discover/unfetter.git
+git clone git@github.com:unfetter-discover/unfetter
 cd unfetter
 docker-compose up
 ```
-It will take few minutes for the Docker images to download and build.
 
-#### Windows 
-For Windows, Docker Toolbox will install a virtual machine through VirtualBox and execute inside of that environment.  There is a couple of steps that must happen.
+It will take few minutes for the Docker images to download and build.  Navigate to Unfetter Discover with Chrome or Firefox at https://localhost/
 
-* Double click on the Docker Quickstart Terminal Icon on the windows.  When, done, you will see a $ prompt.
-* Check the ip address of the Docker-machine now running.  At the prompt, run "docker-machine.exe ip".  The returning IP is the IP address of the docker machine, usually 192.168.99.100.  NOTE: If no IP address is returned, type "docker-machine.exe env"
-* Inside the docker machine, do the following
-```bash
+### Production Build
+For production use, you will need to use ansible playbooks to configure the User Access Control.  We tried to use Ansible variables to control the creation and generation
+of Unfetter.
+
+```
 mkdir unfetter-discover
 cd unfetter-discover
-git clone https://github.com/unfetter-discover/unfetter.git
+git clone git@github.com:unfetter-discover/unfetter
 cd unfetter
-docker-compose -f docker-compose.virtualbox.yml up
+cd ansible
 ```
 
+Investigate the hosts.ini file.  There a number of host types availabe.  Each host type has a different set of variables in the ansible group_vars.  For most cases, under ```[deployed]``` there shoudl be ```prod-uac```
 
-### Case 2: OR.....build from local source files.  
+Open the file unfetter/ansible/group_vars/production.yml.  Change any variables that are necessary.  The variables are currently set to support local deployment.  To build onto a remote system, change to ansible_connection, ansible_host and ansible_ssh_private_key_file are necessary.   
 
-Create a directory to hold all the projects, 
-```bash
-mkdir unfetter-discover
-cd unfetter-discover
+
+#### UAC Authentication
+For a UAC version of Unfetter, you can use GitHub or GitLab out of the box.  You can change the Autentication services in the file ```unfetter-discover/unfetter/ansible/group_vars/uac.yml```.  To deploy so Unfetter Discover is accessible by others, you will need to change ui_domain and api_domain to point to the proper domain such as ```unfetter.local```.   
+
+#### Configure GitHub/GitLab
+You will need to make sure that there is an OAuth App for Unfetter Discover that is approved for use.  When you build Unfetter, you will
+need to know the ClientID and the Client Secret.  Look at [Unfetter UAC Configuration](https://github.com/unfetter-discover/unfetter/wiki/GitHub-&-Gitlab-UAC-Configuration) for more instructions
+
+### Running Unfetter
+To deploy, just run
 ```
-Next, you will need to clone four projects in [unfetter-discover](https://www.github.com/unfetter-discover).  
-
-SSH:
-```bash
- git clone git@github.com:unfetter-discover/unfetter.git
- git clone git@github.com:unfetter-discover/unfetter-ui.git
- git clone git@github.com:unfetter-discover/unfetter-store.git
- git clone git@github.com:unfetter-discover/stix2pattern.git
- cd unfetter
- ```
- 
- HTTPS:
- ```bash
- git clone https://github.com/unfetter-discover/unfetter.git
- git clone https://github.com/unfetter-discover/unfetter-ui.git
- git clone https://github.com/unfetter-discover/unfetter-store.git
- git clone https://github.com/unfetter-discover/stix2pattern.git
- cd unfetter
- ```
- 
- Next, change directories into the unfetter directory, which houses the docker-compose.development.yml file, and run docker-compose
- 
- For MaxOSX and Linux
- ```
- docker-compose -f docker-compose.development.yml up
+ansible-playbook deploy.yml
 ```
 
-For Windows
- ```
- docker-compose -f docker-compose.virtualbox.yml -f docker-compose.development.yml up
-```
+Ansible will pull all the docker images from Docker Hub.  You will be asked to enter your ClientID, Client Secret, and passwords.
 
-By default, `docker-compose.development.yml` runs in a UAC mode that requires additional configuration.  Setting up UAC for Unfetter is documented [here](https://github.com/unfetter-discover/unfetter/wiki/GitHub-UAC-Configuration).
+Go to Unfetter at https://localhost/
 
-If you wish to run it without UAC, you can disable it by editing `docker-compose.development.yml` and setting `RUN_MODE=DEMO` (Note, there are multiple instances of this variables.)
+## User Setup
+TODO
 
-### The Web Application
-
-After running the `docker-compose` command you can view the application at:
-
-https://localhost/
-
-Unfetter-Discover will create certs and store them locally. You will need to
-accept the certificates to move forward.
-
-# Developers
-If you are interested in contributing to Unfetter, take a look at our more detailed [Unfetter Wiki](https://github.com/unfetter-discover/unfetter/wiki)
+## Ansible Playbooks
+You can find out more about our playbooks at ###TODO###
 
 ## License
 

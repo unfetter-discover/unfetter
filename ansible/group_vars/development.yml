@@ -16,8 +16,6 @@ ansible_connection: "local"
 prepath: '../../'
 
 # For testing, the API_Domain is "localhost"
-api_domain: "localhost"
-ui_domain: 'localhost'
 docker_tag: "0.3.10.beta.1"
 gateway_tag: "{{ docker_tag }}.uac"
 
