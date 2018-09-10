@@ -13,8 +13,6 @@ ansible_ssh_private_key_file: ""
 ansible_connection: "local"
 # If local, then use ../../ or the full directory path to the directory above the "unfetter" directory.  
 prepath: '../../'
-api_domain: "localhost"
-ui_domain: 'localhost'
 docker_tag: "0.3.9"
 gateway_tag: "{{ docker_tag }}.uac"
 
