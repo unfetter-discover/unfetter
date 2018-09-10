@@ -22,5 +22,5 @@ ansible_python_interpreter: python
 build_action: "none"
 use_unfetter_ui: false
 run_mode: "prod"
-registry: ""
+registry: "unfetter/"
 
