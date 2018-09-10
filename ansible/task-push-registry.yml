@@ -86,36 +86,50 @@
   #       load_path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
   #     loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
 
-
+    - debug:
+        msg: "{{ image_list+['unfetter-discover-gateway'] }}"
     - name: Tagging
-      docker_image:
-        name: "{{ item[0] }}"
-        tag: "{{ item[1] }}"
-        state: present
-        repository: "{{ push_registry }}/{{ item[0] }}"
+      command: "docker tag {{ item[0] }}:{{ item[1] }} {{ push_registry }}/{{ item[0] }}:{{ item[1] }}"
       loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
 
-    - name: push
-      docker_image:
-        name: "{{ push_registry }}/{{ item[0] }}:{{ item[1] }}"
-        force: yes
-        push: yes
-        repository: "{{ push_registry }}/{{ item[0] }}:{{ item[1] }}"
+    - name: Pushing to {{ push_registry }}
+      command: "docker push {{ push_registry }}/{{ item[0] }}:{{ item[1] }}"
       loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
-
     
     - name: Tagging Latest
-      docker_image:
-        name: "{{ item[0] }}:{{ item[1] }}"
-        state: present
-        repository: "{{ push_registry }}/{{ item[0] }}:latest"
+      command: "docker tag {{ item[0] }}:{{ item[1] }} {{ push_registry }}/{{ item[0] }}:latest"
       loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],['{{ push_docker_tag }}.demo']) }}"
       when: push_latest
 
-    - name: push
-      docker_image:
-        name: "{{ push_registry }}/{{ item }}:latest"
-        force: yes
-        push: yes
-        repository: "{{ push_registry }}/{{ item }}:latest"
-      loop: "{{ image_list+['unfetter-discover-gateway'] }}"
+    - name: Pushing latest to {{ push_registry }}
+      command: "docker push {{ push_registry }}/{{ item }}:latest"
+      with_items: "{{ image_list+['unfetter-discover-gateway'] }}"
+      when: push_latest
+
+#    - name: Pushing Images to {{ registry }}
+#      docker_image:
+#        name: "{{ item[0] }}"
+#        tag: "{{ item[1] }}"
+#        force: yes
+#        push: yes
+#        pull: no
+#        repository: "{{ push_registry }}/{{ item[0] }}"
+#      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+
+    
+    # - name: Tagging Latest
+    #   docker_image:
+    #     name: "{{ item[0] }}:{{ item[1] }}"
+    #     state: present
+    #     repository: "{{ push_registry }}/{{ item[0] }}:latest"
+    #   loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],['{{ push_docker_tag }}.demo']) }}"
+    #   when: push_latest
+
+    # - name: push
+    #   docker_image:
+    #     name: "{{ push_registry }}/{{ item }}:latest"
+    #     force: yes
+    #     push: yes
+    #     repository: "{{ push_registry }}/{{ item }}:latest"
+    #   loop: "{{ image_list+['unfetter-discover-gateway'] }}"
+    #   when: push_latest      
