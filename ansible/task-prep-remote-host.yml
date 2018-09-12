@@ -17,7 +17,7 @@
  #     var: result
 
   roles:
-    - { role: geerlingguy.docker, docker_users: [{{ ansible_user }}], become: true }
+    - { role: geerlingguy.docker, docker_users: ["{{ ansible_user }}"], become: true }
     - { role: geerlingguy.git, become: true }
     - { role: geerlingguy.pip, become: true }
     - unfetter  
