@@ -29,15 +29,43 @@
 #    path: "{{ remote_role_directory }}files"
 #  when: "('production' in group_names and build_action=='local')"
 
-- name: make sure dirs are there
-  file: path={{ role_path }}/files/conf.d/ state=directory
+  
+- name: Create gateway-config volume
+  docker_volume:
+    name: gateway-config-d
+
+- name: Create gateway-config-d-extra volume
+  docker_volume:
+    name: gateway-config-d-extra
+
+
+
+- name: make sure conf.d dirs are there
+  file: path={{ backup_directory }}/gateway/conf.d state=directory
+
+- name: make sure conf.d.extra dirs are there
+  file: path={{ backup_directory }}/gateway/conf.d.extra state=directory
+
 
 - name: "Build new template"
   template: 
     src: '{{ role_path }}/templates/default.j2'
-    dest: '{{ role_path }}/files/conf.d/default.conf'
+    dest: '{{ backup_directory }}/gateway/conf.d/default.conf'
     force: true
   remote_src: true 
+
+- name:  "Copy Conf.d.extra to backup"
+  copy:
+    src: '{{ role_path }}/files/conf.d.extra'
+    dest: '{{ backup_directory }}/gateway'
+
+- name: Move files into Volume
+  command: "{{ item }}"
+  with_items:
+    - docker run -v gateway-conf-d:/conf.d -v gateway-conf-d-extra:/conf.d.extra --name helper busybox true
+    - docker cp {{ backup_directory }}/gateway/conf.d/ helper:/
+    - docker cp {{ backup_directory }}/gateway/conf.d.extra/ helper:/
+    - docker rm helper
 
 - debug:
       msg: The volume is {{ volume_list }}
