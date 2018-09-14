@@ -30,13 +30,13 @@
 #  when: "('production' in group_names and build_action=='local')"
 
   
-- name: Create gateway-config volume
+- name: Create gateway-conf-d volume
   docker_volume:
-    name: gateway-config-d
+    name: gateway-conf-d
 
-- name: Create gateway-config-d-extra volume
+- name: Create gateway-conf-d-extra volume
   docker_volume:
-    name: gateway-config-d-extra
+    name: gateway-conf-d-extra
 
 
 
