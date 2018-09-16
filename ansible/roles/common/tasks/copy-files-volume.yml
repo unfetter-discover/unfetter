@@ -1,0 +1,37 @@
+
+# Might be able to reduce this to just one command by mapping the two volumes and not use the "add_host"
+
+# Create docker_container that maps two locations, one is the local and the other is the cs_volume
+# command is to do a copy
+# Done execution automatically cleans up
+
+
+- name: Create Helper for {{ vol_map }}
+  docker_container:
+    name: helper
+    image: williamyeh/ansible:alpine3
+    state: started
+#    volumes: "ui-config:/ui-config"
+    volumes: "{{ vol_map }}"
+    #ui-config:/ui-config"
+    pull: true
+    entrypoint: "tail -f /dev/null"
+
+- name: Add Docker Container Host for {{ vol_map }}
+  add_host:
+    name: helper
+    ansible_connection: docker
+
+- name: Copy volume on remote system for {{ vol_map }}
+  delegate_to: helper
+  copy:
+    #src: "{{ backup_directory }}/ui-vol/local-settings.json"
+    src: "{{ src }}"
+    dest: "{{ dest }}"
+    #dest: "/ui-config/local-settings.json"
+
+
+- name: Delete The Helper for {{ vol_map }}
+  docker_container:
+    name: helper
+    state: absent

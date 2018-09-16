@@ -19,15 +19,42 @@
   notify:
     - Create New Certs  
 
-- name: Restore Certs From Backup
+
+- name: Build Test contianer
   listen: Create New Certs
   when: "key_server_stat.stat.exists and cert_server_stat.stat.exists"
-  command: "{{ item }}"
-  with_items:
-    - docker run -v certs:/data --name helper busybox true
-    - docker cp {{ certs_vol }}/certs helper:/data
-    - docker rm helper
-  #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v {{ role_path }}/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+  docker_container:
+    name: helper
+    image: williamyeh/ansible:alpine3
+    state: started
+    volumes: "certs:/data"
+    pull: true
+    entrypoint: "tail -f /dev/null"
+
+
+- name: Add Docker Container Host
+  listen: Create New Certs
+  when: "key_server_stat.stat.exists and cert_server_stat.stat.exists"
+  add_host:
+    name: helper
+    ansible_connection: docker
+
+- name: Copy certs into volume on remote system
+  listen: Create New Certs
+  when: "key_server_stat.stat.exists and cert_server_stat.stat.exists"
+  delegate_to: helper
+  copy:
+    src: "{{ certs_vol }}/certs"
+    dest: "/data"
+    force: yes
+    
+- name: Delete The Helper
+  listen: Create New Certs
+  when: "key_server_stat.stat.exists and cert_server_stat.stat.exists"
+  docker_container:
+    name: helper
+    state: absent
+
 
 - name: Fail because no certs found
   fail:

@@ -1,44 +1,52 @@
 # If the private-config is not there, then ask the user for the input information
+- name: Create Private Vol Backup directory
+  file: path={{ private_vol }} state=directory
 
 # Ask if GitHub authentication
-- pause:
+- name: Get GitHub App Client ID
+  pause:
     prompt: "\tPlease enter the GitHub application client ID: "
-  listen: Private Config Tested          
   #when: '"github" in auth_services and not (private_vol_stat.stat.exists)'
   when: '"github" in auth_services'
   register: github_clientID_register
 
-- pause:
+- name: Get GitHub App Client Secret
+  pause:
     prompt: "\n\tPlease enter the GitHub application client secret: '"
-  listen: Private Config Tested
   #when: '"github" in auth_services and not (private_vol_stat.stat.exists)'
   when: '"github" in auth_services'
   register: github_clientSecret_register
 
 # Git Gitlab info
-- pause:
+- name: Get GitLab App Client ID
+  pause:
     prompt: "\n\tPlease enter the GitLb application client ID:'"
-  listen: Private Config Tested    
   #when: '"gitlab" in auth_services and not (private_vol_stat.stat.exists)'
   when: '"gitlab" in auth_services'
   register: gitlab_clientID_register
 
-- pause:
+- name: Get GitHub App Secret
+  pause:
     prompt: "\n\tPlease enter the GitLb application client secret:"
-  listen: Private Config Tested    
   #when: '"gitlab" in auth_services and not (private_vol_stat.stat.exists)'
   when: '"gitlab" in auth_services'
   register: gitlab_clientSecret_register
   
 # Session and JWT standard secret information      
-- pause:
+- name: Get JWT Secret
+  pause:
     prompt: "Enter JWT secret "
   #when: "not (private_vol_stat.stat.exists)"    
-  listen: Private Config Tested    
   register: secret_jwt_register
 
-- pause:
+- name: Enter Session Secret
+  pause:
     prompt: "Enter session secret "
   #when: "not (private_vol_stat.stat.exists)"      
-  listen: Private Config Tested    
   register: secret_session_register
+
+
+- name: Rebuild the Config File
+  template:
+    src: private-config.j2
+    dest: "{{ private_vol }}/private-config.json"

@@ -1,0 +1,23 @@
+# Check to see if the private-config file is there. 
+
+- name: Create private-config volume
+  docker_volume:
+    name: private-config
+
+
+- name: check-private
+  stat:
+    path: '{{ private_vol }}/private-config.json'
+  register: private_vol_stat
+  changed_when: True  
+
+- include_tasks: build-private-config.yml
+  when: 'not (private_vol_stat.stat.exists)'
+
+# Always Copy
+- name: Begin to copy the private volume
+  include: copy-files-volume.yml
+  vars:
+    vol_map: "private-config:/config/private"
+    src: "{{ private_vol }}/private-config.json"
+    dest: "/config/private"

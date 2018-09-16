@@ -30,13 +30,13 @@
 #  when: "('production' in group_names and build_action=='local')"
 
   
-- name: Create gateway-config volume
+- name: Create gateway-conf volume
   docker_volume:
-    name: gateway-config-d
+    name: gateway-confi-d
 
-- name: Create gateway-config-d-extra volume
+- name: Create gateway-conf-d-extra volume
   docker_volume:
-    name: gateway-config-d-extra
+    name: gateway-conf-d-extra
 
 
 
@@ -47,7 +47,7 @@
   file: path={{ backup_directory }}/gateway/conf.d.extra state=directory
 
 
-- name: "Build new template"
+- name: "Build new default.conf template"
   template: 
     src: '{{ role_path }}/templates/default.j2'
     dest: '{{ backup_directory }}/gateway/conf.d/default.conf'
@@ -59,13 +59,26 @@
     src: '{{ role_path }}/files/conf.d.extra'
     dest: '{{ backup_directory }}/gateway'
 
-- name: Move files into Volume
-  command: "{{ item }}"
-  with_items:
-    - docker run -v gateway-conf-d:/conf.d -v gateway-conf-d-extra:/conf.d.extra --name helper busybox true
-    - docker cp {{ backup_directory }}/gateway/conf.d/ helper:/
-    - docker cp {{ backup_directory }}/gateway/conf.d.extra/ helper:/
-    - docker rm helper
+
+- include: roles/common/tasks/copy-files-volume.yml
+  vars:
+    vol_map: "gateway-conf-d:/conf.d"
+    src: "{{ backup_directory }}/gateway/conf.d/default.conf"
+    dest: "/conf.d/default.conf"
+
+- include: roles/common/tasks/copy-files-volume.yml
+  vars:
+    vol_map: "gateway-conf-d-extra:/conf.d.extra"
+    src: "{{ backup_directory }}/gateway/conf.d.extra/"
+    dest: "/conf.d.extra"
+
+# - name: Move files into Volume
+#   command: "{{ item }}"
+#   with_items:
+#     - docker run -v gateway-conf-d:/conf.d -v gateway-conf-d-extra:/conf.d.extra --name helper busybox true
+#     - docker cp {{ backup_directory }}/gateway/conf.d/ helper:/
+#     - docker cp {{ backup_directory }}/gateway/conf.d.extra/ helper:/
+#     - docker rm helper
 
 - debug:
       msg: The volume is {{ volume_list }}

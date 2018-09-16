@@ -18,54 +18,18 @@
   notify:
     - load mongodb-vol
 
-# This hasn't been implemented yet
+- include_tasks: manage-private-config.yml
+  when: use_uac
+
+# We will reload every time
 - name: Create ui-vol volume
   docker_volume:
     name: ui-config
-  notify:
-    - load ui-vol
-  
-- name: Create private-config volume
+
+- include_tasks: manage-ui-config.yml
   when: use_uac
-  docker_volume:
-    name: private-config
-  notify:
-    - load private-vol
 
 
-
-# Trying to push all the time
-- name: Load UI Local Setting
-  docker_container:
-    name: helper1
-    image: williamyeh/ansible:alpine3
-    state: started
-    volumes: "ui-config:/ui-config"
-    pull: true
-    entrypoint: "tail -f /dev/null"
-
-- name: Add Docker Container
-  add_host:
-    name: helper1
-    ansible_connection: docker
-    ansible_docker_extra_args:
-  changed_when: false
-
-- name: Copy The File
-  delegate_to: helper1
-  template:
-    src: '{{ role_path }}/templates/local-settings.json.j2'
-    dest: '/ui-config/local-settings.json'
-    force: true
-  remote_src: true
-
-- name: Load UI Local Setting
-  docker_container:
-    name: helper
-    image: busybox
-    state: absent
-# Create the docker network that all the containers will become part Unfetter
-# TODO - need to get the docker network to be created if it doesn't exist.  Getting errors right now
 - name: Create the Docker Network - {{ docker_network_name }}
   docker_network:
     state: present
