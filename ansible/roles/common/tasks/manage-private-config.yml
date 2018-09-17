@@ -14,10 +14,13 @@
 - include_tasks: build-private-config.yml
   when: 'not (private_vol_stat.stat.exists)'
 
-# Always Copy
-- name: Begin to copy the private volume
-  include: copy-files-volume.yml
-  vars:
-    vol_map: "private-config:/config/private"
-    src: "{{ private_vol }}/private-config.json"
-    dest: "/config/private"
+- name: Move private config to volume
+  docker_container:
+    name: helper
+    image: williamyeh/ansible:alpine3
+    state: started
+    volumes: 
+     - "private-config:/config/private"
+     - "{{ private_vol }}:/data"
+    command: "cp /data/private-config.json /config/private/private-config.json"
+    cleanup: yes

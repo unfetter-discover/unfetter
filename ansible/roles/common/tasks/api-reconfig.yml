@@ -13,32 +13,5 @@
   changed_when: True  
 
 - name: include tasks to build the private config file
-  include_tasks: handlers/build-private-config.yml
+  include_tasks: manage-private-config.yml
    
-
-- name: Create Directory2
-  file: path={{ private_vol }} state=directory
-
-
-
-# Create the new private-config.json.  Then, restart to first handler to copy the private-config
-- name: Private Config Tested Config2
-  #when: "not (private_vol_stat.stat.exists)"
-  template:
-    src: private-config.j2
-    dest: "{{ private_vol }}/private-config.json"
-
-# The private file exists.  So, copy it into the volume
-- include: tasks/copy-files-volume.yml
-  listen: Private Config Tested
-  when: "private_vol_stat.stat.exists"
-  vars:
-    vol_map: "private-config:/config/private"
-    src: "{{ private_vol }}/private-config.json"
-    dest: "/config/private"
-
-- include: tasks/copy-files-volume.yml
-  vars:
-    vol_map: "ui-config:/ui-config"
-    src: "{{ backup_directory }}/ui-vol/local-settings.json"
-    dest: "/ui-config/local-settings.json"

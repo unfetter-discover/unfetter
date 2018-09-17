@@ -17,44 +17,21 @@
   register: key_server_stat
   changed_when: True
   notify:
-    - Create New Certs  
+    - Create New Certs
 
 
-- name: Build Test contianer
-  listen: Create New Certs
-  when: "key_server_stat.stat.exists and cert_server_stat.stat.exists"
+- name: Move CERTS config to volume
   docker_container:
     name: helper
     image: williamyeh/ansible:alpine3
     state: started
-    volumes: "certs:/data"
-    pull: true
-    entrypoint: "tail -f /dev/null"
-
-
-- name: Add Docker Container Host
+    volumes: 
+     - "certs:/certs"
+     - "{{ certs_vol }}/certs:/data"
+    command: "cp -a /data/. /certs/"
+    cleanup: yes
   listen: Create New Certs
   when: "key_server_stat.stat.exists and cert_server_stat.stat.exists"
-  add_host:
-    name: helper
-    ansible_connection: docker
-
-- name: Copy certs into volume on remote system
-  listen: Create New Certs
-  when: "key_server_stat.stat.exists and cert_server_stat.stat.exists"
-  delegate_to: helper
-  copy:
-    src: "{{ certs_vol }}/certs"
-    dest: "/data"
-    force: yes
-    
-- name: Delete The Helper
-  listen: Create New Certs
-  when: "key_server_stat.stat.exists and cert_server_stat.stat.exists"
-  docker_container:
-    name: helper
-    state: absent
-
 
 - name: Fail because no certs found
   fail:

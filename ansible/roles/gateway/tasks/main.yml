@@ -60,25 +60,27 @@
     dest: '{{ backup_directory }}/gateway'
 
 
-- include: roles/common/tasks/copy-files-volume.yml
-  vars:
-    vol_map: "gateway-conf-d:/conf.d"
-    src: "{{ backup_directory }}/gateway/conf.d/default.conf"
-    dest: "/conf.d/default.conf"
+- name: Move conf.d config to volume
+  docker_container:
+    name: helper
+    image: williamyeh/ansible:alpine3
+    state: started
+    volumes: 
+     - "gateway-conf-d:/conf.d"
+     - "{{ backup_directory }}/gateway/conf.d:/data"
+    command: "cp /data/default.conf /conf.d/default.conf"
+    cleanup: yes
 
-- include: roles/common/tasks/copy-files-volume.yml
-  vars:
-    vol_map: "gateway-conf-d-extra:/conf.d.extra"
-    src: "{{ backup_directory }}/gateway/conf.d.extra/"
-    dest: "/conf.d.extra"
-
-# - name: Move files into Volume
-#   command: "{{ item }}"
-#   with_items:
-#     - docker run -v gateway-conf-d:/conf.d -v gateway-conf-d-extra:/conf.d.extra --name helper busybox true
-#     - docker cp {{ backup_directory }}/gateway/conf.d/ helper:/
-#     - docker cp {{ backup_directory }}/gateway/conf.d.extra/ helper:/
-#     - docker rm helper
+- name: Move conf.d.extra config to volume
+  docker_container:
+    name: helper
+    image: williamyeh/ansible:alpine3
+    state: started
+    volumes: 
+     - "gateway-conf-d-extra:/conf.d.extra"
+     - "{{ backup_directory }}/gateway/conf.d.extra:/data"
+    command: "cp -a /data/. /conf.d.extra/"
+    cleanup: yes
 
 - debug:
       msg: The volume is {{ volume_list }}
@@ -97,21 +99,7 @@
     published_ports:
     - "443:443"
     - "80:80"
-#    links: "{{ link_list }}"
     volumes: "{{ volume_list }}"
-     #- "{{ remote_role_directory }}/files/conf.d/default.conf:/etc/nginx/conf.d/default.conf"
-     #- "{{ prepath }}/unfetter/config/nginx/conf.d.extra/:/etc/nginx/conf.d.extra"
-#     - "{{ prepath }}/unfetter/config/certs/:/etc/pki/tls/certs"
-     #- "certs:/etc/pki/tls/certs:ro"
-  # TAXII
-  #   - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii.conf' if use_taxii else 'taxii-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii.conf"
-  #   - "{{ prepath }}/unfetter/config/nginx/{{ 'taxii-auth.conf' if use_taxii and use_taxii_tls else 'taxii-auth-blank.conf' }}:/etc/nginx/conf.d.runmode/taxii-auth.conf"
-   # In UAC
-  #   - "{{ prepath }}/unfetter/config/nginx/{{ 'uac-locations.conf' if use_uac else 'blank.conf' }}:/etc/nginx/conf.d.runmode/runmode-locations.conf"
-   # In USE_UNFETTER_UI
-  #   - "{{ prepath }}/unfetter/config/nginx/{{ 'ui-dev.conf' if use_unfetter_ui else 'ui-prod.conf' }}:/etc/nginx/conf.d.runmode/ui.conf"
   when: run_action
-#  notify:
-#    - start gateway
 
   
