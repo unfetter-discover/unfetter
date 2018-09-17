@@ -18,24 +18,18 @@
   notify:
     - load mongodb-vol
 
-# This hasn't been implemented yet
+- include_tasks: manage-private-config.yml
+  when: use_uac
+
+# We will reload every time
 - name: Create ui-vol volume
   docker_volume:
     name: ui-config
-  notify:
-    - load ui-vol
-  
-- name: Create private-config volume
+
+- include_tasks: manage-ui-config.yml
   when: use_uac
-  docker_volume:
-    name: private-config
-  notify:
-    - load private-vol
 
 
-
-# Create the docker network that all the containers will become part Unfetter
-# TODO - need to get the docker network to be created if it doesn't exist.  Getting errors right now
 - name: Create the Docker Network - {{ docker_network_name }}
   docker_network:
     state: present

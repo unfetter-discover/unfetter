@@ -1,5 +1,10 @@
 
 
+# If the private-config is not there, then ask the user for the input information
+- name: Create CERTS Vol Backup directory
+  file: path={{ certs_vol }}/certs state=directory
+
+
 # Handles the CERTS Volumes
 - name: check-server-crt
   listen: load certs-vol
@@ -17,17 +22,21 @@
   register: key_server_stat
   changed_when: True
   notify:
-    - Create New Certs  
+    - Create New Certs
 
-- name: Restore Certs From Backup
+
+- name: Move CERTS config to volume
+  docker_container:
+    name: helper
+    image: williamyeh/ansible:alpine3
+    state: started
+    volumes: 
+     - "certs:/certs"
+     - "{{ certs_vol }}/certs:/data"
+    command: "cp -a /data/. /certs/"
+    cleanup: yes
   listen: Create New Certs
   when: "key_server_stat.stat.exists and cert_server_stat.stat.exists"
-  command: "{{ item }}"
-  with_items:
-    - docker run -v certs:/data --name helper busybox true
-    - docker cp {{ certs_vol }}/certs helper:/data
-    - docker rm helper
-  #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v {{ role_path }}/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
 
 - name: Fail because no certs found
   fail:
