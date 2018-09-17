@@ -1,10 +1,11 @@
 # Ensure the volumes are created. 
+- name: Test for SSH keys
+  include_tasks: generate-ssh-keys.yml
 
+- meta: end_play
 
 - debug:
   msg: Configuring and deploying {{ inventory_hostname }} at {{ ansible_host }}
-
-- debug:
 
 - name: configure the remote host with proper packages
   include_tasks: host-packages.yml

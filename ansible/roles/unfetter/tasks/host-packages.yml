@@ -1,9 +1,4 @@
 # Ensure the volumes are created. 
-
-
-
-
-
 - name: Clone Unfetter Git to {{ backup_directory }}/code
   git:
      repo: "https://github.com/unfetter-discover/unfetter.git"
