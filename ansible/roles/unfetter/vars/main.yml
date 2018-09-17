@@ -2,4 +2,4 @@
 
 # The VARS for building and preparing the Unfetter HOSTS for docker
 
-branch: "{{ 'develop' if run_mode == 'dev' else 'master'}}"
+branch: "{{ 'develop' if 'development' in group_names else 'master' }}"

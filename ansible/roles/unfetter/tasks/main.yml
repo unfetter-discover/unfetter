@@ -3,5 +3,8 @@
 
 - debug:
   msg: Configuring and deploying {{ inventory_hostname }} at {{ ansible_host }}
+
+- debug:
+
 - name: configure the remote host with proper packages
   include_tasks: host-packages.yml
