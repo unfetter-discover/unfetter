@@ -4,10 +4,10 @@
 
 
 
-- name: Clone Unfetter Git to {{ prepath }}
+- name: Clone Unfetter Git to {{ backup_directory }}/code
   git:
      repo: "https://github.com/unfetter-discover/unfetter.git"
-     dest: "{{ prepath }}unfetter"
+     dest: "{{ backup_directory }}/code/unfetter"
      version: "{{ branch }}"
      force: yes
 
@@ -15,7 +15,7 @@
   when: "('development' in group_names)"
   git:
      repo: "https://github.com/unfetter-discover/{{ item }}.git"
-     dest: "{{ prepath }}{{ item }}"
+     dest: "{{ backup_directory }}/code/{{ item }}"
      version: "{{ branch }}"
   loop:
      - unfetter-store
