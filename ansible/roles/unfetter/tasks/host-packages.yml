@@ -1,11 +1,16 @@
 # Ensure the volumes are created. 
+
+
+
 - name: Clone Unfetter Git
   git:
      repo: "https://github.com/unfetter-discover/unfetter.git"
      dest: "{{ prepath }}unfetter"
      version: "{{ branch }}"
+     force: yes
 
 - name: Clone if in Dev
+  when: "('development' in group_names)"
   git:
      repo: "https://github.com/unfetter-discover/{{ item }}.git"
      dest: "{{ prepath }}{{ item }}"
