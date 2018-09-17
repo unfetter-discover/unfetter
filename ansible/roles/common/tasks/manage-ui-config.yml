@@ -1,8 +1,13 @@
 
+# If the private-config is not there, then ask the user for the input information
+- name: Create Private Vol Backup directory
+  file: path={{ ui_vol }} state=directory
+
+
 - name: Copy the UI template to target box
   template:
     src: '{{ role_path }}/templates/local-settings.json.j2'
-    dest: '{{ backup_directory }}/ui-vol/local-settings.json'
+    dest: '{{ ui_vol }}/local-settings.json'
     force: true
 
 - name: Move private config to volume
@@ -12,6 +17,6 @@
     state: started
     volumes: 
      - "ui-config:/ui-config"
-     - "{{ backup_directory }}/ui-vol/:/data"
+     - "{{ ui_vol }}/:/data"
     command: "cp /data/local-settings.json /ui-config/local-settings.json"
     cleanup: yes

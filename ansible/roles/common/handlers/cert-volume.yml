@@ -1,5 +1,10 @@
 
 
+# If the private-config is not there, then ask the user for the input information
+- name: Create CERTS Vol Backup directory
+  file: path={{ certs_vol }}/certs state=directory
+
+
 # Handles the CERTS Volumes
 - name: check-server-crt
   listen: load certs-vol
