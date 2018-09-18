@@ -1,0 +1,50 @@
+---
+####################################################################################
+# This Playbook will attempt to deploy EC2 instances, configured properly for testing
+#    and operation 
+#
+####################################################################################
+
+
+- name: Prepare the Docker Host 
+  hosts: 127.0.0.1
+  connection: local
+   
+#  become: true
+  vars:
+  tasks:
+
+ # - debug:
+ #     var: result
+
+
+  - debug:
+      msg: "{{ groups['deployed'] }}"
+#  - meta: end_play
+  - name: "Generate RSA keys at {{ hostvars[item].ansible_ssh_private_key_file }}"
+    delegate_to: localhost
+    command : 'ssh-keygen -q -t rsa -f {{ hostvars[item].ansible_ssh_private_key_file }} -C "" -N ""'
+    args:
+       creates:  "{{ hostvars[item].ansible_ssh_private_key_file }}" 
+    with_inventory_hostnames:
+       - deployed
+
+  - name: "Determine if EC2 instances are created"
+    ec2_instance_facts:
+        filters:
+            "tag:unfetter-deploy": "{{ groups['deployed'] }}"
+    register: ec2_facts
+#    with_inventory_hostnames:
+#        - deployed
+#  - meta: end_play
+
+#  - set_fact:
+#       ec2_output_json: "{{ ec2_fact_output_raw }}"
+  - debug:
+       msg: "{{ ec2_facts }}"
+  - debug: 
+      msg: "{{ item }} "
+    loop:  "{{ ec2_facts.instances|map(attribute='tags.Name')|list }}"
+#      - "{{ ec2_facts.results[0].instances|select('state', 'equalto', 'running')|map(attribute='private_ip_address')|list }}"
+         
+

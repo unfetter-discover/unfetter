@@ -1,6 +1,5 @@
----
-
-  tasks:
-  - name: Generate /etc/ssh/ RSA host key
-    command : ssh-keygen -q -t rsa -f {{ key_location }} -C "" -N ""
-    creates: "{{ key_location }}"
+  - name: Generate RSA keys at {{ key_location }}
+    delegate_to: localhost
+    command : 'ssh-keygen -q -t rsa -f /home/srmccul/.ssh/ansible -C "" -N ""'
+    args:
+       creates: /home/srmccul/.ssh/ansible 
