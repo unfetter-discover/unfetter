@@ -17,8 +17,10 @@ use_taxii_tls: false
 # Parameter pasted to nginx's `client_max_body_size` variable for attachments being uploaded to the API
 # 0 means there is no size limit
 attachments_max_size: 0
-ansible_python_interpreter: python3
-latest_production_tag: 0.3.11
+ansible_python_interpreter: python
+docker_tag: "0.3.11"
+gateway_tag: "{{ docker_tag }}.uac"
+
 legacy: false
 
 

@@ -8,3 +8,4 @@
 
 - name: configure the remote host with proper packages
   include_tasks: host-packages.yml
+  when: "('development' in group_names)"
