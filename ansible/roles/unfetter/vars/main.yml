@@ -1,5 +1,5 @@
 ---
 
 # The VARS for building and preparing the Unfetter HOSTS for docker
-
-branch: "{{ 'develop' if run_mode == 'dev' else 'master'}}"
+key_location: "{{ ansible_ssh_private_key_file }}"
+branch: "{{ 'develop' if 'development' in group_names else 'master' }}"

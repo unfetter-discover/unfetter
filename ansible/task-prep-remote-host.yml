@@ -1,24 +1,29 @@
 ---
 ####################################################################################
-#  This playbook only builds the docker images locally
+# This Playbook will attempt to deploy EC2 instances, configured properly for testing
+#    and operation 
 #
 ####################################################################################
 
 
 - name: Prepare the Docker Host 
-  hosts: deployed 
+  hosts: prod-legacy-uac 
 #  become: true
   vars:
+     ansible_python_interpreter: python
      pip_install_packages:
        - name: docker
   tasks:
 
  # - debug:
  #     var: result
-
+  pre_tasks:
+    - include_role:
+         name: unfetter
+         tasks_from: generate-ssh-keys.yml
   roles:
     - { role: geerlingguy.docker, docker_users: ["{{ ansible_user }}"], become: true }
     - { role: geerlingguy.git, become: true }
     - { role: geerlingguy.pip, become: true }
-    - unfetter  
+#    - unfetter  
  

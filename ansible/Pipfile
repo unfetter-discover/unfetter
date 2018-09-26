@@ -5,3 +5,5 @@ name = "pypi"
 
 [packages]
 docker-py = "*"
+boto3 = "*"
+boto = "*"
