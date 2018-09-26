@@ -8,28 +8,12 @@
 
 - name: Prepare the Docker Host 
   hosts: deployed
-#  become: true
   vars:
      ansible_python_interpreter: python
      pip_install_packages:
        - name: docker
   
-
- # - debug:
- #     var: result
-  # pre_tasks:
-  #   - include_role:
-  #        name: unfetter
-  #        tasks_from: generate-ssh-keys.yml
   pre_tasks:
-    # -  name: Add {{ ansible_host }} as a user
-    #    user:
-    #       name: "{{ ansible_host }}"
-    #       groups: "wheel"
-    #       append: yes
-    #       comment: "The User we will run docker as"
-    #       state: present
-    #    become: true
 # This was necessary to get docker running on the AWS Linux 2 AMI
     - name: Install Docker CE CentOS-specific dependencies
       block:
@@ -62,7 +46,8 @@
     - { role: geerlingguy.docker, docker_users: ["{{ ansible_host }}"], become: true}
     - { role: geerlingguy.git, become: true }
     - { role: geerlingguy.pip, become: true }
-#    - unfetter  
+    #- unfetter
+
 
 
  
