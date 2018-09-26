@@ -12,9 +12,8 @@
     build: false # If send in a "true", then will actually build any of the hosts
     # This is used to distinquish between deployment groups.  Each user could have their own test 
     #   Environment
-    deployment_group: "{{ deployment_owner | default('unfetter')"
-    deploy_tag_name: "unfetter-deploy"
-    owner_tag_name: "deployment-group"
+    deploy_name: "unfetter"
+    region: "us-east-1" # Make this by gathering aws_facts
   connection: local
    
   tasks:
@@ -25,7 +24,7 @@
     ec2_instance_facts:
         filters:
             "tag:unfetter-deploy": "{{ groups['deployed'] }}"
-
+            "tag:deployment-group": "{{ deploy_name }}"
             "instance-state-name": 
                  - "starting"
                  - "running"
@@ -37,7 +36,8 @@
   - name: "showing groups['deployed']"
     debug:
       msg: "{{ groups['deployed'] }}"
-
+  - debug:
+      msg: "{{ ec2_facts }}"
   - set_fact: 
      deployed_names: []
   - name: "building deployed_names"
@@ -46,9 +46,12 @@
   - debug:
        msg: "{{ item }}"
     with_items: "{{ deployed_names }}"
-
   - set_fact:
-      found_ec2: "{{ ec2_facts.instances|map(attribute='tags.{{ deploy_tag_name }}')|list }}"
+      found_ec2: "{{ ec2_facts.instances|map(attribute='tags.unfetter-deploy')|list }}"
+
+  - debug:
+      msg: "{{ found_ec2 }}"
+
   - name: "Display found"
     debug:
       var: found_ec2
@@ -56,6 +59,7 @@
 
   - set_fact:
        no_ec2_list: []
+
   - set_fact: 
        no_ec2_list: "{{ no_ec2_list|default([]) | union([item]) }}"
     with_items: "{{ deployed_names }}"
@@ -63,10 +67,12 @@
 
   - name: Failed if EC2's were not found
     fail:
+       msg: "ERROR: The Following EC2 Instances have not been deployed: {{ no_ec2_list }}"
+    when: no_ec2_list|length > 0 and build
+
+  - debug:
        msg: "WARNING: The Following EC2 Instances have not been deployed: {{ no_ec2_list }}"
-    when: no_ec2_list|length > 0 
-
-
+    when: no_ec2_list|length > 0
   - name: "Start Stopped Instances"
     ec2:
        region: '{{ region }}'
