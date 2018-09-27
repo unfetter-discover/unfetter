@@ -1,0 +1,10 @@
+---
+remote_tmp: ""
+ansible_connection: "ssh"
+backup_directory: "{{ remote_tmp }}/unfetter"
+ansible_user: "ansible"
+ansible_ssh_private_key_file: "xxxxxxx"
+ansible_host: "xx.xx.xxx.xxx"
+api_domain: "{{ ansible_host }}"
+ui_domain: "{{ ansible_host }}"
+

@@ -16,8 +16,6 @@ prepath: '../../'
 docker_tag: "0.3.10"
 gateway_tag: "{{ docker_tag }}.uac"
 
-ansible_python_interpreter: python
-
 # Docker Tag specifies what will be the name of the developed tag.
 build_action: "none"
 use_unfetter_ui: false

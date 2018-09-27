@@ -18,6 +18,9 @@ use_taxii_tls: false
 # 0 means there is no size limit
 attachments_max_size: 0
 ansible_python_interpreter: python
+docker_tag: "0.3.11"
+gateway_tag: "{{ docker_tag }}.uac"
+
 legacy: false
 
 
