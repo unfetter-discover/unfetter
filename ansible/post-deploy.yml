@@ -14,9 +14,9 @@
   - name: Move something to the container
     shell: "{{ item }}"
     with_items:
-      - "docker cp /tmp/api/file1.js unfetter-discover-api:/usr/share/unfetter-discover-api/node_modules/oauth/lib/file1.js"
+      - "docker cp /tmp/api/file1.js unfetter-discover-api:/tmp/file1.js"
       
   - name: Commit change
     shell: "docker commit unfetter-discover-api unfetter-discover-api:{{ docker_tag }}"
 
-
+  
