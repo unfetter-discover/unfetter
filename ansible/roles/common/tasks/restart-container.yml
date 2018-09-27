@@ -1,0 +1,7 @@
+# Used to restart the container
+
+
+- name: Restart Repository
+  docker_container:
+    name: cti-stix-store-repository
+    restart: true

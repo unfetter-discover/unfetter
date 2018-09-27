@@ -1,0 +1,30 @@
+
+####################################################################################
+#  This playbook migrates from 0.3.8 to 0.3.9
+#
+#
+####################################################################################
+
+- name: Build Migration Image
+  docker_image:
+    name: migration
+    tag: "{{ docker_tag }}"
+    state: present
+    force: true
+    path: "{{ remote_role_directory }}files/migrate"
+
+
+- name: "Run container"
+  docker_container:
+    name: "migration"
+    image: "migration:{{ docker_tag }}"
+    state: started
+    links:
+      - cti-stix-store-repository    
+    networks:
+      - name: "{{ docker_network_name }}"
+    working_dir: /usr/src/app/
+    cleanup: yes
+    restart: yes
+    command:
+      - 'node /usr/share/app/0.3.9-user-model.js -h cti-stix-store-repository -p 27017 -d stix'

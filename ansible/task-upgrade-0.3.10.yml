@@ -1,0 +1,12 @@
+---
+####################################################################################
+#  This playbook will upgrade from 0.3.9 to 0.3.10  
+#
+####################################################################################
+
+- name: Upgrades Unfetter to support version 0.3.10
+  hosts: deployed
+  tasks:
+    - include_role:
+          name: common
+          tasks_from: migrate-0.3.10.yml

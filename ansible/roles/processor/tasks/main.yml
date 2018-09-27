@@ -1,0 +1,67 @@
+---
+
+# Build the image if build_action is local
+- name: "Build {{ container_name }} - {{ build_action }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+# Pull the image if the build_action is pull
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"     
+
+# Create the unfetter-discover-processor docker container
+- name: Create Processor
+  docker_container:
+    name: unfetter-discover-processor
+    image: "{{ image_name }}"
+    state: started
+    restart: yes
+    networks:
+      - name: "{{ docker_network_name }}"           
+    volumes: "{{ volume_list }}"
+    working_dir: /usr/src/app
+    env:
+     PATTERN_HANDLER_DOMAIN: unfetter-pattern-handler
+     PATTERN_HANDLER_PORT: 5000    
+     MONGO_HOST: cti-stix-store-repository
+     # If deployed in a proxy, add the proxy's URL here
+     HTTPS_PROXY_URL: ''
+    entrypoint:
+    
+     - ts-node
+     - src/app.ts
+     - --stix
+     - /tmp/examples/unfetter-stix/assessments3/assessment-sets.stix.json
+     - /tmp/examples/unfetter-stix/assessments3/capabilities.stix.json
+     - /tmp/examples/unfetter-stix/assessments3/categories.stix.json
+     - /tmp/examples/unfetter-stix/assessments3/object-assessments.stix.json
+     - /tmp/examples/unfetter-stix/ntctf-attack-patterns.stix.json
+     - /tmp/examples/unfetter-stix/reports.alerts.stix.json
+     - /tmp/examples/unfetter-stix/reports.vulns.stix.json
+     - /tmp/examples/unfetter-stix/sightings.stix.json
+     - /tmp/examples/unfetter-stix/stix.json
+     - --enhanced-stix-properties
+     - /tmp/examples/unfetter-db/stix-enhancements.json
+     - /tmp/examples/unfetter-db/stix-meta.json
+     - --config
+     - /tmp/examples/unfetter-db/config.json
+     - /tmp/examples/unfetter-db/translation-config.json
+     - /tmp/examples/unfetter-db/taxii.config.json
+     - --mitre-attack-data
+     - enterprise
+     - --auto-publish
+     - "true"
+     - --auto-validate-patterns
+     - "true"
+    # TODO: setup cron jobs in ansible to run processor reguraly
+     # Interval options: daily, weekly, monthly
+    #  - --interval
+    #  - daily
+  when: run_action

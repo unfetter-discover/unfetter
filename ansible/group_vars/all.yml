@@ -1,0 +1,28 @@
+---
+# For version 0.3.11 of Unfetter Discover
+
+run_action: true
+# use_taxii tells Ansible if the Taxii server should be running.  At the moment, this will always be false.
+use_taxii: false
+
+# This is the path, relative to the ansible directory, from which all the other source code directories are.
+backup_directory: "{{ playbook_dir }}/backup"
+
+# The docker network name
+docker_network_name: "unfetter_network"
+
+#  Used to tell Ansible if the Taxii service tls will be used
+use_taxii_tls: false
+
+# Parameter pasted to nginx's `client_max_body_size` variable for attachments being uploaded to the API
+# 0 means there is no size limit
+attachments_max_size: 0
+ansible_python_interpreter: python
+docker_tag: "0.3.11"
+gateway_tag: "{{ docker_tag }}.uac"
+
+legacy: false
+
+
+#  Turn to "true" if you would like to block attachments
+block_attachments: false 

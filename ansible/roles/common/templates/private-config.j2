@@ -1,0 +1,32 @@
+{
+
+    {% if custom_private_config is defined %}
+        {{ custom_private_config }}
+    {% endif %}
+    "authServices": [
+        "{{ auth_services | join('",
+        "') }}"
+    ],
+    {% if 'github' in auth_services %}
+    "github": {
+        "clientID": "{{ github_clientID_register.user_input }}",
+        "clientSecret": "{{ github_clientSecret_register.user_input }}"
+    },
+    {% endif %}
+    {% if 'gitlab' in auth_services %}
+    "gitlab": {
+        "clientID": "{{ gitlab_clientID_register.user_input }}",
+        "clientSecret": "{{ gitlab_clientSecret_register.user_input }}",
+        "gitlabURL": "{{ gitlab_url }}"
+    },
+    {% endif %}
+    {% if block_attachments is defined %}    
+    "blockAttachments":{% if block_attachments %}true,{% else %}false,{%endif%}
+    {% else %}
+        "blockAttachments": false,
+    {% endif %}
+    "jwtSecret": "{{ secret_jwt_register.user_input }}",
+    "sessionSecret": "{{ secret_session_register.user_input }}",
+    "apiRoot": "https://{{ api_domain }}/api",
+    "unfetterUiCallbackURL": "https://{{ ui_domain }}/#/users/login-callback"
+}

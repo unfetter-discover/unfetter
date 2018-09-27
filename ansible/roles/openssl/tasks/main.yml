@@ -1,0 +1,35 @@
+---
+# Pull and run the open ssl
+
+# TODO: Pull this into the common role
+- name: Create and Run {{ container_name }}
+  docker_container:
+    name: "{{ container_name }}"
+    image: "svagi/openssl:latest"
+    state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
+    
+    pull: true
+    exposed_ports: 
+    - 443:443
+    - 80:80
+    entrypoint:
+     - openssl
+     - req
+     - -subj
+     - /CN=localhost/DC=localhost/DC=localdomain
+     - -new
+     - -newkey
+     - rsa:2048
+     - -days
+     - "365"
+     - -nodes
+     - -x509
+     - -keyout
+     - /tmp/certs/server.key
+     - -out
+     - /tmp/certs/server.crt
+    volumes:
+     - "certs:/tmp/certs:rw"
+  when: run_action

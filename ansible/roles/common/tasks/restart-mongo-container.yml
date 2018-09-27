@@ -1,0 +1,4 @@
+- name: Restart MongoDB container
+  docker_container:
+    name: cti-stix-store-repository
+    restart: true

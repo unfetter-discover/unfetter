@@ -1,0 +1,44 @@
+
+
+# Build the image if build_action is local
+- name: "Build {{ container_name }} - {{ build_action }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+# Pull the image if the build_action is pull
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"     
+
+
+- name: Create the {{ container_name }} container
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
+    entrypoint:
+     - npm
+     - run
+     - "{{ 'start' if run_mode == 'dev' else 'start:deploy' }}"
+    working_dir: /usr/share/unfetter-socket-server
+    published_ports: "{{ '13333:3333,6555:6555' if 'development' in group_names else [] }}"
+    env:
+      MONGO_REPOSITORY: cti-stix-store-repository
+      MONGO_PORT: 27017
+      MONGO_DBNAME: stix
+      # If deployed in a proxy, add the proxy's URL here
+      HTTPS_PROXY_URL: ''
+      # Options: true, false ; NOTE Always commit set to `false`
+      SEND_EMAIL_ALERTS: false
+      # This is only needed if using SEND_EMAIL_ALERTS *AND* private-config.email.json does not have a service email address
+      SERVICE_EMAIL: ''
+    volumes: "{{ volume_list }}"  
+  when: "(use_uac) and (run_action)"      

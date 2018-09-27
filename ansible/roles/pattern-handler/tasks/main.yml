@@ -1,0 +1,37 @@
+# Create the image if the build_action is local
+- name: "Create {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+# Pull the image from a registry if the build_action is pull
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"     
+
+- debug:
+      msg: "This is {{ build_action }}"
+# Create the pattern-handler 
+- name: Create pattern in production
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+    working_dir: /opt/stix/
+    published_ports: "{{ '5000:5000' if 'development' in group_names else [] }}"
+    networks:
+      - name: "{{ docker_network_name }}"          
+    entrypoint:
+      - gunicorn
+      - --config
+      - /opt/stix/gunicorn_config.py
+      - --access-logfile
+      - "-"
+      - app:app      
+  when: run_action
+
+

@@ -1,0 +1,37 @@
+
+
+# Handles the MONGODB Volumes
+- name: check mongodb volume
+  listen: load mongodb-vol
+  stat:
+    path: '{{ mongodb_vol }}/mongo.archive'
+  register: mongodb_stat
+  changed_when: True  
+  notify:
+    - Load MONGODB Archive
+
+
+
+- name: Restore Mongodb From Backup
+  listen: Load MONGODB Archive
+  when: "mongodb_stat.stat.exists"
+  command: "{{ item }}"
+  with_items:
+    - docker run -d -v mongo-db:/data/db --name helperdb mongo:3.4.1
+    - docker cp {{ mongodb_vol }}/mongo.archive helperdb:/tmp
+    - docker exec helperdb mongorestore --host localhost --archive=/tmp/mongo.archive
+    - docker stop helperdb
+    - docker rm helperdb
+  #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v {{ role_path }}/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+
+#- name: Fail because Mongo is created
+#  fail:
+#    msg: "server.key and server.cert not found in {{ certs_vol }}/certs and in production mode.  Please create certs and store in {{ certs_vol }}/certs"
+#  listen: Create New Certs
+#  when: "not (mongodb_stat.stat.exists) and run_mode == 'prod'"
+
+- name: Database needs to be recreated from scratch
+  listen: Load MONGODB Archive
+  when: "not (mongodb_stat.stat.exists)"
+  debug:
+    msg: "No database has been detected.  One will be created when cti-stix-store-repository is created"

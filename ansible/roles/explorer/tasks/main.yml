@@ -1,0 +1,36 @@
+---
+
+# Build the container from local files
+- name: "Build {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    path: "{{ path }}"
+    dockerfile: "{{ dockerfile }}"
+  when: "build_action == 'local'"
+
+
+# Pull the container from a registry.  This could be docker hub, or any other registry
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"     
+
+
+# Create the container
+- name: Create Explorer
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    networks:
+      - name: "{{ docker_network_name }}"          
+    working_dir: /usr/share/unfetter-api-explorer
+    state: started
+    env: 
+     PUBLIC_PATH: /explorer/
+    entrypoint:
+     - npm
+     - start
+  when: run_action       

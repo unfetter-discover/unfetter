@@ -1,0 +1,135 @@
+---
+####################################################################################
+#  This playbook only builds the docker images locally
+#
+#  You are required to pass in two extra-vars.  
+#  
+#  registry: is the docker registry where to push the newly built images. "unfetter" for 
+#     production push, or another registry for testing, internal staging, etc.
+#
+#  docker_tag: this is the docker tag we are tagging the images.  it is a parameter
+#     rather than rely on the normally built in role so that we have complete control over 
+#     versioning
+#
+#  push_latest: Do you want a latest tag to be created and pushed to the registry? Default is 
+#     no.  Pass in "yes" to build and push a latest
+#
+#  example:    ansible-playbook task-push-registry.yml -e "push_registry=unfetter push_docker_tag=0.3.9 push_latest=true"
+#
+#  If you don't want the latest tag, then leave out push_latest in the URL. Ansible has issues with sending False boolean on the command lineinfile
+####################################################################################
+
+
+- name: Pushes local images to a registry
+  hosts: build
+#  become: true
+  vars:
+    #push_registry: []
+    #push_docker_tag: []
+    push_latest: false
+    image_list:
+         - "unfetter-api-explorer"
+         - "unfetter-discover-processor"
+         - "unfetter-discover-api"
+         - "unfetter-ui"
+         - "unfetter-ctf-ingest"
+         - "unfetter-pattern-handler"
+         - "unfetter-socket-server"
+    gateway_config:
+         - "{{ push_docker_tag }}.uac"
+         - "{{ push_docker_tag }}.legacy.uac"
+         - "{{ push_docker_tag }}.legacy.demo"
+         - "{{ push_docker_tag }}.demo"
+    
+
+  tasks:
+
+
+    - debug: 
+        msg: Push Latest is {{ push_latest }}
+    - debug:
+        msg: Building version {{ push_docker_tag }} to registry {{ push_registry }}
+      when: (push_docker_tag is defined) and (push_registry is defined)
+
+    - fail: 
+        msg: "Bailing because you did not include either push_docker_tag or push_registry"
+      when: not ((push_docker_tag is defined) and (push_registry is defined))
+
+    - fail: 
+        msg: "Do not put , between your variables"
+      when: (push_docker_tag is search(",")) or (push_registry is search(","))
+
+
+# We were exporting and importing the containers to tar files to flatten the images.  However, this appears
+#   to be problematic.  Thus, removing for now.
+
+    # - name: Build running containers for every image
+    #   docker_container:
+    #     name: "{{ item[0] }}.{{ item[1] }}.ready-to-export"
+    #     image: "{{ item[0] }}:{{ item[1] }}"
+    #     state: present
+    #     entrypoint:
+    #        - ls /tmp
+    #   loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+
+
+    # - name: Exporting the Images to tar
+    #   command: "docker export -o {{ item[0] }}.{{ item[1] }}.ready-to-export.tar {{ item[0] }}.{{ item[1] }}.ready-to-export"
+    #   loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+ 
+
+  #  - name: Import and push
+  #     docker_image:
+  #       name: "{{ push_registry }}{{ item[0] }}"
+  #       tag: "{{ item[1] }}"
+  #       push: yes
+  #       load_path: "{{ item[0] }}.{{ item[1] }}.ready-to-export.tar"
+  #     loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+
+    - debug:
+        msg: "{{ image_list+['unfetter-discover-gateway'] }}"
+    - name: Tagging
+      command: "docker tag {{ item[0] }}:{{ item[1] }} {{ push_registry }}/{{ item[0] }}:{{ item[1] }}"
+      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+
+    - name: Pushing to {{ push_registry }}
+      command: "docker push {{ push_registry }}/{{ item[0] }}:{{ item[1] }}"
+      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+    
+    - name: Tagging Latest
+      command: "docker tag {{ item[0] }}:{{ item[1] }} {{ push_registry }}/{{ item[0] }}:latest"
+      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],['{{ push_docker_tag }}.demo']) }}"
+      when: push_latest
+
+    - name: Pushing latest to {{ push_registry }}
+      command: "docker push {{ push_registry }}/{{ item }}:latest"
+      with_items: "{{ image_list+['unfetter-discover-gateway'] }}"
+      when: push_latest
+
+#    - name: Pushing Images to {{ registry }}
+#      docker_image:
+#        name: "{{ item[0] }}"
+#        tag: "{{ item[1] }}"
+#        force: yes
+#        push: yes
+#        pull: no
+#        repository: "{{ push_registry }}/{{ item[0] }}"
+#      loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],'{{ gateway_config }}') }}"
+
+    
+    # - name: Tagging Latest
+    #   docker_image:
+    #     name: "{{ item[0] }}:{{ item[1] }}"
+    #     state: present
+    #     repository: "{{ push_registry }}/{{ item[0] }}:latest"
+    #   loop: "{{ query('nested', '{{ image_list }}','{{ push_docker_tag }}') }}+{{ query('nested', ['unfetter-discover-gateway'],['{{ push_docker_tag }}.demo']) }}"
+    #   when: push_latest
+
+    # - name: push
+    #   docker_image:
+    #     name: "{{ push_registry }}/{{ item }}:latest"
+    #     force: yes
+    #     push: yes
+    #     repository: "{{ push_registry }}/{{ item }}:latest"
+    #   loop: "{{ image_list+['unfetter-discover-gateway'] }}"
+    #   when: push_latest      

@@ -1,0 +1,14 @@
+virtualenv
+data
+*.retry
+
+*.tar
+backup/*
+!backup/.gitkeep
+**/dist
+
+roles/gateway/files/conf.d/default.conf
+roles/gateway/files/ui-dist/
+
+host_vars/*
+!host_vars/demo-file.yml

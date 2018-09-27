@@ -1,0 +1,78 @@
+[
+    {
+        "_id": "0d0886e1-fec2-4a62-80c5-5528ad3dd11e",
+        "configKey": "adapter.rules.url",
+        "configValue": {
+            "systemName" : "sample-report-system",
+            "searchPattern" : "https://(.*)/?(.*)?$",
+            "replacementPattern": "/api/ctf/translate/report/data/sample"
+        },
+        "configGroups": [
+            "stixConfig"
+        ]
+    },
+    {
+        "_id": "8a1abdb6-5fdb-4842-96b4-51e3d3436bb0",
+        "configKey": "adapter.rules.data",
+        "configValue": {
+            "systemName": "sample-report-system",
+            "rules": [
+                {
+                    "jsonPath": ".id",
+                    "stixPath": "stix.id"
+                },
+                {
+                    "jsonPath": ".type",
+                    "stixPath": "stix.type"
+                },
+                {
+                    "jsonPath": ".published",
+                    "stixPath": "stix.published"
+                },
+                {
+                    "jsonPath": ".published",
+                    "stixPath": "stix.modified"
+                },
+                {
+                    "jsonPath": ".published",
+                    "stixPath": "stix.created"
+                },
+                {
+                    "jsonPath": ".description",
+                    "stixPath": "stix.description"
+                },
+                {
+                    "jsonPath": ".protection.level",
+                    "stixPath": "stix.granular_markings.marking_ref"
+                },
+                {
+                    "jsonPath": ".report.id",
+                    "stixPath": "stix.external_references.external_id"
+                },
+                {
+                    "jsonPath": ".report.url",
+                    "stixPath": "stix.external_references.url"
+                },
+                {
+                    "jsonPath": ".report.description",
+                    "stixPath": "stix.external_references.description"
+                },
+                {
+                    "jsonPath": ".report.title",
+                    "stixPath": "stix.title"
+                },
+                {
+                    "jsonPath": ".report.title",
+                    "stixPath": "stix.name"
+                },
+                {
+                    "jsonPath": ".report.author",
+                    "stixPath": "stix.created_by_ref"
+                }
+            ]
+        },
+        "configGroups": [
+            "stixConfig"
+        ]
+    }
+]

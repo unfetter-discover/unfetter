@@ -1,0 +1,42 @@
+---
+# Building the image if build_action is local
+- name: "Build {{ container_name }}"
+  docker_image:
+    name: "{{ container_name }}"
+    tag: "{{ docker_tag }}"
+    state: present
+    path: "{{ path }}"
+  when: "build_action == 'local'"
+
+# Pulling the image if build_action is pull
+- name: "Pull {{ container_name }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "build_action == 'pull'"
+
+# Building the ingest container
+- name: Create Ingest
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
+    volumes: "{{ volume_list }}"
+    entrypoint:
+      - npm
+      - start
+    working_dir: /usr/share/unfetter-ctf-ingest
+    published_ports: "{{ '3001:10010' if 'development' in group_names else [] }}"
+    env:
+      API_PROTOCOL: https
+      API_HOST: unfetter-discover-api
+      API_PORT: 3000
+      API_CONTEXT: "/"
+      MONGO_REPOSITORY: repository
+      MONGO_PORT: 27017
+      MONGO_DBNAME: stix
+  when: run_action
+

@@ -1,0 +1,61 @@
+---
+####################################################################################
+#   This playbook will configure a remote host to support Unfetter, and will run
+#   a production version of Unfetter
+#
+#   
+#
+####################################################################################
+
+
+- name: Prepare the Docker Host 
+#  become: true
+  hosts: deployed
+  vars:
+     ansible_python_interpreter: python
+     pip_install_packages:
+       - name: docker
+  tasks:
+
+ # - debug:
+ #     var: result
+  pre_tasks:
+    - include_role:
+         name: unfetter
+         tasks_from: generate-ssh-keys.yml
+  
+  pre_tasks:
+# This was necessary to get docker running on the AWS Linux 2 AMI
+    - name: Install Docker CE CentOS-specific dependencies
+      block:
+      # region https://docs.docker.com/install/linux/docker-ce/centos/#set-up-the-repository
+      - name: Install yum-utils
+        package:
+          name: yum-utils
+          state: present
+      - name: Install device-mapper-persistent-data
+        package:
+          name: device-mapper-persistent-data
+          state: present
+      - name: Install lvm2
+        package:
+          name: lvm2
+          state: present
+      # endregion
+      # region https://github.com/docker/for-linux/issues/299#issuecomment-390976518
+      - name: yum makecache fast
+        shell: yum makecache fast
+      - name: Install container-selinux
+        shell: yum install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.42-1.gitad8f0f7.el7.noarch.rpm
+        become: true
+        ignore_errors: yes
+
+      # endregion
+  
+  roles:
+  # For some reason, the ec2-user is not being added to the docker group. Have to do that by hand
+    - { role: geerlingguy.docker, docker_users: ["{{ ansible_host }}"], become: true}
+    - { role: geerlingguy.git, become: true }
+    - { role: geerlingguy.pip, become: true }
+#    - unfetter  
+

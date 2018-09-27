@@ -1,0 +1,26 @@
+# Check to see if the private-config file is there. 
+
+- name: Create private-config volume
+  docker_volume:
+    name: private-config
+
+
+- name: check-private
+  stat:
+    path: '{{ private_vol }}/private-config.json'
+  register: private_vol_stat
+  changed_when: True  
+
+- include_tasks: build-private-config.yml
+  when: 'not (private_vol_stat.stat.exists)'
+
+- name: Move private config to volume
+  docker_container:
+    name: helper
+    image: williamyeh/ansible:alpine3
+    state: started
+    volumes: 
+     - "private-config:/config/private"
+     - "{{ private_vol }}:/data"
+    command: "cp /data/private-config.json /config/private/private-config.json"
+    cleanup: yes

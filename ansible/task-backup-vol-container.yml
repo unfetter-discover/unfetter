@@ -1,0 +1,84 @@
+#  The common role is run first, and contains all containers that are pulled from
+#  docker repositories that are not part of Unfetter
+
+#  It also will run generic tasks.
+- name: Backup the volume information from a file
+  hosts: deployed
+  vars:
+    private_vol: '{{ backup_directory }}/private-vol'
+    certs_vol: '{{ backup_directory }}/certs-vol'
+    mongodb_vol: '{{ backup_directory }}/mongo-vol'
+    ui_vol: '{{ backup_directory }}/ui-vol'    
+
+  tasks:
+    - name: make sure dirs are there
+      file: path={{ item }} state=directory
+      with_items:
+      - "{{ private_vol }}"
+      - "{{ certs_vol }}/certs"
+      - "{{ mongodb_vol }}"
+      - "{{ ui_vol }}"
+    # Once the certs volume is created, this handler will pull the certs from the gateway, and store them
+
+    # into the volume.
+
+    # Running the commands with "with_items" lets us easily run one command after another and manage the order
+    - name: backup certs
+      command: "{{ item }}"
+      with_items:
+        - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/server.crt {{ certs_vol }}/certs
+        - docker cp unfetter-discover-gateway:/etc/pki/tls/certs/server.key {{ certs_vol }}/certs
+    
+    - name: backup local-settings.json from unfetter-ui
+      command: "{{ item }}"
+      with_items:
+        - docker cp unfetter-ui:/usr/share/unfetter-ui/src/assets/config/local-settings.json {{ ui_vol }}/local-settings.json
+      when: ((use_unfetter_ui) and (use_uac))
+    
+    - name: backup local-settings.json from gateway
+      command: "{{ item }}"
+      with_items:
+        - docker cp unfetter-discover-gateway:/etc/nginx/html/assets/config/local-settings.json {{ ui_vol }}/local-settings.json
+      when: ((not use_unfetter_ui) and (use_uac))
+      ignore_errors: yes
+
+    # Removing this for now, since we just need to rerun the configuration code again
+    # Once the private-config volume is created, this handler will pull the config data from unfetter-discover-api and store
+    # into the volume
+    - name: backup private-config
+      command: "{{ item }}"
+      with_items:
+
+        - docker cp unfetter-socket-server:/usr/share/unfetter-socket-server/config/private/private-config.json {{ private_vol }}/private-config.json
+#        - docker run -v private-config:/config/private --name helper busybox true
+#        - docker cp {{ private_vol }}/private-config.json helper:/config/private
+#        - docker rm helper
+        
+        #command: "docker run --rm -it -v private-config:/api/private -v ui-config:/ui/private -v $thepath/files/scripts/api_configuration_tool.py:/scripts/api_configuration_tool.py --name api-config python:2.7.15-alpine3.6 python /scripts/api_configuration_tool.py"
+      when: use_uac
+      ignore_errors: yes
+
+      
+    - name: add to inventory for mongo
+      add_host:
+        name: cti-stix-store-repository
+        ansible_connection: docker
+      #changed_when: false
+      notify: 
+       - backup mongo
+      become: yes 
+   # Once the mongo-db volume is created, this handler will backup the database and extract it
+    
+    # When the database file is archived and extracted, it needs to be moved into the 
+    # volume and restored as a valid mongo database
+    
+
+  handlers:
+
+
+    - name: backup mongo
+      command: "{{ item }}"
+      with_items:
+        - "docker exec cti-stix-store-repository mongodump --host localhost --archive=/data/db/mongo.archive"
+        - "docker exec cti-stix-store-repository cp /data/db/mongo.archive /tmp/"
+        - "docker cp cti-stix-store-repository:/tmp/mongo.archive {{ mongodb_vol }}/mongo.archive"

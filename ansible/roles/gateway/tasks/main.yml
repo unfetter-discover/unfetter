@@ -1,0 +1,106 @@
+# TODO - Need to be able to build this from source for dev environments
+- debug:
+    msg: "Group Names: {{ group_names }} use_uac {{ use_uac }} build_action {{ build_action }}"
+
+- name: "Pull {{ container_name }} - {{ build_action }}"
+  docker_image:
+    name: "{{ image_name }}"
+    state: present
+    pull: yes
+  when: "not ('production' in group_names and build_action=='local')"
+
+
+  # Building the image if build_action is local
+
+#- name: "Copy the DISTRIBUTION code"
+#  copy:
+#    src: "{{ prepath }}unfetter-ui/dist"
+#    dest: "{{ remote_role_directory }}files/"
+#    force: true
+#    remote_src: {{ if ansible_host == 'local' 'no' else 'yes' }}
+#  when: "('production' in group_names and build_action=='local')"
+    
+    
+#- name: "Build {{ container_name }} from Gateway Dockerfile"
+#  docker_image:
+#    name: "{{ container_name }}"
+#    tag: "{{ gateway_tag }}"
+#    state: present
+#    path: "{{ remote_role_directory }}files"
+#  when: "('production' in group_names and build_action=='local')"
+
+  
+
+- name: Create gateway-conf-d volume
+  docker_volume:
+    name: gateway-conf-d
+
+- name: Create gateway-conf-d-extra volume
+  docker_volume:
+    name: gateway-conf-d-extra
+
+
+
+- name: make sure conf.d dirs are there
+  file: path={{ backup_directory }}/gateway/conf.d state=directory
+
+- name: make sure conf.d.extra dirs are there
+  file: path={{ backup_directory }}/gateway/conf.d.extra state=directory
+
+
+- name: "Build new default.conf template"
+  template: 
+    src: '{{ role_path }}/templates/default.j2'
+    dest: '{{ backup_directory }}/gateway/conf.d/default.conf'
+    force: true
+  remote_src: true 
+
+- name:  "Copy Conf.d.extra to backup"
+  copy:
+    src: '{{ role_path }}/files/conf.d.extra'
+    dest: '{{ backup_directory }}/gateway'
+
+
+- name: Move conf.d config to volume
+  docker_container:
+    name: helper
+    image: williamyeh/ansible:alpine3
+    state: started
+    volumes: 
+     - "gateway-conf-d:/conf.d"
+     - "{{ backup_directory }}/gateway/conf.d:/data"
+    command: "cp /data/default.conf /conf.d/default.conf"
+    cleanup: yes
+
+- name: Move conf.d.extra config to volume
+  docker_container:
+    name: helper
+    image: williamyeh/ansible:alpine3
+    state: started
+    volumes: 
+     - "gateway-conf-d-extra:/conf.d.extra"
+     - "{{ backup_directory }}/gateway/conf.d.extra:/data"
+    command: "cp -a /data/. /conf.d.extra/"
+    cleanup: yes
+
+- debug:
+      msg: The volume is {{ volume_list }}
+
+# Creates the docker container for the gateway
+- name: Create the {{ container_name }} from image {{ image_name }}
+  docker_container:
+    name: "{{ container_name }}"
+    image: "{{ image_name }}"
+    state: started
+    networks:
+      - name: "{{ docker_network_name }}"          
+    exposed_ports: 
+    - "443"
+    - "80"
+    published_ports:
+    - "443:443"
+    - "80:80"
+    volumes: "{{ volume_list }}"
+  when: run_action
+
+  
