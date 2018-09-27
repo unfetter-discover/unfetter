@@ -1,7 +1,15 @@
 ---
 ####################################################################################
-# This Playbook will attempt to deploy EC2 instances, configured properly for testing
-#    and operation 
+#  This playbook will attempt to start EC2 instances that have the tag:
+#    deployment-group: unfetter
+#    and has a tag "deployment-group" with a value of the host name.
+#
+#  This will allow multiple tests to be run at the same time.
+#
+#
+#   
+#  The original plan for this playbook was to build the EC2 instances.
+# 
 #
 ####################################################################################
 

@@ -1,7 +1,9 @@
 ---
 ####################################################################################
-# This Playbook will attempt to deploy EC2 instances, configured properly for testing
-#    and operation 
+#   This playbook will configure a remote host to support Unfetter, and will run
+#   a production version of Unfetter
+#
+#   
 #
 ####################################################################################
 
