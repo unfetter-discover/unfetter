@@ -1,0 +1,20 @@
+---
+####################################################################################
+#  This playbook only builds the docker images locally
+#
+####################################################################################
+
+# This is an example of a file that can be used to over write files in deployment
+- name: Test file change and rebuild of docker image
+  hosts: deployed
+  tasks:
+
+  - name: Move something to the container
+    shell: "{{ item }}"
+    with_items:
+      - "docker cp /tmp/api/file1.js unfetter-discover-api:/usr/share/unfetter-discover-api/node_modules/oauth/lib/file1.js"
+      
+  - name: Commit change
+    shell: "docker commit unfetter-discover-api unfetter-discover-api:{{ docker_tag }}"
+
+
