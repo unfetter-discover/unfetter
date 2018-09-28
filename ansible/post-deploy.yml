@@ -1,0 +1,22 @@
+---
+####################################################################################
+#  This playbook is a test to see how to specifically change a file or files in a container, 
+#     then rebuild the image itself for continued deployment.  This is designed for 
+#     deployment specific purposes
+#
+####################################################################################
+
+# This is an example of a file that can be used to over write files in deployment
+- name: Test file change and rebuild of docker image
+  hosts: deployed
+  tasks:
+
+  - name: Move something to the container
+    shell: "{{ item }}"
+    with_items:
+      - "docker cp /tmp/api/file1.js unfetter-discover-api:/tmp/file1.js"
+      
+  - name: Commit change
+    shell: "docker commit unfetter-discover-api unfetter-discover-api:{{ docker_tag }}"
+
+  
