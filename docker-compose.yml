@@ -2,7 +2,7 @@ version: '3.3'
 services:
   unfetter-discover-gateway:
     container_name: unfetter-discover-gateway
-    image: unfetter/unfetter-discover-gateway:0.3.11.demo
+    image: unfetter/unfetter-discover-gateway:0.3.10.demo
     ports:
      - "443:443"
      - "80:80"
@@ -12,6 +12,7 @@ services:
      - unfetter-api-explorer
      - unfetter-discover-api
      - unfetter-ctf-ingest
+     - unfetter-threat-ingest
 #     - unfetter-ui
 #     - unfetter-socket-server
 
@@ -48,7 +49,7 @@ services:
      - ./certs/:/tmp/certs
 
   unfetter-discover-processor:
-    image: unfetter/unfetter-discover-processor:0.3.11
+    image: unfetter/unfetter-discover-processor:0.3.10
     container_name: unfetter-discover-processor
     links:
     - unfetter-pattern-handler
@@ -94,9 +95,36 @@ services:
     links:
      - cti-stix-store-repository:repository
 
+  unfetter-threat-ingest:
+    container_name: unfetter-threat-ingest
+    image: unfetter/unfetter-threat-ingest:0.3.11
+    ports:
+      - "5010:5010"
+    environment:
+#      - THREAT_INGEST_PORT=5010
+      - MONGO_HOST=repository
+      - MONGO_PORT=27017
+#      - MONGO_DB=stix
+#      - SERVER_SOCKET_HOST=localhost
+#      - SERVER_SOCKET_PORT=3333
+    entrypoint:
+      - npm
+      - run
+      - start:dev
+#      - --debug
+#      - --cert-dir=/etc/pki/tls/certs
+#      - --server-key=server.key
+#      - --server-cert=server.crt
+      - --fire-notifications=false
+    depends_on:
+      - cti-stix-store-repository
+#      - unfetter-socket-server
+    links:
+      - cti-stix-store-repository:repository
+
   unfetter-ctf-ingest:
     container_name: unfetter-ctf-ingest
-    image: unfetter/unfetter-ctf-ingest:0.3.11
+    image: unfetter/unfetter-ctf-ingest:0.3.10
     environment:
       - API_PROTOCOL=https
       - API_HOST=apihost
@@ -127,7 +155,7 @@ services:
     # entrypoint: /entrypoint.sh mongod --auth
 
   unfetter-api-explorer:
-    image: unfetter/unfetter-api-explorer:0.3.11
+    image: unfetter/unfetter-api-explorer:0.3.10
     container_name: unfetter-api-explorer
     environment:
      - PUBLIC_PATH=/explorer/
@@ -136,7 +164,7 @@ services:
      - start
 
   unfetter-discover-api:
-    image: unfetter/unfetter-discover-api:0.3.11
+    image: unfetter/unfetter-discover-api:0.3.10
     container_name: unfetter-discover-api
     depends_on:
     - unfetter-discover-openssl
@@ -167,7 +195,7 @@ services:
     - start
 
   unfetter-pattern-handler:
-    image: unfetter/unfetter-pattern-handler:0.3.11
+    image: unfetter/unfetter-pattern-handler:0.3.10
     container_name: unfetter-pattern-handler
     entrypoint:
     - gunicorn
