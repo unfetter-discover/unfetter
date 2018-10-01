@@ -121,6 +121,8 @@ services:
 #      - unfetter-socket-server
     links:
       - cti-stix-store-repository:repository
+    volumes:
+      - ./certs/:/etc/pki/tls/certs
 
   unfetter-ctf-ingest:
     container_name: unfetter-ctf-ingest
