@@ -1,0 +1,10 @@
+---
+dir: "unfetter-store/unfetter-threat-ingest"
+path: "{{ prepath + dir}}"
+container_name: unfetter-threat-ingest
+image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
+
+base_list: "certs:/etc/pki/tls/certs:ro"
+dev_volume_list: ",{{ prepath }}unfetter-store/unfetter-threat-ingest/config:/usr/src/unfetter-threat-ingest/config,{{ prepath }}unfetter-store/unfetter-threat-ingest/src:/usr/src/unfetter-threat-ingest/src"
+
+volume_list: "{{ base_list }}{{ dev_volume_list if run_mode == 'dev' else '' }}"

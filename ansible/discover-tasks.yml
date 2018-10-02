@@ -71,6 +71,8 @@
   - include_role:
         name: api
   - include_role:
+        name: threat-ingest
+  - include_role:
         name: explorer
 
   - include_role:
