@@ -633,6 +633,50 @@
                 "parser" : {
                     "type" : "dod-news-demo"
                 }
+            }, 
+            {
+                "name" : "DHS US-CERT",
+                "source" : "https://www.kb.cert.org/vulfeed",
+                "active" : true,
+                "parser" : {
+                    "type" : "xml",
+                    "root" : "feed",
+                    "articles" : "entry",
+                    "convert" : {
+                        "name" : "title/_",
+                        "description" : "summary/_",
+                        "labels" : "category@term",
+                        "published" : {
+                            "element" : "published",
+                            "type" : "date"
+                        },
+                        "metaProperties" : {
+                            "link" : "link@href"
+                        }
+                    }
+                }
+            },
+            {
+                "name" : "State Department Travel Advisories",
+                "source" : "https://travel.state.gov/_res/rss/TAsTWs.xml",
+                "active" : true,
+                "parser" : {
+                    "type" : "xml",
+                    "root" : "rss/channel",
+                    "articles" : "item",
+                    "convert" : {
+                        "name" : "title",
+                        "description" : "description/_",
+                        "published" : {
+                            "element" : "pubDate",
+                            "type" : "date"
+                        },
+                        "metaProperties" : {
+                            "link" : "link",
+                            "country-code" : "dc:identifier"
+                        }
+                    }
+                }
             }
         ]
     }

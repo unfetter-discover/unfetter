@@ -37,7 +37,5 @@
     entrypoint:
       - npm
       - run
-      - "{{ 'start' }}{{ ':dev' if run_mode === 'dev' else '' }}"
-      - "{{ '--debug' if run_mode == 'dev' else '' }}"
+      - "{{ 'watch' if run_mode == 'dev' else 'start' }}"
   when: run_action
-
