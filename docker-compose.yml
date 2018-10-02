@@ -110,7 +110,7 @@ services:
     entrypoint:
       - npm
       - run
-      - start:dev
+      - start
 #      - --debug
 #      - --cert-dir=/etc/pki/tls/certs
 #      - --server-key=server.key
