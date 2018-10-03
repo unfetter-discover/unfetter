@@ -54,16 +54,7 @@
   
   roles:
   # For some reason, the ec2-user is not being added to the docker group. Have to do that by hand
-    - { role: geerlingguy.docker, docker_users: ["{{ ansible_host }}"], become: true}
+    - { role: geerlingguy.docker, docker_users: ["{{ ansible_user }}"], become: true}
     - { role: geerlingguy.git, become: true }
     - { role: geerlingguy.pip, become: true }
     - unfetter  
-
-  tasks:
-    - name: Add user to docker group
-      user:
-        name: '{{ ansible_user }}'
-        groups: docker
-        append: yes
-      become: true
-
