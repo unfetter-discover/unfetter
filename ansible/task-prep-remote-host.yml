@@ -10,7 +10,7 @@
 
 - name: Prepare the Docker Host 
 #  become: true
-  hosts: dev-demo
+  hosts: deployed
   vars:
      ansible_python_interpreter: python
      pip_install_packages:
