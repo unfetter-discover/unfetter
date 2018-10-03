@@ -10,7 +10,7 @@
 
 - name: Prepare the Docker Host 
 #  become: true
-  hosts: deployed
+  hosts: dev-demo
   vars:
      ansible_python_interpreter: python
      pip_install_packages:
@@ -57,5 +57,13 @@
     - { role: geerlingguy.docker, docker_users: ["{{ ansible_host }}"], become: true}
     - { role: geerlingguy.git, become: true }
     - { role: geerlingguy.pip, become: true }
-#    - unfetter  
+    - unfetter  
+
+  tasks:
+    - name: Add user to docker group
+      user:
+        name: '{{ ansible_user }}'
+        groups: docker
+        append: yes
+      become: true
 
