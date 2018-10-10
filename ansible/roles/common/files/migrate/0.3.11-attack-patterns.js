@@ -144,29 +144,31 @@ function updateAttackPatterns(apQuery) {
             if (apQuery.testFailure === true) {
                 reject('Deliberate test failure');
             } else if (err) {
-                reject(`Error retrieving capabilities data: ${err}`);
+                reject(`Error retrieving attack pattern data: ${err}`);
             } else {
+                let numUpdates = 0;
                 Promise
                     .all(
-                        attackPatterns.map(attackPattern => {
-                            const newKCEntries = mappedDict.find((mapping) => {
-                                return mapping.attack_ap_name === attackPattern.stix.name &&
-                                       attackPattern.stix.kill_chain_phases.find((kc) => {
-                                           return kc.phase_name === mapping.attack_phase_name;
-                                       }) !== undefined;
-                            });
-                            if (newKCEntries) {
-                                console.log(newKCEntries);
-                                new Promise((res, rej) => updateAttackPattern(AttackPatterns, attackPattern, newKCEntries, res, rej));
-                            }
-                        })
+                        attackPatterns.map(attackPattern => new Promise((res, rej) => updateAttackPattern(AttackPatterns, attackPattern, res, rej)))
+                        // attackPatterns.map(attackPattern => {
+                        //     const newKCEntries = mappedDict.find((mapping) => {
+                        //         return mapping.attack_ap_name === attackPattern.stix.name &&
+                        //                attackPattern.stix.kill_chain_phases.find((kc) => {
+                        //                    return kc.phase_name === mapping.attack_phase_name;
+                        //                }) !== undefined;
+                        //     });
+                        //     if (newKCEntries && numUpdates < 1) {
+                        //         numUpdates++;
+                        //         new Promise((res, rej) => updateAttackPattern(AttackPatterns, attackPattern, newKCEntries, res, rej));
+                        //     }
+                        // })
                     )
                     .then(
                         result => resolve({ migration: apQuery.name, success: true, detail: result }),
                         error => reject({ migration: apQuery.name, success: false, detail: error })
                     )
                     .catch(error => reject({ migration: apQuery.name, success: false, detail: error }))
-                    .finally(() => console.log('Attack pattern updates complete.'));
+                    .finally(() => console.log('Attack pattern updates complete. '+numUpdates+' attack patterns updated.'));
             }
         });
     });
@@ -174,14 +176,13 @@ function updateAttackPatterns(apQuery) {
 
 async function updateAttackPattern(AttackPatterns, attackPattern, newKCEntries, resolve, reject) {
     const stageName = newKCEntries.ntctf_phase_name.substring(0, newKCEntries.ntctf_phase_name.indexOf(' -'));
-    console.log("Updating " + attackPattern.stix.name + " with NTCTF phase name " + newKCEntries.ntctf_phase_name + " and NTCTF stage " + stageName);
     await AttackPatterns.update(
-        { 'stix.id': attackPattern.id },
+        { 'stix.id': attackPattern.stix.id },
         {
             $push: { "stix.kill_chain_phases" : { 'kill_chain_name': 'ntctf', 'phase_name': newKCEntries.ntctf_phase_name, 'x_ntctf_stage': stageName } }
         }
     );
-    resolve({ attackPattern: attackPattern.stix.name });
+    resolve({ attackPattern: attackPattern.name });
 }
 
 const MIGRATIONS = [
