@@ -1,0 +1,6 @@
+- name: Create certs volume
+  docker_volume:
+    name: certs
+  notify:
+    - load certs-vol
+  when: run_action

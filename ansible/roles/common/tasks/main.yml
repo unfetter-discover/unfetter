@@ -6,13 +6,8 @@
 
 
 # Ensure the volumes are created. 
-- name: Create certs volume
-  docker_volume:
-    name: certs
-  notify:
-    - load certs-vol
-  when: run_action
 
+- include_tasks: "cert-volume.yml"
 - name: Create mongo-db volume
   docker_volume:
     name: mongo-db
