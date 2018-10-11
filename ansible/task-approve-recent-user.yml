@@ -9,11 +9,9 @@
 
 #  It also will run generic tasks.
 - name: Calls the role task to reconfigure the private-vol file
-  hosts: dev
+  hosts: deployed 
 
   tasks:
     - name: Update the latest users
-      command: "{{ item }}"
-      with_items:
-        - "docker exec cti-stix-store-repository mongo stix --eval \"db.getCollection('user').update({}, { $set: { 'role': 'ADMIN', 'approved': true } })\""
-
+      command: "docker exec cti-stix-store-repository mongo stix --eval \"db.getCollection('user').update({'userName': 'infosec-alchemist'}, { $set: { 'role': 'ADMIN', 'approved': true } })\""
+      when: "'uac' in group_names"
