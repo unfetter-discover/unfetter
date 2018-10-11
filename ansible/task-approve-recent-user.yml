@@ -1,0 +1,19 @@
+
+####################################################################################
+#  This playbook migrates from 0.3.8 to 0.3.9
+#
+#
+####################################################################################
+#  The common role is run first, and contains all containers that are pulled from
+#  docker repositories that are not part of Unfetter
+
+#  It also will run generic tasks.
+- name: Calls the role task to reconfigure the private-vol file
+  hosts: dev
+
+  tasks:
+    - name: Update the latest users
+      command: "{{ item }}"
+      with_items:
+        - "docker exec cti-stix-store-repository mongo stix --eval \"db.getCollection('user').update({}, { $set: { 'role': 'ADMIN', 'approved': true } })\""
+
