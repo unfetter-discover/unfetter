@@ -16,7 +16,7 @@
   hosts: deployed 
   vars_prompt:
     - name: "username"
-      prompt: "What username to update"
+      prompt: "What is the username of the user you want to approve and make ADMIN on your deployed Unfetter?"
       private: no
       when: username is not defined
   tasks:
