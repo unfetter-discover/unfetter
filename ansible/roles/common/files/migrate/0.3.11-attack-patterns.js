@@ -146,29 +146,28 @@ function updateAttackPatterns(apQuery) {
             } else if (err) {
                 reject(`Error retrieving attack pattern data: ${err}`);
             } else {
-                let numUpdates = 0;
                 Promise
                     .all(
-                        attackPatterns.map(attackPattern => new Promise((res, rej) => updateAttackPattern(AttackPatterns, attackPattern, res, rej)))
-                        // attackPatterns.map(attackPattern => {
-                        //     const newKCEntries = mappedDict.find((mapping) => {
-                        //         return mapping.attack_ap_name === attackPattern.stix.name &&
-                        //                attackPattern.stix.kill_chain_phases.find((kc) => {
-                        //                    return kc.phase_name === mapping.attack_phase_name;
-                        //                }) !== undefined;
-                        //     });
-                        //     if (newKCEntries && numUpdates < 1) {
-                        //         numUpdates++;
-                        //         new Promise((res, rej) => updateAttackPattern(AttackPatterns, attackPattern, newKCEntries, res, rej));
-                        //     }
-                        // })
+                        attackPatterns.map(attackPattern => {
+                            const newKCEntries = mappedDict.find((mapping) => {
+                                return mapping.attack_ap_name === attackPattern.stix.name &&
+                                       attackPattern.stix.kill_chain_phases.find((kc) => {
+                                           return kc.phase_name === mapping.attack_phase_name;
+                                       }) !== undefined;
+                            });
+                            if (newKCEntries) {
+                                return new Promise((res, rej) => updateAttackPattern(AttackPatterns, attackPattern, newKCEntries, res, rej));
+                            } else {
+                                return null;
+                            }
+                        }).filter(promise => promise !== null)
                     )
                     .then(
                         result => resolve({ migration: apQuery.name, success: true, detail: result }),
                         error => reject({ migration: apQuery.name, success: false, detail: error })
                     )
                     .catch(error => reject({ migration: apQuery.name, success: false, detail: error }))
-                    .finally(() => console.log('Attack pattern updates complete. '+numUpdates+' attack patterns updated.'));
+                    .finally(() => console.log('Attack pattern updates complete. '));
             }
         });
     });
