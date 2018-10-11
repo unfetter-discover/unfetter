@@ -75,4 +75,10 @@
    
     - { role: geerlingguy.git, become: true }
     - { role: geerlingguy.pip, become: true }
-    - unfetter  
+    - unfetter
+  tasks:
+    - include_role:
+        name: common
+        tasks_from: cert-volume.yml
+      vars:
+        run_mode: 'dev'
