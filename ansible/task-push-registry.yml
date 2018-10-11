@@ -35,6 +35,7 @@
          - "unfetter-ctf-ingest"
          - "unfetter-pattern-handler"
          - "unfetter-socket-server"
+         - "unfetter-threat-ingest"
     gateway_config:
          - "{{ push_docker_tag }}.uac"
          - "{{ push_docker_tag }}.legacy.uac"
