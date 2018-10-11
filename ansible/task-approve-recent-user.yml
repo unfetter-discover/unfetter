@@ -8,10 +8,20 @@
 #  docker repositories that are not part of Unfetter
 
 #  It also will run generic tasks.
-- name: Calls the role task to reconfigure the private-vol file
-  hosts: deployed 
+#  On the command line, need to send in the username 
 
+
+#  ansible-playbook task-approve-recent-user.yml -e "username=test"
+- name: Calls the role task to reconfigure the private-vol file
+  hosts: dev 
+  vars_prompt:
+    - name: "username"
+      prompt: "What username to update"
+      private: no
+      when: username is not defined
   tasks:
+    - debug:
+        msg: "Username is {{ username }}"
     - name: Update the latest users
-      command: "docker exec cti-stix-store-repository mongo stix --eval \"db.getCollection('user').update({'userName': 'infosec-alchemist'}, { $set: { 'role': 'ADMIN', 'approved': true } })\""
+      command: "docker exec cti-stix-store-repository mongo stix --eval \"db.getCollection('user').update({'userName': '{{ username }}'}, { $set: { 'role': 'ADMIN', 'approved': true } })\""
       when: "'uac' in group_names"
