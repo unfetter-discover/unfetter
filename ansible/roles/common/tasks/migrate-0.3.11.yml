@@ -1,6 +1,6 @@
 
 ####################################################################################
-#  This playbook migrates from 0.3.9 to 0.3.10
+#  This playbook migrates from 0.3.10 to 0.3.11
 #
 #
 ####################################################################################
@@ -27,4 +27,4 @@
     cleanup: yes
     restart: yes
     command:
-      - 'node /usr/share/app/0.3.10-capability.js -h cti-stix-store-repository -p 27017 -d stix'
+      - 'node /usr/share/app/0.3.11-attack-patterns.js -h cti-stix-store-repository -p 27017 -d stix'

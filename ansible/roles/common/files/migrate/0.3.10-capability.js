@@ -37,7 +37,6 @@ function updateCapabilities(capCorrection) {
             } else if (err) {
                 reject(`Error retrieving capabilities data: ${err}`);
             } else {
-                console.log('All capabilities: ' + capabilities);
                 Promise
                     .all(
                         capabilities.map(capability => new Promise((res, rej) => updateCapability(Capabilities, capability, res, rej)))
