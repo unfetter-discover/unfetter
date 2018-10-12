@@ -12,7 +12,6 @@ server {
 {% if use_ssl_client is defined %}
 {% if use_ssl_client %}
   include ./conf.d.extra/ssl-client.conf;
-  # Test1
 {% endif %}
 {% endif %}
   # include ./conf.d.extra/dn-forbidden.conf;
