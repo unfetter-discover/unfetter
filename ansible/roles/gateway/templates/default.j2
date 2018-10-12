@@ -7,10 +7,14 @@ server {
 
 server {
   include ./conf.d.extra/ssl-server.conf;
-
   include ./conf.d.extra/gzip.conf;
   include ./conf.d.extra/security-headers.conf;
-  # include ./conf.d.extra/ssl-client.conf;
+{% if use_ssl_client is defined %}
+{% if use_ssl_client %}
+  include ./conf.d.extra/ssl-client.conf;
+  # Test1
+{% endif %}
+{% endif %}
   # include ./conf.d.extra/dn-forbidden.conf;
   
   location /explorer/ {
