@@ -1,3 +1,9 @@
+
+- name: Create the Docker Network - {{ docker_network_name }}
+  docker_network:
+    state: present
+    name: "{{ docker_network_name }}"
+    
 - name: Create certs volume
   docker_volume:
     name: certs
