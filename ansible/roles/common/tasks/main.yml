@@ -6,28 +6,26 @@
 
 
 # Ensure the volumes are created. 
-- name: Create certs volume
-  docker_volume:
-    name: certs
-  notify:
-    - load certs-vol
 
+- include_tasks: "cert-volume.yml"
 - name: Create mongo-db volume
   docker_volume:
     name: mongo-db
   notify:
     - load mongodb-vol
+  when: run_action
 
 - include_tasks: manage-private-config.yml
-  when: use_uac
+  when: use_uac and run_action
 
 # We will reload every time
 - name: Create ui-vol volume
   docker_volume:
     name: ui-config
+  when: run_action
 
 - include_tasks: manage-ui-config.yml
-  when: use_uac
+  when: use_uac and run_action
 
 
 - name: Create the Docker Network - {{ docker_network_name }}
