@@ -53,7 +53,6 @@
     src: '{{ role_path }}/templates/default.j2'
     dest: '{{ backup_directory }}/gateway/conf.d/default.conf'
     force: true
-  remote_src: true 
 
 - name:  "Copy Conf.d.extra to backup"
   copy:
