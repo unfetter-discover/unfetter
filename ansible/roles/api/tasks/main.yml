@@ -41,7 +41,7 @@
     # Options: UAC, TEST, DEMO
       RUN_MODE: "{{ 'UAC' if use_uac else 'DEMO' }}"
     # If deployed in a proxy, add the proxy's URL here
-      HTTPS_PROXY_URL: ""
+      HTTPS_PROXY_URL: "{{ https_proxy_url }}"
       PATTERN_HANDLER_DOMAIN: unfetter-pattern-handler
       PATTERN_HANDLER_PORT: 5000
       SOCKET_SERVER_DOMAIN: "{{ 'unfetter-socket-server' if use_uac else '' }}"
