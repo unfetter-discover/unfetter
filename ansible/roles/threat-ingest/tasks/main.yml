@@ -15,6 +15,7 @@
     state: present
     pull: yes
   when: "build_action == 'pull'"
+  ignore_errors: yes
 
 # Building the ingest container
 - name: Create Threat Ingest
@@ -39,3 +40,4 @@
       - run
       - "{{ 'watch' if run_mode == 'dev' else 'start' }}"
   when: run_action
+  ignore_errors: yes
