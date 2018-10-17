@@ -54,6 +54,7 @@
           - "ansible_ssh_private_key_file = {{ ansible_ssh_private_key_file }}"
           - "ansible_connection = {{ ansible_connection }}"
           - "run_mode = {{ run_mode }}"
+          - "https_proxy_url = {{ https_proxy_url }}"
 
 
 
