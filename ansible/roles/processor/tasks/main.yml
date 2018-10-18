@@ -16,6 +16,13 @@
     pull: yes
   when: "build_action == 'pull'"     
 
+
+- name:  "Copy Conf.d.extra to backup"
+  copy:
+    src: '{{ role_path }}/files/examples'
+    dest: '{{ backup_directory }}/processor'
+
+
 # Create the unfetter-discover-processor docker container
 - name: Create Processor
   docker_container:

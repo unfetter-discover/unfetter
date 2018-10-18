@@ -1,0 +1,259 @@
+{
+  "type": "bundle",
+  "id": "stix-archive-bundle",
+  "spec_version": "2.0",
+  "objects": [
+    {
+      "type": "x-unfetter-object-assessment",
+      "id": "x-unfetter-object-assessment-4adf0a88-35a1-4502-bb81-bd41580b6663",
+      "name": "Sysmon Assessment",
+      "created": "2018-04-12T16:00:55.615Z",
+      "modified": "2018-04-12T16:00:55.615Z",
+      "description": "An assessment of Sysmon capabilities against NTCTF CTF attack patterns",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "object_ref": "x-unfetter-capability--ce4171360-0cbf-4130-b01c-dea9ee4bae65",
+      "assessed_objects": [
+        {
+          "assessed_object_ref": "attack-pattern--bc63873f-bdd5-44f7-969e-e0a1414e42c4",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "M"
+            },
+            {
+              "name": "respond",
+              "score": "S"
+            }
+          ]
+        },
+        {
+          "assessed_object_ref": "attack-pattern--b05ad90f-b792-458e-a303-6a9b24d32136",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "M"
+            },
+            {
+              "name": "respond",
+              "score": "S"
+            }
+          ]
+        },
+        {
+          "assessed_object_ref": "attack-pattern--6cd8e904-5c60-4707-8e84-09f5eebd0717",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-object-assessment",
+      "id": "x-unfetter-object-assessment--fbd700f1-233b-4f88-be17-089583e46ca6",
+      "name": "IpTables Assessment",
+      "description": "An assessment of IpTables capabilities against NTCTF attack patterns",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "created": "2018-04-12T16:00:55.615Z",
+      "modified": "2018-04-12T16:00:55.615Z",
+      "object_ref": "x-unfetter-capability--d03921e1-2113-406d-912a-d3e8d9981e56",
+      "assessed_objects": [
+        {
+          "assessed_object_ref": "attack-pattern--bc63873f-bdd5-44f7-969e-e0a1414e42c4",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "M"
+            },
+            {
+              "name": "respond",
+              "score": "S"
+            }
+          ]
+        },
+        {
+          "assessed_object_ref": "attack-pattern--b05ad90f-b792-458e-a303-6a9b24d32136",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "M"
+            },
+            {
+              "name": "respond",
+              "score": "S"
+            }
+          ]
+        },
+        {
+          "assessed_object_ref": "attack-pattern--6cd8e904-5c60-4707-8e84-09f5eebd0717",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-object-assessment",
+      "id": "x-unfetter-object-assessment-e9c4fc71-fde9-4437-b279-d8ab04c3f058",
+      "name": "NortMcFee Assessment",
+      "description": "An assessment of NortMcFee Antivirus capabilities against NTCTF CTF attack patterns",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "created": "2018-04-12T16:00:55.615Z",
+      "modified": "2018-04-12T16:00:55.615Z",
+      "object_ref": "x-unfetter-capability--64e5efcb-86ea-47f4-bb1a-c4dc2ffc136e",
+      "assessed_objects": [
+        {
+          "assessed_object_ref": "attack-pattern--bc63873f-bdd5-44f7-969e-e0a1414e42c4",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "M"
+            },
+            {
+              "name": "respond",
+              "score": "S"
+            }
+          ]
+        },
+        {
+          "assessed_object_ref": "attack-pattern--b05ad90f-b792-458e-a303-6a9b24d32136",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "M"
+            },
+            {
+              "name": "respond",
+              "score": "S"
+            }
+          ]
+        },
+        {
+          "assessed_object_ref": "attack-pattern--6cd8e904-5c60-4707-8e84-09f5eebd0717",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "x-unfetter-object-assessment",
+      "id": "x-unfetter-object-assessment-e9c4fc71-fde9-4437-b279-d8ab04c3f058",
+      "name": "Autologon Assessment",
+      "description": "An assessment of Autologon capabilities against NTCTF CTF attack patterns",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "created": "2018-04-12T16:00:55.615Z",
+      "modified": "2018-04-12T16:00:55.615Z",
+      "object_ref": "x-unfetter-capability--46d585a6-7480-415c-b29b-5c719934f519",
+      "assessed_objects": [
+        {
+          "assessed_object_ref": "attack-pattern--bc63873f-bdd5-44f7-969e-e0a1414e42c4",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "M"
+            },
+            {
+              "name": "respond",
+              "score": "S"
+            }
+          ]
+        },
+        {
+          "assessed_object_ref": "attack-pattern--b05ad90f-b792-458e-a303-6a9b24d32136",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "M"
+            },
+            {
+              "name": "respond",
+              "score": "S"
+            }
+          ]
+        },
+        {
+          "assessed_object_ref": "attack-pattern--6cd8e904-5c60-4707-8e84-09f5eebd0717",
+          "questions": [
+            {
+              "name": "protect",
+              "score": "M"
+            },
+            {
+              "name": "detect",
+              "score": "S"
+            },
+            {
+              "name": "respond",
+              "score": "L"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
