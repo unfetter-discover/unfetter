@@ -35,6 +35,7 @@
      ansible_connection: "{{ overrides.ansible_connection | default(ansible_connection) }}"
      ansible_python_interpreter: "{{ overrides.ansible_python_interpreter | default(ansible_python_interpreter) }}"
      gateway_tag: "{{ overrides.gateway_tag | default(gateway_tag) }}"
+     https_proxy_url: "{{ overrides.https_proxy_url | default(https_proxy_url) }}"
   
                     
   #  Displaying the variables.
@@ -54,6 +55,7 @@
           - "ansible_ssh_private_key_file = {{ ansible_ssh_private_key_file }}"
           - "ansible_connection = {{ ansible_connection }}"
           - "run_mode = {{ run_mode }}"
+          - "https_proxy_url = {{ https_proxy_url }}"
 
 
 
