@@ -39,7 +39,7 @@
      PATTERN_HANDLER_PORT: 5000    
      MONGO_HOST: cti-stix-store-repository
      # If deployed in a proxy, add the proxy's URL here
-     HTTPS_PROXY_URL: ''
+     HTTPS_PROXY_URL: "{{ https_proxy_url }}"
     entrypoint:
     
      - ts-node

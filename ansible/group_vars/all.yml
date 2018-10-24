@@ -23,6 +23,8 @@ gateway_tag: "{{ docker_tag }}.uac"
 
 legacy: false
 
-
-#  Turn to "true" if you would like to block attachments
+# Turn to "true" if you would like to block attachments
 block_attachments: false 
+
+# Override in group_vars/override_vars.yml to use a proxy
+https_proxy_url: ""
