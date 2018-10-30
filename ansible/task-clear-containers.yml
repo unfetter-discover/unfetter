@@ -1,0 +1,20 @@
+---
+####################################################################################
+#  This playbook stops and removes all docker images and containers
+####################################################################################
+
+
+- name: Removes images and containers from target hosts
+  hosts: deployed
+  tasks:
+
+
+    - name: Stop containers
+      command: "docker stop $(docker ps -a -q)"
+
+    - name: Remove containers
+      command: "docker rm $(docker ps -a -q)"
+
+    - name: Remove images
+      command: "docker rmi $(docker images -q)"
+
