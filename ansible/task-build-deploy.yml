@@ -1,0 +1,35 @@
+---
+####################################################################################
+####################################################################################
+
+
+- name: Removes images and containers from target hosts
+  hosts: deployed
+  tasks:
+    - name: Stop containers
+      shell: "docker stop $(docker ps -a -q)"
+      ignore_errors: yes
+
+    - name: Remove containers
+      shell: "docker rm $(docker ps -a -q)"
+      ignore_errors: yes
+
+    - name: Remove images
+      shell: "docker rmi $(docker images -q)"
+      ignore_errors: yes
+
+- name: Checking out all the code 
+  import_playbook: task-checkout-code.yml
+
+- name: Build The images 
+  import_playbook: build-prod.yml
+
+- name: Push to registry
+  import_playbook: task-push-registry.yml
+
+- name: Clear the other systems
+  import_playbook: task-clear-containers.yml
+
+- name: Deploy systems
+  import_playbook: deploy.yml
+    
