@@ -10,11 +10,13 @@
 
 
     - name: Stop containers
-      command: "docker stop $(docker ps -a -q)"
+      shell: "docker stop $(docker ps -a -q)"
+      ignore_errors: yes
 
     - name: Remove containers
-      command: "docker rm $(docker ps -a -q)"
+      shell: "docker rm $(docker ps -a -q)"
+      ignore_errors: yes
 
     - name: Remove images
-      command: "docker rmi $(docker images -q)"
-
+      shell: "docker rmi $(docker images -q)"
+      ignore_errors: yes
