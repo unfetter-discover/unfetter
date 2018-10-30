@@ -76,9 +76,9 @@
     name: helper
     image: williamyeh/ansible:alpine3
     state: started
-    volumes: 
-     - "gateway-conf-d-extra:/conf.d.extra"
-     - "{{ backup_directory }}/gateway/conf.d.extra:/data"
+    volumes:
+    - "gateway-conf-d-extra:/conf.d.extra"
+    - "{{ backup_directory }}/gateway/conf.d.extra:/data"
     command: "cp -a /data/. /conf.d.extra/"
     cleanup: yes
 
@@ -92,7 +92,8 @@
     image: "{{ image_name }}"
     state: started
     networks:
-      - name: "{{ docker_network_name }}"          
+      - name: "{{ docker_network_name }}"
+    recreate: yes
     exposed_ports: 
     - "443"
     - "80"
