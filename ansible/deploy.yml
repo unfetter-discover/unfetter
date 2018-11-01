@@ -11,5 +11,5 @@
   hosts: deployed
 
   tasks:
-    - name: Start running the commands
-      import_tasks: discover-tasks.yml
+  - name: Start running the commands
+    import_tasks: discover-tasks.yml
