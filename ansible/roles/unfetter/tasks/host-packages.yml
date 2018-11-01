@@ -1,5 +1,4 @@
-# Ensure the volumes are created. 
-
+# Ensure the volumes are created.
 
 - name: Clone if in Development (and will run locally)
   git:

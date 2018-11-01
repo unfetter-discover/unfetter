@@ -1,4 +1,3 @@
----
 ####################################################################################
 #  This playbook manages the target hosts and calls "discover-tasks.yml" workhorse
 #  playbook.
@@ -12,7 +11,5 @@
   hosts: deployed
 
   tasks:
-  - name: Start running the commands
-    import_tasks: discover-tasks.yml
-
-
+    - name: Start running the commands
+      import_tasks: discover-tasks.yml

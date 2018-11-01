@@ -1,22 +1,24 @@
----
 ####################################################################################
 #  This playbook stops and removes all docker images and containers
 ####################################################################################
 
-
 - name: Removes images and containers from target hosts
   hosts: deployed
   tasks:
-
-
     - name: Stop containers
       shell: "docker stop $(docker ps -a -q)"
       ignore_errors: yes
+      tags:
+      - skip_ansible_lint
 
     - name: Remove containers
       shell: "docker rm $(docker ps -a -q)"
       ignore_errors: yes
+      tags:
+      - skip_ansible_lint
 
     - name: Remove images
       shell: "docker rmi $(docker images -q)"
       ignore_errors: yes
+      tags:
+      - skip_ansible_lint
