@@ -13,7 +13,7 @@
 - name: Move private config to volume
   docker_container:
     name: helper
-    image: williamyeh/ansible:alpine3
+    image: alpine:latest
     state: started
     volumes: 
      - "ui-config:/ui-config"

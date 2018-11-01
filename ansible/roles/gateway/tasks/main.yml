@@ -63,7 +63,7 @@
 - name: Move conf.d config to volume
   docker_container:
     name: helper
-    image: williamyeh/ansible:alpine3
+    image: alpine:latest
     state: started
     volumes: 
      - "gateway-conf-d:/conf.d"
@@ -74,7 +74,7 @@
 - name: Move conf.d.extra config to volume
   docker_container:
     name: helper
-    image: williamyeh/ansible:alpine3
+    image: alpine:latest
     state: started
     volumes:
     - "gateway-conf-d-extra:/conf.d.extra"
