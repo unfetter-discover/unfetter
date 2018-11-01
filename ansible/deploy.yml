@@ -8,7 +8,7 @@
 #
 ####################################################################################
 
-- name: Build Playbook
+- name: Deploy Playbook
   hosts: deployed
 
   tasks:
