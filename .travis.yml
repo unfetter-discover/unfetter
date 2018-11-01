@@ -9,7 +9,8 @@ before_install:
   - sudo apt-get install -y swig
   - sudo apt-get install -y libpulse-dev
 install:
+  - 'cd ansible'
   - 'pip install pipenv'
   - 'pipenv install'
 script:
-  - 'cd ansible && ansible-lint *.yml'
+  - 'ansible-lint *.yml'
