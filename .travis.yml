@@ -14,3 +14,4 @@ install:
   - 'pipenv install'
 script:
   - 'ansible-lint *.yml'
+  - 'ansible-playbook deploy-dev.yml'
