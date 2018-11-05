@@ -4,6 +4,36 @@
   "spec_version": "2.0",
   "objects": [
     {
+      "name" : "Threat Board Demonstration",
+      "id" : "x-unfetter-threat-board--724a05c6-a8ce-4849-ad6b-d5d562e682bf",
+      "created_by_ref" : "identity--881bc3ed-2a16-4351-89af-c4f65fef5e9f",
+      "type" : "x-unfetter-threat-board",
+      "boundaries" : {
+        "end_date" : "2019-11-01T00:00:00.000-04:00",
+        "malware" : [
+          "malware--8e461ca3-0996-4e6e-a0df-e2a5bbc51ebc",
+          "malware--63c2a130-8a5b-452f-ad96-07cf0af12ffe"
+        ],
+        "intrusion_sets" : [
+          "intrusion-set--f047ee18-7985-4946-8bfb-4ed754d3a0dd",
+          "intrusion-set--0ea72cd5-ca30-46ba-bc04-378f701c658f",
+          "intrusion-set--c5947e1c-1cbc-434c-94b8-27c7e3be0fff",
+          "intrusion-set--222fbd21-fc4f-4b7e-9f85-0e6e3a76c33f"
+        ],
+        "targets" : [
+          "Widgets, Inc."
+        ],
+        "start_date" : "2017-11-01T00:00:00.000-04:00"
+      },
+      "modified" : "2018-11-05T16:07:55.576-05:00",
+      "created" : "2018-11-05T16:07:55.576-05:00",
+      "reports" : [
+        "report--35469c04-cfde-40e9-a636-d4241604305d",
+        "report--8fa834b0-9a1a-4359-b743-a65062e9fee8",
+        "report--92dcee0d-1bd4-4532-9750-61aeb56a5392"
+      ]
+    },
+    {
       "type": "observed-data",
       "id": "observed-data--c5da76e4-4561-477d-bf8d-9a1cde0df6f3",
       "created_by_ref": "identity--f431f809-377b-45e0-aa1c-6a4751cae5ff",
