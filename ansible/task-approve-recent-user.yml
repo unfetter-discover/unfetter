@@ -1,4 +1,3 @@
-
 ####################################################################################
 #  This playbook migrates from 0.3.8 to 0.3.9
 #
@@ -8,12 +7,11 @@
 #  docker repositories that are not part of Unfetter
 
 #  It also will run generic tasks.
-#  On the command line, need to send in the username 
-
+#  On the command line, need to send in the username
 
 #  ansible-playbook task-approve-recent-user.yml -e "username=test"
 - name: Calls the role task to reconfigure the private-vol file
-  hosts: deployed 
+  hosts: deployed
   vars_prompt:
     - name: "username"
       prompt: "What is the username of the user you want to approve and make ADMIN on your deployed Unfetter?"
@@ -23,5 +21,5 @@
     - debug:
         msg: "Username is {{ username }}"
     - name: Update the latest users
-      command: "docker exec cti-stix-store-repository mongo stix --eval \"db.getCollection('user').update({'userName': '{{ username }}'}, { $set: { 'role': 'ADMIN', 'approved': true } })\""
+      command: 'docker exec cti-stix-store-repository mongo stix --eval "db.getCollection(''user'').update({''userName'': ''{{ username }}''}, { $set: { ''role'': ''ADMIN'', ''approved'': true } })"'
       when: "'uac' in group_names"

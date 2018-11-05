@@ -1,0 +1,26 @@
+####################################################################################
+#  This playbook stops and removes all docker images and containers
+####################################################################################
+
+- name: Removes images and containers from target hosts
+  hosts: build
+  vars:
+    projects:
+      - "stix2pattern"
+      - "unfetter-store"
+      - "unfetter-ui"
+
+  tasks:
+    - name: Clean the directories
+      file:
+        state: absent
+        dest: "{{ prepath }}{{ item }}/"
+      loop: "{{ projects }}"
+
+    - name: Get dev for projects
+      git:
+        repo: "https://github.com/unfetter-discover/{{ item }}.git"
+        dest: "{{ prepath }}{{ item }}"
+        version: "develop"
+        refspec: "+refs/pull/*:refs/heads/*"
+      loop: "{{ projects }}"

@@ -1,6 +1,5 @@
----
 ####################################################################################
-#  This playbook will upgrade from 0.3.10 to 0.3.11  
+#  This playbook will upgrade from 0.3.10 to 0.3.11
 #
 ####################################################################################
 
@@ -8,5 +7,5 @@
   hosts: deployed
   tasks:
     - include_role:
-          name: common
-          tasks_from: migrate-0.3.11.yml
+        name: common
+        tasks_from: migrate-0.3.11.yml

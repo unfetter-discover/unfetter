@@ -1,102 +1,94 @@
----
-
 #############################################
 # discover-tasks.yml
-# This task file is the main workhorse for building the docker containers.  
+# This task file is the main workhorse for building the docker containers.
 #
 #############################################
-  
-  # Override variables allows user sto create a variable file that overrides any of the variables 
-  # from this playbook.  Override variables allows users to make changes to how the containers
-  # are built without changing the core playbook.
 
+# Override variables allows user sto create a variable file that overrides any of the variables
+# from this playbook.  Override variables allows users to make changes to how the containers
+# are built without changing the core playbook.
 
-  - name: Include override vars
-    register: overrides
-    include_vars:
-      file: "{{ playbook_dir }}/group_vars/override_vars.yml"
-    ignore_errors: yes
-
+- name: Include override vars
+  register: overrides
+  include_vars:
+    file: "{{ playbook_dir }}/group_vars/override_vars.yml"
+  ignore_errors: yes
 
 #  These variables do not change through this playbook.  So the facts are set_fact
 #  here.  If override variables exist, they take precedence.
-    
-  - set_fact:
-     docker_tag: "{{ overrides.docker_tag | default(docker_tag) }}"
-     build_action: "{{ overrides.build_action | default(build_action) }}"
-     run_action: "{{ overrides.run_action | default(run_action) }}"
-     use_unfetter_ui: "{{ overrides.use_unfetter_ui | default(use_unfetter_ui) }}"
-     use_uac: "{{ overrides.use_uac | default(use_uac) }}"
-     use_taxii: "{{ overrides.use_taxii | default(use_taxii) }}"
-     registry: "{{ overrides.registry | default(registry) }}"
-     prepath: "{{ overrides.prepath | default(prepath) }}"
-     ansible_host: "{{ overrides.ansible_host | default(ansible_host) }}"
-     ansible_ssh_private_key_file: "{{ overrides.ansible_ssh_private_key_file | default(ansible_ssh_private_key_file) }}"
-     ansible_connection: "{{ overrides.ansible_connection | default(ansible_connection) }}"
-     ansible_python_interpreter: "{{ overrides.ansible_python_interpreter | default(ansible_python_interpreter) }}"
-     gateway_tag: "{{ overrides.gateway_tag | default(gateway_tag) }}"
-     https_proxy_url: "{{ overrides.https_proxy_url | default(https_proxy_url) }}"
-  
-                    
-  #  Displaying the variables.
-  - debug:
-        msg: 
-          - "docker_tag: {{ docker_tag }} "
-          - "gateway_tag: {{ gateway_tag }} "
-          - "build_action: {{ build_action }}"
-          - "run_action: {{ run_action }}"
-          - "use_unfetter_ui: {{ use_unfetter_ui }}"
-          - "use_uac: {{ use_uac }}"
-          - "use_taxii: {{ use_taxii }}"
-          - "registry: {{ registry }}"    
-          - "prepath: {{ prepath }}"    
-          - "remote home: {{ ansible_env.HOME }}" 
-          - "ansible_host = {{ ansible_host }}"
-          - "ansible_ssh_private_key_file = {{ ansible_ssh_private_key_file }}"
-          - "ansible_connection = {{ ansible_connection }}"
-          - "run_mode = {{ run_mode }}"
-          - "https_proxy_url = {{ https_proxy_url }}"
 
+- name: Override any facts in the overrides file
+  set_fact:
+    docker_tag: "{{ overrides.docker_tag | default(docker_tag) }}"
+    build_action: "{{ overrides.build_action | default(build_action) }}"
+    run_action: "{{ overrides.run_action | default(run_action) }}"
+    use_unfetter_ui: "{{ overrides.use_unfetter_ui | default(use_unfetter_ui) }}"
+    use_uac: "{{ overrides.use_uac | default(use_uac) }}"
+    use_taxii: "{{ overrides.use_taxii | default(use_taxii) }}"
+    registry: "{{ overrides.registry | default(registry) }}"
+    prepath: "{{ overrides.prepath | default(prepath) }}"
+    ansible_host: "{{ overrides.ansible_host | default(ansible_host) }}"
+    ansible_ssh_private_key_file: "{{ overrides.ansible_ssh_private_key_file | default(ansible_ssh_private_key_file) }}"
+    ansible_connection: "{{ overrides.ansible_connection | default(ansible_connection) }}"
+    ansible_python_interpreter: "{{ overrides.ansible_python_interpreter | default(ansible_python_interpreter) }}"
+    gateway_tag: "{{ overrides.gateway_tag | default(gateway_tag) }}"
+    https_proxy_url: "{{ overrides.https_proxy_url | default(https_proxy_url) }}"
 
+#  Displaying the variables.
+- debug:
+    msg:
+      - "docker_tag: {{ docker_tag }} "
+      - "gateway_tag: {{ gateway_tag }} "
+      - "build_action: {{ build_action }}"
+      - "run_action: {{ run_action }}"
+      - "use_unfetter_ui: {{ use_unfetter_ui }}"
+      - "use_uac: {{ use_uac }}"
+      - "use_taxii: {{ use_taxii }}"
+      - "registry: {{ registry }}"
+      - "prepath: {{ prepath }}"
+      - "remote home: {{ ansible_env.HOME }}"
+      - "ansible_host = {{ ansible_host }}"
+      - "ansible_ssh_private_key_file = {{ ansible_ssh_private_key_file }}"
+      - "ansible_connection = {{ ansible_connection }}"
+      - "run_mode = {{ run_mode }}"
+      - "https_proxy_url = {{ https_proxy_url }}"
 
-  - include_role:
-        name: common
-  - include_role:
-        name: processor
-  - include_role:
-        name: openssl
-  - include_role:
-        name: pattern-handler
-  - include_role:
-        name: socket-server
-  - include_role:
-        name: api
-  - include_role:
-        name: threat-ingest
+- include_role:
+    name: common
+- include_role:
+    name: processor
+- include_role:
+    name: openssl
+- include_role:
+    name: pattern-handler
+- include_role:
+    name: socket-server
+- include_role:
+    name: api
+- include_role:
+    name: threat-ingest
 
-  - include_role:
-        name: explorer
+- include_role:
+    name: explorer
 
-  - include_role:
-        name: ui
-  - include_role:
-        name: ingest        
+- include_role:
+    name: ui
+- include_role:
+    name: ingest
 # if running in dev mode, then the image will be nginx.
 
 # If build_action = pull, pull gateway
-# If building local, then nginx 
+# If building local, then nginx
 # if dev mode
 
-
-  - include_role:
-        name: gateway
-    vars:
-        image_name: "nginx:1.13.5-alpine"
-    when:
-     - build_action == 'local'
-# If not running in dev mode, then we are pulling the gateway from the registry     
-  - include_role:
-        name: gateway
-    when:
-     - build_action != 'local'
-
+- include_role:
+    name: gateway
+  vars:
+    image_name: "nginx:1.13.5-alpine"
+  when:
+    - build_action == 'local'
+# If not running in dev mode, then we are pulling the gateway from the registry
+- include_role:
+    name: gateway
+  when:
+    - build_action != 'local'

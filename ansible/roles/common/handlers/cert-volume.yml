@@ -28,7 +28,7 @@
 - name: Move CERTS config to volume
   docker_container:
     name: helper
-    image: williamyeh/ansible:alpine3
+    image: alpine:latest
     state: started
     volumes: 
      - "certs:/certs"

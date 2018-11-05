@@ -1,25 +1,19 @@
----
 ####################################################################################
 #  This playbook only builds the docker images locally
 #
 ####################################################################################
 
-
-- name: Build the Docker images only.  Do not 
+- name: Build the Docker images only.
   hosts: build
   tasks:
-  - name: Iterate over group variables
-    debug:
-      var: item
-    with_items: "{{ hostvars | to_nice_json }}"           
-  - name: Start running the commands
-    import_tasks: discover-tasks.yml
-  - include_role:
-      name: gateway
-      tasks_from: task-build-release
-    vars:
-       gateway_tag: "{{ docker_tag }}"
-
-
-
-
+    - name: Iterate over group variables
+      debug:
+        var: item
+      with_items: "{{ hostvars | to_nice_json }}"
+    - name: Start running the commands
+      import_tasks: discover-tasks.yml
+    - include_role:
+        name: gateway
+        tasks_from: task-build-release
+      vars:
+        gateway_tag: "{{ docker_tag }}"
