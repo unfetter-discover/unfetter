@@ -1,0 +1,211 @@
+
+Accessibility features
+Accessing raw disk
+Account enumeration
+Acquire operational infrastructure
+Activate recording
+Ad-hoc transfer
+Add exploits to application data files
+Add or modify credentials
+Allocate operational infrastructure
+Alter data
+Alter process outcomes
+Analyze mission
+Application deployment software
+Automated use of C2
+Automatic loading at startup
+Automatically transported trusted services
+Avoid data size limits.
+Backdoor
+Banner grabbing
+Beaconing
+Binary padding
+Binary replacement
+Block indicators on host
+Buffer overflow vulnerability
+Build alliances and partnerships
+Canonicalization
+Cause physical effects
+Change machine-to-machine (MtM) communications
+Change run-state of system processes
+Clone data, systems
+Collect from local system
+Collect from network resources
+Command line
+Commonly used port
+Compress data
+Compromise common network infrastructure
+Conduct effects assessments
+Configuration modification to facilitate launch
+Connection of rogue network devices
+Create botnet
+Create mid-points
+Create new service
+Credential dumping
+Credential pharming
+Crosstalk (data emanation)
+Custom application layer protocol
+DNS/cache poisoning
+Data deletion (full)
+Data deletion (partial)
+Deface websites
+Defeat encryption
+Degrade
+Delay activity
+Denial of service / disrupt
+Destroy hardware
+Determine strategy and goals
+Develop capabilities
+Device swapping (cross domain violation)
+Disable security products
+Disclose data/information
+Disrupt security products
+Distributed Denial of Service (DDOS)
+Edit MBR
+Edit file type associations
+Employ anti-forensics measures
+Employ anti-reverse engineering measures
+Employ logon scripts
+Employ rootkit
+Enable other operations
+Enabled by user
+Encode data
+Encrypt communications
+Encrypt data
+Encrypt data to render unusable
+Establish peer network
+Establish physical proximity
+Execute via service controller
+Exfil over C2 channel
+Exfil over non-C2 channel
+Exfil over other network medium
+Exfil over physical medium
+Exploit CDS or MLS misconfiguration
+Exploit peer connections
+Exploit weak access controls
+Fallback channels
+File system enumeration
+Find credentials in file
+Full disk/OS deletion (bricking)
+Gather intelligence
+Group permission enumeration
+Hijack
+Hijack active credential
+Identify capability gaps
+Identify crypto
+Identify intelligence gaps
+Impersonate / Spoof
+Impersonate legitimate file
+In memory code
+Infect or seed website
+Install hypervisor rootkit
+Interpreted scripts
+Issue operational tasking
+Keylogging
+Launch 0-day exploit
+Legitimate remote access
+Leverage exploit packs
+Leverage trusted relationship
+Library search hijack
+Link modification
+Local network connection enumeration
+Local network settings enumeration
+Manipulate trusted process
+Manual use of C2
+Mimic legitimate traffic
+Modify BIOS
+Modify existing services
+Modify malware to avoid detection
+Modify service configuration
+Multiband comm
+Network mapping
+Network sniffing
+OS APIs to facilitate launch
+Obfuscate data
+Obtain financing
+Operating system enumeration
+Owner/User enumeration
+Partial disk/OS deletion (corruption)
+Pass the hash
+Pass the ticket
+Passive collection
+Password cracking
+Path interception
+Physical network bridge
+Position data
+Pre-position payload
+Process enumeration
+Process injection
+Produce operational plans
+Protocol abuse
+Quick response (QR) code
+Receive approval to execute operations
+Refine targeting
+Relay communications
+Remote file shares
+Remote interactive logon
+Remote services
+Remote shell
+Removable media
+Remove logged data
+Remove toolkit
+Replace service binary
+Replay
+Replication through removable media
+SQL injection
+Scanning
+Scheduled task
+Scheduled transfer
+Screen capture
+Scripted exfiltration
+Seed supply chain
+Select strategic targets
+Select tactical targets
+Service enumeration
+Shared webroot
+Short message service (SMS)
+Sign malicious content
+Social engineering
+Software enumeration
+Software packing
+Spear-phishing email w/ malicious link
+Spear-phishing emails w/ attachments
+Staff and train resources
+Standard app layer protocol
+Standard non-app layer protocol
+Store files in unconventional location
+Supply chain / trusted source compromise
+Survey
+TCP fingerprinting
+Tailor behavior based on environment
+Taint shared content
+Targets application vulnerability
+Targets application vulnerability remotely
+Targets operating system vulnerability
+Third party software
+Throttle data
+Tracking access
+Transfer toolkit
+Traverse CDS or MLS
+Trojan
+Trusted website
+Uncommonly used port
+Use botnet
+Use chained protocols
+Use custom encryption
+Use legitimate credentials
+Use multilayer encryption
+Use peer connections
+Use remote management services
+Use removable media
+Use signed content
+Use social media
+Use standard encryption
+Use trusted application to execute untrusted code
+Virtualization attacks
+Web scraping
+Web shell
+Websites
+Window enumeration
+Wireless access
+Writing to disk

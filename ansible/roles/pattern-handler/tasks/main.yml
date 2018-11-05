@@ -4,6 +4,8 @@
     name: "{{ image_name }}"
     state: present
     path: "{{ path }}"
+    buildargs:
+       https_proxy_url: "{{ https_proxy_url }}"
   when: "build_action == 'local'"
 # Pull the image from a registry if the build_action is pull
 - name: "Pull {{ container_name }}"
@@ -11,6 +13,8 @@
     name: "{{ image_name }}"
     state: present
     pull: yes
+    buildargs:
+       https_proxy_url: "{{ https_proxy_url }}"
   when: "build_action == 'pull'"     
 
 - debug:
