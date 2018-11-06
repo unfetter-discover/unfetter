@@ -34,7 +34,7 @@
       MONGO_DB: stix
       SOCKET_SERVER_HOST: unfetter-socket-server
       SOCKET_SERVER_PORT: 3333
-    working_dir: /usr/src/unfetter-threat-ingest
+    working_dir: /usr/share/unfetter-threat-ingest
     entrypoint:
       - npm
       - run
