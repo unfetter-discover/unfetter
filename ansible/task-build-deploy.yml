@@ -1,6 +1,15 @@
 ####################################################################################
 ####################################################################################
 
+- name: Delete Images in registry
+  hosts: registry
+  tasks:
+    - name: Remove images
+      shell: "docker rmi $(docker images -q)"
+      ignore_errors: yes
+      tags:
+      - skip_ansible_lint
+
 - name: Removes images and containers from target hosts
   hosts: deployed
   tasks:
@@ -26,7 +35,10 @@
 
 
 - name: Checking out all the code
-  import_playbook: task-checkout-code.yml
+  var:
+    clone_branch: "{{ branch | default('develop') }}"
+  import_playbook: task-checkout-code.yml branch={{ clone_branch }}
+
 
 - name: Build The images
   import_playbook: build-prod.yml

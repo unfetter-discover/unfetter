@@ -1,10 +1,12 @@
 ####################################################################################
 #  This playbook stops and removes all docker images and containers
+#   You can change the parameter with -e "branch=develop"
 ####################################################################################
 
 - name: Removes images and containers from target hosts
   hosts: build
   vars:
+    clone_branch: "{{ branch | default('develop') }}"
     projects:
       - "stix2pattern"
       - "unfetter-store"
@@ -17,10 +19,10 @@
         dest: "{{ prepath }}{{ item }}/"
       loop: "{{ projects }}"
 
-    - name: Get dev for projects
+    - name: Get {{ clone_branch }} branch for projects
       git:
         repo: "https://github.com/unfetter-discover/{{ item }}.git"
         dest: "{{ prepath }}{{ item }}"
-        version: "develop"
+        version: "{{ clone_branch }}"
         refspec: "+refs/pull/*:refs/heads/*"
       loop: "{{ projects }}"
