@@ -655,28 +655,6 @@
                         }
                     }
                 }
-            },
-            {
-                "name" : "State Department Travel Advisories",
-                "source" : "https://travel.state.gov/_res/rss/TAsTWs.xml",
-                "active" : true,
-                "parser" : {
-                    "type" : "xml",
-                    "root" : "rss/channel",
-                    "articles" : "item",
-                    "convert" : {
-                        "name" : "title",
-                        "description" : "description/_",
-                        "published" : {
-                            "element" : "pubDate",
-                            "type" : "date"
-                        },
-                        "metaProperties" : {
-                            "link" : "link",
-                            "country-code" : "dc:identifier"
-                        }
-                    }
-                }
             }
         ]
     }
