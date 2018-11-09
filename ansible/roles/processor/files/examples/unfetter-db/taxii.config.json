@@ -1,0 +1,69 @@
+[
+    {
+        "_id": "577aacc9-67f6-4fb9-983f-e1719512d3a0",
+        "configKey": "taxiiCollections",
+        "configValue": [
+            {
+                "id": "95ecc380-afe9-11e4-9b6c-751b66dd541e",
+                "title": "Enterprise ATT&CK",
+                "description": "This data collection holds STIX objects from Enterprise ATT&CK"
+            },
+            {
+                "id": "062767bd-02d2-4b72-84ba-56caef0f8658",
+                "title": "Pre-ATT&CK",
+                "description": "This data collection holds STIX objects from Pre-ATT&CK"
+            },
+            {
+                "id": "2f669986-b40b-4423-b720-4396ca6a462b",
+                "title": "Mobile ATT&CK",
+                "description": "This data collection holds STIX objects from Mobile ATT&CK"
+            }
+        ]
+    },
+    {
+        "_id": "e6e8e894-8fe8-44da-8b8b-91cb126ce03f",
+        "configKey": "taxiiConfig",
+        "configValue": {
+            "port": 3002,
+            "accepts": [
+                "application/vnd.oasis.taxii+json; version=2.0",
+                "application/vnd.oasis.taxii+json",
+                "application/vnd.oasis.stix+json; version=2.0",
+                "application/vnd.oasis.stix+json"
+            ],
+            "connection_string": "mongodb://repository:27017/",
+            "response_type": {
+                "taxii": "application/vnd.oasis.taxii+json; version=2.0",
+                "stix": "application/vnd.oasis.stix+json; version=2.0"
+            },
+            "bundle_spec_version": "2.0",
+            "discovery": {
+                "title": "CTI TAXII server",
+                "description": "This TAXII server contains a listing of ATT&CK domain collections expressed as STIX, including PRE-ATT&CK, ATT&CK for Enterprise, and ATT&CK Mobile.",
+                "contact": "attack@mitre.org",
+                "default": "stix",
+                "api_roots": [
+                    "stix"
+                ]
+            },
+            "autogenerate_roots": {
+                "enabled": 1,
+                "versions": [
+                    "taxii-2.0"
+                ],
+                "max_content_length": "10485760"
+            },
+            "roots": [
+                {
+                    "title": "Default API root",
+                    "description": "This API root contains...",
+                    "versions": [
+                        "taxii-2.0"
+                    ],
+                    "max_content_length": "10485760",
+                    "path": "stix"
+                }
+            ]
+        }
+    }
+]

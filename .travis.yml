@@ -1,0 +1,17 @@
+sudo: true
+language: python
+cache: pip
+python:
+  - "3.6"
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y swig
+  - sudo apt-get install -y libpulse-dev
+install:
+  - 'cd ansible'
+  - 'pip install pipenv'
+  - 'pipenv install'
+script:
+  - 'ansible-lint *.yml'
+#  - 'ansible-playbook deploy-dev.yml'

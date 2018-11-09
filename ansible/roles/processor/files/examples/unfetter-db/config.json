@@ -1,0 +1,661 @@
+[
+    {
+        "_id": "d9732cfc-166e-41a0-af79-d37e7abc69b2",
+        "configKey": "killChains",
+        "configValue": [
+            {
+                "name": "mitre-attack",
+                "phase_names": [
+                    "initial-access",
+                    "execution",
+                    "persistence",
+                    "privilege-escalation",
+                    "defense-evasion",
+                    "credential-access",
+                    "discovery",
+                    "lateral-movement",
+                    "collection",
+                    "exfiltration",
+                    "command-and-control"
+                ],
+                "description": "Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK™) is a threat modeling methodology and suite of models for the various phases of an adversary's lifecycle and platforms that are known to be targeted by cyber threats. ATT&CK models are useful for understanding security risk against known adversary behavior, for planning security improvements, and verifying defenses work as expected.",
+                "url": "https://attack.mitre.org/wiki/Main_Page"
+            },
+            {
+                "name": "lockheed-martin",
+                "phase_names": [
+                    "reconnaissance",
+                    "weaponization",
+                    "delivery",
+                    "exploitation",
+                    "installation",
+                    "command & control (c2)",
+                    "actions on objectives"
+                ],
+                "description": "Lockheed Martin Cyber Threat Framework",
+                "url": "https://www.lockheedmartin.com/us/what-we-do/aerospace-defense/cyber/cyber-kill-chain.html"
+            },
+            {
+                "name": "ntctf",
+                "phase_names": [
+                    "administer - planning",
+                    "administer - resource development",
+                    "administer - research",
+                    "preparation - reconnaissance",
+                    "preparation - staging",
+                    "engagement - delivery",
+                    "engagement - exploitation",
+                    "presence - installation | execution",
+                    "presence - internal reconnaissance",
+                    "presence - privilege escalation",
+                    "presence - credential access",
+                    "presence - lateral movement",
+                    "presence - persistence",
+                    "effect - monitor",
+                    "effect - exfiltrate",
+                    "effect - modify",
+                    "effect - deny",
+                    "effect - destroy",
+                    "ongoing processes - analysis, evaluation, and feedback",
+                    "ongoing processes - command & control (c2)",
+                    "ongoing processes - evasion"
+                ],
+                "stage_names": [
+                    "administer",
+                    "preparation",
+                    "engagement",
+                    "presence",
+                    "effect",
+                    "ongoing processes"
+                ],
+                "description": "NSA/CSS Technical Cyber Threat Framework v1",
+                "url": "https://www.iad.gov/iad/library/reports/nsa-css-technical-cyber-threat-framework-v1.cfm"
+            },
+            {
+                "name": "mitre-pre-attack",
+                "phase_names": [
+                    "priority-definition-planning",
+                    "priority-definition-direction",
+                    "target-selection",
+                    "technical-information-gathering",
+                    "people-information-gathering",
+                    "organizational-information-gathering",
+                    "technical-weakness-identification",
+                    "people-weakness-identification",
+                    "organizational-weakness-identification",
+                    "adversary-opsec",
+                    "establish-&-maintain-infrastructure",
+                    "persona-development",
+                    "build-capabilities",
+                    "test-capabilities",
+                    "stage-capabilities"
+                ],
+                "description": "Building on ATT&CK™ —Adversarial Tactics, Techniques, and Common Knowledge— a MITRE-developed model to quickly identify and categorize behavior post-network infiltration, PRE-ATT&CK provides the ability to prevent an attack before the adversary has a chance to get in. The seventeen tactic categories for PRE-ATT&CK were derived from the first four stages (recon, weaponize, deliver, and execute) of a seven-stage Cyber Attack Lifecycle2 (first articulated by Lockheed Martin as the Cyber Kill Chain®3). This cyber threat framework captures the tactics, techniques, and procedures adversaries use to select a target, obtain information, and launch a campaign. The framework lists the ways that adversaries perform each tactic and provides the ability to track and organize adversary statistics and patterns. Ultimately, this arms defenders with a broader understanding of adversary actions that they can use to determine technical or policy-based mitigations and evaluate the quality and utility of cyber threat intelligence data sources.",
+                "url": "https://attack.mitre.org/pre-attack/index.php/Main_Page"
+            },
+            {
+                "name": "mitre-mobile-attack",
+                "phase_names": [
+                    "collection",
+                    "command-and-control",
+                    "exfiltration",
+                    "defense-evasion",
+                    "discovery",
+                    "cellular-network-based",
+                    "general-network-based",
+                    "lateral-movement",
+                    "exploit-via-physical-access",
+                    "exploit-via-internet",
+                    "persistence",
+                    "credential-access",
+                    "app-delivery-via-authorized-app-store",
+                    "app-delivery-via-other-means",
+                    "effects",
+                    "supply-chain",
+                    "exploit-via-cellular-network",
+                    "cloud-based",
+                    "privilege-escalation"
+                ],
+                "description": "The ATT&CK Mobile Profile builds upon NIST's Mobile Threat Catalogue, providing a model of adversarial tactics and techniques used to gain access to mobile devices as well as tactics and techniques to then take advantage of that access in order to accomplish adversarial objectives. The ATT&CK Mobile Profile also depicts network-based effects, which are adversarial tactics and techniques that an adversary can employ without access to the mobile device itself. Each adversarial technique includes a technical description along with applicable mitigation/countermeasure approaches, applicable detection analytics, and examples of use.",
+                "url": "https://attack.mitre.org/mobile/index.php/Main_Page"
+            }
+        ],
+        "configGroups": [
+            "stixConfig",
+            "public"
+        ]
+    },
+    {
+        "_id": "453c02d2-9204-467e-bc59-aa86a99e848f",
+        "configKey": "openVocab",
+        "configValue": {
+            "indicator-label-ov": {
+                "type": "string",
+                "enum": [
+                    "anomalous-activity",
+                    "anonymization",
+                    "benign",
+                    "compromised",
+                    "malicious-activity",
+                    "attribution"
+                ]
+            },
+            "tool-label-ov": {
+                "type": "string",
+                "enum": [
+                    "denial-of-service",
+                    "exploitation",
+                    "information-gathering",
+                    "network-capture",
+                    "credential-exploitation",
+                    "remote-access",
+                    "vulnerability-scanning"
+                ]
+            },
+            "identity-class-ov": {
+                "type": "string",
+                "enum": [
+                    "individual",
+                    "group",
+                    "organization",
+                    "class",
+                    "unknown"
+                ]
+            },
+            "industry-sector-ov": {
+                "type": "string",
+                "enum": [
+                    "agriculture",
+                    "aerospace",
+                    "automotive",
+                    "communications",
+                    "construction",
+                    "defence",
+                    "education",
+                    "energy",
+                    "engineering",
+                    "entertainment",
+                    "financial-services",
+                    "government-national",
+                    "government-regional",
+                    "government-local",
+                    "government-public-services",
+                    "healthcare",
+                    "hospitality-leisure",
+                    "infrastructure",
+                    "insurance",
+                    "manufacturing",
+                    "mining",
+                    "non-profit",
+                    "pharmaceuticals",
+                    "retail",
+                    "technology",
+                    "telecommunications",
+                    "transportation",
+                    "utilities"
+                ]
+            },
+            "attack-resource-level-ov": {
+                "type": "string",
+                "enum": [
+                    "individual",
+                    "club",
+                    "contest",
+                    "team",
+                    "organization",
+                    "government"
+                ]
+            },
+            "attack-motivation-ov": {
+                "type": "string",
+                "enum": [
+                    "accidental",
+                    "coercion",
+                    "dominance",
+                    "ideology",
+                    "notoriety",
+                    "organizational-gain",
+                    "personal-gain",
+                    "personal-satisfaction",
+                    "revenge",
+                    "unpredictable"
+                ]
+            },
+            "malware-label-ov": {
+                "type": "string",
+                "enum": [
+                    "adware",
+                    "backdoor",
+                    "bot",
+                    "ddos",
+                    "dropper",
+                    "exploit-kit",
+                    "keylogger",
+                    "ransomware",
+                    "remote-access-trojan",
+                    "resource-exploitation",
+                    "rogue-security-software",
+                    "rootkit",
+                    "screen-capture",
+                    "spyware",
+                    "trojan",
+                    "virus",
+                    "worm"
+                ]
+            },
+            "report-label-ov": {
+                "type": "string",
+                "enum": [
+                    "threat-report",
+                    "attack-pattern",
+                    "campaign",
+                    "identity",
+                    "indicator",
+                    "malware",
+                    "observed-data",
+                    "threat-actor",
+                    "tool",
+                    "vulnerability"
+                ]
+            },
+            "threat-actor-label-ov": {
+                "type": "string",
+                "enum": [
+                    "activist",
+                    "competitor",
+                    "crime-syndicate",
+                    "criminal",
+                    "hacker",
+                    "insider-accidental",
+                    "insider-disgruntled",
+                    "nation-state",
+                    "sensationalist",
+                    "spy",
+                    "terrorist"
+                ]
+            },
+            "threat-actor-role-ov": {
+                "type": "string",
+                "enum": [
+                    "agent",
+                    "director",
+                    "independent",
+                    "sponsor",
+                    "infrastructure-operator",
+                    "infrastructure-architect",
+                    "malware-author"
+                ]
+            },
+            "threat-actor-sophistication-ov": {
+                "type": "string",
+                "enum": [
+                    "none",
+                    "minimal",
+                    "intermediate",
+                    "advanced",
+                    "strategic",
+                    "expert",
+                    "innovator"
+                ]
+            }
+        },
+        "configGroups": [
+            "stixConfig",
+            "public"
+        ]
+    },
+    {
+        "_id": "98fba9e7-6ad8-4bac-a178-af9282f8b05c",
+        "configKey": "observableDataTypes",
+        "configValue": [
+            {
+                "name": "driver",
+                "actions": [
+                    "load",
+                    "unload",
+                    "*"
+                ],
+                "properties": [
+                    "base_address",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "md5_hash",
+                    "module_name",
+                    "sha1_hash",
+                    "sh256_hash",
+                    "signer"
+                ]
+            },
+            {
+                "name": "file",
+                "actions": [
+                    "create",
+                    "delete",
+                    "modify",
+                    "read",
+                    "timestomp",
+                    "write",
+                    "*"
+                ],
+                "properties": [
+                    "company",
+                    "creation_time",
+                    "file_name",
+                    "file_path",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "md5_hash",
+                    "pid",
+                    "ppid",
+                    "previous_creation_time",
+                    "sha1_hash",
+                    "sha256_hash",
+                    "signer",
+                    "user"
+                ]
+            },
+            {
+                "name": "flow",
+                "actions": [
+                    "end",
+                    "message",
+                    "start",
+                    "*"
+                ],
+                "properties": [
+                    "content",
+                    "dest_fqdn",
+                    "dest_hostname",
+                    "dest_ip",
+                    "dest_port",
+                    "end_time",
+                    "exe",
+                    "flags",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "packet_count",
+                    "pid",
+                    "ppid",
+                    "proto_info",
+                    "protocol",
+                    "src_fqdn",
+                    "src_hostname",
+                    "src_ip",
+                    "src_port",
+                    "start_time",
+                    "user"
+                ]
+            },
+            {
+                "name": "module",
+                "actions": [
+                    "load",
+                    "unload",
+                    "*"
+                ],
+                "properties": [
+                    "base_address",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "md5_hash",
+                    "module_name",
+                    "module_path",
+                    "pid",
+                    "sha1_hash",
+                    "sha256_hash",
+                    "signer",
+                    "tid"
+                ]
+            },
+            {
+                "name": "process",
+                "actions": [
+                    "create",
+                    "terminate",
+                    "*"
+                ],
+                "properties": [
+                    "command_line",
+                    "exe",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "md5_hash",
+                    "parent_exe",
+                    "parent_image_path",
+                    "pid",
+                    "ppid",
+                    "sha1_hash",
+                    "sha256_hash",
+                    "sid",
+                    "signer",
+                    "user"
+                ]
+            },
+            {
+                "name": "registry",
+                "actions": [
+                    "add",
+                    "edit",
+                    "remove",
+                    "*"
+                ],
+                "properties": [
+                    "data",
+                    "fqdn",
+                    "hive",
+                    "hostname",
+                    "image_path",
+                    "key",
+                    "pid",
+                    "type",
+                    "user",
+                    "value"
+                ]
+            },
+            {
+                "name": "service",
+                "actions": [
+                    "create",
+                    "delete",
+                    "pause",
+                    "start",
+                    "stop",
+                    "*"
+                ],
+                "properties": [
+                    "command_line",
+                    "exe",
+                    "fqdn",
+                    "hostname",
+                    "image_path",
+                    "name",
+                    "pid",
+                    "ppid",
+                    "user"
+                ]
+            },
+            {
+                "name": "thread",
+                "actions": [
+                    "create",
+                    "remote_create",
+                    "suspend",
+                    "terminate",
+                    "*"
+                ],
+                "properties": [
+                    "hostname",
+                    "src_pid",
+                    "src_tid",
+                    "stack_base",
+                    "stack_limit",
+                    "start_address",
+                    "start_function",
+                    "start_module",
+                    "start_module_name",
+                    "subprocess_tag",
+                    "tgt_pid",
+                    "tgt_tid",
+                    "user",
+                    "user_stack_base",
+                    "user_stack_limit"
+                ]
+            },
+            {
+                "name": "user-session",
+                "actions": [
+                    "interactive",
+                    "local",
+                    "lock",
+                    "login",
+                    "logout",
+                    "rdp",
+                    "reconnect",
+                    "remote",
+                    "unlock",
+                    "*"
+                ],
+                "properties": [
+                    "dest_ip",
+                    "dest_port",
+                    "hostname",
+                    "logon_id",
+                    "src_ip",
+                    "src_port",
+                    "user"
+                ]
+            }
+        ],
+        "configGroups": [
+            "stixConfig",
+            "public"
+        ]
+    },
+    {
+        "_id": "905f4e32-528c-479a-bb20-aa36bb54be9f",
+        "configKey": "jwtDurationSeconds",
+        "configValue": 900,
+        "configGroups": [
+            "public"
+        ]
+    },
+    {
+        "_id": "f49ed2b9-3b09-4c3f-bd98-aa5394c53a84",
+        "configKey": "dataSources",
+        "configValue": [
+            "Asset Management",
+            "API monitoring",
+            "Anti - virus",
+            "Application logs",
+            "Authentication logs",
+            "BIOS",
+            "Binary file metadata",
+            "Browser extensions",
+            "DLL monitoring",
+            "Data loss prevention",
+            "Detonation chamber",
+            "Digital Certificate Logs",
+            "DNS records",
+            "EFI",
+            "Email gateway",
+            "Environment variable",
+            "File monitoring",
+            "Host network interface",
+            "Kernel drivers",
+            "Loaded DLLs",
+            "MBR",
+            "Mail server",
+            "Malware reverse engineering",
+            "Named pipes",
+            "Netflow / Enclave netflow",
+            "Network device logs",
+            "Network intrusion detection system",
+            "Network protocol analysis",
+            "Packet capture",
+            "PowerShell logs",
+            "Process command - line parameters",
+            "Process monitoring",
+            "Process use of network",
+            "Process whitelisting",
+            "SSL / TLS inspection",
+            "Sensor health and status",
+            "Services",
+            "Sysmon (1 ProcessCreate)",
+            "Sysmon (2 FileCreateTime)",
+            "Sysmon (3 NetworkConnect)",
+            "Sysmon (4 Sysmon service state change)",
+            "Sysmon (5 ProcessTerminate)",
+            "Sysmon (6 DriverLoad)",
+            "Sysmon (7 ImageLoad)",
+            "Sysmon (8 CreateRemoteThread)",
+            "Sysmon (9 RawAccessRead)",
+            "Sysmon (10 ProcessAccess)",
+            "Sysmon (11 FileCreate)",
+            "Sysmon (12 RegistryEvent)",
+            "Sysmon (13 RegistryEvent)",
+            "Sysmon (14 RegistryEvent)",
+            "Sysmon (15 FileCreateStreamHash)",
+            "Sysmon (16 Sysmon configuration change (cannot be filtered))",
+            "Sysmon (17 PipeEvent)",
+            "Sysmon (18 PipeEvent)",
+            "System calls",
+            "Third - party application logs",
+            "User interface",
+            "VBR",
+            "Web application firewall logs",
+            "Web logs",
+            "Web proxy",
+            "WMI Objects",
+            "Windows Error Reporting",
+            "Windows Registry",
+            "Windows event logs"
+        ],
+        "configGroups": [
+            "stixConfig"
+        ]
+    },
+    {
+        "_id" : "0d0886e1-fec2-4a62-80c5-5528ad3dd11f",
+        "configGroups" : [ 
+            "feed"
+        ],
+        "configKey" : "feedSources",
+        "configValue" : [ 
+            {
+                "name" : "DoD News Feed",
+                "source" : "https://dod.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=727&max=10",
+                "active" : true,
+                "parser" : {
+                    "type" : "dod-news-demo"
+                }
+            }, 
+            {
+                "name" : "DHS US-CERT",
+                "source" : "https://www.kb.cert.org/vulfeed",
+                "active" : true,
+                "parser" : {
+                    "type" : "xml",
+                    "root" : "feed",
+                    "articles" : "entry",
+                    "convert" : {
+                        "name" : "title/_",
+                        "description" : "summary/_",
+                        "labels" : "category@term",
+                        "published" : {
+                            "element" : "published",
+                            "type" : "date"
+                        },
+                        "metaProperties" : {
+                            "link" : "link@href"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -6,38 +6,28 @@
 
 
 # Ensure the volumes are created. 
-- name: Create certs volume
-  docker_volume:
-    name: certs
-  notify:
-    - load certs-vol
 
+- include_tasks: "cert-volume.yml"
 - name: Create mongo-db volume
   docker_volume:
     name: mongo-db
   notify:
     - load mongodb-vol
+  when: run_action
 
-# This hasn't been implemented yet
+- include_tasks: manage-private-config.yml
+  when: use_uac and run_action
+
+# We will reload every time
 - name: Create ui-vol volume
   docker_volume:
     name: ui-config
-  notify:
-    - load ui-vol
-  
-- name: Create private-config volume
-  when: use_uac
-  docker_volume:
-    name: private-config
-  notify:
-    - load private-vol
-  
+  when: run_action
+
+- include_tasks: manage-ui-config.yml
+  when: use_uac and run_action
 
 
-
-
-# Create the docker network that all the containers will become part Unfetter
-# TODO - need to get the docker network to be created if it doesn't exist.  Getting errors right now
 - name: Create the Docker Network - {{ docker_network_name }}
   docker_network:
     state: present

@@ -1,24 +1,62 @@
----
 ####################################################################################
-#  This playbook only builds the docker images locally
+#   This playbook will configure a remote host to support Unfetter, and will run
+#   a production version of Unfetter
+#
+#
 #
 ####################################################################################
 
-
-- name: Prepare the Docker Host 
-  hosts: deployed 
-#  become: true
+- name: Prepare the Docker Host
+  hosts: deployed
   vars:
-     pip_install_packages:
-       - name: docker
-  tasks:
-
- # - debug:
- #     var: result
+    ansible_python_interpreter: python
+    pip_install_packages:
+      - name: docker
+  pre_tasks:
+    # This was necessary to get docker running on the AWS Linux 2 AMI
+    - name: Install Docker CE CentOS-specific dependencies
+      block:
+        - name: Install yum-utils
+          package:
+            name: yum-utils
+            state: present
+          become: true
+        - name: Install device-mapper-persistent-data
+          package:
+            name: device-mapper-persistent-data
+            state: present
+          become: true
+        - name: Install lvm2
+          package:
+            name: lvm2
+            state: present
+          become: true
+        - name: yum makecache fast
+          shell: yum makecache fast
+          become: true
+          tags:
+          - skip_ansible_lint
+        - name: Install container-selinux
+          shell: yum install -y http://mirror.centos.org/centos/7/extras/x86_64/Packages/container-selinux-2.42-1.gitad8f0f7.el7.noarch.rpm
+          become: true
+          ignore_errors: yes
+          tags:
+          - skip_ansible_lint
 
   roles:
-    - { role: geerlingguy.docker, docker_users: ["{{ ansible_user }}"], become: true }
+    - {
+        role: geerlingguy.docker,
+        docker_users: ["{{ ansible_user }}"],
+        become: true,
+      }
+
     - { role: geerlingguy.git, become: true }
     - { role: geerlingguy.pip, become: true }
-    - unfetter  
- 
+    - unfetter
+  tasks:
+    - name: "Including the common role"
+      include_role:
+        name: common
+        tasks_from: cert-volume.yml
+      vars:
+        run_mode: "dev"

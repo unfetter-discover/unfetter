@@ -1,0 +1,50 @@
+{
+  "type": "bundle",
+  "id": "stix-archive-bundle",
+  "spec_version": "2.0",
+  "objects": [
+    {
+      "type": "x-unfetter-assessment-set",
+      "id": "x-unfetter-assessment-set--16974637-3258-4041-b70c-74693f0cfdb5",
+      "name": "Infrastructure zone1 cluster1 assessment",
+      "created": "2018-04-12T16:00:55.615Z",
+      "modified": "2018-04-12T16:00:55.615Z",
+      "description": "Assessment of zone1 cluster1 defense tools",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "is_baseline": "true",
+      "assessments": [
+        "x-unfetter-object-assessment-4adf0a88-35a1-4502-bb81-bd41580b6663",
+        "x-unfetter-object-assessment--fbd700f1-233b-4f88-be17-089583e46ca6",
+        "x-unfetter-object-assessment-e9c4fc71-fde9-4437-b279-d8ab04c3f058"
+      ]
+    },
+    {
+      "type": "x-unfetter-assessment-set",
+      "id": "x-unfetter-assessment-set--85d503f1-4b81-4dc0-b176-e0044c28195f",
+      "name": "Infrastructure zone1 cluster2 assessment",
+      "created": "2018-04-12T16:00:55.615Z",
+      "modified": "2018-04-12T16:00:55.615Z",
+      "description": "Assessment of zone1 cluster2 defense tools",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "is_baseline": "true",
+      "assessments": [
+        "x-unfetter-object-assessment--fbd700f1-233b-4f88-be17-089583e46ca6",
+        "x-unfetter-object-assessment-e9c4fc71-fde9-4437-b279-d8ab04c3f058"
+      ]
+    },
+    {
+      "type": "x-unfetter-assessment-set",
+      "id": "x-unfetter-assessment-set--3d799ada-2458-4ae3-83bc-faef284c0542",
+      "name": "Infrastructure zone5 cluster1 assessment",
+      "created": "2018-04-12T16:00:55.615Z",
+      "modified": "2018-04-12T16:00:55.615Z",
+      "description": "DRAFT: Assessment of zone5 cluster1 defense tools",
+      "created_by_ref": "identity--e240b257-5c42-402e-a0e8-7b81ecc1c09a",
+      "is_baseline": "false",
+      "assessments": [
+        "x-unfetter-object-assessment-4adf0a88-35a1-4502-bb81-bd41580b6663",
+        "x-unfetter-object-assessment-e9c4fc71-fde9-4437-b279-d8ab04c3f058"
+      ]
+    }
+  ]
+}

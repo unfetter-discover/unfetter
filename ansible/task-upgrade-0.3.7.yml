@@ -1,4 +1,3 @@
----
 ####################################################################################
 #  This playbook will upgrade from 0.3.6 to 0.3.7
 #
@@ -7,10 +6,8 @@
   hosts: deployed
   tasks:
     - include_role:
-          name: common
-          tasks_from: migrate-0.3.7.yml
+        name: common
+        tasks_from: migrate-0.3.7.yml
     - include_role:
-          name: common
-          tasks_from: restart-container.yml
-
-
+        name: common
+        tasks_from: restart-container.yml

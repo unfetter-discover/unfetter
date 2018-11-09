@@ -1,0 +1,6 @@
+## The Ansible Galaxy Modules needed
+#  $ ansible-galaxy install -r requirements.yml
+
+- src: geerlingguy.docker
+- src: geerlingguy.git
+- src: geerlingguy.pip

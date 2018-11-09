@@ -1,0 +1,88 @@
+####################################################################################
+#  This playbook will attempt to start EC2 instances that have the tag:
+#    deployment-group: unfetter
+#    and has a tag "deployment-group" with a value of the host name.
+#
+#  This will allow multiple tests to be run at the same time.
+#
+#
+#
+#  The original plan for this playbook was to build the EC2 instances.
+#
+#
+####################################################################################
+
+- hosts: 127.0.0.1
+  vars:
+    build: false # If send in a "true", then will actually build any of the hosts
+    # This is used to distinquish between deployment groups.  Each user could have their own test
+    #   Environment
+    deploy_name: "unfetter"
+    region: "us-east-1" # Make this by gathering aws_facts
+  connection: local
+
+  tasks:
+    - debug:
+        msg: "{{ groups['deployed'] }}"
+
+    - name: "Determine if EC2 instances are created"
+      ec2_instance_facts:
+        filters:
+          "tag:unfetter-deploy": "{{ groups['deployed'] }}"
+          "tag:deployment-group": "{{ deploy_name }}"
+          "instance-state-name":
+            - "starting"
+            - "running"
+            - "pending"
+            - "stopping"
+            - "stopped"
+
+      register: ec2_facts
+    - name: "showing groups['deployed']"
+      debug:
+        msg: "{{ groups['deployed'] }}"
+    - name: "Clear out the deployed_names variable"
+      set_fact:
+        deployed_names: []
+    - name: "building deployed_names"
+      set_fact:
+        deployed_names: "{{ groups['deployed'] }}"
+    - name: "Setting the ec2 variable to only contain the unfetter-deploy named tags"
+      set_fact:
+        found_ec2: "{{ ec2_facts.instances|map(attribute='tags.unfetter-deploy')|list }}"
+
+    - name: "Display found"
+      debug:
+        var: found_ec2
+
+    - name: "Clearing out the set facts"
+      set_fact:
+        no_ec2_list: []
+
+    - name: "Setting the no_ec2_list"
+      set_fact:
+        no_ec2_list: "{{ no_ec2_list|default([]) | union([item]) }}"
+      with_items: "{{ deployed_names }}"
+      when: item not in found_ec2
+
+    - name: Failed if EC2's were not found
+      fail:
+        msg: "ERROR: The Following EC2 Instances have not been deployed: {{ no_ec2_list }}"
+      when: no_ec2_list|length > 0 and build
+
+    - name: "Displaying a warning if some systems have not been found"
+      debug:
+        msg: "WARNING: The Following EC2 Instances have not been deployed: {{ no_ec2_list }}"
+      when: no_ec2_list|length > 0
+
+    - name: "Start Stopped Instances"
+      ec2:
+        region: "{{ region }}"
+        instance_tags:
+          unfetter-deploy: "{{ item }}"
+        state: running
+      with_items: "{{ groups['deployed'] }}"
+
+- hosts: deployed
+  tasks:
+    - debug: msg="play_hosts={{ play_hosts }}"

@@ -1,0 +1,14 @@
+# Ensure the volumes are created.
+
+- name: Clone if in Development (and will run locally)
+  git:
+     repo: "https://github.com/unfetter-discover/{{ item }}.git"
+     dest: "{{ backup_directory }}/code/{{ item }}"
+     version: "{{ branch }}"
+  loop:
+     - unfetter
+     - unfetter-store
+     - unfetter-ui
+     - stix2pattern
+
+

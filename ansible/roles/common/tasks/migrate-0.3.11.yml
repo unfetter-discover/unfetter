@@ -1,0 +1,30 @@
+
+####################################################################################
+#  This playbook migrates from 0.3.10 to 0.3.11
+#
+#
+####################################################################################
+
+- name: Build Migration Image
+  docker_image:
+    name: migration
+    tag: "{{ docker_tag }}"
+    state: present
+    force: true
+    path: "{{ remote_role_directory }}files/migrate"
+
+
+- name: "Run container"
+  docker_container:
+    name: "migration"
+    image: "migration:{{ docker_tag }}"
+    state: started
+    networks:
+      - name: "{{ docker_network_name }}"
+    links:
+      - cti-stix-store-repository    
+    working_dir: /usr/src/app/
+    cleanup: yes
+    restart: yes
+    command:
+      - 'node /usr/share/app/0.3.11-attack-patterns.js -h cti-stix-store-repository -p 27017 -d stix'
