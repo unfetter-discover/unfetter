@@ -112,7 +112,7 @@ services:
       - run
       - start
       - --
-      - --debug
+#      - --debug
 #      - --cert-dir=/etc/pki/tls/certs
 #      - --server-key=server.key
 #      - --server-cert=server.crt
