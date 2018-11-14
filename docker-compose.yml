@@ -111,6 +111,7 @@ services:
       - npm
       - run
       - start
+      - --
 #      - --debug
 #      - --cert-dir=/etc/pki/tls/certs
 #      - --server-key=server.key
