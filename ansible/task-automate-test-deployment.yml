@@ -1,11 +1,11 @@
 ####################################################################################
 # Task Build Deploy will automate the creation of a clean, newly built docker containers
 #    This is best for a production environment that will be building from code for testing
-#    
-#   - Removes all docker containers and images 
+#
+#   - Removes all docker containers and images
 #   - Checks out the latest develop branch
 #   - Builds the docker images 
-#   - Pushes the images to a docker registry 
+#   - Pushes the images to a docker registry
 #   - Deploys the images to hosts
 ####################################################################################
 

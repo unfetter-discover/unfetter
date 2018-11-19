@@ -1,8 +1,7 @@
 ####################################################################################
-#  This playbook builds, but does not deploy, docker containers.   It will 
+#  This playbook builds, but does not deploy, docker containers.   It will
 #  also build the production UI versions.
-#
-####################################################################################
+#####################################################################################
 
 - name: Build the Docker images only.
   hosts: build

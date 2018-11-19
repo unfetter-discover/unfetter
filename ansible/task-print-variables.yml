@@ -9,7 +9,7 @@
 
 #  Displaying the variables.
 - debug:
-    msg:
+  msg:
       - "docker_tag: {{ docker_tag }} "
       - "gateway_tag: {{ gateway_tag }} "
       - "build_action: {{ build_action }}"
@@ -27,7 +27,7 @@
       - "https_proxy_url = {{ https_proxy_url }}"
       - "inventory hostname = {{ inventory_hostname }}"
 
-- debug: 
+- debug:
     msg: "INVENTORY {{ inventory_hostname }}"
 - debug:
     msg: "SSH connection to {{ ansible_host }} with user {{ ansible_user }}.  Backup directory will be at {{ backup_directory }} on remote host"
