@@ -8,6 +8,7 @@
     private_vol: "{{ backup_directory }}/private-vol"
 
   tasks:
+    - include_tasks: "task-print-variables.yml"  
     - include_role:
         name: common
         tasks_from: api-reconfig.yml
