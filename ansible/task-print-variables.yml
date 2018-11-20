@@ -1,0 +1,39 @@
+#############################################
+# task-print-variables.yml
+# This task will just print out all the user
+# specific variables for the host being runs
+#
+#############################################
+
+
+
+#  Displaying the variables.
+- debug:
+  msg:
+      - "docker_tag: {{ docker_tag }} "
+      - "gateway_tag: {{ gateway_tag }} "
+      - "build_action: {{ build_action }}"
+      - "run_action: {{ run_action }}"
+      - "use_unfetter_ui: {{ use_unfetter_ui }}"
+      - "use_uac: {{ use_uac }}"
+      - "use_taxii: {{ use_taxii }}"
+      - "registry: {{ registry }}"
+      - "prepath: {{ prepath }}"
+      - "remote home: {{ ansible_env.HOME }}"
+      - "ansible_host = {{ ansible_host }}"
+      - "ansible_ssh_private_key_file = {{ ansible_ssh_private_key_file }}"
+      - "ansible_connection = {{ ansible_connection }}"
+      - "run_mode = {{ run_mode }}"
+      - "https_proxy_url = {{ https_proxy_url }}"
+      - "inventory hostname = {{ inventory_hostname }}"
+
+- debug:
+    msg: "INVENTORY {{ inventory_hostname }}"
+- debug:
+    msg: "SSH connection to {{ ansible_host }} with user {{ ansible_user }}.  Backup directory will be at {{ backup_directory }} on remote host"
+  when: ansible_connection == "ssh"
+- debug:
+    msg: "Executing locally.  Backup directory will be at {{ backup_directory }} on this host"
+  when: ansible_connection == "local"
+
+

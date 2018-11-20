@@ -1,5 +1,5 @@
 ---
-# For version 0.3.11 of Unfetter Discover
+# For version 0.3.12 of Unfetter Discover
 
 run_action: true
 # use_taxii tells Ansible if the Taxii server should be running.  At the moment, this will always be false.
@@ -18,7 +18,7 @@ use_taxii_tls: false
 # 0 means there is no size limit
 attachments_max_size: 0
 ansible_python_interpreter: python
-docker_tag: "0.3.11"
+docker_tag: "0.3.12"
 gateway_tag: "{{ docker_tag }}.uac"
 
 legacy: false

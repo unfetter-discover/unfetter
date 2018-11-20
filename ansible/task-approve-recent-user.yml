@@ -18,6 +18,7 @@
       private: no
       when: username is not defined
   tasks:
+    - include_tasks: "task-print-variables.yml"
     - debug:
         msg: "Username is {{ username }}"
     - name: Update the latest users
