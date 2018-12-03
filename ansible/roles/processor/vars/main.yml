@@ -9,5 +9,5 @@ base_list:
   - "{{ backup_directory }}/processor/examples:/tmp/examples"
 dev_volume_list:
   - "{{ prepath }}unfetter-store/unfetter-discover-processor/src:/usr/src/app/src"
-  = "{{ prepath }}unfetter-store/unfetter-discover-processor/dist:/usr/src/app/dist"
+  - "{{ prepath }}unfetter-store/unfetter-discover-processor/dist:/usr/src/app/dist"
 volume_list: "{{ base_list | join(',') }}{% if run_mode == 'dev' %},{{ dev_volume_list | join(',') }}{% endif %}"

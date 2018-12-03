@@ -29,7 +29,7 @@
 - name:  "Copy threat-ingest config to backup"
   copy:
     src: '{{ role_path }}/../threat-ingest/files/config/config.json'
-    dest: '{{ backup_directory }}/processor/files/examples/unfetter-db/feed-config.json'
+    dest: '{{ backup_directory }}/processor/examples/unfetter-db/feed-config.json'
 
 
 # Create the unfetter-discover-processor docker container
