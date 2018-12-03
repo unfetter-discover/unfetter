@@ -17,6 +17,13 @@
   when: "build_action == 'pull'"
   ignore_errors: yes
 
+# Create command script
+- name: Create threat-ingest run script
+  template:
+    src: "{{ role_path }}/templates/run.j2"
+    dest: "{{ role_path }}/files/bin/run.sh"
+    mode: 0555
+
 # Building the ingest container
 - name: Create Threat Ingest
   docker_container:
@@ -36,8 +43,6 @@
       SOCKET_SERVER_PORT: 3333
     working_dir: /usr/share/unfetter-threat-ingest
     entrypoint:
-      - npm
-      - run
-      - "{{ 'watch' if run_mode == 'dev' else 'start' }}"
+      - bin/run.sh
   when: run_action
   ignore_errors: yes
