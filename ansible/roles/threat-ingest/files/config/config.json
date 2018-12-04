@@ -1,0 +1,41 @@
+[
+    {
+        "_id" : "0d0886e1-fec2-4a62-80c5-5528ad3dd11f",
+        "configGroups" : [ 
+            "feed"
+        ],
+        "configKey" : "feedSources",
+        "configValue" : [ 
+            {
+                "name" : "DoD News Feed",
+                "source" : "https://dod.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=727&max=10",
+                "active" : true,
+                "parser" : {
+                    "type" : "dod-news-demo"
+                }
+            }, 
+            {
+                "name" : "DHS US-CERT",
+                "source" : "https://www.kb.cert.org/vulfeed",
+                "active" : true,
+                "parser" : {
+                    "type" : "xml",
+                    "root" : "feed",
+                    "articles" : "entry",
+                    "convert" : {
+                        "name" : "title/_",
+                        "description" : "summary/_",
+                        "labels" : "category@term",
+                        "published" : {
+                            "element" : "published",
+                            "type" : "date"
+                        },
+                        "metaProperties" : {
+                            "link" : "link@href"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+]

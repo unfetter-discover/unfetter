@@ -10,6 +10,8 @@ backup/*
 roles/gateway/files/conf.d/default.conf
 roles/gateway/files/ui-dist/
 
+roles/threat-ingest/files/**/*
+
 host_vars/*
 !host_vars/demo-file.yml
 src/*
