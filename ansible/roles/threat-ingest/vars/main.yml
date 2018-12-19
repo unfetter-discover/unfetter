@@ -6,7 +6,6 @@ image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
 
 base_list:
   - "certs:/etc/pki/tls/certs:ro"
-  - "{{ role_path }}/files/bin:/usr/share/unfetter-threat-ingest/bin"
 prod_volume_list:
   - "{{ role_path }}/files/config:/usr/share/unfetter-threat-ingest/config"
   - "{{ role_path }}/files/plugins:/usr/share/unfetter-threat-ingest/src/plugins"
