@@ -38,6 +38,6 @@
     entrypoint:
        - npm
        - run
-       - "deploy{{ '-watch' if run_mode == 'dev'}}"
+       - "deploy {{ '-watch' if 'development' in group_names else []}}"
   when: run_action
   ignore_errors: yes
