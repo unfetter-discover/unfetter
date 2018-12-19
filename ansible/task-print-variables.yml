@@ -9,7 +9,7 @@
 
 #  Displaying the variables.
 - debug:
-  msg:
+   msg:
       - "docker_tag: {{ docker_tag }} "
       - "gateway_tag: {{ gateway_tag }} "
       - "build_action: {{ build_action }}"
