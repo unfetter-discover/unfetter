@@ -1,12 +1,70 @@
 ---
-remote_tmp: ""
-ansible_connection: "ssh"
-backup_directory: "{{ remote_tmp }}/unfetter"
-ansible_user: "ansible"
-ansible_ssh_private_key_file: "xxxxxxx"
-ansible_host: "xx.xx.xxx.xxx"
-api_domain: "{{ ansible_host }}"
-ui_domain: "{{ ansible_host }}"
 
+######################################################################################################
+
+# This file is a demonstration of the variables you may need to override in order to customize
+# Unfetter deployment to meet your needs.
+
+# Each file in the host_vars directory should be named after your deployment type
+# - prod-uac.yml
+# - prod-legacy-demo.yml
+# - prod-legacy-uac.yml
+# - prod-demo.yml
+
+# For developers, a 'build.yml' may also be necessary.
+
+# Every variable in a hosts file will override all group vars.  Consider the group_vars files to be default values
+
+######################################################################################################
+
+
+
+
+######################################################################################
+# Connection Variables
+# These variables are needed to connect to your system that is running Unfetter.  By default, 
+# the group_vars will set the variables to support a local deployment.  Meaning, that ansible is 
+# executed on the same system that you will run Unfetter.  
+
+# For a local system, the values will be 
+
+# ansible_connection: "local"
+# ansible_user: ""
+# ansible_ssh_private_key_file: ""
+# ansible_host: "127.0.0.1"
+# backup_directory: "{{ playbook_dir }}/backup"
+
+# For remote system accessed over SSH, which is where Ansible excels, you would change those values to the following:
+######################################################################################
+
+# Tell Ansible host how to connect with the host.  ssh 
+ansible_connection: "ssh" 
+
+# The user that the host running ansible will connect to the remote system.  You are responsible
+#      for creating this user.  For AWS, it is likely ec2-user
+ansible_user: "ec2-user" 
+
+# The private key file and location
+ansible_ssh_private_key_file: "~/.ssh/id_rsa"
+
+# What is the host IP that you will SSH into.
+ansible_host: "xx.xx.xxx.xxx"
+
+# The backup directory is where backup files are stored, and where Unfetter will look for the files to restore
+#     data from.  For remote deployments, there is no ansible directory so {{ playbook_dir }} has to be overwritten
+backup_directory: "/tmp/backup"
+
+######################################################################################
+# In UAC deployed, these values are needed as the domain that people are accessing Unfetter.  If you are running
+#   locally, as the default setting, this is localhost.  For a real deployment, it is the domain name or IP address
+
+api_domain: "www.example.com"
+ui_domain: "www.example.com"
+
+
+######################################################################################
 # If you are using a proxy URL, you can change that here, otherwise, leave it commented out
+######################################################################################
+
+
 # https_proxy_url: "http://host:port"

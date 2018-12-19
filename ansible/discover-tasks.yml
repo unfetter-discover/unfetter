@@ -33,32 +33,13 @@
     ansible_python_interpreter: "{{ overrides.ansible_python_interpreter | default(ansible_python_interpreter) }}"
     gateway_tag: "{{ overrides.gateway_tag | default(gateway_tag) }}"
     https_proxy_url: "{{ overrides.https_proxy_url | default(https_proxy_url) }}"
+    backup_directory: "{{ overrides.backup_directory | default(backup_directory) }}"
 
-#  Displaying the variables.
-- debug:
-    msg:
-      - "docker_tag: {{ docker_tag }} "
-      - "gateway_tag: {{ gateway_tag }} "
-      - "build_action: {{ build_action }}"
-      - "run_action: {{ run_action }}"
-      - "use_unfetter_ui: {{ use_unfetter_ui }}"
-      - "use_uac: {{ use_uac }}"
-      - "use_taxii: {{ use_taxii }}"
-      - "registry: {{ registry }}"
-      - "prepath: {{ prepath }}"
-      - "remote home: {{ ansible_env.HOME }}"
-      - "ansible_host = {{ ansible_host }}"
-      - "ansible_ssh_private_key_file = {{ ansible_ssh_private_key_file }}"
-      - "ansible_connection = {{ ansible_connection }}"
-      - "run_mode = {{ run_mode }}"
-      - "https_proxy_url = {{ https_proxy_url }}"
-
+- include_tasks: "task-print-variables.yml"
 - include_role:
     name: common
 - include_role:
     name: processor
-- include_role:
-    name: openssl
 - include_role:
     name: pattern-handler
 - include_role:

@@ -4,7 +4,12 @@ path: "{{ prepath + dir}}"
 container_name: unfetter-threat-ingest
 image_name: "{{registry}}{{ container_name }}:{{docker_tag}}"
 
-base_list: "certs:/etc/pki/tls/certs:ro"
-dev_volume_list: ",{{ path }}/config:/usr/src/unfetter-threat-ingest/config,{{ path }}/src:/usr/src/unfetter-threat-ingest/src"
-
-volume_list: "{{ base_list }}{{ dev_volume_list if run_mode == 'dev' else '' }}"
+base_list:
+  - "certs:/etc/pki/tls/certs:ro"
+prod_volume_list:
+  - "{{ role_path }}/files/config:/usr/share/unfetter-threat-ingest/config"
+  - "{{ role_path }}/files/plugins:/usr/share/unfetter-threat-ingest/src/plugins"
+dev_volume_list:
+  - "{{ path }}/config:/usr/share/unfetter-threat-ingest/config"
+  - "{{ path }}/src:/usr/share/unfetter-threat-ingest/src"
+volume_list: "{{ base_list | join(',') }},{{ (dev_volume_list if run_mode == 'dev' else prod_volume_list) | join(',') }}"

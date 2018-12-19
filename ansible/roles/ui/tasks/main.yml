@@ -4,6 +4,8 @@
     name: "{{ image_name }}"
     state: present
     path: "{{ path }}"
+    buildargs:
+       https_proxy_url: "{{ https_proxy_url }}"
   when: "build_action == 'local'"
 
 
@@ -22,6 +24,8 @@
     name: "{{ image_name }}"
     state: present
     pull: yes
+    buildargs:
+       https_proxy_url: "{{ https_proxy_url }}"
   when: "build_action == 'pull'"     
 
 - debug:

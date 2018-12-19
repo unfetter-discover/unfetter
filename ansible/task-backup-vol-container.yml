@@ -11,6 +11,7 @@
     ui_vol: "{{ backup_directory }}/ui-vol"
 
   tasks:
+    - include_tasks: "task-print-variables.yml"
     - name: make sure dirs are there
       file: path={{ item }} state=directory
       with_items:

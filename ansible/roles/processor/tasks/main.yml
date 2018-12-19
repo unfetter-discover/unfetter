@@ -6,6 +6,8 @@
     name: "{{ image_name }}"
     state: present
     path: "{{ path }}"
+    buildargs:
+       https_proxy_url: "{{ https_proxy_url }}"
   when: "build_action == 'local'"
 
 # Pull the image if the build_action is pull
@@ -14,13 +16,20 @@
     name: "{{ image_name }}"
     state: present
     pull: yes
+    buildargs:
+       https_proxy_url: "{{ https_proxy_url }}"
   when: "build_action == 'pull'"     
 
 
-- name:  "Copy Conf.d.extra to backup"
+- name:  "Copy processor files to backup"
   copy:
     src: '{{ role_path }}/files/examples'
     dest: '{{ backup_directory }}/processor'
+
+- name:  "Copy threat-ingest config to backup"
+  copy:
+    src: '{{ role_path }}/../threat-ingest/files/config/config.json'
+    dest: '{{ backup_directory }}/processor/examples/unfetter-db/feed-config.json'
 
 
 # Create the unfetter-discover-processor docker container
@@ -41,7 +50,6 @@
      # If deployed in a proxy, add the proxy's URL here
      HTTPS_PROXY_URL: "{{ https_proxy_url }}"
     entrypoint:
-    
      - ts-node
      - src/app.ts
      - --stix
@@ -59,6 +67,7 @@
      - /tmp/examples/unfetter-db/stix-meta.json
      - --config
      - /tmp/examples/unfetter-db/config.json
+     - /tmp/examples/unfetter-db/feed-config.json
      - /tmp/examples/unfetter-db/translation-config.json
      - /tmp/examples/unfetter-db/taxii.config.json
      - --mitre-attack-data

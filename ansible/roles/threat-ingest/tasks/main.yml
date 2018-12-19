@@ -36,8 +36,8 @@
       SOCKET_SERVER_PORT: 3333
     working_dir: /usr/share/unfetter-threat-ingest
     entrypoint:
-      - npm
-      - run
-      - "{{ 'watch' if run_mode == 'dev' else 'start' }}"
+       - npm
+       - run
+       - "deploy {{ '-watch' if 'development' in group_names else []}}"
   when: run_action
   ignore_errors: yes
