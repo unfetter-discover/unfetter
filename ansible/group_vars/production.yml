@@ -13,7 +13,7 @@ ansible_ssh_private_key_file: ""
 ansible_connection: "local"
 # If local, then use ../../ or the full directory path to the directory above the "unfetter" directory.  
 prepath: '../../'
-docker_tag: "0.3.11"
+docker_tag: "0.3.12"
 gateway_tag: "{{ docker_tag }}.uac"
 
 # Docker Tag specifies what will be the name of the developed tag.
