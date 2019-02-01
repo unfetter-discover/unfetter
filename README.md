@@ -10,8 +10,8 @@ Docker-compose is part of the installation
 * [Docker Compose](https://www.docker.com/products/docker-compose) is installed with Community Edition
 * Install [Git](https://git-scm.com/download/mac) and necessary tools
 
-## No Longer Supported
 ### Windows:
+#### No Longer Supported
 We no longer support deployment on Windows systems.  It is still possible with alterations, but we are focusing more on automated deployment through Ansible and scripts.  And Windows Docker just works differently
 
 ### Linux/Ubuntu:
