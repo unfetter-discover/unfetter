@@ -1,7 +1,7 @@
 # unfetter-discover
 
 Unfetter Discover web application and container resources. Visit
-[unfetter.io](http://unfetter.io) for more information about Unfetter projects.
+[nsacyber.github.io/unfetter/](https://nsacyber.github.io/unfetter/) for more information about Unfetter projects.
 
 ## System Requirements
 ### Mac (OSX 10.10.3+)
@@ -20,7 +20,7 @@ We no longer support deployment on Windows systems.  It is still possible with a
 * Install [Git](https://git-scm.com/download/mac) and necessary tools
 
 ## The Project Setup
-Unfetter Discover is built up from multiple docker containers that are available on Docker Hub (https://hub.docker.com/u/unfetter/).  All source code is in the unfetter-discover GitHub organization (https://github.com/unfetter-discover).  We use Ansible (https://www.ansible.com/) for 
+Unfetter Discover is built up from multiple docker containers that are available on Docker Hub (https://hub.docker.com/u/unfetter/).  All source code is in the unfetter-discover GitHub organization (https://github.com/unfetter-discover).  We use Ansible (https://www.ansible.com/) for
 configuration and deployment for production use.
 
 ### Deploy for Demo
@@ -51,11 +51,11 @@ cd ansible
 
 Investigate the hosts.ini file.  There a number of host types availabe.  Each host type has a different set of variables in the ansible group_vars.  For most cases, under ```[deployed]``` there shoudl be ```prod-uac```
 
-Open the file unfetter/ansible/group_vars/production.yml.  Change any variables that are necessary.  The variables are currently set to support local deployment.  To build onto a remote system, change to ansible_connection, ansible_host and ansible_ssh_private_key_file are necessary.   
+Open the file unfetter/ansible/group_vars/production.yml.  Change any variables that are necessary.  The variables are currently set to support local deployment.  To build onto a remote system, change to ansible_connection, ansible_host and ansible_ssh_private_key_file are necessary.
 
 
 #### UAC Authentication
-For a UAC version of Unfetter, you can use GitHub or GitLab out of the box.  You can change the Autentication services in the file ```unfetter-discover/unfetter/ansible/group_vars/uac.yml```.  To deploy so Unfetter Discover is accessible by others, you will need to change ui_domain and api_domain to point to the proper domain such as ```unfetter.local```.   
+For a UAC version of Unfetter, you can use GitHub or GitLab out of the box.  You can change the Autentication services in the file ```unfetter-discover/unfetter/ansible/group_vars/uac.yml```.  To deploy so Unfetter Discover is accessible by others, you will need to change ui_domain and api_domain to point to the proper domain such as ```unfetter.local```.
 
 #### Configure GitHub/GitLab
 You will need to make sure that there is an OAuth App for Unfetter Discover that is approved for use.  When you build Unfetter, you will
